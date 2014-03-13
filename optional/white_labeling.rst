@@ -1,4 +1,4 @@
-.. optional/white_labeling:
+.. _optional/white_labeling:
 
 White Labeling
 ==============

@@ -1,4 +1,4 @@
-.. optional/product_information:
+.. _optional/product_information:
 
 Product Information
 ===================

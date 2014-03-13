@@ -1,4 +1,5 @@
-.. web_hooks/referral:
+.. _web_hooks/referral:
+.. include:: /partials/common.rst
 
 Referral Web Hook
 =================

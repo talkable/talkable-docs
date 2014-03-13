@@ -3,6 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. include:: /partials/common.rst
+
 Integrating Curebit on Your Site
 ================================
 
@@ -10,7 +12,7 @@ Contents:
 
 .. toctree::
 
-   ecommerce
+   E-Commerce Integrations <ecommerce>
    standalone
    optional
    api

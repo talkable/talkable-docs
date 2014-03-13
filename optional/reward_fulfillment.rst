@@ -1,4 +1,4 @@
-.. optional/reward_fulfillment:
+.. _optional/reward_fulfillment:
 
 Reward Fulfillment
 ==================

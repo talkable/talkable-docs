@@ -1,4 +1,5 @@
 .. _api:
+.. include:: /partials/common.rst
 
 API Documentation
 #################

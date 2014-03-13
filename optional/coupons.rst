@@ -1,4 +1,4 @@
-.. optional/coupons:
+.. _optional/coupons:
 
 Coupons
 =======

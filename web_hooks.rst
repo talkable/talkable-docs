@@ -1,4 +1,5 @@
 .. _web_hooks:
+.. include:: /partials/common.rst
 
 Web Hooks
 #########

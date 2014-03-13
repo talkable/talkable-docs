@@ -1,4 +1,5 @@
-.. web_hooks/offer_signup:
+.. _web_hooks/offer_signup:
+.. include:: /partials/common.rst
 
 Offer Signup Web Hook
 =====================
