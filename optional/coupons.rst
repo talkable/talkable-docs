@@ -1,0 +1,6 @@
+.. optional/coupons:
+
+Coupons
+=======
+
+.. toctree::
