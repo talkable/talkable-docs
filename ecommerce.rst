@@ -1,8 +1,8 @@
 .. _ecommerce:
 .. include:: /partials/common.rst
 
-Curebit Integration Options
-###########################
+Integration Options
+###################
 
 Curebit integrates with e-commerce platforms or custom web sites through
 JavaScript calls to our API. But most customers can integrate quickly **without

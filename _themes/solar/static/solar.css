@@ -78,7 +78,7 @@ div.related ul li a:hover {
 }
 
 div.sphinxsidebarwrapper {
-    padding: 0;
+    padding: 7px 0 0 0;
 }
 
 div.sphinxsidebar {
@@ -103,7 +103,7 @@ div.sphinxsidebar h3 a {
 
 div.sphinxsidebar ul {
     padding-left: 1.5em;
-    margin-top: 7px;
+    margin: 0;
     padding: 0;
     line-height: 150%;
     color: #586e75;
