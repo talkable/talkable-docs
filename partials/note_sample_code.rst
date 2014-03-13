@@ -1,5 +1,5 @@
 .. note::
 
    To get your personal integration code, YOUR-CUREBIT-SITE-ID needs to be
-   replaced with your Curebit Store ID. To get your personalized Curebit Store ID,
-   access integration instructions from inside your Curebit account.
+   replaced with your Curebit Site ID. You can get this from your Curebit
+   dashboard after you log in and create a site.

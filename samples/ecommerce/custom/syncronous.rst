@@ -2,7 +2,7 @@
 
   <!-- Begin Curebit integration code -->
   <script>
-  //<![CDATA[
+    //<![CDATA[
       var _curebitq = _curebitq || [];
       _curebitq.push(['init', {
         site_id: 'YOUR-CUREBIT-SITE-ID', // REQUIRED - Curebit Site ID
@@ -47,7 +47,7 @@
       };
 
       _curebitq.push(['register_purchase', _curebit_order_details]);
-  //]]>
+    //]]>
   </script>
   <script src="//d2jjzw81hqbuqv.cloudfront.net/assets/api/all-0.6.js" type="text/javascript"></script>
   <!-- End Curebit integration code -->
