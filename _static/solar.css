@@ -267,7 +267,7 @@ div.topic {
 
 table {
     border-collapse: collapse;
-    margin: 0 -0.5em 0 -0.5em;
+    margin: 0;
 }
 
 table td, table th {
@@ -345,4 +345,19 @@ div.toctree-wrapper {
 }
 #integrating-curebit-on-your-site div.toctree-wrapper {
     display: block;
+}
+
+.ptable table {
+    width: 100%;
+    margin: 1em 0 1em 0;
+    border: 1px solid #eee;
+    background-color: #f7f7f7;
+    padding: 0;
+    -moz-box-shadow: 0px 8px 6px -8px #93a1a1;
+    -webkit-box-shadow: 0px 8px 6px -8px #93a1a1;
+    box-shadow: 0px 8px 6px -8px #93a1a1;
+}
+.ptable table tr td:first-child,
+.ptable table tr th:first-child {
+    width: 20%;
 }

@@ -11,16 +11,18 @@ each with links to integration details.
 .. list-table::
    :widths: 30 70
 
-   * - :ref:`optional/coupons`
+   * - :ref:`Coupons <optional/coupons>`
      - Issue single and multi-use coupons automatically for your campaigns
-   * - :ref:`optional/product_information`
+   * - :ref:`Product Information <optional/product_information>`
      - Enable customers to share purchased products with their friends
    * - :ref:`optional/reward_fulfillment`
      - Have Curebit fulfill your rewards via PayPal or manage them manually
-   * - :ref:`optional/white_labeling`
+   * - :ref:`White Labeling <optional/white_labeling>`
      - Change all visible URLs to your domain instead of curebit.com
 
 .. toctree::
-   :glob:
 
-   optional/*
+   Coupons <optional/coupons>
+   Product Information <optional/product_information>
+   optional/reward_fulfillment
+   White Labeling <optional/white_labeling>

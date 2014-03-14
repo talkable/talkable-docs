@@ -11,10 +11,9 @@ Zen Cart Store Integration
 3. Click **Modules** |rarr| **Order Total**.
 4. Click **Curebit Checkout**.
 5. Click **install**.
-6. Enter your Curebit Site ID and enable by selecting *true*.
-7. Enter your Curebit Site ID. You can get this from your Curebit dashboard
-   after you log in and create a site.
-8. Click **Update**.
+6. | Enter your Curebit Site ID and enable by selecting *true*.
+   | You can get your Curebit Site ID from your Curebit dashboard after you log in and create a site.
+7. Click **Update**.
 
 .. _Zen Cart Curebit Add-On: http://curebit.com/zencart/curebit_checkout_0.0.2.zip
 
