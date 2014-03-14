@@ -28,4 +28,6 @@ Curebit is easily integrated into your BigCommerce store.
 
 .. include:: /partials/verifying_integration.rst
 
-.. toctree::
+.. container:: hidden
+
+   .. toctree::

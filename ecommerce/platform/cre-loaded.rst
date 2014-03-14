@@ -20,4 +20,6 @@ CRE Loaded Store Integration
 
 .. include:: /partials/verifying_integration.rst
 
-.. toctree::
+.. container:: hidden
+
+   .. toctree::

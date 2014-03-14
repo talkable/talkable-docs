@@ -70,4 +70,6 @@ This is a sample request for a subscription that was referred from another subsc
      "share_email_link": "http://www.curebit.com/x/4GZTs"
    }
 
-.. toctree::
+.. container:: hidden
+
+   .. toctree::

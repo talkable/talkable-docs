@@ -34,4 +34,6 @@ This feature is only available to Enterprise customers.
 
 .. _Read this guide: https://curebit.helpjuice.com/questions/54519-Using-Webhooks-to-create-Single-Use-Coupon-Codes
 
-.. toctree::
+.. container:: hidden
+
+   .. toctree::

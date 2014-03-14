@@ -24,4 +24,6 @@ Curebit is easily integrated into your VP-ASP 7.0 store.
 
 .. include:: /partials/verifying_integration.rst
 
-.. toctree::
+.. container:: hidden
+
+   .. toctree::

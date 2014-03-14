@@ -20,9 +20,11 @@ each with links to integration details.
    * - :ref:`White Labeling <optional/white_labeling>`
      - Change all visible URLs to your domain instead of curebit.com
 
-.. toctree::
+.. container:: hidden
 
-   Coupons <optional/coupons>
-   Product Information <optional/product_information>
-   optional/reward_fulfillment
-   White Labeling <optional/white_labeling>
+   .. toctree::
+
+      Coupons <optional/coupons>
+      Product Information <optional/product_information>
+      optional/reward_fulfillment
+      White Labeling <optional/white_labeling>

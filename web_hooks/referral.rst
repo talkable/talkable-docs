@@ -99,4 +99,6 @@ Incentives can be of 3 following general types.
 
    curl --data 'key=<key>&payload={"campaign":{"id":323228316,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"}}' <url>
 
-.. toctree::
+.. container:: hidden
+
+   .. toctree::

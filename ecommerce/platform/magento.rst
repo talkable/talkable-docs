@@ -69,4 +69,6 @@ integration. The extension currently supports Magento versions 1.3.x and 1.4.x.
 
 .. include:: /partials/verifying_integration.rst
 
-.. toctree::
+.. container:: hidden
+
+   .. toctree::

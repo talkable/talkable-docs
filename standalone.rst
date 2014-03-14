@@ -4,6 +4,8 @@
 Standalone Campaign
 ###################
 
+Contents:
+
 .. toctree::
 
    standalone/standard

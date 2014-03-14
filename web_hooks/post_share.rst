@@ -73,5 +73,6 @@ corresponding form provided by campaign workflow.
 
    curl --data 'key=<key>&payload={"campaign":{"id":556735918,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"share_type":"email","share_info":{"recipients":["john@example.com"]},"origin":{"id":199948681,"email":"sam@example.com","type":"Purchase"}}' <url>
 
+.. container:: hidden
 
-.. toctree::
+   .. toctree::

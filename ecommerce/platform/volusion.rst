@@ -24,4 +24,6 @@ Curebit is easily integrated into your Volusion store.
 
 .. include:: /partials/verifying_integration.rst
 
-.. toctree::
+.. container:: hidden
+
+   .. toctree::

@@ -49,8 +49,9 @@ and we provide instructions.
      -
      -
 
-.. toctree::
+.. container:: hidden
 
-   ecommerce/custom
-   ecommerce/platform
-.. ecommerce/paypal_auto_redirect
+   .. toctree::
+
+      ecommerce/custom
+      ecommerce/platform

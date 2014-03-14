@@ -9,4 +9,6 @@ Please `contact us`_ for more information.
 
 .. _contact us: http://curebit.com/contact
 
-.. toctree::
+.. container:: hidden
+
+   .. toctree::

@@ -4,6 +4,8 @@
 API Documentation
 #################
 
+Contents:
+
 .. toctree::
 
    Customer <api/customer>

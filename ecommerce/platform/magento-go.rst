@@ -21,4 +21,6 @@ Download the `Magento Go Curebit file`_ and follow the instructions below.
 
 .. include:: /partials/verifying_integration.rst
 
-.. toctree::
+.. container:: hidden
+
+   .. toctree::

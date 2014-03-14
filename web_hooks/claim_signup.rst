@@ -59,4 +59,6 @@ Triggered when Offer Claim form is submitted.
 
    curl --data 'key=<key>&payload={"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"campaign":{"id":350256053,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"email":"john@example.com","first_name":null,"last_name":null,"gender":null,"sub_choice":true}' <url>
 
-.. toctree::
+.. container:: hidden
+
+   .. toctree::

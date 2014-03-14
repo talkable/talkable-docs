@@ -340,11 +340,8 @@ div.viewcode-block:target {
     border-bottom: 1px solid #eee;
 }
 
-div.toctree-wrapper {
+div.hidden {
     display: none;
-}
-#integrating-curebit-on-your-site div.toctree-wrapper {
-    display: block;
 }
 
 .ptable table {

@@ -16,21 +16,23 @@ When your customer completes an order, Curebit will determine if they are
 redeeming an offer or if there are any available deals on the products the
 customer has purchased.
 
-.. toctree::
+.. container:: hidden
 
-   3DCart <platform/3dcart>
-   BigCommerce <platform/bigcommerce>
-   CRE Loaded <platform/cre-loaded>
-   Demandware <platform/demandware>
-   FastSpring <platform/fastspring>
-   Magento <platform/magento>
-   Magento Go <platform/magento-go>
-   OpenCart <platform/opencart>
-   osCommerce <platform/oscommerce>
-   Shopify <platform/shopify>
-   Ubercart <platform/ubercart>
-   Volusion <platform/volusion>
-   VP-ASP <platform/vp-asp>
-   X-Cart <platform/x-cart>
-   Yahoo! <platform/yahoo>
-   Zen Cart <platform/zen-cart>
+   .. toctree::
+
+      3DCart <platform/3dcart>
+      BigCommerce <platform/bigcommerce>
+      CRE Loaded <platform/cre-loaded>
+      Demandware <platform/demandware>
+      FastSpring <platform/fastspring>
+      Magento <platform/magento>
+      Magento Go <platform/magento-go>
+      OpenCart <platform/opencart>
+      osCommerce <platform/oscommerce>
+      Shopify <platform/shopify>
+      Ubercart <platform/ubercart>
+      Volusion <platform/volusion>
+      VP-ASP <platform/vp-asp>
+      X-Cart <platform/x-cart>
+      Yahoo! <platform/yahoo>
+      Zen Cart <platform/zen-cart>

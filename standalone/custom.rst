@@ -70,4 +70,6 @@ Use offer short code to get a Coupon Code after share.
      "errors": ["event_sharing_channel is not specified"]
    }
 
-.. toctree::
+.. container:: hidden
+
+   .. toctree::

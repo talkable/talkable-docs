@@ -63,4 +63,6 @@ additional parameters will be present:
 
    curl --data 'key=<key>&payload={"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"campaign":{"id":361325654,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"email":"john@example.com","first_name":"John","last_name":"Doe","gender":"male","sub_choice":false}' <url>
 
-.. toctree::
+.. container:: hidden
+
+   .. toctree::

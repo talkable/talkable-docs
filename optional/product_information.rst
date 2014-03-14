@@ -17,4 +17,6 @@ accordingly with your products' information.
 
 .. include:: /partials/verifying_integration.rst
 
-.. toctree::
+.. container:: hidden
+
+   .. toctree::

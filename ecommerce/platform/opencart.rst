@@ -37,4 +37,6 @@ wish to integrate. Then, download the `OpenCart Curebit Checkout Extension`_.
 
 .. include:: /partials/verifying_integration.rst
 
-.. toctree::
+.. container:: hidden
+
+   .. toctree::

@@ -10,4 +10,6 @@ earned. You can void rewards for returns, or testing purchases.
 
 `Detailed Instruction how to setup PayPal rebates for rewards <http://curebit.helpjuice.com/questions/46209-Using-PayPal-for-Cash-Rebates>`_
 
-.. toctree::
+.. container:: hidden
+
+   .. toctree::
