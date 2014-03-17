@@ -21,11 +21,12 @@ ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 # the i18n builder cannot share the environment and doctrees with the others
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
-.PHONY: help clean html deploy
+.PHONY: help clean html preview deploy
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  html       to make standalone HTML files"
+	@echo "  preview    to make standalone HTML files and open index.html in the default browser"
 	@echo "  deploy     to commit and deploy changes to GitHub"
 
 clean:
@@ -35,6 +36,10 @@ html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
+
+preview:
+	make clean && make html
+	open $(BUILDDIR)/html/index.html
 
 deploy:
 	cd $(GHPAGES) && git reset --hard origin/gh-pages
