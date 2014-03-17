@@ -43,3 +43,43 @@ Curebit Subsection
 Here is a reference to "curebit section": :ref:`curebit-section` which will have the
 name "Curebit Section".
 ```
+
+## Build the documentation
+
+First install [Sphinx](http://sphinx-doc.org/). See below.
+
+### Setting up folders
+
+Setup GitHub Pages "gh-pages" branch and "master" branch as subfolders of a "docs" (aka parent) project folder.
+
+Use [this gist](https://gist.github.com/zhuravel/9513819) as a guide.
+
+The folder structure should be as follows:
+
+    /docs
+    /docs/master
+    /docs/gh-pages
+
+See "master" branch: https://github.com/curebit/docs
+
+See "gh-pages" branch: https://github.com/curebit/docs/tree/gh-pages
+
+See GitHub Page (auto generated): http://curebit.github.io/docs/
+
+### Installing Sphinx on OS X
+
+Install [Homebrew](http://brew.sh/)
+
+Install Python:
+
+    brew install python
+
+More information in case of trouble: https://github.com/Homebrew/homebrew/wiki/Homebrew-and-Python
+
+Install Sphinx:
+
+    brew install sphinx
+
+### Building
+
+If you did everything right, deploying is as easy as `make deploy` from "master" folder.
