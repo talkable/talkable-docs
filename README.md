@@ -83,3 +83,5 @@ Install Sphinx:
 ### Building
 
 If you did everything right, deploying is as easy as `make deploy` from "master" folder.
+
+You can preview your changes with `make preview`.
