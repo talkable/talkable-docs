@@ -49,6 +49,15 @@ and we provide instructions.
      -
      -
 
+.. raw:: html
+
+   <h2>Getting Additional Help</h2>
+
+If you would like help integrating Curebit, or you're an enterprise client
+looking for integration services, feel free to `contact us`_.
+
+.. _contact us: http://curebit.com/contact
+
 .. container:: hidden
 
    .. toctree::
