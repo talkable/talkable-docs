@@ -64,21 +64,22 @@ See "master" branch: https://github.com/curebit/docs
 
 See "gh-pages" branch: https://github.com/curebit/docs/tree/gh-pages
 
-See GitHub Page (auto generated): http://curebit.github.io/docs/
+See GitHub Page (auto generated): http://curebit.github.io/docs/ (alias: http://docs.github.com)
 
 ### Installing Sphinx on OS X
 
 Install [Homebrew](http://brew.sh/)
 
-Install Python:
+Install Python and pip:
 
     brew install python
+    /usr/local/share/python/easy_install pip
 
 More information in case of trouble: https://github.com/Homebrew/homebrew/wiki/Homebrew-and-Python
 
 Install Sphinx:
 
-    brew install sphinx
+    pip install sphinx
 
 ### Building
 
