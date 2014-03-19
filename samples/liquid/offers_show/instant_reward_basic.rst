@@ -15,6 +15,6 @@
     if (data.coupon_code) {
       $('.js-coupon-code').text(data.coupon_code); // Insert coupon code as a text
     } else {
-      $('.js-coupon-code').text("No coupon code provided"); // Show error that coupon code wasn't provided.
+      $('.js-coupon-code').text('No coupon code provided'); // Show error that coupon code wasn't provided.
     }
   });

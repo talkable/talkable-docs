@@ -6,8 +6,8 @@
     {% if gated_like == blank %}
       <div class="content">
         <div class="js-before">
-          <div class='like-button fb_like'>
-            <div id='fb-root'></div>
+          <div class="like-button fb_like">
+            <div id="fb-root"></div>
             <fb:like href="{{ short_url }}" action="like" layout="button" show_faces="false" share="false"></fb:like>
           </div>
         </div>
@@ -18,15 +18,13 @@
           <a class="button" href="{{ proceed_to_merchant_path }}">Shop with this code</a>
         </div>
       </div>
-
     {% else %}
       <div class="content">
-        <h2 data-clipboard-text="{{coupon_code}}" title="Click to Copy" data-copied-label="Copied!" class="promo-code js-promo-code">
-          <span class="code">{{coupon_code}}</span>
+        <h2 data-clipboard-text="{{ coupon_code }}" title="Click to Copy" data-copied-label="Copied!" class="promo-code js-promo-code">
+          <span class="code">{{ coupon_code }}</span>
         </h2>
         <a class="button" href="{{ proceed_to_merchant_path }}">Shop with this code</a>
       </div>
-
     {% endif %}
   </div>
 
@@ -58,11 +56,11 @@
       }, delay ? delay : 5000);
     };
 
-    Curebit.subscribe("like_gating_succeeded", function (data) {
+    Curebit.subscribe('like_gating_succeeded', function (data) {
       Curebit.passLikeGating();
     });
 
-    Curebit.subscribe("like_gating_passed", function (data) {
+    Curebit.subscribe('like_gating_passed', function (data) {
       if (data.coupon_code) {
         populateCouponCode(data.coupon_code);
         $('.js-before').slideUp(300);
@@ -70,8 +68,8 @@
           $('.js-after').slideDown(300);
         }, 300);
       } else {
-        console.log("No coupon provided.");
-        displayNotice("No coupon provided.");
+        console.log('No coupon provided.');
+        displayNotice('No coupon provided.');
       }
     });
   });

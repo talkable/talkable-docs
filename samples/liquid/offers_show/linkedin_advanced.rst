@@ -23,9 +23,9 @@ until it is loaded.
     $('.IN-widget').attr('style', '').find('a').addClass(params.className);
     $('.IN-widget').find('span').each(function(i, element) {
       $(element).attr({style: '', id: ''});
-      if ($(element).text() == "in") {
+      if ($(element).text() === 'in') {
         $(element).remove();
-      } else if ($(element).text() == "Share") {
+      } else if ($(element).text() === 'Share') {
         $(element).text(params.text);
       }
     });

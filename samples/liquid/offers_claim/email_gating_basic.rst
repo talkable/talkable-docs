@@ -3,8 +3,8 @@
 .. code-block:: html
 
   {% if gated_email != blank %}
-      <div class="js-coupon-code">{{ coupon_code }}</div>
-      <a class="js-proceed-link" href="{{ proceed_to_merchant_path }}">Shop using this code</a>
+    <div class="js-coupon-code">{{ coupon_code }}</div>
+    <a class="js-proceed-link" href="{{ proceed_to_merchant_path }}">Shop using this code</a>
   {% else %}
     <div class="js-hide">
       <form action="#">
@@ -13,7 +13,7 @@
       </form>
     </div>
 
-    <!- What to show after submitting email. Hidden by default! ->
+    <!-- What to show after submitting email. Hidden by default! -->
     <div class="js-show" style="display: none;">
       <div class="js-coupon-code">...</div>
       <a class="js-proceed-link" href="{{ proceed_to_merchant_path }}">Shop using this code</a>
@@ -32,7 +32,7 @@
         $contentHidden  = $('.js-show'),
         $couponCode     = $('.js-coupon-code');
 
-    Curebit.subscribe("email_gating_passed", function(data) {
+    Curebit.subscribe('email_gating_passed', function(data) {
       $contentGating.hide();
       $contentHidden.show();
       $couponCode.text(data.coupon_code); // Insert coupon code

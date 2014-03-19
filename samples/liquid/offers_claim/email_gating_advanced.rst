@@ -17,13 +17,13 @@
       </form>
     </div>
 
-    <!- What to show after submitting email. Hidden by default! ->
+    <!-- What to show after submitting email. Hidden by default! -->
     <div class="js-show" style="display: none;">
       <div class="js-coupon-code">...</div>
       <a class="js-proceed-link" href="{{ proceed_to_merchant_path }}">Shop using this code</a>
     </div>
 
-    <!- Show errors in case something's wrong with the email. Hidden by default! ->
+    <!-- Show errors in case something's wrong with the email. Hidden by default! -->
     <div class="js-validation" style="display: none;"></div>
   {% endif %}
 
@@ -49,7 +49,7 @@
       }, 3000);
     }
 
-    Curebit.subscribe("email_gating_passed", function(data) {
+    Curebit.subscribe('email_gating_passed', function(data) {
       $contentGating.slideUp(300);
       setTimeout(function() {
         $contentHidden.slideDown(300);

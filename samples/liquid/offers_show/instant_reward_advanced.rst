@@ -24,6 +24,6 @@
       $('.js-shared').show(); // Show everything with class `.js-shared`
       bindClipToCopy('.js-coupon-code'); // Initiate click to copy functionality
     } else {
-      $('.js-coupon-code').text("No coupon code provided"); // Show error that coupon code wasn't provided.
+      $('.js-coupon-code').text('No coupon code provided'); // Show error that coupon code wasn't provided.
     }
   });

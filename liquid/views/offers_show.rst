@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 Offer Page
-==============
+==========
 
 Instant Reward
 --------------
@@ -39,16 +39,16 @@ LinkedIn
 --------
 
 Separate Wording
-****************
+................
 
 .. include:: /samples/liquid/offers_show/linkedin_opengraph.rst
 
 Basic Setup
-***********
+...........
 
 .. include:: /samples/liquid/offers_show/linkedin_basic.rst
 
 Advanced Setup
-**************
+..............
 
 .. include:: /samples/liquid/offers_show/linkedin_advanced.rst

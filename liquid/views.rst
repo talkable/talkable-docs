@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 Views
-======
+=====
 
 Contents:
 
