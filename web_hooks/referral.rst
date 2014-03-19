@@ -78,18 +78,45 @@ Incentives can be of 3 following general types.
 
 .. code-block:: javascript
 
-   {
-     "campaign": {
-       "id": 323228316,
-       "type": "StandaloneCampaign",
-       "cached_slug": "affiliate-campaign-test",
-       "tag_names": ["default"]
-     },
-     "offer": {
-       "email": "referrer@example.com",
-       "short_url_code": "1a2PV"
-     }
-   }
+  {
+    "campaign": {
+      "id": 970078549,
+      "type": "StandaloneCampaign",
+      "cached_slug": "affiliate-campaign-test",
+      "tag_names": ["default"]
+    },
+    "offer": {
+      "email": "referrer@example.com",
+      "short_url_code": "1a2PV"
+    },
+    "referrer": {
+      "id": 384532015,
+      "email": "referrer@example.com",
+      "amount": "5.00",
+      "incentive": "rebate",
+      "incentive_description": "$5.00 back",
+      "origin": {
+        "id": 33810209,
+        "type": "AffiliateMember",
+        "email": "referrer@example.com"
+      }
+    },
+    "referred": {
+      "id": 648889141,
+      "email": "referred@example.com",
+      "amount": "0.00",
+      "incentive": "other",
+      "incentive_description": "First Month Free",
+      "origin": {
+        "id": 404180964,
+        "type": "Purchase",
+        "order_number": 605022930,
+        "order_date": "2014-03-19T04:25:34.517-07:00",
+        "customer_id": "50090390",
+        "coupon_code": "WHT85956"
+      }
+    }
+  }
 
 .. raw:: html
 
@@ -97,7 +124,7 @@ Incentives can be of 3 following general types.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"campaign":{"id":323228316,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"}}' <url>
+   curl --data 'key=<key>&payload={"campaign":{"id":338380516,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"referrer":{"id":320756779,"email":"referrer@example.com","amount":"5.00","incentive":"rebate","incentive_description":"$5.00 back","origin":{"id":599664225,"type":"AffiliateMember","email":"referrer@example.com"}},"referred":{"id":695132735,"email":"referred@example.com","amount":"0.00","incentive":"other","incentive_description":"First Month Free","origin":{"id":724069220,"type":"Purchase","order_number":580672632,"order_date":"2014-03-19T04:26:42.315-07:00","customer_id":"322031219","coupon_code":"WHT46606"}}}' <url>
 
 .. container:: hidden
 
