@@ -39,7 +39,7 @@ Allows inline string interpolation using %{} syntax.
 
 .. code-block:: liquid
 
-   {{ 'Get %{referrer_amount} Off' | interpolate }}
+   {{ "Get %{referrer_amount} Off" | interpolate }}
 
 format\_date
 ............
@@ -57,20 +57,20 @@ Split testing static text:
 
 .. code-block:: liquid
 
-   {{ 'split_test_identifier' | split_test: 'Label 1', 'Label 2', 'Label N' }}
+   {{ "split_test_identifier" | split_test: "Label 1", "Label 2", "Label N" }}
 
 Split testing text with interpolation:
 
 .. code-block:: liquid
 
-   {{ 'share_via_email_subject' | split_test: 'Get %{referred_amount} off %{site_name}',
-      'Your friend %{referrer_email} shared this deal with you' | interpolate }}
+   {{ "share_via_email_subject" | split_test: "Get %{referred_amount} off %{site_name}",
+      "Your friend %{referrer_email} shared this deal with you" | interpolate }}
 
 Split testing an asset:
 
 .. code-block:: liquid
 
-   {{ 'offer_background' | split_test: 'background-green.jpg', 'background-red.jpg' | asset_url }}
+   {{ "offer_background" | split_test: "background-green.jpg", "background-red.jpg" | asset_url }}
 
 simple\_format
 ..............
@@ -79,7 +79,7 @@ Formats plain text to have HTML formatting. E.g. replace ``\n`` with ``<br/>``.
 
 .. code-block:: liquid
 
-   {{ 'Hello %{referrer_email}\nHere is your reward.' | simple_format | interpolate }}
+   {{ "Hello %{referrer_email}\nHere is your reward." | simple_format | interpolate }}
 
 Returns ``Hello John<br/>Here is your reward``.
 

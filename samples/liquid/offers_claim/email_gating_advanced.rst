@@ -3,8 +3,8 @@
 .. code-block:: html
 
   {% if gated_email != blank %}
-      <div class="js-coupon-code">{{ coupon_code }}</div>
-      <a class="js-proceed-link" href="{{ proceed_to_merchant_path }}">Shop using this code</a>
+    <div class="js-coupon-code">{{ coupon_code }}</div>
+    <a class="js-proceed-link" href="{{ proceed_to_merchant_path }}">Shop using this code</a>
   {% else %}
     <div class="js-hide">
       <form action="#" class="js-gating-unlock">
