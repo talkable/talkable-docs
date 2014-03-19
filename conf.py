@@ -201,3 +201,4 @@ from sphinx.highlighting import lexers
 from pygments.lexers import PhpLexer, TextLexer
 lexers['php'] = PhpLexer(startinline=True)
 lexers['url'] = TextLexer()
+lexers['liquid'] = TextLexer()

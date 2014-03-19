@@ -74,7 +74,7 @@ click here is more advanced setup:
       }
     });
 
-CloudSponge integration
+CloudSponge Integration
 -----------------------
 
 **HTML:**
@@ -93,9 +93,9 @@ CloudSponge integration
     </script>
 
 1. ``domain_key`` — CloudSponge account (Curebit by default)
-2. ``textarea_id`` — id attribute to populate data to
+2. ``textarea_id`` — ID attribute to populate data to
 
-Multiple email fields
+Multiple Email Fields
 ---------------------
 
 .. code-block:: html
@@ -106,10 +106,10 @@ Multiple email fields
       <input type="email" name="email_recipient_list[]" />
     </form>
 
-Linkedin
+LinkedIn
 --------
 
-Separate wording
+Separate Wording
 ****************
 
 Enable separate Linkedin share wording (Open Graph title and message)
@@ -122,10 +122,10 @@ Enable separate Linkedin share wording (Open Graph title and message)
     Special offer title for Facebook friends
     {% endif %}
 
-Basic setup
+Basic Setup
 ***********
 
-**HTML**
+**HTML:**
 
 .. code-block:: html
 
@@ -140,10 +140,10 @@ Basic setup
       Curebit.share_succeeded('linkedin');
     }
 
-Advanced setup
+Advanced Setup
 **************
 
-**HTML**
+**HTML:**
 
 .. code-block:: html
 
