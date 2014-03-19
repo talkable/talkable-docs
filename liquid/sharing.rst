@@ -5,7 +5,7 @@ Sharing
 ==============
 
 Instant Reward
-~~~~~~~~~~~~~~
+--------------
 
 Instant reward campaign is used when we need to reward RR immediately
 after he shares. If RR redemption email is turned on it will be sent
@@ -75,7 +75,7 @@ click here is more advanced setup:
     });
 
 CloudSponge integration
-~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------
 
 **HTML:**
 
@@ -96,7 +96,7 @@ CloudSponge integration
 2. ``textarea_id`` — id attribute to populate data to
 
 Multiple email fields
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 .. code-block:: html
 
@@ -107,7 +107,7 @@ Multiple email fields
     </form>
 
 Linkedin
-~~~~~~~~
+--------
 
 Separate wording
 ****************

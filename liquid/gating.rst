@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 Gating
-==============
+======
 
 Email gating
 ------------
@@ -13,11 +13,11 @@ field, submit button, and "signup for latest news" checkbox.
 
 First of all, turn on email gating in Restricted settings:
 
-.. figure:: /_static/img/liquid/gating/figure1.png
+.. image:: /_static/img/liquid/gating/image1.png
    :alt:
 
 Basic setup
-~~~~~~~~~~~~
+-----------
 
 **HTML**
 
@@ -81,7 +81,7 @@ Basic setup
     });
 
 Advanced setup
-~~~~~~~~~~~~~~
+--------------
 
 1. 'Click to copy' functionality for coupon code
 2. 'Sign up for news' checkbox
@@ -172,11 +172,11 @@ Advanced setup
 Like gating
 -----------
 
-.. figure:: /_static/img/liquid/gating/figure2.png
+.. image:: /_static/img/liquid/gating/image2.png
    :alt:
 
 Basic setup
-~~~~~~~~~~~~
+-----------
 
 **HTML**
 

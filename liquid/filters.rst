@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 Filters
-==============
+=======
 
 Liquid filters
 --------------
@@ -13,7 +13,7 @@ Curebit filters
 ---------------
 
 asset\_url
-~~~~~~~~~~
+----------
 
 Insert link for a uploaded asset.
 
@@ -24,7 +24,7 @@ Insert link for a uploaded asset.
 Example: http://d2jjzw81hqbuqv.cloudfront.net/static_assets/files/745/original/offer-background.jpg
 
 direct\_asset\_url
-~~~~~~~~~~~~~~~~~~
+------------------
 
 Asset URL without CDN. Required only for custom fonts to work.
 
@@ -33,7 +33,7 @@ Asset URL without CDN. Required only for custom fonts to work.
     {{ "font.woff" | direct_asset_url }}
 
 interpolate
-~~~~~~~~~~~
+-----------
 
 Allows inline string interpolation using %{} syntax.
 
@@ -42,7 +42,7 @@ Allows inline string interpolation using %{} syntax.
     {{ 'Get %{referrer_amount} Off' | interpolate }}
 
 format\_date
-~~~~~~~~~~~~
+------------
 
 Format date for current localization.
 
@@ -51,7 +51,7 @@ Format date for current localization.
     {{ valid_until | format_date: "%Y-%m-%d" }}
 
 split\_test
-~~~~~~~~~~~
+-----------
 
 Split testing static text:
 
@@ -73,7 +73,7 @@ Split testing an asset:
     {{ 'offer_background' | split_test: 'background-green.jpg', 'background-red.jpg' | asset_url }}
 
 simple\_format
-~~~~~~~~~~~~~~
+--------------
 
 Formats plain text to have HTML formatting. E.g. replace ``\n`` with ``<br/>``.
 
@@ -84,7 +84,7 @@ Formats plain text to have HTML formatting. E.g. replace ``\n`` with ``<br/>``.
 Returns ``Hello John<br/>Here is your reward``.
 
 money
-~~~~~
+-----
 
 Formats number using current currency.
 
