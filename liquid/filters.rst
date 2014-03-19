@@ -1,4 +1,4 @@
-.. _liquid/standard:
+.. _liquid/filters:
 .. include:: /partials/common.rst
 
 Filters

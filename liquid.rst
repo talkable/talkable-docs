@@ -8,7 +8,7 @@ Contents:
 
 .. toctree::
 
-   Designer Guide <liquid/designer>
+   liquid/designer
    liquid/filters
    liquid/sharing
    liquid/gating

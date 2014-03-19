@@ -1,4 +1,4 @@
-.. _liquid/standard:
+.. _liquid/sharing:
 .. include:: /partials/common.rst
 
 Sharing

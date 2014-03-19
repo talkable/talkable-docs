@@ -1,7 +1,7 @@
-.. _liquid/standard:
+.. _liquid/designer:
 .. include:: /partials/common.rst
 
-Designer guide
+Designer Guide
 ==============
 
 Web view size

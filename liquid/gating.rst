@@ -1,4 +1,4 @@
-.. _liquid/standard:
+.. _liquid/gating:
 .. include:: /partials/common.rst
 
 Gating
@@ -17,7 +17,7 @@ First of all, turn on email gating in Restricted settings:
    :alt:
 
 Basic Setup
------------
+...........
 
 **HTML:**
 
@@ -81,7 +81,7 @@ Basic Setup
     });
 
 Advanced Setup
---------------
+..............
 
 1. 'Click to copy' functionality for coupon code
 2. 'Sign up for news' checkbox
@@ -176,7 +176,7 @@ Like Gating
    :alt:
 
 Basic Setup
------------
+...........
 
 **HTML:**
 
@@ -212,7 +212,7 @@ Basic Setup
 
     <div class="js-notice"></div>
 
-**JS**
+**JS:**
 
 .. code-block:: javascript
 
