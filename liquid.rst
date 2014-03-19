@@ -10,5 +10,4 @@ Contents:
 
    liquid/designer
    liquid/filters
-   liquid/sharing
-   liquid/gating
+   liquid/views
