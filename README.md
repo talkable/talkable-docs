@@ -15,6 +15,7 @@ Section headings are very flexible in reST. We use the following convention in t
 * `#` for module headings
 * `=` for sections
 * `-` for subsections
+* `.` for subsubsections
 
 ### Cross-referencing
 
@@ -39,6 +40,9 @@ Curebit Section
  
 Curebit Subsection
 ------------------
+
+Curebit Subsubsection
+.....................
  
 Here is a reference to "curebit section": :ref:`curebit-section` which will have the
 name "Curebit Section".
