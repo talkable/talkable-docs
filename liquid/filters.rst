@@ -7,7 +7,7 @@ Filters
 Liquid filters
 --------------
 
-`Standard liquid filters <https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters>`__ that are available out of box.
+`Standard liquid filters`_ that are available out of box.
 
 Curebit filters
 ---------------
@@ -125,3 +125,5 @@ Returns ``$100.9``.
     {{ "100.00" | money: strip_insignificant_zeros: true }}
 
 Returns ``$100``.
+
+.. _Standard liquid filters: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters
