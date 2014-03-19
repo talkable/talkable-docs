@@ -14,6 +14,7 @@ Contents:
 
    E-Commerce Integrations <ecommerce>
    standalone
+   liquid
    optional
    api
    web_hooks
