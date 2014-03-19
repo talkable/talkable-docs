@@ -53,4 +53,4 @@ deploy:
 	rm -rf $(BUILDDIR)/temp
 	touch $(GHPAGES)/.nojekyll
 	echo 'docs.curebit.com' > $(GHPAGES)/CNAME
-	cd $(GHPAGES) && git add -A && git ci -m "Generated gh-pages" && git pull && git push origin gh-pages
+	cd $(GHPAGES) && git add -A && git commit -m "Generated gh-pages" && git pull && git push origin gh-pages
