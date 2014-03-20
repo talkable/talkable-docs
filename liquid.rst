@@ -8,6 +8,7 @@ Contents:
 
 .. toctree::
 
+   liquid/developer
    liquid/designer
    liquid/filters
    liquid/views
