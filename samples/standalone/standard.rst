@@ -25,7 +25,7 @@
           customer_id: '' // OPTIONAL - customer ID from your site
         },
         responsive: true, // OPTIONAL - fit iframe into viewport (also on resize) and allow Curebit display mobile templates
-        device: 'desktop', // OPTIONAL - enforce mobile/tablet/desktop view or skip this to allow Curebit choose corresponding template
+        // device: 'desktop', // OPTIONAL - enforce mobile/tablet/desktop view or skip this to allow Curebit choose corresponding template
         campaign_tags: ['default'] // OPTIONAL - campaign tags for offer targeting
       }]);
     //]]>

@@ -27,7 +27,7 @@ CSS is editable and supports Liquid and SCSS.
 Variables
 ---------
 
-Each Curebit view has it's own set of Variables which can be used in template.
+Each Curebit view has its own set of Variables which can be used in template.
 
 Files
 -----

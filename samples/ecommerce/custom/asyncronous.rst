@@ -42,7 +42,7 @@
         last_name: 'Surname',  // OPTIONAL - Customer Last Name
         // iframe: { width: '100%', height: '400' }, // OPTIONAL - display offer inline instead of popup
         responsive: true, // OPTIONAL - fit iframe into viewport (also on resize) and allow Curebit display mobile templates
-        device: 'desktop', // OPTIONAL - enforce mobile/tablet/desktop view or skip this to allow Curebit choose corresponding template
+        // device: 'desktop', // OPTIONAL - enforce mobile/tablet/desktop view or skip this to allow Curebit choose corresponding template
         campaign_tags: ['default'] // OPTIONAL - Campaign tags used to target specific campaign for offer
       };
 
