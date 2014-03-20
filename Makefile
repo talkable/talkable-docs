@@ -42,7 +42,7 @@ preview:
 	open $(BUILDDIR)/html/index.html
 
 deploy:
-	cd $(GHPAGES) && git reset --hard origin/gh-pages
+	cd $(GHPAGES) && git fetch origin && git reset --hard origin/gh-pages
 	mkdir $(BUILDDIR)/temp
 	mv $(GHPAGES)/.git $(BUILDDIR)/temp/
 	rm -rf $(BUILDDIR)/html $(GHPAGES)/*
@@ -53,4 +53,4 @@ deploy:
 	rm -rf $(BUILDDIR)/temp
 	touch $(GHPAGES)/.nojekyll
 	echo 'docs.curebit.com' > $(GHPAGES)/CNAME
-	cd $(GHPAGES) && git add -A && git commit -m "Generated gh-pages" && git pull && git push origin gh-pages
+	cd $(GHPAGES) && git add -A && git commit -m "Generated gh-pages" && git push origin gh-pages
