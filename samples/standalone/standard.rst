@@ -22,7 +22,8 @@
           email: 'customer@example.com', // OPTIONAL - customer email
           first_name: 'John', // OPTIONAL - customer first name
           last_name: 'Smith', // OPTIONAL - customer last name
-          customer_id: '' // OPTIONAL - customer ID from your site
+          customer_id: '', // OPTIONAL - customer ID from your site
+          traffic_source: '' // OPTIONAL - indicate person traffic source. Can be used as segmentation parameter in reporting.
         },
         responsive: true, // OPTIONAL - fit iframe into viewport (also on resize) and allow Curebit display mobile templates
         // device: 'desktop', // OPTIONAL - enforce mobile/tablet/desktop view or skip this to allow Curebit choose corresponding template
