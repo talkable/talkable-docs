@@ -1,7 +1,7 @@
 Curebit Documentation
 =====================
 
-This GitHub repository represents Curebits's documentation site, located at http://docs.curebit.com.
+This GitHub repository represents Curebit's documentation site, located at http://docs.curebit.com.
 
 The Curebit documentation uses [reStructuredText](http://docutils.sourceforge.net/rst.html) as its markup language and is built using [Sphinx](http://sphinx-doc.org/).
 
