@@ -52,24 +52,6 @@ name "Curebit Section".
 
 First install [Sphinx](http://sphinx-doc.org/). See below.
 
-### Setting up folders
-
-Setup GitHub Pages "gh-pages" branch and "master" branch as subfolders of a "docs" (aka parent) project folder.
-
-Use [this gist](https://gist.github.com/zhuravel/9513819) as a guide.
-
-The folder structure should be as follows:
-
-    /docs
-    /docs/master
-    /docs/gh-pages
-
-See "master" branch: https://github.com/curebit/docs
-
-See "gh-pages" branch: https://github.com/curebit/docs/tree/gh-pages
-
-See GitHub Page (auto generated): http://curebit.github.io/docs/ (alias: http://docs.curebit.com)
-
 ### Installing Sphinx on OS X
 
 Install [Homebrew](http://brew.sh/)
@@ -92,6 +74,14 @@ If you get the error "unknown locale: UTF-8" when generating the documentation t
 
 ### Building
 
-If you did everything right, deploying is as easy as `make deploy` from "master" folder.
+If you did everything right, deploying is as easy as `make deploy` from "master" branch.
 
 You can preview your changes with `make preview`.
+
+---
+
+See "master" branch: https://github.com/curebit/docs
+
+See "gh-pages" branch: https://github.com/curebit/docs/tree/gh-pages
+
+See GitHub Page (auto generated): http://curebit.github.io/docs/ (alias: http://docs.curebit.com)
