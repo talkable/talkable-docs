@@ -23,7 +23,7 @@ when a web hook returns a successful response.
 
 Threshold is dynamically calculated based on number of coupon codes used by
 site in last 21 days. In this way Curebit coupon lists will always hold enough
-available coupons to serve the site for one week if integration become broken.
+available coupons to serve the site for 21 days if integration become broken.
 Minimum Threshold is 20 coupons.
 
 .. raw:: html
