@@ -5,21 +5,17 @@
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         =
-BUILDDIR      = _build
+SOURCEDIR     = source
+BUILDDIR      = build
 
-GHPAGES       = $(realpath $(dir $(lastword $(MAKEFILE_LIST)))/..)/gh-pages
+# Internal variables.
+ALLSPHINXOPTS    = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(SOURCEDIR)
+GH_PAGES_SOURCES = source Makefile
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
 $(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from http://sphinx-doc.org/)
 endif
-
-# Internal variables.
-PAPEROPT_a4     = -D latex_paper_size=a4
-PAPEROPT_letter = -D latex_paper_size=letter
-ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
-# the i18n builder cannot share the environment and doctrees with the others
-I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
 .PHONY: help clean html preview deploy
 
@@ -42,15 +38,14 @@ preview:
 	open $(BUILDDIR)/html/index.html
 
 deploy:
-	cd $(GHPAGES) && git fetch origin && git reset --hard origin/gh-pages
-	mkdir -p $(BUILDDIR)/temp
-	mv $(GHPAGES)/.git $(BUILDDIR)/temp/
-	rm -rf $(BUILDDIR)/html $(GHPAGES)/*
+	git checkout gh-pages
+	rm -rf $(BUILDDIR) $(SOURCEDIR)
+	git checkout master $(GH_PAGES_SOURCES)
+	git reset HEAD
 	make html
-	rm $(BUILDDIR)/html/.buildinfo
-	cp -a $(BUILDDIR)/html/. $(GHPAGES)/
-	mv $(BUILDDIR)/temp/.git $(GHPAGES)/
-	rm -rf $(BUILDDIR)/temp
-	touch $(GHPAGES)/.nojekyll
-	echo 'docs.curebit.com' > $(GHPAGES)/CNAME
-	cd $(GHPAGES) && git add -A && git commit -m "Generated gh-pages" && git push origin gh-pages
+	(cd build/html && tar c .) | (cd ./ && tar xf -)
+	rm -rf $(GH_PAGES_SOURCES) $(BUILDDIR)
+	echo '' > .nojekyll
+	echo 'docs.curebit.com' > CNAME
+	git add -A
+	git ci -m "Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`" && git push origin gh-pages ; git checkout master
