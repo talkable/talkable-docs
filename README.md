@@ -84,6 +84,11 @@ More information in case of trouble: https://github.com/Homebrew/homebrew/wiki/H
 Install Sphinx:
 
     pip install sphinx
+    
+If you get the error "unknown locale: UTF-8" when generating the documentation the solution is to define the following environment variables:
+
+    export LANG=en_US.UTF-8
+    export LC_ALL=en_US.UTF-8
 
 ### Building
 
