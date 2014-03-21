@@ -43,7 +43,7 @@ preview:
 
 deploy:
 	cd $(GHPAGES) && git fetch origin && git reset --hard origin/gh-pages
-	mkdir $(BUILDDIR)/temp
+	mkdir -p $(BUILDDIR)/temp
 	mv $(GHPAGES)/.git $(BUILDDIR)/temp/
 	rm -rf $(BUILDDIR)/html $(GHPAGES)/*
 	make html
