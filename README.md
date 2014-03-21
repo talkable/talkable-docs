@@ -1,10 +1,16 @@
+Curebit Documentation
+=====================
+
+This GitHub repository represents Curebits's documentation site, located at http://docs.curebit.com.
+
 The Curebit documentation uses [reStructuredText](http://docutils.sourceforge.net/rst.html) as its markup language and is built using [Sphinx](http://sphinx-doc.org/).
 
-## Sphinx
+Sphinx
+------
 
 For more details see [The Sphinx Documentation](http://sphinx-doc.org/contents.html)
 
-## reStructuredText
+### reStructuredText
 
 For more details see [The reST Quickref](http://docutils.sourceforge.net/docs/user/rst/quickref.html)
 
@@ -48,7 +54,8 @@ Here is a reference to "curebit section": :ref:`curebit-section` which will have
 name "Curebit Section".
 ```
 
-## Build the documentation
+Build the documentation
+-----------------------
 
 First install [Sphinx](http://sphinx-doc.org/). See below.
 
