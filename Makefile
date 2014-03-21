@@ -2,14 +2,12 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
-PAPER         =
 SOURCEDIR     = source
 BUILDDIR      = build
 
 # Internal variables.
-ALLSPHINXOPTS    = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(SOURCEDIR)
+ALLSPHINXOPTS    = -d $(BUILDDIR)/doctrees $(SOURCEDIR)
 GH_PAGES_SOURCES = source Makefile
 
 # User-friendly check for sphinx-build
