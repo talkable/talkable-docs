@@ -1,13 +1,11 @@
 # Makefile for Sphinx documentation
 #
 
-# You can set these variables from the command line.
-SPHINXBUILD   = sphinx-build
-SOURCEDIR     = source
-BUILDDIR      = build
-
 # Internal variables.
-ALLSPHINXOPTS    = -d $(BUILDDIR)/doctrees $(SOURCEDIR)
+SPHINXBUILD      = sphinx-build
+SOURCEDIR        = source
+BUILDDIR         = build
+SPHINXOPTS       = -d $(BUILDDIR)/doctrees $(SOURCEDIR)
 GH_PAGES_SOURCES = source Makefile
 
 # User-friendly check for sphinx-build
@@ -27,7 +25,7 @@ clean:
 	rm -rf $(BUILDDIR)/*
 
 html:
-	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
+	$(SPHINXBUILD) -b html $(SPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
