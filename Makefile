@@ -43,9 +43,11 @@ deploy:
 	git checkout master $(GH_PAGES_SOURCES)
 	git reset HEAD
 	make html
-	(cd build/html && tar c .) | (cd ./ && tar xf -)
+	(cd $(BUILDDIR)/html && tar c .) | (cd ./ && tar xf -)
 	rm -rf $(GH_PAGES_SOURCES) $(BUILDDIR)
 	echo '' > .nojekyll
 	echo 'docs.curebit.com' > CNAME
 	git add -A
 	git commit -m "Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`" && git push origin gh-pages ; git checkout master
+	@echo
+	@echo "Deployment finished. Check updated docs at http://docs.curebit.com"
