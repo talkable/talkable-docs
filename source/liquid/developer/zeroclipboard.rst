@@ -15,7 +15,7 @@ If you want use two element zeroclipboard and in turn show them, then you need t
       First element
     </div>
   </div>
-  <div class="js-after">
+  <div class="js-after hidden">
     <div data-clipboard-text="Second" data-copied-label="Second" class="js-click-to-copy">
       Second element
     </div>
@@ -30,12 +30,9 @@ If you want use two element zeroclipboard and in turn show them, then you need t
     Curebit.bindClickToCopy('.js-click-to-copy');
 
     var switchBlocks = function() {
-      $('.js-before').hide(300);
-      setTimeout(function() {
-        $('.js-after').show(300);
-        // after you showed block, need re-init zeroclipboard
-        Curebit.bindClickToCopy('.js-click-to-copy');
-      }, 300);
+      $('.js-before, .js-after').toggleClass("hidden");
+      // Re-init ZeroClipboard instance to refresh tooltip position
+      Curebit.bindClickToCopy('.js-click-to-copy');
     };
 
   });
@@ -44,6 +41,6 @@ If you want use two element zeroclipboard and in turn show them, then you need t
 
 .. code-block:: css
 
-  .js-after {
+  .hidden {
     display: none;
   }
