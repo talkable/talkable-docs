@@ -1,11 +1,3 @@
-.. _liquid/developer/zeroclipboard:
-.. include:: /partials/common.rst
-
-Zeroclipboard tricks
-====================
-
-If you want use two element zeroclipboard and in turn show them, then you need to use code like this:
-
 **HTML:**
 
 .. code-block:: html
