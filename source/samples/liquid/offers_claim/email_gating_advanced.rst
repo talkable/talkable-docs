@@ -13,7 +13,7 @@
           <input type="checkbox" checked="checked" id="email-subscription" class="js-gating-checkbox" />
           Sign me up for the latest news
         </label>
-        <button class="js-gating-unlock">Claim your coupon code</button>
+        <button>Claim your coupon code</button>
       </form>
     </div>
 

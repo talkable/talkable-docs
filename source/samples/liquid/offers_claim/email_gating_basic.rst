@@ -7,9 +7,9 @@
     <a class="js-proceed-link" href="{{ proceed_to_merchant_path }}">Shop using this code</a>
   {% else %}
     <div class="js-hide">
-      <form action="#">
+      <form action="#" class="js-gating-unlock">
         <input type="email" class="js-gating-email" placeholder="myname@email.com"/>
-        <button class="js-gating-unlock">Claim your coupon code</button>
+        <button>Claim your coupon code</button>
       </form>
     </div>
 
