@@ -1,0 +1,384 @@
+/* solar.css
+ * Modified from sphinxdoc.css of the sphinxdoc theme.
+*/
+
+@import url("basic.css");
+
+/* -- page layout ----------------------------------------------------------- */
+
+body {
+    font: 200 16px/1.45 "Helvetica Neue", Helvetica, sans-serif;
+    color: #3e4f6c;
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: "";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.content-container {
+    margin: auto;
+    width: 960px;
+}
+
+a {
+    color: #D36835;
+    text-decoration: none;
+}
+
+.current > a,
+a.current,
+a:hover,
+a:focus {
+    color: #3e4f6c;
+}
+
+.button {
+    background: #f0632f;
+    border: 1px solid #c04f26;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font: 200 14px/normal "Helvetica Neue", Helvetica, sans-serif;
+    padding: 8px 15px 9px;
+}
+
+.button:hover,
+.button:focus {
+    background-color: #db5523;
+}
+
+.button:active {
+    background-color: #cb4616;
+}
+
+.textfield {
+    border: 2px solid #c5cbd4;
+    border-radius: 4px;
+    font: 200 14px/normal "Helvetica Neue", Helvetica, sans-serif;
+    height: 36px;
+    padding: 9px 10px;
+    width: 100%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: border-color .25s;
+}
+
+.textfield:-moz-placeholder,
+.textfield::-moz-placeholder,
+.textfield::-webkit-input-placeholder {
+    color: #ddd;
+}
+
+.textfield:focus {
+    border-color: #90a1b5;
+}
+
+.bodywrapper {
+    margin-left: 243px;
+}
+
+.body {
+    border-left: 1px solid #c5cbd4;
+    line-height: 1.5;
+    padding: 22px 0 30px 30px;
+}
+
+.nav {
+    border-right: 1px solid #c5cbd4;
+    float: left;
+    line-height: 1.5;
+    padding: 26px 20px 30px 0;
+    width: 223px;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul ul {
+    font-size: 14px;
+    margin: 5px 0 5px 20px;
+}
+
+.nav ul ul.simple {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+/* HEADER */
+.header {
+    border-bottom: 1px solid #c5cbd4;
+    padding: 14px 0;
+}
+
+.header-disclaimer {
+    float: right;
+    padding-top: 10px;
+}
+
+.header-search {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header-search-field {
+    margin-right: 10px;
+    width: 430px;
+}
+
+.header-logo {
+    background: url("img/logo.png");
+    color: transparent;
+    display: inline-block;
+    font-size: 0;
+    height: 32px;
+    margin-right: 50px;
+    text-indent: -99999em;
+    vertical-align: middle;
+    width: 189px;
+}
+
+.footer {
+    border-top: 1px solid #c5cbd4;
+    color: #818791;
+    padding: 14px 0;
+}
+
+.footer a {
+    color: #818791;
+    text-decoration: none;
+}
+
+/* -- body styles ----------------------------------------------------------- */
+p {
+    margin: 0.8em 0 0.5em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 200;
+}
+
+h1 {
+    font-size: 250%;
+    margin: 0;
+    padding: 0 0 0.3em 0;
+    line-height: 1.2em;
+}
+
+h2 {
+    font-size: 200%;
+    margin: 1.3em 0 0.2em 0;
+    padding: 0 0 10px 0;
+}
+
+h3 {
+    font-size: 160%;
+    margin: 1em 0 -0.3em 0;
+    padding-bottom: 5px;
+}
+
+div.body h1 a,
+div.body h2 a,
+div.body h3 a,
+div.body h4 a,
+div.body h5 a,
+div.body h6 a {
+    color: #657B83 !important;
+}
+
+h1 a.anchor,
+h2 a.anchor,
+h3 a.anchor,
+h4 a.anchor,
+h5 a.anchor,
+h6 a.anchor {
+    display: none;
+    margin: 0 0 0 0.3em;
+    padding: 0 0.2em 0 0.2em;
+    color: #aaa !important;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    display: inline;
+}
+
+h1 a.anchor:hover,
+h2 a.anchor:hover,
+h3 a.anchor:hover,
+h4 a.anchor:hover,
+h5 a.anchor:hover,
+h6 a.anchor:hover {
+    color: #777;
+    background-color: #eee;
+}
+
+cite, code, tt {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.9em;
+    letter-spacing: 0.01em;
+    background-color: #eeeff2;
+    font-style: normal;
+}
+
+hr {
+    border: 1px solid #eee;
+    margin: 2em 0;
+}
+
+.highlight {
+    border-left: 4px solid #DADADA;
+}
+
+pre {
+    font-family: 'Source Code Pro', monospace;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 15px 20px;
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+pre a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+td.linenos pre {
+    padding: 0.5em 0;
+}
+
+div.quotebar {
+    background-color: #f8f8f8;
+    max-width: 250px;
+    float: right;
+    padding: 2px 7px;
+    border: 1px solid #ccc;
+}
+
+div.topic {
+    background-color: #f8f8f8;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0;
+}
+
+table td, table th {
+    padding: 0.2em 0.5em 0.2em 0.5em;
+}
+
+div.admonition {
+    border-left: 4px solid #D36835;
+    margin: 2em 0;
+    padding: 15px 20px;
+}
+
+div.admonition p {
+    margin: 0.5em 0;
+}
+
+div.admonition pre {
+    margin: 0.4em 0;
+}
+
+div.admonition p.admonition-title {
+    color: #D36835;
+    margin: 0 0 5px;
+    font-weight: bold;
+}
+
+div.warning,
+div.important {
+    border-left-color: red;
+}
+
+div.warning p.admonition-title,
+div.important p.admonition-title {
+    color: red;
+}
+
+div.hint,
+div.tip {
+    background-color: #859900;
+}
+
+div.caution,
+div.attention,
+div.danger,
+div.error {
+    background-color: #dc322f;
+}
+
+div.admonition ul, div.admonition ol {
+    margin: 0.1em 0.5em 0.5em 3em;
+    padding: 0;
+}
+
+div.versioninfo {
+    margin: 1em 0 0 0;
+    border: 1px solid #eee;
+    background-color: #ddeaf0;
+    padding: 8px;
+    line-height: 1.3em;
+    font-size: 0.9em;
+}
+
+div.viewcode-block:target {
+    background-color: #f4debf;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+div.hidden {
+    display: none;
+}
+
+.ptable table {
+    width: 100%;
+    margin: 1em 0 1em 0;
+    border: 1px solid #eee;
+    background-color: #f7f7f7;
+    padding: 0;
+    -moz-box-shadow: 0px 8px 6px -8px #93a1a1;
+    -webkit-box-shadow: 0px 8px 6px -8px #93a1a1;
+    box-shadow: 0px 8px 6px -8px #93a1a1;
+}
+.ptable table tr td:first-child,
+.ptable table tr th:first-child {
+    width: 20%;
+}
+
+/* FIREFOX SPECIFIC */
+@-moz-document url-prefix() { 
+    .button {
+        padding-bottom: 7px;
+        padding-top: 6px;
+    }
+}
+

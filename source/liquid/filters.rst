@@ -4,10 +4,9 @@
 Filters
 =======
 
-Liquid Filters
---------------
-
 `Standard liquid filters`_ that are available out of box.
+
+|hr|
 
 Curebit Filters
 ---------------
@@ -23,6 +22,8 @@ Insert link for a uploaded asset.
 
 Example: http://d2jjzw81hqbuqv.cloudfront.net/static_assets/files/745/original/offer-background.jpg
 
+|hr|
+
 direct\_asset\_url
 ..................
 
@@ -31,6 +32,8 @@ Asset URL without CDN. Required only for custom fonts to work.
 .. code-block:: liquid
 
    {{ "font.woff" | direct_asset_url }}
+
+|hr|
 
 interpolate
 ...........
@@ -41,6 +44,8 @@ Allows inline string interpolation using %{} syntax.
 
    {{ "Get %{referrer_amount} Off" | interpolate }}
 
+|hr|
+
 format\_date
 ............
 
@@ -49,6 +54,8 @@ Format date for current localization.
 .. code-block:: liquid
 
    {{ valid_until | format_date: "%Y-%m-%d" }}
+
+|hr|
 
 split\_test
 ...........
@@ -72,6 +79,8 @@ Split testing an asset:
 
    {{ "offer_background" | split_test: "background-green.jpg", "background-red.jpg" | asset_url }}
 
+|hr|
+
 simple\_format
 ..............
 
@@ -82,6 +91,8 @@ Formats plain text to have HTML formatting. E.g. replace ``\n`` with ``<br/>``.
    {{ "Hello %{referrer_email}\nHere is your reward." | simple_format | interpolate }}
 
 Returns ``Hello John<br/>Here is your reward``.
+
+|hr|
 
 money
 .....
@@ -127,3 +138,4 @@ Returns ``$100.9``.
 Returns ``$100``.
 
 .. _Standard liquid filters: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters
+
