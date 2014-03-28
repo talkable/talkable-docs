@@ -1,7 +1,7 @@
 .. _ecommerce/custom:
 
 Default Integration
-==================
+===================
 
 On your final checkout receipt page (which includes things like the customer's
 order number or confirmation code), you will include a Javascript snippet
@@ -30,10 +30,8 @@ Below is the sample code for a purchase with two items.
 
 .. include:: /partials/note_sample_code.rst
 
-.. raw:: html
-
 Main Integration Code
--------------------------------
+---------------------
 
 .. include:: /samples/ecommerce/custom/syncronous.rst
 
