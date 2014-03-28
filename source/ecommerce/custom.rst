@@ -1,6 +1,6 @@
 .. _ecommerce/custom:
 
-Custom Integration
+Default Integration
 ==================
 
 On your final checkout receipt page (which includes things like the customer's
@@ -32,24 +32,11 @@ Below is the sample code for a purchase with two items.
 
 .. raw:: html
 
-   <h2>Choose Integration Method</h2>
-
-You can track your purchases in Curebit in one of the following ways:
-
-* `Syncronous Method (Recommended)`_
-* `Asyncronous Method`_
-
-Finally, you must verify your integration.
-
-Syncronous Method (Recommended)
+Main Integration Code
 -------------------------------
 
 .. include:: /samples/ecommerce/custom/syncronous.rst
 
-Asyncronous Method
-------------------
-
-.. include:: /samples/ecommerce/custom/asyncronous.rst
 
 .. include:: /partials/optimizing_for_viewport.rst
 
