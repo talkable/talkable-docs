@@ -10,7 +10,8 @@ Sphinx
 
 For more details see [The Sphinx Documentation](http://sphinx-doc.org/contents.html)
 
-### reStructuredText
+reStructuredText
+----------------
 
 For more details see [The reST Quickref](http://docutils.sourceforge.net/docs/user/rst/quickref.html)
 
