@@ -30,8 +30,9 @@ Below is the sample code for a purchase with two items.
 
 .. include:: /partials/note_sample_code.rst
 
-Main Integration Code
----------------------
+.. raw:: html
+
+   <h2>Main Integration Code</h2>
 
 .. include:: /samples/ecommerce/custom/syncronous.rst
 
