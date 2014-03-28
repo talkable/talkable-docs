@@ -90,6 +90,8 @@ If you did everything right, deploying is as easy as `make deploy` from "master"
 
 You can preview your changes with `make preview`.
 
+Build only, without opening browser tab: `make up`.
+
 ---
 
 See "master" branch: https://github.com/curebit/docs
