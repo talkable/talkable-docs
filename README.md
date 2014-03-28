@@ -67,7 +67,7 @@ Install [Homebrew](http://brew.sh/)
 Install Python and pip:
 
     brew install python
-    /usr/local/share/python/easy_install pip
+    /usr/local/Cellar/python/2.7.4/bin/easy_install pip
 
 More information in case of trouble: https://github.com/Homebrew/homebrew/wiki/Homebrew-and-Python
 
