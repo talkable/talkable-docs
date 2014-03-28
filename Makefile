@@ -38,6 +38,7 @@ preview:
 
 deploy:
 	git checkout gh-pages
+	git pull
 	rm -rf $(BUILDDIR) $(SOURCEDIR)
 	git checkout master $(GH_PAGES_SOURCES)
 	git reset HEAD
