@@ -30,7 +30,7 @@
         email: '{{ customer.email }}', /* REQUIRED - Customer Email Address */
         customer_id: '', /* Optional - Set to your internal customer ID for tracking */
         subtotal: '{{ subtotal_price | money_without_currency }}', /* REQUIRED - Purchase Subtotal */
-        coupon_code: couponCodes.join(','),
+        coupon_code: couponCodes,
         items: _curebit_order_items
       };
 
