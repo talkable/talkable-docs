@@ -8,8 +8,9 @@ Filters
 
 |hr|
 
-Curebit Filters
----------------
+.. raw:: html
+
+   <h2>Curebit Filters</h2>
 
 asset\_url
 ..........
