@@ -6,8 +6,8 @@
 
 /* -- page layout ----------------------------------------------------------- */
 html {
+    background-color: #EDF0F3;
     min-height: 100%;
-    box-shadow: inset 263px 69px #fff, inset 264px 69px #c5cbd4;
 }
 
 body {
@@ -83,8 +83,10 @@ a:focus {
     transition: border-color .25s;
 }
 
-.textfield:-moz-placeholder,
-.textfield::-moz-placeholder,
+.textfield::-moz-placeholder {
+    color: #ddd;
+}
+
 .textfield::-webkit-input-placeholder {
     color: #ddd;
 }
@@ -94,12 +96,13 @@ a:focus {
 }
 
 .bodywrapper {
-    border-left: 1px solid #c5cbd4;
-    bottom: 0;
+    background-color: #fff;
+    border-radius: 4px;
+    bottom: 14px;
     left: 263px;
     overflow: auto;
     position: fixed;
-    right: 0;
+    right: 14px;
     top: 69px;
 }
 
@@ -109,13 +112,12 @@ a:focus {
 }
 
 .nav {
-    border-right: 1px solid #c5cbd4;
     bottom: 0;
     float: left;
     left: 0;
     line-height: 1.35;
     overflow: auto;
-    padding: 26px 20px 30px;
+    padding: 10px 20px 30px;
     position: fixed;
     top: 69px;
     width: 223px;
@@ -143,8 +145,7 @@ a:focus {
 
 /* HEADER */
 .header {
-    border-bottom: 1px solid #c5cbd4;
-    height: 40px;
+    height: 41px;
     padding: 14px 0;
 }
 
@@ -173,17 +174,6 @@ a:focus {
     text-indent: -99999em;
     vertical-align: middle;
     width: 189px;
-}
-
-.footer {
-    border-top: 1px solid #c5cbd4;
-    color: #818791;
-    padding: 14px 0;
-}
-
-.footer a {
-    color: #818791;
-    text-decoration: none;
 }
 
 table.docutils {
@@ -410,8 +400,12 @@ div.hidden {
 /* FIREFOX SPECIFIC */
 @-moz-document url-prefix() { 
     .button {
-        padding-bottom: 7px;
+        padding-bottom: 8px;
         padding-top: 6px;
+    }
+
+    .header-logo {
+        margin-right: 49px;
     }
 }
 
