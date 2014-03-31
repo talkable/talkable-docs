@@ -33,7 +33,7 @@
         order_date: '2010-10-09 03:18:08', // REQUIRED - Order Date and Time (in UTC time zone, or as a timestamp with timezone information)
         email: 'customer@example.com', // REQUIRED - Customer Email Address
         subtotal: '23.97', // REQUIRED - Purchase Subtotal
-        coupon_code: 'SAVE20', // REQUIRED - Coupon code used at checkout, multiple coupons allowed as JS array: ['SAVE20', 'FREE-SHIPPING']
+        coupon_code: 'SAVE20', // REQUIRED - Coupon code used at checkout, multiple coupons allowed as JS array: ['SAVE20', 'FREE-SHIPPING']. Pass null if there is no coupon code.
         customer_id: '1234567890', // OPTIONAL - Set to your internal customer ID for tracking
         custom_field: null, // OPTIONAL - Any custom order data you might need
         items: _curebit_order_items,
