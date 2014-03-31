@@ -46,7 +46,7 @@ Default template markup:
     <input type="submit" value="Sign up" data-disable-with="Please wait" name="commit" />
   </form>
 
-.. note:: do not change ``name`` and form ``action`` attributes, otherwise functionality won't work.
+.. note:: Do not change ``name`` and form ``action`` attributes, otherwise functionality won't work.
 
 |hr|
 
@@ -56,7 +56,7 @@ Advocate Offer Page
 Here Advocate shares an offer with his friends. Explain the value proposition
 to Advocate and Friend, that both will receive an exclusive discount.
 
-Available share methods:
+Available sharing methods:
 
 - Email sharing
 - Social sharing (Facebook, Twitter, LinkedIn)
@@ -68,33 +68,70 @@ Available share methods:
 .. image:: /_static/img/basics/advocate-offer-page.png
   :alt: Advocate offer page
 
+|br|
+
+.. raw:: html
+
+  <h3>Email sharing example:</h3>
+
+.. code-block:: html
+
+  <form action="#" class="js-share-via-email-form">
+    <input type="text" value="" name="email_recipient_list" />
+    <input type="text" value="" name="email_subject" />
+    <textarea name="share_message"></textarea>
+    <input type="checkbox" checked="checked" name="share_email_reminder" value="true" />
+    <input type="submit" value="Send email" />
+  </form>
+
+|br|
+
+.. raw:: html
+
+  <h3>Facebook sharing example:</h3>
+
+.. code-block:: html
+
+  <a href="#" class="js-share-offer-via-facebook">
+    Share on Facebook
+  </a>
+
+|br|
+
+.. raw:: html
+
+  <h3>Twitter sharing example:</h3>
+
+.. code-block:: html
+
+  <a href="{{ twitter_share_link }}">
+    Share on Twitter
+  </a>
+
+|br|
+
+.. raw:: html
+
+  <h3>Share by link example:</h3>
+
+.. code-block:: html
+
+  <div data-clipboard-text="{{ short_url }}"
+       data-copied-label="Copied!"
+       data-placement="top"
+       title="Click to Copy"
+       class="js-share-by-link">
+    Copy and share by link
+  </div>
+
+- ``data-clipboard-text`` — data to be copied to a user clipboard on click.
+- ``data-copied-label`` — tooltip text after copying.
+- ``data-placement`` — tooltip placement. Possible values: ``top``, ``right``, ``bottom``, ``left``.
+- ``title`` — tooltip text on hover.
+
+.. note:: Do not change ``name`` and ``class`` attributes, otherwise functionality won't work. `js-` class prefix means it is used in Curebit API.
 
 |hr|
-
-|br|
-|br|
-|br|
-|br|
-|br|
-|br|
-|br|
-|br|
-|br|
-|br|
-|br|
-|br|
-Campaign Editor allows you to edit Liquid templates of various Web and Email
-views, which are shown and sent for campaign visitors.
-
-It also supports alternative templates: mobile for Web views and plain text for
-Email.
-
-CSS is editable and supports Liquid and SCSS.
-
-.. note::
-
-  There are two CSS stylesheets: for Web and Emails, shared between
-  corresponding views.
 
 Variables
 ---------
