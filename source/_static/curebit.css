@@ -146,7 +146,7 @@ a:focus {
 /* HEADER */
 .header {
     height: 41px;
-    padding: 14px 0;
+    padding: 14px 20px;
 }
 
 .header-disclaimer {
