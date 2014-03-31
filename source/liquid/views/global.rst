@@ -7,6 +7,6 @@ Global
 ZeroClipboard
 -------------
 
-If you want use two element zeroclipboard and in turn show them, then you need to use code like this:
+If you are using more multiple ZeroClipboard instances and one of them is placed inside hidden block (with display: none;), make sure to fire up that instance like following:
 
 .. include:: /samples/liquid/global/zeroclipboard.rst

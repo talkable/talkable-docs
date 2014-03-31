@@ -29,8 +29,11 @@ html:
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
-preview:
+up:
 	make clean && make html
+
+preview:
+	make up
 	open $(BUILDDIR)/html/index.html
 
 deploy:

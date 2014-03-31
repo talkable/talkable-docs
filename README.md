@@ -10,7 +10,8 @@ Sphinx
 
 For more details see [The Sphinx Documentation](http://sphinx-doc.org/contents.html)
 
-### reStructuredText
+reStructuredText
+----------------
 
 For more details see [The reST Quickref](http://docutils.sourceforge.net/docs/user/rst/quickref.html)
 
@@ -66,7 +67,7 @@ Install [Homebrew](http://brew.sh/)
 Install Python and pip:
 
     brew install python
-    /usr/local/share/python/easy_install pip
+    /usr/local/Cellar/python/2.7.4/bin/easy_install pip
 
 More information in case of trouble: https://github.com/Homebrew/homebrew/wiki/Homebrew-and-Python
 
@@ -79,11 +80,17 @@ If you get the error "unknown locale: UTF-8" when generating the documentation t
     export LANG=en_US.UTF-8
     export LC_ALL=en_US.UTF-8
 
+If you can't install sphinx still, try through calling easy_install like so:
+
+    easy_install -U Sphinx
+
 ### Building
 
 If you did everything right, deploying is as easy as `make deploy` from "master" branch.
 
 You can preview your changes with `make preview`.
+
+Build only, without opening browser tab: `make up`.
 
 ---
 

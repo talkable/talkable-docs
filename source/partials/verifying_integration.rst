@@ -24,7 +24,7 @@ won't see anything).
 
 .. note::
 
-   **Note for merchants who accept PayPal as a payment method**
+   For merchants who accept PayPal as a payment method:
 
    You must turn on auto-redirection to your thank you page for Curebit to work.
    :ref:`Learn How <ecommerce/paypal_auto_redirect>`

@@ -1,65 +1,52 @@
 {% extends "basic/layout.html" %}
+{% block relbar1 %}{% endblock %}
+{% block relbar2 %}{% endblock %}
+{% block sidebarlogo %}{% endblock %}
+{% block sidebar2 %}{% endblock %}
 
 {%- block doctype -%}
-<!DOCTYPE html>
+  <!DOCTYPE html>
 {%- endblock -%}
 
 {%- block extrahead -%}
-<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro|Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
-<link href="{{ pathto("_static/solarized-dark.css", 1) }}" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+  <link href="{{ pathto("_static/pygments-github.css", 1) }}" rel="stylesheet">
+  <link href="{{ pathto("_static/img/favicon.ico", 1) }}" rel="shortcut icon" />
 {%- endblock -%}
 
 {# put the sidebar before the body #}
 {%- block sidebar1 %}
-  {% if not theme_nosidebar|tobool %}
-  <div class="sphinxsidebar">
-    <div class="sphinxsidebarwrapper">
-      {%- block sidebarlogo %}
-        {{ super() }}
-      {%- endblock %}
-
-      <h3>Table of contents</h3>
-      <ul><li class="toctree-l1"><a href="{{ pathto(master_doc) }}">Main Page</a></li></ul></ul>
-      {%- block sidebartoc %}
-        {{ toctree(maxdepth=3) }}
-      {%- endblock %}
-
-      {%- block sidebarsearch %}
-        {%- if pagename != "search" and builder != "singlehtml" %}
-        <div id="searchbox" style="display: none" role="search">
-          <h3>Quick search</h3>
-            <form class="search" action="{{ pathto('search') }}" method="get">
-              <input type="text" name="q" />
-              <input type="submit" value="Go" />
+  {% block rootrellink %}
+    <div class="header">
+      <div class="content-container clearfix">
+        <a href="{{ pathto(master_doc) }}" class="header-logo">Curebit docs</a>
+        {%- block sidebarsearch %}
+          {%- if pagename != "search" and builder != "singlehtml" %}
+            <form class="header-search" action="{{ pathto('search') }}" method="get">
+              <input type="text" class="textfield header-search-field" name="q" placeholder="Search docs" />
+              <input type="submit" class="button header-search-button" value="Search" />
               <input type="hidden" name="check_keywords" value="yes" />
               <input type="hidden" name="area" value="default" />
             </form>
+          {%- endif %}
+        {%- endblock %}
+        <div class="header-disclaimer">
+          Visit
+          <a href="http://curebit.com" target="_blank">www.curebit.com</a>
         </div>
-        <script type="text/javascript">$('#searchbox').show(0);</script>
-        {%- endif %}
-      {%- endblock %}
-    </div>
-  </div>
-  {% endif %}
-{% endblock %}
-{% block sidebar2 %}{% endblock %}
+      </div>
+    </div> <!-- /.header -->
+  {% endblock %}
 
-{%- block relbar2 %}{% endblock %}
+  <div class="content-container content clearfix">
+    {%- block sidebartoc %}
+      <div class="nav">
+        {{ toctree(maxdepth=3) }}
+      </div>
+    {%- endblock %}
+{% endblock %}
 
 {%- block footer %}
-    <div class="footer">
-    {%- if show_copyright %}
-      {%- if hasdoc('copyright') %}
-        {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
-      {%- else %}
-        {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
-      {%- endif %}
-    {%- endif %}
-    {%- if last_updated %}
-      {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
-    {%- endif %}
-    {%- if show_sphinx %}
-    {% trans sphinx_version=sphinx_version|e %}Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
-    {%- endif %}
-    </div>
+  </div> <!-- /.content-container -->
 {%- endblock %}
+

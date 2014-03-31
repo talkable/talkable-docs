@@ -5,8 +5,8 @@ Integration Options
 ###################
 
 Curebit integrates with e-commerce platforms or custom web sites through
-JavaScript calls to our API. But most customers can integrate quickly **without
-knowing how to code**.
+JavaScript calls to our API. But most customers can integrate quickly without
+knowing how to code.
 
 The standard integration provides end-to-end referral tracking and displays
 offers via popup after purchase. Other features are optional.
