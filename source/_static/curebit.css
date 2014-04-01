@@ -404,7 +404,7 @@ div.hidden {
 }
 
 /* FIREFOX SPECIFIC */
-@-moz-document url-prefix() { 
+@-moz-document url-prefix() {
     .button {
         padding-bottom: 8px;
         padding-top: 6px;

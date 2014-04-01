@@ -13,12 +13,12 @@ ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
 $(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from http://sphinx-doc.org/)
 endif
 
-.PHONY: help clean html preview deploy
+.PHONY: help clean html server deploy
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  html       to make standalone HTML files"
-	@echo "  preview    to make standalone HTML files and open index.html in the default browser"
+	@echo "  server     to make standalone HTML files and run the server on localhost:5000"
 	@echo "  deploy     to commit and deploy changes to GitHub"
 
 clean:
@@ -29,11 +29,8 @@ html:
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
-preview:
-	make clean && make html
-
 server:
-	make preview
+	make clean && make html
 	foreman start
 
 deploy:
