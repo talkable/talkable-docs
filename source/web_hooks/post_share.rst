@@ -4,7 +4,7 @@
 Post Share Web Hook
 ===================
 
-Triggered when a referrer person shares offer details with referred persons via
+Triggered when a Advocate person shares offer details with referred persons via
 corresponding form provided by campaign workflow.
 
 .. raw:: html

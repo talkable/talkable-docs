@@ -71,7 +71,7 @@ Split testing text with interpolation:
 
 .. code-block:: liquid
 
-   {{ "share_via_email_subject" | split_test: "Get %{referred_amount} off %{site_name}",
+   {{ "share_via_email_subject" | split_test: "%{site_name}",
       "Your friend %{referrer_email} shared this deal with you" | interpolate }}
 
 Split testing an asset:

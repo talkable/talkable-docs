@@ -51,12 +51,12 @@ You can approve or void rewards for purchases that are waiting approval.
    voided            Voids any rewards that have not yet been paid.
                      Referral is voided. |br|
                      *It's impossible to void rewards that have already been
-                     paid (e.g. Coupon on Landing Page for referred)*
+                     paid (e.g. Coupon on Friend Claim Page for Friend)*
    unrewarded        Voids any rewards that have not yet been paid.
                      Referral is not actually voided itself, but no reward
                      will be paid. |br|
                      *It's impossible to void rewards that have already been
-                     paid (e.g. Coupon on Landing Page for referred)*
+                     paid (e.g. Coupon on Friend Claim Page for Friend)*
    ================= ========================================================
 
 .. raw:: html

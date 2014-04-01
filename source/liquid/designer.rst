@@ -31,12 +31,12 @@ purchase (most common size is 800x500px):
 .. note::
    Overlay cannot be customized.
 
-Landing page size does not matter cause it hosts on Curebit site
+Friend Claim Page size does not matter cause it hosts on Curebit site
 entirely. Commonly this view looks like a modal window with customer
 site loaded on the back:
 
 .. image:: /_static/img/liquid/designer/image3.png
-   :alt: Landing page
+   :alt: Friend Claim Page
 
 Most common modal size is 800x500px.
 

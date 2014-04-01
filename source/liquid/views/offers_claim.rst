@@ -1,14 +1,14 @@
 .. _liquid/views/offers_claim:
 .. include:: /partials/common.rst
 
-Landing Page
-============
+Friend Claim Page
+=================
 
 Email Gating
 ------------
 
 Email gating is used when you need RD to provide an email to get a
-reward. It is used on the landing page and looks like a popup with email
+reward. It is used on the Friend Claim Page and looks like a popup with email
 field, submit button, and "signup for latest news" checkbox.
 
 First of all, turn on email gating in Restricted settings:
