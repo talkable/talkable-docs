@@ -187,7 +187,7 @@ information about offer itself is recommended.
 
 Frequently used Variables:
 
-- Main CTA should point to a Friend Claim Page — ``{{ short_url }}``.
+- Main CTA should point to a :ref:`developer/friend claim page` — ``{{ short_url }}``.
 - To show Email Share Message from Advocate use ``{{ custom_message_body }}``.
 
 |br|
@@ -219,6 +219,31 @@ particular email.
    :alt: Friend Share Email Reminder
 
 .. include:: /partials/developer_email_note.rst
+
+|hr|
+
+.. _developer/friend claim page:
+
+Friend Claim Page
+-----------------
+
+Friend lands here from :ref:`developer/friend share email`. |br|
+Explain him what special discount he will get when using this link. |br|
+It's recommended to show coupon code for the Friend on this page
+(and only on this page).
+
+Frequently used Variables:
+
+- Main CTA should point to a merchant site to start shopping
+  ``{{ proceed_to_merchant_path }}``. |br|
+- To show coupon code use ``{{ coupon_code }}``.
+- To show expiration date use ``{{ valid_until }}``.
+  :ref:`Formatting options <liquid_filter_format_date>`.
+
+|br|
+
+.. image:: /_static/img/basics/friend-claim-page.png
+   :alt: Friend Claim Page
 
 |hr|
 

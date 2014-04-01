@@ -36,7 +36,6 @@ Below is the sample code for a purchase with two items.
 
 .. include:: /samples/ecommerce/custom/syncronous.rst
 
-
 .. include:: /partials/optimizing_for_viewport.rst
 
 .. include:: /partials/verifying_integration.rst
@@ -44,3 +43,4 @@ Below is the sample code for a purchase with two items.
 .. container:: hidden
 
    .. toctree::
+

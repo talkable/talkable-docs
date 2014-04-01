@@ -47,6 +47,8 @@ Allows inline string interpolation using %{} syntax.
 
 |hr|
 
+.. _liquid_filter_format_date:
+
 format\_date
 ............
 
