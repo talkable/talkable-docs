@@ -26,6 +26,8 @@ To start editing Views simple visit ``Editor`` page from the Campaign dashboard.
 
 |hr|
 
+.. _developer/advocate signup page:
+
 Advocate Signup Page
 --------------------
 
@@ -51,6 +53,8 @@ entering his email address.
 .. note:: Do not change ``name`` and form ``action`` attributes, otherwise functionality won't work.
 
 |hr|
+
+.. _developer/advocate share page:
 
 Advocate Share Page
 -------------------
@@ -143,6 +147,8 @@ Related tutorials for this view:
 
 |hr|
 
+.. _developer/advocate offer email:
+
 Advocate Offer Email
 --------------------
 
@@ -153,9 +159,35 @@ and encourage Advocate to share using the buttons.
 - For Post-Checkout Campaign it triggers when Advocate makes store purchase.
   It is not recommended to use this email here since it may look spammy.
 
+Main CTA should point to an Advocate Share Page — ``{{ share_page_url }}``.
+
 |br|
 
 .. image:: /_static/img/basics/advocate-offer-email.png
+
+.. note:: Ideal email width is 480px. This is a most universal width for both
+  mobile and desktop platforms.
+  :ref:`Read more about email design <designer/email>`.
+
+|hr|
+
+.. _developer/friend share email:
+
+Friend Share Email
+------------------
+
+This email is sent by Advocate to his Friends from the
+:ref:`developer/advocate share page`. |br|
+The main purpose of this email is to invite a Friend by showing a personal
+Share Message from Advocate along with a unique Friend Claim Page link. Some
+information about offer itself is recommended.
+
+Main CTA should point to a Friend Claim Page — ``{{ short_url }}``.
+
+|br|
+
+.. image:: /_static/img/basics/friend-share-email.png
+   :alt: Friend Share Email
 
 .. note:: Ideal email width is 480px. This is a most universal width for both
   mobile and desktop platforms.
