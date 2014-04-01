@@ -182,7 +182,10 @@ The main purpose of this email is to invite a Friend by showing a personal
 Share Message from Advocate along with a unique Friend Claim Page link. Some
 information about offer itself is recommended.
 
-Main CTA should point to a Friend Claim Page — ``{{ short_url }}``.
+Frequently used Variables:
+
+- Main CTA should point to a Friend Claim Page — ``{{ short_url }}``.
+- To show Email Share Message from Advocate use ``{{ custom_message_body }}``.
 
 |br|
 
