@@ -29,12 +29,12 @@ html:
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
-up:
+preview:
 	make clean && make html
 
-preview:
-	make up
-	open $(BUILDDIR)/html/index.html
+server:
+	make preview
+	foreman start
 
 deploy:
 	git checkout gh-pages
@@ -43,9 +43,10 @@ deploy:
 	git checkout master $(GH_PAGES_SOURCES)
 	git reset HEAD
 	make html
-	(cd $(BUILDDIR)/html && tar c .) | (cd ./ && tar xf -)
-	rm -rf $(GH_PAGES_SOURCES) $(BUILDDIR)
+	(cd $(BUILDDIR)/html && tar c ./) | (cd ./ && tar xf -)
+	rm -rf $(GH_PAGES_SOURCES) $(BUILDDIR) .buildinfo
 	echo '' > .nojekyll
+	echo '.bundle' >> .gitignore
 	echo 'docs.curebit.com' > CNAME
 	git add -A
 	git commit -m "Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`" && git push origin gh-pages ; git checkout master
