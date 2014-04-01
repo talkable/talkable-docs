@@ -90,6 +90,10 @@ Available sharing methods:
     <input type="submit" value="Send email" />
   </form>
 
+.. _developer/friend share email reminder checkbox:
+Note ``share_email_reminder`` checkbox — this is :ref:`developer/friend share email reminder`
+trigger.
+
 |br|
 
 .. raw:: html
@@ -165,9 +169,7 @@ Main CTA should point to an Advocate Share Page — ``{{ share_page_url }}``.
 
 .. image:: /_static/img/basics/advocate-offer-email.png
 
-.. note:: Ideal email width is 480px. This is a most universal width for both
-  mobile and desktop platforms.
-  :ref:`Read more about email design <designer/email>`.
+.. include:: /partials/developer_email_note.rst
 
 |hr|
 
@@ -192,9 +194,30 @@ Frequently used Variables:
 .. image:: /_static/img/basics/friend-share-email.png
    :alt: Friend Share Email
 
-.. note:: Ideal email width is 480px. This is a most universal width for both
-  mobile and desktop platforms.
-  :ref:`Read more about email design <designer/email>`.
+.. include:: /partials/developer_email_note.rst
+
+|hr|
+
+.. _developer/friend share email reminder:
+
+Friend Share Email Reminder
+---------------------------
+
+This email is triggered only if Friend Share Email Reminder checkbox was checked
+on the :ref:`developer/advocate share page` when sharing. |br|
+By default reminder email sends out in 72 hours after sharing if Friend didn't
+use his Offer (i.e. didn't make a store purchase using coupon code).
+
+Main CTA should point to a Friend Claim Page — ``{{ short_url }}``. |br|
+To change email trigger delay open ``Editor`` / ``Extra fields`` for the
+particular email.
+
+|br|
+
+.. image:: /_static/img/basics/friend-share-email-reminder.png
+   :alt: Friend Share Email Reminder
+
+.. include:: /partials/developer_email_note.rst
 
 |hr|
 
