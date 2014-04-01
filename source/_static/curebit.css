@@ -224,6 +224,12 @@ h3 {
     padding-bottom: 5px;
 }
 
+h4 {
+    font-size: 140%;
+    margin: 1em 0 -0.3em 0;
+    padding-bottom: 5px;
+}
+
 div.body h1 a,
 div.body h2 a,
 div.body h3 a,

@@ -1,14 +1,14 @@
 .. _web_hooks/offer_signup:
 .. include:: /partials/common.rst
 
-Offer Signup Web Hook
-=====================
+Advocate Signup Web Hook
+========================
 
-Triggered when Referral Program Signup form is submitted.
+Triggered when Advocate Signup form is submitted.
 
 .. raw:: html
 
-   <h2>Payload parameters provided for Offer Signup Web Hook</h2>
+   <h2>Payload parameters provided for Advocate Signup Web Hook</h2>
 
 * **offer** — subhash of parameters describing the offer
 

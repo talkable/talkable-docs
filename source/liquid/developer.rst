@@ -37,7 +37,9 @@ entering his email address.
 .. image:: /_static/img/basics/advocate-signup.png
   :alt: Advocate signup
 
-Default template markup:
+.. raw:: html
+
+  <h4>Default template markup:</h4>
 
 .. code-block:: html
 
@@ -50,7 +52,7 @@ Default template markup:
 
 |hr|
 
-Advocate Offer Page
+Advocate Share Page
 -------------------
 
 Here Advocate shares an offer with his friends. Explain the value proposition
@@ -66,13 +68,13 @@ Available sharing methods:
 |br|
 
 .. image:: /_static/img/basics/advocate-offer-page.png
-  :alt: Advocate offer page
+  :alt: Advocate Share Page
 
 |br|
 
 .. raw:: html
 
-  <h3>Email sharing example:</h3>
+  <h4>Email sharing example:</h4>
 
 .. code-block:: html
 
@@ -88,7 +90,7 @@ Available sharing methods:
 
 .. raw:: html
 
-  <h3>Facebook sharing example:</h3>
+  <h4>Facebook sharing example:</h4>
 
 .. code-block:: html
 
@@ -100,7 +102,7 @@ Available sharing methods:
 
 .. raw:: html
 
-  <h3>Twitter sharing example:</h3>
+  <h4>Twitter sharing example:</h4>
 
 .. code-block:: html
 
@@ -112,7 +114,7 @@ Available sharing methods:
 
 .. raw:: html
 
-  <h3>Share by link example:</h3>
+  <h4>Share by link example:</h4>
 
 .. code-block:: html
 
@@ -129,7 +131,15 @@ Available sharing methods:
 - ``data-placement`` — tooltip placement. Possible values: ``top``, ``right``, ``bottom``, ``left``.
 - ``title`` — tooltip text on hover.
 
-.. note:: Do not change ``name`` and ``class`` attributes, otherwise functionality won't work. `js-` class prefix means it is used in Curebit API.
+.. note:: Do not change ``name`` and ``class`` attributes, otherwise
+  functionality won't work. `js-` class prefix means it is used in Curebit API.
+
+Related tutorials for this view:
+
+- :ref:`tutorials/instant reward`
+- :ref:`tutorials/cloudsponge`
+- :ref:`tutorials/multiple email fields`
+- :ref:`tutorials/linkedin`
 
 |hr|
 

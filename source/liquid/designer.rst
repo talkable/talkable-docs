@@ -7,7 +7,7 @@ Designer Guide
 Web view size
 -------------
 
-Make sure signup page canvas size is equal to the offer page, because
+Make sure Advocate Signup Page canvas size is equal to the Advocate Share Page, because
 this is a next screen referrer sees right after, there should be a
 smooth transition between these pages. Canvas size should be equal to a
 main container width of your site:
@@ -18,15 +18,15 @@ main container width of your site:
 For mobile screens most common width is 320px, but we also support fluid
 width with possibility to set it to 100% to support mobile devices and
 tablets. Since Curebit integration is based on ``iframe`` it is not
-possible to change its size from within of the iframe that’s why signup
-and offer pages should always be of the same size.
+possible to change its size from within of the iframe that’s why Signup
+and Share pages should always be of the same size.
 
-For Post-purchase campaign offer page should look like a modal window
+For Post-purchase campaign Advocate Share Page should look like a modal window
 cause it integrates right to the checkout page after user makes a
 purchase (most common size is 800x500px):
 
 .. image:: /_static/img/liquid/designer/image2.png
-   :alt: Offer page like a modal
+   :alt: Advocate Share Page like a modal
 
 .. note::
    Overlay cannot be customized.
