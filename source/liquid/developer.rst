@@ -7,8 +7,8 @@ Campaign Developer Guide
 
 Curebit Campaign is based on interaction between ``Advocate`` and ``Friend``:
 
-- ``Advocate``: person, who shares an offer with his Friend(s)
-- ``Friend``: person, who is invited to participate in Campaign by Advocate
+- Advocate: person, who shares an offer with his Friend(s)
+- Friend: person, who is invited to participate in Campaign by Advocate
 
 .. image:: /_static/img/basics/sharing-process.png
   :alt: Sharing process
@@ -29,7 +29,7 @@ To start editing Views simple visit ``Editor`` page from the Campaign dashboard.
 Advocate Signup Page
 --------------------
 
-Advocate referral program sign up page (only for ``Standalone Campaign``). On this page Advocate signs up by
+Advocate referral program sign up page (only for Standalone Campaign). On this page Advocate signs up by
 entering his email address.
 |br|
 |br|
@@ -62,7 +62,7 @@ Available sharing methods:
 
 - Email sharing
 - Social sharing (Facebook, Twitter, LinkedIn)
-- Link sharing (direct link to the ``Friend Claim Page``)
+- Link sharing (direct link to the Friend Claim Page)
 
 |br|
 |br|
@@ -140,6 +140,26 @@ Related tutorials for this view:
 - :ref:`tutorials/cloudsponge`
 - :ref:`tutorials/multiple email fields`
 - :ref:`tutorials/linkedin`
+
+|hr|
+
+Advocate Offer Email
+--------------------
+
+This email is sent to Advocate on sign up. Explain the value proposition
+and encourage Advocate to share using the buttons.
+
+- For Standalone Campaign it triggers when Advocate signs up.
+- For Post-Checkout Campaign it triggers when Advocate makes store purchase.
+  It is not recommended to use this email here since it may look spammy.
+
+|br|
+
+.. image:: /_static/img/basics/advocate-offer-email.png
+
+.. note:: Ideal email width is 480px. This is a most universal width for both
+  mobile and desktop platforms.
+  :ref:`Read more about email design <designer/email>`.
 
 |hr|
 

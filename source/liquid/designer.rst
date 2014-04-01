@@ -40,12 +40,15 @@ site loaded on the back:
 
 Most common modal size is 800x500px.
 
+
+.. _designer/email:
+
 Email size
 ----------
 
-Ideally email width is 580px for content:
+Ideally email width is 480px for content:
 
-.. image:: /_static/img/liquid/designer/image4.png
+.. image:: /_static/img/liquid/designer/email-width.png
    :alt: Email size
 
 Fonts
