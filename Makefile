@@ -29,12 +29,12 @@ html:
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
-up:
+preview:
 	make clean && make html
 
-preview:
-	make up
-	open $(BUILDDIR)/html/index.html
+server:
+	make preview
+	foreman start
 
 deploy:
 	git checkout gh-pages
