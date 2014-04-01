@@ -91,6 +91,7 @@ Available sharing methods:
   </form>
 
 .. _developer/friend share email reminder checkbox:
+
 Note ``share_email_reminder`` checkbox — this is :ref:`developer/friend share email reminder`
 trigger.
 
