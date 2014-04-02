@@ -157,7 +157,7 @@ Related tutorials for this View:
 Advocate Offer Email
 --------------------
 
-This email is sent to Advocate on sign up. Explain the value proposition
+Email is triggered to an Advocate on sign up. Explain the value proposition
 and encourage Advocate to share using the buttons.
 
 - For Standalone Campaign it triggers when Advocate signs up.
@@ -179,7 +179,7 @@ Main CTA should point to an Advocate Share Page — ``{{ share_page_url }}``.
 Friend Share Email
 ------------------
 
-This email is sent by Advocate to his Friends from the
+Email is triggered by an Advocate to his Friends from the
 :ref:`developer_advocate_share_page`. |br|
 The main purpose of this email is to invite a Friend by showing a personal
 Share Message from Advocate along with a unique Friend Claim Page link. Some
@@ -204,7 +204,7 @@ Frequently used Variables:
 Friend Share Email Reminder
 ---------------------------
 
-This email is triggered only if Friend Share Email Reminder checkbox was checked
+Email is triggered only if Friend Share Email Reminder checkbox was checked
 on the :ref:`developer_advocate_share_page` when sharing. |br|
 By default reminder email sends out in 72 hours after sharing if Friend didn't
 use his Offer (i.e. didn't make a store purchase using coupon code).
@@ -264,6 +264,44 @@ Related tutorials for this View:
 - :ref:`tutorials_email_gating`
 - :ref:`tutorials_like_gating`
 - :ref:`tutorials_zeroclipboard`
+
+|hr|
+
+.. _developer_friend_claim_email:
+
+Friend Claim Email
+------------------
+
+Main purpose of this email is to send a Reward via email, and remind about
+it in the future. |br|
+Email is triggered to a Friend who passed Email Gating and received Reward
+(i.e. coupon code). |br|
+Friend Claim Email is a good fit for email capture: reward Friend for
+getting his email. See :ref:`tutorials_email_gating` for more details.
+
+Frequently used Variables:
+
+- Main CTA should point to a merchant site to start shopping
+  ``{{ proceed_to_merchant_path }}``.
+- To show coupon code use ``{{ coupon_code }}``.
+- To show expiration date use ``{{ valid_until }}``.
+  :ref:`Formatting options <liquid_filter_format_date>`.
+
+|br|
+
+.. image:: /_static/img/basics/friend-claim-email.png
+   :alt: Friend Claim Email
+
+|br|
+
+.. code-block:: html
+
+  Here is your {{ incentives.click.description }} OFF deal you just claimed!
+  Use it on any purchase by {{ valid_until }}
+  Coupon code: {{ coupon_code }}
+  <a href="{{ proceed_to_merchant_path }}">Shop now</a>
+
+.. include:: /partials/developer_email_note.rst
 
 |hr|
 
