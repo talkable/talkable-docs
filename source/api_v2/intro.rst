@@ -22,6 +22,8 @@ Authentication
 You authenticate to the Curebit API by providing your ``api_key`` in the request.
 You can manage your API key in the Account Settings.
 
+.. warning:: Keep your API key secret!
+
 Response Format
 ---------------
 
