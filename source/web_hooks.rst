@@ -100,7 +100,7 @@ implementation should be safe to such changes.
 See available web hooks on the navigation sidebar.
 
 .. _RequestBin: http://www.w3.org/TR/NOTE-datetime
-.. _ISO-8601: http://requestb.in/
+.. _ISO-8601: http://en.wikipedia.org/wiki/ISO_8601
 
 .. container:: hidden
 

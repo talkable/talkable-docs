@@ -16,5 +16,6 @@ Contents:
    standalone
    liquid
    optional
-   api
    web_hooks
+   API Reference (v1) <api>
+   API Reference (v2) <api_v2>
