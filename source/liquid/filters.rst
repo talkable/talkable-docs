@@ -52,10 +52,12 @@ Allows inline string interpolation using %{} syntax.
 format\_date
 ............
 
-Format date for current localization.
+Format date for current localization. 
+Default format: Apr 04, 2014
 
 .. code-block:: liquid
 
+   {{ valid_until | format_date }}
    {{ valid_until | format_date: "%Y-%m-%d" }}
 
 |hr|
