@@ -4,7 +4,7 @@
 Advocate Share Page
 ===================
 
-.. _tutorials/instant reward:
+.. _tutorials_instant_reward:
 
 Instant Reward
 --------------
@@ -27,21 +27,21 @@ click here is more advanced setup:
 
 .. include:: /samples/liquid/offers_show/instant_reward_advanced.rst
 
-.. _tutorials/cloudsponge:
+.. _tutorials_cloudsponge:
 
 CloudSponge Integration
 -----------------------
 
 .. include:: /samples/liquid/offers_show/cloudsponge.rst
 
-.. _tutorials/multiple email fields:
+.. _tutorials_multiple_email_fields:
 
 Multiple Email Fields
 ---------------------
 
 .. include:: /samples/liquid/offers_show/multiple_emails.rst
 
-.. _tutorials/linkedin:
+.. _tutorials_linkedin:
 
 LinkedIn
 --------

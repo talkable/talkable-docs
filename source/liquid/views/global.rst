@@ -4,6 +4,8 @@
 Global
 ======
 
+.. _tutorials_zeroclipboard:
+
 ZeroClipboard
 -------------
 

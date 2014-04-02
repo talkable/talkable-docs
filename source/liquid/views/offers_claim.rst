@@ -4,6 +4,8 @@
 Friend Claim Page
 =================
 
+.. _tutorials_email_gating:
+
 Email Gating
 ------------
 
@@ -29,6 +31,10 @@ Advanced Setup
 3. Email validation messages
 
 .. include:: /samples/liquid/offers_claim/email_gating_advanced.rst
+
+|hr|
+
+.. _tutorials_like_gating:
 
 Like Gating
 -----------

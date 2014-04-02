@@ -26,7 +26,7 @@ To start editing Views simple visit ``Editor`` page from the Campaign dashboard.
 
 |hr|
 
-.. _developer/advocate signup page:
+.. _developer_advocate_signup_page:
 
 Advocate Signup Page
 --------------------
@@ -54,7 +54,7 @@ entering his email address.
 
 |hr|
 
-.. _developer/advocate share page:
+.. _developer_advocate_share_page:
 
 Advocate Share Page
 -------------------
@@ -90,9 +90,9 @@ Available sharing methods:
     <input type="submit" value="Send email" />
   </form>
 
-.. _developer/friend share email reminder checkbox:
+.. _developer_friend_share_email_reminder_checkbox:
 
-Note ``share_email_reminder`` checkbox — this is :ref:`developer/friend share email reminder`
+Note ``share_email_reminder`` checkbox — this is :ref:`developer_friend_share_email_reminder`
 trigger.
 
 |br|
@@ -143,16 +143,16 @@ trigger.
 .. note:: Do not change ``name`` and ``class`` attributes, otherwise
   functionality won't work. `js-` class prefix means it is used in Curebit API.
 
-Related tutorials for this view:
+Related tutorials for this View:
 
-- :ref:`tutorials/instant reward`
-- :ref:`tutorials/cloudsponge`
-- :ref:`tutorials/multiple email fields`
-- :ref:`tutorials/linkedin`
+- :ref:`tutorials_instant_reward`
+- :ref:`tutorials_cloudsponge`
+- :ref:`tutorials_multiple_email_fields`
+- :ref:`tutorials_linkedin`
 
 |hr|
 
-.. _developer/advocate offer email:
+.. _developer_advocate_offer_email:
 
 Advocate Offer Email
 --------------------
@@ -174,20 +174,20 @@ Main CTA should point to an Advocate Share Page — ``{{ share_page_url }}``.
 
 |hr|
 
-.. _developer/friend share email:
+.. _developer_friend_share_email:
 
 Friend Share Email
 ------------------
 
 This email is sent by Advocate to his Friends from the
-:ref:`developer/advocate share page`. |br|
+:ref:`developer_advocate_share_page`. |br|
 The main purpose of this email is to invite a Friend by showing a personal
 Share Message from Advocate along with a unique Friend Claim Page link. Some
 information about offer itself is recommended.
 
 Frequently used Variables:
 
-- Main CTA should point to a :ref:`developer/friend claim page` — ``{{ short_url }}``.
+- Main CTA should point to a :ref:`developer_friend_claim_page` — ``{{ short_url }}``.
 - To show Email Share Message from Advocate use ``{{ custom_message_body }}``.
 
 |br|
@@ -199,13 +199,13 @@ Frequently used Variables:
 
 |hr|
 
-.. _developer/friend share email reminder:
+.. _developer_friend_share_email_reminder:
 
 Friend Share Email Reminder
 ---------------------------
 
 This email is triggered only if Friend Share Email Reminder checkbox was checked
-on the :ref:`developer/advocate share page` when sharing. |br|
+on the :ref:`developer_advocate_share_page` when sharing. |br|
 By default reminder email sends out in 72 hours after sharing if Friend didn't
 use his Offer (i.e. didn't make a store purchase using coupon code).
 
@@ -222,12 +222,12 @@ particular email.
 
 |hr|
 
-.. _developer/friend claim page:
+.. _developer_friend_claim_page:
 
 Friend Claim Page
 -----------------
 
-Friend lands here from :ref:`developer/friend share email`. |br|
+Friend lands here from :ref:`developer_friend_share_email`. |br|
 Explain him what special discount he will get when using this link. |br|
 It's recommended to show coupon code for the Friend on this page
 (and only on this page).
@@ -244,6 +244,26 @@ Frequently used Variables:
 
 .. image:: /_static/img/basics/friend-claim-page.png
    :alt: Friend Claim Page
+
+.. code-block:: html
+
+  {% if offer_active %}
+    Copy your code: {{ coupon_code }}
+    <a href="{{ proceed_to_merchant_path }}">Shop now</a>
+    Offer is valid until {{ valid_until }}.
+  {% else %}
+    Offer expired.
+    <a href="{{ proceed_to_merchant_path }}">Proceed without offer</a>
+  {% endif %}
+
+.. note:: Do not change ``name`` and ``class`` attributes, otherwise
+  functionality won't work. `js-` class prefix means it is used in Curebit API.
+
+Related tutorials for this View:
+
+- :ref:`tutorials_email_gating`
+- :ref:`tutorials_like_gating`
+- :ref:`tutorials_zeroclipboard`
 
 |hr|
 
