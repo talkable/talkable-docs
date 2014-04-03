@@ -328,6 +328,36 @@ Example: ``http://site.com/share``.
 
 |hr|
 
+.. _developer_advocate_reward_paid_email:
+
+Advocate Reward Paid Email
+--------------------------
+
+Email is triggered to an Advocate when reward marked as ``Paid``. |br|
+Let Advocate know his account has been credited or a partial refund has
+been issued.
+
+Frequently used Variables:
+
+- To show Reward Coupon Code use ``{{ reward_coupon_code }}``.
+- Main CTA should point to a merchant site to start shopping ``{{ proceed_to_merchant_path }}``.
+
+|br|
+
+.. image:: /_static/img/basics/advocate-reward-paid-email.png
+   :alt: Advocate Reward Paid Email
+
+|br|
+
+.. code-block:: html
+
+  Your credit code: {{ reward_coupon_code }}
+  <a href="http://merchant-site.com/products">Spend your credit</a>
+
+.. include:: /partials/developer_email_note.rst
+
+|hr|
+
 Variables
 ---------
 
