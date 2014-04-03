@@ -36,3 +36,7 @@ Frequently used Variables:
   <a href="{{ proceed_to_merchant_path }}">Shop now</a>
 
 .. include:: /partials/developer_email_note.rst
+
+.. note::
+
+  It's possible to set multiple delays for this email, see :ref:`editor_delayed_emails`.
