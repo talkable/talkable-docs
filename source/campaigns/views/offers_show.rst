@@ -1,6 +1,8 @@
 .. _campaigns/views/offers_show:
 .. include:: /partials/common.rst
 
+.. _advocate_share_page_view:
+
 Advocate Share Page
 -------------------
 
@@ -37,7 +39,7 @@ Available sharing methods:
 
 ..
 
-Note ``share_email_reminder`` checkbox — this is :ref:`developer_friend_share_email_reminder`
+Note ``share_email_reminder`` checkbox — this is :ref:`friend_share_email_reminder_view`
 trigger.
 
 |br|

@@ -1,10 +1,12 @@
 .. _campaigns/views/offers_claim:
 .. include:: /partials/common.rst
 
+.. _friend_claim_page_view:
+
 Friend Claim Page
 -----------------
 
-Friend lands here from :ref:`developer_friend_share_email`. |br|
+Friend lands here from :ref:`friend_share_email_view`. |br|
 Explain him what special discount he will get when using this link. |br|
 It's recommended to show coupon code for the Friend on this page
 (and only on this page).

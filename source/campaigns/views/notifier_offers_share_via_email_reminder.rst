@@ -1,11 +1,13 @@
 .. _campaigns/views/notifier_offers_share_via_email_reminder:
 .. include:: /partials/common.rst
 
+.. _friend_share_email_reminder_view:
+
 Friend Share Email Reminder
 ---------------------------
 
 Email is triggered only if Friend Share Email Reminder checkbox was checked
-on the :ref:`developer_advocate_share_page` when sharing. |br|
+on the :ref:`advocate_share_page_view` when sharing. |br|
 By default reminder email sends out in 72 hours after sharing if Friend didn't
 use his Offer (i.e. didn't make a store purchase using coupon code).
 
