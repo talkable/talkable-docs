@@ -1,6 +1,8 @@
 .. _campaigns/views/notifier_offers_claim:
 .. include:: /partials/common.rst
 
+.. _notifier_offers_claim_view:
+
 Friend Claim Email
 ------------------
 
