@@ -1,13 +1,13 @@
-.. _liquid/views/offers_show:
+.. _campaigns/tutorials/offers_show:
 .. include:: /partials/common.rst
 
 Advocate Share Page
-===================
+-------------------
 
 .. _tutorials_instant_reward:
 
 Instant Reward
---------------
+..............
 
 Instant reward campaign is used when we need to reward RR immediately
 after he shares. If RR redemption email is turned on it will be sent
@@ -30,33 +30,30 @@ click here is more advanced setup:
 .. _tutorials_cloudsponge:
 
 CloudSponge Integration
------------------------
+.......................
 
 .. include:: /samples/liquid/offers_show/cloudsponge.rst
 
 .. _tutorials_multiple_email_fields:
 
 Multiple Email Fields
----------------------
+.....................
 
 .. include:: /samples/liquid/offers_show/multiple_emails.rst
 
 .. _tutorials_linkedin:
 
 LinkedIn
---------
+........
 
-Separate Wording
-................
+**Separate Wording**
 
 .. include:: /samples/liquid/offers_show/linkedin_opengraph.rst
 
-Basic Setup
-...........
+**Basic Setup**
 
 .. include:: /samples/liquid/offers_show/linkedin_basic.rst
 
-Advanced Setup
-..............
+**Advanced Setup**
 
 .. include:: /samples/liquid/offers_show/linkedin_advanced.rst

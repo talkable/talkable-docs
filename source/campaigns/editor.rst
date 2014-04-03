@@ -1,16 +1,37 @@
-.. _liquid/filters:
+.. _campaigns/editor:
 .. include:: /partials/common.rst
 
+Editor
+======
+
+Variables
+---------
+
+Each Curebit view has its own set of Variables which can be used in template.
+
+Files
+-----
+
+Allows to upload and use images, fonts, etc for campaign purposes.
+
+History
+-------
+
+Whenever view or stylesheet is updated editor saves changes in History.
+
+Extra
+-----
+
+Allows to configure additional options for each view.
+
 Filters
-=======
+-------
 
 `Standard liquid filters`_ that are available out of box.
 
-|hr|
-
 .. raw:: html
 
-   <h2>Curebit Filters</h2>
+   <h3>Curebit Filters</h3>
 
 asset\_url
 ..........
@@ -52,7 +73,7 @@ Allows inline string interpolation using %{} syntax.
 format\_date
 ............
 
-Format date for current localization. 
+Format date for current localization.
 Default format: Apr 04, 2014
 
 .. code-block:: liquid
@@ -143,4 +164,3 @@ Returns ``$100.9``.
 Returns ``$100``.
 
 .. _Standard liquid filters: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters
-

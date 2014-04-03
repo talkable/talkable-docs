@@ -1,8 +1,8 @@
-.. _liquid/designer:
+.. _campaigns/designer:
 .. include:: /partials/common.rst
 
-Designer Guide
-==============
+Designer
+========
 
 Web view size
 -------------

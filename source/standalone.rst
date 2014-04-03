@@ -1,8 +1,8 @@
 .. _standalone:
 .. include:: /partials/common.rst
 
-Standalone Campaign
-###################
+Standalone Integrations
+#######################
 
 Contents:
 
