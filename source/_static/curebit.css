@@ -50,6 +50,10 @@ a:focus {
     color: #3e4f6c;
 }
 
+abbr {
+    letter-spacing: 0.08em;
+}
+
 .button {
     background: #f0632f;
     border: 1px solid #c04f26;
