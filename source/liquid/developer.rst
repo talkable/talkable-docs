@@ -2,6 +2,10 @@
 .. include:: /partials/common.rst
 .. _Liquid: http://github.com/Shopify/liquid
 
+.. |cta| raw:: html
+
+  <abbr title="Call to action">CTA</abbr>
+
 Campaign Developer Guide
 ========================
 
@@ -164,7 +168,7 @@ and encourage Advocate to share using the buttons.
 - For Post-Checkout Campaign it triggers when Advocate makes store purchase.
   It is not recommended to use this email here since it may look spammy.
 
-Main CTA should point to an Advocate Share Page — ``{{ share_page_url }}``.
+Main |cta| should point to an Advocate Share Page — ``{{ share_page_url }}``.
 
 |br|
 
@@ -187,7 +191,7 @@ information about offer itself is recommended.
 
 Frequently used Variables:
 
-- Main CTA should point to a :ref:`developer_friend_claim_page` — ``{{ short_url }}``.
+- Main |cta| should point to a :ref:`developer_friend_claim_page` — ``{{ short_url }}``.
 - To show Email Share Message from Advocate use ``{{ custom_message_body }}``.
 
 |br|
@@ -209,7 +213,7 @@ on the :ref:`developer_advocate_share_page` when sharing. |br|
 By default reminder email sends out in 72 hours after sharing if Friend didn't
 use his Offer (i.e. didn't make a store purchase using coupon code).
 
-Main CTA should point to a Friend Claim Page — ``{{ short_url }}``. |br|
+Main |cta| should point to a Friend Claim Page — ``{{ short_url }}``. |br|
 To change email trigger delay open ``Editor`` / ``Extra fields`` for the
 particular email.
 
@@ -234,7 +238,7 @@ It's recommended to show coupon code for the Friend on this page
 
 Frequently used Variables:
 
-- Main CTA should point to a merchant site to start shopping
+- Main |cta| should point to a merchant site to start shopping
   ``{{ proceed_to_merchant_path }}``. |br|
 - To show coupon code use ``{{ coupon_code }}``.
 - To show expiration date use ``{{ valid_until }}``.
@@ -281,7 +285,7 @@ getting his email. See :ref:`tutorials_email_gating` for more details.
 
 Frequently used Variables:
 
-- Main CTA should point to a merchant site to start shopping
+- Main |cta| should point to a merchant site to start shopping
   ``{{ proceed_to_merchant_path }}``.
 - To show coupon code use ``{{ coupon_code }}``.
 - To show expiration date use ``{{ valid_until }}``.
@@ -321,7 +325,7 @@ Explain Advocate he is qualified for the offer and thank him for sharing.
 
 |br|
 
-For CTA use Standalone campaign integration URL.
+For |cta| use Standalone campaign integration URL.
 Example: ``http://site.com/share``.
 
 .. include:: /partials/developer_email_note.rst
@@ -340,7 +344,7 @@ been issued.
 Frequently used Variables:
 
 - To show Reward Coupon Code use ``{{ reward_coupon_code }}``.
-- Main CTA should point to a merchant site to start shopping ``{{ proceed_to_merchant_path }}``.
+- Main |cta| should point to a merchant site to start shopping ``{{ proceed_to_merchant_path }}``.
 
 |br|
 
