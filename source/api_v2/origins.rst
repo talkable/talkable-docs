@@ -81,7 +81,7 @@ Sample response:
        "origin": {
          "id": 31386398,
          "order_number": 12,
-         "subtotal": "100.0",
+         "subtotal": 100.0,
          "order_date": "2014-03-14T05:49:54.000-07:00",
          "customer_id": null,
          "type": "Purchase",
