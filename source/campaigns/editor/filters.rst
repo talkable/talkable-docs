@@ -1,16 +1,14 @@
-.. _liquid/filters:
+.. _campaigns/editor/filters:
 .. include:: /partials/common.rst
 
 Filters
-=======
+-------
 
 `Standard liquid filters`_ that are available out of box.
 
-|hr|
-
 .. raw:: html
 
-   <h2>Curebit Filters</h2>
+   <h3>Curebit Filters</h3>
 
 asset\_url
 ..........
@@ -47,13 +45,17 @@ Allows inline string interpolation using %{} syntax.
 
 |hr|
 
+.. _liquid_filter_format_date:
+
 format\_date
 ............
 
 Format date for current localization.
+Default format: Apr 04, 2014
 
 .. code-block:: liquid
 
+   {{ valid_until | format_date }}
    {{ valid_until | format_date: "%Y-%m-%d" }}
 
 |hr|
@@ -71,7 +73,7 @@ Split testing text with interpolation:
 
 .. code-block:: liquid
 
-   {{ "share_via_email_subject" | split_test: "Get %{referred_amount} off %{site_name}",
+   {{ "share_via_email_subject" | split_test: "%{site_name}",
       "Your friend %{referrer_email} shared this deal with you" | interpolate }}
 
 Split testing an asset:
@@ -139,4 +141,3 @@ Returns ``$100.9``.
 Returns ``$100``.
 
 .. _Standard liquid filters: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters
-

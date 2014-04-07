@@ -50,6 +50,10 @@ a:focus {
     color: #3e4f6c;
 }
 
+abbr {
+    letter-spacing: 0.08em;
+}
+
 .button {
     background: #f0632f;
     border: 1px solid #c04f26;
@@ -146,7 +150,7 @@ a:focus {
 /* HEADER */
 .header {
     height: 41px;
-    padding: 14px 0;
+    padding: 14px 20px;
 }
 
 .header-disclaimer {
@@ -220,6 +224,12 @@ h2 {
 
 h3 {
     font-size: 160%;
+    margin: 1em 0 -0.3em 0;
+    padding-bottom: 5px;
+}
+
+h4 {
+    font-size: 140%;
     margin: 1em 0 -0.3em 0;
     padding-bottom: 5px;
 }
@@ -398,7 +408,7 @@ div.hidden {
 }
 
 /* FIREFOX SPECIFIC */
-@-moz-document url-prefix() { 
+@-moz-document url-prefix() {
     .button {
         padding-bottom: 8px;
         padding-top: 6px;

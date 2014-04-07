@@ -14,7 +14,8 @@ Contents:
 
    E-Commerce Integrations <ecommerce>
    standalone
-   liquid
+   campaigns
    optional
-   api
    web_hooks
+   API Reference (v1) <api>
+   API Reference (v2) <api_v2>

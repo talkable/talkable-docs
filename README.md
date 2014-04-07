@@ -34,23 +34,23 @@ For example:
 
 ```rst
 .. _curebit-module:
- 
+
 Curebit Module
 ##############
- 
+
 This is the module documentation.
- 
+
 .. _curebit-section:
- 
+
 Curebit Section
 ===============
- 
+
 Curebit Subsection
 ------------------
 
 Curebit Subsubsection
 .....................
- 
+
 Here is a reference to "curebit section": :ref:`curebit-section` which will have the
 name "Curebit Section".
 ```
@@ -67,30 +67,33 @@ Install [Homebrew](http://brew.sh/)
 Install Python and pip:
 
     brew install python
-    /usr/local/Cellar/python/2.7.4/bin/easy_install pip
+    easy_install pip
 
 More information in case of trouble: https://github.com/Homebrew/homebrew/wiki/Homebrew-and-Python
 
 Install Sphinx:
 
     pip install sphinx
-    
-If you get the error "unknown locale: UTF-8" when generating the documentation the solution is to define the following environment variables:
+
+If that fails, try:
+
+    easy_install -U Sphinx
+
+If you get the error "unknown locale: UTF-8" when generating the documentation
+the solution is to define the following environment variables:
 
     export LANG=en_US.UTF-8
     export LC_ALL=en_US.UTF-8
 
-If you can't install sphinx still, try through calling easy_install like so:
-
-    easy_install -U Sphinx
-
 ### Building
 
+Run `bundle install` to install dependencies.
+
+Run `make server` from "master" branch and open `http://localhost:5000` in browser.
+
+### Deploying
+
 If you did everything right, deploying is as easy as `make deploy` from "master" branch.
-
-You can preview your changes with `make preview`.
-
-Build only, without opening browser tab: `make up`.
 
 ---
 

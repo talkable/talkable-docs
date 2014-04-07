@@ -100,7 +100,7 @@ implementation should be safe to such changes.
 See available web hooks on the navigation sidebar.
 
 .. _RequestBin: http://www.w3.org/TR/NOTE-datetime
-.. _ISO-8601: http://requestb.in/
+.. _ISO-8601: http://en.wikipedia.org/wiki/ISO_8601
 
 .. container:: hidden
 
@@ -109,5 +109,5 @@ See available web hooks on the navigation sidebar.
       Create Coupons <web_hooks/create_coupon>
       Referral <web_hooks/referral>
       Post Share <web_hooks/post_share>
-      Offer Signup <web_hooks/offer_signup>
-      Claim Signup <web_hooks/claim_signup>
+      Advocate Signup <web_hooks/offer_signup>
+      Friend Email Gating <web_hooks/claim_signup>

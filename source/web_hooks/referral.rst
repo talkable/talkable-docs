@@ -20,6 +20,14 @@ Triggered when there is a new referral in Curebit.
 * **referrer** — subhash of parameters describing the reward received by a referrer person
 
   * **email** — email of the person that got reward
+  * **person** — subhash of parameters describing the person that got reward
+
+    * **email**
+    * **first_name**
+    * **last_name**
+    * **gender**
+    * **sub_choice**
+
   * **amount** — amount of money to reward (null when non-monetary incentive is used)
   * **incentive** — type of incentive reward (rebate, discount_coupon, other)
   * **incentive_description** — verbal reward explanation
@@ -37,6 +45,14 @@ Triggered when there is a new referral in Curebit.
 * **referred** — subhash of parameters describing the reward received by referred person
 
   * **email** — email of the person that got reward
+  * **person** — subhash of parameters describing the person that got reward
+
+    * **email**
+    * **first_name**
+    * **last_name**
+    * **gender**
+    * **sub_choice**
+
   * **amount** — amount of money to reward (null when non-monetary incentive is used)
   * **incentive** — type of incentive reward (rebate, discount_coupon, other)
   * **incentive_description** — verbal reward explanation
@@ -80,7 +96,7 @@ Incentives can be of 3 following general types.
 
   {
     "campaign": {
-      "id": 970078549,
+      "id": 608351285,
       "type": "StandaloneCampaign",
       "cached_slug": "affiliate-campaign-test",
       "tag_names": ["default"]
@@ -90,30 +106,44 @@ Incentives can be of 3 following general types.
       "short_url_code": "1a2PV"
     },
     "referrer": {
-      "id": 384532015,
+      "id": 529876428,
       "email": "referrer@example.com",
+      "person": {
+        "email": "referrer@example.com",
+        "first_name": "Bob",
+        "last_name": "Crane",
+        "gender": null,
+        "sub_choice": false
+      },
       "amount": "5.00",
       "incentive": "rebate",
       "incentive_description": "$5.00 back",
       "origin": {
-        "id": 33810209,
+        "id": 413714044,
         "type": "AffiliateMember",
         "email": "referrer@example.com"
       }
     },
     "referred": {
-      "id": 648889141,
+      "id": 494279559,
       "email": "referred@example.com",
+      "person": {
+        "email": "referred@example.com",
+        "first_name": "Alice",
+        "last_name": "Smith",
+        "gender": "female",
+        "sub_choice": true
+      },
       "amount": "0.00",
       "incentive": "other",
       "incentive_description": "First Month Free",
       "origin": {
-        "id": 404180964,
+        "id": 730304164,
         "type": "Purchase",
-        "order_number": 605022930,
-        "order_date": "2014-03-19T04:25:34.517-07:00",
-        "customer_id": "50090390",
-        "coupon_code": "WHT85956"
+        "order_number": 805174808,
+        "order_date": "2014-04-01T03:51:50.373-07:00",
+        "customer_id": "241025369",
+        "coupon_code": "WHT297"
       }
     }
   }
@@ -124,7 +154,7 @@ Incentives can be of 3 following general types.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"campaign":{"id":338380516,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"referrer":{"id":320756779,"email":"referrer@example.com","amount":"5.00","incentive":"rebate","incentive_description":"$5.00 back","origin":{"id":599664225,"type":"AffiliateMember","email":"referrer@example.com"}},"referred":{"id":695132735,"email":"referred@example.com","amount":"0.00","incentive":"other","incentive_description":"First Month Free","origin":{"id":724069220,"type":"Purchase","order_number":580672632,"order_date":"2014-03-19T04:26:42.315-07:00","customer_id":"322031219","coupon_code":"WHT46606"}}}' <url>
+   curl --data 'key=<key>&payload={"campaign":{"id":608351285,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"referrer":{"id":529876428,"email":"referrer@example.com","person":{"email":"referrer@example.com","first_name":"Bob","last_name":"Crane","gender":null,"sub_choice":false},"amount":"5.00","incentive":"rebate","incentive_description":"$5.00 back","origin":{"id":413714044,"type":"AffiliateMember","email":"referrer@example.com"}},"referred":{"id":494279559,"email":"referred@example.com","person":{"email":"referred@example.com","first_name":"Alice","last_name":"Smith","gender":"female","sub_choice":true},"amount":"0.00","incentive":"other","incentive_description":"First Month Free","origin":{"id":730304164,"type":"Purchase","order_number":805174808,"order_date":"2014-04-01T03:51:50.373-07:00","customer_id":"241025369","coupon_code":"WHT297"}}}' <url>
 
 .. container:: hidden
 

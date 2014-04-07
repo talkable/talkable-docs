@@ -1,2 +1,3 @@
-source/_build/
-build/
+/build
+/.bundle
+Gemfile.lock

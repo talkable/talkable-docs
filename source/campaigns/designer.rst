@@ -1,13 +1,13 @@
-.. _liquid/designer:
+.. _campaigns/designer:
 .. include:: /partials/common.rst
 
-Designer Guide
-==============
+Designer
+========
 
 Web view size
 -------------
 
-Make sure signup page canvas size is equal to the offer page, because
+Make sure Advocate Signup Page canvas size is equal to the Advocate Share Page, because
 this is a next screen referrer sees right after, there should be a
 smooth transition between these pages. Canvas size should be equal to a
 main container width of your site:
@@ -18,34 +18,37 @@ main container width of your site:
 For mobile screens most common width is 320px, but we also support fluid
 width with possibility to set it to 100% to support mobile devices and
 tablets. Since Curebit integration is based on ``iframe`` it is not
-possible to change its size from within of the iframe that’s why signup
-and offer pages should always be of the same size.
+possible to change its size from within of the iframe that’s why Signup
+and Share pages should always be of the same size.
 
-For Post-purchase campaign offer page should look like a modal window
+For Post-purchase campaign Advocate Share Page should look like a modal window
 cause it integrates right to the checkout page after user makes a
 purchase (most common size is 800x500px):
 
 .. image:: /_static/img/liquid/designer/image2.png
-   :alt: Offer page like a modal
+   :alt: Advocate Share Page like a modal
 
 .. note::
    Overlay cannot be customized.
 
-Landing page size does not matter cause it hosts on Curebit site
+Friend Claim Page size does not matter cause it hosts on Curebit site
 entirely. Commonly this view looks like a modal window with customer
 site loaded on the back:
 
 .. image:: /_static/img/liquid/designer/image3.png
-   :alt: Landing page
+   :alt: Friend Claim Page
 
 Most common modal size is 800x500px.
+
+
+.. _designer/email:
 
 Email size
 ----------
 
-Ideally email width is 580px for content:
+Ideally email width is 480px for content:
 
-.. image:: /_static/img/liquid/designer/image4.png
+.. image:: /_static/img/liquid/designer/email-width.png
    :alt: Email size
 
 Fonts

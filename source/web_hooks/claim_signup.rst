@@ -1,14 +1,14 @@
 .. _web_hooks/claim_signup:
 .. include:: /partials/common.rst
 
-Claim Signup Web Hook
-=====================
+Friend Email Gating Web Hook
+============================
 
-Triggered when Offer Claim form is submitted.
+Triggered when Friend Email Gating form is submitted (on Friend Claim Page).
 
 .. raw:: html
 
-   <h2>Payload parameters provided for Offer Signup Web Hook</h2>
+   <h2>Payload parameters provided for Advocate Signup Web Hook</h2>
 
 * **offer** — subhash of parameters describing the offer
 

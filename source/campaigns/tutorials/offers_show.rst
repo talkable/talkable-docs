@@ -1,11 +1,13 @@
-.. _liquid/views/offers_show:
+.. _campaigns/tutorials/offers_show:
 .. include:: /partials/common.rst
 
-Offer Page
-==========
+Advocate Share Page
+-------------------
+
+.. _tutorials_instant_reward:
 
 Instant Reward
---------------
+..............
 
 Instant reward campaign is used when we need to reward RR immediately
 after he shares. If RR redemption email is turned on it will be sent
@@ -16,7 +18,7 @@ To make instant reward work you need to use FB App share instead of a
 default sharer.php.
 Also make sure **RR social sharing incentive** is set.
 
-After that we need to setup our offer page with the following markup:
+After that we need to setup Advocate Share Page with the following markup:
 
 .. include:: /samples/liquid/offers_show/instant_reward_basic.rst
 
@@ -25,30 +27,33 @@ click here is more advanced setup:
 
 .. include:: /samples/liquid/offers_show/instant_reward_advanced.rst
 
+.. _tutorials_cloudsponge:
+
 CloudSponge Integration
------------------------
+.......................
 
 .. include:: /samples/liquid/offers_show/cloudsponge.rst
 
+.. _tutorials_multiple_email_fields:
+
 Multiple Email Fields
----------------------
+.....................
 
 .. include:: /samples/liquid/offers_show/multiple_emails.rst
 
-LinkedIn
---------
+.. _tutorials_linkedin:
 
-Separate Wording
-................
+LinkedIn
+........
+
+**Separate Wording**
 
 .. include:: /samples/liquid/offers_show/linkedin_opengraph.rst
 
-Basic Setup
-...........
+**Basic Setup**
 
 .. include:: /samples/liquid/offers_show/linkedin_basic.rst
 
-Advanced Setup
-..............
+**Advanced Setup**
 
 .. include:: /samples/liquid/offers_show/linkedin_advanced.rst
