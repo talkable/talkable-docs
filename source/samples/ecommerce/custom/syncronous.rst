@@ -6,7 +6,7 @@
       var _curebitq = _curebitq || [];
       _curebitq.push(['init', {
         site_id: 'YOUR-CUREBIT-SITE-ID', // REQUIRED - Curebit Site ID
-        server: 'https://www.curebit.com' // OPTIONAL - Use your own domain (enterprise only)
+        //server: 'https://www.curebit.com' // OPTIONAL - use your own domain, that suppose to be setup as alias to curebit.com (this option is only possible for Enterprise client)
       }]);
 
       var _curebit_order_items = [];
