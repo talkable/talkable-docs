@@ -3,6 +3,7 @@
 
 # Internal variables.
 SPHINXBUILD      = sphinx-build
+UTF_LOCALE 			 = LC_ALL=en_US.UTF-8 
 SOURCEDIR        = source
 BUILDDIR         = build
 SPHINXOPTS       = -d $(BUILDDIR)/doctrees $(SOURCEDIR)
@@ -25,7 +26,7 @@ clean:
 	rm -rf $(BUILDDIR)/*
 
 html:
-	$(SPHINXBUILD) -b html $(SPHINXOPTS) $(BUILDDIR)/html
+	$(UTF_LOCALE) $(SPHINXBUILD) -b html $(SPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
