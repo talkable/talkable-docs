@@ -40,6 +40,8 @@ Below is the sample code for a purchase with two items.
 
 .. include:: /partials/verifying_integration.rst
 
+.. include:: /partials/for_modern_js_apps.rst
+
 .. container:: hidden
 
    .. toctree::
