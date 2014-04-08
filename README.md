@@ -87,7 +87,11 @@ the solution is to define the following environment variables:
 
 ### Building
 
-Run `bundle install` to install dependencies.
+Run `make preview` from "master" branch.
+
+#### Setting up LiveReload
+
+Install Ruby and [Bundler](http://bundler.io/), and run `bundle install` to install dependencies.
 
 Run `make server` from "master" branch and open `http://localhost:5000` in browser.
 

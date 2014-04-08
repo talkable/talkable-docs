@@ -3,7 +3,7 @@
 
 # Internal variables.
 SPHINXBUILD      = sphinx-build
-UTF_LOCALE 			 = LC_ALL=en_US.UTF-8 
+UTF_LOCALE       = LC_ALL=en_US.UTF-8
 SOURCEDIR        = source
 BUILDDIR         = build
 SPHINXOPTS       = -d $(BUILDDIR)/doctrees $(SOURCEDIR)
@@ -14,11 +14,11 @@ ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
 $(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from http://sphinx-doc.org/)
 endif
 
-.PHONY: help clean html server deploy
+.PHONY: help clean html test preview server deploy
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "  html       to make standalone HTML files"
+	@echo "  preview    to make standalone HTML files"
 	@echo "  server     to make standalone HTML files and run the server on localhost:5000"
 	@echo "  deploy     to commit and deploy changes to GitHub"
 
@@ -33,8 +33,11 @@ html:
 test:
 	$(SPHINXBUILD) -nW -b html $(SPHINXOPTS) $(BUILDDIR)/html
 
-server:
+preview:
 	make clean html
+
+server:
+	make preview
 	foreman start
 
 deploy:
