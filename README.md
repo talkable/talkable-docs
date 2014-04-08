@@ -1,19 +1,21 @@
 Curebit Documentation
 =====================
 
-This GitHub repository represents Curebit's documentation site, located at http://docs.curebit.com.
+[![Build Status](https://travis-ci.org/curebit/docs.svg)](https://travis-ci.org/curebit/docs)
+
+This GitHub repository represents Curebit's documentation site, located at [docs.curebit.com](http://docs.curebit.com).
 
 The Curebit documentation uses [reStructuredText](http://docutils.sourceforge.net/rst.html) as its markup language and is built using [Sphinx](http://sphinx-doc.org/).
 
 Sphinx
 ------
 
-For more details see [The Sphinx Documentation](http://sphinx-doc.org/contents.html)
+For more details see [The Sphinx Documentation](http://sphinx-doc.org/contents.html).
 
 reStructuredText
 ----------------
 
-For more details see [The reST Quickref](http://docutils.sourceforge.net/docs/user/rst/quickref.html)
+For more details see [The reST Quickref](http://docutils.sourceforge.net/docs/user/rst/quickref.html).
 
 ### Sections
 
@@ -71,13 +73,11 @@ Install Python and pip:
 
 More information in case of trouble: https://github.com/Homebrew/homebrew/wiki/Homebrew-and-Python
 
-Install Sphinx:
+Install dependencies:
 
-    pip install sphinx
+    pip install -r requirements.txt
 
-If that fails, try:
-
-    easy_install -U Sphinx
+If that fails, install pip first.
 
 If you get the error "unknown locale: UTF-8" when generating the documentation
 the solution is to define the following environment variables:
