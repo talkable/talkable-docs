@@ -1,4 +1,5 @@
 .. _ecommerce/custom:
+.. include:: /partials/common.rst
 
 Default Integration
 ===================
@@ -30,15 +31,20 @@ Below is the sample code for a purchase with two items.
 
 .. include:: /partials/note_sample_code.rst
 
-.. raw:: html
-
-   <h2>Main Integration Code</h2>
+Main Integration Code
+---------------------
 
 .. include:: /samples/ecommerce/custom/syncronous.rst
 
+|hr|
+
 .. include:: /partials/optimizing_for_viewport.rst
 
+|hr|
+
 .. include:: /partials/verifying_integration.rst
+
+|hr|
 
 .. include:: /partials/for_modern_js_apps.rst
 

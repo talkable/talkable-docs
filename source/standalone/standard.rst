@@ -45,6 +45,8 @@ The following code will register person@example.com in campaign with tag "custom
 
 .. include:: /partials/optimizing_for_viewport.rst
 
+.. include:: /partials/for_modern_js_apps.rst
+
 .. container:: hidden
 
    .. toctree::

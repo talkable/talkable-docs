@@ -1,6 +1,5 @@
-.. raw:: html
-
-   <h2>Optimizing for Viewport</h2>
+Optimizing for Viewport
+-----------------------
 
 Curebit provides flexibility for the merchant to decide how they want to
 optimize mobile.
@@ -18,10 +17,6 @@ campaign theme view to use. This will prevent Curebit from automatically
 assigning the theme view to use, but will allow us to resize within the screen
 to make sure all elements fit well.
 
-.. raw:: html
-
-   <h2>Setup Your Theme</h2>
-
 Make sure you have this CSS in your campaign theme so it won't have a double
 scrollbars on resize (if ``responsive: true``)
 
@@ -30,3 +25,4 @@ scrollbars on resize (if ``responsive: true``)
    body { overflow: hidden; }
 
 `Demo integration link <http://jsfiddle.net/iurevych/sVtc8/>`_
+

@@ -4,9 +4,8 @@
 Custom Integration
 ==================
 
-.. raw:: html
-
-   <h2>Sign Up</h2>
+Sign Up
+-------
 
 Capture the email and make ajax request to Curebit with entered email, campaign
 tags and possible any other data like first/last name or gender. We return back
@@ -40,9 +39,10 @@ a json containing offer short code. Then redirect user to share page.
      "errors": ["Email can't be blank"]
    }
 
-.. raw:: html
+|hr|
 
-   <h2>Get a Coupon Code</h2>
+Get a Coupon Code
+-----------------
 
 Use offer short code to get a Coupon Code after share.
 
