@@ -1,4 +1,4 @@
-.. _ecommerce/paypal_auto_redirect:
+.. _optional/paypal_auto_redirect:
 
 Enabling PayPal Auto-Redirect
 =============================

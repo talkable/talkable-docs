@@ -30,8 +30,11 @@ html:
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
+test:
+	$(SPHINXBUILD) -nW -b html $(SPHINXOPTS) $(BUILDDIR)/html
+
 server:
-	make clean && make html
+	make clean html
 	foreman start
 
 deploy:

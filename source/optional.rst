@@ -15,10 +15,13 @@ each with links to integration details.
      - Issue single and multi-use coupons automatically for your campaigns
    * - :ref:`Product Information <optional/product_information>`
      - Enable customers to share purchased products with their friends
+   * - :ref:`PayPal Auto-Redirect <optional/paypal_auto_redirect>`
+     - Enabling PayPal Auto-Redirect for merchants who accept PayPal as a payment method
    * - :ref:`optional/reward_fulfillment`
      - Have Curebit fulfill your rewards via PayPal or manage them manually
    * - :ref:`White Labeling <optional/white_labeling>`
      - Change all visible URLs to your domain instead of curebit.com
+
 
 .. container:: hidden
 
@@ -26,5 +29,6 @@ each with links to integration details.
 
       Coupons <optional/coupons>
       Product Information <optional/product_information>
+      PayPal Auto-Redirect <optional/paypal_auto_redirect>
       optional/reward_fulfillment
       White Labeling <optional/white_labeling>
