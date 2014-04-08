@@ -16,7 +16,7 @@ You can trigger Curebit initialization whenever needed. For example, you can fir
     };
   </script>
 
-  <script src="//cdn.curebit.com/assets/api/all-0.6.js" type="text/javascript"></script>
+  <script src="//d2jjzw81hqbuqv.cloudfront.net/assets/api/all-0.6.js" type="text/javascript"></script>
 
 |br|
 
@@ -38,7 +38,7 @@ Also, you can append Curebit ``iframe`` into your custom container. Add ``iframe
     };
   </script>
 
-  <script src="//cdn.curebit.com/assets/api/all-0.6.js" type="text/javascript"></script>
+  <script src="//d2jjzw81hqbuqv.cloudfront.net/assets/api/all-0.6.js" type="text/javascript"></script>
 
 * You can pass any HTML attributes.
 * Pass ``container`` option to set where you want Curebit iframe to be inserted (this is HTML ``id`` attribute value).
