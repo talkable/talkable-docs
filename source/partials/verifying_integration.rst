@@ -1,5 +1,6 @@
-Verifying Your Integration
---------------------------
+.. raw:: html
+
+  <h2>Verifying Your Integration</h2>
 
 After installing Curebit, you should verify that the integration is working.
 All you have to do is check out from your store using the special email
@@ -27,4 +28,3 @@ won't see anything).
 
    You must turn on auto-redirection to your thank you page for Curebit to work.
    :ref:`Learn How <optional/paypal_auto_redirect>`
-

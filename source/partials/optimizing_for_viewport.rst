@@ -1,5 +1,6 @@
-Optimizing for Viewport
------------------------
+.. raw:: html
+
+  <h2>Optimizing for Viewport</h2>
 
 Curebit provides flexibility for the merchant to decide how they want to
 optimize mobile.
@@ -25,4 +26,3 @@ scrollbars on resize (if ``responsive: true``)
    body { overflow: hidden; }
 
 `Demo integration link <http://jsfiddle.net/iurevych/sVtc8/>`_
-
