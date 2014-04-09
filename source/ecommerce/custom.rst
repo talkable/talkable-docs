@@ -42,10 +42,6 @@ Main Integration Code
 
 |hr|
 
-.. include:: /partials/verifying_integration.rst
-
-|hr|
-
 .. include:: /partials/for_modern_js_apps.rst
 
 .. container:: hidden

@@ -19,7 +19,9 @@ Curebit is easily integrated into your FastSpring store.
 6. Click **Next**.
 7. Under **Actions**, click **Save**.
 
-.. include:: /partials/verifying_integration.rst
+|br|
+
+:ref:`Verifying Integration Instructions <ecommerce/verify>`
 
 .. container:: hidden
 

@@ -22,7 +22,9 @@ Curebit is easily integrated into your VP-ASP 7.0 store.
 
 .. _VP-ASP page: http://helpnotes.vpasp.com/kb/615-VP-ASP-70-Video-Tutorials/1012-Integrate-Curebit-into-VP-ASP-700/
 
-.. include:: /partials/verifying_integration.rst
+|br|
+
+:ref:`Verifying Integration Instructions <ecommerce/verify>`
 
 .. container:: hidden
 

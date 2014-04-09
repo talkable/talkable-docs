@@ -64,3 +64,5 @@ looking for integration services, feel free to `contact us`_.
 
       ecommerce/custom
       ecommerce/platform
+      ecommerce/verify
+

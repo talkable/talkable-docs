@@ -44,7 +44,9 @@ Integrate into order confirmation page
 
 .. _Demandware Curebit cartridge: http://curebit.com/demandware/curebit_integration_r1.0.0.zip
 
-.. include:: /partials/verifying_integration.rst
+|br|
+
+:ref:`Verifying Integration Instructions <ecommerce/verify>`
 
 .. container:: hidden
 

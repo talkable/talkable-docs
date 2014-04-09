@@ -38,7 +38,9 @@ osCommerce Store Integration
 
 .. _osCommerce Curebit Add-On: http://addons.oscommerce.com/info/7669
 
-.. include:: /partials/verifying_integration.rst
+|br|
+
+:ref:`Verifying Integration Instructions <ecommerce/verify>`
 
 .. container:: hidden
 

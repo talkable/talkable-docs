@@ -19,7 +19,9 @@ Download the `Magento Go Curebit file`_ and follow the instructions below.
 
 .. _Magento Go Curebit file: http://curebit.com/magentogo/curebit-plugin.js
 
-.. include:: /partials/verifying_integration.rst
+|br|
+
+:ref:`Verifying Integration Instructions <ecommerce/verify>`
 
 .. container:: hidden
 

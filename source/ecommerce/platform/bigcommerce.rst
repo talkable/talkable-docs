@@ -26,7 +26,9 @@ Curebit is easily integrated into your BigCommerce store.
 
 6. Click **OK**.
 
-.. include:: /partials/verifying_integration.rst
+|br|
+
+:ref:`Verifying Integration Instructions <ecommerce/verify>`
 
 .. container:: hidden
 

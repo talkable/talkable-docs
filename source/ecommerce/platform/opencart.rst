@@ -35,7 +35,9 @@ wish to integrate. Then, download the `OpenCart Curebit Checkout Extension`_.
 .. _available on GitHub: https://github.com/curebit/curebit-opencart-extension
 .. _issue tracker: https://github.com/curebit/curebit-opencart-extension/issues
 
-.. include:: /partials/verifying_integration.rst
+|br|
+
+:ref:`Verifying Integration Instructions <ecommerce/verify>`
 
 .. container:: hidden
 

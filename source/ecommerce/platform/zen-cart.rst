@@ -17,7 +17,9 @@ Zen Cart Store Integration
 
 .. _Zen Cart Curebit Add-On: http://curebit.com/zencart/curebit_checkout_0.0.2.zip
 
-.. include:: /partials/verifying_integration.rst
+|br|
+
+:ref:`Verifying Integration Instructions <ecommerce/verify>`
 
 .. container:: hidden
 

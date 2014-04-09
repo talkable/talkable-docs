@@ -20,7 +20,9 @@ wish to integrate. Then, download the `Ubercart Curebit Checkout Module`_.
 
 .. _Ubercart Curebit Checkout Module: http://curebit.com/ubercart/curebit_checkout-6.x-0.0.2.tar.gz
 
-.. include:: /partials/verifying_integration.rst
+|br|
+
+:ref:`Verifying Integration Instructions <ecommerce/verify>`
 
 .. container:: hidden
 

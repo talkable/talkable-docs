@@ -67,7 +67,9 @@ integration. The extension currently supports Magento versions 1.3.x and 1.4.x.
 .. _Magento Curebit extension: http://www.magentocommerce.com/magento-connect/curebit-checkout.html
 .. _direct download: http://curebit.com/magento/Curebit_Checkout-0.1.10.tgz
 
-.. include:: /partials/verifying_integration.rst
+|br|
+
+:ref:`Verifying Integration Instructions <ecommerce/verify>`
 
 .. container:: hidden
 

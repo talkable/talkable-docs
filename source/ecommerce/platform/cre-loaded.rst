@@ -18,7 +18,9 @@ CRE Loaded Store Integration
 
 .. _CRE Loaded Curebit Add-On: http://curebit.com/creloaded/curebit_checkout_0.0.3.zip
 
-.. include:: /partials/verifying_integration.rst
+|br|
+
+:ref:`Verifying Integration Instructions <ecommerce/verify>`
 
 .. container:: hidden
 

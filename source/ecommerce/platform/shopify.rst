@@ -18,7 +18,9 @@ then add a code snippet to your checkout page.
 
 3. Click **Apply these settings**.
 
-.. include:: /partials/verifying_integration.rst
+|br|
+
+:ref:`Verifying Integration Instructions <ecommerce/verify>`
 
 .. container:: hidden
 
