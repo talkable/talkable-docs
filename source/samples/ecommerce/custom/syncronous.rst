@@ -50,5 +50,5 @@
       _curebitq.push(['register_purchase', _curebit_order_details]);
     //]]>
   </script>
-  <script src="//cdn.curebit.com/integration/1.0.min.js" type="text/javascript"></script>
+  <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/1.0.min.js" type="text/javascript"></script>
   <!-- End Curebit integration code -->

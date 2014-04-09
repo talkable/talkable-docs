@@ -1,7 +1,7 @@
 .. code-block:: html
 
   <!-- Begin Curebit product integration code -->
-  <script src="//cdn.curebit.com/integration/1.0.min.js" type="text/javascript"></script>
+  <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/1.0.min.js" type="text/javascript"></script>
   <script type="text/javascript">
     curebit.init({site_id: 'YOUR-CUREBIT-SITE-ID'});
 
