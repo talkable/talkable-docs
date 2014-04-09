@@ -31,5 +31,5 @@
       }]);
     //]]>
   </script>
-  <script src="//d2jjzw81hqbuqv.cloudfront.net/assets/api/all-0.6.js" type="text/javascript"></script>
+  <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/curebit-1.0.min.js" type="text/javascript"></script>
   <!-- End Curebit integration code -->
