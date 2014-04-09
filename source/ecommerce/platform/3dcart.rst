@@ -16,7 +16,9 @@
    to you on your Curebit dashboard after you log in and create a site.
 6. Click **Save Changes** and confirm the settings have been saved.
 
-.. include:: /partials/verifying_integration.rst
+|br|
+
+:ref:`Verifying Integration Instructions <ecommerce/verify>`
 
 .. container:: hidden
 

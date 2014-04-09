@@ -22,7 +22,9 @@ Curebit is easily integrated into your Volusion store.
 
 5. Click **Save**.
 
-.. include:: /partials/verifying_integration.rst
+|br|
+
+:ref:`Verifying Integration Instructions <ecommerce/verify>`
 
 .. container:: hidden
 

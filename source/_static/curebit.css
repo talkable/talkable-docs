@@ -369,14 +369,26 @@ div.important p.admonition-title {
 
 div.hint,
 div.tip {
-    background-color: #859900;
+    border-left-color: #3e4f6c;
+}
+
+div.hint p.admonition-title,
+div.tip p.admonition-title {
+    color: #3e4f6c;
 }
 
 div.caution,
 div.attention,
 div.danger,
 div.error {
-    background-color: #dc322f;
+    border-left-color: #dc322f;
+}
+
+div.caution p.admonition-title,
+div.attention p.admonition-title,
+div.danger p.admonition-title,
+div.error p.admonition-title {
+    color: #dc322f;
 }
 
 div.admonition ul, div.admonition ol {

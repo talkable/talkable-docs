@@ -15,7 +15,9 @@ accordingly with your products' information.
 
 .. include:: /samples/optional/product_information.rst
 
-.. include:: /partials/verifying_integration.rst
+|br|
+
+:ref:`Verifying Integration Instructions <ecommerce/verify>`
 
 .. container:: hidden
 

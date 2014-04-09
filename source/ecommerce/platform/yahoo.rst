@@ -20,7 +20,9 @@ Curebit is easily integrated into your Yahoo! store.
 6. Navigate back to the **Store Manager** and click **Publish Order Settings**,
    then click **Publish** to publish and make the changes live on your site.
 
-.. include:: /partials/verifying_integration.rst
+|br|
+
+:ref:`Verifying Integration Instructions <ecommerce/verify>`
 
 .. container:: hidden
 
