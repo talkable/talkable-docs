@@ -1,2 +1,5 @@
 language: python
 script: make test
+notifications:
+  email:
+    - dev@curebit.com
