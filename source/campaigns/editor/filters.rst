@@ -6,10 +6,6 @@ Filters
 
 `Standard liquid filters`_ that are available out of box.
 
-.. raw:: html
-
-   <h3>Curebit Filters</h3>
-
 asset\_url
 ..........
 
