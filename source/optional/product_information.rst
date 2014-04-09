@@ -1,4 +1,5 @@
 .. _optional/product_information:
+.. include:: /partials/common.rst
 
 Product Information Integration (Optional)
 ==========================================
