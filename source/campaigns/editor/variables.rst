@@ -48,7 +48,7 @@ Type: ``Object``
   external_customer_id "1jsh17136"               Advocate unique ID passed by Merchnat
                                                  to :ref:`Curebit Integration
                                                  <ecommerce/custom>` as ``customer_id``
-  sub_choice           "0" | "on"                Advocate custom parameter which can be
+  sub_choice           false | true              Advocate custom parameter which can be
                                                  used to pass additional data to
                                                  Advocate Share Page
   purchases_count      0                         Advocate number of tracked store
