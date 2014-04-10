@@ -47,12 +47,18 @@ format\_date
 ............
 
 Format date for current localization.
+
 Default format: Apr 04, 2014
+
+Reference to all available formatting can be found in `strftime documentation`_
+
+.. _strftime documentation: http://apidock.com/ruby/DateTime/strftime
 
 .. code-block:: liquid
 
    {{ valid_until | format_date }}
    {{ valid_until | format_date: "%Y-%m-%d" }}
+   {{ current_time | format_date }}
 
 |hr|
 
