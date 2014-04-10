@@ -50,7 +50,8 @@ Type: ``Object``
                                                  <ecommerce/custom>` as ``customer_id``
   sub_choice           false | true              Advocate custom parameter which can be
                                                  used to pass additional data to
-                                                 Advocate Share Page
+                                                 Advocate Share Page. Passed values
+                                                 should be: 0 for false, 1 for true.
   purchases_count      0                         Advocate number of tracked store
                                                  purchases
   ==================== ========================= =======================================
