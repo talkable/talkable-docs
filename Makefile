@@ -38,7 +38,7 @@ preview:
 
 server:
 	make preview
-	foreman start
+	bundle exec foreman start
 
 deploy:
 	git checkout gh-pages
