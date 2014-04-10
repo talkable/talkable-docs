@@ -33,6 +33,7 @@ Each Variable is represented with Name, Liquid notation, Value:
 -------------------
 
 Personal data for Advocate. |br|
+Available in: all Views. |br|
 Type: ``Object``
 
 .. container:: ptable
