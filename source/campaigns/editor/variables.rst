@@ -29,12 +29,16 @@ Each Variable is represented with Name, Liquid notation, Value:
 * Value shows what this particular Variable results with (Value may be
   different between preview and production scenarious)
 
+|br|
+|hr|
+
 {{ advocate_info }}
 -------------------
 
-Personal data for Advocate. |br|
-Available in: all Views. |br|
-Type: ``Object``
+**Available in**: all Views |br|
+**Type**: ``Object``
+
+Personal data for Advocate.
 
 .. container:: ptable
 
@@ -61,15 +65,28 @@ Type: ``Object``
 {{ coupon_code }}
 -----------------
 
-Reward Coupon Code. This Variable has a scope:
+**Available in**: Friend Claim Page, Advocate Redemption Email, Advocate Reward
+Paid Email |br|
+**Type**: ``String``
 
-* for Views that start with ``Advocate`` it means Advocate Coupon Code
-* for Views that start with ``Friend`` it means Friend Coupon Code
+Coupon Code is given to a person as a Reward based on Incentive (condition of
+giving out the Reward).
+
+When you want to use this Variable always keep in mind who you want to
+show it to because it has a scope:
+
+* for Views which name starts with ``Advocate`` it means Advocate Coupon Code
+* for Views which name starts with ``Friend`` it means Friend Coupon Code
+
+.. image:: /_static/img/editor/vars-friend-coupon-code.png
+  :alt: Variables: friend coupon code
+
+|br|
 
 Make sure Incentives are correct:
 
-* If its ``single-use`` Coupon Code, make sure Coupon List exist and it has enough
-  coupons and they are valid in terms of uniqueness and validity
+* If its ``single-use`` Coupon Code, make sure Coupon List exist and it has
+  enough coupons and they are valid in terms of uniqueness and validity
 * If its ``multi-use`` Coupon Code, make sure it has a correct value
 
 .. image:: /_static/img/editor/vars-coupon-list.png
