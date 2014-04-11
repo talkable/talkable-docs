@@ -56,3 +56,24 @@ Type: ``Object``
                                                  purchases
   ==================== ========================= =======================================
 
+|br|
+
+{{ coupon_code }}
+-----------------
+
+Reward Coupon Code. This Variable has a scope:
+
+* for Views that start with ``Advocate`` it means Advocate Coupon Code
+* for Views that start with ``Friend`` it means Friend Coupon Code
+
+Make sure Incentives are correct:
+
+* If its ``single-use`` Coupon Code, make sure Coupon List exist and it has enough
+  coupons and they are valid in terms of uniqueness and validity
+* If its ``multi-use`` Coupon Code, make sure it has a correct value
+
+.. image:: /_static/img/editor/vars-coupon-list.png
+  :alt: Variables: coupon list
+
+|hr|
+
