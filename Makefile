@@ -31,14 +31,14 @@ html:
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
 test:
-	$(SPHINXBUILD) -nW -b html $(SPHINXOPTS) $(BUILDDIR)/html
+	$(UTF_LOCALE) $(SPHINXBUILD) -nW -b html $(SPHINXOPTS) $(BUILDDIR)/html
 
 preview:
 	make clean html
 
 server:
 	make preview
-	bundle exec foreman start
+	$(UTF_LOCALE) bundle exec foreman start
 
 deploy:
 	git checkout gh-pages

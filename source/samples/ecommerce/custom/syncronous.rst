@@ -6,6 +6,8 @@
       var _curebitq = _curebitq || [];
       _curebitq.push(['init', {
         site_id: 'YOUR-CUREBIT-SITE-ID', // REQUIRED - Curebit Site ID
+        //If you are using live ENV and test ENV you might need to switch over two sites based on current location host:
+        //site_id: window.location.host == "www.site.com" ? 'site' : 'site-testing'
         //server: 'https://www.curebit.com' // OPTIONAL - use your own domain, that suppose to be setup as alias to curebit.com (this option is only possible for Enterprise client)
       }]);
 
