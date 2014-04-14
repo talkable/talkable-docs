@@ -79,7 +79,7 @@ Curebit returns standard HTTP response codes.
    422                 Unprocessable Entity - The requested create, update,
                        or delete cannot be performed due to validation errors.
                        |br| See the response body for more details.
-   500, 502, 503, 504  Server Errors - something is wrong on Curebit’s end
+   500, 502, 503, 504  Server Errors - Something is wrong on Curebit’s end
    =================== ======================================================
 
 .. _ISO-8601: http://en.wikipedia.org/wiki/ISO_8601

@@ -42,23 +42,19 @@ Personal data for Advocate.
 
 .. container:: ptable
 
-  ==================== ========================= =======================================
+  ==================== ========================= ==================================================================
   Property             Value                     Description
-  ==================== ========================= =======================================
+  ==================== ========================= ==================================================================
   email                "affiliate@example.com"   Advocate email he is registered with
   first_name           "John"                    Advocate first name provided on Signup
   last_name            "Smith"                   Advocate last name provided on Signup
   gender               null | "male" | "female"  Advocate gender provided on Signup
-  external_customer_id "1jsh17136"               Advocate unique ID passed by Merchant
-                                                 to :ref:`Curebit Integration
+  external_customer_id "1jsh17136"               Advocate unique ID passed by Merchant to :ref:`Curebit Integration
                                                  <ecommerce/custom>` as ``customer_id``
-  sub_choice           false | true              Advocate custom parameter which can be
-                                                 used to pass additional data to
-                                                 Advocate Share Page. Passed values
-                                                 should be: 0 for false, 1 for true.
-  purchases_count      0                         Advocate number of tracked store
-                                                 purchases
-  ==================== ========================= =======================================
+  sub_choice           false | true              Advocate custom parameter which can be used to pass additional
+                                                 data to Advocate Share Page.
+  purchases_count      0                         Advocate number of tracked store purchases
+  ==================== ========================= ==================================================================
 
 |br|
 
@@ -93,4 +89,69 @@ Make sure Incentives are correct:
   :alt: Variables: coupon list
 
 |hr|
+
+{{ incentives }}
+----------------
+
+**Available in**: all Views |br|
+**Type**: ``Object``
+
+Reflects entire Campaign Incentives list including. This object can include
+several Incentives which are also objects.
+
+Here is an example of ``{{ incentives }}`` Variable with two incentives:
+``advocate`` and ``friend``:
+
+.. code-block:: javascript
+
+  {
+    advocate: {
+      amount: 10.0,
+      description: "$10",
+      percentage: false,
+      required_actions: 1
+    },
+    friend: {
+      amount: 100.0,
+      description: "100%",
+      percentage: true,
+      required_actions: 0
+    }
+  }
+
+And here is an example of using ``{{ incentives }}`` values:
+
+.. code-block:: html
+
+  Give your friend {{ incentives.friend.description }} OFF!
+
+Which outputs:
+
+.. code-block:: html
+
+  Give your friend 100% OFF!
+
+.. list-table::
+  :widths: 25 25 50
+  :header-rows: 1
+
+  * - Property
+    - Value
+    - Description
+  * - Liquid slug
+    - "referrer"
+    - Incentive identifier
+  * - amount
+    - 50.0
+    - Incentive amount (float)
+  * - description
+    - "$50"
+    - Formatted Incentive including currency and amount
+  * - percentage
+    - true | false
+    - Type of Incentive amount: fixed or percentage
+  * - required_actions
+    - 0
+    - Number of required actions to trigger reward (i.e. 2 purchases
+      needed to trigger reward)
 
