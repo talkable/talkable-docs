@@ -51,7 +51,7 @@ Create a purchase
      "data": {
        "email": "customer@mail.com",
        "order_number": 12,
-       "order_date": "2014-03-14 05:49:54",
+       "order_date": "2014-03-14T05:49:54-07:00",
        "subtotal": 100,
        "items": [
          {
@@ -67,7 +67,7 @@ Create a purchase
 
    curl -H "Content-Type: application/json" \
         -X POST \
-        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","type":"Purchase","data":{"email":"customer@mail.com","order_number":12,"order_date":"2014-03-14 05:49:54","subtotal":100,"items":[{"price":25,"quantity":4,"product_id":"TSHIRT"}]}}' \
+        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","type":"Purchase","data":{"email":"customer@mail.com","order_number":12,"order_date":"2014-03-14T05:49:54-07:00","subtotal":100,"items":[{"price":25,"quantity":4,"product_id":"TSHIRT"}]}}' \
         https://curebit.com/api/v2/origins
 
 Sample response:
