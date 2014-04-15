@@ -47,7 +47,7 @@ a PHP parameter decode example:
    <h2>Parsing Timestamps</h2>
 
 **Timestamp data type** is not a part of JSON standard. That is why timestamps
-are passed as strings in `ISO-8601`_ compatible format. You need to be sure that
+are passed as strings in |iso8601| compatible format. You need to be sure that
 your date parser is compatible to this standard. Otherwise issues may appear.
 People that use Java need to look through: |br|
 http://stackoverflow.com/questions/2201925/converting-iso8601-compliant-string-to-java-util-date
@@ -99,8 +99,7 @@ implementation should be safe to such changes.
 |hr|
 See available web hooks on the navigation sidebar.
 
-.. _RequestBin: http://www.w3.org/TR/NOTE-datetime
-.. _ISO-8601: http://en.wikipedia.org/wiki/ISO_8601
+.. _RequestBin: http://requestb.in/
 
 .. container:: hidden
 

@@ -32,7 +32,7 @@
 
       var _curebit_order_details = {
         order_number: '100011', // REQUIRED - Order number
-        order_date: '2010-10-09 03:18:08', // REQUIRED - Order Date and Time (in UTC time zone, or as a timestamp with timezone information)
+        order_date: '2014-04-15T08:18:44+00:00', // REQUIRED - Order Date and Time (ISO 8601 formatted datetime)
         email: 'customer@example.com', // REQUIRED - Customer Email Address
         subtotal: '23.97', // REQUIRED - Purchase Subtotal
         coupon_code: 'SAVE20', // REQUIRED - Coupon code used at checkout, multiple coupons allowed as JS array: ['SAVE20', 'FREE-SHIPPING']. Pass null if there is no coupon code.

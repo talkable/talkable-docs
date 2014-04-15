@@ -12,7 +12,7 @@ Curebit integration code can be asyncronous or syncronous depending on your deci
 The parameters you will need to provide are:
 
 * Order Number
-* Order Date and Time (in UTC time zone, or as a timestamp with timezone information)
+* Order Date and Time (|iso8601| formatted datetime)
 * Customer Email Address
 * Coupon code used at checkout
 * Customer ID from your site (Optional)

@@ -44,7 +44,7 @@ Date Format
 -----------
 
 Curebit returns JSON for all API calls. JSON does not have a built-in date type,
-dates are passed as strings encoded according to `ISO-8601`_.
+dates are passed as strings encoded according to |iso8601|.
 This format is supported by most programming languages out of the box:
 
 .. code::
@@ -81,8 +81,6 @@ Curebit returns standard HTTP response codes.
                        |br| See the response body for more details.
    500, 502, 503, 504  Server Errors - Something is wrong on Curebit’s end
    =================== ======================================================
-
-.. _ISO-8601: http://en.wikipedia.org/wiki/ISO_8601
 
 .. container:: hidden
 

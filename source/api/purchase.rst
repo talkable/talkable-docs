@@ -114,7 +114,7 @@ Create Purchases
                      * email
                      * subtotal
                      * order_number
-                     * order_date (in UTC time zone, or as a timestamp with timezone information)
+                     * order_date (|iso8601| formatted datetime)
                      * items (optional)
 
                      For example,
