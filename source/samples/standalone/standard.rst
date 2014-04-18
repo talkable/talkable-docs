@@ -6,19 +6,18 @@
       var _curebitq = _curebitq || [];
       _curebitq.push(['init', {
         site_id: 'YOUR-CUREBIT-SITE-ID', // REQUIRED - Curebit Site ID
-        //server: 'https://www.curebit.com' // OPTIONAL - use your own domain, that suppose to be setup as alias to curebit.com (this option is only possible for Enterprise client)
+        // server: 'https://www.curebit.com' // OPTIONAL - use your own domain, that suppose to be setup as alias to curebit.com (this option is only possible for Enterprise client)
       }]);
 
       _curebitq.push(['register_affiliate', {
         iframe: { // REQUIRED - html attributes for iframe tag to fit page design
           width: '100%', // REQUIRED - width of the iframe
-          height: 480, // REQUIRED - initial height of the iframe. Will be automatically updated if responsive option is set to true.
-          id: 'new_curebit_affiliate_member', // OPTIONAL - any other HTML attribute
-          frameborder: 0 // OPTIONAL - removes border from IE
+          height: 960, // REQUIRED - initial height of the iframe. Will be automatically updated if responsive option is set to true.
+          // container: "id-example", // OPTIONAL - Tell Curebit where to insert the iframe (ID attribute). See Asynchronous Integration for more details.
+          id: 'new_curebit_affiliate_member' // OPTIONAL - any other HTML attribute
         },
 
-        affiliate_member: { // OPTIONAL - curebit will ask person to signup
-                            // in case when his email is not given by merchant
+        affiliate_member: { // OPTIONAL - curebit will ask person to signup in case when his email is not given by merchant
           email: 'customer@example.com', // OPTIONAL - customer email
           first_name: 'John', // OPTIONAL - customer first name
           last_name: 'Smith', // OPTIONAL - customer last name
