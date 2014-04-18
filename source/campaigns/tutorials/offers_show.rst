@@ -34,6 +34,15 @@ CloudSponge Integration
 
 .. include:: /samples/liquid/offers_show/cloudsponge.rst
 
+**CloudSponge and Custom Domain**
+
+CloudSponge integration is bound to specific domain. In order to use it with
+custom domain you'll need to obtain separate ``domain_key``.
+
+#. Go to `CloudSponge <https://www.cloudsponge.com/>`_
+#. Add new domain, use your custom domain as domain name
+#. Copy & Paste new ``domain_key`` to your template
+
 .. _tutorials_multiple_email_fields:
 
 Multiple Email Fields
