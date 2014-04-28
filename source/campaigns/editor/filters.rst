@@ -37,7 +37,7 @@ Allows inline string interpolation using %{} syntax.
 
 .. code-block:: liquid
 
-   {{ "Get %{referrer_amount} Off" | interpolate }}
+   {{ "Get [[incentives.click.amount | money]] Off" | interpolate }}
 
 |hr|
 
@@ -75,8 +75,8 @@ Split testing text with interpolation:
 
 .. code-block:: liquid
 
-   {{ "share_via_email_subject" | split_test: "%{site_name}",
-      "Your friend %{referrer_email} shared this deal with you" | interpolate }}
+   {{ "share_via_email_subject" | split_test: "[[site_name]]",
+      "Your friend [[advocate_info.email]] shared this deal with you" | interpolate }}
 
 Split testing an asset:
 
@@ -93,7 +93,7 @@ Formats plain text to have HTML formatting. E.g. replace ``\n`` with ``<br/>``.
 
 .. code-block:: liquid
 
-   {{ "Hello %{referrer_email}\nHere is your reward." | simple_format | interpolate }}
+   {{ "Hello [[advocate_info.email]]\nHere is your reward." | simple_format | interpolate }}
 
 Returns ``Hello John<br/>Here is your reward``.
 
