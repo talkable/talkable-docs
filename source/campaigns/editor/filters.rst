@@ -33,7 +33,7 @@ Asset URL without CDN. Required only for custom fonts to work.
 interpolate
 ...........
 
-Allows inline string interpolation using %{} syntax.
+Allows inline string interpolation using [[ ]] syntax.
 
 .. code-block:: liquid
 
