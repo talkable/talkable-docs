@@ -28,6 +28,17 @@ Minimum Threshold is 20 coupons.
 
 .. raw:: html
 
+   <h2>Coupon Expiration timestamp</h2>
+
+Curebit having a hard time making decision when the coupon we are creating should expire.
+Only coupons that should be given on Friend Claim Page can have expiration and only when campaign offers are setup to expire.
+Other coupons given as "Reward For Sharing" or "Advocate Reward for Referral" should not have expiration.
+
+Expiration date for coupon on Friend Claim page is always greater than Advocate Claim Page expiration date + one day buffer.
+So Curebit is making web hooks with expiration set to Friend Claim page expiration + 1 day when it has no coupons that match this criteria in its own database.
+
+.. raw:: html
+
    <h2>Payload parameters provided for Create Coupon Web Hook</h2>
 
 * **coupon_code** — coupon code
