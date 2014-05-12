@@ -26,7 +26,7 @@
 
       var _curebit_order_details = {
         order_number: '{{ order_number }}', /* REQUIRED - Order number */
-        order_date: '{{ created_at }}', /* REQUIRED - Order Date and Time (in UTC time zone, or as a timestamp with timezone information) */
+        order_date: '{{ created_at }}', /* REQUIRED - Order Date and Time (ISO 8601 formatted datetime) */
         email: '{{ customer.email }}', /* REQUIRED - Customer Email Address */
         customer_id: '', /* Optional - Set to your internal customer ID for tracking */
         subtotal: '{{ subtotal_price | money_without_currency }}', /* REQUIRED - Purchase Subtotal */

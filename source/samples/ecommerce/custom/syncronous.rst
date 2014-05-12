@@ -6,9 +6,9 @@
       var _curebitq = _curebitq || [];
       _curebitq.push(['init', {
         site_id: 'YOUR-CUREBIT-SITE-ID', // REQUIRED - Curebit Site ID
-        //If you are using live ENV and test ENV you might need to switch over two sites based on current location host:
-        //site_id: window.location.host == "www.site.com" ? 'site' : 'site-testing'
-        //server: 'https://www.curebit.com' // OPTIONAL - use your own domain, that suppose to be setup as alias to curebit.com (this option is only possible for Enterprise client)
+        // If you are using live ENV and test ENV you might need to switch over two sites based on current location host:
+        // site_id: window.location.host == "www.site.com" ? 'site' : 'site-testing'
+        // server: 'https://www.curebit.com' // OPTIONAL - use your own domain, that suppose to be setup as alias to curebit.com (this option is only possible for Enterprise client)
       }]);
 
       var _curebit_order_items = [];
@@ -32,17 +32,21 @@
 
       var _curebit_order_details = {
         order_number: '100011', // REQUIRED - Order number
-        order_date: '2010-10-09 03:18:08', // REQUIRED - Order Date and Time (in UTC time zone, or as a timestamp with timezone information)
+        order_date: '2014-04-15T08:18:44+00:00', // REQUIRED - Order Date and Time (ISO 8601 formatted datetime)
         email: 'customer@example.com', // REQUIRED - Customer Email Address
         subtotal: '23.97', // REQUIRED - Purchase Subtotal
         coupon_code: 'SAVE20', // REQUIRED - Coupon code used at checkout, multiple coupons allowed as JS array: ['SAVE20', 'FREE-SHIPPING']. Pass null if there is no coupon code.
         customer_id: '1234567890', // OPTIONAL - Set to your internal customer ID for tracking
         custom_field: null, // OPTIONAL - Any custom order data you might need
         items: _curebit_order_items,
-        dont_redeem: false,  // OPTIONAL - Tell curebit that this purchase should not be redeemed
+        dont_redeem: false,  // OPTIONAL - Tell Curebit that this purchase should not be redeemed
         first_name: 'Name',  // OPTIONAL - Customer First Name
         last_name: 'Surname',  // OPTIONAL - Customer Last Name
-        // iframe: { width: '100%', height: '400' }, // OPTIONAL - display offer inline instead of popup
+        // iframe: { // OPTIONAL - display offer inline instead of popup
+        //   // container: "id-example", // Tell Curebit where to insert the iframe (ID attribute). See Asynchronous Integration for more details.
+        //   width: '100%', // These are standard HTML attributes, feel free to add as many you need
+        //   height: '400'
+        // },
         // loader: 'background: rgba(0, 0, 0, .85) url("//d2jjzw81hqbuqv.cloudfront.net/assets/api/loader.gif") no-repeat center center;', // OPTIONAL - change CSS of loading overlay or disable it completely by using 'display: none;'
         responsive: true, // OPTIONAL - fit iframe into viewport (also on resize) and allow Curebit display mobile templates
         // device: 'desktop', // OPTIONAL - enforce mobile/tablet/desktop view or skip this to allow Curebit choose corresponding template

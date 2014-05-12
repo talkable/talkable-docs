@@ -51,12 +51,30 @@ and we provide instructions.
 
 .. raw:: html
 
+   <h2>Tag Managers</h2>
+
+If you are using |segment_io| as your tag manager, it can be used to "toggle"
+Curebit on.
+
+Instructions can be found at:
+|customer_io|
+
+.. raw:: html
+
    <h2>Getting Additional Help</h2>
 
 If you would like help integrating Curebit, or you're an enterprise client
 looking for integration services, feel free to `contact us`_.
 
 .. _contact us: http://curebit.com/contact
+
+.. |segment_io| raw:: html
+
+   <a href="https://segment.io/" target="_blank">Segment.io</a>
+
+.. |customer_io| raw:: html
+
+   <a href="http://customer.io/docs/basic-integration.html" target="_blank">http://customer.io/docs/basic-integration.html</a>
 
 .. container:: hidden
 

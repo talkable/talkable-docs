@@ -114,7 +114,7 @@ Create Purchases
                      * email
                      * subtotal
                      * order_number
-                     * order_date (in UTC time zone, or as a timestamp with timezone information)
+                     * order_date (|iso8601| formatted datetime)
                      * items (optional)
 
                      For example,
@@ -125,13 +125,13 @@ Create Purchases
                           {
                             "email": "1st_customer@mail.com",
                             "order_number": 1,
-                            "order_date": "2014-03-13 12:49:54",
+                            "order_date": "2014-03-13T12:49:54+00:00",
                             "subtotal": 500
                           },
                           {
                             "email": "2nd_customer@mail.com",
                             "order_number": 2,
-                            "order_date": "2014-03-14 05:49:54",
+                            "order_date": "2014-03-14T05:49:54+00:00",
                             "subtotal": 100,
                             "items": [
                               {

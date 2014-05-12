@@ -4,6 +4,8 @@
 Standard Integration
 ====================
 
+.. include:: /partials/note_enterprise_integration.rst
+
 Standalone campaign can be integrated to the page with the following code:
 
 .. include:: /samples/standalone/standard.rst
