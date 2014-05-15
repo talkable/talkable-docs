@@ -107,6 +107,7 @@ See available web hooks on the navigation sidebar.
 
       Create Coupons <web_hooks/create_coupon>
       Referral <web_hooks/referral>
+      Reward <web_hooks/reward>
       Post Share <web_hooks/post_share>
       Advocate Signup <web_hooks/offer_signup>
       Friend Email Gating <web_hooks/claim_signup>
