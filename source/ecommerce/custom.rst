@@ -44,7 +44,7 @@ Main Integration Code
 
 |hr|
 
-.. include:: /partials/for_modern_js_apps.rst
+.. include:: /partials/for_modern_pp_js_apps.rst
 
 .. container:: hidden
 

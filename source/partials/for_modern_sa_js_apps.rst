@@ -5,14 +5,14 @@ You can trigger Curebit initialization whenever needed. For example, you can fir
 
 .. code-block:: html
 
-  <button onclick="_curebitq.push(['register_purchase', curebit_details]);">Init Curebit</button>
+  <button onclick="_curebitq.push(['register_affiliate', _curebit_affiliate_details]);">Init Curebit</button>
 
   <script>
-    var curebit_details = {
-      // ...
-      // order_number: '100011',
+    var _curebit_affiliate_details = {
       // all common Curebit config properties
-      // ...
+      affiliate_member: {
+        email: ''
+      }
     };
   </script>
 
@@ -27,10 +27,12 @@ Also, you can append Curebit ``iframe`` into your custom container. Add ``iframe
   <div id="curebit-test"></div>
 
   <script>
-    var curebit_details = {
+    var _curebit_affiliate_details = {
       // ...
-      // order_number: '100011',
       // all common Curebit config properties
+      affiliate_member: {
+        email: ''
+      },
       // ...
       iframe: {
         container: "curebit-test"
@@ -43,4 +45,4 @@ Also, you can append Curebit ``iframe`` into your custom container. Add ``iframe
 * You can pass any HTML attributes.
 * Pass ``container`` option to set where you want Curebit iframe to be inserted (this is HTML ``id`` attribute value).
 
-`Example integration <http://jsfiddle.net/p32R6/30>`_.
+`Example integration <http://jsfiddle.net/p32R6/73>`_.
