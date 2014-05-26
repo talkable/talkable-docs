@@ -37,7 +37,6 @@
         subtotal: '23.97', // REQUIRED - Purchase Subtotal
         coupon_code: 'SAVE20', // REQUIRED - Coupon code used at checkout, multiple coupons allowed as JS array: ['SAVE20', 'FREE-SHIPPING']. Pass null if there is no coupon code.
         customer_id: '1234567890', // OPTIONAL - Set to your internal customer ID for tracking
-        custom_field: null, // OPTIONAL - Any custom order data you might need
         items: _curebit_order_items,
         dont_redeem: false,  // OPTIONAL - Tell Curebit that this purchase should not be redeemed
         first_name: 'Name',  // OPTIONAL - Customer First Name

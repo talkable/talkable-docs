@@ -18,7 +18,6 @@ The parameters you will need to provide are:
 * Customer Email Address
 * Coupon code used at checkout
 * Customer ID from your site (Optional)
-* Any custom order data you might need (Optional)
 * Purchase Subtotal
 * Cart items are OPTIONAL. If provided, then for each item:
 
