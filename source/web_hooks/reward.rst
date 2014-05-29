@@ -17,7 +17,7 @@ Triggered when there is a new reward in Curebit.
   * **type** — either *"StandaloneCampaign"* or *"DoubleSidedDealCampaign"*
   * **tag_names** — array of campaign's tags
 
-* **person** — subhash of parameters describing the person that got reward
+* **person** — subhash of parameters describing the person that got reward (note: might be **null**)
 
   * **email**
   * **first_name**
