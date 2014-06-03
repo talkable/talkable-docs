@@ -4,7 +4,10 @@
 Reward Web Hook
 ===============
 
-Triggered when there is a new reward in Curebit.
+Triggered when there is a new paid reward in Curebit.
+
+Rewards are considered as paid just after they are created, except Referrer:
+it is getting paid after Referral is approved.
 
 .. raw:: html
 
