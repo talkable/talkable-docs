@@ -30,4 +30,5 @@ developers:
      editor/history
      editor/extra
      editor/filters
+     editor/videos
 
