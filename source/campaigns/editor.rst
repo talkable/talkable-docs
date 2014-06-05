@@ -15,6 +15,7 @@ developers:
    things
 6. Use powerful :ref:`Liquid Filters <campaigns/editor/filters>` for mighty
    templating
+7. :ref:`Watch <campaigns/editor/videos>` our video guides
 
 |br|
 
