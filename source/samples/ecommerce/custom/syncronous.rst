@@ -49,6 +49,7 @@
         // loader: 'background: rgba(0, 0, 0, .85) url("//d2jjzw81hqbuqv.cloudfront.net/assets/api/loader.gif") no-repeat center center;', // OPTIONAL - change CSS of loading overlay or disable it completely by using 'display: none;'
         responsive: true, // OPTIONAL - fit iframe into viewport (also on resize) and allow Curebit display mobile templates
         // device: 'desktop', // OPTIONAL - enforce mobile/tablet/desktop view or skip this to allow Curebit choose corresponding template
+        traffic_source: 'Post-checkout',  // OPTIONAL - indicate person traffic source. Can be used as segmentation parameter in reporting.
         campaign_tags: ['default'] // OPTIONAL - Campaign tags used to target specific campaign for offer
       };
 
