@@ -1,6 +1,5 @@
 .. _campaigns:
 .. include:: /partials/common.rst
-.. _Liquid: http://github.com/Shopify/liquid
 
 Curebit Campaigns
 #################
@@ -17,7 +16,7 @@ Each step of this interaction has its own ``View`` so developer can easily
 change every singe step and customize its appearance and functionality based on
 campaign requirements.
 
-We use `Liquid`_ as a View template engine to provide a simple and quick way
+We use |liquid| as a View template engine to provide a simple and quick way
 to change campaign functionality and appearance.
 |br| This choice was made mainly because of developers who are already
 familiar with Liquid templating in Shopify.
