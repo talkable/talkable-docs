@@ -23,6 +23,7 @@ Friend
 - All Friend offers will not be affected if specified date or offer duration is changed while campaign is live.
 - If date and offer duration are specified friend offers will expire when the closest date will code
 - When campaign is copied only offer duration gets copied, but not deadline.
+- Friend offer deadline should never be earlier than Advocate offer deadline (because there is no sense to share offer that can not be claimed)
 
 
 
