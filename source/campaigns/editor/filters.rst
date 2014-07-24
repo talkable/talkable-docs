@@ -142,4 +142,18 @@ Returns ``$100.9``.
 
 Returns ``$100``.
 
+|hr|
+
+parse_json
+..........
+
+Parses the JSON string source into a Liquid data structure.
+
+.. code-block:: liquid
+
+   {% assign var = '{"key": "value"}' | parse_json %}
+   {{ var.key }}
+
+Returns ``value``.
+
 .. _Standard liquid filters: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters
