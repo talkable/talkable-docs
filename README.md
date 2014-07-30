@@ -3,7 +3,7 @@ Curebit Documentation
 
 [![Build Status](https://travis-ci.org/curebit/docs.svg)](https://travis-ci.org/curebit/docs)
 
-This GitHub repository represents Curebit's documentation site, located at [docs.curebit.com](http://docs.curebit.com).
+This GitHub repository represents Curebit's documentation site, located at [docs.talkable.com](http://docs.talkable.com).
 
 The Curebit documentation uses [reStructuredText](http://docutils.sourceforge.net/rst.html) as its markup language and is built using [Sphinx](http://sphinx-doc.org/).
 
@@ -105,4 +105,4 @@ See "master" branch: https://github.com/curebit/docs
 
 See "gh-pages" branch: https://github.com/curebit/docs/tree/gh-pages
 
-See GitHub Page (auto generated): http://curebit.github.io/docs/ (alias: http://docs.curebit.com)
+See GitHub Page (auto generated): http://curebit.github.io/docs/ (alias: http://docs.talkable.com)

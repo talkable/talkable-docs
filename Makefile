@@ -52,8 +52,8 @@ deploy:
 	rm -rf $(GH_PAGES_SOURCES) $(BUILDDIR) .buildinfo
 	echo '' > .nojekyll
 	echo '/.bundle' > .gitignore
-	echo 'docs.curebit.com' > CNAME
+	echo 'docs.talkable.com' > CNAME
 	git add -A
 	git commit -m "Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`" && git push origin gh-pages ; git checkout master
 	@echo
-	@echo "Deployment finished. Check updated docs at http://docs.curebit.com"
+	@echo "Deployment finished. Check updated docs at http://docs.talkable.com"
