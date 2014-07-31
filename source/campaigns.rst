@@ -1,10 +1,10 @@
 .. _campaigns:
 .. include:: /partials/common.rst
 
-Curebit Campaigns
+Talkable Campaigns
 #################
 
-Curebit Campaign is based on interaction between ``Advocate`` and ``Friend``:
+Talkable Campaign is based on interaction between ``Advocate`` and ``Friend``:
 
 - Advocate: person, who shares an offer with his Friend(s)
 - Friend: person, who is invited to participate in Campaign by Advocate
