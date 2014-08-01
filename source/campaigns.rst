@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 Talkable Campaigns
-#################
+##################
 
 Talkable Campaign is based on interaction between ``Advocate`` and ``Friend``:
 
