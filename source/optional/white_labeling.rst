@@ -1,4 +1,5 @@
 .. _optional/white_labeling:
+.. include:: /partials/common.rst
 
 White-labeling Talkable
 =======================
