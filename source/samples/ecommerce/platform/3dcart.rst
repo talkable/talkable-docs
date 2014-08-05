@@ -1,6 +1,6 @@
 .. code-block:: html
 
-  <!-- Begin Curebit integration code -->
+  <!-- Begin Talkable integration code -->
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>
   <script type="text/javascript">
     function correctTotalCost (strValue) {
@@ -17,8 +17,8 @@
 
     jQuery.noConflict();
     jQuery(document).ready(function() {
-      var curebitSiteId = 'YOUR-CUREBIT-SITE-ID'; // Curebit site id
-      var curebitJsUrl = '//www.curebit.com/public/' + curebitSiteId + '/purchases/create.js';
+      var curebitSiteId = 'YOUR-TALKABLE-SITE-ID'; // Talkable Site ID
+      var curebitJsUrl = '//www.talkable.com/public/' + curebitSiteId + '/purchases/create.js';
       var curebitVersion = '0.2';
       var curebitOrderNumber = '[invoicenum]';
       var curebitEmail = '[oemail]';
@@ -69,4 +69,4 @@
       curebitHeadID.appendChild(curebitNewScript);
     });
   </script>
-  <!-- End Curebit integration code -->
+  <!-- End Talkable integration code -->

@@ -1,7 +1,7 @@
 .. code-block:: javascript
 
-  var site_id = 'YOUR-CUREBIT-SITE-ID';
-  $.get('https://www.curebit.com/public/' + site_id + '/affiliate_members/create.json', {
+  var site_id = 'YOUR-TALKABLE-SITE-ID';
+  $.get('https://www.talkable.com/public/' + site_id + '/affiliate_members/create.json', {
     campaign_tag: 'default', // REQUIRED
     affiliate_member: {
       email: 'YOUR-USER-EMAIL', // REQUIRED

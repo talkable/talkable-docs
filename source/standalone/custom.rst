@@ -7,7 +7,7 @@ Custom Integration
 Sign Up
 -------
 
-Capture the email and make ajax request to Curebit with entered email, campaign
+Capture the email and make ajax request to Talkable with entered email, campaign
 tags and possible any other data like first/last name or gender. We return back
 a json containing offer short code. Then redirect user to share page.
 

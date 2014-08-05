@@ -4,7 +4,7 @@
 Referral Web Hook
 =================
 
-Triggered when there is a new referral in Curebit.
+Triggered when there is a new referral in Talkable.
 
 .. raw:: html
 

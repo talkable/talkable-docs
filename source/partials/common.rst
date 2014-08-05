@@ -21,3 +21,7 @@
 .. |liquid| raw:: html
 
    <a href="http://github.com/Shopify/liquid" target="_blank">Liquid</a>
+
+.. |contact_us| raw:: html
+
+   <a href="https://www.talkable.com/#contact" target="_blank">contact us</a>

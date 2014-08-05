@@ -1,7 +1,7 @@
 .. code-block:: javascript
 
   var offer_code = 'OFFER-CODE';
-  $.get('https://www.curebit.com/o/' + offer_code + '/fire_event.json', {
+  $.get('https://www.talkable.com/o/' + offer_code + '/fire_event.json', {
     event_name: 'share', // REQUIRED
     event_sharing_channel: 'email' // REQUIRED - may be email, facebook, twitter
   }).done(function(data) {

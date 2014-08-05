@@ -3,8 +3,8 @@
   <!-- Begin Curebit integration code -->
   <script type="text/javascript">
     <![CDATA[
-      var curebitSiteId = 'YOUR-CUREBIT-SITE-ID';
-      var curebitJsUrl = 'https://curebit.com/public/' + curebitSiteId + '/purchases/create_fastspring.js';
+      var curebitSiteId = 'YOUR-TALKABLE-SITE-ID';
+      var curebitJsUrl = 'https://www.talkable.com/public/' + curebitSiteId + '/purchases/create_fastspring.js';
       var curebitVersion = '0.2';
       var curebitOrderNumber = "#{order.reference}";
 

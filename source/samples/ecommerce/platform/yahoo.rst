@@ -1,12 +1,12 @@
 .. code-block:: html
 
-  <!-- Begin Curebit integration code -->
+  <!-- Begin Talkable integration code -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.js"></script>
   <script type="text/javascript">
     jQuery.noConflict();
     jQuery(document).ready(function() {
-      var curebitSiteId = 'YOUR-CUREBIT-SITE-ID'; // Curebit Site ID
-      var curebitJsUrl = 'https://curebit.com/public/' + curebitSiteId + '/purchases/create_yahoo.js';
+      var curebitSiteId = 'YOUR-TALKABLE-SITE-ID'; // Talkable Site ID
+      var curebitJsUrl = 'https://www.talkable.com/public/' + curebitSiteId + '/purchases/create_yahoo.js';
       var curebitVersion = '0.2';
       var curebitOrderNumber = orderNum;
 
@@ -37,4 +37,4 @@
       curebitHeadID.appendChild(curebitNewScript);
     });
   </script>
-  <!-- End Curebit integration code -->
+  <!-- End Talkable integration code -->

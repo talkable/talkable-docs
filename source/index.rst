@@ -5,10 +5,6 @@
 
 .. include:: /partials/common.rst
 
-.. note::
-
-  Curebit is now Talkable. We will update all our documentation soon to match the new brand.
-
 Integrating Talkable on Your Site
 =================================
 

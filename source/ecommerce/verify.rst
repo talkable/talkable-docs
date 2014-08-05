@@ -4,7 +4,7 @@
 Verifying Integration
 =====================
 
-After installing Curebit, you should verify that the integration is working.
+After installing Talkable, you should verify that the integration is working.
 All you have to do is check out from your store using the special email
 integration@curebit.com.
 
@@ -28,7 +28,7 @@ won't see anything).
 
    For merchants who accept PayPal as a payment method:
 
-   You must turn on auto-redirection to your thank you page for Curebit to work.
+   You must turn on auto-redirection to your thank you page for Talkable to work.
    :ref:`Learn How <optional/paypal_auto_redirect>`
 
 .. container:: hidden

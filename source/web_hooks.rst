@@ -5,11 +5,11 @@ Web Hooks
 #########
 
 Web hooks are "user-defined HTTP callbacks". They are usually triggered by some
-event on Curebit's site.
+event on Talkable's site.
 
 http://en.wikipedia.org/wiki/Webhook
 
-Each web hook in Curebit is defined with an HTTP URL to deliver web hook data
+Each web hook in Talkable is defined with an HTTP URL to deliver web hook data
 (aka payload). This URL should be defined and implemented on the client's site.
 
 .. raw:: html
@@ -56,8 +56,8 @@ http://stackoverflow.com/questions/2201925/converting-iso8601-compliant-string-t
 
    <h2>Response Codes</h2>
 
-Curebit considers a web hook as "delivered successfully" in the case that the site
-server returned a **2xx response status**. Otherwise Curebit will continually
+Talkable considers a web hook as "delivered successfully" in the case that the site
+server returned a **2xx response status**. Otherwise Talkable will continually
 retry to deliver a webhook after a set interval of time.
 
 .. raw:: html
@@ -74,7 +74,7 @@ retry to deliver a webhook after a set interval of time.
 * 206: Partial Content
 
 If you have a problem on your server, you can answer with code 500. If there is
-some problem in our request (problem on Curebit's side), you can answer "400 Bad Request".
+some problem in our request (problem on Talkable's side), you can answer "400 Bad Request".
 
 Any other error code and we will retry later.
 
@@ -83,7 +83,7 @@ Any other error code and we will retry later.
    <h2>Security Key</h2>
 
 Also there is a key parameter that has a unique value for each site to identify
-Curebit as an authorized server to call the web hook (please check it against
+Talkable as an authorized server to call the web hook (please check it against
 a copy on your side). The Security Key for your site can be found in Web Hooks
 setup page if you have at least one web hook created.
 
@@ -91,8 +91,8 @@ setup page if you have at least one web hook created.
 
    <h2>Compatibility and Versioning</h2>
 
-Curebit web hooks do not currently have versioning. Current spec will not be
-changed for all existing hooks. But Curebit dev team leave a right to add any
+Talkable web hooks do not currently have versioning. Current spec will not be
+changed for all existing hooks. But Talkable dev team leave a right to add any
 additional data to them without removing or changing existing one. Your
 implementation should be safe to such changes.
 

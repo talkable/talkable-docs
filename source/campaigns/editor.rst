@@ -4,7 +4,7 @@
 Editor
 ======
 
-Curebit Campaign Editor is a powerful IDE for Campaign development. It allows
+Talkable Campaign Editor is a powerful IDE for Campaign development. It allows
 developers:
 
 1. Write |liquid| markup for templates

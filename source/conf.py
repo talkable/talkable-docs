@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Curebit documentation build configuration file, created by
+# Talkable documentation build configuration file, created by
 # sphinx-quickstart on Wed Mar 12 21:18:26 2014.
 #
 # This file is execfile()d with the current directory set to its
@@ -43,8 +43,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Curebit'
-copyright = u'2014, Curebit Inc.'
+project = u'Talkable'
+copyright = u'2014, Talkable Inc.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -99,7 +99,7 @@ pygments_style = None
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 html_theme = 'basic'
-html_style = 'curebit.css'
+html_style = 'talkable.css'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -111,7 +111,7 @@ html_style = 'curebit.css'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'Curebit Documentation'
+html_title = 'Talkable Documentation'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -177,7 +177,7 @@ html_show_copyright = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Curebitdoc'
+htmlhelp_basename = 'Talkabledoc'
 
 
 # -- Options for manual page output ---------------------------------------
@@ -185,8 +185,8 @@ htmlhelp_basename = 'Curebitdoc'
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'curebit', u'Curebit Documentation',
-     [u'Curebit Inc'], 1)
+    ('index', 'talkable', u'Talkable Documentation',
+     [u'Talkable Inc'], 1)
 ]
 
 # If true, show URL addresses after external links.

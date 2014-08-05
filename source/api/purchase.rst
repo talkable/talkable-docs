@@ -11,7 +11,7 @@ Approve/Void Rewards for Purchases
 
 .. code-block:: url
 
-   PUT https://curebit.com/api/v1/sites/<site_slug>/purchases/<order_number>/set_rewards_status?api_key=<api_key>&status=<status>
+   PUT https://www.talkable.com/api/v1/sites/<site_slug>/purchases/<order_number>/set_rewards_status?api_key=<api_key>&status=<status>
 
 You can approve or void rewards for purchases that are waiting approval.
 
@@ -28,8 +28,8 @@ You can approve or void rewards for purchases that are waiting approval.
    ================= ========================================================
    Parameter         Description
    ================= ========================================================
-   site_slug         Your Curebit Site ID. You can get this from your Curebit
-                     dashboard after you log in and create a site.
+   site_slug         Your Talkable Site ID. You can get this from your
+                     Talkable dashboard after you log in and create a site.
    api_key           Your API key. You can manage your API key in the Account
                      Settings.
    order_number      Purchase Order number for the reward that needs to be
@@ -94,7 +94,7 @@ Create Purchases
 
 .. code-block:: url
 
-   POST https://curebit.com/api/v1/sites/<site_slug>/purchases/create?api_key=<api_key>
+   POST https://www.talkable.com/api/v1/sites/<site_slug>/purchases/create?api_key=<api_key>
 
 .. raw:: html
 
@@ -105,8 +105,8 @@ Create Purchases
    ================= ========================================================
    Parameter         Description
    ================= ========================================================
-   site_slug         Your Curebit Site ID. You can get this from your Curebit
-                     dashboard after you log in and create a site.
+   site_slug         Your Talkable Site ID. You can get this from your
+                     Talkable dashboard after you log in and create a site.
    api_key           Your API key. You can manage your API key in the Account
                      Settings.
    purchases         Array of JSON objects with following properties:

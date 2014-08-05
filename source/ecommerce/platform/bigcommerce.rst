@@ -4,7 +4,7 @@
 BigCommerce Store Integration
 -----------------------------
 
-Curebit is easily integrated into your BigCommerce store.
+Talkable is easily integrated into your BigCommerce store.
 
 1. Login to your store's control panel.
 2. Click on **Settings** and then select **Conversions** from the drop down menu.

@@ -4,7 +4,7 @@
 Shopify Store Integration
 -------------------------
 
-To integrate your Shopify store, you will install the Curebit application and
+To integrate your Shopify store, you will install the Talkable application and
 then add a code snippet to your checkout page.
 
 1. In your Shopify administration panel, go to

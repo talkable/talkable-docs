@@ -43,7 +43,7 @@ until it is loaded.
   }, 500);
 
 1. ``fireOnLinkedInShare`` — triggering this method is required to make
-   Curebit visits tracking work.
+   Talkable visits tracking work.
 2. ``initLinkedInShareButton`` — checks for LI button to load and then
    show its container ``js-linkedin-button-holder`` and trigger
    ``configureShareOnLinkedIn``.

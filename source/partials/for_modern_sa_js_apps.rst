@@ -1,15 +1,15 @@
 Asynchronous Integration
 ------------------------
 
-You can trigger Curebit initialization whenever needed. For example, you can fire up Curebit on button click:
+You can trigger Talkable initialization whenever needed. For example, you can fire up Talkable on button click:
 
 .. code-block:: html
 
-  <button onclick="_curebitq.push(['register_affiliate', _curebit_affiliate_details]);">Init Curebit</button>
+  <button onclick="_curebitq.push(['register_affiliate', _curebit_affiliate_details]);">Init Talkable</button>
 
   <script>
     var _curebit_affiliate_details = {
-      // all common Curebit config properties
+      // all common Talkable config properties
       affiliate_member: {
         email: ''
       }
@@ -20,7 +20,7 @@ You can trigger Curebit initialization whenever needed. For example, you can fir
 
 |br|
 
-Also, you can append Curebit ``iframe`` into your custom container. Add ``iframe`` object like so:
+Also, you can append Talkable ``iframe`` into your custom container. Add ``iframe`` object like so:
 
 .. code-block:: html
 
@@ -43,6 +43,6 @@ Also, you can append Curebit ``iframe`` into your custom container. Add ``iframe
   <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/curebit-1.0.min.js" type="text/javascript"></script>
 
 * You can pass any HTML attributes.
-* Pass ``container`` option to set where you want Curebit iframe to be inserted (this is HTML ``id`` attribute value).
+* Pass ``container`` option to set where you want Talkable iframe to be inserted (this is HTML ``id`` attribute value).
 
 `Example integration <http://jsfiddle.net/p32R6/73>`_.

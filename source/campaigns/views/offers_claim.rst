@@ -36,7 +36,7 @@ Frequently used Variables:
   {% endif %}
 
 .. note:: Do not change ``name`` and ``class`` attributes, otherwise
-  functionality won't work. `js-` class prefix means it is used in Curebit API.
+  functionality won't work. `js-` class prefix means it is used in Talkable API.
 
 Related tutorials for this View:
 

@@ -15,7 +15,7 @@ Zen Cart Store Integration
    | You can get your Curebit Site ID from your Curebit dashboard after you log in and create a site.
 7. Click **Update**.
 
-.. _Zen Cart Curebit Add-On: http://curebit.com/zencart/curebit_checkout_0.0.2.zip
+.. _Zen Cart Curebit Add-On: https://www.talkable.com/zencart/curebit_checkout_0.0.2.zip
 
 |br|
 

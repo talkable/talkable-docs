@@ -1,13 +1,11 @@
 .. _optional/white_labeling:
 
-White-labeling Curebit
-======================
+White-labeling Talkable
+=======================
 
-Curebit can be white-labeled so that links and urls point to your domain
+Talkable can be white-labeled so that links and urls point to your domain
 instead of curebit.com. This is currently an Enterprise plan-only feature.
-Please `contact us`_ for more information.
-
-.. _contact us: http://curebit.com/contact
+Please |contact_us| for more information.
 
 .. container:: hidden
 

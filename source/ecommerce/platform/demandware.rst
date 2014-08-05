@@ -42,7 +42,7 @@ Integrate into order confirmation page
 4. Invalidate the page caches (under
    **Administration** |rarr| **Sites** |rarr| **Manage Sites** |rarr| **Site** |rarr| **Cache Tab**)
 
-.. _Demandware Curebit cartridge: http://curebit.com/demandware/curebit_integration_r1.0.0.zip
+.. _Demandware Curebit cartridge: https://www.talkable.com/demandware/curebit_integration_r1.0.0.zip
 
 |br|
 

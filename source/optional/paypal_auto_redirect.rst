@@ -4,7 +4,7 @@ Enabling PayPal Auto-Redirect
 =============================
 
 If you accept PayPal as a payment method you must turn on auto-redirection
-to your thank you page for Curebit to work.
+to your thank you page for Talkable to work.
 
 1. Login to Paypal.
 2. Click "**Profile**" in the top navigation.

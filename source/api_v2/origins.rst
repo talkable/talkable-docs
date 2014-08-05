@@ -15,8 +15,8 @@ This API allows you to create origins. See examples below.
    ================= ========================================================
    Parameter         Description
    ================= ========================================================
-   site_slug         Your Curebit Site ID. You can get this from your Curebit
-                     dashboard after you log in and create a site.
+   site_slug         Your Talkable Site ID. You can get this from your
+                     Talkable dashboard after you log in and create a site.
    type              Type of origin to create (*"Purchase"* or *"AffiliateMember"*)
    data              JSON object with following properties:
 
@@ -68,7 +68,7 @@ Create a purchase
    curl -H "Content-Type: application/json" \
         -X POST \
         -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","type":"Purchase","data":{"email":"customer@mail.com","order_number":12,"order_date":"2014-03-14T05:49:54-07:00","subtotal":100,"items":[{"price":25,"quantity":4,"product_id":"TSHIRT"}]}}' \
-        https://curebit.com/api/v2/origins
+        https://www.talkable.com/api/v2/origins
 
 Sample response:
 
@@ -114,7 +114,7 @@ Create an affiliate member
    curl -H "Content-Type: application/json" \
         -X POST \
         -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","type":"AffiliateMember","data":{"email":"affiliate@mail.com"}}' \
-        https://curebit.com/api/v2/origins
+        https://www.talkable.com/api/v2/origins
 
 Sample response:
 

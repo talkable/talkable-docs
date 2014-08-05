@@ -16,7 +16,7 @@ If condition is left blank, it is assumed to be ``true``.
    <h4>Example</h4>
 
 If you want to reward Advocate only if Friend is a new customer and used |br|
-Curebit single-use coupon at checkout, the right trigger condition would be:
+Talkable single-use coupon at checkout, the right trigger condition would be:
 
 .. image:: /_static/img/incentive-criteria-1.png
    :alt: Incentive Trigger Criteria

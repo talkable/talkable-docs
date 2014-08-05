@@ -17,7 +17,7 @@ main container width of your site:
 
 For mobile screens most common width is 320px, but we also support fluid
 width with possibility to set it to 100% to support mobile devices and
-tablets. Since Curebit integration is based on ``iframe`` it is not
+tablets. Since Talkable integration is based on ``iframe`` it is not
 possible to change its size from within of the iframe that’s why Signup
 and Share pages should always be of the same size.
 
@@ -31,7 +31,7 @@ purchase (most common size is 800x500px):
 .. note::
    Overlay cannot be customized.
 
-Friend Claim Page size does not matter cause it hosts on Curebit site
+Friend Claim Page size does not matter cause it hosts on Talkable site
 entirely. Commonly this view looks like a modal window with customer
 site loaded on the back:
 

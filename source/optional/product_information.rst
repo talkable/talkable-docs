@@ -4,11 +4,11 @@
 Product Information Integration (Optional)
 ==========================================
 
-You can also add product specific tracking to Curebit, which will let your
+You can also add product specific tracking to Talkable, which will let your
 customers share specific items that they've purchased. Customer shares with
 products have higher click through and conversion rates.
 
-To integrate products with Curebit, you will add an additional script include
+To integrate products with Talkable, you will add an additional script include
 and call at the bottom of your checkout page. The parameters should be replaced
 accordingly with your products' information.
 

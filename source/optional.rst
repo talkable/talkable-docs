@@ -4,7 +4,7 @@
 Optional Features
 #################
 
-Curebit provides several optional features that help increase conversions
+Talkable provides several optional features that help increase conversions
 and make your referral program incredibly easy to manage. Here's an overview of
 each with links to integration details.
 
@@ -18,7 +18,7 @@ each with links to integration details.
    * - :ref:`PayPal Auto-Redirect <optional/paypal_auto_redirect>`
      - Enabling PayPal Auto-Redirect for merchants who accept PayPal as a payment method
    * - :ref:`optional/reward_fulfillment`
-     - Have Curebit fulfill your rewards via PayPal or manage them manually
+     - Have Talkable fulfill your rewards via PayPal or manage them manually
    * - :ref:`White Labeling <optional/white_labeling>`
      - Change all visible URLs to your domain instead of curebit.com
 

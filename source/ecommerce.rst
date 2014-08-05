@@ -4,7 +4,7 @@
 Integration Options
 ###################
 
-Curebit integrates with e-commerce platforms or custom web sites through
+Talkable integrates with e-commerce platforms or custom web sites through
 JavaScript calls to our API. But most customers can integrate quickly without
 knowing how to code.
 
@@ -16,7 +16,7 @@ offers via popup after purchase. Other features are optional.
 
    <h2>E-commerce Custom Integration</h2>
 
-If you're not using one of these shopping carts, you can still use Curebit.
+If you're not using one of these shopping carts, you can still use Talkable.
 With our :ref:`custom integration <ecommerce/custom>` option, you just copy
 a few lines of JavaScript to your order confirmation page and you're ready to go.
 
@@ -25,7 +25,7 @@ a few lines of JavaScript to your order confirmation page and you're ready to go
    <h2>E-commerce Platform Integration</h2>
 
 If you use one of the shopping carts listed below, you can use a supported
-extension to integrate Curebit. It's often as easy as copying and pasting code,
+extension to integrate Talkable. It's often as easy as copying and pasting code,
 and we provide instructions.
 
 .. list-table::
@@ -54,7 +54,7 @@ and we provide instructions.
    <h2>Tag Managers</h2>
 
 If you are using |segment_io| as your tag manager, it can be used to "toggle"
-Curebit on.
+Talkable on.
 
 Instructions can be found at:
 |customer_io|
@@ -63,10 +63,8 @@ Instructions can be found at:
 
    <h2>Getting Additional Help</h2>
 
-If you would like help integrating Curebit, or you're an enterprise client
-looking for integration services, feel free to `contact us`_.
-
-.. _contact us: http://curebit.com/contact
+If you would like help integrating Talkable, or you're an enterprise client
+looking for integration services, feel free to |contact_us|.
 
 .. |segment_io| raw:: html
 

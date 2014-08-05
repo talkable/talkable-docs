@@ -9,7 +9,7 @@ Default Integration
 On your final checkout receipt page (which includes things like the customer's
 order number or confirmation code), you will include a Javascript snippet
 containing the order and purchased product information. This version of the
-Curebit integration code can be asyncronous or syncronous depending on your decision.
+Talkable integration code can be asyncronous or syncronous depending on your decision.
 
 The parameters you will need to provide are:
 

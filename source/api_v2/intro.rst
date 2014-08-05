@@ -4,7 +4,7 @@
 Introduction
 ============
 
-The Curebit API is built on HTTP. Our API is RESTful, returns JSON and responds
+The Talkable API is built on HTTP. Our API is RESTful, returns JSON and responds
 with standard HTTP response codes to indicate errors.
 
 Base URL
@@ -14,12 +14,12 @@ All API URLs referenced in this documentation start with the following base part
 
 .. code-block:: url
 
-   https://curebit.com/api/v2
+   https://www.talkable.com/api/v2
 
 Authentication
 --------------
 
-You authenticate to the Curebit API by providing your ``api_key`` in the request.
+You authenticate to the Talkable API by providing your ``api_key`` in the request.
 You can manage your API key in the Account Settings.
 
 .. warning:: Keep your API key secret!
@@ -43,7 +43,7 @@ envelope includes these common parts:
 Date Format
 -----------
 
-Curebit returns JSON for all API calls. JSON does not have a built-in date type,
+Talkable returns JSON for all API calls. JSON does not have a built-in date type,
 dates are passed as strings encoded according to |iso8601|.
 This format is supported by most programming languages out of the box:
 
@@ -55,17 +55,17 @@ Errors
 ------
 
 The following represents a common JSON error response resulting from a failed
-Curebit API call:
+Talkable API call:
 
 .. code-block:: javascript
 
    {"ok": false, "error_message": "Message describing the error"}
 
-Most error messages that Curebit API will return are not meant to be shown to
+Most error messages that Talkable API will return are not meant to be shown to
 the user. We expect your service to gracefully handle errors and only show
 meaningful information to the user.
 
-Curebit returns standard HTTP response codes.
+Talkable returns standard HTTP response codes.
 
 .. container:: ptable
 
@@ -79,7 +79,7 @@ Curebit returns standard HTTP response codes.
    422                 Unprocessable Entity - The requested create, update,
                        or delete cannot be performed due to validation errors.
                        |br| See the response body for more details.
-   500, 502, 503, 504  Server Errors - Something is wrong on Curebit’s end
+   500, 502, 503, 504  Server Errors - Something is wrong on Talkable’s end
    =================== ======================================================
 
 .. container:: hidden

@@ -18,7 +18,7 @@ wish to integrate. Then, download the `Ubercart Curebit Checkout Module`_.
    after you log in and create a site.
 6. Click **Save configuration**.
 
-.. _Ubercart Curebit Checkout Module: http://curebit.com/ubercart/curebit_checkout-6.x-0.0.2.tar.gz
+.. _Ubercart Curebit Checkout Module: https://www.talkable.com/ubercart/curebit_checkout-6.x-0.0.2.tar.gz
 
 |br|
 

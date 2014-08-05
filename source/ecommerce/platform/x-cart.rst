@@ -22,7 +22,7 @@ X-Cart Store Integration
 4. Save this file and upload it to your site.
 5. Run the script located at *http://www.yoursite.com/curebit_install.php*
 
-.. _X-Cart Curebit Module: http://curebit.com/xcart/curebit.zip
+.. _X-Cart Curebit Module: https://www.talkable.com/xcart/curebit.zip
 
 |br|
 

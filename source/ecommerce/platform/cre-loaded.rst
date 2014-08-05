@@ -12,11 +12,11 @@ CRE Loaded Store Integration
 4. Click on **Curebit Checkout**.
 5. Click **Install Module**.
 6. Click **Edit**.
-7. Enter your Curebit Site ID. You can get this from your Curebit dashboard
+7. Enter your Talkable Site ID. You can get this from your Talkable dashboard
    after you log in and create a site.
 8. Click **Update**.
 
-.. _CRE Loaded Curebit Add-On: http://curebit.com/creloaded/curebit_checkout_0.0.3.zip
+.. _CRE Loaded Curebit Add-On: https://www.talkable.com/creloaded/curebit_checkout_0.0.3.zip
 
 |br|
 

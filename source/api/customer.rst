@@ -11,7 +11,7 @@ Retrieving Customer Referral Information
 
 .. code-block:: url
 
-   GET https://curebit.com/api/v1/sites/<site_slug>/customers/<customer_email>/stats.json?api_key=<api_key>
+   GET https://www.talkable.com/api/v1/sites/<site_slug>/customers/<customer_email>/stats.json?api_key=<api_key>
 
 Get information about a customer and the status of their referrals.
 
@@ -24,8 +24,8 @@ Get information about a customer and the status of their referrals.
    ================= ========================================================
    Parameter         Description
    ================= ========================================================
-   site_slug         Your Curebit Site ID. You can get this from your Curebit
-                     dashboard after you log in and create a site.
+   site_slug         Your Talkable Site ID. You can get this from your
+                     Talkable dashboard after you log in and create a site.
    api_key           Your API key. You can manage your API key in the Account
                      Settings.
    customer_email    The customer's email address.
@@ -46,7 +46,7 @@ This is a sample request for a subscription that was referred from another subsc
 
 .. code-block:: url
 
-   GET https://curebit.com/api/v1/sites/my-store/customers/customer%40example.com/stats.json?api_key=CRljoG5Glb8xeNCv1NO
+   GET https://www.talkable.com/api/v1/sites/my-store/customers/customer%40example.com/stats.json?api_key=CRljoG5Glb8xeNCv1NO
 
 .. code-block:: javascript
 

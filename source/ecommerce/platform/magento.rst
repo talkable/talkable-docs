@@ -65,7 +65,7 @@ integration. The extension currently supports Magento versions 1.3.x and 1.4.x.
      | *{{base_dir}}/app/design/frontend/<your theme name>/default/layout/curebit.xml*
 
 .. _Magento Curebit extension: http://www.magentocommerce.com/magento-connect/curebit-checkout.html
-.. _direct download: http://curebit.com/magento/Curebit_Checkout-0.1.10.tgz
+.. _direct download: https://www.talkable.com/magento/Curebit_Checkout-0.1.10.tgz
 
 |br|
 

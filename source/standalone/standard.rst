@@ -14,10 +14,10 @@ Standalone campaign can be integrated to the page with the following code:
 
    <h2>Using Current Location URL Parameters</h2>
 
-You are able to pass some parameters to Curebit directly from current URL.
+You are able to pass some parameters to Talkable directly from current URL.
 
-In this case Curebit integration code will automatically catch some of the
-current location parameters and pass them to Curebit:
+In this case Talkable integration code will automatically catch some of the
+current location parameters and pass them to Talkable:
 
 * email - will be passed as affiliate email
 * first_name - will be passed as affiliate first_name
@@ -38,7 +38,7 @@ current location parameters and pass them to Curebit:
 
    <h3>Example</h3>
 
-Suppose that you have Curebit integration code on "**http://your-merchant.com/share**".
+Suppose that you have Talkable integration code on "**http://your-merchant.com/share**".
 The following code will register person@example.com in campaign with tag "custom":
 
 .. code-block:: url

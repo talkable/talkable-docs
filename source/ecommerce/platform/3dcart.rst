@@ -12,8 +12,8 @@
 
    .. include:: /samples/ecommerce/platform/3dcart.rst
 
-5. You will need to replace "YOUR-CUREBIT-SITE-ID" with the site ID assigned
-   to you on your Curebit dashboard after you log in and create a site.
+5. You will need to replace "YOUR-TALKABLE-SITE-ID" with the site ID assigned
+   to you on your Talkable dashboard after you log in and create a site.
 6. Click **Save Changes** and confirm the settings have been saved.
 
 |br|

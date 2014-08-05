@@ -13,5 +13,5 @@
     };
   </script>
 
-1. ``domain_key`` — CloudSponge account (Curebit by default)
+1. ``domain_key`` — CloudSponge account (Talkable by default)
 2. ``textarea_id`` — ID attribute to populate data to
