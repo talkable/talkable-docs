@@ -21,8 +21,14 @@
           email: 'customer@example.com', // OPTIONAL - customer email
           first_name: 'John', // OPTIONAL - customer first name
           last_name: 'Smith', // OPTIONAL - customer last name
-          customer_id: '', // OPTIONAL - customer ID from your site
-          traffic_source: '' // OPTIONAL - indicate person traffic source. Can be used as segmentation parameter in reporting.
+          customer_id: '...', // OPTIONAL - customer ID from your site
+          gender: '...', // OPTIONAL - customer gender ('male' or 'female')
+          person_custom_properties: { // OPTIONAL - additional customer properties
+              key1: 'value1', // String value
+              key2: '123.2', // Numeric value
+              ...
+          },
+          traffic_source: '...' // OPTIONAL - indicate person traffic source. Can be used as segmentation parameter in reporting.
         },
         responsive: true, // OPTIONAL - fit iframe into viewport (also on resize) and allow Talkable display mobile templates
         // device: 'desktop', // OPTIONAL - enforce mobile/tablet/desktop view or skip this to allow Talkable choose corresponding template
