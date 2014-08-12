@@ -25,8 +25,7 @@
           gender: '...', // OPTIONAL - customer gender ('male' or 'female')
           person_custom_properties: { // OPTIONAL - additional customer properties
               key1: 'value1', // String value
-              key2: '123.2', // Numeric value
-              ...
+              key2: '123.2' // Numeric value
           },
           traffic_source: '...' // OPTIONAL - indicate person traffic source. Can be used as segmentation parameter in reporting.
         },

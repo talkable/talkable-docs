@@ -11,8 +11,7 @@
       gender: '...', // OPTIONAL - customer gender ('male' or 'female')
       person_custom_properties: { // OPTIONAL - additional customer properties
           key1: 'value1', // string value
-          key2: '123.2', // numeric value
-          ...
+          key2: '123.2' // numeric value
       }
     }
   }).done(function(data) {
