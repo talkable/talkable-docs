@@ -8,11 +8,11 @@
       first_name: '...', // OPTIONAL - customer first name
       last_name: '...', // OPTIONAL - customer last name
       customer_id: '...', // OPTIONAL - customer ID from your site
-      gender: '...', // OPTIONAL - customer gender ('male' or 'female')
       // person_custom_properties: { // OPTIONAL - additional customer properties
       //     key1: 'value1', // string value
       //     key2: '123.2' // numeric value
-      // }
+      // },
+      gender: '...' // OPTIONAL - customer gender ('male' or 'female')
     }
   }).done(function(data) {
     if (data.success) {
