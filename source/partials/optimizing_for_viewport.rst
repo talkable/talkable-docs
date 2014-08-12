@@ -25,4 +25,6 @@ scrollbars on resize (if ``responsive: true``)
 
    body { overflow: hidden; }
 
-`Demo integration link <http://jsfiddle.net/iurevych/sVtc8/>`_
+`Example integration <http://docs.talkable.com/samples/viewport.html>`_.
+
+`Source integration <https://github.com/curebit/docs/blob/gh-pages/samples/viewport.html>`_.
