@@ -53,8 +53,7 @@
         campaign_tags: ['default'], // OPTIONAL - Campaign tags used to target specific campaign for offer
         person_custom_properties: { // OPTIONAL - Additional customer properties
             key1: 'value1', // String value
-            key2: '123.2', // Numeric value
-            ...
+            key2: '123.2' // Numeric value
         }
       };
 
