@@ -32,7 +32,7 @@ This feature is only available to Enterprise customers.
 
 This feature is only available to Enterprise customers.
 
-.. _Read this guide: https://curebit.helpjuice.com/questions/54519-Using-Webhooks-to-create-Single-Use-Coupon-Codes
+.. _Read this guide: http://help.talkable.com/questions/54519-Using-Webhooks-to-create-Single-Use-Coupon-Codes
 
 .. container:: hidden
 
