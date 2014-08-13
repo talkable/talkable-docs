@@ -26,6 +26,8 @@ Triggered when Friend Email Gating form is submitted (on Friend Claim Page).
 * **first_name** — affiliate member's first name
 * **last_name** — affiliate member's last name
 * **sub_choice** — subscription choice (optional, present only if the form included subscription checkbox)
+* **subscribed_at** - date affiliate member has subscribed (optional)
+* **unsubscribed_at** - date affiliate member has unsubscribed (optional)
 
 .. raw:: html
 
@@ -48,7 +50,9 @@ Triggered when Friend Email Gating form is submitted (on Friend Claim Page).
      "first_name": null,
      "last_name": null,
      "gender": null,
-     "sub_choice": true
+     "sub_choice": true,
+     "subscribed_at":"2014-08-13T11:14:08.835-07:00",
+     "unsubscribed_at":null
    }
 
 .. raw:: html
@@ -57,7 +61,7 @@ Triggered when Friend Email Gating form is submitted (on Friend Claim Page).
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"campaign":{"id":350256053,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"email":"john@example.com","first_name":null,"last_name":null,"gender":null,"sub_choice":true}' <url>
+   curl --data 'key=<key>&payload={"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"campaign":{"id":350256053,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"email":"john@example.com","first_name":null,"last_name":null,"gender":null,"sub_choice":true,"subscribed_at":"2014-08-13T11:14:08.835-07:00","unsubscribed_at":null}' <url>
 
 .. container:: hidden
 

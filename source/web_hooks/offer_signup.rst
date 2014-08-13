@@ -30,6 +30,8 @@ additional parameters will be present:
 * **first_name** — affiliate member's first name
 * **last_name** — affiliate member's last name
 * **sub_choice** — subscription choice
+* **subscribed_at** - date affiliate member has subscribed
+* **unsubscribed_at** - date affiliate member has unsubscribed
 
 .. raw:: html
 
@@ -52,7 +54,9 @@ additional parameters will be present:
      "first_name": "John",
      "last_name": "Doe",
      "gender": "male",
-     "sub_choice": false
+     "sub_choice": false,
+     "subscribed_at":null,
+     "unsubscribed_at":null
    }
 
 .. raw:: html

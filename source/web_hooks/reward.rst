@@ -27,6 +27,8 @@ it is getting paid after Referral is approved.
   * **last_name**
   * **gender**
   * **sub_choice**
+  * **subscribed_at**
+  * **unsubscribed_at**
 
 * **reward** — subhash of parameters describing the reward itself
 
@@ -67,7 +69,9 @@ Reward reason can be of 6 following general types.
       "first_name": "Bob",
       "gender": null,
       "last_name": "Smith",
-      "sub_choice": true
+      "sub_choice": true,
+      "subscribed_at":"2014-08-13T11:14:08.835-07:00",
+      "unsubscribed_at":null
     },
     "campaign": {
       "id": 146331555,
@@ -92,7 +96,7 @@ Reward reason can be of 6 following general types.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"person":{"email":"referrer@example.com","first_name":"Bob","gender":null,"last_name":"Smith","sub_choice":true},"campaign":{"id":146331555,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"reward":{"reason":"referrer","incentive_type":"rebate","incentive_description":"$10.00 back","amount":10,"coupon_code":null}}' <url>
+   curl --data 'key=<key>&payload={"person":{"email":"referrer@example.com","first_name":"Bob","gender":null,"last_name":"Smith","sub_choice":true,"subscribed_at":"2014-08-13T11:14:08.835-07:00","unsubscribed_at":null},"campaign":{"id":146331555,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"reward":{"reason":"referrer","incentive_type":"rebate","incentive_description":"$10.00 back","amount":10,"coupon_code":null}}' <url>
 
 .. container:: hidden
 
