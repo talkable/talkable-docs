@@ -24,5 +24,3 @@ scrollbars on resize (if ``responsive: true``)
 .. code:: css
 
    body { overflow: hidden; }
-
-`Demo integration link <http://jsfiddle.net/iurevych/sVtc8/>`_

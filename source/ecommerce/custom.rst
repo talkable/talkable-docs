@@ -6,6 +6,8 @@ Default Integration
 
 .. include:: /partials/note_enterprise_integration.rst
 
+.. include:: /partials/integration_head.rst
+
 On your final checkout receipt page (which includes things like the customer's
 order number or confirmation code), you will include a Javascript snippet
 containing the order and purchased product information. This version of the
@@ -40,6 +42,9 @@ Main Integration Code
 |hr|
 
 .. include:: /partials/optimizing_for_viewport.rst
+`Example integration <http://docs.talkable.com/samples/viewport-pp.html>`_.
+
+`Source integration <https://github.com/curebit/docs/blob/gh-pages/samples/viewport-pp.html>`_.
 
 |hr|
 

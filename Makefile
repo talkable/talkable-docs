@@ -51,7 +51,7 @@ deploy:
 	(cd $(BUILDDIR)/html && tar c ./) | (cd ./ && tar xf -)
 	rm -rf $(GH_PAGES_SOURCES) $(BUILDDIR) .buildinfo
 	echo '' > .nojekyll
-	echo '/.bundle' > .gitignore
+	echo "/build\n/.bundle" > .gitignore
 	echo 'docs.talkable.com' > CNAME
 	git add -A
 	git commit -m "Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`" && git push origin gh-pages ; git checkout master
