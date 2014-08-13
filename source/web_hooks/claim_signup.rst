@@ -26,8 +26,8 @@ Triggered when Friend Email Gating form is submitted (on Friend Claim Page).
 * **first_name** — affiliate member's first name
 * **last_name** — affiliate member's last name
 * **sub_choice** — subscription choice (optional, present only if the form included subscription checkbox)
-* **subscribed_at** - date affiliate member has subscribed (optional)
-* **unsubscribed_at** - date affiliate member has unsubscribed (optional)
+* **subscribed_at** — date affiliate member has subscribed (optional)
+* **unsubscribed_at** — date affiliate member has unsubscribed (optional)
 
 .. raw:: html
 

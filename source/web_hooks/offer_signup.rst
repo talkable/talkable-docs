@@ -30,8 +30,8 @@ additional parameters will be present:
 * **first_name** — affiliate member's first name
 * **last_name** — affiliate member's last name
 * **sub_choice** — subscription choice
-* **subscribed_at** - date affiliate member has subscribed
-* **unsubscribed_at** - date affiliate member has unsubscribed
+* **subscribed_at** — date affiliate member has subscribed
+* **unsubscribed_at** — date affiliate member has unsubscribed
 
 .. raw:: html
 
