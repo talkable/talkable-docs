@@ -51,8 +51,8 @@ Triggered when Friend Email Gating form is submitted (on Friend Claim Page).
      "last_name": null,
      "gender": null,
      "sub_choice": true,
-     "subscribed_at":"2014-08-13T11:14:08.835-07:00",
-     "unsubscribed_at":null
+     "subscribed_at": "2014-08-13T11:14:08.835-07:00",
+     "unsubscribed_at": null
    }
 
 .. raw:: html
