@@ -48,9 +48,10 @@ The following code will register person@example.com in campaign with tag "custom
    http://your-merchant.com/share?email=person@example.com&campaign_tags=custom
 
 .. include:: /partials/optimizing_for_viewport.rst
-`Example integration <http://docs.talkable.com/samples/viewport-sa.html>`_.
 
-`Source integration <https://github.com/curebit/docs/blob/gh-pages/samples/viewport-sa.html>`_.
+`Example integration <http://jsbin.com/jipoqotaheri/1>`_.
+
+`Source integration <http://jsbin.com/jipoqotaheri/1/edit?html,output>`_.
 
 .. include:: /partials/for_modern_sa_js_apps.rst
 

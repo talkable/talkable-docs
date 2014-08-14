@@ -45,6 +45,6 @@ Also, you can append Talkable ``iframe`` into your custom container. Add ``ifram
 * You can pass any HTML attributes.
 * Pass ``container`` option to set where you want Talkable iframe to be inserted (this is HTML ``id`` attribute value).
 
-`Example standalone integration <http://docs.talkable.com/samples/sa.html>`_
+`Example standalone integration <http://jsbin.com/qawicuceqexe/2>`_
 
-`Source for standalone integration <https://github.com/curebit/docs/blob/gh-pages/samples/sa.html>`_
+`Source for standalone integration <http://jsbin.com/qawicuceqexe/2/edit?html,js,output>`_
