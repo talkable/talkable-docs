@@ -39,6 +39,8 @@ a json containing offer short code. Then redirect user to share page.
      "errors": ["Email can't be blank"]
    }
 
+.. include:: /partials/passing_custom_data.rst
+
 |hr|
 
 Get a Coupon Code

@@ -12,6 +12,8 @@ Standalone campaign can be integrated to the page with the following code:
 
 .. include:: /samples/standalone/standard.rst
 
+.. include:: /partials/passing_custom_data.rst
+
 .. raw:: html
 
    <h2>Using Current Location URL Parameters</h2>
