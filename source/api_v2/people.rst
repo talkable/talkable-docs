@@ -6,6 +6,8 @@ People
 
 This API allows you to access and update persons. See examples below.
 
+|br|
+
 .. code-block:: url
 
    GET /people/<person_slug>
@@ -21,6 +23,8 @@ Returns a person.
                      Talkable dashboard after you log in and create a site.
    person_slug       Person’s email or username
    ================= ========================================================
+
+|br|
 
 .. code-block:: url
 

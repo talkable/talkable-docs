@@ -6,6 +6,8 @@ Origins
 
 This API allows you to create origins. See examples below.
 
+|br|
+
 .. code-block:: url
 
    POST /origins
