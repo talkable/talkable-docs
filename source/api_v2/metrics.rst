@@ -23,8 +23,8 @@ Returns a metric value.
    site_slug         Your Talkable Site ID. You can get this from your
                      Talkable dashboard after you log in and create a site.
    metric            Specific metric name
-   start_date        Start of the period for which data is pulled, including
-   end_date          End of the period for which data is pulled, including
+   start_date        Start of the period for which data is pulled, inclusively
+   end_date          End of the period for which data is pulled, inclusively
    campaign_slugs    Optional: array of campaign slugs for which data
                      is pulled. See the :ref:`Campaigns API <api_v2/campaigns>`
    ================= ========================================================
