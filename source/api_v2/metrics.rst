@@ -26,7 +26,7 @@ Returns a metric value.
    start_date        Start of the period for which data is pulled, including
    end_date          End of the period for which data is pulled, including
    campaign_slugs    Optional: array of campaign slugs for which data
-                     is pulled
+                     is pulled. See the :ref:`Campaigns API <api_v2/campaigns>`
    ================= ========================================================
 
 Example
