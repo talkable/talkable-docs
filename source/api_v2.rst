@@ -11,3 +11,4 @@ Contents:
    api_v2/intro
    api_v2/origins
    api_v2/people
+   api_v2/campaigns
