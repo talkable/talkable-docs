@@ -1,7 +1,7 @@
 Talkable Documentation
 ======================
 
-[![Build Status](https://travis-ci.org/talkable/docs.svg)](https://travis-ci.org/talkable/docs)
+[![Build Status](https://travis-ci.org/talkable/talkable-docs.svg)](https://travis-ci.org/talkable/talkable-docs)
 
 This GitHub repository represents Talkable's documentation site, located at [docs.talkable.com](http://docs.talkable.com).
 
@@ -101,8 +101,8 @@ If you did everything right, deploying is as easy as `make deploy` from "master"
 
 ---
 
-See "master" branch: https://github.com/talkable/docs
+See "master" branch: https://github.com/talkable/talkable-docs
 
-See "gh-pages" branch: https://github.com/talkable/docs/tree/gh-pages
+See "gh-pages" branch: https://github.com/talkable/talkable-docs/tree/gh-pages
 
 See GitHub Page (auto generated): http://talkable.github.io/docs/ (alias: http://docs.talkable.com)
