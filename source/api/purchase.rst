@@ -123,13 +123,13 @@ Create Purchases
 
                         [
                           {
-                            "email": "1st_customer@mail.com",
+                            "email": "1st_customer@example.com",
                             "order_number": 1,
                             "order_date": "2014-03-13T12:49:54+00:00",
                             "subtotal": 500
                           },
                           {
-                            "email": "2nd_customer@mail.com",
+                            "email": "2nd_customer@example.com",
                             "order_number": 2,
                             "order_date": "2014-03-14T05:49:54+00:00",
                             "subtotal": 100,

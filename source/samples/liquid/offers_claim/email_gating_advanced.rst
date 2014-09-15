@@ -8,7 +8,7 @@
   {% else %}
     <div class="js-hide">
       <form action="#" class="js-gating-unlock">
-        <input type="email" class="js-gating-email" placeholder="myname@email.com"/>
+        <input type="email" class="js-gating-email" placeholder="myname@example.com"/>
         <label for="email-subscription">
           <input type="checkbox" checked="checked" id="email-subscription" class="js-gating-checkbox" />
           Sign me up for the latest news

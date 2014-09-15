@@ -8,7 +8,7 @@
   {% else %}
     <div class="js-hide">
       <form action="#" class="js-gating-unlock">
-        <input type="email" class="js-gating-email" placeholder="myname@email.com"/>
+        <input type="email" class="js-gating-email" placeholder="myname@example.com"/>
         <button>Claim your coupon code</button>
       </form>
     </div>

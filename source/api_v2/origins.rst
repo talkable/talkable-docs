@@ -51,7 +51,7 @@ Create a purchase
      "site_slug": "my-store",
      "type": "Purchase",
      "data": {
-       "email": "customer@mail.com",
+       "email": "customer@example.com",
        "order_number": 12,
        "order_date": "2014-03-14T05:49:54-07:00",
        "subtotal": 100,
@@ -69,7 +69,7 @@ Create a purchase
 
    curl -H "Content-Type: application/json" \
         -X POST \
-        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","type":"Purchase","data":{"email":"customer@mail.com","order_number":12,"order_date":"2014-03-14T05:49:54-07:00","subtotal":100,"items":[{"price":25,"quantity":4,"product_id":"TSHIRT"}]}}' \
+        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","type":"Purchase","data":{"email":"customer@example.com","order_number":12,"order_date":"2014-03-14T05:49:54-07:00","subtotal":100,"items":[{"price":25,"quantity":4,"product_id":"TSHIRT"}]}}' \
         https://www.talkable.com/api/v2/origins
 
 Sample response:
@@ -90,7 +90,7 @@ Sample response:
        },
        "offer": {
          "short_url_code": "dZpBwd",
-         "email": "customer@mail.com",
+         "email": "customer@example.com",
          "show_url": "http://curebit.com/x/iXh4Je",
          "claim_url": "http://curebit.com/x/LSKEAX"
        }
@@ -107,7 +107,7 @@ Create an affiliate member
      "site_slug": "my-store",
      "type": "AffiliateMember",
      "data": {
-       "email": "affiliate@mail.com"
+       "email": "affiliate@example.com"
      }
    }
 
@@ -115,7 +115,7 @@ Create an affiliate member
 
    curl -H "Content-Type: application/json" \
         -X POST \
-        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","type":"AffiliateMember","data":{"email":"affiliate@mail.com"}}' \
+        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","type":"AffiliateMember","data":{"email":"affiliate@example.com"}}' \
         https://www.talkable.com/api/v2/origins
 
 Sample response:
@@ -127,13 +127,13 @@ Sample response:
      "result": {
        "origin": {
          "id": 31386400,
-         "email": "affiliate@mail.com",
+         "email": "affiliate@example.com",
          "customer_id": null,
          "type": "AffiliateMember"
        },
        "offer": {
          "short_url_code": "Jp8qY9",
-         "email": "affiliate@mail.com",
+         "email": "affiliate@example.com",
          "show_url": "http://curebit.com/x/5BN5h7",
          "claim_url": "http://curebit.com/x/TM2OhR"
        }

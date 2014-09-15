@@ -57,7 +57,7 @@ Find a person by email
 
 .. code-block:: url
 
-   GET https://www.talkable.com/api/v2/people/customer@email.com?site_slug=my-store&api_key=i9uil7nQgDjucCiTJu
+   GET https://www.talkable.com/api/v2/people/customer@example.com?site_slug=my-store&api_key=i9uil7nQgDjucCiTJu
 
 Sample response:
 
@@ -88,7 +88,7 @@ Update person’s username
    {
      "api_key": "i9uil7nQgDjucCiTJu",
      "site_slug": "my-store",
-     "person_slug": "customer@email.com",
+     "person_slug": "customer@example.com",
      "data": {
        "username": "lizard_king"
      }
@@ -98,7 +98,7 @@ Update person’s username
 
    curl -H "Content-Type: application/json" \
         -X PUT \
-        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","person_slug":"customer@email.com","data":{"username":"lizard_king"}}' \
+        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","person_slug":"customer@example.com","data":{"username":"lizard_king"}}' \
         https://www.talkable.com/api/v2/people
 
 Sample response:
