@@ -57,7 +57,7 @@ Example
 Create a Facebook share
 .......................
 
-.. code-block:: url
+.. code-block:: bash
 
    curl -H "Content-Type: application/json" \
         -X POST \
@@ -83,7 +83,7 @@ Sample response:
 Create an Email share
 .....................
 
-.. code-block:: url
+.. code-block:: bash
 
    curl -H "Content-Type: application/json" \
         -X POST \
