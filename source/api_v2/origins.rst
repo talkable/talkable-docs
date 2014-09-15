@@ -20,7 +20,7 @@ This API allows you to create origins. See examples below.
    site_slug         Your Talkable Site ID. You can get this from your
                      Talkable dashboard after you log in and create a site.
    type              Type of origin to create (*"Purchase"* or *"AffiliateMember"*)
-   data              JSON object with following properties:
+   data              Hash or JSON object with following properties:
 
                      For Purchase:
 
@@ -91,8 +91,8 @@ Sample response:
        "offer": {
          "short_url_code": "dZpBwd",
          "email": "customer@example.com",
-         "show_url": "http://curebit.com/x/iXh4Je",
-         "claim_url": "http://curebit.com/x/LSKEAX"
+         "show_url": "https://www.talkable.com/x/iXh4Je",
+         "claim_url": "https://www.talkable.com/x/LSKEAX"
        }
      }
    }
@@ -134,8 +134,8 @@ Sample response:
        "offer": {
          "short_url_code": "Jp8qY9",
          "email": "affiliate@example.com",
-         "show_url": "http://curebit.com/x/5BN5h7",
-         "claim_url": "http://curebit.com/x/TM2OhR"
+         "show_url": "https://www.talkable.com/x/5BN5h7",
+         "claim_url": "https://www.talkable.com/x/TM2OhR"
        }
      }
    }

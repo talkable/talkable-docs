@@ -42,8 +42,8 @@ Sample response:
       "offer": {
         "short_url_code": "dZpBwd",
         "email": "customer@example.com",
-        "show_url": "http://www.talkable.com/x/iEov9g",
-        "claim_url": "http://www.talkable.com/x/5B3xO1"
+        "show_url": "https://www.talkable.com/x/iEov9g",
+        "claim_url": "https://www.talkable.com/x/5B3xO1"
       }
     }
   }
