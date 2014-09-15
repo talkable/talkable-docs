@@ -36,6 +36,8 @@ This API allows you to create origins. See examples below.
 
                      * email
 
+   interpolations    Optional: set to `true` to include origin interpolation
+                     variables in response
    ================= ========================================================
 
 Example

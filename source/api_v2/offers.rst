@@ -23,6 +23,8 @@ Returns offer.
                      Talkable dashboard after you log in and create a site.
    short_url_code    Offer short code obtained with
                      :ref:`origin creation <api_v2/origins>`.
+   interpolations    Optional: set to `true` to include offer interpolation
+                     variables in response
    ================= ========================================================
 
 Example
