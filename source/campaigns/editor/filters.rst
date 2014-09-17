@@ -30,35 +30,54 @@ Asset URL without CDN. Required only for custom fonts to work.
 
 |hr|
 
-interpolate
-...........
+simple\_format
+..............
 
-Allows inline string interpolation using [[ ]] syntax.
+Formats plain text to have HTML formatting. E.g. replace ``\n`` with ``<br/>``.
 
 .. code-block:: liquid
 
-   {{ "Get [[incentives.click.amount | money]] Off" | interpolate }}
+   {{ "Hello [[advocate_info.email]]\nHere is your reward." | simple_format | interpolate }}
+
+Returns ``Hello John<br/>Here is your reward``.
 
 |hr|
 
-.. _liquid_filter_format_date:
+encode\_query\_argument
+.......................
 
-format\_date
-............
-
-Format date for current localization.
-
-Default format: Apr 04, 2014
-
-Reference to all available formatting can be found in `strftime documentation`_
-
-.. _strftime documentation: http://apidock.com/ruby/DateTime/strftime
+Encodes a string to be included in a URL.
 
 .. code-block:: liquid
 
-   {{ valid_until | format_date }}
-   {{ valid_until | format_date: "%Y-%m-%d" }}
-   {{ current_time | format_date }}
+   http://example.com/?utm_campaign={{ "Campaign Name" | encode_query_argument }}
+
+Returns ``Campaign%20Name``, so the URL will be
+``http://example.com/?utm_campaign=Campaign%20Name``.
+
+|hr|
+
+rand\_by
+........
+
+Produces a random value which is always the same for specific parameters passed.
+First parameter is a maximum random number.
+
+Simple example:
+
+.. code-block:: liquid
+
+   {{ "100" | rand_by: "param1", "param2" }}
+
+Always returns ``29``.
+
+Interpolation as a parameter:
+
+.. code-block:: liquid
+
+   {{ "10" | rand_by: advocate_info.email }}
+
+Always returns the same number for a specific email, between 0 and 10.
 
 |hr|
 
@@ -86,16 +105,35 @@ Split testing an asset:
 
 |hr|
 
-simple\_format
-..............
+.. _liquid_filter_format_date:
 
-Formats plain text to have HTML formatting. E.g. replace ``\n`` with ``<br/>``.
+format\_date
+............
+
+Format date for current localization.
+
+Default format: Apr 04, 2014
+
+Reference to all available formatting can be found in `strftime documentation`_
+
+.. _strftime documentation: http://apidock.com/ruby/DateTime/strftime
 
 .. code-block:: liquid
 
-   {{ "Hello [[advocate_info.email]]\nHere is your reward." | simple_format | interpolate }}
+   {{ valid_until | format_date }}
+   {{ valid_until | format_date: "%Y-%m-%d" }}
+   {{ current_time | format_date }}
 
-Returns ``Hello John<br/>Here is your reward``.
+|hr|
+
+interpolate
+...........
+
+Allows inline string interpolation using [[ ]] syntax.
+
+.. code-block:: liquid
+
+   {{ "Get [[incentives.click.amount | money]] Off" | interpolate }}
 
 |hr|
 
@@ -141,6 +179,32 @@ Returns ``$100.9``.
    {{ "100.00" | money: strip_insignificant_zeros: true }}
 
 Returns ``$100``.
+
+|hr|
+
+strip
+.....
+
+Removes leading and trailing blank symbols from the string.
+
+.. code-block:: liquid
+
+   {{ "    strip me " | strip }}
+
+Returns ``strip me``.
+
+|hr|
+
+tweet_length
+............
+
+Calculates a tweet length for the string.
+
+.. code-block:: liquid
+
+   {{ "wow this is a tweet http://example.com" | tweet_length }}
+
+Returns ``42``.
 
 |hr|
 
