@@ -19,8 +19,12 @@ This API allows you to create origins. See examples below.
    ================= ========================================================
    site_slug         Your Talkable Site ID. You can get this from your
                      Talkable dashboard after you log in and create a site.
-   type              Type of origin to create (*"Purchase"* or *"AffiliateMember"*)
+   type              Type of origin to create (*"AffiliateMember"*, *"Purchase"* or *"Event"*)
    data              Hash or JSON object with following properties:
+
+                     For AffiliateMember:
+
+                     * email
 
                      For Purchase:
 
@@ -32,9 +36,14 @@ This API allows you to create origins. See examples below.
                      * customer_id (optional)
                      * coupon_code (optional)
 
-                     For AffiliateMember:
+                     For Event:
 
                      * email
+                     * event_number
+                     * event_category
+                     * subtotal (optional)
+                     * customer_id (optional)
+                     * coupon_code (optional)
 
    interpolations    Optional: set to `true` to include origin interpolation
                      variables in response
@@ -88,6 +97,53 @@ Sample response:
          "order_date": "2014-03-14T05:49:54.000-07:00",
          "customer_id": null,
          "type": "Purchase",
+         "coupon_code": ""
+       },
+       "offer": {
+         "short_url_code": "dZpBwd",
+         "email": "customer@example.com",
+         "show_url": "https://www.talkable.com/x/iXh4Je",
+         "claim_url": "https://www.talkable.com/x/LSKEAX"
+       }
+     }
+   }
+
+Create an event
+...............
+
+.. code-block:: javascript
+
+   {
+     "api_key": "i9uil7nQgDjucCiTJu",
+     "site_slug": "my-store",
+     "type": "Event",
+     "data": {
+       "email": "customer@example.com",
+       "event_category": "newsletter_subscription",
+       "event_number": "42"
+     }
+   }
+
+.. code-block:: bash
+
+   curl -H "Content-Type: application/json" \
+        -X POST \
+        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","type":"Event","data":{"email":"customer@example.com","event_category":"newsletter_subscription","event_number":"42"}}' \
+        https://www.talkable.com/api/v2/origins
+
+Sample response:
+
+.. code-block:: javascript
+
+   {
+     "ok": true,
+     "result": {
+       "origin": {
+         "id": 46141478,
+         "type": "Event",
+         "event_number": "42",
+         "event_category": "newsletter_subscription",
+         "customer_id": null,
          "coupon_code": ""
        },
        "offer": {
