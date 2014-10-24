@@ -46,6 +46,7 @@ Updates existing person.
                      * last_name
                      * username
                      * customer_id
+                     * person_custom_properties
 
    ================= ========================================================
 
