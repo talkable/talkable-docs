@@ -22,27 +22,27 @@ This API allows you to create origins. See examples below.
    type              Type of origin to create (*"AffiliateMember"*, *"Purchase"* or *"Event"*)
    data              Hash or JSON object with following properties:
 
-                     For AffiliateMember:
+                     Common Fields:
 
                      * email
+                     * customer_id (optional)
+                     * first_name (optional)
+                     * last_name (optional)
+                     * person_custom_properties (optional)
 
                      For Purchase:
 
-                     * email
                      * subtotal
                      * order_number
                      * order_date (|iso8601| formatted datetime)
                      * items (optional)
-                     * customer_id (optional)
                      * coupon_code (optional)
 
                      For Event:
 
-                     * email
                      * event_number
                      * event_category
                      * subtotal (optional)
-                     * customer_id (optional)
                      * coupon_code (optional)
 
    interpolations    Optional: set to `true` to include origin interpolation
