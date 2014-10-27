@@ -1,16 +1,21 @@
-.. _campaigns/views/notifier_offers_claim:
+.. _campaigns/views/notifier_rewards_confirmation:
 .. include:: /partials/common.rst
 
-.. _notifier_offers_claim_view:
+.. _notifier_rewards_confirmation:
 
-Friend Claim Email
-------------------
+Advocate/Friend Reward Confirmation Email
+-----------------------------------------
 
 Main purpose of this email is to send a Reward via email, and remind about
 it in the future. |br|
-Email is triggered to a Friend who passed Email Gating and received Reward
+Email is triggered to a Advocate or a Friend who passed Email Gating, and received Reward
 (i.e. coupon code). |br|
-Friend Claim Email is a good fit for email capture: reward Friend for
+
+.. note:: Use `Email sending condition` to differentiate Advocate/Friend emails.
+   |br|
+   Example: `{% if reward.incentive.identifier == 'click' %}true{% endif %}`
+
+Reward Confirmation Email for Friend is a good fit for email capture: reward Friend for
 getting his email. See :ref:`tutorials_email_gating` for more details.
 
 Frequently used Variables:
@@ -36,7 +41,3 @@ Frequently used Variables:
   <a href="{{ proceed_to_merchant_path }}">Shop now</a>
 
 .. include:: /partials/developer_email_note.rst
-
-.. note::
-
-  It's possible to set multiple delays for this email, see :ref:`editor_delayed_emails`.

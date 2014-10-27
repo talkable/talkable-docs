@@ -14,6 +14,5 @@ Contents:
    views/notifier_offers_share_via_email
    views/notifier_offers_share_via_email_reminder
    views/offers_claim
-   views/notifier_offers_claim
-   views/notifier_rewards_origins_referrer_confirmation
+   views/notifier_rewards_confirmation
    views/notifier_rewards_paid
