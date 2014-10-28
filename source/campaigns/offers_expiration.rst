@@ -7,9 +7,11 @@ Offers Expiration
 Talkable Campaign allows to set offer expiration for Advocate and Friend
 by specifying specific date or setting offer duration in hours.
 
-.. note:: Offer Expiration does not prevent Advocate or Friend from getting rewards
-     and receiving corresponding emails. This can be configured separately through
-     Trigger/Sending criteria.
+.. note::
+
+   Offer Expiration does not prevent Advocate or Friend from getting rewards
+   and receiving corresponding emails. This can be configured separately through
+   Trigger/Sending criteria.
 
 .. raw:: html
 

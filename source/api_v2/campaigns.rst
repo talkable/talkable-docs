@@ -34,40 +34,34 @@ Sample response:
 
 .. code-block:: javascript
 
-  {
-    "ok": true,
-    "result": {
-      "campaigns": [
-        {
-          "id": 35944,
-          "name": "API campaign",
-          "tag_names": [
-            "api"
-          ],
-          "slug": "35944-api-campaign",
-          "type": "Standalone Campaign",
-          "is_active": true
-        },
-        {
-          "id": 34601,
-          "name": "PP campaign",
-          "tag_names": [
-            "default"
-          ],
-          "slug": "34601-pp-campaign",
-          "type": "Post-Checkout Campaign",
-          "is_active": true
-        },
-        {
-          "id": 34376,
-          "name": "Inactive campaign",
-          "tag_names": [
-            "default"
-          ],
-          "slug": "34376-inactive-campaign",
-          "type": "Standalone Campaign",
-          "is_active": false
-        }
-      ]
-    }
-  }
+   {
+     "ok": true,
+     "result": {
+       "campaigns": [
+         {
+           "id": 35944,
+           "name": "API campaign",
+           "tag_names": ["api"],
+           "slug": "35944-api-campaign",
+           "type": "Standalone Campaign",
+           "is_active": true
+         },
+         {
+           "id": 34601,
+           "name": "PP campaign",
+           "tag_names": ["default"],
+           "slug": "34601-pp-campaign",
+           "type": "Post-Checkout Campaign",
+           "is_active": true
+         },
+         {
+           "id": 34376,
+           "name": "Inactive campaign",
+           "tag_names": ["default"],
+           "slug": "34376-inactive-campaign",
+           "type": "Standalone Campaign",
+           "is_active": false
+         }
+       ]
+     }
+   }

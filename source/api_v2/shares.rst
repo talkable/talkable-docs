@@ -68,17 +68,17 @@ Sample response:
 
 .. code-block:: javascript
 
-  {
-    "ok": true,
-    "result": {
-      "reward": null,
-      "share": {
-        "id": 4452084,
-        "type": "SocialOfferShare",
-        "short_url": "https://www.talkable.com/x/hQ0SZb"
-      }
-    }
-  }
+   {
+     "ok": true,
+     "result": {
+       "reward": null,
+       "share": {
+         "id": 4452084,
+         "type": "SocialOfferShare",
+         "short_url": "https://www.talkable.com/x/hQ0SZb"
+       }
+     }
+   }
 
 Create an Email share
 .....................
@@ -94,29 +94,29 @@ Sample response:
 
 .. code-block:: javascript
 
-  {
-    "ok": true,
-    "result": {
-      "reward": {
-        "reason": "email_shared",
-        "incentive_type": "discount_coupon",
-        "incentive_description": "shared coupon \"10_OFF\" for $10.00 off",
-        "amount": null,
-        "coupon_code": "10_OFF"
-      },
-      "shares": [
-        {
-          "id": 4452107,
-          "email": "friend1@example.com",
-          "type": "EmailOfferShare",
-          "short_url": "https://www.talkable.com/x/lDtvhD"
-        },
-        {
-          "id": 4452108,
-          "email": "friend2@example.com",
-          "type": "EmailOfferShare",
-          "short_url": "https://www.talkable.com/x/VsaTEe"
-        }
-      ]
-    }
-  }
+   {
+     "ok": true,
+     "result": {
+       "reward": {
+         "reason": "shared",
+         "incentive_type": "discount_coupon",
+         "incentive_description": "shared coupon \"10_OFF\" for $10.00 off",
+         "amount": null,
+         "coupon_code": "10_OFF"
+       },
+       "shares": [
+         {
+           "id": 4452107,
+           "email": "friend1@example.com",
+           "type": "EmailOfferShare",
+           "short_url": "https://www.talkable.com/x/lDtvhD"
+         },
+         {
+           "id": 4452108,
+           "email": "friend2@example.com",
+           "type": "EmailOfferShare",
+           "short_url": "https://www.talkable.com/x/VsaTEe"
+         }
+       ]
+     }
+   }

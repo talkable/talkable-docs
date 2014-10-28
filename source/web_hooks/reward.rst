@@ -63,32 +63,30 @@ Reward reason can be of 6 following general types.
 
 .. code-block:: javascript
 
-  {
-    "person": {
-      "email": "referrer@example.com",
-      "first_name": "Bob",
-      "gender": null,
-      "last_name": "Smith",
-      "sub_choice": true,
-      "subscribed_at":"2014-08-13T11:14:08.835-07:00",
-      "unsubscribed_at":null
-    },
-    "campaign": {
-      "id": 146331555,
-      "type": "StandaloneCampaign",
-      "cached_slug": "affiliate-campaign-test",
-      "tag_names": [
-        "default"
-      ]
-    },
-    "reward": {
-      "reason": "referrer",
-      "incentive_type": "rebate",
-      "incentive_description": "$10.00 back",
-      "amount": 10.0,
-      "coupon_code": null
-    }
-  }
+   {
+     "person": {
+       "email": "referrer@example.com",
+       "first_name": "Bob",
+       "gender": null,
+       "last_name": "Smith",
+       "sub_choice": true,
+       "subscribed_at": "2014-08-13T11:14:08.835-07:00",
+       "unsubscribed_at": null
+     },
+     "campaign": {
+       "id": 146331555,
+       "type": "StandaloneCampaign",
+       "cached_slug": "affiliate-campaign-test",
+       "tag_names": ["default"]
+     },
+     "reward": {
+       "reason": "referrer",
+       "incentive_type": "rebate",
+       "incentive_description": "$10.00 back",
+       "amount": 10.0,
+       "coupon_code": null
+     }
+   }
 
 .. raw:: html
 

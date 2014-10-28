@@ -11,7 +11,9 @@ it in the future. |br|
 Email is triggered to a Advocate or a Friend who passed Email Gating, and received Reward
 (i.e. coupon code). |br|
 
-.. note:: Use `Email sending condition` to differentiate Advocate/Friend emails.
+.. note::
+
+   Use `Email sending condition` to differentiate Advocate/Friend emails.
    |br|
    Example: `{% if reward.incentive.identifier == 'click' %}true{% endif %}`
 
@@ -35,9 +37,9 @@ Frequently used Variables:
 
 .. code-block:: html
 
-  Here is your {{ incentives.click.description }} OFF deal you just claimed!
-  Use it on any purchase by {{ valid_until }}
-  Coupon code: {{ coupon_code }}
-  <a href="{{ proceed_to_merchant_path }}">Shop now</a>
+   Here is your {{ incentives.click.description }} OFF deal you just claimed!
+   Use it on any purchase by {{ valid_until }}
+   Coupon code: {{ coupon_code }}
+   <a href="{{ proceed_to_merchant_path }}">Shop now</a>
 
 .. include:: /partials/developer_email_note.rst

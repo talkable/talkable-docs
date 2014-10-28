@@ -15,14 +15,14 @@ Each Campaign View has its own set of Variables located inside Editor
 navigation:
 
 .. image:: /_static/img/editor/vars-menu-item.png
-  :alt: Variables: menu item
+   :alt: Variables: menu item
 
 |br|
 
 Each Variable is represented with Name, Liquid notation, Value:
 
 .. image:: /_static/img/editor/vars-variable.png
-  :alt: Variables: variable
+   :alt: Variables: variable
 
 * Name describes meaning of the Variable
 * Notation explains how to write Variable inside Template/Styles editor area
@@ -42,19 +42,19 @@ Personal data for Advocate.
 
 .. container:: ptable
 
-  ==================== ========================= ==================================================================
-  Property             Value                     Description
-  ==================== ========================= ==================================================================
-  email                "affiliate@example.com"   Advocate email he is registered with
-  first_name           "John"                    Advocate first name provided on Signup
-  last_name            "Smith"                   Advocate last name provided on Signup
-  gender               null | "male" | "female"  Advocate gender provided on Signup
-  external_customer_id "1jsh17136"               Advocate unique ID passed by Merchant to :ref:`Talkable Integration
-                                                 <ecommerce/custom>` as ``customer_id``
-  sub_choice           false | true              Advocate custom parameter which can be used to pass additional
-                                                 data to Advocate Share Page.
-  purchases_count      0                         Advocate number of tracked store purchases
-  ==================== ========================= ==================================================================
+   ==================== ========================= ==================================================================
+   Property             Value                     Description
+   ==================== ========================= ==================================================================
+   email                "affiliate@example.com"   Advocate email he is registered with
+   first_name           "John"                    Advocate first name provided on Signup
+   last_name            "Smith"                   Advocate last name provided on Signup
+   gender               null | "male" | "female"  Advocate gender provided on Signup
+   external_customer_id "1jsh17136"               Advocate unique ID passed by Merchant to :ref:`Talkable Integration
+                                                  <ecommerce/custom>` as ``customer_id``
+   sub_choice           false | true              Advocate custom parameter which can be used to pass additional
+                                                  data to Advocate Share Page.
+   purchases_count      0                         Advocate number of tracked store purchases
+   ==================== ========================= ==================================================================
 
 |br|
 
@@ -75,7 +75,7 @@ show it to because it has a scope:
 * for Views which name starts with ``Friend`` it means Friend Coupon Code
 
 .. image:: /_static/img/editor/vars-friend-coupon-code.png
-  :alt: Variables: friend coupon code
+   :alt: Variables: friend coupon code
 
 |br|
 
@@ -86,7 +86,7 @@ Make sure Incentives are correct:
 * If its ``multi-use`` Coupon Code, make sure it has a correct value
 
 .. image:: /_static/img/editor/vars-coupon-list.png
-  :alt: Variables: coupon list
+   :alt: Variables: coupon list
 
 |hr|
 
@@ -104,36 +104,34 @@ Here is an example of ``{{ incentives }}`` Variable with two incentives:
 
 .. code-block:: javascript
 
-  {
-    advocate: {
-      amount: 10.0,
-      description: "$10",
-      percentage: false,
-      required_actions: 1
-    },
-    friend: {
-      amount: 100.0,
-      description: "100%",
-      percentage: true,
-      required_actions: 0
-    }
-  }
+   {
+     advocate: {
+       amount: 10.0,
+       description: "$10",
+       percentage: false
+     },
+     friend: {
+       amount: 100.0,
+       description: "100%",
+       percentage: true
+     }
+   }
 
 And here is an example of using ``{{ incentives }}`` values:
 
 .. code-block:: html
 
-  Give your friend {{ incentives.friend.description }} OFF!
+   Give your friend {{ incentives.friend.description }} OFF!
 
 Which outputs:
 
 .. code-block:: html
 
-  Give your friend 100% OFF!
+   Give your friend 100% OFF!
 
 .. list-table::
-  :widths: 25 25 50
-  :header-rows: 1
+   :widths: 25 25 50
+   :header-rows: 1
 
   * - Property
     - Value
