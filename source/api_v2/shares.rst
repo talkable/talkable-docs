@@ -25,7 +25,7 @@ Creates offer share.
                      :ref:`origin creation <api_v2/origins>`.
    ================= ========================================================
 
-For `social share`:
+For *social share*:
 
 .. container:: ptable
 
@@ -35,7 +35,7 @@ For `social share`:
    channel           Options: `facebook`, `twitter`, `linkedin`, `other`
    ================= ========================================================
 
-Or for `email share`:
+Or for *email share*:
 
 .. container:: ptable
 

@@ -17,5 +17,4 @@ Contents:
    campaigns
    optional
    web_hooks
-   API Reference (v1) <api>
-   API Reference (v2) <api_v2>
+   api_v2
