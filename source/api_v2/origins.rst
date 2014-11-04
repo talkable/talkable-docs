@@ -45,8 +45,7 @@ This API allows you to create origins. See examples below.
                      * subtotal (optional)
                      * coupon_code (optional)
 
-   interpolations    Optional: set to `true` to include origin interpolation
-                     variables in response
+   interpolations    Optional: array of interpolations to return in response
    ================= ========================================================
 
 Example
