@@ -232,6 +232,5 @@ Returns channel-specific claim URL.
    {{ "facebook" | short_url }}
    {{ "linkedin" | short_url }}
    {{ "twitter" | short_url }}
-   {{ "email" | short_url }}
 
 .. _Standard liquid filters: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters
