@@ -222,15 +222,15 @@ Returns ``value``.
 
 |hr|
 
-short\_url
+claim\_url
 ..........
 
 Returns channel-specific claim URL.
 
 .. code-block:: liquid
 
-   {{ "facebook" | short_url }}
-   {{ "linkedin" | short_url }}
-   {{ "twitter" | short_url }}
+   {{ "facebook" | claim_url }}
+   {{ "linkedin" | claim_url }}
+   {{ "twitter" | claim_url }}
 
 .. _Standard liquid filters: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters
