@@ -20,3 +20,9 @@ Add your coupon codes on your campaign settings coupons page.
    <h2>REST API to Create Coupons</h2>
 
 `Read this guide`_ for details on the REST API you need to implement.
+
+.. _Read this guide: http://help.talkable.com/questions/54519-Using-Webhooks-to-create-Single-Use-Coupon-Codes
+
+.. container:: hidden
+
+   .. toctree::
