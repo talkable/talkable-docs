@@ -47,11 +47,11 @@ it is getting paid after Referral is approved.
 Reward reason can be of 6 following general types.
 
 * **referrer** — advocate reward for referral
-* **referred** — friend reward for referral
+* **referred** — |friend| reward for referral
 * **shared** — advocate reward for social sharing
 * **email_shared** — advocate reward for email sharing
 * **signup** — advocate reward for signup
-* **click** — friend reward for visiting claim page (and optionally passing gating)
+* **click** — |friend| reward for visiting claim page (and optionally passing gating)
 
 .. include:: /partials/incentive_types.rst
 

@@ -12,7 +12,7 @@ Invite |advocate| to referral program at some point by creating an :ref:`Origin 
 Share Screen
 ------------
 
-Display options for |advocate| to share with their friends.
+Display options for |advocate| to share with their |friend|\s.
 
 **For Social Share**
 

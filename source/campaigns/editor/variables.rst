@@ -38,7 +38,7 @@ Each Variable is represented with Name, Liquid notation, Value:
 **Available in**: all Views |br|
 **Type**: ``Object``
 
-Personal data for Advocate.
+Personal data for |advocate|.
 
 .. container:: ptable
 
@@ -71,8 +71,8 @@ giving out the Reward).
 When you want to use this Variable always keep in mind who you want to
 show it to because it has a scope:
 
-* for Views which name starts with ``Advocate`` it means Advocate Coupon Code
-* for Views which name starts with ``Friend`` it means Friend Coupon Code
+* for Views which name starts with |advocate| it means Advocate Coupon Code
+* for Views which name starts with |friend| it means Friend Coupon Code
 
 .. image:: /_static/img/editor/vars-friend-coupon-code.png
    :alt: Variables: friend coupon code
@@ -100,7 +100,7 @@ Reflects entire Campaign Incentives list including. This object can include
 several Incentives which are also objects.
 
 Here is an example of ``{{ incentives }}`` Variable with two incentives:
-``advocate`` and ``friend``:
+|advocate| and |friend|:
 
 .. code-block:: javascript
 
@@ -152,4 +152,3 @@ Which outputs:
     - 0
     - Number of required actions to trigger reward (i.e. 2 purchases
       needed to trigger reward)
-

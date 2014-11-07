@@ -8,16 +8,16 @@ Advocate/Friend Reward Confirmation Email
 
 Main purpose of this email is to send a Reward via email, and remind about
 it in the future. |br|
-Email is triggered to a Advocate or a Friend who passed Email Gating, and received Reward
+Email is triggered to a |advocate| or a |friend| who passed Email Gating, and received Reward
 (i.e. coupon code). |br|
 
 .. note::
 
-   Use `Email sending condition` to differentiate Advocate/Friend emails.
+   Use `Email sending condition` to differentiate |advocate|/|friend| emails.
    |br|
    Example: `{% if reward.incentive.identifier == 'click' %}true{% endif %}`
 
-Reward Confirmation Email for Friend is a good fit for email capture: reward Friend for
+Reward Confirmation Email for Friend is a good fit for email capture: reward |friend| for
 getting his email. See :ref:`tutorials_email_gating` for more details.
 
 Frequently used Variables:

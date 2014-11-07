@@ -6,9 +6,9 @@
 Friend Claim Page
 -----------------
 
-Friend lands here from :ref:`friend_share_email_view`. |br|
+|friend| lands here from :ref:`friend_share_email_view`. |br|
 Explain him what special discount he will get when using this link. |br|
-It's recommended to show coupon code for the Friend on this page
+It's recommended to show coupon code for the |friend| on this page
 (and only on this page).
 
 Frequently used Variables:

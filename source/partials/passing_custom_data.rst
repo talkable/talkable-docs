@@ -12,7 +12,7 @@ The values you define for some key should be JSON Key-Value pairs themselves,
 this means complex data structures can be passed through.
 
 Any ``person_custom_properties`` data passed through is tied to the Person
-(Advocate or Friend), that means there is only one instance of each field in
+(|advocate| or |friend|), that means there is only one instance of each field in
 existence at any time: the most recently passed data.
 
 All data associated with ``person_custom_properties`` is available for use

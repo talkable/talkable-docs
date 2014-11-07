@@ -3,7 +3,7 @@
 Automatic Coupon Creation
 =========================
 
-You can reward customers and their friends with coupons. Talkable supports both
+You can reward |advocate| and their |friend| with coupons. Talkable supports both
 one-time-use coupons as well as multi-use coupons. If you are using one-time-use
 coupons there is a need to refill a list of coupons within Talkable. You will need
 to export a list of coupons or provide a multi-use coupon code creation end point.
