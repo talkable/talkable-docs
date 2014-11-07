@@ -29,6 +29,7 @@ This API allows you to create origins. See examples below.
                      * first_name (optional)
                      * last_name (optional)
                      * person_custom_properties (optional)
+                     * uuid (optional)
 
                      For Purchase:
 
