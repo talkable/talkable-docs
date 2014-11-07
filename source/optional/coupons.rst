@@ -19,21 +19,3 @@ Add your coupon codes on your campaign settings coupons page.
    <h2>REST API to Create Coupons</h2>
 
 `Read this guide`_ for details on the REST API you need to implement.
-
-.. raw:: html
-
-   <h2>Automatic Magento Coupon Creation</h2>
-
-This feature is only available to Enterprise customers.
-
-.. raw:: html
-
-   <h2>Automatic Shopify Coupon Creation</h2>
-
-This feature is only available to Enterprise customers.
-
-.. _Read this guide: http://help.talkable.com/questions/54519-Using-Webhooks-to-create-Single-Use-Coupon-Codes
-
-.. container:: hidden
-
-   .. toctree::
