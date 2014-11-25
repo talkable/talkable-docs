@@ -30,7 +30,6 @@
           traffic_source: '...' // OPTIONAL - indicate person traffic source. Can be used as segmentation parameter in reporting.
         },
         responsive: true, // OPTIONAL - fit iframe into viewport (also on resize) and allow Talkable display mobile templates
-        // device: 'desktop', // OPTIONAL - enforce mobile/tablet/desktop view or skip this to allow Talkable choose corresponding template
         campaign_tags: ['default'] // OPTIONAL - campaign tags for offer targeting
       }]);
     //]]>

@@ -9,8 +9,7 @@ If your site is responsive, all you'll want to do is set ``responsive: true``.
 In your campaign, there are different views for mobile, tablet and desktop.
 We'll automatically pull the correct theme view based on the user's device
 once we detect the viewport. We'll use our responsive engine to size the
-Talkable iframe to the right size. Like Magic! You'll also want to comment out
-``device: 'desktop'`` line.
+Talkable iframe to the right size. Like Magic!
 
 If you have separate mobile, tablet and desktop sites (or any combination of
 the three), you can leave ``responsive: true`` on but also specifically set the
