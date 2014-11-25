@@ -25,7 +25,7 @@
       {% endfor %}
 
       var _curebit_order_details = {
-        order_number: '{{ order_number }}', /* REQUIRED - Order number */
+        order_number: '{{ order_name }}', /* REQUIRED - Order number */
         order_date: '{{ created_at }}', /* REQUIRED - Order Date and Time (ISO 8601 formatted datetime) */
         email: '{{ customer.email }}', /* REQUIRED - Customer Email Address */
         customer_id: '', /* Optional - Set to your internal customer ID for tracking */

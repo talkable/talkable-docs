@@ -6,9 +6,9 @@
 Friend Claim Page
 -----------------
 
-Friend lands here from :ref:`friend_share_email_view`. |br|
+|friend| lands here from :ref:`friend_share_email_view`. |br|
 Explain him what special discount he will get when using this link. |br|
-It's recommended to show coupon code for the Friend on this page
+It's recommended to show coupon code for the |friend| on this page
 (and only on this page).
 
 Frequently used Variables:
@@ -26,17 +26,19 @@ Frequently used Variables:
 
 .. code-block:: html
 
-  {% if offer_active %}
-    Copy your code: {{ coupon_code }}
-    <a href="{{ proceed_to_merchant_path }}">Shop now</a>
-    Offer is valid until {{ valid_until }}.
-  {% else %}
-    Offer expired.
-    <a href="{{ proceed_to_merchant_path }}">Proceed without offer</a>
-  {% endif %}
+   {% if offer_active %}
+     Copy your code: {{ coupon_code }}
+     <a href="{{ proceed_to_merchant_path }}">Shop now</a>
+     Offer is valid until {{ friend_offer.valid_until | format_date }}.
+   {% else %}
+     Offer expired.
+     <a href="{{ proceed_to_merchant_path }}">Proceed without offer</a>
+   {% endif %}
 
-.. note:: Do not change ``name`` and ``class`` attributes, otherwise
-  functionality won't work. `js-` class prefix means it is used in Talkable API.
+.. note::
+
+   Do not change ``name`` and ``class`` attributes, otherwise
+   functionality won't work. `js-` class prefix means it is used in Talkable API.
 
 Related tutorials for this View:
 

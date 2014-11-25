@@ -4,11 +4,11 @@
 Advocate Offer Email
 --------------------
 
-Email is triggered to an Advocate on sign up. Explain the value proposition
-and encourage Advocate to share using the buttons.
+Email is triggered to an |advocate| on sign up. Explain the value proposition
+and encourage |advocate| to share using the buttons.
 
-- For Standalone Campaign it triggers when Advocate signs up.
-- For Post-Checkout Campaign it triggers when Advocate makes store purchase.
+- For Standalone Campaign it triggers when |advocate| signs up.
+- For Post-Checkout Campaign it triggers when |advocate| makes store purchase.
   It is not recommended to use this email here since it may look spammy.
 
 Main |cta| should point to an Advocate Share Page — ``{{ share_page_url }}``.

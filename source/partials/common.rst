@@ -14,6 +14,14 @@
 
    <abbr title="Call to action">CTA</abbr>
 
+.. |advocate| raw:: html
+
+   <abbr title="Person, who shares an offer with his Friend(s)">Advocate</abbr>
+
+.. |friend| raw:: html
+
+   <abbr title="Person, who is invited to participate in Campaign by Advocate">Friend</abbr>
+
 .. |iso8601| raw:: html
 
    <a href="http://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>

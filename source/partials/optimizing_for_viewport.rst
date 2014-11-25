@@ -1,6 +1,6 @@
 .. raw:: html
 
-  <h2>Optimizing for Viewport</h2>
+   <h2>Optimizing for Viewport</h2>
 
 Talkable provides flexibility for the merchant to decide how they want to
 optimize mobile.

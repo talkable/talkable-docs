@@ -28,8 +28,7 @@ purchase (most common size is 800x500px):
 .. image:: /_static/img/liquid/designer/image2.png
    :alt: Advocate Share Page like a modal
 
-.. note::
-   Overlay cannot be customized.
+.. note:: Overlay cannot be customized.
 
 Friend Claim Page size does not matter cause it hosts on Talkable site
 entirely. Commonly this view looks like a modal window with customer

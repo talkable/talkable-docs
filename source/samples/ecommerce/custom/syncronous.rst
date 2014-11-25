@@ -38,7 +38,6 @@
         coupon_code: 'SAVE20', // REQUIRED - Coupon code used at checkout, multiple coupons allowed as JS array: ['SAVE20', 'FREE-SHIPPING']. Pass null if there is no coupon code.
         customer_id: '1234567890', // OPTIONAL - Set to your internal customer ID for tracking
         items: _curebit_order_items,
-        dont_redeem: false,  // OPTIONAL - Tell Talkable that this purchase should not be redeemed
         first_name: 'Name',  // OPTIONAL - Customer First Name
         last_name: 'Surname',  // OPTIONAL - Customer Last Name
         // iframe: { // OPTIONAL - display offer inline instead of popup

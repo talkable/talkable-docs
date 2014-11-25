@@ -29,6 +29,5 @@ developers:
      editor/variables
      editor/files
      editor/history
-     editor/extra
      editor/filters
      editor/videos

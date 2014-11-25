@@ -14,7 +14,7 @@ each with links to integration details.
    * - :ref:`Coupons <optional/coupons>`
      - Issue single and multi-use coupons automatically for your campaigns
    * - :ref:`Product Information <optional/product_information>`
-     - Enable customers to share purchased products with their friends
+     - Enable customers to share purchased products with their |friend|\s
    * - :ref:`PayPal Auto-Redirect <optional/paypal_auto_redirect>`
      - Enabling PayPal Auto-Redirect for merchants who accept PayPal as a payment method
    * - :ref:`optional/reward_fulfillment`

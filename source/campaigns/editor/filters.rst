@@ -195,8 +195,8 @@ Returns ``strip me``.
 
 |hr|
 
-tweet_length
-............
+tweet\_length
+.............
 
 Calculates a tweet length for the string.
 
@@ -208,8 +208,8 @@ Returns ``42``.
 
 |hr|
 
-parse_json
-..........
+parse\_json
+...........
 
 Parses the JSON string source into a Liquid data structure.
 
@@ -219,5 +219,18 @@ Parses the JSON string source into a Liquid data structure.
    {{ var.key }}
 
 Returns ``value``.
+
+|hr|
+
+claim\_url
+..........
+
+Returns channel-specific claim URL.
+
+.. code-block:: liquid
+
+   {{ "facebook" | claim_url }}
+   {{ "linkedin" | claim_url }}
+   {{ "twitter" | claim_url }}
 
 .. _Standard liquid filters: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters

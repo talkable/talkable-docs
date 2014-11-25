@@ -10,7 +10,7 @@ Talkable Campaign is based on interaction between ``Advocate`` and ``Friend``:
 - Friend: person, who is invited to participate in Campaign by Advocate
 
 .. image:: /_static/img/basics/sharing-process.png
-  :alt: Sharing process
+   :alt: Sharing process
 
 Each step of this interaction has its own ``View`` so developer can easily
 change every singe step and customize its appearance and functionality based on

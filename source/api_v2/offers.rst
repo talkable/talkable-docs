@@ -23,8 +23,7 @@ Returns offer.
                      Talkable dashboard after you log in and create a site.
    short_url_code    Offer short code obtained with
                      :ref:`origin creation <api_v2/origins>`.
-   interpolations    Optional: set to `true` to include offer interpolation
-                     variables in response
+   interpolations    Optional: array of interpolations to return in response
    ================= ========================================================
 
 Example
@@ -38,14 +37,14 @@ Sample response:
 
 .. code-block:: javascript
 
-  {
-    "ok": true,
-    "result": {
-      "offer": {
-        "short_url_code": "dZpBwd",
-        "email": "customer@example.com",
-        "show_url": "https://www.talkable.com/x/iEov9g",
-        "claim_url": "https://www.talkable.com/x/5B3xO1"
-      }
-    }
-  }
+   {
+     "ok": true,
+     "result": {
+       "offer": {
+         "short_url_code": "dZpBwd",
+         "email": "customer@example.com",
+         "show_url": "https://www.talkable.com/x/iEov9g",
+         "claim_url": "https://www.talkable.com/x/5B3xO1"
+       }
+     }
+   }
