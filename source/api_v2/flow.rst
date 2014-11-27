@@ -4,12 +4,22 @@
 Flow
 ====
 
+This flow helps to integrate with Talkable via API for a default Store or Service.
+It shows how you can do the following actions via API:
+
+* Generate Talkable Offer
+* Share An offer via Social Network or Email
+* Build an Offer Claim Page on your side
+* Let Talkable know about Purchase or Event to let it trigger the referral
+
+Each of this steps can be done individualy or all together to achive API integration
+
 Initial Origin
 --------------
 
 Invite |advocate| to referral program at some point by creating an :ref:`Origin <api_v2/origins>` and obtaining :ref:`Offer <api_v2/offers>` to share.
 
-Share Screen
+Dispalying and Sharing the offer
 ------------
 
 Display options for |advocate| to share with their |friend|\s.
@@ -23,7 +33,7 @@ Display options for |advocate| to share with their |friend|\s.
 
 - Ask |advocate| for recipients (and additional information) and make request to :ref:`Shares <api_v2/shares>` endpoint
 
-Claim Screen
+Claiming an Offer
 ------------
 
 In order for |friend| to get referred, they go to the Claim (or Landing) page by following the share URL.
@@ -38,7 +48,7 @@ Tips:
 - You may pass any data through GET parameters of URL
 - You may want to pass the `visitor_uuid` variable to your site or app and store it somewhere in order to later pass it with :ref:`Origin <api_v2/origins>`
 
-Closing Origin
+Submit Origin data to talkable to generate the referral
 --------------
 
 Once any user makes an action which implies possible close of a referral chain, send an :ref:`Origin <api_v2/origins>`. Please include `uuid` in this request if possible.
