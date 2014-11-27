@@ -20,7 +20,7 @@ Initial Origin
 Invite |advocate| to referral program at some point by creating an :ref:`Origin <api_v2/origins>` and obtaining :ref:`Offer <api_v2/offers>` to share.
 
 Dispalying and Sharing the offer
-------------
+------------------------
 
 Display options for |advocate| to share with their |friend|\s.
 
@@ -34,7 +34,7 @@ Display options for |advocate| to share with their |friend|\s.
 - Ask |advocate| for recipients (and additional information) and make request to :ref:`Shares <api_v2/shares>` endpoint
 
 Claiming an Offer
-------------
+------------------------
 
 In order for |friend| to get referred, they go to the Claim (or Landing) page by following the share URL.
 
@@ -49,7 +49,7 @@ Tips:
 - You may want to pass the `visitor_uuid` variable to your site or app and store it somewhere in order to later pass it with :ref:`Origin <api_v2/origins>`
 
 Submit Origin data to talkable to generate the referral
---------------
+------------------------------------------------
 
 Once any user makes an action which implies possible close of a referral chain, send an :ref:`Origin <api_v2/origins>`. Please include `uuid` in this request if possible.
 
