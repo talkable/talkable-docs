@@ -26,3 +26,10 @@ Frequently used Variables:
   <a href="http://merchant-site.com/products">Spend your credit</a>
 
 .. include:: /partials/developer_email_note.rst
+
+.. raw:: html
+
+   <h2>Email sending conditions</h2>
+
+By default is sent immediately after the reward status turns into `Paid`, but can be delayed by configuration. This View is available only for **Advocate Incentive** where |advocate| is rewarded after |friend| buys using their coupon code.
+
