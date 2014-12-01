@@ -4,7 +4,14 @@
 Views
 =====
 
-Contents:
+Each Talkable campaign has a set of pages and emails to help you control nearly every
+step of the refer-a-friend campaign. Such page or email is called a View. You can also
+control appearance of each View by visiting Appearance:
+
+.. image:: /_static/img/campaign/subnav.png
+   :alt: Campaign Appearance
+
+Views glossary:
 
 .. toctree::
 
