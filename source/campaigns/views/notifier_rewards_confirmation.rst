@@ -11,14 +11,23 @@ it in the future. |br|
 Email is triggered to a |advocate| or a |friend| who passed Email Gating, and received Reward
 (i.e. coupon code). |br|
 
-.. note::
+Use Email sending condition to differentiate |advocate| from |friend| email.
 
-   Use `Email sending condition` to differentiate |advocate|/|friend| emails.
-   |br|
-   Example: `{% if reward.incentive.identifier == 'click' %}true{% endif %}`
+Here is an example of a Friend Reward Confirmation Email:
 
-Reward Confirmation Email for Friend is a good fit for email capture: reward |friend| for
-getting his email. See :ref:`tutorials_email_gating` for more details.
+.. raw:: html
+
+  <pre>{% if reward.incentive.identifier == 'click' %}
+    true
+  {% endif %}</pre>
+
+.. image:: /_static/img/campaign/friend_confirmation_sending_criteria.png
+
+The email will be sent once Talkable knows Friend's email which they provides on the Friend Claim Page (such technique works great for email capturing). See :ref:`tutorials_email_gating` for more details.
+
+You can see your Incentive identifier inside Campaign Rules:
+
+.. image:: /_static/img/campaign/incentive_identifier.png
 
 Frequently used Variables:
 
@@ -43,3 +52,24 @@ Frequently used Variables:
    <a href="{{ proceed_to_merchant_path }}">Shop now</a>
 
 .. include:: /partials/developer_email_note.rst
+
+.. raw:: html
+
+   <h2>Email sending conditions for Advocate</h2>
+
+By default is sent immediately after the reward is created, but can be delayed by configuration.
+
+.. raw:: html
+
+   <h2>Email sending conditions for Friend</h2>
+
+Main email sending criteria (unable to change):
+
+- The Email **will not** be sent only if all three conditions meet:
+
+  1. Reward type is Click
+  2. ‘Allow coupon in the Friend Share Email' is enabled inside Campaign Rules
+  3. Friend Share Email is already sent
+
+In all other scenarious the email will be sent immediately unless delayed by configuration.
+
