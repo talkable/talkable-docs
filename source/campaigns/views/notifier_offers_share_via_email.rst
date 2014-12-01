@@ -23,3 +23,14 @@ Frequently used Variables:
    :alt: Friend Share Email
 
 .. include:: /partials/developer_email_note.rst
+
+.. raw:: html
+
+   <h2>Email sending conditions</h2>
+
+By default is sent immediately after the offer is shared, but can be delayed by configuration.
+
+1. Main email sending criteria (unable to change):
+
+  - Only one email for recipient with the same offer (if Advocate shares twice with one Friend Talkable sends only one share email)
+
