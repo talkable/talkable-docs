@@ -21,3 +21,16 @@ particular email.
    :alt: Friend Share Email Reminder
 
 .. include:: /partials/developer_email_note.rst
+
+.. raw:: html
+
+   <h2>Email sending conditions</h2>
+
+By default the email is sent in 72 hours after the offer is shared.
+
+1. Main email sending criteria (unable to change):
+
+  - If |friend| offer is active
+  - Recipient (|friend|) was not referred by this offer yet
+  - Current offer is the last one shared with the recipient (if were delayed few reminders Talkable sends the last one)
+
