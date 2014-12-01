@@ -17,4 +17,23 @@ Main |cta| should point to an Advocate Share Page — ``{{ share_page_url }}``.
 
 .. image:: /_static/img/basics/advocate-offer-email.png
 
+|br|
+
 .. include:: /partials/developer_email_note.rst
+
+.. raw:: html
+
+   <h2>Email sending conditions</h2>
+
+By default is sent immediately after the offer is created, but can be delayed by configuration.
+
+1. Talkable creates an Offer based on the following criteria:
+
+  - Purchase creation
+  - Affiliate member signup. Advocate can sign up manually by entering his email, or his email is passed via JS integration (or URL).  For example, a customer signs up to refer a friend on a /invite page.  This triggers an affiliate member signup.
+  - Email blast, for email campaigns
+
+2. Main email sending criteria (unable to change):
+
+  - If Advocate offer is active
+
