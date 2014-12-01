@@ -111,6 +111,12 @@ abbr {
     padding: 22px 30px 30px;
 }
 
+.body img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+}
+
 .nav {
     bottom: 0;
     float: left;
