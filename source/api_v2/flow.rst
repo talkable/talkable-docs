@@ -1,8 +1,8 @@
 .. _api_v2/flow:
 .. include:: /partials/common.rst
 
-Flow
-====
+Flow: Referral Program via API
+==============================
 
 This flow helps to integrate with Talkable via API for a default Store or Service.
 It shows how you can do the following actions via API:

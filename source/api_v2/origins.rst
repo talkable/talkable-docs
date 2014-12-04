@@ -29,7 +29,7 @@ This API allows you to create origins. See examples below.
                      * first_name (optional)
                      * last_name (optional)
                      * person_custom_properties (optional)
-                     * uuid (optional)
+                     * uuid (optional) - uuid given to a visitor on a claim page. See :ref:`Referral Program via API Flow <api_v2/flow>`
 
                      For Purchase:
 
@@ -66,6 +66,7 @@ Create a purchase
        "order_number": 12,
        "order_date": "2014-03-14T05:49:54-07:00",
        "subtotal": 100,
+       "uuid": "b3967d36-4e7f-46bc-92b3-57344347cd6a",
        "items": [
          {
            "price": 25,
