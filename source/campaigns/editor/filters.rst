@@ -103,6 +103,20 @@ Split testing an asset:
 
    {{ "offer_background" | split_test: "background-green.jpg", "background-red.jpg" | asset_url }}
 
+Split testing style:
+
+.. code-block:: html
+
+   <body style="background-color: {{ 'offer_background' | split_test: '#d3d3d3', '#ff0000' }}">
+     ...
+   </body>
+
+.. code-block:: html
+
+   <h1 style="font-size: {{ 'title_size' | split_test: '24px', '30px' }}">
+     Sample Title
+   </h1>
+
 |hr|
 
 .. _liquid_filter_format_date:
