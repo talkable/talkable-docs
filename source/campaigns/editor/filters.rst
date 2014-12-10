@@ -57,6 +57,30 @@ Returns ``Campaign%20Name``, so the URL will be
 
 |hr|
 
+probability\_by
+........
+
+Return ``false`` or ``true`` value which is always the same for specific parameters passed.
+First parameter is a probability that should be integer value between 1 and 100
+
+Simple example:
+
+.. code-block:: liquid
+
+   {{ 100 | probability_by: "param1", "param2" }}
+
+Always returns ``true``.
+
+Interpolation as a parameter:
+
+.. code-block:: liquid
+
+   {{ assign condition = 10 | probability_by: advocate_info.email }}
+
+Always returns the same result for a specific email.
+
+|hr|
+
 rand\_by
 ........
 
