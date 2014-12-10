@@ -119,6 +119,19 @@ Split testing style:
 
 |hr|
 
+split\_test\_with\_probability
+...........
+
+Split testing static text with different probabilities:
+
+.. code-block:: liquid
+
+   {{ "split_test_identifier" | split_test_with_probability: "Label 1", 25,  "Label 2", 25,  "Label N", 50 }}
+
+   {{ "split_test_identifier" | split_test_with_probability: "Label 1", 25,  "Label 2", 75 }}
+
+|hr|
+
 .. _liquid_filter_format_date:
 
 format\_date
