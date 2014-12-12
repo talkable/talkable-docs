@@ -58,7 +58,7 @@ Returns ``Campaign%20Name``, so the URL will be
 |hr|
 
 probability\_by
-........
+...............
 
 Return ``false`` or ``true`` value which is always the same for specific parameters passed.
 First parameter is a probability that should be integer value between 1 and 100
@@ -146,7 +146,7 @@ Split testing style:
 |hr|
 
 split\_test\_with\_probability
-...........
+..............................
 
 Split testing static text with different probabilities:
 
