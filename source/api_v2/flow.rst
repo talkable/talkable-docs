@@ -1,8 +1,8 @@
 .. _api_v2/flow:
 .. include:: /partials/common.rst
 
-Flow: Referral Program via API
-==============================
+Referral Program via API
+========================
 
 This flow helps to integrate with Talkable via API for a default Store or Service.
 It shows how you can do the following actions via API:
@@ -19,7 +19,7 @@ Initial Origin
 
 Invite |advocate| to referral program at some point by creating an :ref:`Origin <api_v2/origins>` and obtaining :ref:`Offer <api_v2/offers>` to share.
 
-Dispalying and Sharing the offer
+Displaying and Sharing the offer
 --------------------------------
 
 Display options for |advocate| to share with their |friend|\s.
