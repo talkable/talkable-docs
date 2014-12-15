@@ -60,24 +60,30 @@ Returns ``Campaign%20Name``, so the URL will be
 probability\_by
 ...............
 
-Return ``false`` or ``true`` value which is always the same for specific parameters passed.
-First parameter is a probability that should be integer value between 1 and 100
-
-Simple example:
+This filter returns ``true`` or ``false`` for a dataset based on the probability you request:
 
 .. code-block:: liquid
 
-   {{ 100 | probability_by: "param1", "param2" }}
+   {{ 50 | probability_by: "param1", "param2", "param3" }}
 
-Always returns ``true``.
+``50`` returns ``true`` in 50% cases for requested dataset. This filter provides the same result for a particular
+dataset.
 
-Interpolation as a parameter:
+.. note:: probability should be always an integer value between ``1`` and ``100``.
+
+Here is another example that returns ``true`` only in 10% cases for the interpolation variable:
 
 .. code-block:: liquid
 
-   {{ assign condition = 10 | probability_by: advocate_info.email }}
+   {{ 10 | probability_by: advocate_info.email }}
 
-Always returns the same result for a specific email.
+This example can be used in ``Email sending condition`` of email template to send email only in 10% cases
+
+You can ommit passing any parameters and the result will be based on the Advocate offer. Also you may use ``probability`` as an alias which is a little shorter to write:
+
+.. code-block:: liquid
+
+   {{ 50 | probability }}
 
 |hr|
 
