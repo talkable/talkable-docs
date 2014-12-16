@@ -77,13 +77,21 @@ Here is another example that returns ``true`` only in 10% cases for the interpol
 
    {{ 10 | probability_by: advocate_info.email }}
 
-This example can be used in ``Email sending condition`` of email template to send email only in 10% cases
-
 You can ommit passing any parameters and the result will be based on the Advocate offer. Also you may use ``probability`` as an alias which is a little shorter to write:
 
 .. code-block:: liquid
 
    {{ 50 | probability }}
+
+This example can be used in ``Email sending condition`` of Advocate Offer Email template to send email only in 33% cases:
+
+.. code-block:: liquid
+
+   {% assign send_email = 33 | probability %}
+
+   {% if send_email %}
+     true
+   {% endif %}
 
 |hr|
 
