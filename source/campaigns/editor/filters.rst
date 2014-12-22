@@ -208,6 +208,19 @@ Allows inline string interpolation using [[ ]] syntax.
 
 |hr|
 
+md5
+...
+
+Calculates the MD5 hash of the string.
+
+.. code-block:: liquid
+
+   {{ "foo" | md5 }}
+
+Returns ``acbd18db4cc2f85cedef654fccc4a4d8``.
+
+|hr|
+
 money
 .....
 
