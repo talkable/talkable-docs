@@ -17,3 +17,4 @@ Contents:
    api_v2/people
    api_v2/shares
    api_v2/referrals
+   api_v2/rewards

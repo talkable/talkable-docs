@@ -1,0 +1,66 @@
+.. _api_v2/rewards:
+.. include:: /partials/common.rst
+
+Rewards
+=======
+
+This API allows you to access rewards.
+
+|br|
+
+.. code-block:: url
+
+   GET /rewards
+
+Returns rewards.
+
+.. container:: ptable
+
+   ================= ========================================================
+   Parameter         Description
+   ================= ========================================================
+   site_slug         Your Talkable Site ID. You can get this from your
+                     Talkable dashboard after you log in and create a site.
+   status (optional) Filter by rewards status.
+                     By default API returns only `Paid` rewards.
+
+                     Options: `Paid`, `Unpaid`, `Voided`, `All`
+
+   ================= ========================================================
+
+Example
+-------
+
+.. code-block:: url
+
+   GET https://www.talkable.com/api/v2/rewards?site_slug=my-store&api_key=i9uil7nQgDjucCiTJu
+
+Sample response:
+
+.. code-block:: javascript
+
+   {
+     "ok": true,
+     "result": {
+       "rewards": [
+         {
+           "id": 22017,
+           "reason": "shared",
+           "incentive_type": "discount_coupon",
+           "incentive_description": "shared coupon \"10_OFF\" for $10.00 off",
+           "amount": null,
+           "coupon_code": "10_OFF",
+           "status": "Paid"
+         },
+         {
+           "id": 22018,
+           "reason": "referrer",
+           "incentive_type": "rebate",
+           "incentive_description": "$10.00 back",
+           "amount": 10.0,
+           "coupon_code": null,
+           "status": "Paid"
+         }
+       ]
+     }
+   }
