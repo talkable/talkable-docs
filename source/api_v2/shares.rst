@@ -98,11 +98,13 @@ Sample response:
      "ok": true,
      "result": {
        "reward": {
+         "id": 32005,
          "reason": "shared",
          "incentive_type": "discount_coupon",
          "incentive_description": "shared coupon \"10_OFF\" for $10.00 off",
          "amount": null,
-         "coupon_code": "10_OFF"
+         "coupon_code": "10_OFF",
+         "status": "Paid"
        },
        "shares": [
          {

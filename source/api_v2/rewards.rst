@@ -4,7 +4,7 @@
 Rewards
 =======
 
-This API allows you to access rewards.
+This API allows you to access visitor rewards.
 
 |br|
 
@@ -21,7 +21,8 @@ Returns rewards.
    ================= ========================================================
    site_slug         Your Talkable Site ID. You can get this from your
                      Talkable dashboard after you log in and create a site.
-   status (optional) Filter by rewards status.
+   visitor_uuid      Visitor uuid
+   status (optional) Filter rewards by status.
                      By default API returns only `Paid` rewards.
 
                      Options: `Paid`, `Unpaid`, `Voided`, `All`
@@ -33,7 +34,7 @@ Example
 
 .. code-block:: url
 
-   GET https://www.talkable.com/api/v2/rewards?site_slug=my-store&api_key=i9uil7nQgDjucCiTJu
+   GET https://www.talkable.com/api/v2/rewards?site_slug=my-store&visitor_uuid=8a55ef82-82c1-4596-babb-e989fd717965&api_key=i9uil7nQgDjucCiTJu
 
 Sample response:
 

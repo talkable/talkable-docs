@@ -98,11 +98,13 @@ Reward reason can be of 6 following general types.
        "tag_names": ["default"]
      },
      "reward": {
+       "id": 44089,
        "reason": "referrer",
        "incentive_type": "rebate",
        "incentive_description": "$10.00 back",
        "amount": 10.0,
-       "coupon_code": null
+       "coupon_code": null,
+       "status": "Paid"
      }
    }
 
