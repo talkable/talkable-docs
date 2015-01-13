@@ -115,7 +115,7 @@ Interpolation as a parameter:
 
    {{ "10" | rand_by: advocate_info.email }}
 
-Always returns the same number for a specific email, between 0 and 10.
+Always returns the same number for a specific email, between 0 and 9.
 
 |hr|
 
