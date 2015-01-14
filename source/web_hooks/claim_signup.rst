@@ -8,7 +8,7 @@ Triggered when Friend Email Gating form is submitted (on Friend Claim Page).
 
 .. raw:: html
 
-   <h2>Payload parameters provided for Advocate Signup Web Hook</h2>
+   <h2>Payload parameters provided </h2>
 
 * **offer** — subhash of parameters describing the offer
 
@@ -22,12 +22,12 @@ Triggered when Friend Email Gating form is submitted (on Friend Claim Page).
   * **type** — either *"StandaloneCampaign"* or *"DoubleSidedDealCampaign"*
   * **tag_names** — array of campaign's tags
 
-* **email** — affiliate member's email address
-* **first_name** — affiliate member's first name
-* **last_name** — affiliate member's last name
+* **email** — friend's email address
+* **first_name** — friend's first name
+* **last_name** — friend's last name
 * **sub_choice** — subscription choice (optional, present only if the form included subscription checkbox)
-* **subscribed_at** — date affiliate member has subscribed (optional)
-* **unsubscribed_at** — date affiliate member has unsubscribed (optional)
+* **subscribed_at** — date friend has subscribed (optional)
+* **unsubscribed_at** — date friend has unsubscribed (optional)
 
 .. raw:: html
 
