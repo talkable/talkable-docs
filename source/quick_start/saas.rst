@@ -102,3 +102,7 @@ In addition to our basic required dataset we allow you to pass us a lot more dat
 
 .. include:: /partials/integration_head.rst
 
+.. container:: hidden
+
+   .. toctree::
+

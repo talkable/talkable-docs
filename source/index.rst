@@ -12,7 +12,7 @@ Contents:
 
 .. toctree::
 
-   quick_start_guide
+   quick_start
    campaigns
    optional
    web_hooks
