@@ -12,8 +12,7 @@ Contents:
 
 .. toctree::
 
-   E-Commerce Integrations <ecommerce>
-   standalone
+   quick_start_guide
    campaigns
    optional
    web_hooks

@@ -1,6 +1,8 @@
 .. _campaigns/views/affiliate_members_new:
 .. include:: /partials/common.rst
 
+.. _advocate_signup_page_view:
+
 Advocate Signup Page
 --------------------
 
