@@ -1,8 +1,8 @@
 .. _saas:
 .. include:: /partials/common.rst
 
-SaaS
-####
+SaaS Integrations
+#################
 
 .. include:: /partials/note_enterprise_integration.rst
 
@@ -101,8 +101,4 @@ In addition to our basic required dataset we allow you to pass us a lot more dat
   <!-- End Talkable integration code -->
 
 .. include:: /partials/integration_head.rst
-
-.. container:: hidden
-
-   .. toctree::
 

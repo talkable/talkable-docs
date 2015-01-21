@@ -51,8 +51,9 @@ Main Integration Code
 
 .. include:: /partials/for_modern_pp_js_apps.rst
 
+.. include:: /partials/passing_custom_data.rst
+
 .. container:: hidden
 
    .. toctree::
 
-.. include:: /partials/passing_custom_data.rst

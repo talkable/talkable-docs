@@ -12,8 +12,11 @@ Contents:
 
 .. toctree::
 
-   quick_start
-   campaigns
-   optional
-   web_hooks
-   api_v2
+  E-Commerce Integrations <ecommerce>
+  standalone
+  saas
+  campaigns
+  optional
+  web_hooks
+  api_v2
+
