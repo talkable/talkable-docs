@@ -1,8 +1,8 @@
 .. _ecommerce:
 .. include:: /partials/common.rst
 
-Integration Options
-###################
+E-Commerce Integrations
+#######################
 
 Talkable integrates with e-commerce platforms or custom web sites through
 JavaScript calls to our API. But most customers can integrate quickly without

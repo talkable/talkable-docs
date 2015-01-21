@@ -11,8 +11,9 @@ Integrating Talkable on Your Site
 Contents:
 
 .. toctree::
+  :maxdepth: 2
 
-  E-Commerce Integrations <ecommerce>
+  ecommerce
   standalone
   saas
   campaigns
