@@ -317,4 +317,39 @@ Returns channel-specific claim URL.
    {{ "linkedin" | claim_url }}
    {{ "twitter" | claim_url }}
 
+|hr|
+
+group\_by
+.........
+
+Group an array's items by a given property.
+
+.. code-block:: liquid
+
+   {{ incentives | group_by: "amount" }}
+
+|hr|
+
+sort
+....
+
+Sort an array. Optional arguments for hashes: 1. property name 2. nils order (first or last).
+
+.. code-block:: liquid
+
+   {{ campaign_tags | sort }}
+   {{ incentives | sort: "amount" }}
+   {{ incentives | sort: "amount", "first" }}
+
+|hr|
+
+where
+.....
+
+Select all the objects in an array where the key has the given value.
+
+.. code-block:: liquid
+
+   {{ incentives | where: "amount", 10 }}
+
 .. _Standard liquid filters: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters
