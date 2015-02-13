@@ -81,4 +81,5 @@ looking for integration services, feel free to |contact_us|.
       ecommerce/custom
       ecommerce/platform
       ecommerce/verify
+      ecommerce/verification_digest
 
