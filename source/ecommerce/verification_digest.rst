@@ -6,13 +6,13 @@ Verification Digest
 
 Talkable is able to verificate each request comming from web browser.
 It prevents fraud request from a potential attacker that can form a request to Talkable 
-platform to register a purchase that doesn't exist on Merchant Side.
+platform to register a event that doesn't exist on Merchant Side.
 
 JS requests don't have any security by default and can be easily faked.
-In order to verify each request there is a need to attach a "control sum" to each purchase registration request
+In order to verify each request there is a need to attach a "control sum" to each event registration request
 with `verification_digest` parameter.
 
-In order to do that merchant need to pass us a control sum of the the request parameters that only matches only current paramters:
+In order to do that merchant needs to pass us a control sum of the the request parameters that only matches only current parameters:
 
 .. code-block:: javascript
 
@@ -30,7 +30,7 @@ In order to do that merchant need to pass us a control sum of the the request pa
 Control sum generation algorithm needs to be kept in secret from potential attacker.
 That is why verifiction_digest should be generated only in backend.
 
-In order to generate it: Merchant needs to form a request verification string with request paramters and a "salt" and encode it with SHA-256 algorithm.
+In order to generate it, merchant needs to form a request verification string with request parameters and a "salt" and encode it with SHA-256 algorithm.
 Salt is a secret key that can be obtained in site setting after enabling "Verification Digest" feature.
 Example salt looks like:
 
