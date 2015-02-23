@@ -105,4 +105,4 @@ See "master" branch: https://github.com/talkable/talkable-docs
 
 See "gh-pages" branch: https://github.com/talkable/talkable-docs/tree/gh-pages
 
-See GitHub Page (auto generated): http://talkable.github.io/docs/ (alias: http://docs.talkable.com)
+See GitHub Page (auto generated): http://docs.talkable.com
