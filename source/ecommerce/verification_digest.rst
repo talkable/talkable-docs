@@ -4,8 +4,8 @@
 Verification Digest
 ===================
 
-Talkable is able to verificate each request comming from web browser.
-It prevents fraud request from a potential attacker that can form a request to Talkable 
+Talkable is able to verify each request comming from web browser.
+It prevents fraud request from a potential attacker that can form a request to Talkable
 platform to register a event that doesn't exist on Merchant Side.
 
 JS requests don't have any security by default and can be easily faked.
