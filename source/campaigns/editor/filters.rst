@@ -232,37 +232,35 @@ Formats number using current currency.
 
 Returns ``$50.00``.
 
-Avaliable options: ``int precision``, ``bool strip_insignificant_zeros``.
+Available options:
 
-.. code-block:: liquid
+* ``unit``
+* ``separator``
+* ``delimiter``
+* ``format``
+* ``precision (integer)``
+* ``strip_insignificant_zeros (boolean)``
 
-   {{ "100.11" | money: precision: 0 }}
+.. container:: ptable
 
-Returns ``$100``.
-
-.. code-block:: liquid
-
-   {{ "100.99" | money: precision: 0 }}
-
-Returns ``$101``.
-
-.. code-block:: liquid
-
-   {{ "100.99" | money: strip_insignificant_zeros: true }}
-
-Returns ``$100.99``.
-
-.. code-block:: liquid
-
-   {{ "100.90" | money: strip_insignificant_zeros: true }}
-
-Returns ``$100.9``.
-
-.. code-block:: liquid
-
-   {{ "100.00" | money: strip_insignificant_zeros: true }}
-
-Returns ``$100``.
+   ============================================================== ==============
+   Example                                                        Result
+   ============================================================== ==============
+   ``{{ "100.11" | money: precision: 0 }}``                       ``$100``
+   ``{{ "100.99" | money: precision: 0 }}``                       ``$101``
+   -------------------------------------------------------------- --------------
+   ``{{ "100.99" | money: strip_insignificant_zeros: true }}``    ``$100.99``
+   ``{{ "100.90" | money: strip_insignificant_zeros: true }}``    ``$100.9``
+   ``{{ "100.00" | money: strip_insignificant_zeros: true }}``    ``$100``
+   -------------------------------------------------------------- --------------
+   ``{{ "100" | money: unit: "€" }}``                             ``€100.00``
+   ``{{ "100" | money: unit: "" }}``                              ``100.00``
+   -------------------------------------------------------------- --------------
+   ``{{ "10049.99" | money: separator: "_" }}``                   ``$10,049_99``
+   ``{{ "10049.99" | money: delimiter: "_" }}``                   ``$10_049.99``
+   -------------------------------------------------------------- --------------
+   ``{{ "100" | money: format: "%n %u", unit: "zł" }}``           ``100.00 zł``
+   ============================================================== ==============
 
 |hr|
 
