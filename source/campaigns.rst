@@ -32,3 +32,4 @@ Contents:
    campaigns/editor
    campaigns/designer
    campaigns/offers_expiration
+   campaigns/localization

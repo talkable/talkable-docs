@@ -352,4 +352,20 @@ Select all the objects in an array where the key has the given value.
 
    {{ incentives | where: "amount", 10 }}
 
+|hr|
+
+localize
+........
+
+Returns a localized version of string from campaign localization.
+Has optional argument that specifies a default value if campaign has no defined localization yet.
+Supports nested interpolation with `[[  ]]`
+
+.. code-block:: liquid
+
+   {{ "welcome_message" | localize }}
+   {{ "offer_title" | localize: "Get [[incentives.referrer.description]]" }}
+
+For more information see :ref:`Localization <campaigns/localization>` page.
+
 .. _Standard liquid filters: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters
