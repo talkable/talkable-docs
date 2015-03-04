@@ -11,7 +11,7 @@
 
 .. code-block:: javascript
 
-  Curebit.subscribe('facebook_share_succeeded', function(data) {
+  Talkable.subscribe('facebook_share_succeeded', function(data) {
     if (data.coupon_code) {
       $('.js-coupon-code').text(data.coupon_code); // Insert coupon code as a text
     } else {

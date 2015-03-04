@@ -19,12 +19,12 @@
 
   $(function() {
 
-    Curebit.bindClickToCopy('.js-click-to-copy');
+    Talkable.bindClickToCopy('.js-click-to-copy');
 
     var switchBlocks = function() {
       $('.js-before, .js-after').toggleClass("hidden");
       // Re-init ZeroClipboard instance to refresh tooltip position
-      Curebit.bindClickToCopy('.js-click-to-copy');
+      Talkable.bindClickToCopy('.js-click-to-copy');
     };
 
   });

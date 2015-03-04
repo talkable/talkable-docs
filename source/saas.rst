@@ -20,7 +20,7 @@ Below is the basic sample code for registering an Event with only required field
 
   <script>
     // Globally available Talkable queue array that you populate all data to
-    var _curebitq = _curebitq || [];
+    var _talkableq = _talkableq || [];
 
     // Talkable Event Data object where you set the data you are going to pass
     var talkableEventData = {
@@ -29,12 +29,12 @@ Below is the basic sample code for registering an Event with only required field
     };
 
     // Registering an Event at Talkable
-    _curebitq.push(
+    _talkableq.push(
       ['init', { site_id: 'YOUR_TALKABLE_SITE_ID' }],
       ['register_event', talkableEventData]
     );
   </script>
-  <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/curebit-1.0.min.js" type="text/javascript"></script>
+  <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/talkable-1.0.min.js" type="text/javascript"></script>
 
 Keep in mind to set your Talkable site ID/slug and simply place the script into your page between opening and closing ``BODY`` tag. |br|
 You can find a site slug right in the URL, it usually looks like talkable.com/sites/``your-site-slug``. |br|
@@ -55,7 +55,7 @@ In addition to our basic required dataset we allow you to pass us a lot more dat
   <!-- Begin Talkable integration code -->
   <script>
     // Globally available Talkable queue array that you populate all data to
-    var _curebitq = _curebitq || [];
+    var _talkableq = _talkableq || [];
 
     // Talkable Event Data object where you set the data you are going to pass
     var talkableEventData = {
@@ -84,7 +84,7 @@ In addition to our basic required dataset we allow you to pass us a lot more dat
     };
 
     // Registering an Event at Talkable
-    _curebitq.push(
+    _talkableq.push(
       [
         'init',
         {
@@ -97,7 +97,7 @@ In addition to our basic required dataset we allow you to pass us a lot more dat
       ['register_event', talkableEventData] // Pass Event to Talkable
     );
   </script>
-  <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/curebit-1.0.min.js" type="text/javascript"></script>
+  <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/talkable-1.0.min.js" type="text/javascript"></script>
   <!-- End Talkable integration code -->
 
 .. include:: /partials/integration_head.rst

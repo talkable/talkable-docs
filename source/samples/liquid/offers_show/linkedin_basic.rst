@@ -10,5 +10,5 @@
 .. code-block:: javascript
 
   function fireOnLinkedInShare() {
-    Curebit.share_succeeded('linkedin');
+    Talkable.share_succeeded('linkedin');
   }

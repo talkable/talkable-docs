@@ -5,7 +5,7 @@ You can trigger Talkable initialization whenever needed. For example, you can fi
 
 .. code-block:: html
 
-   <button onclick="_curebitq.push(['register_purchase', curebit_details]);">Init Talkable</button>
+   <button onclick="_talkableq.push(['register_purchase', curebit_details]);">Init Talkable</button>
 
    <script>
      var curebit_details = {
@@ -16,7 +16,7 @@ You can trigger Talkable initialization whenever needed. For example, you can fi
      };
    </script>
 
-   <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/curebit-1.0.min.js" type="text/javascript"></script>
+   <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/talkable-1.0.min.js" type="text/javascript"></script>
 
 |br|
 
@@ -38,7 +38,7 @@ Also, you can append Talkable ``iframe`` into your custom container. Add ``ifram
      };
    </script>
 
-   <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/curebit-1.0.min.js" type="text/javascript"></script>
+   <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/talkable-1.0.min.js" type="text/javascript"></script>
 
 * You can pass any HTML attributes.
 * Pass ``container`` option to set where you want Talkable iframe to be inserted (this is HTML ``id`` attribute value).

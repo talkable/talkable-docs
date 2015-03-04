@@ -1,9 +1,9 @@
 .. code-block:: html
 
   <!-- Begin Talkable product integration code -->
-  <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/curebit-1.0.min.js" type="text/javascript"></script>
+  <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/talkable-1.0.min.js" type="text/javascript"></script>
   <script type="text/javascript">
-    curebit.init({site_id: 'YOUR-TALKABLE-SITE-ID'});
+    talkable.init({site_id: 'YOUR-TALKABLE-SITE-ID'});
 
     var products = [
       {
@@ -22,6 +22,6 @@
       }
     ];
 
-    curebit.register_products(products);
+    talkable.register_products(products);
   </script>
   <!-- End Talkable product integration code -->
