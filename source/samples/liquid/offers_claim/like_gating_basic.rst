@@ -56,11 +56,11 @@
       }, delay ? delay : 5000);
     };
 
-    Curebit.subscribe('like_gating_succeeded', function (data) {
-      Curebit.passLikeGating();
+    Talkable.subscribe('like_gating_succeeded', function (data) {
+      Talkable.passLikeGating();
     });
 
-    Curebit.subscribe('like_gating_passed', function (data) {
+    Talkable.subscribe('like_gating_passed', function (data) {
       if (data.coupon_code) {
         populateCouponCode(data.coupon_code);
         $('.js-before').slideUp(300);

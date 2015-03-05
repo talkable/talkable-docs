@@ -3,13 +3,13 @@
   <!-- Begin Talkable integration code -->
   <script>
     //<![CDATA[
-      var _curebitq = _curebitq || [];
-      _curebitq.push(['init', {
+      var _talkableq = _talkableq || [];
+      _talkableq.push(['init', {
         site_id: 'YOUR-TALKABLE-SITE-ID', // REQUIRED - Talkable Site ID
         // server: 'https://www.talkable.com' // OPTIONAL - use your own domain, that suppose to be setup as alias to talkable.com (this option is only possible for Enterprise client)
       }]);
 
-      _curebitq.push(['register_affiliate', {
+      _talkableq.push(['register_affiliate', {
         iframe: { // REQUIRED - html attributes for iframe tag to fit page design
           width: '100%', // REQUIRED - width of the iframe
           height: 960, // REQUIRED - initial height of the iframe. Will be automatically updated if responsive option is set to true.
@@ -34,5 +34,5 @@
       }]);
     //]]>
   </script>
-  <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/curebit-1.0.min.js" type="text/javascript"></script>
+  <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/talkable-1.0.min.js" type="text/javascript"></script>
   <!-- End Talkable integration code -->

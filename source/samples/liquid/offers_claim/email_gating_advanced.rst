@@ -49,7 +49,7 @@
       }, 3000);
     }
 
-    Curebit.subscribe('email_gating_passed', function(data) {
+    Talkable.subscribe('email_gating_passed', function(data) {
       $contentGating.slideUp(300);
       setTimeout(function() {
         $contentHidden.slideDown(300);
@@ -69,7 +69,7 @@
 
       if (email.length && emailValid) {
         query = $.param({proxy_params: $.extend(proxyParams, {email: email})});
-        Curebit.passEmailGating(query);
+        Talkable.passEmailGating(query);
       } else {
         displayNotice("Something isn’t right. Please try again");
       }

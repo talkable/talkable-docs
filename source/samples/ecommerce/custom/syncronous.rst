@@ -3,8 +3,8 @@
   <!-- Begin Talkable integration code -->
   <script>
     //<![CDATA[
-      var _curebitq = _curebitq || [];
-      _curebitq.push(['init', {
+      var _talkableq = _talkableq || [];
+      _talkableq.push(['init', {
         site_id: 'YOUR-TALKABLE-SITE-ID', // REQUIRED - Talkable Site ID
         // If you are using live ENV and test ENV you might need to switch over two sites based on current location host:
         // site_id: window.location.host == "www.site.com" ? 'site' : 'site-testing'
@@ -55,8 +55,8 @@
         campaign_tags: ['default'], // OPTIONAL - Campaign tags used to target specific campaign for offer
       };
 
-      _curebitq.push(['register_purchase', _curebit_order_details]);
+      _talkableq.push(['register_purchase', _curebit_order_details]);
     //]]>
   </script>
-  <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/curebit-1.0.min.js" type="text/javascript"></script>
+  <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/talkable-1.0.min.js" type="text/javascript"></script>
   <!-- End Talkable integration code -->

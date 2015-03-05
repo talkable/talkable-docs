@@ -32,7 +32,7 @@
         $contentHidden  = $('.js-show'),
         $couponCode     = $('.js-coupon-code');
 
-    Curebit.subscribe('email_gating_passed', function(data) {
+    Talkable.subscribe('email_gating_passed', function(data) {
       $contentGating.hide();
       $contentHidden.show();
       $couponCode.text(data.coupon_code); // Insert coupon code
@@ -48,7 +48,7 @@
 
       if (email.length && emailValid) {
         query = $.param({proxy_params: $.extend(proxyParams, {email: email})});
-        Curebit.passEmailGating(query);
+        Talkable.passEmailGating(query);
       } else {
         alert("Something isn’t right. Please try again");
       }
