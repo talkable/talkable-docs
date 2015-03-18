@@ -4,15 +4,38 @@
 Verification Digest
 ===================
 
-Talkable is able to verify each request comming from web browser.
-It prevents fraud request from a potential attacker that can form a request to Talkable
-platform to register a event that doesn't exist on Merchant Side.
+Summary
+-------
 
-JS requests don't have any security by default and can be easily faked.
-In order to verify each request there is a need to attach a "control sum" to each event registration request
-with `verification_digest` parameter.
+Purchases and events are passed via JavaScript to Talkable. It is possible to secure this data transmission by using Talkable's Verification Digest. The Verification Digest acts as a checksum which will ensure that any event or purchase that’s being registered is coming from the authorized source only. This process includes hashing a **salt** http://en.wikipedia.org/wiki/Salt_(cryptography) with the ordinary purchase data that’s being passed over. The salt will be a random string that is shared between the two parties and is kept private. Talkable provides a method that will allow you to encrypt your (salt + purchase data) combo via SHA-256 which will output the encrypted Verification Digest string which can then be passed freely over JavaScript which Talkable will use to authorize requests. Only when Talkable is able to successfully decrypt the verification digest with the shared salt will the data be registered.
 
-In order to do that merchant needs to pass us a control sum of the the request parameters that only matches only current parameters:
+| Documentation: http://docs.talkable.com/ecommerce/verification_digest.html
+| Java Source: https://gist.github.com/bogdan/811591b1c7f36f3a28fb
+
+Instruction
+-----------
+
+In order to take advantage of the verification digest, you will need to import the Java source above, or copy & make use of the public methods included.  The example Java Source above also contains an example on how to create the verification digest. As demonstrated below, you will call the verification_digest method and provide the salt + purchase order details. The returned digest can now be safely passed via JS to the verification_digest parameter which is passed as part of the order details object [as seen in `EXAMPLE (PASSING)`_].
+
+Generating a digest
+---------------------
+
+In the example code below we are simply calling the verification_digest method which takes parameters {salt/key, event type, order #, email, amount, coupons} and returns the hashed checksum which is used as the verification digest.
+
+.. code-block:: java
+
+    public static void main(String []args)
+    throws UnsupportedEncodingException, NoSuchAlgorithmException {
+      String[] codes = { "ONE", "TWO" };
+      String digest = verification_digest("ef591fbbc527d77402d9a10dba92c195", "purchase",
+          "100011", ”customer@example.com", "200.00", "2014-01-01T00:00:00+00:00", codes);
+    }
+
+
+Passing a digest
+------------------
+
+In the example code below we are passing Verification Digest string to Talkable in verification_digest parameter.
 
 .. code-block:: javascript
 
@@ -26,6 +49,8 @@ In order to do that merchant needs to pass us a control sum of the the request p
        verification_digest: '60a511b9d8d45fe2ea8568e21138f517761be05ffda693135c68c2ec551ee507'
     }
 
+Digest generation algorithm
+---------------------------
 
 Control sum generation algorithm needs to be kept in secret from potential attacker.
 That is why verifiction_digest should be generated only in backend.
@@ -62,7 +87,3 @@ If there is no coupons associated with a purchase, the request verification stri
 
 * Verification String: `3c34e72917aba5885f75f8ae300d195e|100011|purchase|example@customer.com|83.32|2014-01-01T15:30:24+00:00`
 * Verfication Digest:  `9fb8c6ecfa1eb82a4ea91fe67cd1866ffda6271d956ddf2ce22b48b47fdaf53c`
-
-
-
-
