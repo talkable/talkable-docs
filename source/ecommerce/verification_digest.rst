@@ -15,10 +15,10 @@ Purchases and events are passed via JavaScript to Talkable. It is possible to se
 Instruction
 -----------
 
-In order to take advantage of the verification digest, you will need to import the Java source above, or copy & make use of the public methods included.  The example Java Source above also contains an example on how to create the verification digest. As demonstrated below, you will call the verification_digest method and provide the salt + purchase order details. The returned digest can now be safely passed via JS to the verification_digest parameter which is passed as part of the order details object [as seen in `EXAMPLE (PASSING)`_].
+In order to take advantage of the verification digest, you will need to import the Java source above, or copy & make use of the public methods included.  The example Java Source above also contains an example on how to create the verification digest. As demonstrated below, you will call the verification_digest method and provide the salt + purchase order details. The returned digest can now be safely passed via JS to the verification_digest parameter which is passed as part of the order details object [as seen in `Passing a digest`_].
 
 Generating a digest
----------------------
+-------------------
 
 In the example code below we are simply calling the verification_digest method which takes parameters {salt/key, event type, order #, email, amount, coupons} and returns the hashed checksum which is used as the verification digest.
 
@@ -33,7 +33,7 @@ In the example code below we are simply calling the verification_digest method w
 
 
 Passing a digest
-------------------
+----------------
 
 In the example code below we are passing Verification Digest string to Talkable in verification_digest parameter.
 
