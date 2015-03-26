@@ -11,11 +11,9 @@ Automatic integration
 ---------------------
 
 1. In your Talkable administration panel, go to
-   **Dashboard** |rarr| **Site Settings** |rarr| **Shopify Integration**.
-2. Click **Initial Setup**
-
-   .. image:: /_static/img/shopify-initial-setup.png
-      :alt: Shopify initial setup
+   **Dashboard** |rarr| **Shopify Integration**.
+   
+2. Then click **Install Talkable** in your Shopify administration panel.
       
 3. Modify existing integration script if needed
 
@@ -24,7 +22,7 @@ Automatic integration
 
 |br|
 
-:ref:`Verifying Integration Instructions <ecommerce/verify>`
+4. Verify your integration using :ref:`Verifying Integration Instructions <ecommerce/verify>`.
 
 Manual integration
 ------------------
@@ -44,7 +42,7 @@ Manual integration
 
 :ref:`Verifying Integration Instructions <ecommerce/verify>`
 
-.. _Shopify Talkable application: https://apps.shopify.com/talkable-referral-platform
+.. _Shopify Talkable application: https://apps.shopify.com/talkable
 
 .. container:: hidden
 
