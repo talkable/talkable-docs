@@ -15,7 +15,7 @@ Automatic integration
    
 2. Then click **Install Talkable** in your Shopify administration panel.
       
-3. Modify existing integration script if needed
+3. Modify existing integration script if needed.
 
    .. image:: /_static/img/shopify-integration-script.png
       :alt: Shopify integration script
@@ -23,6 +23,13 @@ Automatic integration
 |br|
 
 4. Verify your integration using :ref:`Verifying Integration Instructions <ecommerce/verify>`.
+
+  .. note::
+
+     To check how Standalone Campaign looks visit */pages/share* or */pages/invite* links of your store.
+     You can edit this links in Administrativr panel of your store.
+          
+     Post Purchase campaign located at Thank You page after Checkout.
 
 Manual integration
 ------------------
