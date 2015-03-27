@@ -197,6 +197,29 @@ Reference to all available formatting can be found in `strftime documentation`_
 
 |hr|
 
+.. _liquid_filter_hours_from_time:
+
+hours\_from\_now
+............
+
+Calculate difference between two dates.
+
+By default calculates between specified time and current time.
+
+.. code-block:: liquid
+
+   {{ "Sun, 02 Jan 2000 10:00:00 PST" | hours_from_time: "Sat, 01 Jan 2000 10:00:00 PST"}}
+   {{ "2015-03-27 17:53" | hours_from_time: "2015-03-27 15:53"}}
+   
+Next two examples is equivalent.
+   
+.. code-block:: liquid   
+
+   {{ valid_until | hours_from_time: current_time }}
+   {{ valid_until | hours_from_time }}
+
+|hr|
+
 interpolate
 ...........
 
