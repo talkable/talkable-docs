@@ -199,12 +199,12 @@ Reference to all available formatting can be found in `strftime documentation`_
 
 .. _liquid_filter_hours_from_time:
 
-hours\_from\_now
+hours\_from\_time
 ................
 
-Calculate difference between two dates.
+Alias `hours_from_now`
 
-By default calculates between specified time and current time.
+Calculate difference between two dates. By default calculates between specified time and current time.
 
 .. code-block:: liquid
 
@@ -215,8 +215,8 @@ Next two examples is equivalent.
    
 .. code-block:: liquid   
 
-   {{ valid_until | hours_from_time: current_time }}
-   {{ valid_until | hours_from_time }}
+   {{ friend_offer.valid_until | hours_from_time: current_time }}
+   {{ friend_offer.valid_until | hours_from_now }}
 
 |hr|
 
