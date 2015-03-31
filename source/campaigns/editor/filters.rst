@@ -218,6 +218,22 @@ Next two examples is equivalent.
    {{ friend_offer.valid_until | hours_from_time: current_time }}
    {{ friend_offer.valid_until | hours_from_now }}
 
+Example for email sending criteria
+
+.. code-block:: liquid
+
+    {% if friend_offer.valid_until %}
+      {% assign difference = friend_offer.valid_until | hours_from_now %}
+      {% if difference > 24 %}
+        true
+      {% else %}
+        false
+      {% endif %}
+    {% else %}
+      true
+    {% endif %}
+
+
 |hr|
 
 interpolate
