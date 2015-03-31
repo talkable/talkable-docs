@@ -200,7 +200,7 @@ Reference to all available formatting can be found in `strftime documentation`_
 .. _liquid_filter_hours_from_time:
 
 hours\_from\_time
-................
+.................
 
 Alias `hours_from_now`
 
