@@ -218,7 +218,7 @@ Next two examples is equivalent.
    {{ friend_offer.valid_until | hours_from_time: current_time }}
    {{ friend_offer.valid_until | hours_from_now }}
 
-Example for email sending criteria
+Pretty useful example for email sending criteria to prevent sending mail when offer is about to expire.
 
 .. code-block:: liquid
 
