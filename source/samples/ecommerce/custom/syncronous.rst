@@ -58,5 +58,5 @@
       _talkableq.push(['register_purchase', _curebit_order_details]);
     //]]>
   </script>
-  <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/talkable-1.0.min.js" type="text/javascript"></script>
+  <script src="|integration_url|" type="text/javascript"></script>
   <!-- End Talkable integration code -->

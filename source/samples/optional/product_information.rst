@@ -1,7 +1,7 @@
 .. code-block:: html
 
   <!-- Begin Talkable product integration code -->
-  <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/talkable-1.0.min.js" type="text/javascript"></script>
+  <script src="|integration_url|" type="text/javascript"></script>
   <script type="text/javascript">
     talkable.init({site_id: 'YOUR-TALKABLE-SITE-ID'});
 

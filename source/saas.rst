@@ -34,7 +34,7 @@ Below is the basic sample code for registering an Event with only required field
       ['register_event', talkableEventData]
     );
   </script>
-  <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/talkable-1.0.min.js" type="text/javascript"></script>
+  <script src="|integration_url|" type="text/javascript"></script>
 
 Keep in mind to set your Talkable site ID/slug and simply place the script into your page between opening and closing ``BODY`` tag. |br|
 You can find a site slug right in the URL, it usually looks like talkable.com/sites/``your-site-slug``. |br|
@@ -97,7 +97,7 @@ In addition to our basic required dataset we allow you to pass us a lot more dat
       ['register_event', talkableEventData] // Pass Event to Talkable
     );
   </script>
-  <script src="//d2jjzw81hqbuqv.cloudfront.net/integration/talkable-1.0.min.js" type="text/javascript"></script>
+  <script src="|integration_url|" type="text/javascript"></script>
   <!-- End Talkable integration code -->
 
 .. include:: /partials/integration_head.rst

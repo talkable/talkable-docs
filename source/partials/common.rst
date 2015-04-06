@@ -32,4 +32,4 @@
 
 .. |contact_us| raw:: html
 
-   <a href="https://www.talkable.com/#contact" target="_blank">contact us</a>
+   <a href="https://www.talkable.com/contact" target="_blank">contact us</a>

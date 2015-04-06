@@ -9,6 +9,9 @@ BUILDDIR         = build
 SPHINXOPTS       = -d $(BUILDDIR)/doctrees $(SOURCEDIR)
 GH_PAGES_SOURCES = source Makefile
 
+INTEGRATION_VERSION = 1.0
+INTEGRATION_URL = "//d2jjzw81hqbuqv.cloudfront.net/integration/talkable-$(INTEGRATION_VERSION).min.js"
+
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
 $(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from http://sphinx-doc.org/)
@@ -28,6 +31,8 @@ clean:
 
 html:
 	$(UTF_LOCALE) $(SPHINXBUILD) -b html $(SPHINXOPTS) $(BUILDDIR)/html
+	sed -i '' "s#|integration_version|#$(INTEGRATION_VERSION)#g" `find $(BUILDDIR)/html -name \*.html`
+	sed -i '' "s#|integration_url|#$(INTEGRATION_URL)#g" `find $(BUILDDIR)/html -name \*.html`
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
