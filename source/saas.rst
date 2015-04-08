@@ -88,10 +88,10 @@ In addition to our basic required dataset we allow you to pass us a lot more dat
       [
         'init',
         {
-          site_id: 'YOUR_TALKABLE_SITE_ID' // REQUIRED - Talkable Site ID/slug.
+          site_id: 'YOUR_TALKABLE_SITE_ID', // REQUIRED - Talkable Site ID/slug.
           // If you are using live ENV and test ENV you might need to switch between two sites based on a current location host:
           // site_id: window.location.host == 'www.site.com' ? 'site' : 'site-testing'
-          // ,server: 'https://www.talkable.com' // OPTIONAL - your custom domain, needs to be setup as an alias to talkable.com (Enterprise clients only)
+          server: 'https://www.talkable.com' // REQUIRED - default Talkable domain or your custom domain, needs to be setup as an alias to talkable.com (Enterprise clients only)
         }
       ],
       ['register_event', talkableEventData] // Pass Event to Talkable
