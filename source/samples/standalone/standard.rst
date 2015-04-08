@@ -6,7 +6,7 @@
       var _talkableq = _talkableq || [];
       _talkableq.push(['init', {
         site_id: 'YOUR-TALKABLE-SITE-ID', // REQUIRED - Talkable Site ID
-        server: 'https://www.talkable.com' // REQUIRED - default Talkable domain or use your custom domain, that suppose to be setup as alias to talkable.com (this option is only possible for Enterprise client)
+        // server: 'https://www.talkable.com' // OPTIONAL - use your own domain, that suppose to be setup as alias to talkable.com (this option is only possible for Enterprise client)
       }]);
 
       _talkableq.push(['register_affiliate', {

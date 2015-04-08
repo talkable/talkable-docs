@@ -8,7 +8,7 @@
         site_id: 'YOUR-TALKABLE-SITE-ID', // REQUIRED - Talkable Site ID
         // If you are using live ENV and test ENV you might need to switch over two sites based on current location host:
         // site_id: window.location.host == "www.site.com" ? 'site' : 'site-testing'
-        server: 'https://www.talkable.com' // REQUIRED - default Talkable domain or use your custom domain, that suppose to be setup as alias to talkable.com (this option is only possible for Enterprise client)
+        // server: 'https://www.talkable.com' // OPTIONAL - use your own domain, that suppose to be setup as alias to talkable.com (this option is only possible for Enterprise client)
       }]);
 
       var _talkable_order_items = [];
