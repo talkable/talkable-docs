@@ -7,9 +7,9 @@
 
       var _talkableq = _talkableq || [];
       _talkableq.push(['init', { site_id: 'YOUR-TALKABLE-SITE-ID' }]); /* REQUIRED - Replace with your Talkable Site ID */
-      var _curebit_order_items = [];
+      var _talkable_order_items = [];
       {% for line in line_items %}
-        _curebit_order_items.push({
+        _talkable_order_items.push({
           product_id: '{% if line.sku and line.sku != "" %}{{ line.sku }}{% else %}{{ line.product.id }}{% endif %}', /* REQUIRED - First Item Product ID */
           price: '{{ line.price | money_without_currency }}', /* REQUIRED - First Item Unit Price */
           quantity: '{{ line.quantity }}', /* REQUIRED - First Item Quantity */
@@ -24,17 +24,17 @@
         couponCodes.push('{{ discount.code }}');
       {% endfor %}
 
-      var _curebit_order_details = {
+      var _talkable_order_details = {
         order_number: '{{ order_name }}', /* REQUIRED - Order number */
         order_date: '{{ created_at }}', /* REQUIRED - Order Date and Time (ISO 8601 formatted datetime) */
         email: '{{ customer.email }}', /* REQUIRED - Customer Email Address */
         customer_id: '', /* Optional - Set to your internal customer ID for tracking */
         subtotal: '{{ subtotal_price | money_without_currency }}', /* REQUIRED - Purchase Subtotal */
         coupon_code: couponCodes,
-        items: _curebit_order_items
+        items: _talkable_order_items
       };
 
-      _talkableq.push(['register_purchase', _curebit_order_details]);
+      _talkableq.push(['register_purchase', _talkable_order_details]);
     //]]>
   </script>
   <!-- End Talkable integration code -->

@@ -8,13 +8,13 @@
       var _talkableq = _talkableq || [];
       _talkableq.push(['init', { site_id: 'YOUR-TALKABLE-SITE-ID' }]); /* REQUIRED - Talkable Site ID */
 
-      var _curebit_order_details = {
+      var _talkable_order_details = {
         order_number: '%%ORDER_ID%%', /* REQUIRED - Order number */
         email: '%%ORDER_EMAIL%%', /* REQUIRED - Customer Email Address */
         subtotal: '%%ORDER_SUBTOTAL_DISCOUNTED%%', /* REQUIRED - Purchase Subtotal */
       };
 
-      _talkableq.push(['register_purchase', _curebit_order_details]);
+      _talkableq.push(['register_purchase', _talkable_order_details]);
     //]]>
   </script>
   <!-- End Talkable integration code -->

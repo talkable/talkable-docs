@@ -5,10 +5,10 @@ You can trigger Talkable initialization whenever needed. For example, you can fi
 
 .. code-block:: html
 
-   <button onclick="_talkableq.push(['register_purchase', curebit_details]);">Init Talkable</button>
+   <button onclick="_talkableq.push(['register_purchase', talkable_details]);">Init Talkable</button>
 
    <script>
-     var curebit_details = {
+     var talkable_details = {
        // ...
        // order_number: '100011',
        // all common Talkable config properties
@@ -24,16 +24,16 @@ Also, you can append Talkable ``iframe`` into your custom container. Add ``ifram
 
 .. code-block:: html
 
-   <div id="curebit-test"></div>
+   <div id="talkable-test"></div>
 
    <script>
-     var curebit_details = {
+     var talkable_details = {
        // ...
        // order_number: '100011',
-       // all common Curebit config properties
+       // all common Talkable config properties
        // ...
        iframe: {
-         container: "curebit-test"
+         container: "talkable-test"
        }
      };
    </script>

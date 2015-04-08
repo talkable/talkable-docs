@@ -39,7 +39,7 @@ In the example code below we are passing Verification Digest string to Talkable 
 
 .. code-block:: javascript
 
-    var _curebit_order_details = {
+    var _talkable_order_details = {
        order_number: '100011', // REQUIRED - Order number
        order_date: '2014-04-15T08:18:44+00:00', // REQUIRED - Order Date and Time (ISO 8601 formatted datetime)
        email: 'customer@example.com', // REQUIRED - Customer Email Address

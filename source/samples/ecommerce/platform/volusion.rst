@@ -7,10 +7,10 @@
 
       var _talkableq = _talkableq || [];
       _talkableq.push(['init', { site_id: 'YOUR-TALKABLE-SITE-ID' }]); /* REQUIRED - Talkable Site ID */
-      var _curebit_order_items = [];
+      var _talkable_order_items = [];
 
       $.each(OrderDetails, function() {
-        _curebit_order_items.push({
+        _talkable_order_items.push({
           url: 'http://' + window.location.host + '/ProductDetails.asp?ProductCode=' + this[2],
           image_url: 'http://' + window.location.host + '/v/vspfiles/photos/' + this[2] + '-1.jpg',
           title: this[3],
@@ -20,14 +20,14 @@
         });
       });
 
-      var _curebit_order_details = {
+      var _talkable_order_details = {
         order_number: Order[0],
         email: Order[9],
         subtotal: Order[3],
-        items: _curebit_order_items
+        items: _talkable_order_items
       };
 
-      _talkableq.push(['register_purchase', _curebit_order_details]);
+      _talkableq.push(['register_purchase', _talkable_order_details]);
     }
   </script>
   <!-- End Talkable integration code -->
