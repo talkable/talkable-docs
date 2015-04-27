@@ -14,7 +14,7 @@ INTEGRATION_URL = "//d2jjzw81hqbuqv.cloudfront.net/integration/talkable-$(INTEGR
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
-$(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you don't have Sphinx installed, grab it from http://sphinx-doc.org/)
+$(error The '$(SPHINXBUILD)' command was not found. Make sure you have Sphinx installed, then set the SPHINXBUILD environment variable to point to the full path of the '$(SPHINXBUILD)' executable. Alternatively you can add the directory with the executable to your PATH. If you do not have Sphinx installed, grab it from http://sphinx-doc.org/)
 endif
 
 .PHONY: help clean html test preview server deploy
@@ -23,6 +23,7 @@ help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  preview    to make standalone HTML files"
 	@echo "  server     to make standalone HTML files and run the server on localhost:5000"
+	@echo "  server     run the server on localhost:5000 and open a browser"
 	@echo "  test       to run build in test mode"
 	@echo "  deploy     to commit and deploy changes to GitHub"
 
@@ -41,6 +42,7 @@ preview:
 
 server:
 	make preview
+	(sleep 2 && open "http://localhost:5000")&
 	$(UTF_LOCALE) bundle exec foreman start
 
 test:
