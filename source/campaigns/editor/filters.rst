@@ -121,7 +121,6 @@ Always returns the same number for a specific email, between 0 and 9.
 
 .. _liquid_filter_split_test:
 
-
 regexp\_captures
 ................
 
