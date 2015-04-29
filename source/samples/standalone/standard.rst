@@ -29,7 +29,7 @@
           // },
           traffic_source: '...' // OPTIONAL - indicate person traffic source. Can be used as segmentation parameter in reporting.
         },
-        responsive: true, // OPTIONAL - fit iframe into viewport (also on resize) and allow Talkable display mobile templates
+        // responsive: false, // OPTIONAL - fit iframe into viewport (also on resize) and allow Talkable display mobile templates. Set value to 'false' to disable resposive capabilities
         campaign_tags: ['default'] // OPTIONAL - campaign tags for offer targeting
       }]);
     //]]>

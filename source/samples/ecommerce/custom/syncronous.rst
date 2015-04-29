@@ -46,7 +46,6 @@
         //   height: '400'
         // },
         // loader: 'background: rgba(0, 0, 0, .85) url("//d2jjzw81hqbuqv.cloudfront.net/assets/api/loader.gif") no-repeat center center;', // OPTIONAL - change CSS of loading overlay or disable it completely by using 'display: none;'
-        responsive: true, // OPTIONAL - fit iframe into viewport (also on resize) and allow Talkable display mobile templates
         // person_custom_properties: { // OPTIONAL - Additional customer properties
         //     key1: 'value1', // String value
         //     key2: '123.2' // Numeric value
