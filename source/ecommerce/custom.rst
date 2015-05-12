@@ -34,10 +34,11 @@ Below is the sample code for a purchase with two items.
 
 .. include:: /partials/note_sample_code.rst
 
-Main Integration Code
----------------------
-
 .. include:: /samples/ecommerce/custom/syncronous.rst
+
+`Example post-purchase integration <http://jsbin.com/doqihasivuce/4>`_
+
+`Source for post-purchase integration <http://jsbin.com/doqihasivuce/4/edit?html,js,output>`_
 
 |hr|
 
@@ -48,8 +49,6 @@ Main Integration Code
 `Source integration <http://jsbin.com/ludusikevude/2/edit?html,output>`_
 
 |hr|
-
-.. include:: /partials/for_modern_pp_js_apps.rst
 
 .. include:: /partials/passing_custom_data.rst
 

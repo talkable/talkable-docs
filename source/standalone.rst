@@ -58,8 +58,6 @@ The following code will register person@example.com in campaign with tag "custom
 
 `Source integration <http://jsbin.com/jipoqotaheri/1/edit?html,output>`_.
 
-.. include:: /partials/for_modern_sa_js_apps.rst
-
 |hr|
 
 Custom Integration

@@ -11,9 +11,9 @@
 
       _talkableq.push(['register_affiliate', {
         iframe: { // REQUIRED - html attributes for iframe tag to fit page design
+          container: 'id-example', // OPTIONAL - Tell Talkable where to insert the iframe (this is HTML id attribute value)
           width: '100%', // REQUIRED - width of the iframe
           height: 960, // REQUIRED - initial height of the iframe. Will be automatically updated if responsive option is set to true.
-          // container: "id-example", // OPTIONAL - Tell Talkable where to insert the iframe (ID attribute). See Asynchronous Integration for more details.
           id: 'new_talkable_affiliate_member' // OPTIONAL - any other HTML attribute
         },
 
@@ -36,3 +36,7 @@
   </script>
   <script src="|integration_url|" type="text/javascript"></script>
   <!-- End Talkable integration code -->
+  
+`Example standalone integration <http://jsbin.com/qawicuceqexe/2>`_
+
+`Source for standalone integration <http://jsbin.com/qawicuceqexe/2/edit?html,js,output>`_  

@@ -1,3 +1,7 @@
+.. raw:: html
+
+   <h2>Main Integration Code</h2>
+
 .. code-block:: html
 
   <!-- Begin Talkable integration code -->
@@ -40,11 +44,11 @@
         items: _talkable_order_items,
         first_name: 'Name',  // OPTIONAL - Customer First Name
         last_name: 'Surname',  // OPTIONAL - Customer Last Name
-        // iframe: { // OPTIONAL - display offer inline instead of popup
-        //   // container: "id-example", // Tell Talkable where to insert the iframe (ID attribute). See Asynchronous Integration for more details.
-        //   width: '100%', // These are standard HTML attributes, feel free to add as many you need
+        iframe: {
+           container: 'id-example', // OPTIONAL - Tell Talkable where to insert the iframe (this is HTML id attribute value).
+        //   width: '100%', // OPTIONAL - These are standard HTML attributes, feel free to add as many you need
         //   height: '400'
-        // },
+        }, // OPTIONAL - display offer inline instead of popup
         // loader: 'background: rgba(0, 0, 0, .85) url("//d2jjzw81hqbuqv.cloudfront.net/assets/api/loader.gif") no-repeat center center;', // OPTIONAL - change CSS of loading overlay or disable it completely by using 'display: none;'
         // person_custom_properties: { // OPTIONAL - Additional customer properties
         //     key1: 'value1', // String value

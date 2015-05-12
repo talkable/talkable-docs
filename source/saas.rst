@@ -68,12 +68,11 @@ In addition to our basic required dataset we allow you to pass us a lot more dat
       customer_id: '1234567890', // OPTIONAL - internal customer ID, for tracking
       first_name: 'Name',  // OPTIONAL - Customer First Name
       last_name: 'Surname',  // OPTIONAL - Customer Last Name
-      // OPTIONAL - show an offer inline instead of a popup
-      // iframe: {
-      //   // container: "id-example", // Tell Talkable where to insert the iframe (ID attribute)
+      iframe: {
+        container: 'id-example', // Tell Talkable where to insert the iframe (this is HTML id attribute value)
       //   width: '100%', // These are standard HTML attributes, feel free to add as many you need
       //   height: '400'
-      // },
+      }, // OPTIONAL - show an offer inline instead of a popup
       // loader: 'display: none;', // OPTIONAL - change a popup preloader style with CSS, or hide it completely
       // OPTIONAL - additional customer properties, in case you want to use some additional data inside Campaign Views
       // person_custom_properties: {
