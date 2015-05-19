@@ -37,6 +37,6 @@
   <script src="|integration_url|" type="text/javascript"></script>
   <!-- End Talkable integration code -->
   
-`Example standalone integration <http://jsbin.com/qawicuceqexe/2>`_
+`Example standalone integration <http://jsbin.com/cepayesiza/1>`_
 
-`Source for standalone integration <http://jsbin.com/qawicuceqexe/2/edit?html,js,output>`_  
+`Source for standalone integration <http://jsbin.com/cepayesiza/1/edit?html,js,output>`_  
