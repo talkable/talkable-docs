@@ -10,6 +10,10 @@ from App Store or manually add a code snippet to your checkout page.
 Automatic integration
 ---------------------
 
+  .. note::
+          
+     Make sure you got rid of Manual integration before start process of Automatic integration.
+
 1. In your Talkable administration panel, go to
    **Dashboard** |rarr| **Shopify Integration**.
    
@@ -17,14 +21,16 @@ Automatic integration
       
 3. Modify existing integration script if needed.
 
-4. Verify your integration using :ref:`Verifying Integration Instructions <ecommerce/verify>`.
+4. Activate Post Purchase or Standalone Campaign.
+
+5. Verify your integration using :ref:`Verifying Integration Instructions <ecommerce/verify>`.
 
   .. note::
-
-     To check how Standalone Campaign looks visit */pages/share* or */pages/invite* links of your store.
-     You can edit this links in Administrativr panel of your store.
           
      Post Purchase campaign located at Thank You page after Checkout.
+     
+     To check how Standalone Campaign looks visit */pages/share* or */pages/invite* links of your store.
+     You can edit this links in Administrativr panel of your store.
 
 Manual integration
 ------------------
@@ -40,9 +46,9 @@ Manual integration
 
 3. Click **Apply these settings**.
 
-|br|
+4. Verify your integration using :ref:`Verifying Integration Instructions <ecommerce/verify>`.
 
-:ref:`Verifying Integration Instructions <ecommerce/verify>`
+|br|
 
 .. _Shopify Talkable application: https://apps.shopify.com/talkable
 
