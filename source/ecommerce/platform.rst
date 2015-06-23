@@ -3,9 +3,9 @@
 Platform Integration
 ====================
 
-Talkable is easy to integrate into your eCommerce website. Stores using Magento,
-Shopify, osCommerce, Ubercart, Opencart, Zencart, Demandware and many more can
-simply include our extension or application. Select your shopping cart on the left.
+Talkable is easy to integrate into your eCommerce website. Stores using Magento
+or Shopify can simply include our extension or application. Select your shopping
+cart on the left.
 
 For other platforms or custom stores, all that is required is the addition of
 a :ref:`javascript tag <ecommerce/custom>` on your final checkout receipt page
@@ -20,19 +20,23 @@ customer has purchased.
 
    .. toctree::
 
+      Magento <platform/magento>
+      Shopify <platform/shopify>
+      
+   .. toctree::
+      :hidden:
+      
       3DCart <platform/3dcart>
       BigCommerce <platform/bigcommerce>
       CRE Loaded <platform/cre-loaded>
       Demandware <platform/demandware>
       FastSpring <platform/fastspring>
-      Magento <platform/magento>
       Magento Go <platform/magento-go>
       OpenCart <platform/opencart>
       osCommerce <platform/oscommerce>
-      Shopify <platform/shopify>
       Ubercart <platform/ubercart>
       Volusion <platform/volusion>
       VP-ASP <platform/vp-asp>
       X-Cart <platform/x-cart>
       Yahoo! <platform/yahoo>
-      Zen Cart <platform/zen-cart>
+      Zen Cart <platform/zen-cart>      
