@@ -17,11 +17,6 @@ Automatic integration
       
 3. Modify existing integration script if needed.
 
-   .. image:: /_static/img/shopify-integration-script.png
-      :alt: Shopify integration script
-
-|br|
-
 4. Verify your integration using :ref:`Verifying Integration Instructions <ecommerce/verify>`.
 
   .. note::

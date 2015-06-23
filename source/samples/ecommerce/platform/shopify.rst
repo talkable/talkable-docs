@@ -3,7 +3,7 @@
   <!-- Begin Talkable integration code -->
   <script type="text/javascript">
     //<![CDATA[
-    !function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="//d2jjzw81hqbuqv.cloudfront.net/integration/talkable-1.0.min.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();
+    !function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="|integration_url|";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();
     String.prototype.html_safe||(String.prototype.html_safe=function(){return $("<span/>").text(this).html()});
 
     var _talkableq = _talkableq || [];
