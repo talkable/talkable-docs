@@ -43,10 +43,11 @@ This is last step before |friend| proceeds to your site or app.
 - Edit your :ref:`Friend Claim Page <campaigns/views/offers_claim>` template or disable it for immediate redirect
 - Edit the Destination URL in *Extra* window
 
-Tips:
+**Important:**
 
-- You may pass any data through GET parameters of URL
-- You may want to pass the `visitor_uuid` variable to your site or app and store it somewhere in order to later pass it with :ref:`Origin <api_v2/origins>`
+You need to pass the visitor `uuid` variable to your site via destination URL GET paramter and store it somewhere in order to later pass it with :ref:`Origin <api_v2/origins>`
+
+Example destination URL: `http://merchant.com?talkable_visitor_uuid={{visitor_uuid}}&utm_source=talkable&...`
 
 Submit Origin data to talkable to generate the referral
 -------------------------------------------------------

@@ -22,7 +22,6 @@ endif
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  preview    to make standalone HTML files"
-	@echo "  server     to make standalone HTML files and run the server on localhost:5000"
 	@echo "  server     run the server on localhost:5000 and open a browser"
 	@echo "  test       to run build in test mode"
 	@echo "  deploy     to commit and deploy changes to GitHub"
