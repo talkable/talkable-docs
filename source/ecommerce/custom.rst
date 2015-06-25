@@ -34,22 +34,21 @@ Below is the sample code for a purchase with two items.
 
 .. include:: /partials/note_sample_code.rst
 
-Main Integration Code
----------------------
-
 .. include:: /samples/ecommerce/custom/syncronous.rst
+
+`Example post-purchase integration <http://jsbin.com/sedopalalu/1>`_
+
+`Source for post-purchase integration <http://jsbin.com/sedopalalu/1/edit?html,js,output>`_
 
 |hr|
 
 .. include:: /partials/optimizing_for_viewport.rst
 
-`Example integration <http://jsbin.com/ludusikevude/2>`_
+`Example integration <http://jsbin.com/jowoxozoro/1>`_
 
-`Source integration <http://jsbin.com/ludusikevude/2/edit?html,output>`_
+`Source integration <http://jsbin.com/jowoxozoro/1/edit?html,output>`_
 
 |hr|
-
-.. include:: /partials/for_modern_pp_js_apps.rst
 
 .. include:: /partials/passing_custom_data.rst
 

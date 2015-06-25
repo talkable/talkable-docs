@@ -52,6 +52,9 @@ In addition to our basic required dataset we allow you to pass us a lot more dat
 
 .. code-block:: html
 
+  <!-- Talkable iframe container, you are free to control its place in the DOM -->
+  <div id="talkable-sa-container"></div>
+
   <!-- Begin Talkable integration code -->
   <script>
     // Globally available Talkable queue array that you populate all data to
@@ -68,19 +71,17 @@ In addition to our basic required dataset we allow you to pass us a lot more dat
       customer_id: '1234567890', // OPTIONAL - internal customer ID, for tracking
       first_name: 'Name',  // OPTIONAL - Customer First Name
       last_name: 'Surname',  // OPTIONAL - Customer Last Name
-      // OPTIONAL - show an offer inline instead of a popup
-      // iframe: {
-      //   // container: "id-example", // Tell Talkable where to insert the iframe (ID attribute)
-      //   width: '100%', // These are standard HTML attributes, feel free to add as many you need
-      //   height: '400'
-      // },
-      // loader: 'display: none;', // OPTIONAL - change a popup preloader style with CSS, or hide it completely
+      iframe: { // REQUIRED - any valid HTML attributes can go in here
+        container: 'talkable-sa-container', // Tell Talkable where to insert the iframe (this is HTML id attribute value)
+        width: '100%' // These are standard HTML attributes, feel free to add as many you need
+      },
+      responsive: true // OPTIONAL - fit iframe into any viewport (iframe height will be changed on window resize as well) which allows Talkable to make web pages responsive. 'false' disables it.
       // OPTIONAL - additional customer properties, in case you want to use some additional data inside Campaign Views
-      // person_custom_properties: {
+      // , person_custom_properties: {
       //     key1: 'value1', // String value
       //     key2: '123.2' // Numeric value
-      // },
-      // traffic_source: 'Signup page' // OPTIONAL - indicate person traffic source. Can be used as segmentation parameter in reports.
+      // }
+      // , traffic_source: 'Signup page' // OPTIONAL - indicate person traffic source. Can be used as segmentation parameter in reports.
     };
 
     // Registering an Event at Talkable
@@ -88,10 +89,10 @@ In addition to our basic required dataset we allow you to pass us a lot more dat
       [
         'init',
         {
-          site_id: 'YOUR_TALKABLE_SITE_ID', // REQUIRED - Talkable Site ID/slug.
+          site_id: 'YOUR_TALKABLE_SITE_ID' // REQUIRED - Talkable Site ID/slug.
           // If you are using live ENV and test ENV you might need to switch between two sites based on a current location host:
-          // site_id: window.location.host == 'www.site.com' ? 'site' : 'site-testing'
-          // server: 'https://www.talkable.com' // OPTIONAL - your custom domain, needs to be setup as an alias to talkable.com (Enterprise clients only)
+          // , site_id: window.location.host == 'www.site.com' ? 'site' : 'site-testing',
+          // , server: 'https://www.talkable.com' // OPTIONAL - your custom domain, needs to be setup as an alias to talkable.com (Enterprise clients only)
         }
       ],
       ['register_event', talkableEventData] // Pass Event to Talkable

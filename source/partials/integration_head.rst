@@ -1,8 +1,8 @@
 To ensure the campaign is loaded as fast as possible with no delay, it is
 important that you place your integration script inside the HEAD tag.
-In order to make sure your campaign will load properly from the HEAD tag we
-will have to enable/uncomment the "container" option in the integration script
-(`image <http://monosnap.com/image/wqwOGo7tvIMQlkwoLfUoAs6Hf1E4Iz>`_).
+In order to make sure your campaign will load properly from the HEAD tag you
+will have to use the "container" option in the integration script
+(`image <http://take.ms/nW6YL>`_).
 
 Once you have placed your integration script inside the HEAD tag, and you have
 defined the iframe container parameter, then you will be able to set up an empty

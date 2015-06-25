@@ -9,7 +9,7 @@ BUILDDIR         = build
 SPHINXOPTS       = -d $(BUILDDIR)/doctrees $(SOURCEDIR)
 GH_PAGES_SOURCES = source Makefile
 
-INTEGRATION_VERSION = 1.0.22
+INTEGRATION_VERSION = `curl d2jjzw81hqbuqv.cloudfront.net/integration/docs.version`
 INTEGRATION_URL = "//d2jjzw81hqbuqv.cloudfront.net/integration/talkable-$(INTEGRATION_VERSION).min.js"
 
 # User-friendly check for sphinx-build

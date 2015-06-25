@@ -43,6 +43,6 @@ Also, you can append Talkable ``iframe`` into your custom container. Add ``ifram
 * You can pass any HTML attributes.
 * Pass ``container`` option to set where you want Talkable iframe to be inserted (this is HTML ``id`` attribute value).
 
-`Example post-purchase integration <http://jsbin.com/doqihasivuce/4>`_
+`Example post-purchase integration <http://jsbin.com/cariwutimu/2>`_
 
-`Source for post-purchase integration <http://jsbin.com/doqihasivuce/4/edit?html,js,output>`_
+`Source for post-purchase integration <http://jsbin.com/cariwutimu/2/edit?html,js,output>`_

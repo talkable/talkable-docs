@@ -27,8 +27,8 @@ by specifying specific date or setting offer duration in hours.
    <h2>Friend</h2>
 
 - ``deadline`` - |friend| will no longer be able to claim the offer after this date.
-- ``offer duration`` - |friend| will no longer be able to claim the offer after X
-  hours after |advocate| shared it with him. Put 0 to disable expriration at all.
+- ``offer duration`` - |friend| will no longer be able to claim the offer X
+  hours after |advocate| shared it with him. Leave blank to disable expiration at all.
 - All existing |friend| offers are not affected if specified date or offer duration is
   changed while campaign is live.
 - If date and offer duration are specified, |friend| offer will be expired on
