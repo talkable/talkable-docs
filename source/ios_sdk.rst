@@ -4,19 +4,19 @@
 Talkable iOS SDK
 ################
 
-This is an iOS framework enabling to use Talkable in iOS applications. You can integrade this framework into your app and use Talkable referral campaigns inside your App, including:
+Talkable has an iOS framework enabling you to use Talkable in iOS Apps. Once integrated you can use the following Talkable capabilities:
 
-- Display offer page
-- Share an offer via:
+- Display Advocate Share Page (the page itself is built inside Talkable)
+- Share Offer via:
 
   - Email
   - Facebook
   - Twitter
-  - SMS Message
-  - by copying the link
-  
-- Track referred app downloads and reward an Advocate when their friend downloaded an App
-- Track sales via the App and reward an Advocate if a sale was driven thourgh someone's claim link
+  - SMS
+  - by copying a direct Offer link
+
+- Track referral App download and reward Advocate as a result of it
+- Track sales via the App and reward Advocate if a sale was driven thourgh someone's claim link
 
 Contents:
 
