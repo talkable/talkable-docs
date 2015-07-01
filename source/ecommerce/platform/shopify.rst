@@ -12,8 +12,9 @@ Automatic integration
 
   .. note::
           
-     Make sure you got rid of Manual integration script from **Additional Content & Scripts** section
-     before start process of Automatic integration. See `Manual integration`_ for details.
+     If you have previosuly integrated with Talkable, make sure you remove the manual
+     Talkable integration script located in the Additional Content & Scripts section before
+     you start the Automatic integration process. See `Manual integration`_ for details.
 
 1. In your Talkable administration panel, go to
    **Dashboard** |rarr| **Shopify Integration**.
@@ -28,10 +29,10 @@ Automatic integration
 
   .. note::
           
-     Post Purchase campaign located at Thank You page after Checkout.
+     Post Purchase campaign is located at the Thank you page after Checkout.
      
      To check how Standalone Campaign looks visit */pages/share* or */pages/invite* links of your store.
-     You can edit this links in Administrative panel of your store.
+     You can edit these links in Administrative panel of your store.
 
 Manual integration
 ------------------
