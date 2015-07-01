@@ -83,8 +83,8 @@ a json containing offer short code. Then redirect user to share page.
    {
      "success": true,
      "offer_code": "pLs495",
-     "offer_link": "http://curebit.com/o/pLs495/show",
-     "facebook_offer_link": "http://curebit.com/x/PiqkTF"
+     "offer_link": "http://talkable.com/o/pLs495/show",
+     "facebook_offer_link": "http://talkable.com/x/PiqkTF"
    }
 
 .. raw:: html
