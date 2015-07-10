@@ -20,4 +20,5 @@ Contents:
   optional
   web_hooks
   api_v2
+  ios_sdk
 
