@@ -10,7 +10,7 @@ Post Purchase campaign usually looks like a pop up right after a user made a pur
 
 Here is an example of a Purchase capturing, this action should be triggered on the order confirmation page:
 
-.. code-block:: html
+.. code-block:: objc
 
   #import <TalkableSDK/Talkable.h>
   ...

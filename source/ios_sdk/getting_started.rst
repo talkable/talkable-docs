@@ -25,7 +25,7 @@ Installation
   
 4. Add the following import statement to any Objective-C header (.h) or implementation (.m) file in which you wish to use the Talkable SDK.
 
-  .. code-block:: html
+  .. code-block:: objc
   
     #import <TalkableSDK/Talkable.h>
 
@@ -34,7 +34,7 @@ Configuration
 
 1. Initialize Talkable in your `application:didFinishLaunchingWithOptions:` method, like so:
 
-  .. code-block:: html
+  .. code-block:: objc
   
     [[Talkable manager] setApiKey:@"YOUR_TALKABLE_API_KEY" andSiteSlug:@"YOUR_SITE_SLUG"];
     
@@ -47,7 +47,7 @@ Configuration
 
 2. Add following lines to `application:handleOpenURL:` or `application:openURL:sourceApplication:annotation:`
 
-  .. code-block:: html
+  .. code-block:: objc
   
     [[Talkable manager] handleOpenURL:url];
 
