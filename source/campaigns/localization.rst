@@ -5,7 +5,7 @@ Localization
 ############
 
 Each template can be localized.
-Localization is not a part of the view template. It is stored in campaign allowing multiple campaign to use same template with different locazation.
+Localization is not a part of the view template. Default talkable campaigns are comming with localization now. It is stored in campaign allowing multiple campaign to use same template with different locazation and ability to edit Copy of a campaign outside of liquid editor (making interface significatly easier for marketer).
 
 Campaign localization is done using a liquid filter `localize`:
 
@@ -18,7 +18,7 @@ After adding this filter call to the template, go to campaign page and click "Lo
 .. image:: /_static/img/campaign-localization.jpg
 
 Any campaign that uses view with `localize` call have this data appeared.
-Now you are able to change the default value to something else like `Obten [[incentives.referrer.descrition]]` (Spanish)
+Now you are able to change the default value to something else like `Obten {{incentives.referrer.descrition}}` (Spanish)
 
 Campaign Localization is copied when campaign is copied, so you are able to use the following flow:
 
