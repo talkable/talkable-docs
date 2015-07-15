@@ -69,6 +69,7 @@ Sample response:
      "result": {
        "person": {
          "personal_claim_url": "http://share.mystore.com/by/customer@example.com",
+         "events_count": 0,
          "first_name": "John",
          "last_name": "Smith",
          "email": "customer@example.com",
@@ -111,6 +112,7 @@ Sample response:
      "result": {
        "person": {
          "personal_claim_url": "http://share.mystore.com/by/lizard_king",
+         "events_count": 0,
          "first_name": "John",
          "last_name": "Smith",
          "email": "customer@example.com",
@@ -153,6 +155,7 @@ Sample response:
      "result": {
        "person": {
          "personal_claim_url": "http://share.mystore.com/by/customer@example.com",
+         "events_count": 0,
          "first_name": "John",
          "last_name": "Smith",
          "email": "customer@example.com",
