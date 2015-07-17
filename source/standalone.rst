@@ -54,6 +54,8 @@ The following code will register person@example.com in campaign with tag "custom
 
 .. include:: /partials/optimizing_for_viewport.rst
 
+.. include:: /partials/traffic_source.rst
+
 `Example integration <http://jsbin.com/zucayikoxo/1>`_.
 
 `Source integration <http://jsbin.com/zucayikoxo/1/edit?html,output>`_.

@@ -52,6 +52,8 @@ Below is the sample code for a purchase with two items.
 
 .. include:: /partials/passing_custom_data.rst
 
+.. include:: /partials/traffic_source.rst
+
 .. container:: hidden
 
    .. toctree::

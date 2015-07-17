@@ -102,4 +102,4 @@ In addition to our basic required dataset we allow you to pass us a lot more dat
   <!-- End Talkable integration code -->
 
 .. include:: /partials/integration_head.rst
-
+.. include:: /partials/traffic_source.rst
