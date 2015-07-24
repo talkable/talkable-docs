@@ -7,11 +7,6 @@ Offers Expiration
 Talkable Campaign allows to set offer expiration for |advocate| and |friend|
 by specifying specific date or setting offer duration in hours.
 
-.. note::
-
-   Offer Expiration does not prevent |advocate| or |friend| from getting rewards
-   and receiving corresponding emails. This can be configured separately through
-   Trigger/Sending criteria.
 
 .. raw:: html
 
@@ -21,6 +16,8 @@ by specifying specific date or setting offer duration in hours.
 - All existing |advocate| offers are always affected if specified date is changed
   while campaign is live.
 - Deadline is not copied when campaign is copied.
+- When |advocate| offer is expired, Advocate and Friend are still eligible for reward. 
+  In other words advocate offer expiration only prevents |advocate| from sharing but not from getting rewarded
 
 .. raw:: html
 
@@ -35,4 +32,6 @@ by specifying specific date or setting offer duration in hours.
   the closest date.
 - |friend| offer deadline should never be earlier than |advocate| offer deadline
   (because there is no sense to share offer that cannot be claimed).
+- When |friend| offer is expired, |friend| and |advocate| are not able to receive any rewards. 
+  But they still may try to use coupon they received earlier because talkable platform doesn't control coupon expiration. Only merchant site does that.
 - When campaign is copied only offer duration gets copied, but not deadline.
