@@ -32,6 +32,8 @@ Each Variable is represented with Name, Liquid notation, Value:
 |br|
 |hr|
 
+.. _editor_variables_advocate_info:
+
 {{ advocate_info }}
 -------------------
 

@@ -406,15 +406,22 @@ For more information see :ref:`Localization <campaigns/localization>` page.
 leaderboard
 ...........
 
-Returns array of top advocates. Parameter can be integer from 1 to 100 or 'advocate'.
+Returns array of top advocates for specified period of time. Parameter can be number from 1 to 100 or 'advocate'.
 
 If parameter is 'advocate' it will return rank info for current advocate.
 
 Required options:
 
-* ``tag``
-* ``start``
-* ``end``
+* ``tag`` - Campaigns tag
+* ``start`` - Beginning date
+* ``end`` - Ending date
+
+It returns objects with next fields:
+
+* ``leaderboard_rank`` - Advocate rank
+* ``leaderboard_count`` - Number of approved referrals for specified period
+* ``leaderboard_subtotal`` - Sum of advocate purchase subtotals for specified period
+* also all fields from :ref:`advocate_info <editor_variables_advocate_info>` variable
 
 .. code-block:: liquid
 
