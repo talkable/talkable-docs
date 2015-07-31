@@ -401,4 +401,39 @@ Supports nested interpolation with `[[  ]]`
 
 For more information see :ref:`Localization <campaigns/localization>` page.
 
+|hr|
+
+leaderboard
+...........
+
+Returns array of top advocates for specified period of time. Parameter can be number from 1 to 100 or 'advocate'.
+
+If parameter is 'advocate' it will return rank info for current advocate.
+
+Required options:
+
+* ``tag`` - Campaigns tag
+* ``start`` - Beginning date
+* ``end`` - Ending date
+
+It returns objects with next fields:
+
+* ``leaderboard_rank`` - Advocate rank
+* ``leaderboard_count`` - Number of approved referrals for specified period
+* ``leaderboard_subtotal`` - Sum of advocate purchase subtotals for specified period
+* also all fields from :ref:`advocate_info <editor_variables_advocate_info>` variable
+
+.. code-block:: liquid
+
+  {% assign leaders = "3" | leaderboard: tag: "leaderboard", start: "2014-06-01", end: "2015-06-30" %}
+  {% for leader in leaders %}
+     <td>{{ leader.leaderboard_rank }}</td>
+     <td>{{ leader.leaderboard_count }}</td>
+  {% endfor %}
+
+.. code-block:: liquid
+
+  {% assign leader = "advocate" | leaderboard: tag: "default", start: "2015-06-01", end: "2015-06-30" %}
+  {{ leader.email }} - {{ leader.leaderboard_count }} - {{ leader.leaderboard_rank }}
+
 .. _Standard liquid filters: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters
