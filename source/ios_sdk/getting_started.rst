@@ -17,9 +17,10 @@ Installation
 2. Drag and place the `TalkableSDK.framework` somewhere suitable into your Xcode project. Make sure to add the framework to the relevant targets.
 3. Add the following frameworks to your project:
   
-  - `Social.framework`
-  - `MessageUI.framework`
   - `AddressBook.framework`
+  - `MessageUI.framework`
+  - `Security.framework`
+  - `Social.framework`
 
   To do this, click on your application's target, then click on Build Phases and expand the Link Binary With Libraries group.
   
