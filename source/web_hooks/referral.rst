@@ -32,7 +32,6 @@ Triggered when there is a new referral in Talkable.
     * **email**
     * **first_name**
     * **last_name**
-    * **gender**
     * **sub_choice**
     * **subscribed_at**
     * **unsubscribed_at**
@@ -60,7 +59,6 @@ Triggered when there is a new referral in Talkable.
     * **email**
     * **first_name**
     * **last_name**
-    * **gender**
     * **sub_choice**
     * **subscribed_at**
     * **unsubscribed_at**
@@ -131,7 +129,7 @@ Triggered when there is a new referral in Talkable.
            "email": "referred@example.com",
            "first_name": "Alice",
            "last_name": "Smith",
-           "gender": "female",
+           "gender": null,
            "sub_choice": true,
            "subscribed_at": "2014-08-14T02:01:16.823-07:00",
            "unsubscribed_at": null

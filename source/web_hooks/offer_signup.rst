@@ -53,7 +53,7 @@ additional parameters will be present:
      "email": "john@example.com",
      "first_name": "John",
      "last_name": "Doe",
-     "gender": "male",
+     "gender": null,
      "sub_choice": false,
      "subscribed_at": "2014-08-14T02:01:16.824-07:00",
      "unsubscribed_at": null
@@ -65,7 +65,7 @@ additional parameters will be present:
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"campaign":{"id":361325654,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"email":"john@example.com","first_name":"John","last_name":"Doe","gender":"male","sub_choice":false,"subscribed_at":"2014-08-14T02:01:16.824-07:00","unsubscribed_at":null}' <url>
+   curl --data 'key=<key>&payload={"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"campaign":{"id":361325654,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"email":"john@example.com","first_name":"John","last_name":"Doe","gender":null,"sub_choice":false,"subscribed_at":"2014-08-14T02:01:16.824-07:00","unsubscribed_at":null}' <url>
 
 .. container:: hidden
 

@@ -69,7 +69,7 @@ Sign Up
 -------
 
 Capture the email and make ajax request to Talkable with entered email, campaign
-tags and possible any other data like first/last name or gender. We return back
+tags and possible any other data like first/last name. We return back
 a json containing offer short code. Then redirect user to share page.
 
 .. include:: /partials/note_sample_code.rst

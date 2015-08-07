@@ -50,7 +50,6 @@ Personal data for |advocate|.
    email                "affiliate@example.com"   Advocate email he is registered with
    first_name           "John"                    Advocate first name provided on Signup
    last_name            "Smith"                   Advocate last name provided on Signup
-   gender               null | "male" | "female"  Advocate gender provided on Signup
    external_customer_id "1jsh17136"               Advocate unique ID passed by Merchant to :ref:`Talkable Integration
                                                   <ecommerce/custom>` as ``customer_id``
    sub_choice           false | true              Advocate custom parameter which can be used to pass additional

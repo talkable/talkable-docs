@@ -25,8 +25,7 @@
         email: 'customer@example.com', // OPTIONAL - customer email
         first_name: 'John', // OPTIONAL - customer first name
         last_name: 'Smith', // OPTIONAL - customer last name
-        customer_id: '...', // OPTIONAL - customer ID from your site
-        gender: '...' // OPTIONAL - customer gender ('male' or 'female')
+        customer_id: '...' // OPTIONAL - customer ID from your site
         // , person_custom_properties: { // OPTIONAL - additional customer properties
         //     key1: 'value1', // String value
         //     key2: '123.2' // Numeric value
@@ -38,7 +37,7 @@
   </script>
   <script src="|integration_url|" type="text/javascript"></script>
   <!-- End Talkable integration code -->
-  
+
 `Example standalone integration <http://jsbin.com/cepayesiza/1>`_
 
-`Source for standalone integration <http://jsbin.com/cepayesiza/1/edit?html,js,output>`_  
+`Source for standalone integration <http://jsbin.com/cepayesiza/1/edit?html,js,output>`_

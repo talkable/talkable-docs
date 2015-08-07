@@ -25,7 +25,6 @@ it is getting paid after Referral is approved.
   * **email**
   * **first_name**
   * **last_name**
-  * **gender**
   * **sub_choice**
   * **subscribed_at**
   * **unsubscribed_at**
