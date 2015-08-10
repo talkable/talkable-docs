@@ -4,6 +4,10 @@
 Magento Store Integration
 -------------------------
 
+.. note::
+
+  You must have Talkable account in order to get started
+
 A `Magento Talkable extension`_ (`direct download`_) is available for easy
 integration. The extension currently supports Magento versions 1.5+
 
