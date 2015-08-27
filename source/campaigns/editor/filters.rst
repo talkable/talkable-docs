@@ -436,4 +436,30 @@ It returns objects with next fields:
   {% assign leader = "advocate" | leaderboard: tag: "default", start: "2015-06-01", end: "2015-06-30" %}
   {{ leader.email }} - {{ leader.leaderboard_count }} - {{ leader.leaderboard_rank }}
 
+|hr|
+
+url2png
+.......
+
+Used to make screenshots of passed url.
+
+Available options:
+
+* ``ttl`` - Set the "time to live" value for a screenshot in seconds.
+* ``viewport`` - Set viewport dimensions.
+* ``custom_css_url`` - Custom CSS will be used for screenshot rendering.
+* ``fullpage`` - Will attempt to capture entire document canvas.
+
+Examples:
+
+.. code-block:: liquid
+
+  <img src="{{ site_url | url2png }}" class="campaign-site-on-the-back">
+
+Refresh screenshot every week:
+
+.. code-block:: liquid
+
+  <img src="{{ 'www.example.com' | url2png: ttl: 604800 }}">
+
 .. _Standard liquid filters: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters
