@@ -436,4 +436,36 @@ It returns objects with next fields:
   {% assign leader = "advocate" | leaderboard: tag: "default", start: "2015-06-01", end: "2015-06-30" %}
   {{ leader.email }} - {{ leader.leaderboard_count }} - {{ leader.leaderboard_rank }}
 
+|hr|
+
+url2png
+.......
+
+Captures a snapshot of a website URL you pass to it. In case you need to
+embed a snapshot of your website into Talkable campaign it is way better
+to use this liquid filter instead of embedding an iframe since an image
+is always lighter in size and takes less CPU performance to render on
+a screen. Also, some websites restrict themselves from embedding through
+an iframe so you can take ``url2png`` as a bulletproof solution for a
+website snapshot.
+
+Available options:
+
+* ``ttl`` - "time to live" period for a screenshot before it gets refreshed, in seconds. Value example: ``86400``.
+* ``viewport`` - Viewport dimensions. Value example: ``"640x480"``.
+* ``custom_css_url`` - Custom CSS file that will be injected into a website in case you need to change a screenshot. Value example: ``"http://url2png.com/tests/css/test.css"``.
+* ``fullpage`` - Attempts to capture entire document canvas. Value example: ``true``.
+
+Here is how you can embed a screenshot of your website into a campaign view (``site_url`` returns your website URL that you set inside Site Settings):
+
+.. code-block:: liquid
+
+  <img src="{{ site_url | url2png }}" class="campaign-site-on-the-back" />
+
+Refresh the screenshot every week:
+
+.. code-block:: liquid
+
+  <img src="{{ 'www.example.com' | url2png: ttl: 604800 }}" />
+
 .. _Standard liquid filters: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters
