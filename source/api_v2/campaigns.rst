@@ -58,7 +58,7 @@ Sample response:
            "id": 34376,
            "name": "Inactive campaign",
            "tag_names": ["default"],
-           "slug": "34376-inactive-campaign",
+           "slug": "34376",
            "type": "Standalone Campaign",
            "is_active": false
          }

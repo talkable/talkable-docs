@@ -35,7 +35,7 @@ Here is an example of a Purchase capturing, this action should be triggered on t
 
 .. note::
 
-  If Post Purchase campaign does not show up when testing make sure you have it active with a default tag on the Campaigns listing.
+  If Post Purchase campaign does not show up when testing make sure you have it live with a default tag on the Campaigns listing.
 
 .. container:: hidden
 
