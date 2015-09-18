@@ -19,17 +19,6 @@ Example: http://d2jjzw81hqbuqv.cloudfront.net/static_assets/files/745/original/o
 
 |hr|
 
-direct\_asset\_url
-..................
-
-Asset URL without CDN. Required only for custom fonts to work.
-
-.. code-block:: liquid
-
-   {{ "font.woff" | direct_asset_url }}
-
-|hr|
-
 simple\_format
 ..............
 
@@ -124,8 +113,8 @@ Always returns the same number for a specific email, between 0 and 9.
 regexp\_captures
 ................
 
-Parses input with a given regexp and returning 
-`regular expression captures <http://www.regular-expressions.info/brackets.html>`_ 
+Parses input with a given regexp and returning
+`regular expression captures <http://www.regular-expressions.info/brackets.html>`_
 as an array.
 
 .. code-block:: liquid
@@ -206,10 +195,10 @@ Calculate difference between two dates. By default calculates between specified 
 
    {{ "Sun, 02 Jan 2000 10:00:00 PST" | hours_from_time: "Sat, 01 Jan 2000 10:00:00 PST"}}
    {{ "2015-03-27 17:53" | hours_from_time: "2015-03-27 15:53"}}
-   
+
 Next two examples is equivalent.
-   
-.. code-block:: liquid   
+
+.. code-block:: liquid
 
    {{ friend_offer.valid_until | hours_from_time: current_time }}
    {{ friend_offer.valid_until | hours_from_now }}
