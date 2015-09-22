@@ -108,8 +108,6 @@ Always returns the same number for a specific email, between 0 and 9.
 
 |hr|
 
-.. _liquid_filter_split_test:
-
 regexp\_captures
 ................
 
@@ -119,43 +117,44 @@ as an array.
 
 .. code-block:: liquid
 
-    {{ '12345678' | regexp_captures: '(....)(....)' | join: '-' }}
-    {{ 'bogdan@example.com' | regexp_captures: '^([a-z]+)\@([a-z]+)\.([a-z]+)' | json }}
+   {{ '12345678' | regexp_captures: '(....)(....)' | join: '-' }}
+   {{ 'bogdan@example.com' | regexp_captures: '^([a-z]+)\@([a-z]+)\.([a-z]+)' | json }}
 
+|hr|
 
-split\_test
-...........
+ab\_test
+........
 
-Split testing static text:
-
-.. code-block:: liquid
-
-   {{ "split_test_identifier" | split_test: "Label 1", "Label 2", "Label N" }}
-
-Split testing text with interpolation:
+A/B testing static text:
 
 .. code-block:: liquid
 
-   {{ "share_via_email_subject" | split_test: "[[site_name]]",
+   {{ "ab_test_identifier" | ab_test: "Label 1", "Label 2", "Label N" }}
+
+A/B testing text with interpolation:
+
+.. code-block:: liquid
+
+   {{ "share_via_email_subject" | ab_test: "[[site_name]]",
       "Your friend [[advocate_info.email]] shared this deal with you" | interpolate }}
 
-Split testing an asset:
+A/B testing an asset:
 
 .. code-block:: liquid
 
-   {{ "offer_background" | split_test: "background-green.jpg", "background-red.jpg" | asset_url }}
+   {{ "offer_background" | ab_test: "background-green.jpg", "background-red.jpg" | asset_url }}
 
-Split testing style:
+A/B testing style:
 
 .. code-block:: html
 
-   <body style="background-color: {{ 'offer_background' | split_test: '#d3d3d3', '#ff0000' }}">
+   <body style="background-color: {{ 'offer_background' | ab_test: '#d3d3d3', '#ff0000' }}">
      ...
    </body>
 
 .. code-block:: html
 
-   <h1 style="font-size: {{ 'title_size' | split_test: '24px', '30px' }}">
+   <h1 style="font-size: {{ 'title_size' | ab_test: '24px', '30px' }}">
      Sample Title
    </h1>
 
@@ -182,8 +181,6 @@ Reference to all available formatting can be found in `strftime documentation`_
 
 |hr|
 
-.. _liquid_filter_hours_from_time:
-
 hours\_from\_time
 .................
 
@@ -193,8 +190,8 @@ Calculate difference between two dates. By default calculates between specified 
 
 .. code-block:: liquid
 
-   {{ "Sun, 02 Jan 2000 10:00:00 PST" | hours_from_time: "Sat, 01 Jan 2000 10:00:00 PST"}}
-   {{ "2015-03-27 17:53" | hours_from_time: "2015-03-27 15:53"}}
+   {{ "Sun, 02 Jan 2000 10:00:00 PST" | hours_from_time: "Sat, 01 Jan 2000 10:00:00 PST" }}
+   {{ "2015-03-27 17:53" | hours_from_time: "2015-03-27 15:53" }}
 
 Next two examples is equivalent.
 
@@ -207,16 +204,16 @@ Pretty useful example for email sending criteria to prevent sending mail when of
 
 .. code-block:: liquid
 
-    {% if friend_offer.valid_until %}
-      {% assign difference = friend_offer.valid_until | hours_from_now %}
-      {% if difference > 24 %}
-        true
-      {% else %}
-        false
-      {% endif %}
-    {% else %}
-      true
-    {% endif %}
+   {% if friend_offer.valid_until %}
+     {% assign difference = friend_offer.valid_until | hours_from_now %}
+     {% if difference > 24 %}
+       true
+     {% else %}
+       false
+     {% endif %}
+   {% else %}
+     true
+   {% endif %}
 
 
 |hr|
@@ -414,16 +411,16 @@ It returns objects with next fields:
 
 .. code-block:: liquid
 
-  {% assign leaders = "3" | leaderboard: tag: "leaderboard", start: "2014-06-01", end: "2015-06-30" %}
-  {% for leader in leaders %}
-     <td>{{ leader.leaderboard_rank }}</td>
-     <td>{{ leader.leaderboard_count }}</td>
-  {% endfor %}
+   {% assign leaders = "3" | leaderboard: tag: "leaderboard", start: "2014-06-01", end: "2015-06-30" %}
+   {% for leader in leaders %}
+      <td>{{ leader.leaderboard_rank }}</td>
+      <td>{{ leader.leaderboard_count }}</td>
+   {% endfor %}
 
 .. code-block:: liquid
 
-  {% assign leader = "advocate" | leaderboard: tag: "default", start: "2015-06-01", end: "2015-06-30" %}
-  {{ leader.email }} - {{ leader.leaderboard_count }} - {{ leader.leaderboard_rank }}
+   {% assign leader = "advocate" | leaderboard: tag: "default", start: "2015-06-01", end: "2015-06-30" %}
+   {{ leader.email }} - {{ leader.leaderboard_count }} - {{ leader.leaderboard_rank }}
 
 |hr|
 
@@ -449,12 +446,12 @@ Here is how you can embed a screenshot of your website into a campaign view (``s
 
 .. code-block:: liquid
 
-  <img src="{{ site_url | url2png }}" class="campaign-site-on-the-back" />
+   <img src="{{ site_url | url2png }}" class="campaign-site-on-the-back" />
 
 Refresh the screenshot every week:
 
 .. code-block:: liquid
 
-  <img src="{{ 'www.example.com' | url2png: ttl: 604800 }}" />
+   <img src="{{ 'www.example.com' | url2png: ttl: 604800 }}" />
 
 .. _Standard liquid filters: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters
