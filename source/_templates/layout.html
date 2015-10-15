@@ -21,9 +21,9 @@
       <a href="{{ pathto(master_doc) }}" class="header-logo">Talkable docs</a>
       {%- block sidebarsearch %}
         {%- if pagename != "search" and builder != "singlehtml" %}
-          <form class="header-search" action="{{ pathto('search') }}" method="get">
-            <input type="text" class="textfield header-search-field" name="q" placeholder="Search docs" />
-            <input type="submit" class="button header-search-button" value="Search" />
+          <form class="search-form" action="{{ pathto('search') }}" method="get">
+            <input type="text" class="textfield search-form-field" name="q" placeholder="Search docs" />
+            <input type="submit" class="button search-form-button" value="Search" />
             <input type="hidden" name="check_keywords" value="yes" />
             <input type="hidden" name="area" value="default" />
           </form>

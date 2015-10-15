@@ -149,6 +149,17 @@ abbr {
     margin-top: 0;
 }
 
+/* SEARCH FORM */
+.search-form {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.search-form-field {
+    margin-right: 10px;
+    width: 430px;
+}
+
 /* HEADER */
 .header {
     height: 41px;
@@ -158,16 +169,6 @@ abbr {
 .header-disclaimer {
     float: right;
     padding-top: 9px;
-}
-
-.header-search {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.header-search-field {
-    margin-right: 10px;
-    width: 430px;
 }
 
 .header-logo {
