@@ -385,6 +385,14 @@ Supports nested interpolation with `[[  ]]`
    {{ "welcome_message" | localize }}
    {{ "offer_title" | localize: "Get [[incentives.referrer.description]]" }}
 
+Supports fixed variants for localization, user will be able to set localization value only from this list.
+First value will be a default value, or you can set it using ``default`` option.
+
+.. code-block:: liquid
+
+   {{ "campaign_layout" | localize: "left", "right" }}
+   {{ "header_size" | localize: "h1", "h2", "h3", "h4", default: "h2" }}
+
 For more information see :ref:`Localization <campaigns/localization>` page.
 
 |hr|
