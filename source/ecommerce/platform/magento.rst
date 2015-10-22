@@ -48,7 +48,7 @@ integration. The extension currently supports Magento versions 1.5+
    * Then click **Select All**, select action *"Refresh"* and click **Submit**.
 
 .. _Magento Talkable extension: http://www.magentocommerce.com/magento-connect/talkable-customizable-refer-a-friend-programs.html
-.. _direct download: https://www.talkable.com/magento/talkable-0.1.6.tgz
+.. _direct download: https://www.talkable.com/magento/talkable-0.1.7.tgz
 
 |br|
 
