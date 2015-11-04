@@ -389,6 +389,32 @@ For more information see :ref:`Localization <campaigns/localization>` page.
 
 |hr|
 
+scale\_color
+............
+
+Returns new color with scaled attributes.
+Available attributes: `red`, `green`, `blue`, `saturation`, `lightness`, `alpha`
+
+.. code-block:: liquid
+
+   {{ "black" | scale_color: lightness: 50 }}
+   {{ "256, 128, 0" | scale_color: saturation: -10 }}
+
+|hr|
+
+adjust\_color
+.............
+
+Returns new color with adjusted attributes.
+Available attributes: `red`, `green`, `blue`, `hue`, `saturation`, `lightness`, `alpha`
+
+.. code-block:: liquid
+
+   {{ "red" | adjust_color: blue: 255 }}
+   {{ "#000000" | adjust_color: alpha: -0.5 }}
+
+|hr|
+
 leaderboard
 ...........
 
