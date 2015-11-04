@@ -392,7 +392,7 @@ For more information see :ref:`Localization <campaigns/localization>` page.
 scale\_color
 ............
 
-Returns new color with scaled attributes.
+Returns a new adjusted color with scaled attributes.
 Available attributes: `red`, `green`, `blue`, `saturation`, `lightness`, `alpha`
 
 .. code-block:: liquid
@@ -405,8 +405,15 @@ Available attributes: `red`, `green`, `blue`, `saturation`, `lightness`, `alpha`
 adjust\_color
 .............
 
-Returns new color with adjusted attributes.
-Available attributes: `red`, `green`, `blue`, `hue`, `saturation`, `lightness`, `alpha`
+Returns a new adjusted color based on the following attributes:
+
+* `red` — changes only the Red color channel saturation. Allowed values: `-255`-`255`.
+* `green` — changes only the Green color channel saturation. Allowed values: `-255`-`255`.
+* `blue` — changes only the Blue color channel saturation. Allowed values: `-255`-`255`.
+* `hue` — changes the hue of a color. Allowed values: `0`-`360`.
+* `saturation` — changes the saturation of a color. Allowed values: `-100`-`100`.
+* `lightness` — changes the lightness of a color. Allowed values: `-100`-`100`.
+* `alpha` — changes the opacity of a color. Allowed values: `-1`-`1`.
 
 .. code-block:: liquid
 
