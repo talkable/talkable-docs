@@ -406,7 +406,7 @@ Available attributes: `red`, `green`, `blue`, `saturation`, `lightness`, `alpha`
 .. code-block:: liquid
 
    {{ "black" | scale_color: lightness: 50 }}
-   {{ "256, 128, 0" | scale_color: saturation: -10 }}
+   {{ "rgb(256, 128, 0)" | scale_color: saturation: -10 }}
 
 |hr|
 
