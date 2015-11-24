@@ -6,7 +6,7 @@ Talkable Campaigns
 
 Talkable Campaign is based on interaction between ``Advocate`` and ``Friend``:
 
-- Advocate: person, who shares an offer with his Friend(s)
+- Advocate: person, who shares an offer with their Friend(s)
 - Friend: person, who is invited to participate in Campaign by Advocate
 
 .. image:: /_static/img/basics/sharing-process.png

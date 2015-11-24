@@ -6,8 +6,7 @@
 Advocate Signup Page
 --------------------
 
-Advocate referral program sign up page (only for Standalone Campaign). On this page Advocate signs up by
-entering his email address.
+Advocate referral program sign up page (only for Standalone Campaign). On this page Advocate signs up by entering their email address.
 |br|
 |br|
 

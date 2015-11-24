@@ -21,7 +21,7 @@
         id: 'new_talkable_affiliate_member' // OPTIONAL - any other HTML attribute
       },
 
-      affiliate_member: { // OPTIONAL - Talkable will ask person to signup in case when his email is not given by merchant
+      affiliate_member: { // OPTIONAL - Talkable will ask person to signup in case when their email is not given by merchant
         email: 'customer@example.com', // OPTIONAL - customer email
         first_name: 'John', // OPTIONAL - customer first name
         last_name: 'Smith', // OPTIONAL - customer last name

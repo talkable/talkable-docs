@@ -6,7 +6,7 @@
 Advocate Share Page
 -------------------
 
-Here |advocate| shares an offer with his |friend|\s. Explain the value proposition
+Here |advocate| shares an offer with their |friend|\s. Explain the value proposition
 to |advocate| and |friend|, that both will receive an exclusive discount.
 
 Available sharing methods:
