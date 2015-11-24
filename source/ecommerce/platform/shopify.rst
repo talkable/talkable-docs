@@ -1,8 +1,8 @@
 .. _ecommerce/platform/shopify:
 .. include:: /partials/common.rst
 
-Shopify Store Integration
-=========================
+Shopify
+=======
 
 To integrate your Shopify store, you can install the `Shopify Talkable application`_
 from App Store or manually add a code snippet to your checkout page.
@@ -56,6 +56,3 @@ Manual integration
 
 .. include:: /partials/traffic_source.rst
 
-.. container:: hidden
-
-   .. toctree::

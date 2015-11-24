@@ -1,8 +1,8 @@
 .. _ecommerce/custom:
 .. include:: /partials/common.rst
 
-Default Integration
-===================
+Custom Platform
+===============
 
 .. include:: /partials/note_enterprise_integration.rst
 
@@ -53,8 +53,4 @@ Below is the sample code for a purchase with two items.
 .. include:: /partials/passing_custom_data.rst
 
 .. include:: /partials/traffic_source.rst
-
-.. container:: hidden
-
-   .. toctree::
 

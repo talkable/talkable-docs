@@ -22,10 +22,10 @@ customer has purchased.
 
       Magento <platform/magento>
       Shopify <platform/shopify>
-      
+
    .. toctree::
       :hidden:
-      
+
       3DCart <platform/3dcart>
       BigCommerce <platform/bigcommerce>
       CRE Loaded <platform/cre-loaded>
@@ -39,4 +39,4 @@ customer has purchased.
       VP-ASP <platform/vp-asp>
       X-Cart <platform/x-cart>
       Yahoo! <platform/yahoo>
-      Zen Cart <platform/zen-cart>      
+      Zen Cart <platform/zen-cart>

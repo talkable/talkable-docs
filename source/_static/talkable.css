@@ -123,6 +123,13 @@ abbr {
     box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
 }
 
+.body img.is-minimal {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 20px 0;
+}
+
 .nav {
     float: left;
     line-height: 1.35;
@@ -293,6 +300,7 @@ cite, code, tt {
     letter-spacing: 0.01em;
     background-color: #FFF9DA;
     font-style: normal;
+    word-break: break-all;
 }
 
 hr {
