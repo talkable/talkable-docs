@@ -1,7 +1,7 @@
 .. _optional:
 .. include:: /partials/common.rst
 
-Optional Features
+Advanced Features
 #################
 
 Talkable provides several optional features that help increase conversions
@@ -23,6 +23,10 @@ each with links to integration details.
      - Change all visible URLs to your domain instead of talkable.com
    * - :ref:`Verification Digest <optional/verification_digest>`
      - Secure data transfer between your site and Talkable
+   * - :ref:`Pass custom user data <optional/passing_custom_data>`
+     - Pass additional data to Talkable to operate with it inside campaigns
+   * - :ref:`Segment with Traffic Source <optional/traffic_source>`
+     - Brings more power and flexibility into segmenting your reporting
 
 
 .. container:: hidden
@@ -35,3 +39,6 @@ each with links to integration details.
       optional/reward_fulfillment
       White Labeling <optional/white_labeling>
       Verification Digest <optional/verification_digest>
+      optional/passing_custom_data
+      optional/traffic_source
+

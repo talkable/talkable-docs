@@ -41,8 +41,6 @@ You can find a site slug right in the URL, it usually looks like talkable.com/si
 The code above registers an Event and shows :ref:`advocate_signup_page_view` as a result. |br|
 When the Event is registered successfully it appears inside Events Report. |br|
 
-.. include:: /partials/integration_head.rst
-
 |hr|
 
 Advanced Integration
@@ -101,5 +99,4 @@ In addition to our basic required dataset we allow you to pass us a lot more dat
   <script src="|integration_url|" type="text/javascript"></script>
   <!-- End Talkable integration code -->
 
-.. include:: /partials/integration_head.rst
 .. include:: /partials/traffic_source.rst

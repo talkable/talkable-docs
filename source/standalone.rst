@@ -6,8 +6,6 @@ Standalone Integrations
 
 .. include:: /partials/note_enterprise_integration.rst
 
-.. include:: /partials/integration_head.rst
-
 Basic Integration
 =================
 

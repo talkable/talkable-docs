@@ -1,6 +1,8 @@
-.. raw:: html
+.. _optional/passing_custom_data:
+.. include:: /partials/common.rst
 
-   <h2>Passing Custom Person Data</h2>
+Pass Custom Person Data
+=======================
 
 ``person_custom_properties`` is a variable that allows you to pass custom data
 to Talkable in the form of Key-Value pairs via integration.
@@ -44,3 +46,8 @@ Defining ``person_custom_properties`` in your integration might look something l
      }
      ...
    }
+
+.. container:: hidden
+
+   .. toctree::
+

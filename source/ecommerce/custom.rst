@@ -1,56 +1,52 @@
 .. _ecommerce/custom:
 .. include:: /partials/common.rst
 
-Custom Platform
-===============
+Other Platform
+==============
 
 .. include:: /partials/note_enterprise_integration.rst
 
-.. include:: /partials/integration_head.rst
+Site Placements
+---------------
 
-On your final checkout receipt page (which includes things like the customer's
-order number or confirmation code), you will include a Javascript snippet
-containing the order and purchased product information. This version of the
-Talkable integration code can be asynchronous or synchronous depending on your decision.
+It is all about the referral loop. Define a place where do you want your customers see Talkable campaign at. This is a place from where they will be inviting their friends — we call it "opening the loop":
+  1. On the order confirmation page after checkout
+  2. On the standalone page that's always available to anyone
+  3. Both **(recommended)**. The more places you integrate Talkable into the more boost you get from referrals channel.
 
-The parameters you will need to provide are:
+1. Basic Integration
+--------------------
 
-* Order Number
-* Order Date and Time (|iso8601| formatted datetime)
-* Customer Email Address
-* Coupon code used at checkout
-* Customer ID from your site (Optional)
-* Purchase Subtotal
-* Cart items are OPTIONAL. If provided, then for each item:
+Post Purchase
+~~~~~~~~~~~~~
 
-  * Product ID
-  * Item Unit Price
-  * Quantity
-  * Product Name/Title (Optional)
-  * Product URL (Optional)
-  * Product Image URL (Optional)
+This is a **required** placement because it acts as both opener and closer of the referral loop. On your final checkout receipt page (which includes things like the customer's
+order number or confirmation code) you will pass customer order data to Talkable. Passing order data is required in order to verify validity of referrals and exclude any possibility of fraud.
 
-Below is the sample code for a purchase with two items.
-
-.. include:: /partials/note_sample_code.rst
+Below is an example of the very basic Post Purchase integration.
 
 .. include:: /samples/ecommerce/custom/syncronous.rst
 
-`Example post-purchase integration <http://jsbin.com/sedopalalu/1>`_
+`Example of the Post Purchase integration <http://learn.talkable.com/docs/pp-basic>`_
 
-`Source for post-purchase integration <http://jsbin.com/sedopalalu/1/edit?html,js,output>`_
+Standalone
+~~~~~~~~~~
+
+This is an optional site placement which only acts as the referral loop opener. From here all your customers can invite their friends to participate in the referral program. There is no need to make a purchase in order to see Standalone campaign.
+
+Usually this page has www.site.com/**invite** URL and is linked from the main site navigation at the top.
+
+Below is an example of the very basic Standalone integration.
+
+.. include:: /samples/standalone/basic.rst
 
 |hr|
 
-.. include:: /partials/optimizing_for_viewport.rst
+2. Advanced Integration
+-----------------------
 
-`Example integration <http://jsbin.com/jowoxozoro/1>`_
+Here is a full list of things you can do with Talkable:
 
-`Source integration <http://jsbin.com/jowoxozoro/1/edit?html,output>`_
-
-|hr|
-
-.. include:: /partials/passing_custom_data.rst
-
-.. include:: /partials/traffic_source.rst
+1. :ref:`Pass custom user data <optional/passing_custom_data>`
+2. :ref:`Separate your users into segments with Traffic Source <optional/traffic_source>`
 
