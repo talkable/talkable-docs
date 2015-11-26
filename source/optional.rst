@@ -20,7 +20,9 @@ each with links to integration details.
    * - :ref:`optional/reward_fulfillment`
      - Have Talkable fulfill your rewards via PayPal or manage them manually
    * - :ref:`White Labeling <optional/white_labeling>`
-     - Change all visible URLs to your domain instead of curebit.com
+     - Change all visible URLs to your domain instead of talkable.com
+   * - :ref:`Verification Digest <optional/verification_digest>`
+     - Secure data transfer between your site and Talkable
 
 
 .. container:: hidden
@@ -32,3 +34,4 @@ each with links to integration details.
       PayPal Auto-Redirect <optional/paypal_auto_redirect>
       optional/reward_fulfillment
       White Labeling <optional/white_labeling>
+      Verification Digest <optional/verification_digest>

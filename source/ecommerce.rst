@@ -42,28 +42,10 @@ via official Talkable extension:
 
 .. raw:: html
 
-   <h2>Tag Managers</h2>
-
-If you are using |segment_io| as your tag manager, it can be used to "toggle"
-Talkable on.
-
-Instructions can be found at:
-|customer_io|
-
-.. raw:: html
-
    <h2>Getting Additional Help</h2>
 
-If you would like help integrating Talkable, or you're an enterprise client
+If you need help integrating Talkable, or you're an enterprise client
 looking for integration services, feel free to |contact_us|.
-
-.. |segment_io| raw:: html
-
-   <a href="https://segment.io/" target="_blank">Segment.io</a>
-
-.. |customer_io| raw:: html
-
-   <a href="http://customer.io/docs/basic-integration.html" target="_blank">http://customer.io/docs/basic-integration.html</a>
 
 .. container:: hidden
 
@@ -72,6 +54,10 @@ looking for integration services, feel free to |contact_us|.
       ecommerce/platform/shopify
       ecommerce/platform/magento
       ecommerce/custom
+
+   .. toctree::
+      :hidden:
+
+      ecommerce/platform
       ecommerce/verify
-      ecommerce/verification_digest
 

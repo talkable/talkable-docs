@@ -26,17 +26,17 @@ customer has purchased.
    .. toctree::
       :hidden:
 
-      3DCart <platform/3dcart>
-      BigCommerce <platform/bigcommerce>
-      CRE Loaded <platform/cre-loaded>
-      Demandware <platform/demandware>
-      FastSpring <platform/fastspring>
-      Magento Go <platform/magento-go>
-      OpenCart <platform/opencart>
-      osCommerce <platform/oscommerce>
-      Ubercart <platform/ubercart>
-      Volusion <platform/volusion>
-      VP-ASP <platform/vp-asp>
-      X-Cart <platform/x-cart>
-      Yahoo! <platform/yahoo>
-      Zen Cart <platform/zen-cart>
+      platform/3dcart
+      platform/bigcommerce
+      platform/cre-loaded
+      platform/demandware
+      platform/fastspring
+      platform/magento-go
+      platform/opencart
+      platform/oscommerce
+      platform/ubercart
+      platform/volusion
+      platform/vp-asp
+      platform/x-cart
+      platform/yahoo
+      platform/zen-cart
