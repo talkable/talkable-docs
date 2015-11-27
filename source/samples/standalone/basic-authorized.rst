@@ -11,6 +11,11 @@
     }]);
 
     var _talkable_affiliate = {
+      affiliate_member: {
+        email: 'advocate@example.com', // Optional — Advocate email address
+        first_name: 'John', // Optional — Advocate first name
+        last_name: 'Smith' // Optional — Advocate last name
+      },
       iframe: {
         width: '100%', // You can set as many standard HTML attributes in here as you need: style, height, etc.
         container: 'talkable-sa-container' // Required — ID attribute of the HTML tag where to insert Talkable campaign iframe into
@@ -23,5 +28,5 @@
   <script src="|integration_url|" type="text/javascript"></script>
   <!-- End Talkable integration code -->
 
-`Integration example <http://learn.talkable.com/docs/invite-basic>`__
+`Integration example <http://learn.talkable.com/docs/invite-basic-authorized>`__
 
