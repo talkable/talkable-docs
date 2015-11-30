@@ -11,11 +11,7 @@
     }]);
 
     var _talkable_affiliate = {
-      iframe: {
-        width: '100%', // You can set as many standard HTML attributes in here as you need: style, height, etc.
-        container: 'talkable-sa-container' // Required — ID attribute of the HTML tag where to insert Talkable campaign iframe into
-      },
-      campaign_tags: ['invite'] // Optional — Campaign tag to load after the data is passed to Talkable
+      campaign_template: { name: 'invite' } // Loads Post Purchase campaign with tag "invite"
     };
 
     _talkableq.push(['register_affiliate', _talkable_affiliate]); // Pass data to Talkable and show Standalone campaign as a result

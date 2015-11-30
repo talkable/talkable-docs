@@ -48,6 +48,9 @@ By default Post Purchase campaign loads with a preloader. Adding `style` attribu
 
 .. code-block:: html
 
+  <!-- Place Talkable Container into appropriate place in the DOM -->
+  <div id="talkable-pp-container"></div>
+
   <script>
     // All standard JS integration config goes here
     // var _talkableq = _talkableq || [];
