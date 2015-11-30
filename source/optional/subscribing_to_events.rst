@@ -36,8 +36,8 @@ Notice the callback function with two arguments:
 
 .. _HTML DOM reference: http://www.w3schools.com/jsref/dom_obj_frame.asp
 
-Default Talkable Events
------------------------
+Talkable Events
+---------------
 
 Talkable campaigns are equipped with the following set of events:
 
