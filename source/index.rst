@@ -5,20 +5,52 @@
 
 .. include:: /partials/common.rst
 
-Integrating Talkable on Your Site
-=================================
+Talkable JS Integration
+=======================
 
-Contents:
+This section comes with full documentation for Talkable integration into E-Commerce store as well as into any SaaS product.
 
-.. toctree::
-  :maxdepth: 2
++--------------------+--------------------+
+| .. toctree::       | .. toctree::       |
+|   :maxdepth: 2     |   :maxdepth: 2     |
+|                    |                    |
+|   ecommerce        |   saas             |
++--------------------+--------------------+
+| .. toctree::       | .. toctree::       |
+|   :maxdepth: 2     |   :maxdepth: 2     |
+|                    |                    |
+|   optional         |   campaigns        |
++--------------------+--------------------+
 
-  ecommerce
-  standalone
-  saas
-  campaigns
-  optional
-  web_hooks
-  api_v2
-  ios_sdk
+.. raw:: html
+
+  <p>&nbsp;</p>
+
+Talkable Back-end Integration
+=============================
+
+Follow one of these sections in case you need to get or send data from/to Talkable.
+
++--------------------+--------------------+
+| .. toctree::       | .. toctree::       |
+|   :maxdepth: 2     |   :maxdepth: 2     |
+|                    |                    |
+|   api_v2           |   web_hooks        |
++--------------------+--------------------+
+
+.. raw:: html
+
+  <p>&nbsp;</p>
+
+Talkable For Mobile
+===================
+
+Follow our instructions on how to integrate Talkable into your native mobile app.
+
++--------------------+--------------------+
+| .. toctree::       |                    |
+|   :maxdepth: 2     |                    |
+|                    |                    |
+|   ios_sdk          |                    |
++--------------------+--------------------+
 
