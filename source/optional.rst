@@ -30,8 +30,9 @@ each with links to integration details.
      - Secure data transfer between your site and Talkable
    * - :ref:`White Labeling <optional/white_labeling>`
      - Change all visible URLs to your domain instead of talkable.com
-
-subscribe to events
+   * - :ref:`Subscribing to Talkable Iframe events <optional/subscribing_to_events>`
+     - Subscribe to Talkable Iframe events such as the campaign is loaded or closed and
+       perform some updates to your site based on them.
 
 .. container:: hidden
 
@@ -43,6 +44,7 @@ subscribe to events
     optional/reward_fulfillment
     optional/traffic_source
     optional/site_placements
+    optional/subscribing_to_events
     optional/url_parameters
     optional/verification_digest
     optional/white_labeling
