@@ -44,6 +44,53 @@ Below is an example with product items passed along with purchase data (notice F
 Hiding Campaign Preloader
 -------------------------
 
+By default Post Purchase campaign loads with a preloader. Adding `style` attribute to `iframe` object changes its appearance:
+
+.. code-block:: html
+
+  <script>
+    // All standard JS integration config goes here
+    // var _talkableq = _talkableq || [];
+    // ...
+
+    var _talkable_purchase = {
+      // ...
+      iframe: {
+        container: 'talkable-pp-container', // container element to where to place the iframe
+        style: "display: none;" // this is just a standard inline CSS
+      },
+      // ...
+    };
+
+    // ...
+    // _talkableq.push(['register_purchase', _talkable_purchase]);
+  </script>
+
 Embedding as Inline Widget
 --------------------------
+
+Post Purchase campaign can be also embedded as inline widget somewhere on the page. For that we only require placing the Container element into appropriate place on the site where Talkable iframe will be placed.
+
+.. code-block:: html
+
+  <!-- Place Talkable Container into appropriate place in the DOM -->
+  <div id="talkable-pp-container"></div>
+
+  <script>
+    // All standard JS integration config goes here
+    // var _talkableq = _talkableq || [];
+    // ...
+
+    var _talkable_purchase = {
+      // ...
+      iframe: {
+        container: 'talkable-pp-container', // container element to where to place the iframe
+        style: "display: block; width: 100%;" // this is just a standard inline CSS
+      },
+      // ...
+    };
+
+    // ...
+    // _talkableq.push(['register_purchase', _talkable_purchase]);
+  </script>
 
