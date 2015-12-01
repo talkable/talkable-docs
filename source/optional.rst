@@ -13,12 +13,8 @@ each with links to integration details.
 
    * - :ref:`Automatic Coupon Creation <optional/coupons>`
      - Issue single and multi-use coupons automatically for your campaigns
-   * - :ref:`PayPal Auto-Redirect <optional/paypal_auto_redirect>`
-     - Enabling PayPal Auto-Redirect for merchants who accept PayPal as a payment method
    * - :ref:`Pass custom user data <optional/passing_custom_data>`
      - Pass additional data to Talkable to operate with it inside campaigns
-   * - :ref:`optional/reward_fulfillment`
-     - Have Talkable fulfill your rewards via PayPal or manage them manually
    * - :ref:`Segment with Traffic Source <optional/traffic_source>`
      - Brings more power and flexibility into segmenting your reporting
    * - :ref:`Site Placements <optional/site_placements>`
@@ -39,9 +35,7 @@ each with links to integration details.
   .. toctree::
 
     optional/coupons
-    optional/paypal_auto_redirect
     optional/passing_custom_data
-    optional/reward_fulfillment
     optional/traffic_source
     optional/site_placements
     optional/subscribing_to_events
