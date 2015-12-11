@@ -9,7 +9,7 @@ Friend Share Email Reminder
 Email is triggered only if Friend Share Email Reminder checkbox was checked
 on the :ref:`advocate_share_page_view` when sharing. |br|
 By default reminder email sends out in 72 hours after sharing if |friend| didn't
-use his Offer (i.e. didn't make a store purchase using coupon code).
+use their Offer (i.e. didn't make a store purchase using coupon code).
 
 Main |cta| should point to a Friend Claim Page — ``{{ short_url }}``. |br|
 To change email trigger delay open ``Editor`` / ``Extra fields`` for the

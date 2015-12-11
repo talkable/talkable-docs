@@ -24,13 +24,6 @@ If you can't complete checkout with integration@talkable.com, we'll also verify
 your integration whenever someone completes checkout on your store (but they
 won't see anything).
 
-.. note::
-
-   For merchants who accept PayPal as a payment method:
-
-   You must turn on auto-redirection to your thank you page for Talkable to work.
-   :ref:`Learn How <optional/paypal_auto_redirect>`
-
 .. container:: hidden
 
    .. toctree::

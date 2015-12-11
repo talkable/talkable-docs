@@ -5,7 +5,7 @@ Advocate Reward Paid Email
 --------------------------
 
 Email is triggered to an Advocate when Referral marked as ``Approved``. |br|
-Let Advocate know his account has been credited or a partial refund has
+Let Advocate know their account has been credited or a partial refund has
 been issued.
 
 Frequently used Variables:

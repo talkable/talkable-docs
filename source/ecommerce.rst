@@ -1,64 +1,63 @@
 .. _ecommerce:
 .. include:: /partials/common.rst
 
-E-Commerce Integrations
-#######################
+E-Commerce Integration
+######################
+
+.. raw:: html
+
+   <h2>How It Works?</h2>
+
+.. image:: /_static/img/integration.png
+   :alt: Integration,
+   :class: is-minimal
 
 Talkable integrates with e-commerce platforms or custom web sites through
-JavaScript calls to our API. But most customers can integrate quickly without
+JavaScript calls to Talkable API. But most customers can integrate quickly without
 knowing how to code.
 
-The standard integration provides end-to-end referral tracking and displays
-offers via popup after purchase. Other features are optional.
+The standard integration provides end-to-end referral tracking that has two steps:
+
+1. Opening the referral loop — this is a place from where |advocate| invites their
+   |friend|. This step is a starting point of the referral program. It can be either
+   a standalone page somewhere on your website from where all the sharing is done or
+   a post purchase popup on the order confirmation page so that each customer who
+   buys can participate in the referral program as |advocate|.
+2. Closing the referral loop — it is not customer facing piece, it only creates
+   |advocate| and |friend| relation which is called "Referral". At this point
+   Talkable checks the referral for fraud and makes decision as to rewarding
+   |advocate| for successful referral or blocking it, based on fraud setup.
 
 .. Using `raw` directive here so this subtitle doesn't get added to toctree
 .. raw:: html
 
-   <h2>E-commerce Platform Integration</h2>
+   <h2>Getting Started</h2>
 
-If you use one of the shopping carts listed in :ref:`platform integration <ecommerce/platform>` section, you can use a supported
-extension to integrate Talkable. It's often as easy as copying and pasting code,
-and we provide instructions.
+First of all please choose your platform, we make things really easy if you integrate
+via official Talkable extension:
 
-.. raw:: html
-
-   <h2>E-commerce Custom Integration</h2>
-
-If you're not using one these shopping carts, you can still use Talkable.
-With our :ref:`custom integration <ecommerce/custom>` option, you just copy
-a few lines of JavaScript to your order confirmation page and you're ready to go.
-
-.. raw:: html
-
-   <h2>Tag Managers</h2>
-
-If you are using |segment_io| as your tag manager, it can be used to "toggle"
-Talkable on.
-
-Instructions can be found at:
-|customer_io|
+1. :ref:`Shopify <ecommerce/platform/shopify>`
+2. :ref:`Magento <ecommerce/platform/magento>`
+3. :ref:`Custom platform <ecommerce/custom>`
 
 .. raw:: html
 
    <h2>Getting Additional Help</h2>
 
-If you would like help integrating Talkable, or you're an enterprise client
+If you need help integrating Talkable, or you're an enterprise client
 looking for integration services, feel free to |contact_us|.
-
-.. |segment_io| raw:: html
-
-   <a href="https://segment.io/" target="_blank">Segment.io</a>
-
-.. |customer_io| raw:: html
-
-   <a href="http://customer.io/docs/basic-integration.html" target="_blank">http://customer.io/docs/basic-integration.html</a>
 
 .. container:: hidden
 
    .. toctree::
 
+      ecommerce/platform/shopify
+      ecommerce/platform/magento
       ecommerce/custom
+
+   .. toctree::
+      :hidden:
+
       ecommerce/platform
       ecommerce/verify
-      ecommerce/verification_digest
 

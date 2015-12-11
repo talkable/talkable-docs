@@ -16,7 +16,7 @@
 
 .. |advocate| raw:: html
 
-   <abbr title="Person, who shares an offer with his Friend(s)">Advocate</abbr>
+   <abbr title="Person, who shares an offer with their Friend(s)">Advocate</abbr>
 
 .. |friend| raw:: html
 

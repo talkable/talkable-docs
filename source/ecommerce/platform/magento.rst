@@ -1,8 +1,8 @@
 .. _ecommerce/platform/magento:
 .. include:: /partials/common.rst
 
-Magento Store Integration
--------------------------
+Magento
+=======
 
 .. note::
 
@@ -54,6 +54,3 @@ integration. The extension currently supports Magento versions 1.5+
 
 :ref:`Verifying Integration Instructions <ecommerce/verify>`
 
-.. container:: hidden
-
-   .. toctree::

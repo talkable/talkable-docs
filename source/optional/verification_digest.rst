@@ -1,4 +1,4 @@
-.. _ecommerce/verification_digest:
+.. _optional/verification_digest:
 .. include:: /partials/common.rst
 
 Verification Digest

@@ -1,4 +1,5 @@
 @import url("basic.css");
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,400italic);
 
 /* -- page layout ----------------------------------------------------------- */
 html {
@@ -7,9 +8,8 @@ html {
 }
 
 body {
-    font: 200 16px/1.45 "Helvetica Neue", Helvetica, sans-serif;
+    font: 300 16px/1.45 "Roboto", sans-serif;
     color: #3e4f6c;
-    letter-spacing: 0.015em;
     margin: 0;
     padding: 0;
 }
@@ -30,8 +30,8 @@ body {
 
 .content-container {
     margin: auto;
-    max-width: 1680px;
-    padding: 0 20px;
+    max-width: 960px;
+    box-sizing: border-box;
 }
 
 a {
@@ -57,7 +57,7 @@ abbr {
     color: #fff;
     cursor: pointer;
     display: inline-block;
-    font: 200 14px/normal "Helvetica Neue", Helvetica, sans-serif;
+    font: 300 14px/normal "Roboto", sans-serif;
     padding: 8px 15px 9px;
 }
 
@@ -73,7 +73,7 @@ abbr {
 .textfield {
     border: 2px solid #c5cbd4;
     border-radius: 4px;
-    font: 200 14px/normal "Helvetica Neue", Helvetica, sans-serif;
+    font: 300 14px/normal "Roboto", sans-serif;
     height: 36px;
     padding: 9px 10px;
     width: 100%;
@@ -97,13 +97,19 @@ abbr {
 
 .bodywrapper {
     background-color: #fff;
-    border-radius: 4px;
-    bottom: 14px;
-    left: 263px;
-    overflow: auto;
-    position: fixed;
-    right: 14px;
-    top: 69px;
+    border-radius: 6px;
+    margin-left: 243px;
+    margin-bottom: 60px;
+}
+
+.bodywrapper ol,
+.bodywrapper ul {
+    margin-left: 0;
+    padding-left: 23px;
+}
+
+.bodywrapper blockquote {
+    margin: 0;
 }
 
 .body {
@@ -117,16 +123,18 @@ abbr {
     box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
 }
 
+.body img.is-minimal {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 20px 0;
+}
+
 .nav {
-    bottom: 0;
     float: left;
-    left: 0;
     line-height: 1.35;
-    overflow: auto;
-    padding: 10px 20px 30px;
-    position: fixed;
-    top: 69px;
-    width: 223px;
+    padding: 27px 20px 40px 0;
+    width: 243px;
 }
 
 .nav ul {
@@ -153,17 +161,23 @@ abbr {
 .search-form {
     display: inline-block;
     vertical-align: middle;
+    width: 50%;
 }
 
 .search-form-field {
-    margin-right: 10px;
-    width: 430px;
+    margin-right: 1%;
+    width: 75%;
 }
 
 /* HEADER */
 .header {
-    height: 41px;
-    padding: 14px 20px;
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 20px 0;
+}
+
+.header .button {
+    width: 23%;
 }
 
 .header-disclaimer {
@@ -286,6 +300,7 @@ cite, code, tt {
     letter-spacing: 0.01em;
     background-color: #FFF9DA;
     font-style: normal;
+    word-break: break-all;
 }
 
 hr {
@@ -428,9 +443,21 @@ div.hidden {
         padding-bottom: 8px;
         padding-top: 6px;
     }
+}
 
-    .header-logo {
-        margin-right: 49px;
+/* MQ */
+@media only screen and (max-width: 980px) {
+    .header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .header-disclaimer {
+        font-size: 80%;
+    }
+
+    .content-container {
+        padding: 0 20px;
     }
 }
 

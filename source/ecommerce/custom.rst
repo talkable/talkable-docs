@@ -1,60 +1,44 @@
 .. _ecommerce/custom:
 .. include:: /partials/common.rst
 
-Default Integration
-===================
+Other Platform
+==============
 
 .. include:: /partials/note_enterprise_integration.rst
 
-.. include:: /partials/integration_head.rst
+Site Placements
+---------------
 
-On your final checkout receipt page (which includes things like the customer's
-order number or confirmation code), you will include a Javascript snippet
-containing the order and purchased product information. This version of the
-Talkable integration code can be asynchronous or synchronous depending on your decision.
-
-The parameters you will need to provide are:
-
-* Order Number
-* Order Date and Time (|iso8601| formatted datetime)
-* Customer Email Address
-* Coupon code used at checkout
-* Customer ID from your site (Optional)
-* Purchase Subtotal
-* Cart items are OPTIONAL. If provided, then for each item:
-
-  * Product ID
-  * Item Unit Price
-  * Quantity
-  * Product Name/Title (Optional)
-  * Product URL (Optional)
-  * Product Image URL (Optional)
-
-Below is the sample code for a purchase with two items.
-
-.. include:: /partials/note_sample_code.rst
-
-.. include:: /samples/ecommerce/custom/syncronous.rst
-
-`Example post-purchase integration <http://jsbin.com/sedopalalu/1>`_
-
-`Source for post-purchase integration <http://jsbin.com/sedopalalu/1/edit?html,js,output>`_
+.. include:: /partials/site_placements_description.rst
 
 |hr|
 
-.. include:: /partials/optimizing_for_viewport.rst
+Basic Integration
+-----------------
 
-`Example integration <http://jsbin.com/jowoxozoro/1>`_
+Post Purchase Site Placement
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-`Source integration <http://jsbin.com/jowoxozoro/1/edit?html,output>`_
+.. include:: /partials/post_purchase_description.rst
+
+Below is an example of the very basic Post Purchase integration.
+
+.. include:: /samples/ecommerce/custom/post_purchase_basic.rst
+
+`Integration example <http://learn.talkable.com/docs/pp-basic>`_
+
+:ref:`Learn more <optional/site_placements/post_purchase>` about more advanced features of Post Purchase integration.
 
 |hr|
 
-.. include:: /partials/passing_custom_data.rst
+Advanced Features
+-----------------
 
-.. include:: /partials/traffic_source.rst
+Here is a full list of things you can do with Talkable:
 
-.. container:: hidden
+.. toctree::
+  :maxdepth: 1
+  :glob:
 
-   .. toctree::
+  /optional/*
 

@@ -1,7 +1,3 @@
-.. raw:: html
-
-   <h2>Main Integration Code</h2>
-
 .. code-block:: html
 
   <!-- Begin Talkable integration code -->
@@ -61,3 +57,5 @@
   </script>
   <script src="|integration_url|" type="text/javascript"></script>
   <!-- End Talkable integration code -->
+
+

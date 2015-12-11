@@ -6,7 +6,7 @@
 Friend Share Email
 ------------------
 
-Email is triggered by an |advocate| to his |friend|\s from the
+Email is triggered by an |advocate| to their |friend|\s from the
 :ref:`advocate_share_page_view`. |br|
 The main purpose of this email is to invite a |friend| by showing a personal
 Share Message from |advocate| along with a unique Friend Claim Page link. Some
