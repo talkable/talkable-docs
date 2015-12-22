@@ -23,15 +23,17 @@ Below is the basic sample code for registering an Event with only required field
     var _talkableq = _talkableq || [];
 
     // Talkable Event Data object where you set the data you are going to pass
-    var talkableEventData = {
-      event_number: '100011',
-      event_category: 'Signups'
+    var _talkable_data = {
+      event: {
+        event_number: '100011',
+        event_category: 'Signups'
+      }
     };
 
     // Registering an Event at Talkable
     _talkableq.push(
       ['init', { site_id: 'YOUR_TALKABLE_SITE_ID' }],
-      ['register_event', talkableEventData]
+      ['register_event', _talkable_data]
     );
   </script>
   <script src="|integration_url|" type="text/javascript"></script>
@@ -59,16 +61,19 @@ In addition to our basic required dataset we allow you to pass us a lot more dat
     var _talkableq = _talkableq || [];
 
     // Talkable Event Data object where you set the data you are going to pass
-    var talkableEventData = {
-      event_number: '100011', // REQUIRED - a unique ID of the Event
-      event_category: 'Signups', // REQUIRED - Event Category that the Event will belong to
-      email: 'customer@gmail.com', // OPTIONAL, RECOMMENDED - customer email the Event is associated with. If you pass an email the customer will be logged in with it immediately and as a result they will see Advocate Share Page instead of a Signup. It is a good practice to always pass an email not to ask customers to login themselves.
+    var _talkable_data = {
+      event: {
+        event_number: '100011', // REQUIRED - a unique ID of the Event
+        event_category: 'Signups', // REQUIRED - Event Category that the Event will belong to
+        email: 'customer@gmail.com', // OPTIONAL, RECOMMENDED - customer email the Event is associated with. If you pass an email the customer will be logged in with it immediately and as a result they will see Advocate Share Page instead of a Signup. It is a good practice to always pass an email not to ask customers to login themselves.
+        subtotal: '23.97', // OPTIONAL - if the Event has a value (paid subscription for example) always pass it along, you can then analyze your total sales numbers inside Talkable Reports
+        coupon_code: 'SAVE20', // OPTIONAL - provide a coupon code if the customer applied it
+        customer_id: '1234567890', // OPTIONAL - internal customer ID, for tracking
+        first_name: 'Name',  // OPTIONAL - Customer First Name
+        last_name: 'Surname'  // OPTIONAL - Customer Last Name
+        // , traffic_source: 'Signup page' // OPTIONAL - indicate person traffic source. Can be used as segmentation parameter in reports.
+      },
       campaign_tags: ['default'], // OPTIONAL - Campaign tags used to target specific campaign for the offer
-      subtotal: '23.97', // OPTIONAL - if the Event has a value (paid subscription for example) always pass it along, you can then analyze your total sales numbers inside Talkable Reports
-      coupon_code: 'SAVE20', // OPTIONAL - provide a coupon code if the customer applied it
-      customer_id: '1234567890', // OPTIONAL - internal customer ID, for tracking
-      first_name: 'Name',  // OPTIONAL - Customer First Name
-      last_name: 'Surname',  // OPTIONAL - Customer Last Name
       iframe: { // REQUIRED - any valid HTML attributes can go in here
         container: 'talkable-sa-container', // Tell Talkable where to insert the iframe (this is HTML id attribute value)
         width: '100%' // These are standard HTML attributes, feel free to add as many you need
@@ -79,7 +84,6 @@ In addition to our basic required dataset we allow you to pass us a lot more dat
       //     key1: 'value1', // String value
       //     key2: '123.2' // Numeric value
       // }
-      // , traffic_source: 'Signup page' // OPTIONAL - indicate person traffic source. Can be used as segmentation parameter in reports.
     };
 
     // Registering an Event at Talkable
@@ -93,7 +97,7 @@ In addition to our basic required dataset we allow you to pass us a lot more dat
           // , server: 'https://www.talkable.com' // OPTIONAL - your custom domain, needs to be setup as an alias to talkable.com (Enterprise clients only)
         }
       ],
-      ['register_event', talkableEventData] // Pass Event to Talkable
+      ['register_event', _talkable_data] // Pass Event to Talkable
     );
   </script>
   <script src="|integration_url|" type="text/javascript"></script>

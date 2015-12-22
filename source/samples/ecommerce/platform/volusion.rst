@@ -20,14 +20,16 @@
         });
       });
 
-      var _talkable_order_details = {
-        order_number: Order[0],
-        email: Order[9],
-        subtotal: Order[3],
-        items: _talkable_order_items
+      var _talkable_data = {
+        purchase: {
+          order_number: Order[0],
+          email: Order[9],
+          subtotal: Order[3],
+          items: _talkable_order_items
+        }
       };
 
-      _talkableq.push(['register_purchase', _talkable_order_details]);
+      _talkableq.push(['register_purchase', _talkable_data]);
     }
   </script>
   <!-- End Talkable integration code -->

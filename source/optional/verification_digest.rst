@@ -39,14 +39,16 @@ In the example code below we are passing Verification Digest string to Talkable 
 
 .. code-block:: javascript
 
-    var _talkable_order_details = {
-       order_number: '100011', // REQUIRED - Order number
-       order_date: '2014-04-15T08:18:44+00:00', // REQUIRED - Order Date and Time (ISO 8601 formatted datetime)
-       email: 'customer@example.com', // REQUIRED - Customer Email Address
-       subtotal: '23.97', // REQUIRED - Purchase Subtotal
-       coupon_code: 'SAVE20', // REQUIRED - Coupon code used at checkout, multiple coupons allowed as JS array: ['SAVE20', 'FREE-SHIPPING']. Pass null if there is no coupon code.
-       ...
-       verification_digest: '60a511b9d8d45fe2ea8568e21138f517761be05ffda693135c68c2ec551ee507'
+    var _talkable_data = {
+      purchase: {
+        order_number: '100011', // REQUIRED - Order number
+        order_date: '2014-04-15T08:18:44+00:00', // REQUIRED - Order Date and Time (ISO 8601 formatted datetime)
+        email: 'customer@example.com', // REQUIRED - Customer Email Address
+        subtotal: '23.97', // REQUIRED - Purchase Subtotal
+        coupon_code: 'SAVE20', // REQUIRED - Coupon code used at checkout, multiple coupons allowed as JS array: ['SAVE20', 'FREE-SHIPPING']. Pass null if there is no coupon code.
+      },
+      ...
+      verification_digest: '60a511b9d8d45fe2ea8568e21138f517761be05ffda693135c68c2ec551ee507'
     }
 
 Digest generation algorithm
