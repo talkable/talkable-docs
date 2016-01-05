@@ -56,7 +56,7 @@ By default Post Purchase campaign loads with a preloader. Adding `style` attribu
     // var _talkableq = _talkableq || [];
     // ...
 
-    var _talkable_purchase = {
+    var _talkable_data = {
       // ...
       iframe: {
         container: 'talkable-pp-container', // container element to where to place the iframe
@@ -66,7 +66,7 @@ By default Post Purchase campaign loads with a preloader. Adding `style` attribu
     };
 
     // ...
-    // _talkableq.push(['register_purchase', _talkable_purchase]);
+    // _talkableq.push(['register_purchase', _talkable_data]);
   </script>
 
 Embedding as Inline Widget
@@ -84,7 +84,7 @@ Post Purchase campaign can be also embedded as inline widget somewhere on the pa
     // var _talkableq = _talkableq || [];
     // ...
 
-    var _talkable_purchase = {
+    var _talkable_data = {
       // ...
       iframe: {
         container: 'talkable-pp-container', // container element to where to place the iframe
@@ -94,6 +94,6 @@ Post Purchase campaign can be also embedded as inline widget somewhere on the pa
     };
 
     // ...
-    // _talkableq.push(['register_purchase', _talkable_purchase]);
+    // _talkableq.push(['register_purchase', _talkable_data]);
   </script>
 

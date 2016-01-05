@@ -36,7 +36,7 @@ Defining ``person_custom_properties`` in your integration might look something l
 
 .. code-block:: javascript
 
-   var _talkable_order_details = {
+   var _talkable_data = {
      ...
      person_custom_properties: {
        person_occupation: 'marketing',
