@@ -78,7 +78,7 @@ we suggest the following guidelines:
    that may be combined to get larger discounts on your site.
    Do not be afraid to make changes in your approvals policy.
    If necessary, move to manual approvals of your program for a short
-   period of time to diagnose any issues and then re configure your approval
+   period of time to diagnose any issues and then re-configure your approval
    process and fraud settings to address those issues.
 
    |
