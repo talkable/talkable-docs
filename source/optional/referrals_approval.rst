@@ -34,7 +34,7 @@ to configure a returns api to automatically check for returns of your product
 before crediting a reward.
 
 General Approval Policy Recommendations
----------------
+---------------------------------------
 
 The safest programs either make the investment in automatic approval
 verifications via api for returns and pass additional data for algorithmic
