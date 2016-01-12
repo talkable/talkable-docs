@@ -27,7 +27,6 @@
           coupon_code: checkout.discount ? checkout.discount.code : null,
           items: _talkable_order_items,
         },
-        responsive: true,
       };
 
       _talkableq.push(['register_purchase', _talkable_data]);
