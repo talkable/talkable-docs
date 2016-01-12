@@ -15,6 +15,9 @@ each with links to integration details.
      - Issue single and multi-use coupons automatically for your campaigns
    * - :ref:`Pass custom user data <optional/passing_custom_data>`
      - Pass additional data to Talkable to operate with it inside campaigns
+   * - :ref:`Referrals Approval <optional/referrals_approval>`
+     - Learn about Talkable Fraud settings, why they are important
+       and how to find a right Fraud Profile that works best for your site.
    * - :ref:`Segment with Traffic Source <optional/traffic_source>`
      - Brings more power and flexibility into segmenting your reporting
    * - :ref:`Site Placements <optional/site_placements>`
@@ -36,10 +39,10 @@ each with links to integration details.
 
     optional/coupons
     optional/passing_custom_data
+    optional/referrals_approval
     optional/traffic_source
     optional/site_placements
     optional/subscribing_to_events
     optional/url_parameters
     optional/verification_digest
     optional/white_labeling
-
