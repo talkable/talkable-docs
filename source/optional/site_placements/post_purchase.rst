@@ -52,21 +52,17 @@ By default Post Purchase campaign loads with a preloader. Adding `style` attribu
   <div id="talkable-pp-container"></div>
 
   <script>
-    // All standard JS integration config goes here
-    // var _talkableq = _talkableq || [];
-    // ...
-
     var _talkable_data = {
+      // purchase: {
       // ...
+      // },
       iframe: {
-        container: 'talkable-pp-container', // container element to where to place the iframe
+        container: 'talkable-pp-container', // container element where to place the iframe
         style: "display: none;" // this is just a standard inline CSS
-      },
-      // ...
+      }
     };
 
-    // ...
-    // _talkableq.push(['register_purchase', _talkable_data]);
+    _talkableq.push(['register_purchase', _talkable_data]);
   </script>
 
 Embedding as Inline Widget
@@ -80,20 +76,41 @@ Post Purchase campaign can be also embedded as inline widget somewhere on the pa
   <div id="talkable-pp-container"></div>
 
   <script>
-    // All standard JS integration config goes here
-    // var _talkableq = _talkableq || [];
-    // ...
-
     var _talkable_data = {
+      // purchase: {
       // ...
+      // },
       iframe: {
-        container: 'talkable-pp-container', // container element to where to place the iframe
+        container: 'talkable-pp-container', // container element where to place the iframe
         style: "display: block; width: 100%;" // this is just a standard inline CSS
-      },
-      // ...
+      }
     };
 
-    // ...
-    // _talkableq.push(['register_purchase', _talkable_data]);
+    _talkableq.push(['register_purchase', _talkable_data]);
+  </script>
+
+Overriding Customer Data
+------------------------
+
+In case you need to override customer data during Purchase registration include `customer` object in addition to the rest of the data:
+
+.. code-block:: html
+
+  <!-- Place Talkable Container into appropriate place in the DOM -->
+  <div id="talkable-pp-container"></div>
+
+  <script>
+    var _talkable_data = {
+      // purchase: {
+      // ...
+      // },
+      customer {
+        email 'overridden@example.com',
+        first_name: 'OverriddenName',
+        last_name: 'OverriddenSurname'
+      }
+    };
+
+    _talkableq.push(['register_purchase', _talkable_data]);
   </script>
 
