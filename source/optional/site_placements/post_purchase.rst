@@ -22,7 +22,8 @@ On the order confirmation page the following integration script needs to be incl
 
 .. note::
 
-  Purchase subtotal amount should not include the discount, shipping, and taxes.
+  1. Purchase subtotal amount should not include the discount, shipping, and taxes.
+  2. Make sure to pass email address of the customer, otherwise Purchase won't be registered. See `Overriding Customer Data`_.
 
 .. container:: hidden
 
@@ -49,7 +50,7 @@ By default Post Purchase campaign loads with a preloader. Adding `style` attribu
 .. code-block:: html
 
   <!-- Place Talkable Container into appropriate place in the DOM -->
-  <div id="talkable-pp-container"></div>
+  <div id="talkable-post-purchase"></div>
 
   <script>
     var _talkable_data = {
@@ -57,7 +58,7 @@ By default Post Purchase campaign loads with a preloader. Adding `style` attribu
       // ...
       // },
       iframe: {
-        container: 'talkable-pp-container', // container element where to place the iframe
+        container: 'talkable-post-purchase', // container element where to place the iframe
         style: "display: none;" // this is just a standard inline CSS
       }
     };
@@ -73,7 +74,7 @@ Post Purchase campaign can be also embedded as inline widget somewhere on the pa
 .. code-block:: html
 
   <!-- Place Talkable Container into appropriate place in the DOM -->
-  <div id="talkable-pp-container"></div>
+  <div id="talkable-post-purchase"></div>
 
   <script>
     var _talkable_data = {
@@ -81,7 +82,7 @@ Post Purchase campaign can be also embedded as inline widget somewhere on the pa
       // ...
       // },
       iframe: {
-        container: 'talkable-pp-container', // container element where to place the iframe
+        container: 'talkable-post-purchase', // container element where to place the iframe
         style: "display: block; width: 100%;" // this is just a standard inline CSS
       }
     };
@@ -97,7 +98,7 @@ In case you need to override customer data during Purchase registration include 
 .. code-block:: html
 
   <!-- Place Talkable Container into appropriate place in the DOM -->
-  <div id="talkable-pp-container"></div>
+  <div id="talkable-post-purchase"></div>
 
   <script>
     var _talkable_data = {

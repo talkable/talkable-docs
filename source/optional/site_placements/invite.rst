@@ -30,16 +30,30 @@ Once you have created the page below is an example of the basic Invite campaign 
 
   You can place <script> tag anywhere in the HEAD or BODY, however keep in mind that the DIV container tag should be placed into a proper place, this is where Talkable campaign iframe will live.
 
-Authorizing Advocate
-~~~~~~~~~~~~~~~~~~~~
+Overriding Customer Data
+------------------------
 
-If the customer email address is available always pass it in order to create smooth user experience and show :ref:`Advocate Share Page <campaigns/views/offers_show>` instead of :ref:`Advocate Signup Page <campaigns/views/affiliate_members_new>`. It is recommended to include first name and last name as well, this information can then be used to make campaign more personal to |Advocate| friends.
+In case you need to override customer data include `customer` object in addition to the rest of the data:
 
-.. include:: /samples/standalone/basic-authorized.rst
+.. code-block:: html
 
-.. note::
+  <!-- Place Talkable Container into appropriate place in the DOM -->
+  <div id="talkable-invite"></div>
 
-  Passing email address is a great way to ensure Advocate will always see their previos offer. Otherwise for each new signup with exact same email address Talkable creates new affiliate member without any sharing history.
+  <script>
+    var _talkable_data = {
+      // campaign_template: {
+      // ...
+      // },
+      customer {
+        email 'overridden@example.com',
+        first_name: 'OverriddenName',
+        last_name: 'OverriddenSurname'
+      }
+    };
+
+    _talkableq.push(['register_affiliate', _talkable_data]);
+  </script>
 
 .. container:: hidden
 

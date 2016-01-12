@@ -53,7 +53,7 @@ In addition to our basic required dataset we allow you to pass us a lot more dat
 .. code-block:: html
 
   <!-- Talkable iframe container, you are free to control its place in the DOM -->
-  <div id="talkable-sa-container"></div>
+  <div id="talkable-invite"></div>
 
   <!-- Begin Talkable integration code -->
   <script>
@@ -75,7 +75,7 @@ In addition to our basic required dataset we allow you to pass us a lot more dat
       },
       campaign_tags: ['default'], // OPTIONAL - Campaign tags used to target specific campaign for the offer
       iframe: { // REQUIRED - any valid HTML attributes can go in here
-        container: 'talkable-sa-container', // Tell Talkable where to insert the iframe (this is HTML id attribute value)
+        container: 'talkable-invite', // Tell Talkable where to insert the iframe (this is HTML id attribute value)
         width: '100%' // These are standard HTML attributes, feel free to add as many you need
       },
       responsive: true // OPTIONAL - fit iframe into any viewport (iframe height will be changed on window resize as well) which allows Talkable to make web pages responsive. 'false' disables it.

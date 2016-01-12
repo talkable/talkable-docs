@@ -22,7 +22,7 @@ your main layout which is used on every page. This is initialization of the Talk
     }]);
 
     _talkableq.push(['authenticate_customer', {
-      email: 'customer@example.com', // Optional - Customer email
+      email: 'customer@example.com', // Optional - Customer email, it is recommended to always pass it when available
       first_name: 'Name', // Optional - Customer first name
       last_name: 'Surname' // Optional - Customer last name
     }]);

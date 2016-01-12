@@ -1,7 +1,7 @@
 .. code-block:: html
 
   <!-- Begin Talkable integration code -->
-  <div id="talkable-post-purchase-container"></div>
+  <div id="talkable-post-purchase"></div>
 
   <script>
     var _talkable_data = {
