@@ -78,6 +78,9 @@ and solid ones:
 3. Choose free Google Font http://www.google.com/fonts
 
 
+
+.. _responsive-views:
+
 Responsive views
 -----
 
