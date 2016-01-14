@@ -27,6 +27,9 @@ Below is the basic sample code for registering an Event with only required field
       event: {
         event_number: '100011',
         event_category: 'Signups'
+      },
+      campaign_template: {
+        name: 'post-purchase'
       }
     };
 
