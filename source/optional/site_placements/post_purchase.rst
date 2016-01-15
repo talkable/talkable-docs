@@ -1,6 +1,8 @@
 .. _optional/site_placements/post_purchase:
 .. include:: /partials/common.rst
 
+.. _post_purchase_campaign:
+
 Post Purchase
 =============
 

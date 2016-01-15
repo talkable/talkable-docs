@@ -10,6 +10,9 @@
         subtotal: '23.97', // Required - Purchase Subtotal
         coupon_code: 'SAVE20' // Required - Coupon code used at checkout, multiple coupons allowed as JS array: ['SAVE20', 'FREE-SHIPPING']. Pass null if when no coupon code was used at the checkout.
       },
+      customer: {
+        email: 'customer@example.com' // Required - customer email
+      },
       campaign_template: { name: 'post-purchase' } // Loads Post Purchase campaign with tag "post-purchase"
     };
 
