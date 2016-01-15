@@ -46,11 +46,12 @@ When the Event is registered successfully it appears inside Events Report. |br|
 
 |hr|
 
-Showing Custom Campaign
-~~~~~~~~~~~~~~~~~~~~~~~
+Showing Different Campaign
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In the example above we show :ref:`post_purchase_campaign` Campaign as a result of Event registration.
-However you can show any other Talkable Campaign instead. Here is an example how to show :ref:`invite_campaign`:
+However you can show any other Talkable Campaign instead since there are 8 of them.
+Here is an example how to show :ref:`invite_campaign`:
 
 .. code-block:: html
 
