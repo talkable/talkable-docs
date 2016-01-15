@@ -18,6 +18,7 @@ Flow
 Basic Integration
 -----------------
 
+First of all make sure you completed :ref:`Talkable JS integration initialization <ecommerce/custom>`.
 Invite campaign integration does not require any data to be passed to Talkable since it only acts as the referral loop opener (referral is not created at this point).
 
 The only requirement for it is a page on the site where it is going to placed. It is recommended that this page is always available to anyone on your site, even not logged in customers.

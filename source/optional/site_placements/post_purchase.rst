@@ -16,7 +16,7 @@ Flow
 Basic Integration
 -----------------
 
-On the order confirmation page the following integration script needs to be included:
+When the Talkable JS integration library is all set (:ref:`see 1 step here <ecommerce/custom>`) on the order confirmation page the following integration script needs to be included:
 
 .. include:: /samples/ecommerce/custom/post_purchase_basic.rst
 
