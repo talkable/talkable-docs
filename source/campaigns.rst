@@ -23,8 +23,9 @@ familiar with Liquid templating in Shopify.
 
 To start editing Views simple visit ``Editor`` page from the Campaign dashboard.
 
-Site Placements & Campaign Structure
-------------------------------------
+.. raw:: html
+
+  <h2>Site Placements & Campaign Structure</h2>
 
 +-------------------------------+-----------------------------+
 | .. toctree::                  | .. toctree::                |
@@ -33,8 +34,9 @@ Site Placements & Campaign Structure
 |   campaigns/site_placements   |   campaigns/views           |
 +-------------------------------+-----------------------------+
 
-Campaign Setup & Tutorials
---------------------------
+.. raw:: html
+
+  <h2>Campaign Setup & Tutorials</h2>
 
 +-------------------------------+-----------------------------+
 | .. toctree::                  | .. toctree::                |
@@ -45,8 +47,9 @@ Campaign Setup & Tutorials
 |   campaigns/localization      |                             |
 +-------------------------------+-----------------------------+
 
-Designer Guide
---------------
+.. raw:: html
+
+  <h2>Designer Guide</h2>
 
 +-------------------------------+-----------------------------+
 | .. toctree::                  |                             |
