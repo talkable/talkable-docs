@@ -13,5 +13,3 @@
   </script>
   <!-- End Talkable integration code -->
 
-`Integration example <http://learn.talkable.com/docs/invite-basic>`__
-
