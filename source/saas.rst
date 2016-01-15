@@ -27,7 +27,6 @@ Below is an example of registering an Event and showing :ref:`post_purchase_camp
   <div id="talkable-post-purchase"></div>
 
   <script>
-    // Talkable Event Data object where you set the data you are going to pass
     var _talkable_data = {
       event: {
         event_number: '100011', // Required - unique Event id
@@ -47,52 +46,58 @@ When the Event is registered successfully it appears inside Events Report. |br|
 
 |hr|
 
-Advanced Integration
---------------------
+Showing Custom Campaign
+~~~~~~~~~~~~~~~~~~~~~~~
 
-In addition to our basic required dataset we allow you to pass us a lot more data and parameters you might need. Learn what each parameters does from the comment lines bellow:
+In the example above we show :ref:`post_purchase_campaign` Campaign as a result of Event registration.
+However you can show any other Talkable Campaign instead. Here is an example how to show :ref:`invite_campaign`:
 
 .. code-block:: html
 
-  <!-- Talkable iframe container, you are free to control its place in the DOM -->
-  <div id="talkable-post-purchase"></div>
-
   <!-- Begin Talkable integration code -->
+  <div id="talkable-invite"></div>
+
   <script>
-    // Talkable Event Data object where you set the data you are going to pass
     var _talkable_data = {
       event: {
-        event_number: '100011', // REQUIRED - a unique ID of the Event
-        event_category: 'Signups', // REQUIRED - Event Category that the Event will belong to
-        subtotal: '23.97', // OPTIONAL - if the Event has a value (paid subscription for example) always pass it along, you can then analyze your total sales numbers inside Talkable Reports
-        coupon_code: 'SAVE20', // OPTIONAL - provide a coupon code if the customer applied it
-        traffic_source: 'Signup page' // OPTIONAL - indicate person traffic source. Can be used as segmentation parameter in reports.
+        event_number: '100011', // Required - unique Event id
+        event_category: 'Signups' // Required - Event category
       },
-      customer: {
-        email: 'customer@gmail.com', // OPTIONAL, RECOMMENDED - customer email the Event is associated with. If you pass an email the customer will be logged in with it immediately and as a result they will see Advocate Share Page instead of a Signup. It is a good practice to always pass an email not to ask customers to login themselves.
-        customer_id: '1234567890', // OPTIONAL - internal customer ID, for tracking
-        first_name: 'Name',  // OPTIONAL - Customer First Name
-        last_name: 'Surname', // OPTIONAL - Customer Last Name
-        // OPTIONAL - additional customer properties, in case you want to use some additional data inside Campaign Views
-        person_custom_properties: {
-          key1: 'value1', // String value
-          key2: '123.2' // Numeric value
-        }
-      },
-      campaign_template: { name: 'post-purchase' },
-      // campaign_tags: ['custom'], // OPTIONAL - Campaign tags used to target specific campaign for the offer, use it instead of campaign_template
-      // iframe: { // OPTIONAL - any valid HTML attributes can go in here
-      //   container: 'talkable-post-purchase', // Tell Talkable where to insert the iframe (this is HTML id attribute value)
-      //   width: '100%' // These are standard HTML attributes, feel free to add as many you need
-      // }
+      campaign_template: {
+        name: 'invite' // Loads Invite campaign with tag "invite"
+      }
     };
 
-    // Pass Event to Talkable
+    // Passing Event to Talkable
     _talkableq.push(['register_event', _talkable_data]);
   </script>
-  <!-- End Talkable integration code -->
 
-|hr|
+.. note::
+
+  Make sure that the Container (the DIV tag where Talkable iframe inserts to) ID corresponds to `campaign_template.name` value.
+  Otherwise Talkable Campaign will be shown below your page content at the very bottom.
+
+Correspondence between Container ID and `campaign_template.name`:
+
++----------------------------------+---------------------------------+-----------------------------------+
+| Talkable Campaign                | Container ID                    | campaign_template.name            |
++==================================+=================================+===================================+
+| :ref:`post_purchase_campaign`    | `talkable-post-purchase`        | `post-purchase`                   |
++----------------------------------+---------------------------------+-----------------------------------+
+| Post Purchase Full Screen Image  | `talkable-post-purchase`        | `post-purchase-full-bleed`        |
++----------------------------------+---------------------------------+-----------------------------------+
+| :ref:`invite_campaign`           | `talkable-invite`               | `invite`                          |
++----------------------------------+---------------------------------+-----------------------------------+
+| Invite Full Screen Image         | `talkable-invite`               | `invite-full-bleed`               |
++----------------------------------+---------------------------------+-----------------------------------+
+| Advocate Dashboard               | `talkable-dashboard`            | `dashboard`                       |
++----------------------------------+---------------------------------+-----------------------------------+
+| Every Visitor Popup              | `talkable-popup`                | `popup`                           |
++----------------------------------+---------------------------------+-----------------------------------+
+| Floating Widget Popup            | `talkable-popup`                | `popup-trigger`                   |
++----------------------------------+---------------------------------+-----------------------------------+
+| New Visitor Popup                | `talkable-popup`                | `new-visitor-popup`               |
++----------------------------------+---------------------------------+-----------------------------------+
 
 Advanced Features
 -----------------
