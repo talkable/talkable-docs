@@ -3,9 +3,9 @@ Define a place where do you want your customers see Talkable campaign at. This i
 .. list-table::
    :widths: 35 65
 
-   * - :ref:`Post Purchase <optional/site_placements/post_purchase>`
+   * - :ref:`post_purchase_campaign`
      - On the order confirmation page after checkout
-   * - :ref:`Invite <optional/site_placements/invite>`
+   * - :ref:`invite_campaign`
      - On the standalone page that's always available to anyone
    * - Every Visitor Popup
      - On every page as an email capture popup to everyone who visits your site

@@ -1,5 +1,7 @@
-.. _optional/site_placements/invite:
+.. _campaigns/site_placements/invite:
 .. include:: /partials/common.rst
+
+.. _invite_campaign:
 
 Invite
 ======
