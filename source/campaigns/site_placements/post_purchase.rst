@@ -107,8 +107,8 @@ In case you need to override customer data during Purchase registration include 
       // purchase: {
       // ...
       // },
-      customer {
-        email 'overridden@example.com',
+      customer: {
+        email: 'overridden@example.com',
         first_name: 'OverriddenName',
         last_name: 'OverriddenSurname'
       }

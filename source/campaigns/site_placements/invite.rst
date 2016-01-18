@@ -48,8 +48,8 @@ In case you need to override customer data include `customer` object in addition
       // campaign_template: {
       // ...
       // },
-      customer {
-        email 'overridden@example.com',
+      customer: {
+        email: 'overridden@example.com',
         first_name: 'OverriddenName',
         last_name: 'OverriddenSurname'
       }
