@@ -11,8 +11,10 @@
       var _talkable_data = {
         purchase: {
           order_number: '%%ORDER_ID%%', /* REQUIRED - Order number */
-          email: '%%ORDER_EMAIL%%', /* REQUIRED - Customer Email Address */
           subtotal: '%%ORDER_SUBTOTAL_DISCOUNTED%%', /* REQUIRED - Purchase Subtotal */
+        },
+        customer: {
+          email: '%%ORDER_EMAIL%%' /* REQUIRED - Customer Email Address */
         }
       };
 

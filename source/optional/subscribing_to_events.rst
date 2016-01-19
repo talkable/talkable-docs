@@ -13,7 +13,7 @@ Due to same-origin_ policy it is not possible to pass/get any data to the iframe
 
 In order to subscribe to an iframe event you need to know `id` HTML attribute of the container that holds it, and the event name. Below is an example of subscription to `offer_loaded` Talkable iframe event.
 
-Given we have integrated :ref:`Invite <optional/site_placements/invite>` Talkable campaign iframe, its JS-generated HTML tag looks similar to the following:
+Given we have integrated :ref:`invite_campaign` Talkable campaign iframe, its JS-generated HTML tag looks similar to the following:
 
 .. code-block:: html
 

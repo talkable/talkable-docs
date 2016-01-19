@@ -20,9 +20,6 @@ each with links to integration details.
        and how to find a right Fraud Profile that works best for your site.
    * - :ref:`Segment with Traffic Source <optional/traffic_source>`
      - Brings more power and flexibility into segmenting your reporting
-   * - :ref:`Site Placements <optional/site_placements>`
-     - Integrate Talkable campaigns into every place possible to boost
-       referral performance even further
    * - :ref:`Using URL Parameters <optional/url_parameters>`
      - Override some of the parameters right through URL query string
    * - :ref:`Verification Digest <optional/verification_digest>`
@@ -41,7 +38,6 @@ each with links to integration details.
     optional/passing_custom_data
     optional/referrals_approval
     optional/traffic_source
-    optional/site_placements
     optional/subscribing_to_events
     optional/url_parameters
     optional/verification_digest

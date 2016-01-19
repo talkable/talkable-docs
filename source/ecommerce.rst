@@ -4,6 +4,18 @@
 E-Commerce Integration
 ######################
 
+.. Using `raw` directive here so this subtitle doesn't get added to toctree
+.. raw:: html
+
+   <h2>Getting Started</h2>
+
+First of all please choose your platform, we make things really easy if you integrate
+via official Talkable extension:
+
+1. :ref:`Shopify <ecommerce/platform/shopify>`
+2. :ref:`Magento <ecommerce/platform/magento>`
+3. :ref:`Custom platform <ecommerce/custom>`
+
 .. raw:: html
 
    <h2>How It Works?</h2>
@@ -27,18 +39,6 @@ The standard integration provides end-to-end referral tracking that has two step
    |advocate| and |friend| relation which is called "Referral". At this point
    Talkable checks the referral for fraud and makes decision as to rewarding
    |advocate| for successful referral or blocking it, based on fraud setup.
-
-.. Using `raw` directive here so this subtitle doesn't get added to toctree
-.. raw:: html
-
-   <h2>Getting Started</h2>
-
-First of all please choose your platform, we make things really easy if you integrate
-via official Talkable extension:
-
-1. :ref:`Shopify <ecommerce/platform/shopify>`
-2. :ref:`Magento <ecommerce/platform/magento>`
-3. :ref:`Custom platform <ecommerce/custom>`
 
 .. raw:: html
 

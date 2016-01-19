@@ -42,12 +42,12 @@ In the example code below we are passing Verification Digest string to Talkable 
     var _talkable_data = {
       purchase: {
         order_number: '100011', // REQUIRED - Order number
-        order_date: '2014-04-15T08:18:44+00:00', // REQUIRED - Order Date and Time (ISO 8601 formatted datetime)
-        email: 'customer@example.com', // REQUIRED - Customer Email Address
         subtotal: '23.97', // REQUIRED - Purchase Subtotal
-        coupon_code: 'SAVE20', // REQUIRED - Coupon code used at checkout, multiple coupons allowed as JS array: ['SAVE20', 'FREE-SHIPPING']. Pass null if there is no coupon code.
+        coupon_code: 'SAVE20' // REQUIRED - Coupon code used at checkout, multiple coupons allowed as JS array: ['SAVE20', 'FREE-SHIPPING']. Pass null if there is no coupon code.
       },
-      ...
+      customer: {
+        email: 'customer@example.com'
+      },
       verification_digest: '60a511b9d8d45fe2ea8568e21138f517761be05ffda693135c68c2ec551ee507'
     }
 
@@ -68,7 +68,6 @@ Suppose we have a purchase creation request with the following parameters:
 
 * event_category: 'purchase'
 * order_number: '100011'
-* email: example@customer.com
 * subtotal: 83.32
 * order_date: 2014-01-01T15:30:24+00:00
 * coupon_code: EFF-32 and FREE-SHIPPING (2 code for single purchase)

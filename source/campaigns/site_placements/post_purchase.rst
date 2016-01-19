@@ -1,5 +1,7 @@
-.. _optional/site_placements/post_purchase:
+.. _campaigns/site_placements/post_purchase:
 .. include:: /partials/common.rst
+
+.. _post_purchase_campaign:
 
 Post Purchase
 =============
@@ -16,13 +18,14 @@ Flow
 Basic Integration
 -----------------
 
-On the order confirmation page the following integration script needs to be included:
+When the Talkable JS integration library is all set (:ref:`see 1 step here <ecommerce/custom>`) on the order confirmation page the following integration script needs to be included:
 
 .. include:: /samples/ecommerce/custom/post_purchase_basic.rst
 
 .. note::
 
-  Purchase subtotal amount should not include the discount, shipping, and taxes.
+  1. Purchase subtotal amount should not include the discount, shipping, and taxes.
+  2. Make sure to pass email address of the customer, otherwise Purchase won't be registered. See `Overriding Customer Data`_.
 
 .. container:: hidden
 
@@ -49,24 +52,20 @@ By default Post Purchase campaign loads with a preloader. Adding `style` attribu
 .. code-block:: html
 
   <!-- Place Talkable Container into appropriate place in the DOM -->
-  <div id="talkable-pp-container"></div>
+  <div id="talkable-post-purchase"></div>
 
   <script>
-    // All standard JS integration config goes here
-    // var _talkableq = _talkableq || [];
-    // ...
-
     var _talkable_data = {
+      // purchase: {
       // ...
+      // },
       iframe: {
-        container: 'talkable-pp-container', // container element to where to place the iframe
+        container: 'talkable-post-purchase', // container element where to place the iframe
         style: "display: none;" // this is just a standard inline CSS
-      },
-      // ...
+      }
     };
 
-    // ...
-    // _talkableq.push(['register_purchase', _talkable_data]);
+    _talkableq.push(['register_purchase', _talkable_data]);
   </script>
 
 Embedding as Inline Widget
@@ -77,23 +76,44 @@ Post Purchase campaign can be also embedded as inline widget somewhere on the pa
 .. code-block:: html
 
   <!-- Place Talkable Container into appropriate place in the DOM -->
-  <div id="talkable-pp-container"></div>
+  <div id="talkable-post-purchase"></div>
 
   <script>
-    // All standard JS integration config goes here
-    // var _talkableq = _talkableq || [];
-    // ...
-
     var _talkable_data = {
+      // purchase: {
       // ...
+      // },
       iframe: {
-        container: 'talkable-pp-container', // container element to where to place the iframe
+        container: 'talkable-post-purchase', // container element where to place the iframe
         style: "display: block; width: 100%;" // this is just a standard inline CSS
-      },
-      // ...
+      }
     };
 
-    // ...
-    // _talkableq.push(['register_purchase', _talkable_data]);
+    _talkableq.push(['register_purchase', _talkable_data]);
+  </script>
+
+Overriding Customer Data
+------------------------
+
+In case you need to override customer data during Purchase registration include `customer` object in addition to the rest of the data:
+
+.. code-block:: html
+
+  <!-- Place Talkable Container into appropriate place in the DOM -->
+  <div id="talkable-post-purchase"></div>
+
+  <script>
+    var _talkable_data = {
+      // purchase: {
+      // ...
+      // },
+      customer: {
+        email: 'overridden@example.com',
+        first_name: 'OverriddenName',
+        last_name: 'OverriddenSurname'
+      }
+    };
+
+    _talkableq.push(['register_purchase', _talkable_data]);
   </script>
 

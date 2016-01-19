@@ -22,12 +22,16 @@
         purchase: {
           order_number: checkout.order_id, /* REQUIRED - Order number */
           order_date: checkout.created_at, /* REQUIRED - Order Date and Time (ISO 8601 formatted datetime) */
-          email: checkout.email, /* REQUIRED - Customer Email Address */
           subtotal: checkout.total_price, /* REQUIRED - Purchase Subtotal */
           coupon_code: checkout.discount ? checkout.discount.code : null,
-          items: _talkable_order_items,
+          items: _talkable_order_items
         },
-        responsive: true,
+        campaign_template: {
+          name: 'post-purchase'
+        },
+        customer: {
+          email: checkout.email /* REQUIRED - Customer Email Address */
+        }
       };
 
       _talkableq.push(['register_purchase', _talkable_data]);
