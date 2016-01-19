@@ -77,7 +77,7 @@ In addition to our basic required dataset we allow you to pass us a lot more dat
       iframe: { // REQUIRED - any valid HTML attributes can go in here
         container: 'talkable-sa-container', // Tell Talkable where to insert the iframe (this is HTML id attribute value)
         width: '100%' // These are standard HTML attributes, feel free to add as many you need
-      },
+      }
       // OPTIONAL - additional customer properties, in case you want to use some additional data inside Campaign Views
       // , person_custom_properties: {
       //     key1: 'value1', // String value

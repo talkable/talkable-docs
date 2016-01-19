@@ -25,8 +25,8 @@
           email: checkout.email, /* REQUIRED - Customer Email Address */
           subtotal: checkout.total_price, /* REQUIRED - Purchase Subtotal */
           coupon_code: checkout.discount ? checkout.discount.code : null,
-          items: _talkable_order_items,
-        },
+          items: _talkable_order_items
+        }
       };
 
       _talkableq.push(['register_purchase', _talkable_data]);
