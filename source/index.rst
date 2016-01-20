@@ -48,9 +48,9 @@ Talkable For Mobile
 Follow our instructions on how to integrate Talkable into your native mobile app.
 
 +--------------------+--------------------+
-| .. toctree::       |                    |
-|   :maxdepth: 2     |                    |
+| .. toctree::       | .. toctree::       |
+|   :maxdepth: 2     |   :maxdepth: 2     |
 |                    |                    |
-|   ios_sdk          |                    |
+|   ios_sdk          |   android_sdk      |
 +--------------------+--------------------+
 
