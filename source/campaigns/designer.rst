@@ -81,8 +81,8 @@ and solid ones:
 
 .. _responsive-views:
 
-Responsive views
-----------------
+Responsive view's height
+-----------------------
 
 Talkable provides flexibility for the merchant to decide how they want to
 optimize mobile.

@@ -1,4 +1,4 @@
-.. _optional/site_placements:
+.. _campaigns/site_placements:
 .. include:: /partials/common.rst
 
 Site Placements
