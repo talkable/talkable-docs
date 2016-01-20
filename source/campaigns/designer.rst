@@ -84,26 +84,24 @@ and solid ones:
 Responsive view's height
 ------------------------
 
-Talkable provides flexibility for the merchant to decide how they want to
-optimize mobile.
+Talkable campaigns can be integrated as a popup with overlay, or as an inline
+block that sits somewhere in the middle between site header and footer. When
+Talkable Campaign looks like a popup with overlay its size if always fixed to 100%
+width and 100% height, it basically takes the entire screen and its size never gets
+changed when a user resizes browser window (overlay will still take the entire screen size).
 
-If your site is responsive, all you'll need to do is to set ``Responsive: Yes``
-in ``Campaign | View Setup | Extra``.
+However, when Talkable Campaign is placed inline inside content area its size
+depends on its internal content. The more content it holds the more higher it is.
+Iframe has a known issue due to which browsers don't change its height no matter how
+much content it holds inside. By default all browsers set 150px height to all iframe
+tags and add scrollbars if the internal content exceeds that size. Talkable Campaigns
+are always of the correct size because of "Responsive iframe height" feature always
+being enabled for such cases. No matter how much content Talkable iframe holds its
+size will always be correct in order to look as expected without scrollbars. For this
+reason, you might notice Talkable adds ``overflow: hidden;`` to the BODY tag — this CSS
+property hides the scrollbars. At the same time, Talkable JS integration library always
+ensures its height is correct by checking the size of the iframe content and setting it
+in pixels to the Talkable iframe tag that holds it from the outside.
 
-In your campaign, there are different views for mobile, tablet and desktop.
-We'll automatically pull the correct theme view based on the user's device
-once we detect the viewport. We'll use our responsive engine to size the
-Talkable iframe to the right size. Like Magic!
-
-If you have separate mobile, tablet and desktop sites (or any combination of
-the three), you can leave ``Responsive: Yes`` on but also specifically set the
-campaign theme view to use. This will prevent Talkable from automatically
-assigning the theme view to use, but will allow us to resize within the screen
-to make sure all elements fit well.
-
-Make sure you have this CSS in your campaign theme so it won't have a double
-scrollbars on resize (if ``Responsive: Yes``)
-
-.. code:: css
-
-   body { overflow: hidden; }
+You are able to turn "Responsive iframe's height" ON/OFF from within
+``Campaign / Editor / Edit HTML & CSS / Extra / Responsive iframe's height`` select box.
