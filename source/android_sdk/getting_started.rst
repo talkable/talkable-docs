@@ -35,7 +35,15 @@ Installation
 Configuration
 -------------
 
-1. Initialize Talkable in your `MainActivity` class, like so:
+1. Setup Talkable credentials in `AndroidManifest.xml` after `<application>`:
+
+  .. code-block:: xml
+
+      <meta-data android:name="TalkableApiKey" android:value="YOUR_TALKABLE_API_KEY" />
+      <meta-data android:name="TalkableSiteSlug" android:value="YOUR_SITE_SLUG" />
+
+
+2. Initialize Talkable in your `MainActivity` class, like so:
 
   .. code-block:: java
 
@@ -46,7 +54,7 @@ Configuration
         public void onCreate(Bundle savedInstanceState) {
             ...
 
-            Talkable.configure("YOUR_TALKABLE_API_KEY", "YOUR_SITE_SLUG");
+            Talkable.initialize(this);
         }
     }
 
@@ -58,21 +66,6 @@ Configuration
     - Select site and go to **Dashboard** |rarr| **Site Settings**.
       Find **Integration settings** section and there you will see the API Key
 
-2. Register your app schema in `AndroidManifest.xml` and add following lines to
-   `MainActivity` `onCreate` callback to track users:
-
-  .. code-block:: java
-
-    import com.talkable.sdk;
-
-    public class MainActivity extends Activity {
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-            ...
-
-            Talkable.handleOpenURL(this);
-        }
-    }
 
 Your environment is all set up! Now you need to :ref:`integrate <android_sdk/integration>` the Talkable campaign piece.
 
