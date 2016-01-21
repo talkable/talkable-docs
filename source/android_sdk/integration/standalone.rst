@@ -18,14 +18,16 @@ with the following line of code:
 
   import com.talkable.sdk;
   ...
-  Talkable.registerOrigin("TKBLAffiliateMember");
+
+  AffiliateMember member = null;
+  Talkable.registerOrigin(Talkable.Origins.AFFILIATE_MEMBER, member);
   ...
   
 .. note::
   
   Make sure you have at least one live “SA” campaign with a default tag inside Talkable Site
   
-Note that `params` are empty, in this case user will see the
+Note that `member` is empty, in this case user will see the
 :ref:`Advocate Signup Page <campaigns/views/affiliate_members_new>`, which is used to collect
 the user’s email address. Your application may already know/have access to the user’s email,
 if so, you should pass this parameter which will automatically skip the SignUp Page in the
@@ -39,15 +41,14 @@ on a campaign level for segmentation or other logic.
   
   import com.talkable.sdk;
   ...
-  Map<String, String> params = new HashMap<String, String>();
-  params.put("TKBLAffiliateMemberEmailKeyA", ”advocate@example.com”);
-  params.put("TKBLAffiliateMemberFirstNameKey", "John");
-  params.put("TKBLAffiliateMemberLastNameKey", "Smith");
 
-  Map<String, String> personCustomParams = new HashMap<String, String>();
-  personCustomParams.put("eye_color", "brown");
+  string email = "advocate@example.com";
+  string firstName = "John";
+  string lastName = "Smith";
+  AffiliateMember member = new AffiliateMember(email, firstName, lastName)
+  member.addCustomParams("eye_color", "green");
 
-  Talkable.registerOrigin("TKBLAffiliateMember", params, personCustomParams);
+  Talkable.registerOrigin(Talkable.Origins.AFFILIATE_MEMBER, member);
   ...
 
 .. container:: hidden

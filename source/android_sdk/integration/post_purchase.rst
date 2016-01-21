@@ -33,7 +33,7 @@ Here is an example of a Purchase capturing, this action should be triggered on t
   OrderItem[] orderItems = {new OrderItem(productID, price, quantity)};
   Purchase purchase = new Purchase(orderNumber, orderDate, email, subtotal, coupon, orderItems)
 
-  Talkable.registerOrigin("TKBLPurchase", purchase)
+  Talkable.registerOrigin(Talkable.Origins.PURCHASE, purchase)
 
 .. note::
 

@@ -14,8 +14,6 @@ Installation
 2. Add `talkable.jar` to `libs` directory
 3. Add the following entry in your `AndroidManifest.xml` file to track app installs.
 
-  ..  TODO
-
   .. code-block:: xml
 
       <service android:name="com.talkable.sdk.InstallReferrerService"/>
@@ -43,11 +41,12 @@ Configuration
 
     import com.talkable.sdk;
 
-    public class YourActivityName extends Activity {
+    public class MainActivity extends Activity {
         @Override
-        public void onCreate() {
+        public void onCreate(Bundle savedInstanceState) {
+            ...
+
             Talkable.configure("YOUR_TALKABLE_API_KEY", "YOUR_SITE_SLUG");
-            Talkable.registerURLScheme("YOUR_APPLICATION_URL_SCHEME");
         }
     }
 
@@ -56,15 +55,26 @@ Configuration
     You can locate your credentials inside Talkable site:
 
     - Visit https://www.talkable.com/account/sites to find you site slug
-    - Select site and go to **Dashboard** |rarr| **Site Settings**. Find **Integration settings** section and there you will see the API Key
+    - Select site and go to **Dashboard** |rarr| **Site Settings**.
+      Find **Integration settings** section and there you will see the API Key
 
-2. Add following lines to `application:handleOpenURL:` or `application:openURL:sourceApplication:annotation:`
+2. Register your app schema in `AndroidManifest.xml` and add following lines to
+   `MainActivity` `onCreate` callback to track users:
 
-  .. code-block:: objc
+  .. code-block:: java
 
-    [[Talkable manager] handleOpenURL:url];
+    import com.talkable.sdk;
 
-Your environment is all set up! Now you need to :ref:`integrate <ios_sdk/integration>` the Talkable campaign piece.
+    public class MainActivity extends Activity {
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            ...
+
+            Talkable.handleOpenURL(this);
+        }
+    }
+
+Your environment is all set up! Now you need to :ref:`integrate <android_sdk/integration>` the Talkable campaign piece.
 
 
 .. container:: hidden
