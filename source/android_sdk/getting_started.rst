@@ -30,7 +30,7 @@ Installation
 
   .. code-block:: java
 
-    import com.talkable.sdk;
+    import com.talkable.*;
 
 Configuration
 -------------
@@ -47,7 +47,7 @@ Configuration
 
   .. code-block:: java
 
-    import com.talkable.sdk;
+    import com.talkable.*;
 
     public class MainActivity extends Activity {
         @Override

@@ -16,7 +16,7 @@ with the following line of code:
 
 .. code-block:: java
 
-  import com.talkable.sdk;
+  import com.talkable.*;
   ...
 
   AffiliateMember member = null;
@@ -39,7 +39,7 @@ on a campaign level for segmentation or other logic.
 
 .. code-block:: java
   
-  import com.talkable.sdk;
+  import com.talkable.*;
   ...
 
   string email = "advocate@example.com";

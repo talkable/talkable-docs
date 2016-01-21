@@ -19,7 +19,7 @@ Here is an example of a Purchase capturing, this action should be triggered on t
 
 .. code-block:: java
 
-  import com.talkable.sdk;
+  import com.talkable.*;
   ...
   string orderNumber = "100130";
   string orderDate = new Date();
