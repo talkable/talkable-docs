@@ -12,7 +12,7 @@ Installation
 
 1. Download the latest version of `Talkable SDK framework`.
 2. Add `talkable.jar` to `libs` directory
-3. Setup Talkable credentials in `AndroidManifest.xml` after `<application>`:
+3. Setup Talkable credentials in `AndroidManifest.xml` in `<application>...</application>`:
 
   .. code-block:: xml
 
