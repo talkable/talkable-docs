@@ -19,8 +19,8 @@ with the following line of code:
   import com.talkable.*;
   ...
 
-  AffiliateMember member = null;
-  Talkable.registerOrigin(Talkable.Origins.AFFILIATE_MEMBER, member);
+  AffiliateMember member = new AffiliateMember();
+  Talkable.registerOrigin(member);
   ...
   
 .. note::
@@ -31,24 +31,19 @@ Note that `member` is empty, in this case user will see the
 :ref:`Advocate Signup Page <campaigns/views/affiliate_members_new>`, which is used to collect
 the user’s email address. Your application may already know/have access to the user’s email,
 if so, you should pass this parameter which will automatically skip the SignUp Page in the
-flow and show the :ref:`Advocate Share Page <campaigns/views/offers_show>`. You have the ability
-to pass any custom data you think might be useful by using “person custom properties” to define
-any number of custom key/value pairs. For example, below we are creating and passing a custom
-key value pair of *eye color* = *green*. Any data passed through here will be accessible
-on a campaign level for segmentation or other logic.
+flow and show the :ref:`Advocate Share Page <campaigns/views/offers_show>`.
 
 .. code-block:: java
   
   import com.talkable.*;
   ...
 
-  string email = "advocate@example.com";
-  string firstName = "John";
-  string lastName = "Smith";
-  AffiliateMember member = new AffiliateMember(email, firstName, lastName)
-  member.addCustomParams("eye_color", "green");
+  String email = "advocate@example.com";
+  String firstName = "John";
+  String lastName = "Smith";
+  AffiliateMember member = new AffiliateMember(email, firstName, lastName);
 
-  Talkable.registerOrigin(Talkable.Origins.AFFILIATE_MEMBER, member);
+  Talkable.registerOrigin(member);
   ...
 
 .. container:: hidden

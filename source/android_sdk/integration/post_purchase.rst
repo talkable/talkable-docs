@@ -12,7 +12,7 @@ by a purchase and shown to a customer immediately after.
 Post Purchase campaign usually looks like a pop up right after a user made a purchase. This
 campaign initializes on the order confirmation page and captures order details parameters. You
 need to pass order data that includes your customer’s email address, order id, subtotal, coupon
-code used at checkout in order to close a referral loop. This allows talkable to detect and
+code used at checkout in order to close a referral loop. This allows Talkable to detect and
 close the loop on a referral.
 
 Here is an example of a Purchase capturing, this action should be triggered on the order confirmation page:
@@ -21,19 +21,19 @@ Here is an example of a Purchase capturing, this action should be triggered on t
 
   import com.talkable.*;
   ...
-  string orderNumber = "100130";
-  string orderDate = new Date();
-  string email = "customer@example.com";
+  String orderNumber = "100130";
+  String orderDate = new Date();
+  String email = "customer@example.com";
   double subtotal = 24.95;
-  double couponCode = "TEST25";
+  String couponCode = "TEST25";
 
-  string productID = "sku3";
+  String productID = "sku3";
   double priceKey = 4.99;
   int quantity = 5;
   OrderItem[] orderItems = {new OrderItem(productID, price, quantity)};
   Purchase purchase = new Purchase(orderNumber, orderDate, email, subtotal, coupon, orderItems)
 
-  Talkable.registerOrigin(Talkable.Origins.PURCHASE, purchase)
+  Talkable.registerOrigin(purchase)
 
 .. note::
 

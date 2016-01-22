@@ -4,7 +4,8 @@
 Talkable Android SDK
 ####################
 
-Talkable has an Andoid framework enabling you to use Talkable in Andoid Apps. Once integrated you can use the following Talkable capabilities:
+Talkable has an Android framework enabling you to use Talkable in Andoid Apps. Once integrated you
+can use the following Talkable capabilities:
 
 - Display Advocate Share Page (the page itself is built inside Talkable)
 - Share Offer via:

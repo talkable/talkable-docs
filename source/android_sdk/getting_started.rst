@@ -12,38 +12,34 @@ Installation
 
 1. Download the latest version of `Talkable SDK framework`.
 2. Add `talkable.jar` to `libs` directory
-3. Add the following entry in your `AndroidManifest.xml` file to track app installs.
+3. Setup Talkable credentials in `AndroidManifest.xml` after `<application>`:
 
   .. code-block:: xml
 
-      <service android:name="com.talkable.sdk.InstallReferrerService"/>
+      <meta-data android:name="TalkableApiKey" android:value="{{YOUR_TALKABLE_API_KEY}}" />
+      <meta-data android:name="TalkableSiteSlug" android:value="{{YOUR_SITE_SLUG}}" />
+
+  .. note::
+
+    You can locate your credentials inside Talkable site:
+
+    - Visit https://www.talkable.com/account/sites to find you site slug
+    - Select site and go to **Dashboard** |rarr| **Site Settings**.
+      Find **Integration settings** section and there you will see the API Key
+
+4. Add the following entry in your `AndroidManifest.xml` file to track app installs.
+
+  .. code-block:: xml
+
       <receiver
-          android:name="com.talkable.sdk.InstallReferrerReceiver"
+          android:name="com.talkable.InstallReferrerReceiver"
           android:exported="true">
           <intent-filter>
               <action android:name="com.android.vending.INSTALL_REFERRER" />
           </intent-filter>
       </receiver>
 
-
-4. Add the following import statement to any file in which you wish to use the Talkable SDK.
-
-  .. code-block:: java
-
-    import com.talkable.*;
-
-Configuration
--------------
-
-1. Setup Talkable credentials in `AndroidManifest.xml` after `<application>`:
-
-  .. code-block:: xml
-
-      <meta-data android:name="TalkableApiKey" android:value="YOUR_TALKABLE_API_KEY" />
-      <meta-data android:name="TalkableSiteSlug" android:value="YOUR_SITE_SLUG" />
-
-
-2. Initialize Talkable in your `MainActivity` class, like so:
+5. Initialize Talkable in your main activity class, like so:
 
   .. code-block:: java
 
@@ -58,14 +54,11 @@ Configuration
         }
     }
 
-  .. note::
+6. Add the following import statement to any file in which you wish to use the Talkable SDK.
 
-    You can locate your credentials inside Talkable site:
+  .. code-block:: java
 
-    - Visit https://www.talkable.com/account/sites to find you site slug
-    - Select site and go to **Dashboard** |rarr| **Site Settings**.
-      Find **Integration settings** section and there you will see the API Key
-
+    import com.talkable.*;
 
 Your environment is all set up! Now you need to :ref:`integrate <android_sdk/integration>` the Talkable campaign piece.
 
