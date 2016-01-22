@@ -4,9 +4,6 @@
 Shopify
 =======
 
-To integrate your Shopify store, you can install the `Shopify Talkable application`_
-from App Store or manually add a code snippet to your checkout page.
-
 Automatic integration
 ---------------------
 
@@ -16,16 +13,18 @@ Automatic integration
      Talkable integration script located in the Additional Content & Scripts section before
      you start the Automatic integration process. See `Manual integration`_ for details.
 
-1. In your Talkable administration panel, go to
-   **Dashboard** |rarr| **Shopify Integration**.
+1. Install the `Shopify Talkable application`_.
 
-2. Then click **Install Talkable** in your Shopify administration panel.
+2. In your Talkable administration panel, go to
+   **Dashboard** → Expand **Settings** dropdown → **Shopify Integration**.
 
-3. Modify existing integration script if needed.
+3. Then click **Install Talkable** in your Shopify administration panel.
 
-4. Activate Post Purchase or Standalone Campaign.
+4. Modify existing integration script if needed.
 
-5. Verify your integration using :ref:`Verifying Integration Instructions <ecommerce/verify>`.
+5. Activate Post Purchase or Invite(Standalone) Campaign.
+
+6. Verify your integration using :ref:`Verifying Integration Instructions <ecommerce/verify>`.
 
   .. note::
 
