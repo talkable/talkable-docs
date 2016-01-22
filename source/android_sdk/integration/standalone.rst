@@ -9,7 +9,7 @@ of this type of campaign is to drive your users to invite their friends (to beco
 without being gated by a purchase beforehand.
 
 Usually Standalone campaign look like a separate widget that people can access by clicking on
- the “Invite friends” button inside app navigation.
+the “Invite friends” button inside app navigation.
 
 Once you’ve got a Standalone campaign set up inside Talkable you can integrate the campaign
 with the following line of code:
@@ -20,7 +20,7 @@ with the following line of code:
   ...
 
   AffiliateMember member = new AffiliateMember();
-  Talkable.registerOrigin(member);
+  RegisteredOrigin registeredOrigin = Talkable.registerOrigin(member);
   ...
   
 .. note::
@@ -43,8 +43,10 @@ flow and show the :ref:`Advocate Share Page <campaigns/views/offers_show>`.
   String lastName = "Smith";
   AffiliateMember member = new AffiliateMember(email, firstName, lastName);
 
-  Talkable.registerOrigin(member);
+  RegisteredOrigin registeredOrigin = Talkable.registerOrigin(member);
   ...
+
+.. include:: /partials/android_webview.rst
 
 .. container:: hidden
 

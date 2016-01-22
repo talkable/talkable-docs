@@ -12,7 +12,19 @@ Installation
 
 1. Download the latest version of `Talkable SDK framework`.
 2. Add `talkable.jar` to `libs` directory
-3. Setup Talkable credentials in `AndroidManifest.xml` in `<application>...</application>`:
+3. Add Talkable activity to your `AndroidManifest.xml`
+
+   .. code-block:: xml
+
+     <activity android:name="com.talkable.OfferActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="tkbl" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+     </activity>
+
+4. Setup Talkable credentials in `AndroidManifest.xml` in `<application>...</application>`:
 
   .. code-block:: xml
 
@@ -28,7 +40,7 @@ Installation
     - Select site and go to **Dashboard** |rarr| **Site Settings**.
       Find **Integration settings** section and there you will see the API Key
 
-4. Add the following entry in your `AndroidManifest.xml` file to track app installs.
+5. Add the following entry in your `AndroidManifest.xml` file to track app installs.
 
   .. code-block:: xml
 
@@ -40,7 +52,7 @@ Installation
           </intent-filter>
       </receiver>
 
-5. Initialize Talkable in your main activity class, like so:
+6. Initialize Talkable in your main activity class, like so:
 
   .. code-block:: java
 

@@ -33,12 +33,14 @@ Here is an example of a Purchase capturing, this action should be triggered on t
   OrderItem[] orderItems = {new OrderItem(productID, price, quantity)};
   Purchase purchase = new Purchase(orderNumber, orderDate, email, subtotal, coupon, orderItems)
 
-  Talkable.registerOrigin(purchase)
+  RegisteredOrigin registeredOrigin = Talkable.registerOrigin(purchase);
 
 .. note::
 
   If Post Purchase campaign does not show up when testing make sure you have it live with a
   default tag on the Campaigns listing.
+
+.. include:: /partials/android_webview.rst
 
 .. container:: hidden
 
