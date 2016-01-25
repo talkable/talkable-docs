@@ -1,5 +1,6 @@
-Show offer
-----------
+.. raw:: html
+
+   <h2>Show offer</h2>
 
 When you have `registeredOrigin` you can show offer for user from `activity`.
 You can do this in two ways:
