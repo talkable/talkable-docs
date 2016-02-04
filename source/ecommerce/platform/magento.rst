@@ -33,11 +33,14 @@ integration. The extension currently supports Magento versions 1.5+
      **System** |rarr| **Configuration**. If you have more than one store, set
      the **Current Configuration Scope** on the top left to the store you want
      to enable Talkable on. Note this must be a Magento "Website", not a "Store view".
-   * Open the **Talkable** tab and under Post-Checkout Integration set the
-     **Enabled** state to *Yes*. Then, enter your Talkable Site ID.
+   * Open the **Talkable** tab and under Talkable Campaigns set the Post Purchase
+     state to **Enabled**. Then, enter your Talkable Site ID.
 
      You will need to get your Talkable Site ID from your dashboard after you
      have created the site.
+
+     Note: If you see an error opening Talkable extension settings, please
+     re-login to Admin Panel and try again.
 
    Click **Save Config** to save your changes.
 
@@ -48,7 +51,7 @@ integration. The extension currently supports Magento versions 1.5+
    * Then click **Select All**, select action *"Refresh"* and click **Submit**.
 
 .. _Magento Talkable extension: http://www.magentocommerce.com/magento-connect/talkable-customizable-refer-a-friend-programs.html
-.. _direct download: https://www.talkable.com/magento/talkable-0.1.8.tgz
+.. _direct download: https://www.talkable.com/magento/talkable-1.0.0.tgz
 
 |br|
 
