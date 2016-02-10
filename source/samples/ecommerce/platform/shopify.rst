@@ -26,9 +26,7 @@
           coupon_code: checkout.discount ? checkout.discount.code : null,
           items: _talkable_order_items
         },
-        campaign_template: {
-          name: 'post-purchase'
-        },
+        campaign_template: 'post-purchase',
         customer: {
           email: checkout.email /* REQUIRED - Customer Email Address */
         }

@@ -24,10 +24,9 @@
         coupon_code: 'SAVE20', // Required - Coupon code used at checkout, multiple coupons allowed as JS array: ['SAVE20', 'FREE-SHIPPING']. Pass null if when no coupon code was used at the checkout.
         items: _talkable_purchase_items
       },
-      campaign_template: { name: 'post-purchase' }, // Loads Post Purchase campaign with tag "post-purchase"
+      campaign_template: 'post-purchase' // Loads Post Purchase campaign with tag "post-purchase"
     };
 
     _talkableq.push(['register_purchase', _talkable_data]); // Pass data to Talkable and show Post Purchase campaign as a result
   </script>
   <!-- End Talkable integration code -->
-

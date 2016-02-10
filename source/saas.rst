@@ -32,9 +32,7 @@ Below is an example of registering an Event and showing :ref:`post_purchase_camp
         event_number: '100011', // Required - unique Event id
         event_category: 'Signups' // Required - Event category
       },
-      campaign_template: {
-        name: 'post-purchase' // Loads Post Purchase campaign with tag "post-purchase"
-      }
+      campaign_template: 'post-purchase' // Loads Post Purchase campaign with tag "post-purchase"
     };
 
     // Passing Event to Talkable
@@ -64,9 +62,7 @@ Here is an example how to show :ref:`invite_campaign`:
         event_number: '100011', // Required - unique Event id
         event_category: 'Signups' // Required - Event category
       },
-      campaign_template: {
-        name: 'invite' // Loads Invite campaign with tag "invite"
-      }
+      campaign_template: 'invite' // Loads Invite campaign with tag "invite"
     };
 
     // Passing Event to Talkable
@@ -75,13 +71,13 @@ Here is an example how to show :ref:`invite_campaign`:
 
 .. note::
 
-  Make sure that the Container (the DIV tag where Talkable iframe inserts to) ID corresponds to `campaign_template.name` value.
+  Make sure that the Container (the DIV tag where Talkable iframe inserts to) ID corresponds to `campaign_template` value.
   Otherwise Talkable Campaign will be shown below your page content at the very bottom.
 
-Correspondence between Container ID and `campaign_template.name`:
+Correspondence between Container ID and `campaign_template`:
 
 +----------------------------------+---------------------------------+-----------------------------------+
-| Talkable Campaign                | Container ID                    | campaign_template.name            |
+| Talkable Campaign                | Container ID                    | campaign_template                 |
 +==================================+=================================+===================================+
 | :ref:`post_purchase_campaign`    | `talkable-post-purchase`        | `post-purchase`                   |
 +----------------------------------+---------------------------------+-----------------------------------+
@@ -110,4 +106,3 @@ Here is a full list of things you can do with Talkable:
   :glob:
 
   /optional/*
-

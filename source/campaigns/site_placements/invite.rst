@@ -45,9 +45,7 @@ In case you need to override customer data include `customer` object in addition
 
   <script>
     var _talkable_data = {
-      // campaign_template: {
-      // ...
-      // },
+      // campaign_template: 'invite',
       customer: {
         email: 'overridden@example.com',
         first_name: 'OverriddenName',
@@ -61,4 +59,3 @@ In case you need to override customer data include `customer` object in addition
 .. container:: hidden
 
   .. toctree::
-
