@@ -22,8 +22,6 @@ each with links to integration details.
      - Brings more power and flexibility into segmenting your reporting
    * - :ref:`Using URL Parameters <optional/url_parameters>`
      - Override some of the parameters right through URL query string
-   * - :ref:`Verification Digest <optional/verification_digest>`
-     - Secure data transfer between your site and Talkable
    * - :ref:`White Labeling <optional/white_labeling>`
      - Change all visible URLs to your domain instead of talkable.com
    * - :ref:`Subscribing to Talkable Iframe events <optional/subscribing_to_events>`
@@ -40,5 +38,4 @@ each with links to integration details.
     optional/traffic_source
     optional/subscribing_to_events
     optional/url_parameters
-    optional/verification_digest
     optional/white_labeling
