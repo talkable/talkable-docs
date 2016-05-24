@@ -16,13 +16,7 @@ Installation
 
    .. code-block:: xml
 
-     <activity android:name="com.talkable.OfferActivity">
-        <intent-filter>
-            <action android:name="android.intent.action.VIEW" />
-            <data android:scheme="tkbl" />
-            <category android:name="android.intent.category.DEFAULT" />
-        </intent-filter>
-     </activity>
+     <activity android:name="com.talkable.sdk.TalkableActivity" />
 
 4. Setup Talkable credentials in `AndroidManifest.xml` in `<application>...</application>`:
 
@@ -45,7 +39,7 @@ Installation
   .. code-block:: xml
 
       <receiver
-          android:name="com.talkable.InstallReferrerReceiver"
+          android:name="com.talkable.sdk.InstallReferrerReceiver"
           android:exported="true">
           <intent-filter>
               <action android:name="com.android.vending.INSTALL_REFERRER" />
@@ -56,7 +50,7 @@ Installation
 
   .. code-block:: java
 
-    import com.talkable.*;
+    import com.talkable.sdk.Talkable;
 
     public class MainActivity extends Activity {
         @Override
@@ -66,12 +60,6 @@ Installation
             Talkable.initialize(this);
         }
     }
-
-6. Add the following import statement to any file in which you wish to use the Talkable SDK.
-
-  .. code-block:: java
-
-    import com.talkable.*;
 
 Your environment is all set up! Now you need to :ref:`integrate <android_sdk/integration>` the Talkable campaign piece.
 

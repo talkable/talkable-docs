@@ -16,18 +16,19 @@ with the following line of code:
 
 .. code-block:: java
 
-  import com.talkable.*;
+  import com.talkable.sdk.Talkable;
   ...
 
-  AffiliateMember member = new AffiliateMember();
-  RegisteredOrigin registeredOrigin = Talkable.registerOrigin(member);
+  Activity activity = this;
+  String campaignTag = "invite";
+  Talkable.showOffer(activity, campaignTag);
   ...
   
 .. note::
   
-  Make sure you have at least one live “SA” campaign with a default tag inside Talkable Site
+  Make sure you have at least one live “SA” campaign with a specified tag inside Talkable Site
   
-Note that `member` is empty, in this case user will see the
+Note that `customer` is empty, in this case user will see the
 :ref:`Advocate Signup Page <campaigns/views/affiliate_members_new>`, which is used to collect
 the user’s email address. Your application may already know/have access to the user’s email,
 if so, you should pass this parameter which will automatically skip the SignUp Page in the
@@ -38,15 +39,16 @@ flow and show the :ref:`Advocate Share Page <campaigns/views/offers_show>`.
   import com.talkable.*;
   ...
 
-  String email = "advocate@example.com";
-  String firstName = "John";
-  String lastName = "Smith";
-  AffiliateMember member = new AffiliateMember(email, firstName, lastName);
+  String email = "advocate@example.com"; // Required
+  String idInYourApp = "a8db7683-0f7f-407e-8d12-af2d501035c8"; // Use unique identifier from your system, optional
+  String firstName = "John"; // Optional
+  String lastName = "Smith"; // Optional
 
-  RegisteredOrigin registeredOrigin = Talkable.registerOrigin(member);
+  Activity activity = this;
+  String campaignTag = "invite";
+  Customer customer = new Customer(idInYourApp, firstName, lastName, email);
+  Talkable.showOffer(activity, campaignTag, customer);
   ...
-
-.. include:: /partials/android_webview.rst
 
 .. container:: hidden
 

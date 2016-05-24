@@ -19,28 +19,28 @@ Here is an example of a Purchase capturing, this action should be triggered on t
 
 .. code-block:: java
 
-  import com.talkable.*;
-  ...
-  String orderNumber = "100130";
-  String orderDate = new Date();
-  String email = "customer@example.com";
-  double subtotal = 24.95;
-  String couponCode = "TEST25";
+    Double price = 10.99;
+    Integer quantity = 1;
+    String productId = "1";
+    Item item = new Item(subtotal, quantity, productId);
 
-  String productID = "sku3";
-  double priceKey = 4.99;
-  int quantity = 5;
-  OrderItem[] orderItems = {new OrderItem(productID, price, quantity)};
-  Purchase purchase = new Purchase(orderNumber, orderDate, email, subtotal, coupon, orderItems)
+    Double subtotal = price * quantity; // Required
+    Integer orderNumber = 1; // Required
+    Date orderDate = Calendar.getInstance().getTime(); // Required
+    String coupon = "EXAMPLE-CODE"; // Optional
 
-  RegisteredOrigin registeredOrigin = Talkable.registerOrigin(purchase);
+    Purchase origin = new Purchase(subtotal, orderNumber, orderDate, coupon);
+    origin.setCustomer(customer); // Required
+    origin.addItem(item); // Optional
+
+    Activity activity = this;
+    String campaignTag = "post-purchase";
+    Talkable.showOffer(activity, campaignTag, customer);
 
 .. note::
 
   If Post Purchase campaign does not show up when testing make sure you have it live with a
   default tag on the Campaigns listing.
-
-.. include:: /partials/android_webview.rst
 
 .. container:: hidden
 

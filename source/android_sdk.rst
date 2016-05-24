@@ -25,4 +25,6 @@ Contents:
 
    android_sdk/getting_started
    android_sdk/integration
+   android_sdk/advanced
+   android_sdk/api
 
