@@ -19,6 +19,8 @@ Here is an example of a Purchase capturing, this action should be triggered on t
 
 .. code-block:: java
 
+    import com.talkable.sdk.Talkable;
+    ...
     Double price = 10.99;
     Integer quantity = 1;
     String productId = "1";
@@ -29,13 +31,15 @@ Here is an example of a Purchase capturing, this action should be triggered on t
     Date orderDate = Calendar.getInstance().getTime(); // Required
     String coupon = "EXAMPLE-CODE"; // Optional
 
-    Purchase origin = new Purchase(subtotal, orderNumber, orderDate, coupon);
-    origin.setCustomer(customer); // Required
-    origin.addItem(item); // Optional
+    Purchase purchase = new Purchase(subtotal, orderNumber, orderDate, coupon);
+    purchase.setCustomer(customer); // Required
+    purchase.addItem(item); // Optional
+
+    String campaignTag = "android-post-purchase";
+    purchase.setCampaignTag(campaignTag); // Optional
 
     Activity activity = this;
-    String campaignTag = "post-purchase";
-    Talkable.showOffer(activity, campaignTag, customer);
+    Talkable.showOffer(activity, purchase);
 
 .. note::
 

@@ -1,8 +1,5 @@
-.. _android_sdk/advanced:
+.. _android_sdk/overriding_defaults:
 .. include:: /partials/common.rst
-
-Advanced Usage
-==============
 
 Overriding default behaviour
 ----------------------------

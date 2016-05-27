@@ -20,8 +20,8 @@ with the following line of code:
   ...
 
   Activity activity = this;
-  String campaignTag = "invite";
-  Talkable.showOffer(activity, campaignTag);
+  AffiliateMember affiliateMember = new AffiliateMember();
+  Talkable.showOffer(activity, affiliateMember);
   ...
   
 .. note::
@@ -36,18 +36,21 @@ flow and show the :ref:`Advocate Share Page <campaigns/views/offers_show>`.
 
 .. code-block:: java
   
-  import com.talkable.*;
+  import com.talkable.sdk.Talkable;
   ...
 
   String email = "advocate@example.com"; // Required
   String idInYourApp = "a8db7683-0f7f-407e-8d12-af2d501035c8"; // Use unique identifier from your system, optional
   String firstName = "John"; // Optional
   String lastName = "Smith"; // Optional
+  Customer customer = new Customer(idInYourApp, firstName, lastName, email);
+
+  AffiliateMember affiliateMember = new AffiliateMember(customer);
+  String campaignTag = "android-invite";
+  affiliateMember.setCampaignTag(campaignTag);
 
   Activity activity = this;
-  String campaignTag = "invite";
-  Customer customer = new Customer(idInYourApp, firstName, lastName, email);
-  Talkable.showOffer(activity, campaignTag, customer);
+  Talkable.showOffer(activity, affiliateMember);
   ...
 
 .. container:: hidden
