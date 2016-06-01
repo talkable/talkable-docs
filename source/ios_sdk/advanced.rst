@@ -7,7 +7,7 @@ Advanced Usage
 Specify a custom campaign tag
 -----------------------------
 
-By default if no campaign tag was specified SDK uses `invite` and `post-purchase` tags for :ref:`Standalone <ios_sdk/integration/standalone>` and
+By default if no campaign tag was specified SDK uses `ios-invite` and `ios-post-purchase` tags for :ref:`Standalone <ios_sdk/integration/standalone>` and
 :ref:`Post Purchase <ios_sdk/integration/post_purchase>` campaigns. But you can explicitly specify your own tag in this way:
 
   .. code-block:: objc
