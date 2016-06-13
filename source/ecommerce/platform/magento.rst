@@ -19,7 +19,7 @@ integration. The extension currently supports Magento versions 1.5+
 
    .. image:: /_static/img/magento/magento-flow-1.jpg
 
-2. Copy the extension key: **http://connect20.magentocommerce.com/community/talkable**, then paste it into an extension key input field (2) and click **Install** (3). In the table below you should see a status "Ready to install", hit **Proceed** (4):
+2. Copy the extension key: **http://connect20.magentocommerce.com/community/talkable** |rarr| then paste it into an extension key input field (2) and click **Install** (3). In the table below you should see a status "Ready to install", hit **Proceed** (4):
 
    .. image:: /_static/img/magento/magento-flow-2.jpg
 
