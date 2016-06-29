@@ -10,8 +10,8 @@ The Getting Started guide shows you how to setup and launch Referral Campaign as
 Installation
 ------------
 
-1. Download the latest version of `Talkable SDK framework`.
-2. Add `talkable.aar` and add it as project dependency in android studio.
+1. Download the latest version of `Talkable SDK framework`_.
+2. Add `talkable.aar` and add it as project dependency in Android studio.
 
 
   .. note::
@@ -79,6 +79,7 @@ After this, add dependencies to `build.gradle`
 
 Your environment is all set up! Now you need to :ref:`integrate <android_sdk/integration>` the Talkable campaign piece.
 
+.. _`Talkable SDK framework`: http://learn.talkable.com/downloads/talkable_android_sdk.aar
 
 .. container:: hidden
 
