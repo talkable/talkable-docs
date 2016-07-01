@@ -394,7 +394,7 @@ First value will be a default value, or you can set it using ``default`` option.
    {{ "header_size" | localize: "h1", "h2", "h3", "h4", default: "h2" }}
 
 Also there is a localization with exactly two variants so it will be rendered ``true`` or ``false`` value.
-First variant will be truthy, and second one will be falsey. First variant will be default. If you need other default,
+First variant is truthy, and second one is falsey. First variant is default. If you need other default,
 you can set it using ``default`` option.
 
 .. code-block:: liquid
@@ -404,7 +404,7 @@ you can set it using ``default`` option.
      Responsive
    {% else %}
      Fixed
-   {% endif %
+   {% endif %}
 
 For more information see :ref:`Localization <campaigns/localization>` page.
 
