@@ -393,6 +393,20 @@ First value will be a default value, or you can set it using ``default`` option.
    {{ "campaign_layout" | localize: "left", "right" }}
    {{ "header_size" | localize: "h1", "h2", "h3", "h4", default: "h2" }}
 
+There is also boolean localization type. It has a strict requirement: exactly two variants which
+determines boolean logics. The first variant is associated with true, the last one — false.
+The first variant is set as default unless you change it to otherwise with a default
+option (see above for an example). Here is an example of how to use boolean localization:
+
+.. code-block:: liquid
+
+   {% assign responsive_font = 'fonts_size' | localize: 'Responsive', 'Fixed', trait: 'boolean' %}
+   {% if responsive_font %}
+     Responsive
+   {% else %}
+     Fixed
+   {% endif %}
+
 For more information see :ref:`Localization <campaigns/localization>` page.
 
 |hr|
