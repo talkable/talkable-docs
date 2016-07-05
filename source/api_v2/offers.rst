@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 Advocate Offers
-======
+===============
 
 This API allows you to access advocate offers.
 
