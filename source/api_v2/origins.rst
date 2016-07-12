@@ -51,8 +51,10 @@ This API allows you to create origins. See examples below.
    interpolations    Optional: an array of interpolations to return in response
    sharing_channels  Optional: an array of sharing channels for which will be
                      generated sharing links.
-                     Doesn't support following channels: 'email', 'reminder',
-                     'facebook_sponsored', 'coupon'.
+
+                     Options: `facebook`, `twitter`, `linkedin`, `sms`,
+                     `other` or custom, except `email`, `reminder`,
+                     `facebook_sponsored` and `coupon`.
    ================= ========================================================
 
 Example
