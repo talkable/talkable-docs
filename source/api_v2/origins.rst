@@ -246,7 +246,7 @@ Sample response:
          "show_url": "https://www.talkable.com/x/5BN5h7",
          "claim_url": "https://www.talkable.com/x/TM2OhR"
        },
-       "sharing_links": {
+       "claim_links": {
          "facebook": "https://www.talkable.com/x/8L6xO2",
          "twitter": "https://www.talkable.com/x/KB89fO",
          "custom": "https://www.talkable.com/x/Yf794w"

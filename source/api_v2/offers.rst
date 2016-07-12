@@ -73,7 +73,7 @@ Sample response:
          "show_url": "https://www.talkable.com/x/iEov9g",
          "claim_url": "https://www.talkable.com/x/5B3xO1"
        },
-       "sharing_links": {
+       "claim_links": {
          "facebook": "https://www.talkable.com/x/8L6xO2",
          "twitter": "https://www.talkable.com/x/KB89fO",
          "custom": "https://www.talkable.com/x/Yf794w"
