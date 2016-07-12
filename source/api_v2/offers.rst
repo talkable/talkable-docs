@@ -1,10 +1,10 @@
 .. _api_v2/offers:
 .. include:: /partials/common.rst
 
-Offers
-======
+Advocate Offers
+===============
 
-This API allows you to access offers.
+This API allows you to access advocate offers.
 
 |br|
 
@@ -12,7 +12,7 @@ This API allows you to access offers.
 
    GET /offers/<short_url_code>
 
-Returns offer.
+Returns advocate offer.
 
 .. container:: ptable
 
@@ -21,7 +21,7 @@ Returns offer.
    ================= ========================================================
    site_slug         Your Talkable Site ID. You can get this from your
                      Talkable dashboard after you log in and create a site.
-   short_url_code    Offer short code obtained with
+   short_url_code    Advocate offer short code obtained with
                      :ref:`origin creation <api_v2/origins>`.
    interpolations    Optional: array of interpolations to return in response
    ================= ========================================================
