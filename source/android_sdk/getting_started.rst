@@ -38,7 +38,7 @@ After this, add dependencies to `build.gradle`
 
   .. code-block:: xml
 
-      <meta-data android:name="TalkableServer" android:value="https://talkable.com" />
+      <meta-data android:name="TalkableServer" android:value="https://www.talkable.com" />
       <meta-data android:name="TalkableApiKey" android:value="{{YOUR_TALKABLE_API_KEY}}" />
       <meta-data android:name="TalkableSiteSlug" android:value="{{YOUR_SITE_SLUG}}" />
 
