@@ -23,8 +23,8 @@ Returns advocate offer.
                      Talkable dashboard after you log in and create a site.
    short_url_code    Advocate offer short code obtained with
                      :ref:`origin creation <api_v2/origins>`.
-   interpolations    Optional: an array of interpolations to return in response
-   sharing_channels  Optional: an array of sharing channels for which will be
+   interpolations    Optional: array of interpolations to return in response
+   sharing_channels  Optional: array of social sharing channels for which will be
                      generated sharing links.
 
                      Options: `facebook`, `twitter`, `linkedin`, `sms`,
