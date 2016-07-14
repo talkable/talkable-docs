@@ -512,7 +512,7 @@ Refresh the screenshot every week:
 geocode
 .......
 
-Returns location for IP you pass to it.
+Returns location for a given IP.
 Response is an object with next fields:
 
 * ``country`` - Country
