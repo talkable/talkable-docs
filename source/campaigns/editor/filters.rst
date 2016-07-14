@@ -447,15 +447,10 @@ Returns a new adjusted color based on the following attributes:
 leaderboard
 ...........
 
-Returns array of top advocates for specified period of time. Parameter can be number from 1 to 100 or 'advocate'.
+Returns array of top advocates for Leaderboard campaigns.
+Parameter can be number from 1 to 100 or 'advocate'.
 
 If parameter is 'advocate' it will return rank info for current advocate.
-
-Required options:
-
-* ``tag`` - Campaigns tag
-* ``start`` - Beginning date
-* ``end`` - Ending date
 
 It returns objects with next fields:
 
@@ -466,7 +461,7 @@ It returns objects with next fields:
 
 .. code-block:: liquid
 
-   {% assign leaders = "3" | leaderboard: tag: "leaderboard", start: "2014-06-01", end: "2015-06-30" %}
+   {% assign leaders = "3" | leaderboard %}
    {% for leader in leaders %}
       <td>{{ leader.leaderboard_rank }}</td>
       <td>{{ leader.leaderboard_count }}</td>
@@ -474,7 +469,7 @@ It returns objects with next fields:
 
 .. code-block:: liquid
 
-   {% assign leader = "advocate" | leaderboard: tag: "default", start: "2015-06-01", end: "2015-06-30" %}
+   {% assign leader = "advocate" | leaderboard %}
    {{ leader.email }} - {{ leader.leaderboard_count }} - {{ leader.leaderboard_rank }}
 
 |hr|
