@@ -509,4 +509,21 @@ Refresh the screenshot every week:
 
    <img src="{{ 'www.example.com' | url2png: ttl: 604800 }}" />
 
+geocode
+.......
+
+Returns location for IP you pass to it.
+Response is an object with next fields:
+
+* ``country`` - Country
+* ``city`` - City
+
+Usage:
+
+.. code-block:: liquid
+
+   {% assign location = ip_address | geocode %}
+   Country: {{ location.country }}
+   City: {{ location.city }}
+
 .. _Standard liquid filters: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters
