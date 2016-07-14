@@ -60,7 +60,7 @@ With sharing links
 
 .. code-block:: url
 
-   GET https://www.talkable.com/api/v2/offers/dZpBwd?site_slug=my-store&api_key=i9uil7nQgDjucCiTJu&sharing_channels=facebook,twitter,custom
+   GET https://www.talkable.com/api/v2/offers/89238912?site_slug=my-store&api_key=i9uil7nQgDjucCiTJu&sharing_channels=facebook,twitter,custom
 
 Sample response:
 
@@ -70,6 +70,7 @@ Sample response:
      "ok": true,
      "result": {
        "offer": {
+         "id": 89238912,
          "short_url_code": "dZpBwd",
          "email": "customer@example.com",
          "show_url": "https://www.talkable.com/x/iEov9g",
