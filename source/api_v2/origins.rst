@@ -109,6 +109,7 @@ Sample response:
          "coupon_code": ""
        },
        "offer": {
+         "id": 89238912,
          "short_url_code": "dZpBwd",
          "email": "customer@example.com",
          "show_url": "https://www.talkable.com/x/iXh4Je",
@@ -156,6 +157,7 @@ Sample response:
          "coupon_code": ""
        },
        "offer": {
+         "id": 89238912,
          "short_url_code": "dZpBwd",
          "email": "customer@example.com",
          "show_url": "https://www.talkable.com/x/iXh4Je",
@@ -199,6 +201,7 @@ Sample response:
          "type": "AffiliateMember"
        },
        "offer": {
+         "id": 89238912,
          "short_url_code": "Jp8qY9",
          "email": "affiliate@example.com",
          "show_url": "https://www.talkable.com/x/5BN5h7",
