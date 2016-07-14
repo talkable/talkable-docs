@@ -38,7 +38,6 @@ After this, add dependencies to `build.gradle`
 
   .. code-block:: xml
 
-      <meta-data android:name="TalkableServer" android:value="https://talkable.com" />
       <meta-data android:name="TalkableApiKey" android:value="{{YOUR_TALKABLE_API_KEY}}" />
       <meta-data android:name="TalkableSiteSlug" android:value="{{YOUR_SITE_SLUG}}" />
 
@@ -79,7 +78,7 @@ After this, add dependencies to `build.gradle`
 
 Your environment is all set up! Now you need to :ref:`integrate <android_sdk/integration>` the Talkable campaign piece.
 
-.. _`Talkable SDK framework`: http://learn.talkable.com/downloads/talkable_android_sdk.aar
+.. _`Talkable SDK framework`: https://talkable-downloads.s3.amazonaws.com/android-sdk/talkable-sdk.aar
 
 .. container:: hidden
 

@@ -49,6 +49,12 @@ This API allows you to create origins. See examples below.
                      * coupon_code (optional)
 
    interpolations    Optional: array of interpolations to return in response
+   sharing_channels  Optional: array of social sharing channels for which will be
+                     generated sharing links.
+
+                     Options: `facebook`, `twitter`, `linkedin`, `sms`,
+                     `other` or custom, except `email`, `reminder`,
+                     `facebook_sponsored` and `coupon`.
    ================= ========================================================
 
 Example
@@ -200,6 +206,55 @@ Sample response:
          "email": "affiliate@example.com",
          "show_url": "https://www.talkable.com/x/5BN5h7",
          "claim_url": "https://www.talkable.com/x/TM2OhR"
+       }
+     }
+   }
+
+With sharing links
+..................
+
+.. code-block:: javascript
+
+   {
+     "api_key": "i9uil7nQgDjucCiTJu",
+     "site_slug": "my-store",
+     "type": "AffiliateMember",
+     "data": {
+       "email": "affiliate@example.com"
+     },
+     "sharing_channels": ["facebook", "twitter", "custom"]
+   }
+
+.. code-block:: bash
+
+   curl -H "Content-Type: application/json" \
+        -X POST \
+        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","type":"AffiliateMember","data":{"email":"affiliate@example.com"},"sharing_channels":["facebook","twitter","custom"]}' \
+        https://www.talkable.com/api/v2/origins
+
+Sample response:
+
+.. code-block:: javascript
+
+   {
+     "ok": true,
+     "result": {
+       "origin": {
+         "id": 31386400,
+         "email": "affiliate@example.com",
+         "customer_id": null,
+         "type": "AffiliateMember"
+       },
+       "offer": {
+         "short_url_code": "Jp8qY9",
+         "email": "affiliate@example.com",
+         "show_url": "https://www.talkable.com/x/5BN5h7",
+         "claim_url": "https://www.talkable.com/x/TM2OhR"
+       },
+       "claim_links": {
+         "facebook": "https://www.talkable.com/x/8L6xO2",
+         "twitter": "https://www.talkable.com/x/KB89fO",
+         "custom": "https://www.talkable.com/x/Yf794w"
        }
      }
    }
