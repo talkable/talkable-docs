@@ -1,33 +1,17 @@
-.. _campaigns/views/notifier_rewards_confirmation:
+.. _campaigns/views/friend_rewards_paid:
 .. include:: /partials/common.rst
 
-.. _notifier_rewards_confirmation:
+.. _friend_rewards_paid:
 
-Advocate/Friend Reward Confirmation Email
------------------------------------------
+Friend Reward Paid Email
+------------------------
 
 Main purpose of this email is to send a Reward via email, and remind about
 it in the future. |br|
-Email is triggered to a |advocate| or a |friend| who passed Email Gating, and received Reward
+Email is triggered to a |friend| who passed Email Gating, and received Reward
 (i.e. coupon code). |br|
 
-Use Email sending condition to differentiate |advocate| from |friend| email.
-
-Here is an example of a Friend Reward Confirmation Email:
-
-.. raw:: html
-
-  <pre>{% if reward.incentive.identifier == 'click' %}
-    true
-  {% endif %}</pre>
-
-.. image:: /_static/img/campaign/friend_confirmation_sending_criteria.png
-
 The email will be sent once Talkable knows Friend's email which they provides on the Friend Claim Page (such technique works great for email capturing). See :ref:`tutorials_email_gating` for more details.
-
-You can see your Incentive identifier inside Campaign Rules:
-
-.. image:: /_static/img/campaign/incentive_identifier.png
 
 Frequently used Variables:
 
@@ -46,7 +30,7 @@ Frequently used Variables:
 
 .. code-block:: html
 
-   Here is your {{ incentives.click.description }} OFF deal you just claimed!
+   Here is your {{ reward.incentive.description }} OFF deal you just claimed!
    Use it on any purchase by {{ valid_until }}
    Coupon code: {{ coupon_code }}
    <a href="{{ proceed_to_merchant_path }}">Shop now</a>
@@ -55,13 +39,9 @@ Frequently used Variables:
 
 .. raw:: html
 
-   <h2>Email sending conditions for Advocate</h2>
+   <h2>Email sending conditions</h2>
 
 By default is sent immediately after the reward is created, but can be delayed by configuration.
-
-.. raw:: html
-
-   <h2>Email sending conditions for Friend</h2>
 
 Main email sending criteria (unable to change):
 
