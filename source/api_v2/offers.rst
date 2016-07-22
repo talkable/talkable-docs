@@ -22,7 +22,6 @@ Returns advocate offer.
    site_slug         Your Talkable Site ID. You can get this from your
                      Talkable dashboard after you log in and create a site.
    id                Offer ID obtained with :ref:`origin creation <api_v2/origins>`.
-   interpolations    Optional: array of interpolations to return in response
    sharing_channels  Optional: array of social sharing channels for which will be
                      generated sharing links.
 

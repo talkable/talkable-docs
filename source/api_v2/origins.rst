@@ -48,7 +48,6 @@ This API allows you to create origins. See examples below.
                      * subtotal (optional)
                      * coupon_code (optional)
 
-   interpolations    Optional: array of interpolations to return in response
    sharing_channels  Optional: array of social sharing channels for which will be
                      generated sharing links.
 
