@@ -24,7 +24,7 @@
 
 .. |origin| raw:: html
 
-   <abbr title="Origin is the point where referral loop begins">Origin</abbr>
+   <abbr title="Origin is the point where a referral loop begins (Standalone or Post Purchase campaign)">Origin</abbr>
 
 .. |iso8601| raw:: html
 
