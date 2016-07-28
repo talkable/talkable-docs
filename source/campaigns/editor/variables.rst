@@ -65,7 +65,7 @@ Personal data for |advocate|.
 **Available in**: all Views |br|
 **Type**: ``Object``
 
-Origin data for |advocate|.
+|origin| data for |advocate|.
 
 .. container:: ptable
 
@@ -77,10 +77,10 @@ Origin data for |advocate|.
    created_at           "2016-07-27T00:00:00.000+03:00"   Time when Advocate origin was created
    event_category       "purchase"                        Advocate origin event category
    coupon_codes         ["AD_DISCOUNT"]                   Coupon codes that are used in Advocate origin
-   location             {                                 Advocate Location regarding his IP address
-                          "country":"United States",
-                          "city":"San Jose",
-                          "country_code":"US"
+   location             {                                 Advocate geolocation based on their IP address
+                        "country":"United States",
+                        "city":"San Jose",
+                        "country_code":"US"
                         }
    ==================== ================================= ==================================================================
 
