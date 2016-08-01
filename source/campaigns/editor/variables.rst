@@ -69,20 +69,18 @@ Personal data for |advocate|.
 
 .. container:: ptable
 
-   ==================== ================================= ==================================================================
-   Property             Value                             Description
-   ==================== ================================= ==================================================================
-   id                   1234567890                        Advocate origin id
-   new_customer         false | true                      Advocate is a new customer or not
-   created_at           "2016-07-27T00:00:00.000+03:00"   Time when Advocate origin was created
-   event_category       "purchase"                        Advocate origin event category
-   coupon_codes         ["AD_DISCOUNT"]                   Coupon codes that are used in Advocate origin
-   location             {                                 Advocate geolocation based on their IP address
-                        "country":"United States",
-                        "city":"San Jose",
-                        "country_code":"US"
-                        }
-   ==================== ================================= ==================================================================
+   ===================== ================================= ==================================================================
+   Property              Value                             Description
+   ===================== ================================= ==================================================================
+   id                    1234567890                        Advocate origin id
+   new_customer          false | true                      Advocate is a new customer or not
+   created_at            "2016-07-27T00:00:00.000+03:00"   Time when Advocate origin was created
+   event_category        "purchase"                        Advocate origin event category
+   coupon_codes          ["AD_DISCOUNT"]                   Coupon codes that are used in Advocate origin
+   location.country      "United States"                   Advocate geolocation country based on their IP address
+   location.city         "San Jose"                        Advocate geolocation city based on their IP address
+   location.country_code "US"                              Advocate geolocation country code based on their IP address
+   ===================== ================================= ==================================================================
 
 |br|
 
