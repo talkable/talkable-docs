@@ -22,6 +22,10 @@
 
    <abbr title="Person, who is invited to participate in Campaign by Advocate">Friend</abbr>
 
+.. |origin| raw:: html
+
+   <abbr title="Origin is the point where a referral loop begins (Standalone or Post Purchase campaign)">Origin</abbr>
+
 .. |iso8601| raw:: html
 
    <a href="http://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>
