@@ -8,7 +8,7 @@ If you don't know what is Localization inside Talkable :ref:`read this article <
 
 Few benefits you get out of using Localizations:
 
-  1. It is extremely easy to set up an AB test if your copy is coded up as a Localizatio
+  1. It is extremely easy to set up an AB test if your copy is coded up as a Localization.
   2. For non-technical people it is easier to change the copy inside Localization Editor because they are afraid to code.
 
 1. Visit Campaign Editor:
@@ -38,7 +38,7 @@ A piece that we are going to extract into Localizations is just a copy, without 
 .. code-block:: javascript
 
   <h1>
-    {{ "headline" | localize: "Get [[ advocate_incentive.description ]]." }}
+    {{ "advocate_share_page_headline" | localize: "Get [[ advocate_incentive.description ]]." }}
   </h1>
 
 5. Go back to Editor to see newly created Localization:
@@ -46,15 +46,45 @@ A piece that we are going to extract into Localizations is just a copy, without 
 .. image:: /_static/img/optional/campaign_localization_sidebar.png
 
 
-Few important things to remember
---------------------------------
+.. raw:: html
 
-  1. Don't forget to change `{{` into `[[` inside interpolation variables, otherwise variables will lose its function and become just a plain text.
-  2. Keep in mind that `identifier` ("headline" in the example above) is a campaign-level Localization in fact, always remember to provide unique names for them, otherwise you will be overriding a value of one Localization.
+  <h2>Few important things to remember</h2>
+
+1. Don't forget to change `{{` into `[[` inside interpolation variables, otherwise variables will lose its function and become just a plain text.
+2. Keep in mind that `identifier` ("advocate_share_page_headline" in the example above) is a campaign-level Localization in fact, always remember to provide unique names for them, otherwise you will be overriding a value of one Localization.
 
 .. warning::
 
    Talkable does not allow coding up Localizations within CSS area. If you want to move some CSS property into localizations use inline <style> tag inside HTML area.
+
+Moving Subject Line Into Localization
+-------------------------------------
+
+It is highly unlikely that your campaign is not equipped with Subject line as a Localization, by default all newly created campaigns at Talkable already have it. In case your campaign does not please keep reading this section.
+
+Subject line is unique because its default value is set on the Advocate Share Page along with other email sharing fields (email body, reminder checkbox value), not Friend Share email as it might sounded logical. Here is the plan:
+
+  1. Create Subject Line as a Localization on the Advocate Share Page, provide its default value, it will be used inside `value` attribute of the "subject" form field:
+
+    .. image:: /_static/img/optional/subject_line_setup_inside_share_page.png
+
+    .. code-block:: html
+
+      <input name="email_subject" type="text" class="textfield" value="{{ 'friend_share_email_subject' | localize: 'Your friend [[ advocate_info.first_name ]] [[ advocate_info.last_name ]] gave you [[ friend_incentive.description ]]' | replace: '   ', ' ' | replace: '  ', ' ' }}" />
+
+    This code creates new Localization named "Friend share email subject" that you are able to change on the Advocate Share Page.
+
+  2. Navigate to Friend Share email |rarr| Extra fields to see Email Subject field:
+
+    .. image:: /_static/img/optional/campaign_editor_subject.png
+
+  3. Put the following code in there:
+
+    .. code-block:: html
+
+      {% if custom_message_subject == blank  %}{{ 'friend_share_email_subject' | localize }}{% else %}{{ custom_message_subject }}{% endif %}
+
+    The code snippet above checks if the Advocate provided any Subject at all. If not we take default Subject copy so Friend Share email does not come with a blank subject.
 
 .. container:: hidden
 

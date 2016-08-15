@@ -44,8 +44,9 @@ When the Event is registered successfully it appears inside Events Report. |br|
 
 |hr|
 
-Showing Different Campaign
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. raw:: html
+
+  <h2>Showing Different Campaign</h2>
 
 In the example above we show :ref:`post_purchase_campaign` Campaign as a result of Event registration.
 However you can show any other Talkable Campaign instead since there are 8 of them.
@@ -96,13 +97,9 @@ Correspondence between Container ID and `campaign_template`:
 | New Visitor Popup                | `talkable-popup`                | `new-visitor-popup`               |
 +----------------------------------+---------------------------------+-----------------------------------+
 
-Advanced Features
------------------
+.. raw:: html
 
-Here is a full list of things you can do with Talkable:
+  <h2>Advanced Features</h2>
 
-.. toctree::
-  :maxdepth: 1
-  :glob:
+Here is a full list of :ref:`Advanced Talkable features <optional>`.
 
-  /optional/*
