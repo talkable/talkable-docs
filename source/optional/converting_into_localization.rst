@@ -86,6 +86,30 @@ Subject line is unique because its default value is set on the Advocate Share Pa
 
     The code snippet above checks if the Advocate provided any Subject at all. If not we take default Subject copy so Friend Share email does not come with a blank subject.
 
+Color As Localization
+---------------------
+
+Another example would be localizing font color of a headline, all copy at once, or a background color of a button. You can use `color` trait of a Localization for that.
+
+  1. Navigate to HTML & CSS editor of the View you want to add a color Localization on:
+
+    .. image:: /_static/img/optional/campaign_navigation_html_css_editor.png
+
+  2. At the very bottom of the HTML area add ``<style></style>`` tag with CSS that will override default styling of the element you want to localize:
+
+    .. code-block:: css
+
+      .button {
+        background-color: {{ "advocate_share_page_button_color" | localize: "#f94d08", trait: "color" }};
+        border-color: {{ "advocate_share_page_button_color" | localize: "#f94d08", trait: "color" }};
+      }
+
+    In the code example above we created new Color Localization with default HEX color `#f94d08` which is used for `background-color` and `border-color` CSS properties of `.button` selector. Whenever you set a new color inside Campaign Editor it will be changed across both places because we're using the same Localization identifier in both places.
+
+  3. New Color Localization appears under "Color" tab inside Campaign Editor:
+
+    .. image:: /_static/img/optional/editor_colors_tab.png
+
 .. container:: hidden
 
    .. toctree::
