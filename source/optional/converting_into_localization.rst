@@ -25,7 +25,7 @@ Few benefits you get out of using Localizations:
 
 4. Find a copy that you'd like to convert into a Localization. You can hit `Cmd+F` (`Ctrl+F` on Windows) to search within HTML area.
 
-Static copy is basically a piece of text that sits inside Liquid Editor and usually looks like this:
+Static copy is basically a piece of text that sits inside HTML & CSS Editor and usually looks like this:
 
 .. code-block:: html
 
