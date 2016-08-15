@@ -27,6 +27,9 @@ each with links to integration details.
    * - :ref:`Subscribing to Talkable Iframe events <optional/subscribing_to_events>`
      - Subscribe to Talkable Iframe events such as the campaign is loaded or closed and
        perform some updates to your site based on them.
+   * - :ref:`Convert static copy into Localization <optional/converting_into_localization>`
+     - Convert all static languange into a customizable copy that's
+       easy to AB test.
 
 .. container:: hidden
 
@@ -39,3 +42,4 @@ each with links to integration details.
     optional/subscribing_to_events
     optional/url_parameters
     optional/white_labeling
+    optional/converting_into_localization
