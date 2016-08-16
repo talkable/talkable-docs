@@ -1,8 +1,8 @@
 .. _optional/converting_into_localization:
 .. include:: /partials/common.rst
 
-Converting Static Copy Into Localization
-========================================
+Converting Into Localization
+============================
 
 If you don't know what is Localization inside Talkable :ref:`read this article <campaigns/localization>`.
 
@@ -109,6 +109,29 @@ Another example would be localizing font color of a headline, all copy at once, 
   3. New Color Localization appears under "Color" tab inside Campaign Editor:
 
     .. image:: /_static/img/optional/editor_colors_tab.png
+
+Image As Localization
+---------------------
+
+Localizing Image asset can be handy if you want to AB test it. Here is how to do that:
+
+  1. Navigate to HTML & CSS editor of the View you want to add a color Localization on:
+
+    .. image:: /_static/img/optional/campaign_navigation_html_css_editor.png
+
+  2. Inside HTML area find an image you want to localize. An image can be either within CSS or within HTML area (`<img />`, inline styles, etc.). If the image is set within CSS you need to extract it into HTML area using inline styles:
+
+    .. code-block:: html
+
+      <div class="container" style="background-image: url('{{ "share_page_background" | localize: "share-page-background.jpg", trait: "asset" }}');">
+        ...
+      </div>
+
+    In the example above `share_page_background` is a name of an Image Localization. `share-page-background.jpg` is a name of an Asset (Files tab within HTML & CSS Editor).
+
+  3. Now we can see newly created Image Localization under "Images" tab:
+
+    .. image:: /_static/img/optional/editor_images_tab.png
 
 .. container:: hidden
 
