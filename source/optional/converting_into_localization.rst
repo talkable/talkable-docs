@@ -133,6 +133,59 @@ Localizing Image asset can be handy if you want to AB test it. Here is how to do
 
     .. image:: /_static/img/optional/editor_images_tab.png
 
+Custom Option (Configuration) Localization
+------------------------------------------
+
+In addition to localizing Images, Colors, and static copy Talkable allows you to build really advanced Localizations where you can AB test or switch between different visual layouts of campaign Views.
+
+An example can be to create an AB test for Equal Emphasis (all 3 sharing channels look visually equal) vs. Email Emphasis where email sharing form stands out:
+
+  .. image:: /_static/img/optional/share_page_equal_emphasis.png
+    :height: 250 px
+
+  .. image:: /_static/img/optional/share_page_email_emphasis.png
+    :height: 250 px
+
+In order to chieve this AB test we need to
+
+  1. Build two separate layouts using CSS cascades to style all nested children within a container block that holds all the content:
+
+    .. code-block:: html
+
+      {% assign share_page_layout = "share_page_layout" | localize: "Equal Emphasis", "Email Emphasis" %}
+      <div class="container is-{{ share_page_layout | downcase | split: " " | join: "-" }}">
+        ...
+      </div>
+
+    The code above creates a local Liquid variable named `share_page_layout` and assigns `share_page_layout` Configuration Localization to it.
+    Then we optimize the variable value to be set as an HTML `class` attribute (downcase, replace spaces with hyphens) and set it as a part of a `class` attribute.
+
+  2. Now inside Campaign Editor we can see newly created Configuration Localization:
+
+    .. image:: /_static/img/optional/editor_configuration_tab.png
+
+  3. Let's switch back to HTML & CSS editor and start applying CSS styling to both layouts. Knowing their final classes inside HTML: `class="container is-equal-emphasis"` and `class="container is-email-emphasis"` we can easily style both layouts inside CSS area like so (SCSS is also allowed and is shown as an example for code simplicity):
+
+    .. code-block:: css
+
+      .container {
+        &.is-equal-emphasis {
+          h1 {
+            font-size: 48px;
+          }
+        }
+
+        &.is-email-emphasis {
+          h1 {
+            font-size: 32px;
+          }
+        }
+      }
+
+    All other nested children can be styled following this pattern.
+
+  4. Once you're done with styling it is very easy to set up an AB test, just go back to Campaign Editor and click "Add A/B test variant" link. Once a Campaign goes Live it will start rotating both variants following AB test distribution rules (50:50 by default).
+
 .. container:: hidden
 
    .. toctree::
