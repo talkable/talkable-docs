@@ -504,4 +504,17 @@ Refresh the screenshot every week:
 
    <img src="{{ 'www.example.com' | url2png: ttl: 604800 }}" />
 
+|hr|
+
+barcode
+.......
+
+Generates data for displaying barcode according to format GS1-128.
+
+.. code-block:: liquid
+
+    {% assign barcode = "X" | barcode %}
+
+Returns array of booleans: ``[true, true, false, ...]``.
+
 .. _Standard liquid filters: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters
