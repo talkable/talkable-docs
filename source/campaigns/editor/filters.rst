@@ -509,15 +509,14 @@ Refresh the screenshot every week:
 barcode
 .......
 
-Generates data for displaying barcode according to format GS1-128.
+Represents any ``string`` as an array of boolean values: ``[true, false]`` in order to convert it into a barcode.
+This filter strictly follows GS1-128 specification: https://en.wikipedia.org/wiki/GS1-128.
 
 .. code-block:: liquid
 
    {% assign barcode = "X" | barcode %}
 
-Returns array of booleans: ``[true, true, false, ...]``.
-
-**Example usage in template**
+**Here is an example how to convert a coupon code into a barcode:**
 
 HTML:
 
