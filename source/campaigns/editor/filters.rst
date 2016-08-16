@@ -504,4 +504,44 @@ Refresh the screenshot every week:
 
    <img src="{{ 'www.example.com' | url2png: ttl: 604800 }}" />
 
+|hr|
+
+barcode
+.......
+
+Represents any ``string`` as an array of boolean values: ``[true, false]`` in order to convert it into a barcode.
+This filter strictly follows GS1-128 specification: https://en.wikipedia.org/wiki/GS1-128.
+
+.. code-block:: liquid
+
+   {% assign barcode = "X" | barcode %}
+
+**Here is an example how to convert a coupon code into a barcode:**
+
+HTML:
+
+.. code-block:: html
+
+   <table cellspacing="0" cellpadding="0" border="0">
+     {% assign barcode = coupon_code | barcode %}
+       <tr>
+         {% for bar in barcode %}
+           <!-- bar suppose to be true or false -->
+           <td class="barcode-line is-{{ bar }}"></td>
+         {% endfor %}
+       </tr>
+   </table>
+
+SCSS:
+
+.. code-block:: scss
+
+   .barcode-line {
+     height: 50px;
+     width: 2px;
+     &.is-true {
+       background-color: black;
+     }
+   }
+
 .. _Standard liquid filters: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters
