@@ -513,8 +513,36 @@ Generates data for displaying barcode according to format GS1-128.
 
 .. code-block:: liquid
 
-    {% assign barcode = "X" | barcode %}
+   {% assign barcode = "X" | barcode %}
 
 Returns array of booleans: ``[true, true, false, ...]``.
+
+**Example usage in template**
+
+HTML:
+
+.. code-block:: html
+
+   <table cellspacing="0" cellpadding="0" border="0">
+     {% assign barcode = coupon_code | barcode %}
+       <tr>
+         {% for bar in barcode %}
+           <!-- bar suppose to be true or false -->
+           <td class="barcode-line is-{{ bar }}"></td>
+         {% endfor %}
+       </tr>
+   </table>
+
+SCSS:
+
+.. code-block:: scss
+
+   .barcode-line {
+     height: 50px;
+     width: 2px;
+     &.is-true {
+       background-color: black;
+     }
+   }
 
 .. _Standard liquid filters: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters
