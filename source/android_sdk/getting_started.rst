@@ -11,7 +11,7 @@ Installation
 ------------
 
 1. Download the latest version of `Talkable SDK framework`_.
-2. Add `talkable.aar` and add it as project dependency in Android studio.
+2. Add `talkable-sdk.aar` and add it as project dependency in Android studio.
 
 
   .. note::
@@ -22,10 +22,10 @@ After this, add dependencies to `build.gradle`
 
   .. code-block:: groovy
 
-      compile 'com.android.support:appcompat-v7:23.4.0'
       compile 'com.squareup.okhttp3:okhttp:3.2.0'
       compile 'com.facebook.android:facebook-android-sdk:[4,5)'
       compile 'com.google.code.gson:gson:2.4'
+      compile project(':talkable-sdk')
 
 
 3. Add Talkable activity to your `AndroidManifest.xml`
