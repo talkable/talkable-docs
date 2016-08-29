@@ -39,7 +39,6 @@ Configuration
   .. code-block:: objc
 
     [[Talkable manager] setApiKey:@"YOUR_TALKABLE_API_KEY" andSiteSlug:@"YOUR_SITE_SLUG"];
-    [[Talkable manager] registerURLScheme:@"YOUR_APPLICATION_URL_SCHEME"];
 
   .. note::
 
@@ -48,7 +47,36 @@ Configuration
     - Visit https://www.talkable.com/account/sites to find you site slug
     - Select site and go to **Dashboard** |rarr| **Site Settings**. Find **Integration settings** section and there you will see the API Key
 
-2. Add following lines to `application:handleOpenURL:` or `application:openURL:sourceApplication:annotation:`
+2. Register talkable URL scheme:
+
+  - Defines `tkbl-<your-site-slug>` as URL Scheme in your Info.plist file:
+
+    .. code-block:: xml
+
+      <key>CFBundleURLTypes</key>
+      <array>
+        <dict>
+          <key>CFBundleURLSchemes</key>
+          <array>
+            <string>tkbl-<your-site-slug></string>
+          </array>
+        </dict>
+      </array>
+
+  - Add `tkbl-<your-site-slug>` scheme to the list of schemes are queried within application:
+
+    .. code-block:: xml
+
+      <key>LSApplicationQueriesSchemes</key>
+      <array>
+        <string>tkbl-your-site-slug</string>
+      </array>
+
+  .. note::
+
+    Please replace `<your-site-slug>` with your actual site slug, which you are able to find on your site **Dashboard** at https://www.talkable.com
+
+3. Add following lines to `application:handleOpenURL:` or `application:openURL:sourceApplication:annotation:`
 
   .. code-block:: objc
 
