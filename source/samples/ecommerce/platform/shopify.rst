@@ -29,8 +29,8 @@
         campaign_template: 'post-purchase',
         customer: {
           email: checkout.email, /* REQUIRED - Customer Email Address */
-          first_name: checkout.shipping_address.first_name, // Optional - Customer first name
-          last_name: checkout.shipping_address.last_name // Optional - Customer last name
+          first_name: checkout.billing_address ? checkout.billing_address.first_name : null, // Optional - Customer first name
+          last_name: checkout.billing_address ? checkout.billing_address.last_name : null // Optional - Customer last name
         }
       };
 
