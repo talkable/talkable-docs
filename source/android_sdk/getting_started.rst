@@ -49,7 +49,21 @@ After this, add dependencies to `build.gradle`
     - Select site and go to **Dashboard** |rarr| **Site Settings**.
       Find **Integration settings** section and there you will see the API Key
 
-5. Add the following entry in your `AndroidManifest.xml` file to track app installs.
+5. Add deep linking schema handler into your main activity entry.
+
+.. code-block:: xml
+
+  <intent-filter>
+      <action android:name="android.intent.action.VIEW" />
+
+      <category android:name="android.intent.category.DEFAULT" />
+      <category android:name="android.intent.category.BROWSABLE" />
+
+      <data android:scheme="tkbl-{{YOUR_SITE_SLUG}}" />
+  </intent-filter>
+
+
+6. Add the following entry in your `AndroidManifest.xml` file to track app installs.
 
   .. code-block:: xml
 
@@ -61,7 +75,9 @@ After this, add dependencies to `build.gradle`
           </intent-filter>
       </receiver>
 
-6. Initialize Talkable in your main activity class, like so:
+.. _main_activity_setup:
+
+7. Initialize Talkable in your main activity class, like so:
 
   .. code-block:: java
 
@@ -72,7 +88,7 @@ After this, add dependencies to `build.gradle`
         public void onCreate(Bundle savedInstanceState) {
             ...
 
-            Talkable.initialize(this);
+            Talkable.trackAppOpen(this);
         }
     }
 
