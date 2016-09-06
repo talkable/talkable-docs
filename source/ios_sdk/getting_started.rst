@@ -63,13 +63,14 @@ Configuration
         </dict>
       </array>
 
-  - Add `tkbl-<your-site-slug>` scheme to the list of schemes are queried within application:
+  - Add `tkbl-<your-site-slug>` scheme and `fb-messenger` sheme to the list of schemes are queried within application:
 
     .. code-block:: xml
 
       <key>LSApplicationQueriesSchemes</key>
       <array>
         <string>tkbl-your-site-slug</string>
+        <string>fb-messenger</string>
       </array>
 
   .. note::
