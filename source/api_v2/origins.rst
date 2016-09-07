@@ -32,6 +32,8 @@ This API allows you to create origins. See examples below.
                      * uuid (optional) - uuid given to a visitor on a claim page. See :ref:`Referral Program via API <api_v2/flow>`
                      * ip_address (optional) - IP address of client who is making the request. You might pass `current` string as a value so remote IP will be used
                      * campaign_tags (optional) - campaign tags for offer targeting
+                     * sharing_channels (optional) - array of social sharing channels
+                       for which will be generated sharing links
 
                      For Purchase:
 
@@ -47,13 +49,6 @@ This API allows you to create origins. See examples below.
                      * event_category
                      * subtotal (optional)
                      * coupon_code (optional)
-
-   sharing_channels  Optional: array of social sharing channels for which will be
-                     generated sharing links.
-
-                     Options: `facebook`, `twitter`, `linkedin`, `sms`,
-                     `other` or custom, except `email`, `reminder`,
-                     `facebook_sponsored` and `coupon`.
    ================= ========================================================
 
 Example
