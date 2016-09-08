@@ -91,7 +91,7 @@ Requirements
 
 The SDK supports iOS 7.0 and later.
 
-.. _`Talkable SDK framework`: http://learn.talkable.com/downloads/talkable_ios_sdk.zip
+.. _`Talkable SDK framework`: https://talkable-downloads.s3.amazonaws.com/ios-sdk/talkable_ios_sdk.zip
 
 .. container:: hidden
 
