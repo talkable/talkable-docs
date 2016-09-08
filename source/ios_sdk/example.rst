@@ -8,7 +8,7 @@ In case you want to take a look at the actual code and see it in action we creat
 
 If you have any questions, don't hesitate to email us at support@talkable.com. Happy hacking!
 
-.. _`here`: http://learn.talkable.com/downloads/talkable_sdk_demo.zip
+.. _`here`: https://talkable-downloads.s3.amazonaws.com/ios-sdk/talkable_sdk_demo.zip
 
 .. container:: hidden
 
