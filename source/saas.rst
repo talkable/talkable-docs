@@ -30,7 +30,7 @@ Below is an example of registering an Event and showing :ref:`post_purchase_camp
     var _talkable_data = {
       event: {
         event_number: '100011', // Required - unique Event id
-        event_category: 'Signups' // Required - Event category
+        event_category: 'signups' // Required - Event category
       },
       campaign_template: 'post-purchase' // Loads Post Purchase campaign with tag "post-purchase"
     };
@@ -61,7 +61,7 @@ Here is an example how to show :ref:`invite_campaign`:
     var _talkable_data = {
       event: {
         event_number: '100011', // Required - unique Event id
-        event_category: 'Signups' // Required - Event category
+        event_category: 'signups' // Required - Event category
       },
       campaign_template: 'invite' // Loads Invite campaign with tag "invite"
     };
