@@ -50,11 +50,11 @@ Implement TalkableDelegate
   .. code-block:: objc
 
     - (void)didRegisterOrigin:(TKBLOriginType)type withURL:(NSURL*)url;
-    - (void)didRegisterOrigin:(TKBLOriginType)type withWebView:(UIWebView*)webView;
+    - (void)didRegisterOrigin:(TKBLOriginType)type withWebView:(WKWebView*)webView;
 
   .. note::
 
-    Talkable SDK assigns itself to UIWebView delegate. Changing UIWebView delegate may brokes some functionality so we strictly not recommend to do this.
+    Talkable SDK assigns itself to WKWebView navigation delegate. Changing WKWebView navigation delegate may brokes some functionality so we strictly not recommend to do this.
 
 
 Notifications

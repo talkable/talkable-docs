@@ -22,6 +22,7 @@ Installation
   - `SafariServices.framework`
   - `Security.framework`
   - `Social.framework`
+  - `WebKit.framework`
 
   To do this, click on your application's target, then click on Build Phases and expand the Link Binary With Libraries group.
 
@@ -89,7 +90,7 @@ Your environment is all set up! Now you need to :ref:`integrate <ios_sdk/integra
 Requirements
 ------------
 
-The SDK supports iOS 7.0 and later.
+The SDK supports iOS 8.0 and later.
 
 .. _`Talkable SDK framework`: https://talkable-downloads.s3.amazonaws.com/ios-sdk/talkable_ios_sdk.zip
 
