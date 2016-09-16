@@ -44,53 +44,55 @@ Below is an example with product items passed along with purchase data (notice F
 
   All product items are included into Purchase details inside Purchases report. This information is helpful for debugging.
 
-Hiding Campaign Preloader
--------------------------
-
-By default Post Purchase campaign loads with a preloader. Adding `style` attribute to `iframe` object changes its appearance:
-
-.. code-block:: html
-
-  <!-- Place Talkable Container into appropriate place in the DOM -->
-  <div id="talkable-post-purchase"></div>
-
-  <script>
-    var _talkable_data = {
-      // purchase: {
-      // ...
-      // },
-      iframe: {
-        container: 'talkable-post-purchase', // container element where to place the iframe
-        style: "display: none;" // this is just a standard inline CSS
-      }
-    };
-
-    _talkableq.push(['register_purchase', _talkable_data]);
-  </script>
-
 Embedding as Inline Widget
 --------------------------
 
-Post Purchase campaign can be also embedded as inline widget somewhere on the page. For that we only require placing the Container element into appropriate place on the site where Talkable iframe will be placed.
+Post Purchase campaign can be also embedded as inline widget somewhere on the page. For that we only require placing the Container DIV element into appropriate place on the site where Talkable iframe will be placed.
+
+Next step is to go into that Post Purchase campaign inside Talkable and:
+
+1. Visit Editor
+2. Switch into HTML/CSS editor (top right corner)
+3. Open Extra fields
+4. Enable Responsive iframe feature by pressing "On"
+5. Find Integration CSS textarea and change its CSS to position the iframe not as a popup but as inline block. Here is an example that does it:
+
+.. code-block:: scss
+
+  #{$iframe} {
+    display: block;
+    width: 100%;
+  }
+
+6. Now close Extra fields and inside HTML code area remove the following lines of code:
 
 .. code-block:: html
 
-  <!-- Place Talkable Container into appropriate place in the DOM -->
-  <div id="talkable-post-purchase"></div>
+  <div class="campaign-overlay"></div>
 
-  <script>
-    var _talkable_data = {
-      // purchase: {
-      // ...
-      // },
-      iframe: {
-        container: 'talkable-post-purchase', // container element where to place the iframe
-        style: "display: block; width: 100%;" // this is just a standard inline CSS
-      }
-    };
+And remove this DIV as well:
 
-    _talkableq.push(['register_purchase', _talkable_data]);
-  </script>
+.. code-block:: html
+
+  <div class="campaign-helper"></div>
+
+7. Inside CSS area replace this code:
+
+.. code-block:: css
+
+  body.signup,
+  body.share {
+      height: 100%;
+  }
+
+With this:
+
+.. code-block:: css
+
+  body.signup,
+  body.share {
+    overflow: hidden;
+  }
 
 Overriding Customer Data
 ------------------------
@@ -100,7 +102,7 @@ In case you need to override customer data during Purchase registration include 
 .. code-block:: html
 
   <!-- Place Talkable Container into appropriate place in the DOM -->
-  <div id="talkable-post-purchase"></div>
+  <div id="talkable-offer"></div>
 
   <script>
     var _talkable_data = {
