@@ -78,6 +78,12 @@ After this, add dependencies to `build.gradle`
 
 Your environment is all set up! Now you need to :ref:`integrate <android_sdk/integration>` the Talkable campaign piece.
 
+
+Requirements
+------------
+
+The SDK supports Android 4.1 and later.
+
 .. _`Talkable SDK framework`: https://talkable-downloads.s3.amazonaws.com/android-sdk/talkable-sdk.aar
 
 .. container:: hidden
