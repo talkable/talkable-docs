@@ -27,4 +27,5 @@ Contents:
    android_sdk/integration
    android_sdk/overriding_defaults
    android_sdk/api
+   android_sdk/upgrade
 
