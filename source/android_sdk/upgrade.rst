@@ -12,7 +12,7 @@ Sometimes we need you to upgrade existing integration to use our latest features
 Deep linking schema
 ...................
 
-Add this to ``AndroidManifest.xml`` inside defenition of Talkable activity
+Add this to ``AndroidManifest.xml`` inside definition of Talkable activity
 
 .. code-block:: xml
 
