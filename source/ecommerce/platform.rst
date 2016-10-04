@@ -22,21 +22,3 @@ customer has purchased.
 
       Magento <platform/magento>
       Shopify <platform/shopify>
-
-   .. toctree::
-      :hidden:
-
-      platform/3dcart
-      platform/bigcommerce
-      platform/cre-loaded
-      platform/demandware
-      platform/fastspring
-      platform/magento-go
-      platform/opencart
-      platform/oscommerce
-      platform/ubercart
-      platform/volusion
-      platform/vp-asp
-      platform/x-cart
-      platform/yahoo
-      platform/zen-cart
