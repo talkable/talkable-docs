@@ -94,7 +94,6 @@ Triggered when there is a new referral in Talkable.
        "id": 543208538,
        "type": "Purchase",
        "order_number": 381177444,
-       "order_date": "2014-08-14T02:01:16.824-07:00",
        "customer_id": "22726076",
        "coupon_code": "WHT60000"
      },
@@ -142,7 +141,6 @@ Triggered when there is a new referral in Talkable.
            "type": "Purchase",
            "order_number": 381177444,
            "order_date": "2014-08-14T02:01:16.824-07:00",
-           "customer_id": "22726076",
            "coupon_code": "WHT60000"
          }
        }
@@ -155,7 +153,7 @@ Triggered when there is a new referral in Talkable.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"campaign":{"id":836929610,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"referred_origin":{"id":543208538,"type":"Purchase","order_number":381177444,"order_date":"2014-08-14T02:01:16.824-07:00","customer_id":"22726076","coupon_code":"WHT60000"},"advocate_rewards":[{"id":316145153,"email":"referrer@example.com","person":{"email":"referrer@example.com","first_name":"Bob","last_name":"Crane","gender":null,"sub_choice":false,"subscribed_at":null,"unsubscribed_at":null},"amount":"5.00","incentive":"rebate","incentive_description":"$5.00 back","origin":{"id":667277390,"type":"AffiliateMember","email":"referrer@example.com"}}],"friend_rewards":[{"id":884178819,"email":"referred@example.com","person":{"email":"referred@example.com","first_name":"Alice","last_name":"Smith","gender":"female","sub_choice":true,"subscribed_at":"2014-08-14T02:01:16.823-07:00","unsubscribed_at":null},"amount":"0.00","incentive":"other","incentive_description":"First Month Free","origin":{"id":543208538,"type":"Purchase","order_number":381177444,"order_date":"2014-08-14T02:01:16.824-07:00","customer_id":"22726076","coupon_code":"WHT60000"}}]}' <url>
+   curl --data 'key=<key>&payload={"campaign":{"id":836929610,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"referred_origin":{"id":543208538,"type":"Purchase","order_number":381177444,"customer_id":"22726076","coupon_code":"WHT60000"},"advocate_rewards":[{"id":316145153,"email":"referrer@example.com","person":{"email":"referrer@example.com","first_name":"Bob","last_name":"Crane","gender":null,"sub_choice":false,"subscribed_at":null,"unsubscribed_at":null},"amount":"5.00","incentive":"rebate","incentive_description":"$5.00 back","origin":{"id":667277390,"type":"AffiliateMember","email":"referrer@example.com"}}],"friend_rewards":[{"id":884178819,"email":"referred@example.com","person":{"email":"referred@example.com","first_name":"Alice","last_name":"Smith","gender":"female","sub_choice":true,"subscribed_at":"2014-08-14T02:01:16.823-07:00","unsubscribed_at":null},"amount":"0.00","incentive":"other","incentive_description":"First Month Free","origin":{"id":543208538,"type":"Purchase","order_number":381177444,"order_date":"2014-08-14T02:01:16.824-07:00","customer_id":"22726076","coupon_code":"WHT60000"}}]}' <url>
 
 .. container:: hidden
 

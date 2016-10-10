@@ -86,7 +86,6 @@ Reward reason can be of 6 following general types.
        "id": 543208538,
        "type": "Purchase",
        "order_number": 381177444,
-       "order_date": "2014-08-14T02:01:16.824-07:00",
        "customer_id": "22726076",
        "coupon_code": "WHT60000"
      },
@@ -113,7 +112,7 @@ Reward reason can be of 6 following general types.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"person":{"email":"referrer@example.com","first_name":"Bob","gender":null,"last_name":"Smith","sub_choice":true,"subscribed_at":"2014-08-13T11:14:08.835-07:00","unsubscribed_at":null},"origin":{"id":543208538,"type":"Purchase","order_number":381177444,"order_date":"2014-08-14T02:01:16.824-07:00","customer_id":"22726076","coupon_code":"WHT60000"},"campaign":{"id":146331555,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"reward":{"reason":"referrer","incentive_type":"rebate","incentive_description":"$10.00 back","amount":10,"coupon_code":null}}' <url>
+   curl --data 'key=<key>&payload={"person":{"email":"referrer@example.com","first_name":"Bob","gender":null,"last_name":"Smith","sub_choice":true,"subscribed_at":"2014-08-13T11:14:08.835-07:00","unsubscribed_at":null},"origin":{"id":543208538,"type":"Purchase","order_number":381177444,"customer_id":"22726076","coupon_code":"WHT60000"},"campaign":{"id":146331555,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"reward":{"reason":"referrer","incentive_type":"rebate","incentive_description":"$10.00 back","amount":10,"coupon_code":null}}' <url>
 
 .. container:: hidden
 

@@ -26,7 +26,6 @@
         '?v=' + encodeURIComponent(curebitVersion) +
         '&purchase[order_number]=' + curebitOrderNumber +
         '&purchase[subtotal]=' + '#{order.subTotal.value}' +
-        '&purchase[order_date]=' + '#{order.created}' +
         '&purchase[email]=' + '#{order.customer.email}' +
         '&' + curebitItems;
 

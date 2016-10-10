@@ -39,7 +39,6 @@ This API allows you to create origins. See examples below.
 
                      * subtotal
                      * order_number
-                     * order_date (|iso8601| formatted datetime)
                      * items (optional)
                      * coupon_code (optional)
 
@@ -66,7 +65,6 @@ Create a purchase
      "data": {
        "email": "customer@example.com",
        "order_number": 12,
-       "order_date": "2014-03-14T05:49:54-07:00",
        "subtotal": 100,
        "uuid": "b3967d36-4e7f-46bc-92b3-57344347cd6a",
        "items": [
@@ -83,7 +81,7 @@ Create a purchase
 
    curl -H "Content-Type: application/json" \
         -X POST \
-        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","type":"Purchase","data":{"email":"customer@example.com","order_number":12,"order_date":"2014-03-14T05:49:54-07:00","subtotal":100,"items":[{"price":25,"quantity":4,"product_id":"TSHIRT"}]}}' \
+        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","type":"Purchase","data":{"email":"customer@example.com","order_number":12,"subtotal":100,"items":[{"price":25,"quantity":4,"product_id":"TSHIRT"}]}}' \
         https://www.talkable.com/api/v2/origins
 
 Sample response:
@@ -97,7 +95,6 @@ Sample response:
          "id": 31386398,
          "order_number": 12,
          "subtotal": 100.0,
-         "order_date": "2014-03-14T05:49:54.000-07:00",
          "customer_id": null,
          "type": "Purchase",
          "coupon_code": ""

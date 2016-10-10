@@ -21,7 +21,6 @@
       var _talkable_data = {
         purchase: {
           order_number: checkout.order_id, /* REQUIRED - Order number */
-          order_date: checkout.created_at, /* REQUIRED - Order Date and Time (ISO 8601 formatted datetime) */
           subtotal: checkout.total_price, /* REQUIRED - Purchase Subtotal */
           coupon_code: checkout.discount ? checkout.discount.code : null,
           items: _talkable_order_items
