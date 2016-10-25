@@ -41,11 +41,10 @@ In case you need to override customer data include `customer` object in addition
 .. code-block:: html
 
   <!-- Place Talkable Container into appropriate place in the DOM -->
-  <div id="talkable-invite"></div>
+  <div id="talkable-offer"></div>
 
   <script>
     var _talkable_data = {
-      // campaign_template: 'invite',
       customer: {
         email: 'overridden@example.com',
         first_name: 'OverriddenName',

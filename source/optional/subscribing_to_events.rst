@@ -11,21 +11,21 @@ Due to same-origin_ policy it is not possible to pass/get any data to the iframe
 .. _same-origin: https://en.wikipedia.org/wiki/Same-origin_policy
 .. _window.postmessage: https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage
 
-In order to subscribe to an iframe event you need to know `id` HTML attribute of the container that holds it, and the event name. Below is an example of subscription to `offer_loaded` Talkable iframe event.
+In order to subscribe to an iframe Event you need to know `id` HTML attribute of the Container DIV that holds it, and the Event name. Below is an example of subscription to `offer_loaded` Talkable iframe Event.
 
 Given we have integrated :ref:`invite_campaign` Talkable campaign iframe, its JS-generated HTML tag looks similar to the following:
 
 .. code-block:: html
 
-  <div id="talkable-invite">
-    <iframe name="talkable-invite" width="100%" src="https://www.talkable.com/..."></iframe>
+  <div id="talkable-offer">
+    <iframe name="talkable-offer" src="https://www.talkable.com/..."></iframe>
   </div>
 
-Knowing the container `id` attribute is `talkable-invite` the subscription JS will be:
+Knowing the container `id` attribute is `talkable-offer` the subscription JS will be:
 
 .. code-block:: javascript
 
-  talkable.subscribe("offer_loaded", "talkable-invite", function(data, iframe) {
+  talkable.subscribe("offer_loaded", "talkable-offer", function(data, iframe) {
     alert("Talkable campaign iframe is loaded!");
   });
 

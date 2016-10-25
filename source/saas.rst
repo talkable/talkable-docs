@@ -24,7 +24,7 @@ Below is an example of registering an Event and showing :ref:`post_purchase_camp
 .. code-block:: html
 
   <!-- Begin Talkable integration code -->
-  <div id="talkable-post-purchase"></div>
+  <div id="talkable-offer"></div>
 
   <script>
     var _talkable_data = {
@@ -32,7 +32,7 @@ Below is an example of registering an Event and showing :ref:`post_purchase_camp
         event_number: '100011', // Required - unique Event id
         event_category: 'signups' // Required - Event category
       },
-      campaign_template: 'post-purchase' // Loads Post Purchase campaign with tag "post-purchase"
+      campaign_tags: ['post-purchase'] // Loads Post Purchase campaign with tag "post-purchase"
     };
 
     // Passing Event to Talkable
@@ -49,13 +49,13 @@ When the Event is registered successfully it appears inside Events Report. |br|
   <h2>Showing Different Campaign</h2>
 
 In the example above we show :ref:`post_purchase_campaign` Campaign as a result of Event registration.
-However you can show any other Talkable Campaign instead since there are 8 of them.
+However you can show any other Talkable Campaign instead since there are many of them.
 Here is an example how to show :ref:`invite_campaign`:
 
 .. code-block:: html
 
   <!-- Begin Talkable integration code -->
-  <div id="talkable-invite"></div>
+  <div id="talkable-offer"></div>
 
   <script>
     var _talkable_data = {
@@ -63,7 +63,7 @@ Here is an example how to show :ref:`invite_campaign`:
         event_number: '100011', // Required - unique Event id
         event_category: 'signups' // Required - Event category
       },
-      campaign_template: 'invite' // Loads Invite campaign with tag "invite"
+      campaign_tags: ['invite'] // Loads Invite campaign with tag "invite"
     };
 
     // Passing Event to Talkable
@@ -72,30 +72,9 @@ Here is an example how to show :ref:`invite_campaign`:
 
 .. note::
 
-  Make sure that the Container (the DIV tag where Talkable iframe inserts to) ID corresponds to `campaign_template` value.
-  Otherwise Talkable Campaign will be shown below your page content at the very bottom.
-
-Correspondence between Container ID and `campaign_template`:
-
-+----------------------------------+---------------------------------+-----------------------------------+
-| Talkable Campaign                | Container ID                    | campaign_template                 |
-+==================================+=================================+===================================+
-| :ref:`post_purchase_campaign`    | `talkable-post-purchase`        | `post-purchase`                   |
-+----------------------------------+---------------------------------+-----------------------------------+
-| Post Purchase Full Screen Image  | `talkable-post-purchase`        | `post-purchase-full-bleed`        |
-+----------------------------------+---------------------------------+-----------------------------------+
-| :ref:`invite_campaign`           | `talkable-invite`               | `invite`                          |
-+----------------------------------+---------------------------------+-----------------------------------+
-| Invite Full Screen Image         | `talkable-invite`               | `invite-full-bleed`               |
-+----------------------------------+---------------------------------+-----------------------------------+
-| Advocate Dashboard               | `talkable-dashboard`            | `dashboard`                       |
-+----------------------------------+---------------------------------+-----------------------------------+
-| Every Visitor Popup              | `talkable-popup`                | `popup`                           |
-+----------------------------------+---------------------------------+-----------------------------------+
-| Floating Widget Popup            | `talkable-popup`                | `popup-trigger`                   |
-+----------------------------------+---------------------------------+-----------------------------------+
-| New Visitor Popup                | `talkable-popup`                | `new-visitor-popup`               |
-+----------------------------------+---------------------------------+-----------------------------------+
+  Talkable JS integration library inserts the iframe into a container DIV with id="talkable-offer".
+  Campaign Tags are show either on Campaigns listing page below each campaign's name or right on Details page
+  of any campaign, inside "Integration" area.
 
 .. raw:: html
 
