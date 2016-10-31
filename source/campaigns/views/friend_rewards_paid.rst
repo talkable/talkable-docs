@@ -28,7 +28,7 @@ Frequently used Variables:
 
 |br|
 
-.. code-block:: html
+.. code-block:: liquid
 
    Here is your {{ reward.incentive.description }} OFF deal you just claimed!
    Use it on any purchase by {{ valid_until }}
@@ -52,4 +52,3 @@ Main email sending criteria (unable to change):
   3. Friend Share Email is already sent
 
 In all other scenarious the email will be sent immediately unless delayed by configuration.
-

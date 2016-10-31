@@ -35,7 +35,7 @@ Static copy is basically a piece of text that sits inside HTML & CSS Editor and 
 
 A piece that we are going to extract into Localizations is just a copy, without HTML tags. To do that, simply wrap the text into a variable notation like so:
 
-.. code-block:: javascript
+.. code-block:: html
 
   <h1>
     {{ "advocate_share_page_headline" | localize: "Get [[ advocate_incentive.description ]]." }}
@@ -80,9 +80,13 @@ Subject line is unique because its default value is set on the Advocate Share Pa
 
   3. Put the following code in there:
 
-    .. code-block:: html
+    .. code-block:: liquid
 
-      {% if custom_message_subject == blank  %}{{ 'friend_share_email_subject' | localize }}{% else %}{{ custom_message_subject }}{% endif %}
+      {% if custom_message_subject == blank %}
+        {{ 'friend_share_email_subject' | localize }}
+      {% else %}
+        {{ custom_message_subject }}
+      {% endif %}
 
     The code snippet above checks if the Advocate provided any Subject at all. If not we take default Subject copy so Friend Share email does not come with a blank subject.
 
@@ -97,7 +101,7 @@ Another example would be localizing font color of a headline, all copy at once, 
 
   2. At the very bottom of the HTML area add ``<style></style>`` tag with CSS that will override default styling of the element you want to localize:
 
-    .. code-block:: css
+    .. code-block:: text
 
       .button {
         background-color: {{ "advocate_share_page_button_color" | localize: "#f94d08", trait: "color" }};
@@ -121,7 +125,7 @@ Localizing Image asset can be handy if you want to AB test it. Here is how to do
 
   2. Inside HTML area find an image you want to localize. An image can be either within CSS or within HTML area (`<img />`, inline styles, etc.). If the image is set within CSS you need to extract it into HTML area using inline styles:
 
-    .. code-block:: html
+    .. code-block:: text
 
       <div class="container" style="background-image: url('{{ "share_page_background" | localize: "share-page-background.jpg", trait: "asset" }}');">
         ...
@@ -150,7 +154,7 @@ In order to chieve this AB test we need to
 
   1. Build two separate layouts using CSS cascades to style all nested children within a container block that holds all the content:
 
-    .. code-block:: html
+    .. code-block:: text
 
       {% assign share_page_layout = "share_page_layout" | localize: "Equal Emphasis", "Email Emphasis" %}
       <div class="container is-{{ share_page_layout | downcase | split: " " | join: "-" }}">
@@ -166,7 +170,7 @@ In order to chieve this AB test we need to
 
   3. Let's switch back to HTML & CSS editor and start applying CSS styling to both layouts. Knowing their final classes inside HTML: `class="container is-equal-emphasis"` and `class="container is-email-emphasis"` we can easily style both layouts inside CSS area like so (SCSS is also allowed and is shown as an example for code simplicity):
 
-    .. code-block:: css
+    .. code-block:: scss
 
       .container {
         &.is-equal-emphasis {
@@ -189,4 +193,3 @@ In order to chieve this AB test we need to
 .. container:: hidden
 
    .. toctree::
-

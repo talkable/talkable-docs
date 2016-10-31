@@ -145,13 +145,13 @@ Here is an example of ``{{ incentives }}`` Variable with two incentives:
 
 And here is an example of using ``{{ incentives }}`` values:
 
-.. code-block:: html
+.. code-block:: liquid
 
    Give your friend {{ incentives.friend.description }} OFF!
 
 Which outputs:
 
-.. code-block:: html
+.. code-block:: text
 
    Give your friend 100% OFF!
 
@@ -159,22 +159,22 @@ Which outputs:
    :widths: 25 25 50
    :header-rows: 1
 
-  * - Property
-    - Value
-    - Description
-  * - Liquid slug
-    - "referrer"
-    - Incentive identifier
-  * - amount
-    - 50.0
-    - Incentive amount (float)
-  * - description
-    - "$50"
-    - Formatted Incentive including currency and amount
-  * - percentage
-    - true | false
-    - Type of Incentive amount: fixed or percentage
-  * - required_actions
-    - 0
-    - Number of required actions to trigger reward (i.e. 2 purchases
-      needed to trigger reward)
+   * - Property
+     - Value
+     - Description
+   * - Liquid slug
+     - "referrer"
+     - Incentive identifier
+   * - amount
+     - 50.0
+     - Incentive amount (float)
+   * - description
+     - "$50"
+     - Formatted Incentive including currency and amount
+   * - percentage
+     - true | false
+     - Type of Incentive amount: fixed or percentage
+   * - required_actions
+     - 0
+     - Number of required actions to trigger reward (i.e. 2 purchases
+       needed to trigger reward)

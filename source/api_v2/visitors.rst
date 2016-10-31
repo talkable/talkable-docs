@@ -32,8 +32,6 @@ Create a visitor
 
    {
      "data": {
-      "uuid": "b3967d36-4e7f-46bc-92b3-57344347cd6a"
+       "uuid": "b3967d36-4e7f-46bc-92b3-57344347cd6a"
      }
    }
-
-

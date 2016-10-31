@@ -49,7 +49,7 @@ Talkable returns JSON for all API calls. JSON does not have a built-in date type
 dates are passed as strings encoded according to |iso8601|.
 This format is supported by most programming languages out of the box:
 
-.. code::
+.. code-block:: text
 
    2014-04-02T02:43:58.797-07:00
 

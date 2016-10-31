@@ -24,7 +24,7 @@ simple\_format
 
 Formats plain text to have HTML formatting. E.g. replace ``\n`` with ``<br/>``.
 
-.. code-block:: liquid
+.. code-block:: text
 
    {{ "Hello [[advocate_info.email]]\nHere is your reward." | simple_format | interpolate }}
 
@@ -37,7 +37,7 @@ encode\_query\_argument
 
 Encodes a string to be included in a URL.
 
-.. code-block:: liquid
+.. code-block:: text
 
    http://example.com/?utm_campaign={{ "Campaign Name" | encode_query_argument }}
 
@@ -146,13 +146,13 @@ A/B testing an asset:
 
 A/B testing style:
 
-.. code-block:: html
+.. code-block:: liquid
 
    <body style="background-color: {{ 'offer_background' | ab_test: '#d3d3d3', '#ff0000' }}">
      ...
    </body>
 
-.. code-block:: html
+.. code-block:: liquid
 
    <h1 style="font-size: {{ 'title_size' | ab_test: '24px', '30px' }}">
      Sample Title
@@ -188,7 +188,7 @@ Alias `hours_from_now`
 
 Calculate difference between two dates. By default calculates between specified time and current time.
 
-.. code-block:: liquid
+.. code-block:: text
 
    {{ "Sun, 02 Jan 2000 10:00:00 PST" | hours_from_time: "Sat, 01 Jan 2000 10:00:00 PST" }}
    {{ "2015-03-27 17:53" | hours_from_time: "2015-03-27 15:53" }}
@@ -223,7 +223,7 @@ interpolate
 
 Allows inline string interpolation using [[ ]] syntax.
 
-.. code-block:: liquid
+.. code-block:: text
 
    {{ "Get [[incentives.click.amount | money]] Off" | interpolate }}
 
@@ -290,7 +290,7 @@ strip
 
 Removes leading and trailing blank symbols from the string.
 
-.. code-block:: liquid
+.. code-block:: text
 
    {{ "    strip me " | strip }}
 
@@ -303,7 +303,7 @@ tweet\_length
 
 Calculates a tweet length for the string.
 
-.. code-block:: liquid
+.. code-block:: text
 
    {{ "wow this is a tweet http://example.com" | tweet_length }}
 
@@ -417,7 +417,7 @@ scale\_color
 Returns a new adjusted color with scaled attributes.
 Available attributes: `red`, `green`, `blue`, `saturation`, `lightness`, `alpha`
 
-.. code-block:: liquid
+.. code-block:: text
 
    {{ "black" | scale_color: lightness: 50 }}
    {{ "rgb(256, 128, 0)" | scale_color: saturation: -10 }}

@@ -198,7 +198,12 @@ man_pages = [
 # delimiters. The hack below allows highlighting for PHP code which is not
 # between those tags.
 from sphinx.highlighting import lexers
-from pygments.lexers import PhpLexer, TextLexer
-lexers['php'] = PhpLexer(startinline=True)
-lexers['url'] = TextLexer()
-lexers['liquid'] = TextLexer()
+from pygments.lexers import CssLexer, HtmlLexer, LiquidLexer, JavascriptLexer, ObjectiveCLexer, PhpLexer, TextLexer, ScssLexer
+lexers['css']        = CssLexer()
+lexers['html']       = HtmlLexer()
+lexers['javascript'] = JavascriptLexer()
+lexers['liquid']     = LiquidLexer()
+lexers['objc']       = ObjectiveCLexer()
+lexers['php']        = PhpLexer(startinline=True)
+lexers['scss']       = ScssLexer()
+lexers['url']        = TextLexer()

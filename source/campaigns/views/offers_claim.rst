@@ -24,7 +24,7 @@ Frequently used Variables:
 .. image:: /_static/img/basics/friend-claim-page.png
    :alt: Friend Claim Page
 
-.. code-block:: html
+.. code-block:: liquid
 
    {% if offer_active %}
      Copy your code: {{ coupon_code }}

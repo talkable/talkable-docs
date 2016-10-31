@@ -57,7 +57,7 @@ Next step is to go into that Post Purchase campaign inside Talkable and:
 4. Enable Responsive iframe feature by pressing "On"
 5. Find Integration CSS textarea and change its CSS to position the iframe not as a popup but as inline block. Here is an example that does it:
 
-.. code-block:: scss
+.. code-block:: text
 
   #{$iframe} {
     display: block;

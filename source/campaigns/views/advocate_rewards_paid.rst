@@ -20,7 +20,7 @@ Frequently used Variables:
 
 |br|
 
-.. code-block:: html
+.. code-block:: liquid
 
   Your credit code: {{ coupon_code }}
   <a href="http://merchant-site.com/products">Spend your credit</a>
