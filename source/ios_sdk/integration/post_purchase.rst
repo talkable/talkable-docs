@@ -12,26 +12,26 @@ Here is an example of a Purchase capturing, this action should be triggered on t
 
 .. code-block:: objc
 
-  #import <TalkableSDK/Talkable.h>
-  ...
-  NSDictionary* params = @{
-    TKBLPurchaseKey: @{
-      TKBLPurchaseOrderNumberKey: @"100130", // REQUIRED - Order number
-      TKBLPurchaseOrderDateKey: [NSDate date], // REQUIRED - Order Date and Time (ISO 8601 formatted datetime)
-      TKBLPurchaseEmailKey: @"customer@example.com", // REQUIRED - Customer Email
-      TKBLPurchaseSubtotalKey: [NSNumber numberWithDouble:22.33], // REQUIRED - Purchase Subtotal
-      TKBLPurchaseCouponCodeKey: @"TEST25", // REQUIRED - Coupon code used at checkout, pass multiple as an array: @[@"SAVE20",   @"FREE-SHIPPING"]. Pass @"" if there is no coupon code.
-      TKBLPurchaseOrderItemsKey:@[
-        @{
-          TKBLPurchaseOrderItemProductIDKey: @"sku3", /* Item Product ID */
-          TKBLPurchaseOrderItemPriceKey: [NSNumber numberWithDouble:4.99], /* Item Unit Price */
-          TKBLPurchaseOrderItemQuantityKey: [NSNumber numberWithUnsignedInt:5], /* Item Quantity */
-        }
-      ]
-    }
-  };
-  ...
-  [[Talkable manager] registerOrigin:TKBLPurchase params:params];
+   #import <TalkableSDK/Talkable.h>
+   ...
+   NSDictionary* params = @{
+     TKBLPurchaseKey: @{
+       TKBLPurchaseOrderNumberKey: @"100130", // REQUIRED - Order number
+       TKBLPurchaseOrderDateKey: [NSDate date], // REQUIRED - Order Date and Time (ISO 8601 formatted datetime)
+       TKBLPurchaseEmailKey: @"customer@example.com", // REQUIRED - Customer Email
+       TKBLPurchaseSubtotalKey: [NSNumber numberWithDouble:22.33], // REQUIRED - Purchase Subtotal
+       TKBLPurchaseCouponCodeKey: @"TEST25", // REQUIRED - Coupon code used at checkout, pass multiple as an array: @[@"SAVE20",   @"FREE-SHIPPING"]. Pass @"" if there is no coupon code.
+       TKBLPurchaseOrderItemsKey:@[
+         @{
+           TKBLPurchaseOrderItemProductIDKey: @"sku3", /* Item Product ID */
+           TKBLPurchaseOrderItemPriceKey: [NSNumber numberWithDouble:4.99], /* Item Unit Price */
+           TKBLPurchaseOrderItemQuantityKey: [NSNumber numberWithUnsignedInt:5], /* Item Quantity */
+         }
+       ]
+     }
+   };
+   ...
+   [[Talkable manager] registerOrigin:TKBLPurchase params:params];
 
 .. note::
 

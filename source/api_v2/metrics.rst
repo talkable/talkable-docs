@@ -9,7 +9,7 @@ descriptions to see the list of available metrics.
 
 |br|
 
-.. code-block:: url
+.. code-block:: text
 
    GET /metrics/<metric>
 
@@ -51,7 +51,7 @@ Example
 Offers metric
 .............
 
-.. code-block:: url
+.. code-block:: text
 
    GET https://www.talkable.com/api/v2/metrics/offers?site_slug=my-store&start_date=2014-09-01&end_date=2014-10-01&campaign_ids=35944,12345&campaign_tags=invite,test&campaign_status=live&api_key=i9uil7nQgDjucCiTJu
 
@@ -71,7 +71,7 @@ Sample response:
 Revenue percentage metric with precision
 ........................................
 
-.. code-block:: url
+.. code-block:: text
 
    GET https://www.talkable.com/api/v2/metrics/offers?site_slug=my-store&start_date=2014-09-01&end_date=2014-10-01&precision=2&api_key=i9uil7nQgDjucCiTJu
 
@@ -91,7 +91,7 @@ Sample response:
 Average order value metric
 ..........................
 
-.. code-block:: url
+.. code-block:: text
 
    GET https://www.talkable.com/api/v2/metrics/average_order_value?site_slug=my-store&start_date=2014-09-01&end_date=2014-10-01&api_key=i9uil7nQgDjucCiTJu
 

@@ -8,7 +8,7 @@ This API allows you to approve/void referrals.
 
 |br|
 
-.. code-block:: url
+.. code-block:: text
 
    PUT /origins/<origin_slug>/referral
 

@@ -8,7 +8,7 @@ This API allows you to access advocate offers.
 
 |br|
 
-.. code-block:: url
+.. code-block:: text
 
    GET /offers/<id>
 
@@ -33,7 +33,7 @@ Returns advocate offer.
 Example
 -------
 
-.. code-block:: url
+.. code-block:: text
 
    GET https://www.talkable.com/api/v2/offers/89238912?site_slug=my-store&api_key=i9uil7nQgDjucCiTJu
 
@@ -57,7 +57,7 @@ Sample response:
 With sharing links
 ..................
 
-.. code-block:: url
+.. code-block:: text
 
    GET https://www.talkable.com/api/v2/offers/89238912?site_slug=my-store&api_key=i9uil7nQgDjucCiTJu&sharing_channels=facebook,twitter,custom
 

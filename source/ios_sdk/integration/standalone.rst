@@ -29,7 +29,7 @@ Note that `params` are empty, in this case user will see the :ref:`Advocate Sign
   ...
   NSDictionary* params = @{
     TKBLAffiliateMemberKey: @{
-      TKBLAffiliateMemberEmailKey: @”advocate@example.com”,
+      TKBLAffiliateMemberEmailKey: @"advocate@example.com",
       TKBLAffiliateMemberFirstNameKey: @"John",
       TKBLAffiliateMemberLastNameKey: @"Smith",
       TKBLAffiliateMemberPersonCustomPropertiesKey: @{

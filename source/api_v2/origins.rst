@@ -8,7 +8,7 @@ This API allows you to create origins. See examples below.
 
 |br|
 
-.. code-block:: url
+.. code-block:: text
 
    POST /origins
 

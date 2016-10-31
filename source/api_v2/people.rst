@@ -8,7 +8,7 @@ This API allows you to access and update persons. See examples below.
 
 |br|
 
-.. code-block:: url
+.. code-block:: text
 
    GET /people/<person_slug>
 
@@ -26,7 +26,7 @@ Returns a person.
 
 |br|
 
-.. code-block:: url
+.. code-block:: text
 
    PUT /people/<person_slug>
 
@@ -56,7 +56,7 @@ Example
 Find a person by email
 ......................
 
-.. code-block:: url
+.. code-block:: text
 
    GET https://www.talkable.com/api/v2/people/customer@example.com?site_slug=my-store&api_key=i9uil7nQgDjucCiTJu
 

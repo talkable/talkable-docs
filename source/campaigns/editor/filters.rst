@@ -520,7 +520,7 @@ This filter strictly follows GS1-128 specification: https://en.wikipedia.org/wik
 
 HTML:
 
-.. code-block:: html
+.. code-block:: liquid
 
    <table cellspacing="0" cellpadding="0" border="0">
      {% assign barcode = coupon_code | barcode %}

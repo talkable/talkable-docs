@@ -318,6 +318,7 @@ hr {
 
 .highlight {
     border-left: 4px solid #DADADA;
+    background: none !important;
 }
 
 pre {

@@ -8,7 +8,7 @@ This API allows you to access visitor rewards.
 
 |br|
 
-.. code-block:: url
+.. code-block:: text
 
    GET /rewards
 
@@ -32,7 +32,7 @@ Returns rewards.
 Example
 -------
 
-.. code-block:: url
+.. code-block:: text
 
    GET https://www.talkable.com/api/v2/rewards?site_slug=my-store&visitor_uuid=8a55ef82-82c1-4596-babb-e989fd717965&api_key=i9uil7nQgDjucCiTJu
 

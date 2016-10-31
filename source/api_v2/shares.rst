@@ -8,7 +8,7 @@ This API allows you to access offer shares.
 
 |br|
 
-.. code-block:: url
+.. code-block:: text
 
    POST /offers/<short_url_code>/shares
 

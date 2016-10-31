@@ -12,7 +12,7 @@ Base URL
 
 All API URLs referenced in this documentation start with the following base part:
 
-.. code-block:: url
+.. code-block:: text
 
    https://www.talkable.com/api/v2
 

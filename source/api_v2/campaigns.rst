@@ -8,7 +8,7 @@ This API allows you to access campaigns.
 
 |br|
 
-.. code-block:: url
+.. code-block:: text
 
    GET /campaigns
 
@@ -26,7 +26,7 @@ Returns campaigns.
 Example
 -------
 
-.. code-block:: url
+.. code-block:: text
 
    GET https://www.talkable.com/api/v2/campaigns?site_slug=my-store&api_key=i9uil7nQgDjucCiTJu
 
