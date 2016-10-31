@@ -31,8 +31,17 @@ clean:
 
 html:
 	$(UTF_LOCALE) $(SPHINXBUILD) -b html $(SPHINXOPTS) $(BUILDDIR)/html
+
+ifeq ($(shell uname), Darwin)
+# macOS
+	sed -i '' "s#|integration_version|#$(INTEGRATION_VERSION)#g" `find $(BUILDDIR)/html -name \*.html`
+	sed -i '' "s#|integration_url|#$(INTEGRATION_URL)#g" `find $(BUILDDIR)/html -name \*.html`
+else
+# Linux
 	sed -e "s#|integration_version|#$(INTEGRATION_VERSION)#g" -i[] `find $(BUILDDIR)/html -name \*.html`
 	sed -e "s#|integration_url|#$(INTEGRATION_URL)#g" -i[] `find $(BUILDDIR)/html -name \*.html`
+endif
+
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
 
