@@ -25,7 +25,7 @@ the email will never be sent.
 
 |br|
 2. Is the recipient email in a valid email format (i.e. Talkable mail servers can deliver an email to a real recipient)? If so, we move on to campaign specific rules
-to determine whether or not the email should be sent (see `Email sending conditions` sectopn inside each Email-View).
+to determine whether or not the email should be sent (see `Email sending conditions` section inside each Email-View).
 
 After pre-validation Talkable campaign level validation kicks in:
 
