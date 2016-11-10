@@ -49,6 +49,26 @@ it is getting paid after Referral is approved.
   * **coupon_code** — coupon code received by person as a reward (null when
     **incentive_type** is rebate or other)
 
+* **advocate_reward** - subhash of data related to the advocate event
+
+  * **type**
+
+    * *"Purchase"* for post-purchase campaign
+    * *"AffiliateMember"* for standalone campaign
+
+  * **id** — unique identifier of the origin event
+  * **email** — e-mail address of the referrer person
+
+* **friend_reward** - subhash of data related to the friend event
+
+  * **type**
+
+    * *"Purchase"* for post-purchase campaign
+    * *"Event"* for custom campaign
+
+  * **id** — unique identifier of the origin event
+  * **email** — e-mail address of the referred person
+
 .. raw:: html
 
    <h2>Reasons</h2>
