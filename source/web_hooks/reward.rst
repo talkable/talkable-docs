@@ -59,9 +59,11 @@ it is getting paid after Referral is approved.
   * **id** — unique identifier of the advocate's origin event
 
    *For Affiliate Member*
+
   * **email** — e-mail address of the referrer person
 
    *For Purchase:*
+
   * **order_number** - unique identifier of advocate's order
   * **subtotal** - advocate's order subtotal
   * **customer_id** - unique identifier of advocate
