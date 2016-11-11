@@ -49,6 +49,39 @@ it is getting paid after Referral is approved.
   * **coupon_code** — coupon code received by person as a reward (null when
     **incentive_type** is rebate or other)
 
+* **advocate_origin** - subhash of data related to the advocate event
+
+  * **type**
+
+    * *"Purchase"* for post-purchase campaign
+    * *"AffiliateMember"* for standalone campaign
+
+  * **id** — unique identifier of the advocate's origin event
+
+   *For Affiliate Member:*
+
+  * **email** — e-mail address of the referrer person
+
+   *For Purchase:*
+
+  * **order_number** - unique identifier of advocate's order
+  * **subtotal** - advocate's order subtotal
+  * **customer_id** - unique identifier of advocate
+  * **order_date** - advocate's order date in ISO 8601 format
+
+* **friend_origin** - subhash of data related to the friend event
+
+  * **type**
+
+    * *"Purchase"* for post-purchase campaign
+    * *"Event"* for custom campaign
+
+  * **id** — unique identifier of the friend's origin
+  * **order_number** - unique identifier of friend's order
+  * **subtotal** - friend's order subtotal
+  * **customer_id** - unique identifier of friend
+  * **order_date** - friend's order date in ISO 8601 format
+
 .. raw:: html
 
    <h2>Reasons</h2>
@@ -83,11 +116,13 @@ Reward reason can be of 6 following general types.
        "unsubscribed_at": null
      },
      "origin": {
-       "id": 543208538,
+       "id": 736588136,
        "type": "Purchase",
-       "order_number": 381177444,
-       "customer_id": "22726076",
-       "coupon_code": "WHT60000"
+       "order_number": "698175656",
+       "subtotal": 18.76,
+       "customer_id": "222388260",
+       "order_date": "2016-11-11T07:33:03.968-08:00",
+       "coupon_code": "WHT86000"
      },
      "campaign": {
        "id": 146331555,
@@ -103,6 +138,24 @@ Reward reason can be of 6 following general types.
        "amount": 10.0,
        "coupon_code": null,
        "status": "Paid"
+     },
+     "advocate_origin": {
+       "id": 736588136,
+       "type": "Purchase",
+       "order_number": "698175656",
+       "subtotal": 18.76,
+       "customer_id": "222388260",
+       "order_date": "2016-11-11T07:33:03.968-08:00",
+       "coupon_code": "WHT86000"
+     },
+     "friend_origin": {
+       "id": 82271,
+       "type": "Purchase",
+       "order_number": "991701634",
+       "subtotal": 25.39,
+       "customer_id": "842273988",
+       "order_date": "2016-11-11T07:33:50.625-08:00",
+       "coupon_code": "WHT75815"
      }
    }
 
@@ -112,7 +165,7 @@ Reward reason can be of 6 following general types.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"person":{"email":"referrer@example.com","first_name":"Bob","gender":null,"last_name":"Smith","sub_choice":true,"subscribed_at":"2014-08-13T11:14:08.835-07:00","unsubscribed_at":null},"origin":{"id":543208538,"type":"Purchase","order_number":381177444,"customer_id":"22726076","coupon_code":"WHT60000"},"campaign":{"id":146331555,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"reward":{"reason":"referrer","incentive_type":"rebate","incentive_description":"$10.00 back","amount":10,"coupon_code":null}}' <url>
+   curl --data 'key=<key>&payload={"person":{"email":"referrer@example.com","first_name":"Bob","gender":null,"last_name":"Smith","sub_choice":true,"subscribed_at":"2014-08-13T11:14:08.835-07:00","unsubscribed_at":null},"origin":{"id":736588136,"type":"Purchase","order_number":"698175656","subtotal":18.76,"customer_id":"222388260","order_date":"2016-11-11T07:33:03.968-08:00","coupon_code":"WHT86000"},"campaign":{"id":146331555,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"reward":{"id":44089,"reason":"referrer","incentive_type":"rebate","incentive_description":"$10.00 back","amount":10.0,"coupon_code":null,"status":"Paid"},"advocate_origin":{"id":736588136,"type":"Purchase","order_number":"698175656","subtotal":18.76,"customer_id":"222388260","order_date":"2016-11-11T07:33:03.968-08:00","coupon_code":"WHT86000"},"friend_origin":{"id":82271,"type":"Purchase","order_number":"991701634","subtotal":25.39,"customer_id":"842273988","order_date":"2016-11-11T07:33:50.625-08:00","coupon_code":"WHT75815"}}' <url>
 
 .. container:: hidden
 
