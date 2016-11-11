@@ -116,11 +116,13 @@ Reward reason can be of 6 following general types.
        "unsubscribed_at": null
      },
      "origin": {
-       "id": 543208538,
+       "id": 736588136,
        "type": "Purchase",
-       "order_number": 381177444,
-       "customer_id": "22726076",
-       "coupon_code": "WHT60000"
+       "order_number": "698175656",
+       "subtotal": 18.76,
+       "customer_id": "222388260",
+       "order_date": "2016-11-11T07:33:03.968-08:00",
+       "coupon_code": "WHT86000"
      },
      "campaign": {
        "id": 146331555,
@@ -138,21 +140,23 @@ Reward reason can be of 6 following general types.
        "status": "Paid"
      },
      "advocate_origin": {
-       "id": 543208538,
+       "id": 736588136,
        "type": "Purchase",
-       "order_number": 381177444,
-       "customer_id": "22726076",
-       "coupon_code": "WHT60000"
+       "order_number": "698175656",
+       "subtotal": 18.76,
+       "customer_id": "222388260",
+       "order_date": "2016-11-11T07:33:03.968-08:00",
+       "coupon_code": "WHT86000"
      },
      "friend_origin": {
-        "id" : 563993957,
-        "type" : "Purchase",
-        "order_number" : "#1521C640",
-        "subtotal" : 49.99,
-        "customer_id" : null,
-        "order_date" : "2016-11-10T07:19:39.000-08:00",
-        "coupon_code" : "460967B0"
-      }
+       "id": 82271,
+       "type": "Purchase",
+       "order_number": "991701634",
+       "subtotal": 25.39,
+       "customer_id": "842273988",
+       "order_date": "2016-11-11T07:33:50.625-08:00",
+       "coupon_code": "WHT75815"
+     }
    }
 
 .. raw:: html
@@ -161,7 +165,7 @@ Reward reason can be of 6 following general types.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"person":{"email":"referrer@example.com","first_name":"Bob","gender":null,"last_name":"Smith","sub_choice":true,"subscribed_at":"2014-08-13T11:14:08.835-07:00","unsubscribed_at":null},"origin":{"id":543208538,"type":"Purchase","order_number":381177444,"customer_id":"22726076","coupon_code":"WHT60000"},"campaign":{"id":146331555,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"reward":{"id":44089,"reason":"referrer","incentive_type":"rebate","incentive_description":"$10.00 back","amount":10.0,"coupon_code":null,"status":"Paid"},"advocate_origin":{"id":543208538,"type":"Purchase","order_number":381177444,"customer_id":"22726076","coupon_code":"WHT60000"},"friend_origin":{"id":563993957,"type":"Purchase","order_number":"#1521C640","subtotal":49.99,"customer_id":null,"order_date":"2016-11-10T07:19:39.000-08:00","coupon_code":"460967B0"}}' <url>
+   curl --data 'key=<key>&payload={"person":{"email":"referrer@example.com","first_name":"Bob","gender":null,"last_name":"Smith","sub_choice":true,"subscribed_at":"2014-08-13T11:14:08.835-07:00","unsubscribed_at":null},"origin":{"id":736588136,"type":"Purchase","order_number":"698175656","subtotal":18.76,"customer_id":"222388260","order_date":"2016-11-11T07:33:03.968-08:00","coupon_code":"WHT86000"},"campaign":{"id":146331555,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"reward":{"id":44089,"reason":"referrer","incentive_type":"rebate","incentive_description":"$10.00 back","amount":10.0,"coupon_code":null,"status":"Paid"},"advocate_origin":{"id":736588136,"type":"Purchase","order_number":"698175656","subtotal":18.76,"customer_id":"222388260","order_date":"2016-11-11T07:33:03.968-08:00","coupon_code":"WHT86000"},"friend_origin":{"id":82271,"type":"Purchase","order_number":"991701634","subtotal":25.39,"customer_id":"842273988","order_date":"2016-11-11T07:33:50.625-08:00","coupon_code":"WHT75815"}}' <url>
 
 .. container:: hidden
 
