@@ -58,7 +58,7 @@ it is getting paid after Referral is approved.
 
   * **id** — unique identifier of the advocate's origin event
 
-   *For Affiliate Member*
+   *For Affiliate Member:*
 
   * **email** — e-mail address of the referrer person
 
@@ -76,11 +76,11 @@ it is getting paid after Referral is approved.
     * *"Purchase"* for post-purchase campaign
     * *"Event"* for custom campaign
 
-  * **id** — unique identifier of the referred origin
-  * **order_number** - unique identifier of referred order
-  * **subtotal** - referred order subtotal
+  * **id** — unique identifier of the friend's origin
+  * **order_number** - unique identifier of friend's order
+  * **subtotal** - friend's order subtotal
   * **customer_id** - unique identifier of friend
-  * **order_date** - referred order date in ISO 8601 format
+  * **order_date** - friend's order date in ISO 8601 format
 
 .. raw:: html
 
