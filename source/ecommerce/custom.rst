@@ -14,7 +14,7 @@ Other Platform
 2. Add Talkable Campaigns
 -------------------------
 
-.. include:: /partials/site_placements_description.rst
+.. include:: /partials/campaign_placements_description.rst
 
 |hr|
 
@@ -23,4 +23,3 @@ Other Platform
   <h2>Advanced Features</h2>
 
 Here is a full list of :ref:`Advanced Talkable features <optional>`.
-
