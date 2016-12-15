@@ -30,6 +30,9 @@ each with links to integration details.
    * - :ref:`Convert static copy into Localization <optional/converting_into_localization>`
      - Convert all static languange into a customizable copy that's
        easy to AB test.
+   * - :ref:`Using Regular Expressions <optional/reg_ex>`
+     - Talkable allows you to use regular expressions (regex for short) inside
+       Campaign Placement options so that you can span multiple URLs instead of an exact one.
 
 .. container:: hidden
 
@@ -43,3 +46,4 @@ each with links to integration details.
     optional/url_parameters
     optional/white_labeling
     optional/converting_into_localization
+    optional/reg_ex
