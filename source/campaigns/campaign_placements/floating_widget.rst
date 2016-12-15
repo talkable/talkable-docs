@@ -17,7 +17,7 @@ Floating Widget Placement doesn’t require any additional integration.
 If you have already added Talkable to your main layout (completed General Integration
 for Custom platform, or installed Shopify or Magento extensions), then you are all done.
 |br|
-**Note:** For Magento site just make sure the Floating Widget Popup is enabled in the Talkable extension settings on your Magento Admin site.
+**Note:** For Magento site just make sure the Floating Widget Popup is enabled in the Talkable extension settings in your Magento Admin Panel.
 |br|
 |br|
 Go ahead and create your Floating Widget Campaign. Once it is launched your customers will see

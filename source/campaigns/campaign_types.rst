@@ -10,6 +10,7 @@ Campaign Type also defines which layout the Campaign’s view pages have.
 
 Invite
 ------
+
 The Invite campaigns are very powerful and versatile.
 They increase the number of new customers by giving anyone an opportunity to invite their Friends
 from various high traffic locations on the website as well as outside the website.
@@ -21,6 +22,7 @@ You can set up multiple Invite campaigns to run simultaneously.
 
 Advocate Dashboard
 ------------------
+
 The Advocate Dashboard campaigns provide the Advocates a great insight on each of
 their shares as well as their associated rewards. The Advocates are motivated to share more
 to achieve more rewards and can make that directly from their Dashboards.
@@ -31,6 +33,7 @@ to achieve more rewards and can make that directly from their Dashboards.
 
 Reward Gleam
 ------------
+
 The Reward Gleam improves the on-site conversion rate by assisting Friends and Advocates
 in using their coupons to purchase. When the Friend or Advocate gets a reward and goes to your
 website the Reward Gleam captures the coupon code and displays it in a highlight bar at the bottom of the page.
@@ -42,6 +45,7 @@ This type of campaign focuses on both Friends and Advocates and can be the perfe
 
 Leaderboard
 -----------
+
 **Accessible for Enterprise clients only - contact us for details.**
 
 The Leaderboard turns your campaign into some kind of a competition and inspires the Advocate to share more to get to the top of the leaderboard. You can easily detect your top performers and have a special rewards for them.
@@ -52,6 +56,7 @@ The Leaderboard turns your campaign into some kind of a competition and inspires
 
 Tiered Rewards
 --------------
+
 **Accessible for Enterprise clients only - contact us for details.**
 
 The Tiered Rewards campaign allows you to encourage the Advocates gradually by tiering the rewards.

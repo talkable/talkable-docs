@@ -32,8 +32,6 @@ To start editing Views simple visit ``Editor`` page from the Campaign dashboard.
 |   :maxdepth: 2                |   :maxdepth: 2                  |
 |                               |                                 |
 |   campaigns/campaign_types    |   campaigns/campaign_placements |
-|                               |                                 |
-|                               |                                 |
 +-------------------------------+---------------------------------+
 
 .. raw:: html

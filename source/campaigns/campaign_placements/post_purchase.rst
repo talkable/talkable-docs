@@ -43,7 +43,7 @@ Magento Platform
 
 #. **Enable in Talkable extension.** Talkable extension is integrated on your Magento site
    Purchase Success page, so you don’t need to do anything in addition.
-   Make sure the Post Purchase type of Campaigns is enabled in the Talkable extension settings on your Magento Admin site.
+   Make sure the Post Purchase type of Campaigns is enabled in the Talkable extension settings in your Magento Admin Panel.
 
 #. **Configure Campaign and Placement.** Create a new Campaign with Post Purchase type of Placement,
    configure it and launch. It will be automatically attached to the Post Purchase Placement and so,

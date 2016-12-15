@@ -22,6 +22,7 @@ Flow
 
 Integration instructions
 ------------------------
+
 Instructions slightly vary based on your site platform.
 
 Shopify Platform
@@ -65,7 +66,7 @@ Magento Platform
 #. **Enable in Talkable extension.** By default Talkable extension creates two pages on your site `https://[your-site]/share`
    and on `https://[your-site]/customer/dashboard` that are suitable for Standalone Campaigns.
    Make sure the Invite and Dashboard type of Campaigns are enabled in the Talkable extension settings on your
-   Magento Admin site.
+   Magento Admin Panel.
 
 #. **Configure Campaign and Placement.** Create a new Campaign with Standalone type of Placement,
    configure it and launch. It will automatically attach to the placement with |br| `https://[your-site]/share` URL address
