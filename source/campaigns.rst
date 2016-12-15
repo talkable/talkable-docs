@@ -25,13 +25,24 @@ To start editing Views simple visit ``Editor`` page from the Campaign dashboard.
 
 .. raw:: html
 
-  <h2>Site Placements & Campaign Structure</h2>
+  <h2>Campaign Types and Placements</h2>
+
++-------------------------------+---------------------------------+
+| .. toctree::                  | .. toctree::                    |
+|   :maxdepth: 2                |   :maxdepth: 2                  |
+|                               |                                 |
+|   campaigns/campaign_types    |   campaigns/campaign_placements |
++-------------------------------+---------------------------------+
+
+.. raw:: html
+
+  <h2>Campaign Structure</h2>
 
 +-------------------------------+-----------------------------+
-| .. toctree::                  | .. toctree::                |
-|   :maxdepth: 2                |   :maxdepth: 2              |
+| .. toctree::                  |                             |
+|   :maxdepth: 2                |                             |
 |                               |                             |
-|   campaigns/site_placements   |   campaigns/views           |
+|   campaigns/views             |                             |
 +-------------------------------+-----------------------------+
 
 .. raw:: html
@@ -57,4 +68,3 @@ To start editing Views simple visit ``Editor`` page from the Campaign dashboard.
 |                               |                             |
 |   campaigns/designer          |                             |
 +-------------------------------+-----------------------------+
-

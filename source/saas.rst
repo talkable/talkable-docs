@@ -19,7 +19,7 @@ SaaS integration is abstracted from :ref:`E-Commerce <ecommerce>` since you need
 2. Add Talkable Campaigns
 -------------------------
 
-Below is an example of registering an Event and showing :ref:`post_purchase_campaign` campaign as a result:
+Below is an example of registering an Event and showing Campaign for :ref:`Post Purchase <campaigns/campaign_placements/post_purchase>` Placement as a result:
 
 .. code-block:: html
 
@@ -48,9 +48,9 @@ When the Event is registered successfully it appears inside Events Report. |br|
 
   <h2>Showing Different Campaign</h2>
 
-In the example above we show :ref:`post_purchase_campaign` Campaign as a result of Event registration.
+In the example above we show Campaign for :ref:`Post Purchase <campaigns/campaign_placements/post_purchase>` Placement as a result of Event registration.
 However you can show any other Talkable Campaign instead since there are many of them.
-Here is an example how to show :ref:`invite_campaign`:
+Here is an example how to show Campaign for :ref:`Standalone <campaigns/campaign_placements/standalone>` Placement
 
 .. code-block:: html
 
@@ -81,4 +81,3 @@ Here is an example how to show :ref:`invite_campaign`:
   <h2>Advanced Features</h2>
 
 Here is a full list of :ref:`Advanced Talkable features <optional>`.
-
