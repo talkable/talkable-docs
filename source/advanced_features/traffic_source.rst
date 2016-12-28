@@ -1,4 +1,4 @@
-.. _optional/traffic_source:
+.. _advanced_features/traffic_source:
 .. include:: /partials/common.rst
 
 Segment With Traffic Source

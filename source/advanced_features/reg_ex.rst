@@ -1,4 +1,4 @@
-.. _optional/reg_ex:
+.. _advanced_features/reg_ex:
 .. include:: /partials/common.rst
 
 Using Regular Expressions

@@ -1,4 +1,4 @@
-.. _optional/url_parameters:
+.. _advanced_features/url_parameters:
 .. include:: /partials/common.rst
 
 Using URL Parameters
@@ -9,7 +9,7 @@ Talkable allows overriding some of the parameters right through URL query string
 * email - |advocate| email address
 * first_name - |advocate| first name
 * last_name - |advocate| last name
-* traffic_source - :ref:`Traffic Source <optional/traffic_source>` value
+* traffic_source - :ref:`Traffic Source <advanced_features/traffic_source>` value
 * campaign_tags - overrides campaign tag to be loaded
 
 Below is an example of |advocate| authorization through URL. Given the URL of the page where Talkable campaign is integrated: http://example.com/invite:

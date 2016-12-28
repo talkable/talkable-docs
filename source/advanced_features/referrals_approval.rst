@@ -1,4 +1,4 @@
-.. _optional/referrals_approval:
+.. _advanced_features/referrals_approval:
 .. include:: /partials/common.rst
 
 Referrals Approval

@@ -1,4 +1,4 @@
-.. _optional/white_labeling:
+.. _advanced_features/white_labeling:
 .. include:: /partials/common.rst
 
 White-labeling
