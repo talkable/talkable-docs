@@ -1,4 +1,4 @@
-.. _optional/passing_custom_data:
+.. _advanced_features/passing_custom_data:
 .. include:: /partials/common.rst
 
 Pass Custom Person Data

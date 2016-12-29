@@ -1,4 +1,4 @@
-.. _optional/coupons:
+.. _advanced_features/coupons:
 .. include:: /partials/common.rst
 
 Automatic Coupon Creation

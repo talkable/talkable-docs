@@ -1,10 +1,10 @@
-.. _optional/subscribing_to_events:
+.. _advanced_features/subscribing_to_events:
 .. include:: /partials/common.rst
 
-Subscribing to Iframe Events
+Subscribing To Iframe Events
 ============================
 
-Talkable JS integration script embeds Talkable campaign as an iframe with `src` attribute starting with `www.talkable.com` domain (or custom domain if the :ref:`white-labeling <optional/white_labeling>` is setup).
+Talkable JS integration script embeds Talkable campaign as an iframe with `src` attribute starting with `www.talkable.com` domain (or custom domain if the :ref:`white-labeling <advanced_features/white_labeling>` is setup).
 
 Due to same-origin_ policy it is not possible to pass/get any data to the iframe directly. Talkable JS integration library has a built-in subscription mechanism for that which is based on JS window.postmessage_ method.
 
