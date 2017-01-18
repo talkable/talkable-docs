@@ -298,6 +298,19 @@ Returns ``strip me``.
 
 |hr|
 
+squish
+......
+
+Returns the string, first removing all whitespace on both ends of the string, and then changing remaining consecutive whitespace groups into one space each.
+
+.. code-block:: text
+
+   {{ "   foo   bar        baz " | strip }}
+
+Returns ``foo bar baz``.
+
+|hr|
+
 tweet\_length
 .............
 
