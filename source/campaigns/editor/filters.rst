@@ -320,7 +320,7 @@ Calculates a tweet length for the string.
 
    {{ "wow this is a tweet http://example.com" | tweet_length }}
 
-Returns ``42``.
+Returns ``43``.
 
 |hr|
 
