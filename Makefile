@@ -26,6 +26,9 @@ help:
 	@echo "  test       to run build in test mode"
 	@echo "  deploy     to commit and deploy changes to GitHub"
 
+setup:
+	git remote add staging git@github.com:talkable/void-talkable-docs.git
+
 clean:
 	rm -rf $(BUILDDIR)/*
 
@@ -72,3 +75,21 @@ deploy:
 	git commit -m "Generated gh-pages for `git log master -1 --pretty=short --abbrev-commit`" && git push origin gh-pages ; git checkout master
 	@echo
 	@echo "Deployment finished. Check updated docs at http://docs.talkable.com"
+
+stage:
+	git checkout gh-pages-void
+	git pull
+	rm -rf $(BUILDDIR) $(SOURCEDIR)
+	git checkout void $(GH_PAGES_SOURCES)
+	git reset HEAD
+	make html
+	(cd $(BUILDDIR)/html && tar c ./) | (cd ./ && tar xf -)
+	rm -rf $(GH_PAGES_SOURCES) $(BUILDDIR) .buildinfo
+	echo '' > .nojekyll
+	echo "/build\n/.bundle" > .gitignore
+	echo 'void-docs.talkable.com' > CNAME
+	echo "User-agent: *\nDisallow: /" > robots.txt
+	git add -A
+	git commit -m "Generated gh-pages for `git log void -1 --pretty=short --abbrev-commit`" && git push -f staging gh-pages-void:gh-pages ; git checkout void
+	@echo
+	@echo "Deployment finished. Check updated docs at http://void-docs.talkable.com"
