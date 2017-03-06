@@ -64,20 +64,24 @@ First install [Sphinx](http://sphinx-doc.org/). See below.
 
 ### Installing Sphinx on OS X
 
-Install [Homebrew](http://brew.sh/)
+* Install [Homebrew](http://brew.sh/).
 
-Install Python and pip:
+* Install Ruby and [Bundler](http://bundler.io/), and run `bundle install` to install dependencies.
 
-    brew install python
-    easy_install pip
+* Install Python and pip:
 
-More information in case of trouble: https://github.com/Homebrew/homebrew/wiki/Homebrew-and-Python
+  ```
+  brew install python
+  easy_install pip
+  ```
 
-Install dependencies:
+  More information in case of trouble: https://github.com/Homebrew/homebrew/wiki/Homebrew-and-Python
 
-    gem install bundler
-    bundle install
-    pip install -r requirements.txt
+* Install dependencies:
+
+  ```
+  pip install -r requirements.txt
+  ```
 
 If you get the error "unknown locale: UTF-8" when generating the documentation
 the solution is to define the following environment variables:
@@ -91,13 +95,17 @@ Run `rake preview` from "master" branch.
 
 #### Setting up LiveReload
 
-Install Ruby and [Bundler](http://bundler.io/), and run `bundle install` to install dependencies.
-
 Run `rake server` from "master" branch and open `http://localhost:5000` in browser.
 
 ### Deploying
 
 If you did everything right, deploying is as easy as `rake deploy` from "master" branch.
+
+#### Deploying to Staging
+
+If it's your first time deploying to staging, run `rake setup` to setup git remote.
+
+After that, you'll be able to deploy with `rake deploy:staging`.
 
 ---
 
