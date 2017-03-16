@@ -562,8 +562,8 @@ SCSS:
 
 |hr|
 
-base64_encode
-.....
+base64\_encode
+..............
 
 Converts given string into a base64 encoded string.
 
@@ -571,13 +571,17 @@ Converts given string into a base64 encoded string.
 
    {{ "some string" | base64_encode }}
 
+Returns ``c29tZSBzdHJpbmc=``
+
 |hr|
 
-base64_decode
-.....
+base64\_decode
+..............
 
 Decodes given base64 encoded string.
 
 .. code-block:: liquid
 
    {{ "c29tZSBzdHJpbmc=" | base64_decode }}
+
+Returns ``some string``
