@@ -567,7 +567,7 @@ base64\_encode
 
 Converts given string into a base64 encoded string.
 
-.. code-block:: liquid
+.. code-block:: text
 
    {{ "some string" | base64_encode }}
 
