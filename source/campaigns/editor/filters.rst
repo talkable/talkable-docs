@@ -558,3 +558,30 @@ SCSS:
    }
 
 .. _Standard liquid filters: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters
+
+
+|hr|
+
+base64\_encode
+..............
+
+Converts given string into a base64 encoded string.
+
+.. code-block:: text
+
+   {{ "some string" | base64_encode }}
+
+Returns ``c29tZSBzdHJpbmc=``
+
+|hr|
+
+base64\_decode
+..............
+
+Decodes given base64 encoded string.
+
+.. code-block:: liquid
+
+   {{ "c29tZSBzdHJpbmc=" | base64_decode }}
+
+Returns ``some string``
