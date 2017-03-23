@@ -24,7 +24,7 @@ You can manage your API key in the Account Settings.
 
 .. warning:: Keep your API key secret!
 
-   You should not embed the API key witin a web page and make Talkable API calls within JavaScript running within a browser. Once someone has your API key, they could create their own API calls
+   You should not embed the API key within a web page and make Talkable API calls within JavaScript running within a browser. Once someone has your API key, they could create their own API calls
 
 Response Format
 ---------------
