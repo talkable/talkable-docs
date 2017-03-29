@@ -5,7 +5,7 @@ API
 ==============
 
 Talkable features are also available via API. So there are helper methods in Talkable SDK.
-All methods are available in any place of your app.
+All methods are available in any place of your app (after :ref:`initialization <main_activity_setup>`).
 
 Create visitor
 --------------
@@ -173,7 +173,7 @@ Firstly, you need to create offer using `registerOrigin <Create origin_>`_ metho
 
 .. code-block:: java
 
-    OfferShare share = new OfferShare(offer, OfferShare.Channel.Other);
+    OfferShare share = new OfferShare(offer, SharingChannel.OTHER);
     TalkableApi.createShare(share, new Callback2<OfferShare[], Reward>() {
         @Override
         public void onSuccess(OfferShare[] shares, Reward reward) {
