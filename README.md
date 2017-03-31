@@ -105,7 +105,7 @@ If you did everything right, deploying is as easy as `rake deploy` from "master"
 
 If it's your first time deploying to staging, run `rake setup` to setup git remote.
 
-After that, you'll be able to deploy with `rake deploy:staging`.
+Merge your changes into "void" branch and deploy with `rake deploy:staging`.
 
 ---
 
