@@ -23,11 +23,11 @@ with the following line of code:
   AffiliateMember affiliateMember = new AffiliateMember();
   Talkable.showOffer(activity, affiliateMember);
   ...
-  
+
 .. note::
-  
-  Make sure you have at least one live “SA” campaign with a specified tag inside Talkable Site
-  
+
+  Make sure you have at least one live “SA” campaign with a specified `android-invite` tag inside Talkable Site
+
 Note that `customer` is empty, in this case user will see the
 :ref:`Advocate Signup Page <campaigns/views/affiliate_members_new>`, which is used to collect
 the user’s email address. Your application may already know/have access to the user’s email,
@@ -35,7 +35,7 @@ if so, you should pass this parameter which will automatically skip the SignUp P
 flow and show the :ref:`Advocate Share Page <campaigns/views/offers_show>`.
 
 .. code-block:: java
-  
+
   import com.talkable.sdk.Talkable;
   ...
 

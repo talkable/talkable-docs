@@ -25,6 +25,7 @@ After this, add dependencies to `build.gradle`
       compile 'com.squareup.okhttp3:okhttp:3.2.0'
       compile 'com.facebook.android:facebook-android-sdk:[4,5)'
       compile 'com.google.code.gson:gson:2.4'
+      compile 'com.android.support:support-v4:24.2.1'
       compile project(':talkable-sdk')
 
 

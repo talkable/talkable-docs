@@ -6,6 +6,15 @@ Upgrade
 
 Sometimes we need you to upgrade existing integration to use our latest features.
 
+0.3.0
+-----
+
+Move to Fragments
+.................
+
+Talkable SDK is built on top of `Fragments <https://developer.android.com/reference/android/support/v4/app/Fragment.html>`_
+(from Support Library) instead of Activities now to provide more flexibility for end users.
+
 0.2.0
 -----
 
