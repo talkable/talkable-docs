@@ -46,8 +46,6 @@ This type of campaign focuses on both Friends and Advocates and can be the perfe
 Leaderboard
 -----------
 
-.. include:: /partials/campaigns_for_enterprise.rst
-
 The Leaderboard turns your campaign into some kind of a competition and inspires the Advocate to share more to get to the top of the leaderboard. You can easily detect your top performers and have a special rewards for them.
 
 .. image:: /_static/img/campaign_types/leaderboard.png
@@ -56,8 +54,6 @@ The Leaderboard turns your campaign into some kind of a competition and inspires
 
 Tiered Rewards
 --------------
-
-.. include:: /partials/campaigns_for_enterprise.rst
 
 The Tiered Rewards campaign allows you to encourage the Advocates gradually by tiering the rewards.
 The Advocates are incited to continue sharing after they get the first reward in order to achieve the better one.
