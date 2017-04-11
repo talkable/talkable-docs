@@ -1,5 +1,8 @@
-.. _android_sdk/overriding_defaults:
+.. _android_sdk/advanced:
 .. include:: /partials/common.rst
+
+Advanced Usage
+==============
 
 Overriding default behaviour
 ----------------------------
@@ -46,6 +49,24 @@ And change manifest:
   .. code-block:: java
 
     Talkable.showOffer(activity, affiliateMember, TalkableActivity.class, OverridenTalkableOfferFragment.class);
+
+
+Using TalkableOfferFragment directly
+------------------------------------
+
+At first you should :ref:`create an origin <android_sdk/integration>`.
+Then you sould pass it to TalkableOfferFragment via Bundle.
+After this you can use the fragment as you want.
+
+.. code-block:: java
+
+  AffiliateMember affiliateMember = new AffiliateMember();
+
+  Bundle arguments = new Bundle();
+  arguments.putParcelable(TalkableOfferFragment.ORIGIN_PARAM, affiliateMember);
+
+  TalkableOfferFragment talkableOfferFragment = new TalkableOfferFragment();
+  talkableOfferFragment.setArguments(arguments);
 
 
 .. container:: hidden
