@@ -50,7 +50,6 @@ And change the manifest:
 
     Talkable.showOffer(activity, affiliateMember, TalkableActivity.class, OverridenTalkableOfferFragment.class);
 
-
 Using TalkableOfferFragment directly
 ------------------------------------
 
