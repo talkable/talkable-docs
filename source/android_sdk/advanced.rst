@@ -24,7 +24,7 @@ Overriding default behaviour
     }
 
 
-2. Pass an activity you want to run a fragment in and the overriden fragment classes to
+2. Pass classes of an activity you want to run a fragment in and the overriden fragment to
    `Talkable.showOffer` call:
 
   .. code-block:: java
