@@ -18,6 +18,9 @@ each with links to integration details.
      - Convert all static languange into a customizable copy that's
        easy to AB test.
 
+   * - :ref:`Email encryption <advanced_features/email_encryption>`
+     - For additional security it is possible to encrypt on the back-end Advocate and Friend e-mails.
+
    * - :ref:`Including Product Items <advanced_features/product_items>`
      - Let your customers share specific items that they’ve purchased
        and pass product details along with purchase data
