@@ -55,6 +55,7 @@ each with links to integration details.
 
     advanced_features/coupons
     advanced_features/converting_into_localization
+    advanced_features/email_encryption
     advanced_features/product_items
     advanced_features/passing_custom_data
     advanced_features/referrals_approval
