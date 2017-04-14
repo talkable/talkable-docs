@@ -7,7 +7,8 @@ Email Encryption
 For additional security it is possible to encrypt on the back-end
 |advocate| and |friend| e-mails. This can be done by using `Talkable Public Key`_.
 So, the idea is instead of sending String containing e-mail
-(like here :ref:`Custom Integration <ecommerce/custom>`).
+(like here :ref:`Custom Integration <ecommerce/custom>`) send it
+as encrypted string.
 
 Ruby Example
 -----------------
@@ -17,16 +18,16 @@ Ruby Example
     require 'openssl'
     require 'base64'
 
-    key_content = File.read 'talkable_public_key.pem'
+    key_content = File.read('talkable_public_key.pem')
     key = OpenSSL::PKey::RSA.new key_content
-    encrypted_email = key.public_encrypt("email_to_emcrypt@example.com")
+    encrypted_email = key.public_encrypt("email_to_encrypt@example.com")
     puts Base64.strict_encode64(encrypted_email)
 
 
 Java Example
 -----------------
 
-This example uses `Bouncy Castle library`_. This particular example has been tested using:
+This example uses `Bouncy Castle library`_ and has been tested on:
 
 * bcprov-jdk15on-156.jar (Provider)
 * bcpkix-jdk15on-156.jar (PKIX/CMS/EAC/PKCS/OCSP/TSP/OPENSSL)
@@ -35,9 +36,8 @@ that can be downloaded from `Bouncy Castle Latest Releases`_.
 
 .. note::
 
-    Please consider that loading Security Provider and loading key into memory
-    takes much more longer that encrypting. So, we would recommend to store in the memory public
-    key instead of loading it each time on encryption to avoid performance overhead.
+    Please note that loading a Security Provider and a key into memory takes more time than encrypting.
+    So it is recommended to store the key in memory instead of loading it each time to avoid performance overhead.
 
 .. code-block:: java
 
