@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 Email Encryption
-=======================
+================
 
 For additional security it is possible to encrypt on the back-end
 |advocate| and |friend| e-mails. This can be done by using `Talkable Public Key`_.
@@ -25,7 +25,7 @@ Ruby Example
 
 
 Java Example
------------------
+------------
 
 This example uses `Bouncy Castle library`_ and has been tested on:
 
