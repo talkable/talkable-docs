@@ -11,7 +11,7 @@ So, the idea is instead of sending String containing e-mail
 as encrypted string.
 
 Ruby Example
------------------
+------------
 
 .. code-block:: ruby
 
