@@ -59,9 +59,9 @@ that can be downloaded from `Bouncy Castle Latest Releases`_.
 
             private void initPublicKey() throws IOException {
                 PEMParser pemParser = new PEMParser(new FileReader("talkable_public_key.pem"));
-                Object object = pemParser.readObject();
                 JcaPEMKeyConverter converter = new JcaPEMKeyConverter().setProvider("BC");
-                publicKey = converter.getPublicKey((SubjectPublicKeyInfo) object);
+                SubjectPublicKeyInfo publicKeyInfo = (SubjectPublicKeyInfo) pemParser.readObject();
+                publicKey = converter.getPublicKey(publicKeyInfo);
             }
 
             private void initCipher() throws GeneralSecurityException {
