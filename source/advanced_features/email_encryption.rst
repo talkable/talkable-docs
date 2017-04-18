@@ -17,7 +17,7 @@ Ruby Example
     require 'base64'
 
     key_content = File.read('talkable_public_key.pem')
-    key = OpenSSL::PKey::RSA.new key_content
+    key = OpenSSL::PKey::RSA.new(key_content)
     encrypted_email = key.public_encrypt("email_to_encrypt@example.com")
     puts Base64.strict_encode64(encrypted_email)
 
