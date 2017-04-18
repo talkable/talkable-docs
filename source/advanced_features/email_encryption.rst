@@ -4,8 +4,8 @@
 Email Encryption
 ================
 
-For additional security it is possible to encrypt on the back-end
-|advocate| and |friend| e-mails. This can be done by using `Talkable Public Key`_.
+For additional security, it is possible to encrypt Advocate and Friend e-mails on back-end.
+This can be done by using `Talkable Public Key`_.
 So, instead of sending email addresses in plain text, you can send them encrypted.
 
 Ruby Example
