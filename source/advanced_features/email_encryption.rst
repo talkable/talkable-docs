@@ -6,9 +6,7 @@ Email Encryption
 
 For additional security it is possible to encrypt on the back-end
 |advocate| and |friend| e-mails. This can be done by using `Talkable Public Key`_.
-So, the idea is instead of sending String containing e-mail
-(like here :ref:`Custom Integration <ecommerce/custom>`) send it
-as encrypted string.
+So, instead of sending email addresses in plain text, you can send them encrypted.
 
 Ruby Example
 ------------
