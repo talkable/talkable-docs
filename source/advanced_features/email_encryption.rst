@@ -39,12 +39,16 @@ that can be downloaded from `Bouncy Castle Latest Releases`_.
 
 .. code-block:: java
 
+    import javax.crypto.BadPaddingException;
     import javax.crypto.Cipher;
+    import javax.crypto.IllegalBlockSizeException;
     import java.io.FileReader;
+    import java.io.IOException;
     import java.security.*;
     import java.util.Base64;
 
     import org.bouncycastle.asn1.x509.SubjectPublicKeyInfo;
+    import org.bouncycastle.jce.provider.BouncyCastleProvider;
     import org.bouncycastle.openssl.PEMParser;
     import org.bouncycastle.openssl.jcajce.JcaPEMKeyConverter;
 
@@ -53,24 +57,24 @@ that can be downloaded from `Bouncy Castle Latest Releases`_.
             Cipher cipher;
             Key publicKey;
 
-            private void initPublicKey() throws Exception {
+            private void initPublicKey() throws IOException {
                 PEMParser pemParser = new PEMParser(new FileReader("talkable_public_key.pem"));
                 Object object = pemParser.readObject();
                 JcaPEMKeyConverter converter = new JcaPEMKeyConverter().setProvider("BC");
                 publicKey = converter.getPublicKey((SubjectPublicKeyInfo) object);
             }
 
-            private void initCipher() throws Exception {
-                cipher = Cipher.getInstance("RSA/None/PKCS1Padding", "BC");
+            private void initCipher() throws GeneralSecurityException {
+                cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding", "BC");
                 cipher.init(Cipher.ENCRYPT_MODE, publicKey);
             }
 
-            public EmailEncryptor() throws Exception {
+            public EmailEncryptor() throws IOException, GeneralSecurityException {
                 initPublicKey();
                 initCipher();
             }
 
-            public String encryptEmail(String email) throws Exception {
+            public String encryptEmail(String email) throws BadPaddingException, IllegalBlockSizeException {
                 byte[] input = email.getBytes();
                 byte[] cipherText = cipher.doFinal(input);
                 byte[] encodedBytes = Base64.getEncoder().encode(cipherText);
@@ -79,7 +83,7 @@ that can be downloaded from `Bouncy Castle Latest Releases`_.
         }
 
         public static void main(String[] args) throws Exception {
-            Security.addProvider(new org.bouncycastle.jce.provider.BouncyCastleProvider());
+            Security.addProvider(new BouncyCastleProvider());
             EmailEncryptor emailEncryptor = new EmailEncryptor();
             System.out.println(emailEncryptor.encryptEmail("email_to_encrypt@example.com"));
         }
