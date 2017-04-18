@@ -52,10 +52,10 @@ that can be downloaded from `Bouncy Castle Latest Releases`_.
     import org.bouncycastle.openssl.PEMParser;
     import org.bouncycastle.openssl.jcajce.JcaPEMKeyConverter;
 
-    public class Main {
+    public class EncryptionDemo {
         static class EmailEncryptor {
-            Cipher cipher;
-            Key publicKey;
+            private Cipher cipher;
+            private Key publicKey;
 
             private void initPublicKey() throws IOException {
                 PEMParser pemParser = new PEMParser(new FileReader("talkable_public_key.pem"));
