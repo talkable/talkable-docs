@@ -114,7 +114,12 @@ that can be downloaded from `Bouncy Castle Latest Releases`_.
         }
     }
 
-.. code-block:: javascript
+Front-end Part
+--------------
+
+Please modify the front-end using this pseudo code example:
+
+.. code-block:: html
 
     <script>
      _talkableq.push(['authenticate_customer', {
