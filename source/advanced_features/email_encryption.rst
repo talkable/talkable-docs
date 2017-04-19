@@ -93,6 +93,15 @@ that can be downloaded from `Bouncy Castle Latest Releases`_.
 
         static EmailEncryptor emailEncryptor;
 
+        static {
+            Security.addProvider(new BouncyCastleProvider());
+            try {
+                emailEncryptor = new EmailEncryptor();
+            } catch (IOException | GeneralSecurityException e) {
+                e.printStackTrace();
+            }
+        }
+
         public static String encryptEmail(String email) throws BadPaddingException, IllegalBlockSizeException {
             return emailEncryptor.encryptEmail(email);
         }
