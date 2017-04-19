@@ -107,8 +107,6 @@ that can be downloaded from `Bouncy Castle Latest Releases`_.
         }
 
         public static void main(String[] args) throws Exception {
-            Security.addProvider(new BouncyCastleProvider());
-            emailEncryptor = new EmailEncryptor();
             String email = "encrypted_email@example.com";
             System.out.println(encryptEmail(email));
         }
