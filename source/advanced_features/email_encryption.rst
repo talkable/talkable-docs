@@ -123,7 +123,7 @@ Please modify the front-end using this pseudo code example:
      _talkableq.push(['authenticate_customer', {
        email: '<%= to_json(TalkableEmail.encrypt(current_user.email)) %>',
        first_name: '<%= to_json(current_user.first_name) %>',
-       last_name: '<%= to_json(current_user.last_name) %>',
+       last_name: '<%= to_json(current_user.last_name) %>'
      }]);
     </script>
 
