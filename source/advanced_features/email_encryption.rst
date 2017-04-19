@@ -17,15 +17,15 @@ Ruby Example
     require 'base64'
 
     def key
-        @key ||= begin
-            key_content = File.read('talkable_public_key.pem')
-            OpenSSL::PKey::RSA.new(key_content)
-        end
+      @key ||= begin
+        key_content = File.read('talkable_public_key.pem')
+        OpenSSL::PKey::RSA.new(key_content)
+      end
     end
 
     def encode_email_for_talkable(email)
-        encrypted_email = key.public_encrypt(email)
-        Base64.strict_encode64(encrypted_email)
+      encrypted_email = key.public_encrypt(email)
+      Base64.strict_encode64(encrypted_email)
     end
 
     puts encode_email_for_talkable("email_to_encrypt@example.com")
