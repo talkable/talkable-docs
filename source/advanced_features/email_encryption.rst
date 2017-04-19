@@ -123,10 +123,10 @@ Please modify the front-end using this pseudo code example:
 
     <script>
      _talkableq.push(['authenticate_customer', {
-       email: '<%= to_json(TalkableEmail.encrypt(current_user.email)) %>'
-        first_name: '<%= to_json(current_user.first_name) %>',
-        last_name: '<%= to_json(current_user.last_name) %>' // Optional - Customer last name
-      }]);
+       email: '<%= to_json(TalkableEmail.encrypt(current_user.email)) %>',
+       first_name: '<%= to_json(current_user.first_name) %>',
+       last_name: '<%= to_json(current_user.last_name) %>',
+     }]);
     </script>
 
 .. _Talkable Public Key: https://d2jjzw81hqbuqv.cloudfront.net/integration/talkable_public_key.pem
