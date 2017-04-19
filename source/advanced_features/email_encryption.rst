@@ -16,10 +16,19 @@ Ruby Example
     require 'openssl'
     require 'base64'
 
-    key_content = File.read('talkable_public_key.pem')
-    key = OpenSSL::PKey::RSA.new(key_content)
-    encrypted_email = key.public_encrypt("email_to_encrypt@example.com")
-    puts Base64.strict_encode64(encrypted_email)
+    def key
+        @key ||= begin
+            key_content = File.read('talkable_public_key.pem')
+            OpenSSL::PKey::RSA.new(key_content)
+        end
+    end
+
+    def encode_email_for_talkable(email)
+        encrypted_email = key.public_encrypt(email)
+        Base64.strict_encode64(encrypted_email)
+    end
+
+    puts encode_email_for_talkable("email_to_encrypt@example.com")
 
 
 Java Example
