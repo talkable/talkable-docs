@@ -91,14 +91,29 @@ that can be downloaded from `Bouncy Castle Latest Releases`_.
             }
         }
 
+        static EmailEncryptor emailEncryptor;
+
+        public static String encryptEmail(String email) throws BadPaddingException, IllegalBlockSizeException {
+            return emailEncryptor.encryptEmail(email);
+        }
+
         public static void main(String[] args) throws Exception {
             Security.addProvider(new BouncyCastleProvider());
-            EmailEncryptor emailEncryptor = new EmailEncryptor();
-            String email = "email_to_encrypt@example.com";
-            String encryptedEmail = emailEncryptor.encryptEmail(email);
-            System.out.println(encryptedEmail);
+            emailEncryptor = new EmailEncryptor();
+            String email = "encrypted_email@example.com";
+            System.out.println(encryptEmail(email));
         }
     }
+
+.. code-block:: javascript
+
+    <script>
+     _talkableq.push(['authenticate_customer', {
+       email: '<%= to_json(TalkableEmail.encrypt(current_user.email)) %>'
+        first_name: '<%= to_json(current_user.first_name) %>',
+        last_name: '<%= to_json(current_user.last_name) %>' // Optional - Customer last name
+      }]);
+    </script>
 
 .. _Talkable Public Key: https://d2jjzw81hqbuqv.cloudfront.net/integration/talkable_public_key.pem
 .. _Bouncy Castle Library: https://www.bouncycastle.org
