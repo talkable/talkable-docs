@@ -25,7 +25,7 @@ Contents:
 
    android_sdk/getting_started
    android_sdk/integration
-   android_sdk/overriding_defaults
+   android_sdk/advanced
    android_sdk/api
    android_sdk/upgrade
 
