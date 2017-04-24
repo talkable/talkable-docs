@@ -171,12 +171,17 @@ Default format: Apr 04, 2014
 
 Reference to all available formatting can be found in `strftime documentation`_
 
+Reference to all available locales can be found in `available locales`_
+
 .. _strftime documentation: http://apidock.com/ruby/DateTime/strftime
+.. _available locales: https://github.com/svenfuchs/rails-i18n#available-locales
 
 .. code-block:: liquid
 
    {{ valid_until | format_date }}
-   {{ valid_until | format_date: "%Y-%m-%d" }}
+   {{ valid_until | format_date: format: "%Y-%m-%d" }}
+   {{ valid_until | format_date: locale: "ru" }}
+   {{ valid_until | format_date: format: "%Y-%m-%d", locale: "ru" }}
    {{ current_time | format_date }}
 
 |hr|
