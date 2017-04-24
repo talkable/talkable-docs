@@ -8,6 +8,12 @@ For additional security, it is possible to encrypt Advocate and Friend e-mails o
 This can be done by using `Talkable Public Key`_.
 So, instead of sending email addresses in plain text, you can send them encrypted.
 
+Passing email as GET parameter to Standalone Campaign
+-----------------------------------------------------
+
+Also it's possible to pass encrypted email as GET parameter (e.g. for CTA links that
+points to standalone invite page). But to do that encrypted email should be **URL-encoded**.
+
 Ruby Example
 ------------
 
