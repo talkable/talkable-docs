@@ -171,10 +171,10 @@ Default format: Apr 04, 2014
 
 Reference to all available formatting can be found in `strftime documentation`_
 
-Reference to all available locales can be found in `available locales`_
+Reference to all available locales can be found in `rails-i18n documentation`_
 
 .. _strftime documentation: http://apidock.com/ruby/DateTime/strftime
-.. _available locales: https://github.com/svenfuchs/rails-i18n#available-locales
+.. _rails-i18n documentation: https://github.com/svenfuchs/rails-i18n#available-locales
 
 .. code-block:: liquid
 
