@@ -5,7 +5,7 @@ Email Encryption
 ================
 
 For additional security, it is possible to encrypt Advocate and Friend e-mails on back-end.
-This can be done by using `Talkable Public Key`_.
+This can be done by using 2048-bit key `Talkable Public Key`_.
 So, instead of sending email addresses in plain text, you can send them encrypted.
 
 Passing email as a GET parameter to Standalone Campaign
