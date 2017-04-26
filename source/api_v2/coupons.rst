@@ -21,7 +21,7 @@ Returns a coupon information.
    ================= ========================================================
    site_slug         Your Talkable Site ID. You can get this from your
                      Talkable dashboard after you log in and create a site.
-   code              Coupon's code
+   code              Coupon code
    ================= ========================================================
 
 |br|
@@ -39,7 +39,7 @@ Checks if given coupon code belongs to given person.
    ================= ========================================================
    site_slug         Your Talkable Site ID. You can get this from your
                      Talkable dashboard after you log in and create a site.
-   code              Coupon's code
+   code              Coupon code
    person_slug       Person’s email or username
    ================= ========================================================
 
@@ -69,7 +69,7 @@ Sample response:
          "amount": 10.0,
          "percentage_discount": false
        },
-       associated_reward: {
+       "associated_reward": {
          "created_at": "2017-04-26T07:41:31.000-07:00",
          "person": {
            "personal_claim_url": "http://share.mystore.com/by/customer@example.com",
@@ -157,7 +157,7 @@ Check if a coupon belongs to a person
          "amount": 10.0,
          "percentage_discount": false
        },
-       associated_reward: {
+       "associated_reward": {
          "created_at": "2017-04-26T07:41:31.000-07:00",
          "person": {
            "personal_claim_url": "http://share.mystore.com/by/customer@example.com",
