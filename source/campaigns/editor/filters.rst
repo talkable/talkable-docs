@@ -191,7 +191,7 @@ human\_time\_ago
 
 Transform given time to time ago in words.
 
-If given time is yesterday: 1 day
+If given time is yesterday, returns ``1 day``.
 
 Reference to all available locales can be found in `rails-i18n documentation`_
 
