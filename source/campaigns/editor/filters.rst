@@ -197,8 +197,6 @@ If given time is yesterday: 1 day
 
 Reference to all available locales can be found in `rails-i18n documentation`_
 
-.. _rails-i18n documentation: https://github.com/svenfuchs/rails-i18n#available-locales
-
 .. code-block:: liquid
 
    {{ valid_until | human_time_ago }}
