@@ -186,8 +186,6 @@ Reference to all available locales can be found in `rails-i18n documentation`_
 
 |hr|
 
-.. _liquid_filter_human_time_ago:
-
 human\_time\_ago
 ................
 
