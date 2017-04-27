@@ -28,7 +28,7 @@ Returns a coupon information.
 
 .. code-block:: text
 
-   GET /coupons/:code/permission/:person_slug
+   GET /coupons/:code/permission/:email
 
 Checks if given coupon code belongs to given person.
 
@@ -40,7 +40,7 @@ Checks if given coupon code belongs to given person.
    site_slug         Your Talkable Site ID. You can get this from your
                      Talkable dashboard after you log in and create a site.
    code              Coupon code
-   person_slug       Person’s email or username
+   email             Person’s email
    ================= ========================================================
 
 Example
