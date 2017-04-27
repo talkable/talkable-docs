@@ -18,4 +18,5 @@ Contents:
    api_v2/shares
    api_v2/referrals
    api_v2/rewards
+   api_v2/coupons
    api_v2/metrics
