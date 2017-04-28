@@ -53,14 +53,14 @@ And change the manifest:
 Using TalkableOfferFragment directly
 ------------------------------------
 
-To use TalkableOfferFragment you have to implement ``OnFragmentInteractionListener``
+To use TalkableOfferFragment you have to implement ``TalkableOfferFragmentListener``
 interface from ``TalkableOfferFragment`` inside your activity.
 
 .. code-block:: java
 
-  import com.talkable.sdk.TalkableOfferFragment.OnFragmentInteractionListener;
+  import com.talkable.sdk.TalkableOfferFragment.TalkableOfferFragmentListener;
 
-  public class MyActivity implements OnFragmentInteractionListener {
+  public class MyActivity implements TalkableOfferFragmentListener {
 
       ...
 

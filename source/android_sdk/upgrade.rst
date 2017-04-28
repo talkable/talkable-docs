@@ -9,12 +9,12 @@ Sometimes we need you to upgrade existing integration to use our latest features
 0.3.1
 -----
 
-Inroducing ``OnFragmentInteractionListener`` interface. Bugs fixing.
+Inroducing ``TalkableOfferFragmentListener`` interface. Bugs fixing.
 ....................................................................
 
-Fixed a bug when no campaign found and added ``OnFragmentInteractionListener`` interface.
+Fixed a bug when no campaign found and added ``TalkableOfferFragmentListener`` interface.
 
-To use ``TalkableOfferFragment`` directly you have to implement ``OnFragmentInteractionListener``
+To use ``TalkableOfferFragment`` directly you have to implement ``TalkableOfferFragmentListener``
 inside an activity that uses the fragment. See :ref:`Advanced Usage <android_sdk/advanced>`.
 
 0.3.0
