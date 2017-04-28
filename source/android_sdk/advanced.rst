@@ -54,7 +54,7 @@ Using TalkableOfferFragment directly
 ------------------------------------
 
 To use TalkableOfferFragment you have to implement ``TalkableOfferFragmentListener``
-interface from ``TalkableOfferFragment`` inside your activity.
+interface from ``TalkableOfferFragment`` class inside your activity.
 
 .. code-block:: java
 
@@ -75,7 +75,7 @@ interface from ``TalkableOfferFragment`` inside your activity.
   }
 
 Then you should :ref:`create an origin <android_sdk/integration>` and
-pass it to ``TalkableOfferFragment`` via ``Bundle``.
+pass it to ``TalkableOfferFragment`` instance via ``Bundle``.
 After this you can start using the fragment.
 
 .. code-block:: java
