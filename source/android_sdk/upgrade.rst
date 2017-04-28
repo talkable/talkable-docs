@@ -9,8 +9,8 @@ Sometimes we need you to upgrade existing integration to use our latest features
 0.3.1
 -----
 
-Inroducing ``TalkableOfferFragmentListener`` interface. Bugs fixing.
-....................................................................
+Introducing ``TalkableOfferFragmentListener`` interface. Bugs fixing.
+.....................................................................
 
 Fixed a bug when no campaign found and added ``TalkableOfferFragmentListener`` interface.
 
