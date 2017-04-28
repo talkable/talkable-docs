@@ -165,7 +165,7 @@ A/B testing style:
 format\_date
 ............
 
-Format date for current localization. 
+Format date for current localization.
 
 Default format: Apr 04, 2014
 
