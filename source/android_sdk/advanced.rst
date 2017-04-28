@@ -53,8 +53,29 @@ And change the manifest:
 Using TalkableOfferFragment directly
 ------------------------------------
 
-At first you should :ref:`create an origin <android_sdk/integration>`.
-Then you should pass it to TalkableOfferFragment via Bundle.
+To use instance of ``TalkableOfferFragment`` you have to implement ``TalkableOfferFragmentListener``
+interface from ``TalkableOfferFragment`` class inside your activity.
+
+.. code-block:: java
+
+  import com.talkable.sdk.TalkableOfferFragment.TalkableOfferFragmentListener;
+
+  public class MyActivity implements TalkableOfferFragmentListener {
+
+      ...
+
+      @Override
+      public void onOfferClosed() {
+          if (mTalkableOfferFragment.isOfferLoaded()) {
+              finish();
+          }
+      }
+
+      ...
+  }
+
+Then you should :ref:`create an origin <android_sdk/integration>` and
+pass it to ``TalkableOfferFragment`` instance via ``Bundle``.
 After this you can start using the fragment.
 
 .. code-block:: java
