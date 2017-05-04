@@ -171,13 +171,35 @@ Default format: Apr 04, 2014
 
 Reference to all available formatting can be found in `strftime documentation`_
 
+Reference to all available locales can be found in `rails-i18n documentation`_
+
 .. _strftime documentation: http://apidock.com/ruby/DateTime/strftime
+.. _rails-i18n documentation: https://github.com/svenfuchs/rails-i18n#available-locales
 
 .. code-block:: liquid
 
    {{ valid_until | format_date }}
-   {{ valid_until | format_date: "%Y-%m-%d" }}
+   {{ valid_until | format_date: format: "%Y-%m-%d" }}
+   {{ valid_until | format_date: locale: "ru" }}
+   {{ valid_until | format_date: format: "%Y-%m-%d", locale: "ru" }}
    {{ current_time | format_date }}
+
+|hr|
+
+human\_time\_ago
+................
+
+Transform given time to time ago in words.
+
+If given time is yesterday, returns ``1 day``.
+
+Reference to all available locales can be found in `rails-i18n documentation`_
+
+.. code-block:: liquid
+
+   {{ valid_until | human_time_ago }}
+   {{ valid_until | human_time_ago: locale: "ru" }}
+   {{ current_time | human_time_ago }}
 
 |hr|
 
