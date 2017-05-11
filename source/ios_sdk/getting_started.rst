@@ -39,14 +39,15 @@ Configuration
 
   .. code-block:: objc
 
-    [[Talkable manager] setApiKey:@"YOUR_TALKABLE_API_KEY" andSiteSlug:@"YOUR_SITE_SLUG"];
+    [[Talkable manager] setApiKey:@"YOUR_TALKABLE_PUBLIC_API_KEY" andSiteSlug:@"YOUR_SITE_SLUG"];
 
   .. note::
 
     You can locate your credentials inside Talkable site:
 
     - Visit https://www.talkable.com/account/sites to find you site slug
-    - Select site and go to **Dashboard** |rarr| **Site Settings**. Find **Integration settings** section and there you will see your API Keys. Use only the public key in your application submitted to the App Store.
+    - Select site and go to **Dashboard** |rarr| **Site Settings**. Find **Integration settings** section and there you will see your API Keys.
+      Use only the public key in your application submitted to the App Store.
 
 2. Register talkable URL scheme:
 
