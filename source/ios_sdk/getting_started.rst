@@ -45,7 +45,7 @@ Configuration
 
     You can locate your credentials inside Talkable site:
 
-    - Visit https://www.talkable.com/account/sites to find you site slug
+    - Visit https://www.talkable.com/account/sites to find your site slug
     - Select site and go to **Dashboard** |rarr| **Site Settings**. Find **Integration settings** section and there you will see your API Keys.
       Use only the public key in your application submitted to the App Store.
 
