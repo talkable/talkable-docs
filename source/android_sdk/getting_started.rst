@@ -39,16 +39,17 @@ After this, add dependencies to `build.gradle`
 
   .. code-block:: xml
 
-      <meta-data android:name="TalkableApiKey" android:value="{{YOUR_TALKABLE_API_KEY}}" />
+      <meta-data android:name="TalkableApiKey" android:value="{{YOUR_TALKABLE_PUBLIC_API_KEY}}" />
       <meta-data android:name="TalkableSiteSlug" android:value="{{YOUR_SITE_SLUG}}" />
 
   .. note::
 
     You can locate your credentials inside Talkable site:
 
-    - Visit https://admin.talkable.com/account/sites to find you site slug
-    - Select site and go to **Dashboard** |rarr| **Site Settings**.
-      Find **Integration settings** section and there you will see the API Key
+    - Visit https://admin.talkable.com/account/sites to find your site slug
+    - Select site and go to **Dashboard** |rarr| **Settings** |rarr| **Site Settings**.
+      Find **Integration settings** section and there you will see your API Keys.
+      Use only the public key in your application.
 
 5. Add deep linking schema handler into your main activity entry.
 
