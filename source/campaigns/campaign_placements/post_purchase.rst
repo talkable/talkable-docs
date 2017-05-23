@@ -26,7 +26,7 @@ Shopify Platform
 ----------------
 
 #. **Install Talkable extension.** If you haven’t done it before for other campaigns on your site,
-   then go to Integration Guide `https://www.talkable.com/sites/[YOUR-TALKABLE-SITE-ID]/integration` and install
+   then go to Integration Guide `https://admin.talkable.com/sites/[YOUR-TALKABLE-SITE-ID]/integration` and install
    Shopify Talkable extension. Check the integration status with “Verify Integration” button.
 
 #. **Configure Campaign and Placement.** Create a new Campaign with Post Purchase type of Placement,
@@ -39,7 +39,7 @@ Magento Platform
 ----------------
 
 #. **Install Talkable extension.** If you haven’t done it already, then go to Integration Guide
-   `https://www.talkable.com/sites/[YOUR-TALKABLE-SITE-ID]/integration` and follow instructions. Check the integration status with “Verify Integration” button.
+   `https://admin.talkable.com/sites/[YOUR-TALKABLE-SITE-ID]/integration` and follow instructions. Check the integration status with “Verify Integration” button.
 
 #. **Enable in Talkable extension.** Talkable extension is integrated on your Magento site
    Purchase Success page, so you don’t need to do anything in addition.
@@ -55,13 +55,13 @@ Custom Platform
 ---------------
 
 #. **Add Talkable.** If you haven’t done it already, then go to Integration Guide
-   `https://www.talkable.com/sites/[YOUR-TALKABLE-SITE-ID]/integration`
+   `https://admin.talkable.com/sites/[YOUR-TALKABLE-SITE-ID]/integration`
    and add Talkable to your main site layout by following the instructions on **General Integration** tab.
    Check the integration status with “Verify Integration” button.
 
 
 #. **Add Post Purchase Script.**
-   Go to `https://www.talkable.com/sites/[YOUR-TALKABLE-SITE-ID]/integration` page, copy the
+   Go to `https://admin.talkable.com/sites/[YOUR-TALKABLE-SITE-ID]/integration` page, copy the
    pregenerated Talkable script and add it to your order confirmation page.
    At this point you need to pass all the order related properties such as order number, subtotal, coupon code, etc.
 
@@ -71,6 +71,6 @@ Custom Platform
    Campaign on the order confirmation page.
    |br|
    If you need to change or reconfigure which Campaigns are shown on which URLs then visit
-   `https://www.talkable.com/sites/[YOUR-TALKABLE-SITE-ID]/placements` page.
+   `https://admin.talkable.com/sites/[YOUR-TALKABLE-SITE-ID]/placements` page.
 
    |

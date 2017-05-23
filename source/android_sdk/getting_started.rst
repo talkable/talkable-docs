@@ -46,7 +46,7 @@ After this, add dependencies to `build.gradle`
 
     You can locate your credentials inside Talkable site:
 
-    - Visit https://www.talkable.com/account/sites to find you site slug
+    - Visit https://admin.talkable.com/account/sites to find you site slug
     - Select site and go to **Dashboard** |rarr| **Site Settings**.
       Find **Integration settings** section and there you will see the API Key
 
