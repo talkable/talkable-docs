@@ -78,7 +78,8 @@ Configuration
 
   .. note::
 
-    Please replace `<your-site-slug>` with your actual site slug, which you are able to find on your site **Dashboard** at https://www.talkable.com
+    Please replace `<your-site-slug>` with your actual site slug, which you are
+    able to find on your site **Dashboard** at https://admin.talkable.com
 
 3. Add following lines to `application:handleOpenURL:` or `application:openURL:sourceApplication:annotation:`
 
