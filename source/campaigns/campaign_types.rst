@@ -23,8 +23,8 @@ You can set up multiple Invite campaigns to run simultaneously.
 Advocate Dashboard
 ------------------
 
-The Advocate Dashboard campaigns provide the Advocates a great insight on each of
-their shares as well as their associated rewards. The Advocates are motivated to share more
+The Advocate Dashboard campaigns provide Advocates a great insight on each of
+their shares as well as their associated rewards. Advocates are motivated to share more
 to achieve more rewards and can make that directly from their Dashboards.
 
 .. image:: /_static/img/campaign_types/dashboard-type.png
@@ -34,7 +34,7 @@ to achieve more rewards and can make that directly from their Dashboards.
 Reward Gleam
 ------------
 
-The Reward Gleam improves the on-site conversion rate by assisting Friends and Advocates
+The Reward Gleam improves on-site conversion rate by assisting Friends and Advocates
 in using their coupons to purchase. When the Friend or Advocate gets a reward and goes to your
 website the Reward Gleam captures the coupon code and displays it in a highlight bar at the bottom of the page.
 This type of campaign focuses on both Friends and Advocates and can be the perfect addition to any of your other campaigns.
@@ -46,7 +46,7 @@ This type of campaign focuses on both Friends and Advocates and can be the perfe
 Leaderboard
 -----------
 
-The Leaderboard turns your campaign into some kind of a competition and inspires the Advocate to share more to get to the top of the leaderboard. You can easily detect your top performers and have a special rewards for them.
+The Leaderboard turns your campaign into a competition and inspires the Advocate to share more to get to the top of the leaderboard. You can easily detect your top performers and have special rewards for them.
 
 .. image:: /_static/img/campaign_types/leaderboard.png
    :alt: Campaign Type - Leaderboard,
@@ -55,8 +55,8 @@ The Leaderboard turns your campaign into some kind of a competition and inspires
 Tiered Rewards
 --------------
 
-The Tiered Rewards campaign allows you to encourage the Advocates gradually by tiering the rewards.
-The Advocates are incited to continue sharing after they get the first reward in order to achieve the better one.
+The Tiered Rewards campaign allows you to encourage Advocates gradually by tiering the rewards.
+Advocates are incited to continue sharing after they get the first reward in order to achieve the better one.
 
 .. image:: /_static/img/campaign_types/tiered_rewards.png
    :alt: Campaign Type - Tiered Rewards,
