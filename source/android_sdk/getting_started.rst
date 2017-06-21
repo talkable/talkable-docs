@@ -11,14 +11,14 @@ Installation
 ------------
 
 1. Download the latest version of `Talkable SDK framework`_.
-2. Add `talkable-sdk.aar` and add it as project dependency in Android studio.
+2. Add ``talkable-sdk.aar`` and add it as project dependency in Android studio.
 
 
   .. note::
 
     To do this, open import popup using *File* |rarr| *New* |rarr| *New Module* |rarr| *Import .JAR/.AAR Package*
 
-After this, add dependencies to `build.gradle`
+After this, add dependencies to ``build.gradle``
 
   .. code-block:: groovy
 
@@ -29,13 +29,13 @@ After this, add dependencies to `build.gradle`
       compile project(':talkable-sdk')
 
 
-3. Add Talkable activity to your `AndroidManifest.xml`
+3. Add Talkable activity to your ``AndroidManifest.xml`` file inside ``<application>`` element.
 
   .. code-block:: xml
 
       <activity android:name="com.talkable.sdk.TalkableActivity" />
 
-4. Setup Talkable credentials in `AndroidManifest.xml`
+4. Setup Talkable credentials in ``AndroidManifest.xml`` file inside ``<application>`` element.
 
   .. code-block:: xml
 
@@ -65,7 +65,7 @@ After this, add dependencies to `build.gradle`
   </intent-filter>
 
 
-6. Add the following entry in your `AndroidManifest.xml` file to track app installs.
+6. Add the following entry into ``<application>`` element in your ``AndroidManifest.xml`` file to track app installs.
 
   .. code-block:: xml
 
