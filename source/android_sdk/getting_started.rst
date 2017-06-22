@@ -105,7 +105,7 @@ Here is an example of ``AndroidManifest.xml`` file you should setup after steps 
                       <category android:name="android.intent.category.DEFAULT" />
                       <category android:name="android.intent.category.BROWSABLE" />
 
-                      <data android:scheme="tkbl-{{YOUR_SITE_SLUG}}" />
+                      <data android:scheme="tkbl-demo-site" />
                   </intent-filter>
               </activity>
 
@@ -113,8 +113,12 @@ Here is an example of ``AndroidManifest.xml`` file you should setup after steps 
 
               <activity android:name="com.talkable.sdk.TalkableActivity" />
 
-              <meta-data android:name="TalkableApiKey" android:value="{{YOUR_TALKABLE_PUBLIC_API_KEY}}" />
-              <meta-data android:name="TalkableSiteSlug" android:value="{{YOUR_SITE_SLUG}}" />
+              <meta-data
+                  android:name="TalkableApiKey"
+                  android:value="nacsc9XseW4Kxne6AaJ" />
+              <meta-data
+                  android:name="TalkableSiteSlug"
+                  android:value="demo-site" />
 
               <receiver
                   android:name="com.talkable.sdk.InstallReferrerReceiver"
