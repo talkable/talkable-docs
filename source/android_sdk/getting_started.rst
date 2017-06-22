@@ -77,6 +77,62 @@ After this, add dependencies to ``build.gradle``
           </intent-filter>
       </receiver>
 
+
+Here is an example of ``AndroidManifest.xml`` file you should setup after steps above:
+
+  .. code-block:: xml
+
+      <?xml version="1.0" encoding="utf-8"?>
+      <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.talkable.demo">
+
+          <application
+              android:allowBackup="true"
+              android:icon="@mipmap/ic_launcher"
+              android:label="@string/app_name"
+              android:supportsRtl="true"
+              android:theme="@style/AppTheme">
+              <activity android:name=".MainActivity">
+                  <intent-filter>
+                      <action android:name="android.intent.action.MAIN" />
+
+                      <category android:name="android.intent.category.LAUNCHER" />
+                  </intent-filter>
+
+                  <intent-filter>
+                      <action android:name="android.intent.action.VIEW" />
+
+                      <category android:name="android.intent.category.DEFAULT" />
+                      <category android:name="android.intent.category.BROWSABLE" />
+
+                      <data android:scheme="tkbl-demo-site" />
+                  </intent-filter>
+              </activity>
+
+              <!-- Talkable -->
+
+              <activity android:name="com.talkable.sdk.TalkableActivity" />
+
+              <meta-data
+                  android:name="TalkableApiKey"
+                  android:value="nacsc9XseW4Kxne6AaJ" />
+              <meta-data
+                  android:name="TalkableSiteSlug"
+                  android:value="demo-site" />
+
+              <receiver
+                  android:name="com.talkable.sdk.InstallReferrerReceiver"
+                  android:exported="true">
+                  <intent-filter>
+                      <action android:name="com.android.vending.INSTALL_REFERRER" />
+                  </intent-filter>
+              </receiver>
+
+              <!-- End Talkable -->
+          </application>
+      </manifest>
+
+
 .. _main_activity_setup:
 
 7. Initialize Talkable in your main activity class, like so:
