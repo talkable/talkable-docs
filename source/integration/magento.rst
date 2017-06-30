@@ -1,4 +1,4 @@
-.. _ecommerce/platform/magento:
+.. _integration/magento:
 .. include:: /partials/common.rst
 
 Magento
@@ -65,4 +65,3 @@ In case you cannot find Talkable extension in the sidebar try clearing cache:
 
 .. _Magento Talkable extension: http://www.magentocommerce.com/magento-connect/talkable-customizable-refer-a-friend-programs.html
 .. _direct download: https://github.com/talkable/talkable-magento/releases/latest
-

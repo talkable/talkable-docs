@@ -1,0 +1,265 @@
+.. _integration/custom/integration_components:
+.. include:: /partials/common.rst
+
+Integration Components
+======================
+
+Talkable is composed of the following components:
+
+1. Initialization Script
+
+   a. [Script Location] The Initialization script should be placed in the head template or some template
+      that spans every page. All other integration components are dependent on the Init script.
+   b. [Data Capture] The Initialization Script should be passed variables for logged in users:
+
+      - Email
+      - First Name
+      - Last Name
+
+2. Post Purchase Script
+
+   a. [Script Location] The Post Purchase script should be placed on the checkout confirmation page.
+   b. [Script Dependency] The Post Purchase script is dependent on the Initialization script to run.
+   c. [Data Capture] This script needs to capture purchase based details
+
+       - Email of purchaser
+       - Order Number
+       - Subtotal (pre-tax, post-discount amount)
+       - Coupon code(s) used at checkout (can accept an array of strings if you allow for multiple coupons to
+         be applied at checkout)
+       - (optional) Shipping Address for additional fraud protection.
+       - (optional) Shopping cart line items.  This is only necessary if segmenting based on cart contents.
+
+3. Advocate Landing Page (public)
+
+   a. Create an HTML page (URL path /invite) with your standard site header and footer.
+      Add the Talkable Container DIV in the body.  This tells Talkable where to inject content.
+
+4. Referral Dashboard (my account)
+
+   a. Similar to the advocate landing page, create an HTML page that’s linked to from a menu in user accounts.
+      Add the Talkable Container DIV in the body.  This tells Talkable where to inject content.
+
+--------------
+
+.. _integration/custom/integration_components/initialization_script:
+
+Initialization Script
+~~~~~~~~~~~~~~~~~~~~~
+
+The Initialization script should be placed in the head template or some
+template that spans every page. Talkable JS library size is typically
+around 20kB and causes no noticeable impact to your site’s loading time.
+All other integration components are dependent on the Initialization
+script.
+
+.. code-block:: html
+
+  <!-- Begin Talkable integration code -->
+  <script src="https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/your-site-id.min.js"></script>
+  <script>
+    window._talkableq = window._talkableq || [];
+    window._talkableq.unshift(['init', { site_id: 'your-site-id' }]);
+    window._talkableq.push(['authenticate_customer', {
+      email: 'customer@example.com',
+      first_name: 'Name',
+      last_name: 'Surname'
+    }]);
+    window._talkableq.push(['register_affiliate', {}]);
+  </script>
+  <!-- End Talkable integration code -->
+
+:underline:`Initialization Script Notes:`
+
+1. :underline:`Site ID:` You can obtain your Site ID by logging into the Talkable
+   platform where Site ID is displayed on your Dashboard and URL as seen
+   here:
+
+   .. figure:: /_static/img/site-id.png
+      :alt: Site ID
+
+2. :underline:`Variables:` Use your dynamic variables to pass user details {email,
+   first_name, last_name} if the user is logged in and the data
+   exists. If the data does not exist, you can pass a null value or a
+   blank string. If your website doesn’t have a user accounts section
+   and this info is never available, it’s acceptable to completely omit
+   the parameters, or pass empty strings.
+
+--------------
+
+.. _integration/custom/integration_components/post_purchase_script:
+
+Post Purchase Script
+~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: html
+
+  <!-- Begin Talkable integration code -->
+  <script>
+    var _talkable_data = {
+      purchase: {
+        order_number: '100011',
+        subtotal: '23.97', //pre-tax, post-discount
+        coupon_code: 'SAVE20', // can also accept multiple coupons as an array
+        shipping_zip: '02222',  //optional - used for fraud protection on matching address
+        shipping_address: 'Apt #, Street address, City, State, ZIP, Country' //please use this order of address fields, comma separated, so Talkable can normalize the address
+      },
+      customer: {
+        email: 'customer@example.com'
+      }
+    };
+    _talkableq.push(['register_purchase', _talkable_data]);
+  </script>
+  <!-- End Talkable integration code -->
+
+:underline:`Post Purchase Script Notes:`
+
+1. Mandatory parameters must be passed or the purchase will not be
+   passed to Talkable. Mandatory parameters are: {email, order\_number,
+   subtotal}
+
+2. Coupon code is not mandatory, and Talkable will still consider it a
+   valid purchase without this, however if you have the ability to
+   surface this variable, then it should be passed.
+
+3. Shipping parameters are optional but gives the added benefit of
+   additional fraud protection
+
+4. If you’re using a payment gateway that directs the user away from
+   your domain, you should ensure that some auto return feature is
+   enabled so that the user returns to the checkout confirmation page to
+   allow the post purchase script to run.
+
+5. If you’re using a tag manager click here. [Talkable team note:  link to, or expand to show tag manager section]
+
+6. If you need to pass shopping cart line items, to see the alternate
+   post purchase integration script click here. [Talkable team note:  link alternate post purchase script, or add as a drop down expander so that it stays hidden by default]
+
+**Alternate Post Purchase Script for cart line item passing**
+
+.. code-block:: html
+
+  <!-- Begin Talkable integration code -->
+  <script>
+    var _talkable_purchase_items = [];
+
+    // Start for loop - iterate through cart and push details for each line item
+    _talkable_purchase_items.push({
+      product_id: 'sku0001', // Item Product ID
+      price: '199.00', // Item Unit Price
+      quantity: '1', // Item Quantity
+      title: 'Product Name' // Name of product
+    });  // End for loop
+
+    var _talkable_data = {
+      purchase: {
+        order_number: '100011',
+        subtotal: '23.97', //pre-tax, post-discount
+        coupon_code: 'SAVE20', // can also accept multiple coupons as an array
+        items: _talkable_purchase_items,  //cart items
+        shipping_zip: '02222',  //optional - used for fraud protection on matching address
+        shipping_address: 'Apt #, Street address, City, State, ZIP, Country' //pass full  address details in this order, comma delimited
+      },
+      customer: {
+        email: 'customer@example.com'
+      }
+    };
+    _talkableq.push(['register_purchase', _talkable_data]);
+  </script>
+  <!-- End Talkable integration code -->
+
+
+--------------
+
+Advocate Landing Page
+~~~~~~~~~~~~~~~~~~~~~
+
+Create a new HTML page with URL path (www.your-site.com/invite) and add the Talkable Container DIV
+in the body of the page between your standard site header and footer:
+
+.. code-block:: html
+
+  <div id="talkable-offer"></div>
+
+:underline:`Advocate Landing Page notes:`
+
+1. The Talkable Initialization script must be present in your head
+   template in order for the advocate landing page to work
+
+2. Talkable will inject referral content where Talkable Container
+   resides in your DOM
+
+3. URL Path: If you can’t use URL path www.your-site.com/invite then
+   you’ll need to update the Site Placements section inside of Talkable
+   for the Invite Advocate Landing Page to match the exact URL path that
+   you intend to use via
+   https://www.admin.talkable.com/sites/your-site-id/placements:
+
+   .. figure:: /_static/img/placement-edit.png
+      :alt: Placement Edit
+
+--------------
+
+Referral Dashboard
+------------------
+
+Similar to the Advocate Landing Page, create a new HTML page with URL
+path (www.your-site.com/referrals) and add the Talkable Container DIV in
+the body of the page:
+
+.. code-block:: html
+
+  <div id="talkable-offer"></div>
+
+:underline:`Referral Dashboard notes:`
+
+
+1. The Talkable Initialization script must be present in your head
+   template in order for the referral dashboard to work
+
+2. Talkable will inject referral content where Talkable Container
+   resides in your DOM. Adding a new page is only a suggestion. The
+   dashboard can be added inline inside your user accounts menu, however
+   the dashboard content width for proper display is 980px.
+
+3. URL Path: If you don’t host on www.your-site.com/referrals then
+   you’ll need to update the Site Placements section inside of Talkable
+   for the Dashboard Placement to use the exact URL path you intend to
+   host the Referral Dashboard on via
+   https://www.talkable.com/sites/your-site-id/placements
+
+4. Linking to the Referral Dashboard: Allow your users to reach the
+   Referral Dashboard by adding a link from any place that makes sense
+   considering your website configuration. Most common uses are links in
+   the user accounts section, or from the user accounts menu.
+
+5. Host on a page that’s only accessible behind login: The Referral
+   Dashboard contains semi-sensitive information about an Advocate’s
+   referral history. If you don’t have user logins, then the Referral
+   Dashboard can be configured to display partially obfuscated data for
+   public access.
+
+--------------
+
+**Integrating with a Tag Manager**
+
+-  :underline:`Initialization Script in a Tag Manager:` Place the
+   `Initialization script` in a tag that is
+   visible in the head template on all pages.
+
+-  :underline:`Post Purchase Integration in a Tag Manager:` Since the post
+   purchase integration on the checkout confirmation page requires the
+   Init script to work, you’re welcome to combine the Initialization
+   script + Post Purchase script into a
+   single tag for the checkout confirmation page. In fact this is
+   recommended for Google Tag Manager, when combining the place the
+   Initialization script on top/before the Post purchase script in the
+   tag.
+
+-  :underline:`Tag Manager Data Layer to Pass Variables:` You’ll need to
+   ensure a data layer object is set up to collect and pass the
+   variables to Talkable inside your tag.
+
+-  :underline:`Troubleshooting:` You can use `window._talkableq` for all
+   `talkableq` variable instances if you’re having trouble with variable
+   interpolation and need to use a global namespace.

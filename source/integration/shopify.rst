@@ -1,4 +1,4 @@
-.. _ecommerce/platform/shopify:
+.. _integration/shopify:
 .. include:: /partials/common.rst
 
 Shopify
@@ -9,7 +9,7 @@ Automatic integration
 
   .. note::
 
-     If you have previosuly integrated with Talkable, make sure you remove the manual
+     If you have previously integrated with Talkable, make sure you remove the manual
      Talkable integration script located in the Additional Content & Scripts section before
      you start the Automatic integration process. See `Manual integration`_ for details.
 
@@ -24,7 +24,7 @@ Automatic integration
 
 5. Activate Post Purchase or Invite(Standalone) Campaign.
 
-6. Verify your integration using :ref:`Verifying Integration Instructions <ecommerce/verify>`.
+6. Verify your integration using :ref:`Verifying Integration <integration/verify>`.
 
   .. note::
 
@@ -47,7 +47,7 @@ Manual integration
 
 3. Click **Apply these settings**.
 
-4. Verify your integration using :ref:`Verifying Integration Instructions <ecommerce/verify>`.
+4. Verify your integration using :ref:`Verifying Integration <integration/verify>`.
 
 |br|
 
@@ -55,3 +55,8 @@ Manual integration
 
 .. include:: /partials/traffic_source.rst
 
+.. container:: hidden
+
+   .. toctree::
+
+      Verifying Integration Instructions <verify>

@@ -10,17 +10,23 @@ Talkable JS Integration
 
 This section comes with full documentation for Talkable integration into E-Commerce store as well as into any SaaS product.
 
-+------------------------+--------------------+
-| .. toctree::           | .. toctree::       |
-|   :maxdepth: 2         |   :maxdepth: 2     |
-|                        |                    |
-|   ecommerce            |   saas             |
-+------------------------+--------------------+
-| .. toctree::           | .. toctree::       |
-|   :maxdepth: 2         |   :maxdepth: 2     |
-|                        |                    |
-|   advanced_features    |   campaigns        |
-+------------------------+--------------------+
++------------------------------------+--------------------------------+
+| .. toctree::                       | .. toctree::                   |
+|   :maxdepth: 2                     |   :maxdepth: 2                 |
+|                                    |                                |
+|   integration/custom_integration   |   integration/shopify          |
+|                                    |                                |
+|                                    |                                |
+|                                    | .. toctree::                   |
+|                                    |   :maxdepth: 2                 |
+|                                    |                                |
+|                                    |   integration/magento          |
++------------------------------------+--------------------------------+
+| .. toctree::                       | .. toctree::                   |
+|   :maxdepth: 2                     |   :maxdepth: 2                 |
+|                                    |                                |
+|   advanced_features                |   campaigns                    |
++------------------------------------+--------------------------------+
 
 .. raw:: html
 
