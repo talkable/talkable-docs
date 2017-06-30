@@ -10,6 +10,9 @@
 
    &rarr;
 
+.. role:: underline
+   :class: underline
+
 .. |cta| raw:: html
 
    <abbr title="Call to action">CTA</abbr>

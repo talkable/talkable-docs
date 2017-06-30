@@ -1,4 +1,4 @@
-.. _ecommerce/verify:
+.. _integration/verify:
 .. include:: /partials/common.rst
 
 Verifying Integration
@@ -23,8 +23,3 @@ integration@talkable.com.
 If you can't complete checkout with integration@talkable.com, we'll also verify
 your integration whenever someone completes checkout on your store (but they
 won't see anything).
-
-.. container:: hidden
-
-   .. toctree::
-

@@ -438,12 +438,136 @@ div.viewcode-block:target {
     border-bottom: 1px solid #eee;
 }
 
+ol > li {
+  margin-top: 15px;
+}
+
+ol > li:first-child {
+  margin-top: 0;
+}
+
 .reference.internal em {
     font-style: normal;
 }
 
 div.hidden {
     display: none;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.mtn, .mvn, .man {
+  margin-top: 0px;
+}
+
+.mrn, .mhn, .man {
+  margin-right: 0px;
+}
+
+.mbn, .mvn, .man {
+  margin-bottom: 0px;
+}
+
+.mln, .mhn, .man {
+  margin-left: 0px;
+}
+
+.mtx, .mvx, .max {
+  margin-top: 3px;
+}
+
+.mrx, .mhx, .max {
+  margin-right: 3px;
+}
+
+.mbx, .mvx, .max {
+  margin-bottom: 3px;
+}
+
+.mlx, .mhx, .max {
+  margin-left: 3px;
+}
+
+.mts, .mvs, .mas {
+  margin-top: 5px;
+}
+
+.mrs, .mhs, .mas {
+  margin-right: 5px;
+}
+
+.mbs, .mvs, .mas {
+  margin-bottom: 5px;
+}
+
+.mls, .mhs, .mas {
+  margin-left: 5px;
+}
+
+.mtm, .mvm, .mam {
+  margin-top: 10px;
+}
+
+.mrm, .mhm, .mam {
+  margin-right: 10px;
+}
+
+.mbm, .mvm, .mam {
+  margin-bottom: 10px;
+}
+
+.mlm, .mhm, .mam {
+  margin-left: 10px;
+}
+
+.mtl, .mvl, .mal {
+  margin-top: 20px;
+}
+
+.mrl, .mhl, .mal {
+  margin-right: 20px;
+}
+
+.mbl, .mvl, .mal {
+  margin-bottom: 20px;
+}
+
+.mll, .mhl, .mal {
+  margin-left: 20px;
+}
+
+.mtxl, .mvxl, .maxl {
+  margin-top: 30px;
+}
+
+.mrxl, .mhxl, .maxl {
+  margin-right: 30px;
+}
+
+.mbxl, .mvxl, .maxl {
+  margin-bottom: 30px;
+}
+
+.mlxl, .mhxl, .maxl {
+  margin-left: 30px;
+}
+
+.mtxxl, .mvxxl, .maxxl {
+  margin-top: 40px;
+}
+
+.mrxxl, .mhxxl, .maxxl {
+  margin-right: 40px;
+}
+
+.mbxxl, .mvxxl, .maxxl {
+  margin-bottom: 40px;
+}
+
+.mlxxl, .mhxxl, .maxxl {
+  margin-left: 40px;
 }
 
 /* FIREFOX SPECIFIC */
