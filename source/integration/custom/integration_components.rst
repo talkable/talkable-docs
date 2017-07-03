@@ -33,12 +33,12 @@ Talkable is composed of the following components:
    - (optional) Shipping Address for additional fraud protection.
    - (optional) Shopping cart line items. This is only necessary if segmenting based on cart contents.
 
-3. Advocate Landing Page (public)
+3. :ref:`Advocate Landing Page <integration/custom/integration_components/advocate_landing_page>`.
 
    Create an HTML page (URL path /invite) with your standard site header and footer.
    Add the Talkable Container DIV in the body. This tells Talkable where to inject content.
 
-4. Referral Dashboard (my account)
+4. :ref:`Referral Dashboard (my account) <integration/custom/integration_components/referral_dashboard>`.
 
    Similar to the advocate landing page, create an HTML page that’s linked to from a menu in user accounts.
    Add the Talkable Container DIV in the body. This tells Talkable where to inject content.
@@ -138,6 +138,8 @@ Post Purchase Script
 6. If you need to pass shopping cart line items, to see the alternate
    post purchase integration script :ref:`click here <integration/custom/alternate_post_purchase>`.
 
+.. _integration/custom/integration_components/advocate_landing_page:
+
 Advocate Landing Page
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -167,11 +169,13 @@ in the body of the page between your standard site header and footer:
 
 --------------
 
+.. _integration/custom/integration_components/referral_dashboard:
+
 Referral Dashboard
 ~~~~~~~~~~~~~~~~~~
 
 Similar to the Advocate Landing Page, create a new HTML page with URL
-path (www.your-site.com/referrals) and add the Talkable Container DIV in
+path (`www.your-site.com/referrals`) and add the Talkable Container DIV in
 the body of the page:
 
 .. code-block:: html
@@ -181,7 +185,7 @@ the body of the page:
 :underline:`Referral Dashboard notes:`
 
 
-1. The Talkable Initialization script must be present in your head
+1. The :ref:`Talkable Initialization Script <integration/custom/integration_components/initialization_script>` must be present in your head
    template in order for the referral dashboard to work
 
 2. Talkable will inject referral content where Talkable Container
@@ -189,18 +193,18 @@ the body of the page:
    dashboard can be added inline inside your user accounts menu, however
    the dashboard content width for proper display is 980px.
 
-3. URL Path: If you don’t host on www.your-site.com/referrals then
+3. **URL Path** If you don’t host on `www.your-site.com/referrals` then
    you’ll need to update the Site Placements section inside of Talkable
    for the Dashboard Placement to use the exact URL path you intend to
    host the Referral Dashboard on via
-   https://www.talkable.com/sites/your-site-id/placements
+   `https://www.talkable.com/sites/your-site-id/placements`
 
-4. Linking to the Referral Dashboard: Allow your users to reach the
+4. **Linking to the Referral Dashboard** Allow your users to reach the
    Referral Dashboard by adding a link from any place that makes sense
    considering your website configuration. Most common uses are links in
    the user accounts section, or from the user accounts menu.
 
-5. Host on a page that’s only accessible behind login: The Referral
+5. **Host on a page that’s only accessible behind login** The Referral
    Dashboard contains semi-sensitive information about an Advocate’s
    referral history. If you don’t have user logins, then the Referral
    Dashboard can be configured to display partially obfuscated data for

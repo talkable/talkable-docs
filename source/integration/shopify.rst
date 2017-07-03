@@ -53,8 +53,6 @@ Manual integration
 
 .. _Shopify Talkable application: https://apps.shopify.com/talkable
 
-.. include:: /partials/traffic_source.rst
-
 .. container:: hidden
 
    .. toctree::

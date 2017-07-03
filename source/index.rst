@@ -5,6 +5,18 @@
 
 .. include:: /partials/common.rst
 
+Talkable Basics
+===============
+
++------------------------------------+--------------------------------+
+| .. toctree::                       | .. toctree::                   |
+|   :maxdepth: 2                     |   :maxdepth: 2                 |
+|                                    |                                |
+|   campaigns                        |   advanced_features            |
++------------------------------------+--------------------------------+
+
+|br|
+
 Talkable JS Integration
 =======================
 
@@ -21,11 +33,6 @@ This section comes with full documentation for Talkable integration into E-Comme
 |                                    |   :maxdepth: 2                 |
 |                                    |                                |
 |                                    |   integration/magento          |
-+------------------------------------+--------------------------------+
-| .. toctree::                       | .. toctree::                   |
-|   :maxdepth: 2                     |   :maxdepth: 2                 |
-|                                    |                                |
-|   advanced_features                |   campaigns                    |
 +------------------------------------+--------------------------------+
 
 .. raw:: html
