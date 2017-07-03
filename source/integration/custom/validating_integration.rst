@@ -4,7 +4,8 @@
 Validating the Integration
 ==========================
 
-:underline:`Visual Confirmation Note:`
+Visual Confirmation Note
+........................
 
 In order to see visual confirmation you must create or have existing
 Talkable campaigns. Campaigns must be enabled for visual display (see
@@ -14,35 +15,34 @@ want to limit visual display, or want to validate on your production
 site without customers seeing visual display, then see the :ref:`Test Mode Display <integration/custom/validating_integration/test_mode_display>`
 section below.
 
-:underline:`Validation Checklist:`
+Validation Checklist
+....................
 
 1. Perform a test checkout.
 
-   a. :underline:`Confirm Visual Result:` You should see visual confirmation content
-      on the checkout confirmation page if the post purchase campaign is
-      enabled.
+   **Confirm Visual Result** You should see visual confirmation content
+   on the checkout confirmation page if the post purchase campaign is enabled.
 
-   b. :underline:`Confirm Data Result:` Navigate to Reports > Purchases tab inside
-      the Talkable platform to ensure all parameters that you’re using
-      in the post purchase script are being passed. Data populates in
-      real time.
+   **Confirm Data Result** Navigate to Reports > Purchases tab inside
+   the Talkable platform to ensure all parameters that you’re using
+   in the post purchase script are being passed. Data populates in real time.
 
 2. Visit your Home Page.
 
-   a. :underline:`Confirm Visual Result:` You should see the floating Talkable Widget
-      button.
+   **Confirm Visual Result** You should see the floating Talkable Widget button.
 
 3. Visit your Advocate Landing Page.
 
-   a. :underline:`Confirm Visual Result:` You should see visual confirmation content
-      in the location where you placed the Talkable Container DIV.
+   **Confirm Visual Result** You should see visual confirmation content
+   in the location where you placed the Talkable Container DIV.
 
 4. Visit your Referral Dashboard Page.
 
-   a. :underline:`Confirm Visual Result:` You should see visual confirmation content
-      in the location where you placed the Talkable Container DIV.
+   **Confirm Visual Result** You should see visual confirmation content
+   in the location where you placed the Talkable Container DIV.
 
-:underline:`How to create or check for existing campaigns:`
+How to create or check for existing campaigns
+.............................................
 
 You’ll need to have a campaign of each type in order to validate
 display.
@@ -70,7 +70,8 @@ There are 4 types:
 
 .. _integration/custom/validating_integration/test_mode_display:
 
-:underline:`Test Mode Display:`
+Test Mode Display
+.................
 
 After creating campaigns, while still in test mode before activating,
 you can append a URL query string parameter to page where you want to
@@ -80,19 +81,20 @@ campaign name and you can reference these in the URL using the following
 guidelines:
 
 1. Floating widget on your homepage:
+
    `www.your-site.com?campaign_tags=test-popup`
 
 2. Advocate Landing Page /invite:
+
    `www.your-site.com/invite?campaign_tags=test-invite`
 
 3. Referral Dashboard:
+
    `www.your-site.com/referrals?campaign_tags=test-dashboard`
 
 Note that campaigns must be newly created campaigns in test mode to be
 eligible for test mode display. Use the following image as a visual
 guideline:
-
-campaigns-dashboard.jpg
 
 .. figure:: /_static/img/campaigns-dashboard.jpg
    :alt: Campaigns

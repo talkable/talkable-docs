@@ -165,4 +165,4 @@ action.
 
 **7.) How do I verify success?**
 
-Refer to the section titled Validating the Integration.
+Refer to the section titled :ref:`Validating the Integration <integration/custom/validating_integration>`.

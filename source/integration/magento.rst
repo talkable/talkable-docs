@@ -12,7 +12,7 @@ A `Magento Talkable extension`_ (`direct download`_) is available for easy
 integration. The extension currently supports Magento versions 1.5+
 
 1. Log into your Magento Admin Panel (usually located at
-   http://your-site.com/index.php/admin). We will install the Talkable extension
+   `http://your-site.com/index.php/admin`). We will install the Talkable extension
    using Magento Connect Manager. Go to
    **System** |rarr| **Magento Connect** |rarr| **Magento Connect Manager**.
    You may be required to log in again:
