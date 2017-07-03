@@ -33,6 +33,8 @@ Custom Integration
 
      custom/overview
 
+Contents:
+
 .. toctree::
 
    custom/integration_components

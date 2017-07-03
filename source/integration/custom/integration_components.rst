@@ -6,39 +6,42 @@ Integration Components
 
 Talkable is composed of the following components:
 
-1. Initialization Script
+1. :ref:`Initialization Script <integration/custom/integration_components/initialization_script>`
 
-   a. [Script Location] The Initialization script should be placed in the head template or some template
-      that spans every page. All other integration components are dependent on the Init script.
-   b. [Data Capture] The Initialization Script should be passed variables for logged in users:
+   **Script Location** The Initialization script should be placed in the head template or some template
+   that spans every page. All other integration components are dependent on the Init script.
 
-      - Email
-      - First Name
-      - Last Name
+   **Data Capture** The Initialization Script should be passed variables for logged in users:
 
-2. Post Purchase Script
+    - Email
+    - First Name
+    - Last Name
 
-   a. [Script Location] The Post Purchase script should be placed on the checkout confirmation page.
-   b. [Script Dependency] The Post Purchase script is dependent on the Initialization script to run.
-   c. [Data Capture] This script needs to capture purchase based details
+2. :ref:`Post Purchase Script <integration/custom/integration_components/post_purchase_script>`
 
-       - Email of purchaser
-       - Order Number
-       - Subtotal (pre-tax, post-discount amount)
-       - Coupon code(s) used at checkout (can accept an array of strings if you allow for multiple coupons to
-         be applied at checkout)
-       - (optional) Shipping Address for additional fraud protection.
-       - (optional) Shopping cart line items.  This is only necessary if segmenting based on cart contents.
+   **Script Location** The Post Purchase script should be placed on the checkout confirmation page.
+
+   **Script Dependency** The Post Purchase script is dependent on the Initialization script to run.
+
+   **Data Capture** This script needs to capture purchase based details
+
+   - Email of purchaser
+   - Order Number
+   - Subtotal (pre-tax, post-discount amount)
+   - Coupon code(s) used at checkout (can accept an array of strings if you allow for multiple coupons to
+     be applied at checkout)
+   - (optional) Shipping Address for additional fraud protection.
+   - (optional) Shopping cart line items. This is only necessary if segmenting based on cart contents.
 
 3. Advocate Landing Page (public)
 
-   a. Create an HTML page (URL path /invite) with your standard site header and footer.
-      Add the Talkable Container DIV in the body.  This tells Talkable where to inject content.
+   Create an HTML page (URL path /invite) with your standard site header and footer.
+   Add the Talkable Container DIV in the body. This tells Talkable where to inject content.
 
 4. Referral Dashboard (my account)
 
-   a. Similar to the advocate landing page, create an HTML page that’s linked to from a menu in user accounts.
-      Add the Talkable Container DIV in the body.  This tells Talkable where to inject content.
+   Similar to the advocate landing page, create an HTML page that’s linked to from a menu in user accounts.
+   Add the Talkable Container DIV in the body. This tells Talkable where to inject content.
 
 --------------
 
@@ -130,46 +133,10 @@ Post Purchase Script
    enabled so that the user returns to the checkout confirmation page to
    allow the post purchase script to run.
 
-5. If you’re using a tag manager click here. [Talkable team note:  link to, or expand to show tag manager section]
+5. If you’re using a tag manager :ref:`click here <integration/custom/integration_tag_manager>`.
 
 6. If you need to pass shopping cart line items, to see the alternate
-   post purchase integration script click here. [Talkable team note:  link alternate post purchase script, or add as a drop down expander so that it stays hidden by default]
-
-**Alternate Post Purchase Script for cart line item passing**
-
-.. code-block:: html
-
-  <!-- Begin Talkable integration code -->
-  <script>
-    var _talkable_purchase_items = [];
-
-    // Start for loop - iterate through cart and push details for each line item
-    _talkable_purchase_items.push({
-      product_id: 'sku0001', // Item Product ID
-      price: '199.00', // Item Unit Price
-      quantity: '1', // Item Quantity
-      title: 'Product Name' // Name of product
-    });  // End for loop
-
-    var _talkable_data = {
-      purchase: {
-        order_number: '100011',
-        subtotal: '23.97', //pre-tax, post-discount
-        coupon_code: 'SAVE20', // can also accept multiple coupons as an array
-        items: _talkable_purchase_items,  //cart items
-        shipping_zip: '02222',  //optional - used for fraud protection on matching address
-        shipping_address: 'Apt #, Street address, City, State, ZIP, Country' //pass full  address details in this order, comma delimited
-      },
-      customer: {
-        email: 'customer@example.com'
-      }
-    };
-    _talkableq.push(['register_purchase', _talkable_data]);
-  </script>
-  <!-- End Talkable integration code -->
-
-
---------------
+   post purchase integration script :ref:`click here <integration/custom/alternate_post_purchase>`.
 
 Advocate Landing Page
 ~~~~~~~~~~~~~~~~~~~~~
@@ -201,7 +168,7 @@ in the body of the page between your standard site header and footer:
 --------------
 
 Referral Dashboard
-------------------
+~~~~~~~~~~~~~~~~~~
 
 Similar to the Advocate Landing Page, create a new HTML page with URL
 path (www.your-site.com/referrals) and add the Talkable Container DIV in
@@ -239,27 +206,9 @@ the body of the page:
    Dashboard can be configured to display partially obfuscated data for
    public access.
 
---------------
+.. container:: hidden
 
-**Integrating with a Tag Manager**
+ .. toctree::
 
--  :underline:`Initialization Script in a Tag Manager:` Place the
-   `Initialization script` in a tag that is
-   visible in the head template on all pages.
-
--  :underline:`Post Purchase Integration in a Tag Manager:` Since the post
-   purchase integration on the checkout confirmation page requires the
-   Init script to work, you’re welcome to combine the Initialization
-   script + Post Purchase script into a
-   single tag for the checkout confirmation page. In fact this is
-   recommended for Google Tag Manager, when combining the place the
-   Initialization script on top/before the Post purchase script in the
-   tag.
-
--  :underline:`Tag Manager Data Layer to Pass Variables:` You’ll need to
-   ensure a data layer object is set up to collect and pass the
-   variables to Talkable inside your tag.
-
--  :underline:`Troubleshooting:` You can use `window._talkableq` for all
-   `talkableq` variable instances if you’re having trouble with variable
-   interpolation and need to use a global namespace.
+    Alternate Post Purchase Script for cart line item passing <alternate_post_purchase>
+    Integrating with a Tag Manager <integration_tag_manager>

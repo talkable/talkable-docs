@@ -11,8 +11,8 @@ Talkable campaigns. Campaigns must be enabled for visual display (see
 examples below on how to enable campaigns). Note that enabling campaigns
 on production will allow your customers to see referral content. If you
 want to limit visual display, or want to validate on your production
-site without customers seeing visual display, then see the Test Mode
-Display section below.
+site without customers seeing visual display, then see the :ref:`Test Mode Display <integration/custom/validating_integration/test_mode_display>`
+section below.
 
 :underline:`Validation Checklist:`
 
@@ -68,6 +68,8 @@ There are 4 types:
    enable campaigns (ignore any warnings for now and note the site
    display placement) https://screencast.com/t/brMNNqGDjD
 
+.. _integration/custom/validating_integration/test_mode_display:
+
 :underline:`Test Mode Display:`
 
 After creating campaigns, while still in test mode before activating,
@@ -78,13 +80,13 @@ campaign name and you can reference these in the URL using the following
 guidelines:
 
 1. Floating widget on your homepage:
-   www.your-site.com?campaign_tags=test-popup
+   `www.your-site.com?campaign_tags=test-popup`
 
 2. Advocate Landing Page /invite:
-   www.your-site.com/invite?campaign_tags=test-invite
+   `www.your-site.com/invite?campaign_tags=test-invite`
 
 3. Referral Dashboard:
-   www.your-site.com/referrals?campaign_tags=test-dashboard
+   `www.your-site.com/referrals?campaign_tags=test-dashboard`
 
 Note that campaigns must be newly created campaigns in test mode to be
 eligible for test mode display. Use the following image as a visual
