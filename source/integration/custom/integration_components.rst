@@ -143,7 +143,7 @@ Post Purchase Script
 Advocate Landing Page
 ~~~~~~~~~~~~~~~~~~~~~
 
-Create a new HTML page with URL path (www.your-site.com/invite) and add the Talkable Container DIV
+Create a new HTML page with URL path (`www.your-site.com/invite`) and add the Talkable Container DIV
 in the body of the page between your standard site header and footer:
 
 .. code-block:: html
@@ -158,11 +158,11 @@ in the body of the page between your standard site header and footer:
 2. Talkable will inject referral content where Talkable Container
    resides in your DOM
 
-3. URL Path: If you can’t use URL path www.your-site.com/invite then
+3. URL Path: If you can’t use URL path `www.your-site.com/invite` then
    you’ll need to update the Site Placements section inside of Talkable
    for the Invite Advocate Landing Page to match the exact URL path that
    you intend to use via
-   https://www.admin.talkable.com/sites/your-site-id/placements:
+   `https://www.admin.talkable.com/sites/your-site-id/placements:`
 
    .. figure:: /_static/img/placement-edit.png
       :alt: Placement Edit
