@@ -1,8 +1,8 @@
 .. _integration/shopify:
 .. include:: /partials/common.rst
 
-Shopify
-=======
+Shopify Integration
+===================
 
 Automatic integration
 ---------------------
