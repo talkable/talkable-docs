@@ -72,16 +72,17 @@ script.
   </script>
   <!-- End Talkable integration code -->
 
-:underline:`Initialization Script Notes:`
+Initialization Script Notes:
+----------------------------
 
-1. :underline:`Site ID:` You can obtain your Site ID by logging into the Talkable
+1. **Site ID** You can obtain your Site ID by logging into the Talkable
    platform where Site ID is displayed on your Dashboard and URL as seen
    here:
 
    .. figure:: /_static/img/site-id.png
       :alt: Site ID
 
-2. :underline:`Variables:` Use your dynamic variables to pass user details {email,
+2. **Variables:** Use your dynamic variables to pass user details {email,
    first_name, last_name} if the user is logged in and the data
    exists. If the data does not exist, you can pass a null value or a
    blank string. If your website doesn’t have a user accounts section
@@ -115,7 +116,8 @@ Post Purchase Script
   </script>
   <!-- End Talkable integration code -->
 
-:underline:`Post Purchase Script Notes:`
+Post Purchase Script Notes:
+---------------------------
 
 1. Mandatory parameters must be passed or the purchase will not be
    passed to Talkable. Mandatory parameters are: {email, order\_number,
@@ -150,7 +152,8 @@ in the body of the page between your standard site header and footer:
 
   <div id="talkable-offer"></div>
 
-:underline:`Advocate Landing Page notes:`
+Advocate Landing Page notes:
+----------------------------
 
 1. The Talkable Initialization script must be present in your head
    template in order for the advocate landing page to work
@@ -182,8 +185,8 @@ the body of the page:
 
   <div id="talkable-offer"></div>
 
-:underline:`Referral Dashboard notes:`
-
+Referral Dashboard notes:
+-------------------------
 
 1. The :ref:`Talkable Initialization Script <integration/custom/integration_components/initialization_script>` must be present in your head
    template in order for the referral dashboard to work
@@ -193,18 +196,18 @@ the body of the page:
    dashboard can be added inline inside your user accounts menu, however
    the dashboard content width for proper display is 980px.
 
-3. **URL Path** If you don’t host on `www.your-site.com/referrals` then
+3. **URL Path.** If you don’t host on `www.your-site.com/referrals` then
    you’ll need to update the Site Placements section inside of Talkable
    for the Dashboard Placement to use the exact URL path you intend to
    host the Referral Dashboard on via
    `https://www.talkable.com/sites/your-site-id/placements`
 
-4. **Linking to the Referral Dashboard** Allow your users to reach the
+4. **Linking to the Referral Dashboard.** Allow your users to reach the
    Referral Dashboard by adding a link from any place that makes sense
    considering your website configuration. Most common uses are links in
    the user accounts section, or from the user accounts menu.
 
-5. **Host on a page that’s only accessible behind login** The Referral
+5. **Host on a page that’s only accessible behind login.** The Referral
    Dashboard contains semi-sensitive information about an Advocate’s
    referral history. If you don’t have user logins, then the Referral
    Dashboard can be configured to display partially obfuscated data for
