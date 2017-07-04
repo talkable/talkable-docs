@@ -93,7 +93,7 @@ referral.
    -  Post Purchase Popup Campaign: Checkout confirmation page where the
       post purchase integration script resides.
 
-   -  Advocate Landing Page Invite Campaign: URL ending in "/invite"
+   -  Advocate Landing Page Invite Campaign: URL ending in "/share"
 
    -  Referral Dashboard Campaign: URL ending in "/referrals"
 
