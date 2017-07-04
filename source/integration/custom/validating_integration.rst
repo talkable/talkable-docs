@@ -95,5 +95,5 @@ Note that campaigns must be newly created campaigns in test mode to be
 eligible for test mode display. Use the following image as a visual
 guideline:
 
-.. figure:: /_static/img/campaigns-dashboard.png
+.. figure:: /_static/img/campaigns_dashboard.png
    :alt: Campaigns
