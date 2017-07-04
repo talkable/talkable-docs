@@ -74,27 +74,26 @@ Test Mode Display
 .................
 
 After creating campaigns, while still in test mode before activating,
-you can append a URL query string parameter to page where you want to
-display a campaign in test mode which prevents anyone else from seeing
-visual display. Note that each campaign has campaign tags under the
-campaign name and you can reference these in the URL using the following
-guidelines:
+you can append a URL query string parameter to page where you want to display
+a campaign in test mode which prevents anyone else from seeing visual display.
+Note that each campaign has campaign ID under the campaign name and you can reference
+these in the URL using the following guidelines:
 
 1. Floating widget on your homepage:
 
-   `www.your-site.com?campaign_tags=test-popup`
+   `www.your-site.com?tkbl_campaign_id=11111`
 
-2. Advocate Landing Page /invite:
+2. Advocate Landing Page /share:
 
-   `www.your-site.com/invite?campaign_tags=test-invite`
+   `www.your-site.com/share?tkbl_campaign_id=11112`
 
 3. Referral Dashboard:
 
-   `www.your-site.com/referrals?campaign_tags=test-dashboard`
+   `www.your-site.com/referrals?tkbl_campaign_id=11113`
 
 Note that campaigns must be newly created campaigns in test mode to be
 eligible for test mode display. Use the following image as a visual
 guideline:
 
-.. figure:: /_static/img/campaigns-dashboard.jpg
+.. figure:: /_static/img/campaigns-dashboard.png
    :alt: Campaigns
