@@ -54,7 +54,7 @@ There are 4 types:
 2. :underline:`Floating Widget:` displays as a floating widget button on your home
    page (and every page)
 
-3. :underline:`Invite Standalone:` displays inline on your /invite advocate landing
+3. :underline:`Invite Standalone:` displays inline on your /share advocate landing
    page
 
 4. :underline:`Advocate Dashboard Standalone:` displays inline in your /referrals

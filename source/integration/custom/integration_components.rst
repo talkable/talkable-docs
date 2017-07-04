@@ -35,7 +35,7 @@ Talkable is composed of the following components:
 
 3. :ref:`Advocate Landing Page <integration/custom/integration_components/advocate_landing_page>`.
 
-   Create an HTML page (URL path /invite) with your standard site header and footer.
+   Create an HTML page (URL path /share) with your standard site header and footer.
    Add the Talkable Container DIV in the body. This tells Talkable where to inject content.
 
 4. :ref:`Referral Dashboard (my account) <integration/custom/integration_components/referral_dashboard>`.
@@ -145,7 +145,7 @@ Post Purchase Script Notes:
 Advocate Landing Page
 ~~~~~~~~~~~~~~~~~~~~~
 
-Create a new HTML page with URL path (`www.your-site.com/invite`) and add the Talkable Container DIV
+Create a new HTML page with URL path (`www.your-site.com/share`) and add the Talkable Container DIV
 in the body of the page between your standard site header and footer:
 
 .. code-block:: html
@@ -161,7 +161,7 @@ Advocate Landing Page notes:
 2. Talkable will inject referral content where Talkable Container
    resides in your DOM
 
-3. URL Path: If you can’t use URL path `www.your-site.com/invite` then
+3. URL Path: If you can’t use URL path `www.your-site.com/share` then
    you’ll need to update the Site Placements section inside of Talkable
    for the Invite Advocate Landing Page to match the exact URL path that
    you intend to use via
