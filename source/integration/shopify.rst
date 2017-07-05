@@ -22,7 +22,7 @@ Automatic integration
 
 4. Modify existing integration script if needed.
 
-5. Activate Post Purchase or Invite(Standalone) Campaign.
+5. Activate Post Purchase or Invite (Standalone) Campaign.
 
 6. Verify your integration using :ref:`Verifying Integration <integration/verify>`.
 

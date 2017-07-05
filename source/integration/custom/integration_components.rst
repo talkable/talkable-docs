@@ -8,7 +8,7 @@ Talkable is composed of the following components:
 
 1. :ref:`Initialization Script <integration/custom/integration_components/initialization_script>`
 
-   **Script Location** The Initialization script should be placed in the head template or some template
+   **Script Location.** The Initialization script should be placed in the head template or some template
    that spans every page. All other integration components are dependent on the Init script.
 
    **Data Capture** The Initialization Script should be passed variables for logged in users:
@@ -19,11 +19,11 @@ Talkable is composed of the following components:
 
 2. :ref:`Post Purchase Script <integration/custom/integration_components/post_purchase_script>`
 
-   **Script Location** The Post Purchase script should be placed on the checkout confirmation page.
+   **Script Location.** The Post Purchase script should be placed on the checkout confirmation page.
 
-   **Script Dependency** The Post Purchase script is dependent on the Initialization script to run.
+   **Script Dependency.** The Post Purchase script is dependent on the Initialization script to run.
 
-   **Data Capture** This script needs to capture purchase based details
+   **Data Capture.** This script needs to capture purchase based details
 
    - Email of purchaser
    - Order Number
@@ -43,7 +43,7 @@ Talkable is composed of the following components:
    Similar to the advocate landing page, create an HTML page that’s linked to from a menu in user accounts.
    Add the Talkable Container DIV in the body. This tells Talkable where to inject content.
 
---------------
+|hr|
 
 .. _integration/custom/integration_components/initialization_script:
 
@@ -72,24 +72,24 @@ script.
   </script>
   <!-- End Talkable integration code -->
 
-Initialization Script Notes:
-----------------------------
+Initialization Script Notes
+---------------------------
 
-1. **Site ID** You can obtain your Site ID by logging into the Talkable
+1. **Site ID.** You can obtain your Site ID by logging into the Talkable
    platform where Site ID is displayed on your Dashboard and URL as seen
    here:
 
    .. figure:: /_static/img/site_id.png
       :alt: Site ID
 
-2. **Variables:** Use your dynamic variables to pass user details {email,
+2. **Variables.** Use your dynamic variables to pass user details {email,
    first_name, last_name} if the user is logged in and the data
    exists. If the data does not exist, you can pass a null value or a
    blank string. If your website doesn’t have a user accounts section
    and this info is never available, it’s acceptable to completely omit
    the parameters, or pass empty strings.
 
---------------
+|hr|
 
 .. _integration/custom/integration_components/post_purchase_script:
 
@@ -116,8 +116,8 @@ Post Purchase Script
   </script>
   <!-- End Talkable integration code -->
 
-Post Purchase Script Notes:
----------------------------
+Post Purchase Script Notes
+--------------------------
 
 1. Mandatory parameters must be passed or the purchase will not be
    passed to Talkable. Mandatory parameters are: {email, order\_number,
@@ -152,8 +152,8 @@ in the body of the page between your standard site header and footer:
 
   <div id="talkable-offer"></div>
 
-Advocate Landing Page notes:
-----------------------------
+Advocate Landing Page Notes
+---------------------------
 
 1. The Talkable Initialization script must be present in your head
    template in order for the advocate landing page to work
@@ -170,7 +170,7 @@ Advocate Landing Page notes:
    .. figure:: /_static/img/placement_edit.png
       :alt: Placement Edit
 
---------------
+|hr|
 
 .. _integration/custom/integration_components/referral_dashboard:
 
