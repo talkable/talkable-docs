@@ -14,7 +14,7 @@ Integration High Level Overview
 
 3. Create a new HTML page with standard header/footer to host the Talkable Standalone campaign
    which will be your Advocate Landing page where you can drive traffic from email and other onsite
-   and offsite locations to refer friends.  Copy & paste the Talkable container DIV element into the
+   and offsite locations to refer friends. Copy & paste the Talkable container DIV element into the
    body as seen in :ref:`Integration Components <integration/custom/integration_components>`.
 
 4. Create an additional new HTML page attached to your user accounts section (if you have one) behind
