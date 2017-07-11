@@ -60,13 +60,13 @@ There are 4 types:
 4. :underline:`Advocate Dashboard Standalone:` displays inline in your /referrals
    page
 
--  :underline:`How to create campaigns:` Here’s a screencast showing you how to
-   quickly create all campaigns in less than 1 minute
-   https://www.screencast.com/t/pVHTFoz9m1
+-  :underline:`How to create campaigns:` Here’s a video showing you how to quickly
+   create all campaigns in less than 1 minute
+   https://youtu.be/K07Uvw39l1o
 
--  :underline:`How to enable campaigns:` Here’s a screencast showing you how to
-   enable campaigns (ignore any warnings for now and note the site
-   display placement) https://screencast.com/t/brMNNqGDjD
+-  :underline:`How to enable campaigns:` Here’s a video showing you how to enable
+   campaigns (ignore any warnings for now and note the site display placement)
+   https://youtu.be/_AbTz4p2vqQ
 
 .. _integration/custom/validating_integration/test_mode_display:
 
