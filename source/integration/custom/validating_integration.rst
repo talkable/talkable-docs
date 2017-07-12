@@ -62,11 +62,11 @@ There are 4 types:
 
 -  :underline:`How to create campaigns:` Here’s a video showing you how to quickly
    create all campaigns in less than 1 minute
-   https://youtu.be/K07Uvw39l1o
+   https://youtu.be/HDK-zFlCAkw
 
 -  :underline:`How to enable campaigns:` Here’s a video showing you how to enable
    campaigns (ignore any warnings for now and note the site display placement)
-   https://youtu.be/_AbTz4p2vqQ
+   https://youtu.be/HgR6WQYeASg
 
 .. _integration/custom/validating_integration/test_mode_display:
 
