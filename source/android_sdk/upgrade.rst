@@ -19,26 +19,21 @@ To update from the previous version please do following steps.
 
 1. Update dependencies inside ``build.gradle``.
 
-   from
-
    .. code-block:: groovy
 
+     // From
      compile 'com.google.code.gson:gson:2.4'
      compile 'com.android.support:support-v4:24.2.1'
 
-   to
-
-    .. code-block:: groovy
-
-      compile 'com.google.code.gson:gson:2.7'
-      compile 'com.android.support:support-v4:25.3.1'
+     // To
+     compile 'com.google.code.gson:gson:2.7'
+     compile 'com.android.support:support-v4:25.3.1'
 
 2. Change credentials setup inside the manifest.
 
-   from
-
    .. code-block:: xml
 
+      <!-- From -->
        <application>
            ...
            <meta-data
@@ -50,12 +45,7 @@ To update from the previous version please do following steps.
            ...
        </application>
 
-   .. note::
-
-   to
-
-   .. code-block:: xml
-
+       <!-- To -->
        <application>
            ...
            <meta-data
@@ -63,8 +53,6 @@ To update from the previous version please do following steps.
                android:value="{{YOUR_TALKABLE_PUBLIC_API_KEY}}" />
            ...
        </application>
-
-   .. note::
 
 3. Initialize Talkable in the ``Application``.
 
