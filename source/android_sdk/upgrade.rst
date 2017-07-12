@@ -6,6 +6,90 @@ Upgrade
 
 Sometimes we need you to upgrade existing integration to use our latest features.
 
+0.4.0
+-----
+
+Added multiple site slugs support. Bugs fixing.
+...............................................
+
+From this moment you can operate with multiple Talkable sites inside Talkable SDK.
+Look in :ref:`Advanced Usage <android_sdk/advanced>` for more detailed information if needed.
+
+To update from the previous version please do following steps.
+
+1. Update dependencies inside ``build.gradle``.
+
+   .. code-block:: groovy
+
+     // From
+     compile 'com.google.code.gson:gson:2.4'
+     compile 'com.android.support:support-v4:24.2.1'
+
+     // To
+     compile 'com.google.code.gson:gson:2.7'
+     compile 'com.android.support:support-v4:25.3.1'
+
+2. Change credentials setup inside the manifest.
+
+   .. code-block:: xml
+
+      <!-- From -->
+       <application>
+           ...
+           <meta-data
+               android:name="TalkableApiKey"
+               android:value="{{YOUR_TALKABLE_PUBLIC_API_KEY}}" />
+           <meta-data
+               android:name="TalkableSiteSlug"
+               android:value="{{YOUR_SITE_SLUG}}" />
+           ...
+       </application>
+
+       <!-- To -->
+       <application>
+           ...
+           <meta-data
+               android:name="tkbl-api-key-{{YOUR_SITE_SLUG}}"
+               android:value="{{YOUR_TALKABLE_PUBLIC_API_KEY}}" />
+           ...
+       </application>
+
+3. Initialize Talkable in the ``Application``.
+
+   .. code-block:: java
+
+     import com.talkable.sdk.Talkable;
+     import android.app.Application;
+
+     public class App extends Application {
+         @Override
+         public void onCreate() {
+             super.onCreate();
+             Talkable.initialize(this);
+         }
+     }
+
+   .. note::
+
+     Make sure to add your application class name as ``android:name`` parameter of
+     the ``<application>`` element in your manifest
+
+4. Call ``Talkable.trackAppOpen`` inside you main activity class, like before.
+
+   .. code-block:: java
+
+     import com.talkable.sdk.Talkable;
+     import android.app.Activity;
+
+     public class MainActivity extends Activity {
+         @Override
+         public void onCreate(Bundle savedInstanceState) {
+             ...
+
+             Talkable.trackAppOpen(this);
+         }
+     }
+
 0.3.1
 -----
 
@@ -16,7 +100,7 @@ Fixed a bug when no campaign found and added ``TalkableOfferFragmentListener`` i
 
 To use instance of ``TalkableOfferFragment`` directly you have to implement ``TalkableOfferFragmentListener``
 interface from ``TalkableOfferFragment`` class inside an activity that uses the fragment.
-See :ref:`Advanced Usage <android_sdk/advanced>`.
+Look in :ref:`Advanced Usage <android_sdk/advanced>` for more detailed information if needed.
 
 0.3.0
 -----
