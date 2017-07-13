@@ -2,7 +2,7 @@
 
   <!-- Begin Talkable integration code -->
   <script type="text/javascript">
-    var _talkableq = _talkableq || [];
+    window._talkableq = window._talkableq || [];
     _talkableq.push(['init', {site_id: "YOUR-TALKABLE-SITE-ID"}]); /* REQUIRED - Replace with your Talkable Site ID */
 
     if (Shopify && Shopify.checkout) {

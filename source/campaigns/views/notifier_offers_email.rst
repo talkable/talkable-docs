@@ -30,9 +30,8 @@ By default is sent immediately after the offer is created, but can be delayed by
 1. Talkable creates an offer based on the following criteria:
 
   - Purchase creation
-  - Affiliate member signup. |advocate| can sign up manually by entering their email, or their email is passed via JS integration (or URL). For example, a customer signs up to refer-a-friend on a /invite page. This triggers an affiliate member signup.
+  - Affiliate member signup. |advocate| can sign up manually by entering their email, or their email is passed via JS integration (or URL). For example, a customer signs up to refer-a-friend on a /share page. This triggers an affiliate member signup.
 
 2. Main email sending criteria (unable to change):
 
   - If |advocate| offer is active
-
