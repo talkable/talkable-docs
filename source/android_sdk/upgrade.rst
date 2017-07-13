@@ -114,7 +114,7 @@ Talkable SDK is built on top of `Fragments <https://developer.android.com/refere
 0.2.0
 -----
 
-Deep linking schema
+Deep linking scheme
 ...................
 
 Add this to ``AndroidManifest.xml`` inside definition of Talkable activity

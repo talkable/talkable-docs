@@ -7,13 +7,13 @@ Advanced Usage
 Using multiple site slugs
 -------------------------
 
-To use multiple site slugs inside your application you have to do next steps:
+To use multiple site slugs inside your application, you have to do next steps:
 
 1. Add credentials for each site you are going to use inside your manifest file.
    Format is the same as from corresponding
    :ref:`Getting Started <setup_credentials>` section.
 
-2. Add deep linking schema handlers into your main activity entry for each site
+2. Add deep linking schemas handlers into your main activity entry for each site
    you are going to use too. Format is the same as from corresponding
    :ref:`Getting Started <deep_linking_scheme>` section.
 
@@ -49,14 +49,14 @@ To use multiple site slugs inside your application you have to do next steps:
 
    .. note::
 
-     You can set site slug at any time after initilization in the following way:
+     You can set site slug at any time after initialization in the following way:
 
      .. code-block:: java
 
        Talkable.setSiteSlug(context, "some-site-slug");
 
      Make sure to add credentials for this site inside the manifest file.
-     Otherwise an exception will be raised.
+     Otherwise, an exception will be raised.
 
 Overriding default behaviour
 ----------------------------
@@ -99,7 +99,7 @@ Overriding default behaviour
 
       You can just override ``TalkableOfferFragment`` and use default
       ``TalkableActivity`` from Talkable SDK.
-      In this case you shouldn't change the manifest
+      In this case, you shouldn't change the manifest
       (if you did steps from :ref:`Getting Started <android_sdk/getting_started>` section).
 
      .. code-block:: java
