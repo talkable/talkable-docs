@@ -60,7 +60,7 @@ Installation
 
 .. _deep_linking_scheme:
 
-5. Add deep linking schema handler into your main activity entry.
+5. Add deep linking scheme handler into your main activity entry.
 
    .. code-block:: xml
 
