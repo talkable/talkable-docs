@@ -59,7 +59,7 @@ script.
 .. code-block:: html
 
   <!-- Begin Talkable integration code -->
-  <script src="https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/your-site-id.min.js"></script>
+  <script async src="https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/your-site-id.min.js"></script>
   <script>
     window._talkableq = window._talkableq || [];
     window._talkableq.unshift(['init', { site_id: 'your-site-id' }]);
