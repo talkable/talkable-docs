@@ -58,6 +58,12 @@ To use multiple site slugs inside your application, you have to do next steps:
      Make sure to add credentials for this site inside the manifest file.
      Otherwise, an exception will be raised.
 
+Sharing via Facebook
+--------------------
+
+By default sharing via Facebook is disabled. You can enable it by setting up
+your project with the Facebook SDK: `Getting Started Android SDK`_
+
 Overriding default behaviour
 ----------------------------
 
@@ -78,22 +84,14 @@ Overriding default behaviour
      }
 
 
-2. Pass classes of an activity you want to run a fragment in and the overriden fragment to
+2. Pass Class of an activity you want to run a fragment in and the overriden fragment to
    `Talkable.showOffer` call:
 
    .. code-block:: java
 
      Talkable.showOffer(activity, affiliateMember, MyFragmentActivity.class, OverridenTalkableOfferFragment.class);
 
-   And change the manifest:
-
-   .. code-block:: xml
-
-     <!-- From -->
-     <activity android:name="com.talkable.sdk.TalkableActivity" />
-
-     <!-- To -->
-     <activity android:name=".MyFragmentActivity" />
+   Define your Activity inside the manifest.
 
    .. note::
 
@@ -143,6 +141,8 @@ After this you can start using the fragment.
 
   TalkableOfferFragment talkableOfferFragment = new TalkableOfferFragment();
   talkableOfferFragment.setArguments(arguments);
+
+.. _`Getting Started Android SDK`: https://developers.facebook.com/docs/android/getting-started
 
 .. container:: hidden
 
