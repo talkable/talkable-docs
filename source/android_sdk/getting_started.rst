@@ -11,13 +11,14 @@ Installation
 ------------
 
 1. Download the latest version of `Talkable SDK framework`_.
-2. Add ``talkable-sdk.aar`` and add it as project dependency in Android studio.
+2. Add ``talkable-sdk.aar`` and add it as a module dependency in Android studio.
 
    .. note::
 
      To do this, open import popup using *File* |rarr| *New* |rarr| *New Module* |rarr| *Import .JAR/.AAR Package*
+     and add Talkable SDK as a module dependency to your main module
 
-   After this, add dependencies to ``build.gradle``
+   After this, add Talkable SDK dependencies to ``build.gradle``
 
    .. code-block:: groovy
 
@@ -27,16 +28,9 @@ Installation
        compile 'com.android.support:support-v4:25.3.1'
        compile project(':talkable-sdk')
 
-
-3. Add Talkable activity to your ``AndroidManifest.xml`` file inside ``<application>`` element.
-
-   .. code-block:: xml
-
-       <activity android:name="com.talkable.sdk.TalkableActivity" />
-
 .. _setup_credentials:
 
-4. Setup Talkable credentials in ``AndroidManifest.xml`` file inside
+3. Setup Talkable credentials in ``AndroidManifest.xml`` file inside
    ``<application>`` element in the following format:
 
    .. code-block:: xml
@@ -60,7 +54,8 @@ Installation
 
 .. _deep_linking_scheme:
 
-5. Add deep linking scheme handler into your main activity entry.
+4. Add deep linking scheme handler into your main activity entry or an activity you
+   want to handle deep links from Talkable.
 
    .. code-block:: xml
 
@@ -73,21 +68,9 @@ Installation
          <data android:scheme="tkbl-{{YOUR_SITE_SLUG}}" />
      </intent-filter>
 
-6. Add the following entry into ``<application>`` element in your ``AndroidManifest.xml`` file to track app installs.
-
-   .. code-block:: xml
-
-       <receiver
-           android:name="com.talkable.sdk.InstallReferrerReceiver"
-           android:exported="true">
-           <intent-filter>
-               <action android:name="com.android.vending.INSTALL_REFERRER" />
-           </intent-filter>
-       </receiver>
-
 .. _main_activity_setup:
 
-7. Initialize Talkable in the ``Application``:
+5. Initialize Talkable in the ``Application``:
 
    .. code-block:: java
 
@@ -107,7 +90,7 @@ Installation
      Make sure to add your application class name as ``android:name`` parameter of
      the ``<application>`` element in your manifest
 
-8. Call ``Talkable.trackAppOpen`` inside you main activity class, like so:
+6. Call ``Talkable.trackAppOpen`` inside you main activity class, like this:
 
    .. code-block:: java
 
@@ -157,19 +140,9 @@ Here is an example of ``AndroidManifest.xml`` file (with ``"demo-site"`` site sl
 
               <!-- Talkable -->
 
-              <activity android:name="com.talkable.sdk.TalkableActivity" />
-
               <meta-data
                   android:name="tkbl-api-key-demo-site"
                   android:value="nacsc9XseW4Kxne6AaJ" />
-
-              <receiver
-                  android:name="com.talkable.sdk.InstallReferrerReceiver"
-                  android:exported="true">
-                  <intent-filter>
-                      <action android:name="com.android.vending.INSTALL_REFERRER" />
-                  </intent-filter>
-              </receiver>
 
               <!-- End Talkable -->
           </application>
