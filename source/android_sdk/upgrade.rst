@@ -90,6 +90,9 @@ To update from the previous version please do following steps.
          }
      }
 
+From this version defining of ``TalkableActivity`` and ``InstallReferrerReceiver``
+inside Android Manifest is not necessary.
+
 0.3.1
 -----
 
