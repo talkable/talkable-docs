@@ -91,8 +91,6 @@ Overriding default behaviour
 
      Talkable.showOffer(activity, affiliateMember, MyFragmentActivity.class, OverridenTalkableOfferFragment.class);
 
-   Define your Activity inside the manifest.
-
    .. note::
 
       You can just override ``TalkableOfferFragment`` and use default
