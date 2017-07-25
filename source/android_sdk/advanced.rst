@@ -62,7 +62,7 @@ Sharing via Facebook
 --------------------
 
 By default sharing via Facebook is disabled. You can enable it by setting up
-your project with the Facebook SDK: `Getting Started Android SDK`_
+your project with the Facebook SDK: `Android - Getting Started`_
 
 Overriding default behaviour
 ----------------------------
@@ -142,7 +142,7 @@ After this you can start using the fragment.
   TalkableOfferFragment talkableOfferFragment = new TalkableOfferFragment();
   talkableOfferFragment.setArguments(arguments);
 
-.. _`Getting Started Android SDK`: https://developers.facebook.com/docs/android/getting-started
+.. _`Android - Getting Started`: https://developers.facebook.com/docs/android/getting-started
 
 .. container:: hidden
 
