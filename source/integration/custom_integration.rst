@@ -1,8 +1,8 @@
 .. _integration/custom_integration:
 .. include:: /partials/common.rst
 
-Custom Integration
-##################
+Standard Integration
+####################
 
 .. raw:: html
 
