@@ -99,6 +99,7 @@ Run `rake server` from "master" branch and open `http://localhost:5000` in brows
 
 ### Deploying
 
+If you're deploying for the first time make sure you have `gh-pages` branch locally. Otherwise run the following command to create it: `git checkout -b gh-pages origin/gh-pages`.
 If you did everything right, deploying is as easy as `rake deploy` from "master" branch.
 
 #### Deploying to Staging
