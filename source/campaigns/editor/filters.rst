@@ -611,7 +611,7 @@ Returns ``some string``
 |hr|
 
 values
-..............
+......
 
 Takes a hash and returns the array of its values
 
