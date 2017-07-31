@@ -613,7 +613,7 @@ Returns ``some string``
 values
 ......
 
-Takes a hash and returns the array of its values
+Takes a hash and returns the array of its values.
 
 .. code-block:: liquid
 
