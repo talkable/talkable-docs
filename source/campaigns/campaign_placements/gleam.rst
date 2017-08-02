@@ -15,7 +15,7 @@ Integration instructions
 
 Gleam Placement doesn’t require any additional integration.
 If you have already added Talkable to your main layout (completed General Integration
-for Custom platform, or installed Shopify or Magento extensions), then you are all done.
+for Custom platform, or installed Shopify, Magento, or Demandware extensions), then you are all done.
 |br|
 **Note:** For Magento site just make sure the Gleam is enabled in the Talkable extension settings in your Magento Admin Panel.
 |br|
