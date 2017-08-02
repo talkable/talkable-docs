@@ -12,7 +12,7 @@ Triggered when Advocate Signup form is submitted.
 
 * **offer** — subhash of parameters describing the offer
 
-  * **email** — referrer's email address
+  * **email** — referrer’s email address
   * **short_url_code**
 
 * **campaign** — subhash of parameters describing the campaign
@@ -20,15 +20,15 @@ Triggered when Advocate Signup form is submitted.
   * **id** — unique campaign ID
   * **cached_slug** — unique SEO friendly ID
   * **type** — either *"StandaloneCampaign"* or *"DoubleSidedDealCampaign"*
-  * **tag_names** — array of campaign's tags
+  * **tag_names** — array of campaign’s tags
 
-* **email** — affiliate member's email address
+* **email** — affiliate member’s email address
 
 If the Signup form included first and last name fields or subscription checkbox,
 additional parameters will be present:
 
-* **first_name** — affiliate member's first name
-* **last_name** — affiliate member's last name
+* **first_name** — affiliate member’s first name
+* **last_name** — affiliate member’s last name
 * **sub_choice** — subscription choice
 * **subscribed_at** — date affiliate member has subscribed
 * **unsubscribed_at** — date affiliate member has unsubscribed

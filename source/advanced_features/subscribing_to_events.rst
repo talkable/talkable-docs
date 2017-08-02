@@ -32,7 +32,7 @@ Knowing the container `id` attribute is `talkable-offer` the subscription JS wil
 Notice the callback function with two arguments:
 
   1. `data` object — this is the data which gets passed by the iframe upon firing the event. You can use it to receive data from Talkable.
-  2. `iframe` object — this is iframe's `HTML DOM reference`_
+  2. `iframe` object — this is iframe’s `HTML DOM reference`_
 
 .. _HTML DOM reference: http://www.w3schools.com/jsref/dom_obj_frame.asp
 

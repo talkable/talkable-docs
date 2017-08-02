@@ -11,7 +11,7 @@ it in the future. |br|
 Email is triggered to a |friend| who passed Email Gating, and received Reward
 (i.e. coupon code). |br|
 
-The email will be sent once Talkable knows Friend's email which they provides on the Friend Claim Page (such technique works great for email capturing). See :ref:`tutorials_email_gating` for more details.
+The email will be sent once Talkable knows Friend’s email which they provides on the Friend Claim Page (such technique works great for email capturing). See :ref:`tutorials_email_gating` for more details.
 
 Frequently used Variables:
 

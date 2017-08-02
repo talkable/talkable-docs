@@ -5,7 +5,7 @@ Create Coupon Web Hook
 ======================
 
 Used for enterprise clients who want to give unique coupons to each visitor
-and don't want to manually upload a list of coupon codes to Talkable. In order
+and don’t want to manually upload a list of coupon codes to Talkable. In order
 to create coupon codes for a coupon list automatically, Talkable can notify
 a customer site which coupons should be created.
 

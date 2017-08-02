@@ -47,7 +47,7 @@ project = u'Talkable'
 copyright = u'Talkable Inc.'
 author = u'Talkable Inc.'
 
-# The version info for the project you're documenting, acts as replacement for
+# The version info for the project you’re documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #

@@ -18,7 +18,7 @@ it is getting paid after Referral is approved.
   * **id** — unique campaign ID
   * **cached_slug** — unique SEO friendly ID
   * **type** — either *"StandaloneCampaign"* or *"DoubleSidedDealCampaign"*
-  * **tag_names** — array of campaign's tags
+  * **tag_names** — array of campaign’s tags
 
 * **person** — subhash of parameters describing the person that got reward (note: might be **null**)
 
@@ -56,7 +56,7 @@ it is getting paid after Referral is approved.
     * *"Purchase"* for post-purchase campaign
     * *"AffiliateMember"* for standalone campaign
 
-  * **id** — unique identifier of the advocate's origin event
+  * **id** — unique identifier of the advocate’s origin event
 
    *For Affiliate Member:*
 
@@ -64,10 +64,10 @@ it is getting paid after Referral is approved.
 
    *For Purchase:*
 
-  * **order_number** - unique identifier of advocate's order
-  * **subtotal** - advocate's order subtotal
+  * **order_number** - unique identifier of advocate’s order
+  * **subtotal** - advocate’s order subtotal
   * **customer_id** - unique identifier of advocate
-  * **order_date** - advocate's order date in ISO 8601 format
+  * **order_date** - advocate’s order date in ISO 8601 format
 
 * **friend_origin** - subhash of data related to the friend event
 
@@ -76,11 +76,11 @@ it is getting paid after Referral is approved.
     * *"Purchase"* for post-purchase campaign
     * *"Event"* for custom campaign
 
-  * **id** — unique identifier of the friend's origin
-  * **order_number** - unique identifier of friend's order
-  * **subtotal** - friend's order subtotal
+  * **id** — unique identifier of the friend’s origin
+  * **order_number** - unique identifier of friend’s order
+  * **subtotal** - friend’s order subtotal
   * **customer_id** - unique identifier of friend
-  * **order_date** - friend's order date in ISO 8601 format
+  * **order_date** - friend’s order date in ISO 8601 format
 
 .. raw:: html
 

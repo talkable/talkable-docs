@@ -12,7 +12,7 @@ Triggered when Friend Email Gating form is submitted (on Friend Claim Page).
 
 * **offer** — subhash of parameters describing the offer
 
-  * **email** — referrer's email address
+  * **email** — referrer’s email address
   * **short_url_code**
 
 * **campaign** — subhash of parameters describing the campaign
@@ -20,11 +20,11 @@ Triggered when Friend Email Gating form is submitted (on Friend Claim Page).
   * **id** — unique campaign ID
   * **cached_slug** — unique SEO friendly ID
   * **type** — either *"StandaloneCampaign"* or *"DoubleSidedDealCampaign"*
-  * **tag_names** — array of campaign's tags
+  * **tag_names** — array of campaign’s tags
 
-* **email** — friend's email address
-* **first_name** — friend's first name
-* **last_name** — friend's last name
+* **email** — friend’s email address
+* **first_name** — friend’s first name
+* **last_name** — friend’s last name
 * **sub_choice** — subscription choice (optional, present only if the form included subscription checkbox)
 * **subscribed_at** — date friend has subscribed (optional)
 * **unsubscribed_at** — date friend has unsubscribed (optional)

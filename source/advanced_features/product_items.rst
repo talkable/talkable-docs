@@ -6,7 +6,7 @@ Including Product Items
 =======================
 
 You can also add product specific tracking to Talkable
-which will let your customers share specific items that they've purchased.
+which will let your customers share specific items that they’ve purchased.
 Customer shares with products have higher click through and conversion rates.
 
 Below is an example with product items passed along with purchase data (notice FOR loop):

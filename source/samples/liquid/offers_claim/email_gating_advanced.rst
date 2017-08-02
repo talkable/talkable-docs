@@ -71,7 +71,7 @@
         query = $.param({proxy_params: $.extend(proxyParams, {email: email})});
         Talkable.passEmailGating(query);
       } else {
-        displayNotice("Something isn’t right. Please try again");
+        displayNotice("Something isn't right. Please try again");
       }
     }
 

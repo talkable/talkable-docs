@@ -5,7 +5,7 @@ Advanced Features
 #################
 
 Talkable provides several optional features that help increase conversions
-and make your referral program incredibly easy to manage. Here's an overview of
+and make your referral program incredibly easy to manage. Here’s an overview of
 each with links to integration details.
 
 .. list-table::
@@ -15,7 +15,7 @@ each with links to integration details.
      - Issue single and multi-use coupons automatically for your campaigns
 
    * - :ref:`Convert static copy into Localization <advanced_features/converting_into_localization>`
-     - Convert all static languange into a customizable copy that's
+     - Convert all static languange into a customizable copy that’s
        easy to AB test.
 
    * - :ref:`Email encryption <advanced_features/email_encryption>`

@@ -127,7 +127,7 @@ approved, Talkable sends an email that communicates/delivers the reward.
 Most customers choose auto approval after a 24-48 delay, which requires
 little to no attention.
 
-:underline:`Here's how reward flow and logic works:`
+:underline:`Here’s how reward flow and logic works:`
 
 After Talkable tracks the referred purchase we run it through two sets
 of filters: fraud filters, and then campaign qualifiers.
@@ -155,10 +155,10 @@ typically not necessary.
 
 The way this works is that you would ping Talkable on all orders that
 reach some final valid or failed state. This uses lazy logic so you
-don't need to know if a purchase is referral related or not, Talkable
-will determine this. So any order# you ping us with that's not related
-to a pending referral, we'll gracefully ignore, and any order# we
-recognize as related to a pending referral, we'll take the appropriate
+don’t need to know if a purchase is referral related or not, Talkable
+will determine this. So any order# you ping us with that’s not related
+to a pending referral, we’ll gracefully ignore, and any order# we
+recognize as related to a pending referral, we’ll take the appropriate
 action.
 
 .. _integration/custom/questions/verify_success:

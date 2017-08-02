@@ -4,7 +4,7 @@
 
 .. important::
 
-   Any code sent via this web hook doesn't need to be created on merchant site.
+   Any code sent via this web hook doesn’t need to be created on merchant site.
    When Talkable needs more coupons — it always calls
    :ref:`Create Coupon Web Hook <web_hooks/create_coupon>`.
    In this web hook Talkable just sends the information to merchant that coupon

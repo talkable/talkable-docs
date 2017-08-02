@@ -13,7 +13,7 @@ descriptions to see the list of available metrics.
 
    GET /metrics/<metric>
 
-Returns a metric value which includes plain value, formatted value and result's type.
+Returns a metric value which includes plain value, formatted value and result’s type.
 
 .. container:: ptable
 

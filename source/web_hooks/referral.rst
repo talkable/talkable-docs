@@ -15,11 +15,11 @@ Triggered when there is a new referral in Talkable.
   * **id** — unique campaign ID
   * **cached_slug** — unique SEO friendly ID
   * **type** — either *"StandaloneCampaign"* or *"DoubleSidedDealCampaign"*
-  * **tag_names** — array of campaign's tags
+  * **tag_names** — array of campaign’s tags
 
 * **offer** — subhash of parameters describing the offer
 
-  * **email** — referrer's email address
+  * **email** — referrer’s email address
   * **short_url_code**
 
 * **referred_origin** - subhash with referred origin made by friend that created a referral

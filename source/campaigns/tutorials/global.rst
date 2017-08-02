@@ -28,5 +28,5 @@ This option means that there could be only one visitor for each email share (one
   {{ coupon_code_used }} becomes available as an interpolation in Friend share email and its reminder(s). It allows you to check whether the coupon code has been used already at checkout.
 
 **Skip email gating:**
-  Allows you to make a smooth user experience for Friend where they can surpass email gating on the Friend Claim page when clicking from the Friend Share email and its reminder(s). This is done for Friend's convenience.
+  Allows you to make a smooth user experience for Friend where they can surpass email gating on the Friend Claim page when clicking from the Friend Share email and its reminder(s). This is done for Friend’s convenience.
 
