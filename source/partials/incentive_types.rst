@@ -10,5 +10,5 @@ Incentives can be of 3 following general types.
 * **discount_coupon** — discount coupon is issued to customer. This type of
   incentives is handled by Talkable.
 * **other** — used when a campaign has a non-monetary rebate like *"Free T-shirt"*
-  or *"One Month Free"*. This should be handled on the merchant's side. More
+  or *"One Month Free"*. This should be handled on the merchant’s side. More
   information on the reward is specified in *incentive_description*.

@@ -5,12 +5,12 @@ Web Hooks
 #########
 
 Web hooks are "user-defined HTTP callbacks". They are usually triggered by some
-event on Talkable's site.
+event on Talkable’s site.
 
 http://en.wikipedia.org/wiki/Webhook
 
 Each web hook in Talkable is defined with an HTTP URL to deliver web hook data
-(aka payload). This URL should be defined and implemented on the client's site.
+(aka payload). This URL should be defined and implemented on the client’s site.
 
 .. raw:: html
 
@@ -74,7 +74,7 @@ retry to deliver a webhook after a set interval of time.
 * 206: Partial Content
 
 If you have a problem on your server, you can answer with code 500. If there is
-some problem in our request (problem on Talkable's side), you can answer "400 Bad Request".
+some problem in our request (problem on Talkable’s side), you can answer "400 Bad Request".
 
 Any other error code and we will retry later.
 

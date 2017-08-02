@@ -17,7 +17,7 @@ can use the following Talkable capabilities:
   - by copying a direct Offer link
 
 - Track referral App download and reward Advocate as a result of it
-- Track sales via the App and reward Advocate if a sale was driven through someone's claim link
+- Track sales via the App and reward Advocate if a sale was driven through someone’s claim link
 
 Contents:
 

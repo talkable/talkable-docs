@@ -90,7 +90,6 @@ Update person’s username
    {
      "api_key": "i9uil7nQgDjucCiTJu",
      "site_slug": "my-store",
-     "person_slug": "customer@example.com",
      "data": {
        "username": "lizard_king"
      }
@@ -100,8 +99,8 @@ Update person’s username
 
    curl -H "Content-Type: application/json" \
         -X PUT \
-        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","person_slug":"customer@example.com","data":{"username":"lizard_king"}}' \
-        https://www.talkable.com/api/v2/people
+        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","data":{"username":"lizard_king"}}' \
+        https://www.talkable.com/api/v2/people/customer@example.com
 
 Sample response:
 
@@ -133,7 +132,6 @@ Unsubscribe a person from receiving emails
    {
      "api_key": "i9uil7nQgDjucCiTJu",
      "site_slug": "my-store",
-     "person_slug": "customer@example.com",
      "data": {
        "unsubscribed": true
      }
@@ -143,8 +141,8 @@ Unsubscribe a person from receiving emails
 
    curl -H "Content-Type: application/json" \
         -X PUT \
-        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","person_slug":"customer@example.com","data":{"unsubscribed":true}}' \
-        https://www.talkable.com/api/v2/people
+        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","data":{"unsubscribed":true}}' \
+        https://www.talkable.com/api/v2/people/customer@example.com
 
 Sample response:
 

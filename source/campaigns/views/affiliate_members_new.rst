@@ -24,4 +24,4 @@ Advocate referral program sign up page (only for Standalone Campaign). On this p
      <input type="submit" value="Sign up" data-disable-with="Please wait" name="commit" />
    </form>
 
-.. note:: Do not change ``name`` and form ``action`` attributes, otherwise functionality won't work.
+.. note:: Do not change ``name`` and form ``action`` attributes, otherwise functionality won’t work.

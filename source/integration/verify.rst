@@ -17,9 +17,9 @@ integration@talkable.com.
       :width: 300 px
       :alt: Integration Success
 
-   (Don't worry. This image is only shown when you use the special
+   (Don’t worry. This image is only shown when you use the special
    integration@talkable.com email address. No one else is seeing that image.)
 
-If you can't complete checkout with integration@talkable.com, we'll also verify
+If you can’t complete checkout with integration@talkable.com, we’ll also verify
 your integration whenever someone completes checkout on your store (but they
-won't see anything).
+won’t see anything).

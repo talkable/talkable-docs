@@ -40,7 +40,7 @@ Talkable is composed of the following components:
 
 4. :ref:`Referral Dashboard (my account) <integration/custom/integration_components/referral_dashboard>`.
 
-   Similar to the advocate landing page, create an HTML page that's linked to from a menu in user accounts.
+   Similar to the advocate landing page, create an HTML page that’s linked to from a menu in user accounts.
    Add the Talkable Container DIV in the body. This tells Talkable where to inject content.
 
 |hr|
@@ -52,7 +52,7 @@ Initialization Script
 
 The Initialization script should be placed in the head template or some
 template that spans every page. Talkable JS library size is typically
-around 20kB and causes no noticeable impact to your site's loading time.
+around 20kB and causes no noticeable impact to your site’s loading time.
 All other integration components are dependent on the Initialization
 script.
 
@@ -85,8 +85,8 @@ Initialization Script Notes
 2. **Variables.** Use your dynamic variables to pass user details {email,
    first_name, last_name} if the user is logged in and the data
    exists. If the data does not exist, you can pass a null value or a
-   blank string. If your website doesn't have a user accounts section
-   and this info is never available, it's acceptable to completely omit
+   blank string. If your website doesn’t have a user accounts section
+   and this info is never available, it’s acceptable to completely omit
    the parameters, or pass empty strings.
 
 |hr|
@@ -99,7 +99,7 @@ Post Purchase Script
 The post purchase script should be placed on your checkout confirmation
 page or any page that immediately follows checkout. All parameters can
 be passed as strings. A Number can be passed for `subtotal`, however, if
-using any calculation, you're responsible for ensuring that some number is
+using any calculation, you’re responsible for ensuring that some number is
 passed where division by zero or `null` value does not occur.
 
 .. code-block:: html
@@ -111,7 +111,7 @@ passed where division by zero or `null` value does not occur.
         order_number: '100011',
         subtotal: '23.97', // pre-tax, post-discount
         coupon_code: 'SAVE20', // can also accept multiple coupons as an array
-        shipping_zip: '02222',  // optional - used for fraud protection on matching address
+        shipping_zip: '02222', // optional - used for fraud protection on matching address
         shipping_address: 'Apt #, Street address, City, State, ZIP, Country' // optional - please use this order of address fields, comma separated, so Talkable can normalize the address
       },
       customer: {
@@ -136,12 +136,12 @@ Post Purchase Script Notes
 3. Shipping parameters are optional but gives the added benefit of
    additional fraud protection
 
-4. If you're using a payment gateway that directs the user away from
+4. If you’re using a payment gateway that directs the user away from
    your domain, you should ensure that some auto return feature is
    enabled so that the user returns to the checkout confirmation page to
    allow the post purchase script to run.
 
-5. If you're using a tag manager :ref:`click here <integration/custom/integration_tag_manager>`.
+5. If you’re using a tag manager :ref:`click here <integration/custom/integration_tag_manager>`.
 
 6. If you need to pass shopping cart line items, to see the alternate
    post purchase integration script :ref:`click here <integration/custom/alternate_post_purchase>`.
@@ -167,8 +167,8 @@ Advocate Landing Page Notes
 2. Talkable will inject referral content where Talkable Container
    resides in your DOM
 
-3. URL Path: If you can't use URL path `www.your-site.com/share` then
-   you'll need to update the Site Placements section inside of Talkable
+3. URL Path: If you can’t use URL path `www.your-site.com/share` then
+   you’ll need to update the Site Placements section inside of Talkable
    for the Invite Advocate Landing Page to match the exact URL path that
    you intend to use via
    `https://www.admin.talkable.com/sites/your-site-id/placements:`
@@ -202,8 +202,8 @@ Referral Dashboard notes:
    dashboard can be added inline inside your user accounts menu, however
    the dashboard content width for proper display is 980px.
 
-3. **URL Path.** If you don't host on `www.your-site.com/referrals` then
-   you'll need to update the Site Placements section inside of Talkable
+3. **URL Path.** If you don’t host on `www.your-site.com/referrals` then
+   you’ll need to update the Site Placements section inside of Talkable
    for the Dashboard Placement to use the exact URL path you intend to
    host the Referral Dashboard on via
    `https://www.talkable.com/sites/your-site-id/placements`
@@ -213,9 +213,9 @@ Referral Dashboard notes:
    considering your website configuration. Most common uses are links in
    the user accounts section, or from the user accounts menu.
 
-5. **Host on a page that's only accessible behind login.** The Referral
-   Dashboard contains semi-sensitive information about an Advocate's
-   referral history. If you don't have user logins, then the Referral
+5. **Host on a page that’s only accessible behind login.** The Referral
+   Dashboard contains semi-sensitive information about an Advocate’s
+   referral history. If you don’t have user logins, then the Referral
    Dashboard can be configured to display partially obfuscated data for
    public access.
 

@@ -4,7 +4,7 @@
 Converting Into Localization
 ============================
 
-If you don't know what is Localization inside Talkable :ref:`read this article <campaigns/localization>`.
+If you don’t know what is Localization inside Talkable :ref:`read this article <campaigns/localization>`.
 
 Few benefits you get out of using Localizations:
 
@@ -23,7 +23,7 @@ Few benefits you get out of using Localizations:
 
 .. image:: /_static/img/advanced_features/campaign_view_navigation.png
 
-4. Find a copy that you'd like to convert into a Localization. You can hit `Cmd+F` (`Ctrl+F` on Windows) to search within HTML area.
+4. Find a copy that you’d like to convert into a Localization. You can hit `Cmd+F` (`Ctrl+F` on Windows) to search within HTML area.
 
 Static copy is basically a piece of text that sits inside HTML & CSS Editor and usually looks like this:
 
@@ -50,7 +50,7 @@ A piece that we are going to extract into Localizations is just a copy, without 
 
   <h2>Few important things to remember</h2>
 
-1. Don't forget to change `{{` into `[[` inside interpolation variables, otherwise variables will lose its function and become just a plain text.
+1. Don’t forget to change `{{` into `[[` inside interpolation variables, otherwise variables will lose its function and become just a plain text.
 2. Keep in mind that `identifier` ("advocate_share_page_headline" in the example above) is a campaign-level Localization in fact, always remember to provide unique names for them, otherwise you will be overriding a value of one Localization.
 
 .. warning::
@@ -108,7 +108,7 @@ Another example would be localizing font color of a headline, all copy at once, 
         border-color: {{ "advocate_share_page_button_color" | localize: "#f94d08", trait: "color" }};
       }
 
-    In the code example above we created new Color Localization with default HEX color `#f94d08` which is used for `background-color` and `border-color` CSS properties of `.button` selector. Whenever you set a new color inside Campaign Editor it will be changed across both places because we're using the same Localization identifier in both places.
+    In the code example above we created new Color Localization with default HEX color `#f94d08` which is used for `background-color` and `border-color` CSS properties of `.button` selector. Whenever you set a new color inside Campaign Editor it will be changed across both places because we’re using the same Localization identifier in both places.
 
   3. New Color Localization appears under "Color" tab inside Campaign Editor:
 
@@ -168,7 +168,7 @@ In order to chieve this AB test we need to
 
     .. image:: /_static/img/advanced_features/editor_configuration_tab.png
 
-  3. Let's switch back to HTML & CSS editor and start applying CSS styling to both layouts. Knowing their final classes inside HTML: `class="container is-equal-emphasis"` and `class="container is-email-emphasis"` we can easily style both layouts inside CSS area like so (SCSS is also allowed and is shown as an example for code simplicity):
+  3. Let’s switch back to HTML & CSS editor and start applying CSS styling to both layouts. Knowing their final classes inside HTML: `class="container is-equal-emphasis"` and `class="container is-email-emphasis"` we can easily style both layouts inside CSS area like so (SCSS is also allowed and is shown as an example for code simplicity):
 
     .. code-block:: scss
 
@@ -188,7 +188,7 @@ In order to chieve this AB test we need to
 
     All other nested children can be styled following this pattern.
 
-  4. Once you're done with styling it is very easy to set up an AB test, just go back to Campaign Editor and click "Add A/B test variant" link. Once a Campaign goes Live it will start rotating both variants following AB test distribution rules (50:50 by default).
+  4. Once you’re done with styling it is very easy to set up an AB test, just go back to Campaign Editor and click "Add A/B test variant" link. Once a Campaign goes Live it will start rotating both variants following AB test distribution rules (50:50 by default).
 
 .. container:: hidden
 

@@ -16,7 +16,7 @@ Talkable has an iOS framework enabling you to use Talkable in iOS Apps. Once int
   - by copying a direct Offer link
 
 - Track referral App download and reward Advocate as a result of it
-- Track sales via the App and reward Advocate if a sale was driven thourgh someone's claim link
+- Track sales via the App and reward Advocate if a sale was driven thourgh someone’s claim link
 
 Contents:
 

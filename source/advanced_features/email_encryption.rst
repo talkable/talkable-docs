@@ -11,7 +11,7 @@ So, instead of sending email addresses in plain text, you can send them encrypte
 Passing email as a GET parameter to Standalone Campaign
 -------------------------------------------------------
 
-Also it's possible to pass encrypted email as a GET parameter (e.g. for CTA links that
+Also it’s possible to pass encrypted email as a GET parameter (e.g. for CTA links that
 point to standalone invite page). But to do that encrypted email should be **URL-encoded**.
 
 Ruby Example

@@ -24,7 +24,7 @@ Installation
   - `Social.framework`
   - `WebKit.framework`
 
-  To do this, click on your application's target, then click on Build Phases and expand the Link Binary With Libraries group.
+  To do this, click on your application’s target, then click on Build Phases and expand the Link Binary With Libraries group.
 
 4. Add the following import statement to any Objective-C header (.h) or implementation (.m) file in which you wish to use the Talkable SDK.
 
