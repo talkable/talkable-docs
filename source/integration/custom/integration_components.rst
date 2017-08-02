@@ -111,7 +111,7 @@ passed where division by zero or `null` value does not occur.
         order_number: '100011',
         subtotal: '23.97', // pre-tax, post-discount
         coupon_code: 'SAVE20', // can also accept multiple coupons as an array
-        shipping_zip: '02222',  // optional - used for fraud protection on matching address
+        shipping_zip: '02222', // optional - used for fraud protection on matching address
         shipping_address: 'Apt #, Street address, City, State, ZIP, Country' // optional - please use this order of address fields, comma separated, so Talkable can normalize the address
       },
       customer: {
