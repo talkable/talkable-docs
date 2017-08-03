@@ -1,0 +1,17 @@
+---
+ruby_version: ruby-2.3.0
+bundler_version: 1.15.3
+python:
+  python_version: '3.5'
+  pip_requirements_file: requirements.txt
+tests:
+  - bundle exec rake test
+hooks:
+  package_setup: |
+    # This hook bypasses the automatic package installation routines
+    set -e # Exit on error
+    # Setup python
+    virtualenv $HOME/python-env
+    pip install -r requirements.txt
+    # Setup ruby
+    bundle install --path=$HOME/bundle --no-deployment
