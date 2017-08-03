@@ -1,0 +1,20 @@
+.. _integration/demandware:
+.. include:: /partials/common.rst
+
+Demandware Integration
+======================
+
+.. note::
+
+  You must have Talkable account in order to get started
+
+The Talkable cartridge is a self-contained cartridge that can easily integrate
+into any Salesforce Commerce Cloud project. The cartridge can be configured in
+the Business Manager and contains all elements necessary to perform successful
+practice implementation of Talkable. After the cartridge is deployed, configured
+and integrated with the storefront templates, the customer will have full power
+of Talkable marketing programs applied to their site.
+
+Link to the Talkable extension on the Salesforce Commerce Cloud:
+|br|
+`<http://www.demandware.com/link-marketplace/talkable>`_
