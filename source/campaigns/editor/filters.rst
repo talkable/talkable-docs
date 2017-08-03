@@ -607,3 +607,16 @@ Decodes given base64 encoded string.
    {{ "c29tZSBzdHJpbmc=" | base64_decode }}
 
 Returns ``some string``
+
+|hr|
+
+values
+......
+
+Takes a hash and returns the array of its values.
+
+.. code-block:: liquid
+
+   {% assign incentive_configs = incentives | values %}
+
+Returns ``[{ad incentive config}, {fr incentive config}]``
