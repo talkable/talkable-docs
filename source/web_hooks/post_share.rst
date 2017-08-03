@@ -16,7 +16,7 @@ corresponding form provided by campaign workflow.
   * **id** — unique campaign ID
   * **cached_slug** — unique SEO friendly ID
   * **type** — either *"StandaloneCampaign"* or *"DoubleSidedDealCampaign"*
-  * **tag_names** — array of campaign's tags
+  * **tag_names** — array of campaign’s tags
 
 * **share_type** — *"email"*, *"facebook"*, or *"twitter"*
 * **share_info** — share-specific information

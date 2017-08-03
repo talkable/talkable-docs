@@ -24,7 +24,7 @@ Talkable single-use coupon at checkout, the right trigger condition would be:
 If condition evaluates to anything else than ``true`` or ``false``, the value
 it returns will be visible in Referrals Report.
 
-This way, you can know which part of a condition was the reason |advocate| didn't
+This way, you can know which part of a condition was the reason |advocate| didn’t
 get a reward:
 
 .. image:: /_static/img/incentive-criteria-2.png

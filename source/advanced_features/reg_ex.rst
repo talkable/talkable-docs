@@ -8,7 +8,7 @@ Talkable allows you to use regular expressions (regex for short) inside Campaign
 multiple URLs instead of an exact one.
 Only Talkable admins are able to use this as an option.
 In order to switch "Shown on" or "Hidden on" field into Regex mode turn on the appropriate checkbox.
-Keep in mind that you don't need to escape **/** with backslash, those are already escaped for you.
+Keep in mind that you don’t need to escape **/** with backslash, those are already escaped for you.
 The rest of the queries need to be backslashed.
 It is recommended to run some checks when coding up Regex criteria: https://regex101.com.
 Here is an example of a URL: `http://www.google.com/test`, you can replace it with your site URL and add your own path(s).

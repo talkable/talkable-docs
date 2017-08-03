@@ -29,7 +29,7 @@ criteria in there:
 
 
 Now only those customers who purchased a product with SKU of "SKU_GOES_HERE" will see a Campaign.
-The Campaign won't show for any other product purchased.
+The Campaign won’t show for any other product purchased.
 
 .. note::
   In order to use this Campaign Join Criteria you need to make sure that the SKU numbers are passed

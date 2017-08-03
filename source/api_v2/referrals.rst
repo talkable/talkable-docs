@@ -12,7 +12,7 @@ This API allows you to approve/void referrals.
 
    PUT /origins/<origin_slug>/referral
 
-Updates referral's status.
+Updates referral’s status.
 
 .. note:: Approved or voided referrals cannot be changed to the opposite state.
 

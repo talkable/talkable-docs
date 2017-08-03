@@ -95,7 +95,7 @@ Overriding default behaviour
 
       You can just override ``TalkableOfferFragment`` and use default
       ``TalkableActivity`` from Talkable SDK.
-      In this case, you shouldn't change the manifest
+      In this case, you shouldn’t change the manifest
       (if you did steps from :ref:`Getting Started <android_sdk/getting_started>` section).
 
      .. code-block:: java

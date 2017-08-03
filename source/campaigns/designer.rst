@@ -81,7 +81,7 @@ and solid ones:
 
 .. _responsive-views:
 
-Responsive view's height
+Responsive view’s height
 ------------------------
 
 Talkable campaigns can be integrated as a popup with overlay, or as an inline
@@ -92,7 +92,7 @@ changed when a user resizes browser window (overlay will still take the entire s
 
 However, when Talkable Campaign is placed inline inside content area its size
 depends on its internal content. The more content it holds the more higher it is.
-Iframe has a known issue due to which browsers don't change its height no matter how
+Iframe has a known issue due to which browsers don’t change its height no matter how
 much content it holds inside. By default all browsers set 150px height to all iframe
 tags and add scrollbars if the internal content exceeds that size. Talkable Campaigns
 are always of the correct size because of "Responsive iframe height" feature always
@@ -103,5 +103,5 @@ property hides the scrollbars. At the same time, Talkable JS integration library
 ensures its height is correct by checking the size of the iframe content and setting it
 in pixels to the Talkable iframe tag that holds it from the outside.
 
-You are able to turn "Responsive iframe's height" ON/OFF from within
-``Campaign / Editor / Edit HTML & CSS / Extra / Responsive iframe's height`` select box.
+You are able to turn "Responsive iframe’s height" ON/OFF from within
+``Campaign / Editor / Edit HTML & CSS / Extra / Responsive iframe’s height`` select box.

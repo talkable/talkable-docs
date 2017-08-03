@@ -22,7 +22,7 @@ Location parameters have higher priority than explicit parameters passed in the 
 
 .. note::
 
-  Don't forget to escape URL parameters with URI parameter encoder.
+  Don’t forget to escape URL parameters with URI parameter encoder.
 
 .. container:: hidden
 

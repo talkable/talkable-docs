@@ -8,7 +8,7 @@ Friend Claim Page
 
 |friend| lands here from :ref:`friend_share_email_view`. |br|
 Explain him what special discount he will get when using this link. |br|
-It's recommended to show coupon code for the |friend| on this page
+It’s recommended to show coupon code for the |friend| on this page
 (and only on this page).
 
 Frequently used Variables:
@@ -38,7 +38,7 @@ Frequently used Variables:
 .. note::
 
    Do not change ``name`` and ``class`` attributes, otherwise
-   functionality won't work. `js-` class prefix means it is used in Talkable API.
+   functionality won’t work. `js-` class prefix means it is used in Talkable API.
 
 Related tutorials for this View:
 

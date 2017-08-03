@@ -10,7 +10,7 @@ All methods are available in any place of your app (after :ref:`initialization <
 Create visitor
 --------------
 
-It's the simplest method. You don't need anything to create `Visitor`.
+It’s the simplest method. You don’t need anything to create `Visitor`.
 But you can do anything you need with just create one.
 
   .. code-block:: java
@@ -147,7 +147,7 @@ you need to pass this data to this method. Example:
 Retrieve offer
 --------------
 
-This method is used to get offer details by it's short code. Example:
+This method is used to get offer details by it’s short code. Example:
 
 .. code-block:: java
 

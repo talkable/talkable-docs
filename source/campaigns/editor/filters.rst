@@ -376,7 +376,7 @@ Returns channel-specific claim URL.
 group\_by
 .........
 
-Group an array's items by a given property.
+Group an array’s items by a given property.
 
 .. code-block:: liquid
 

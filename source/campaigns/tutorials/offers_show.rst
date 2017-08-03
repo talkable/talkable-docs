@@ -37,7 +37,7 @@ CloudSponge Integration
 **CloudSponge and Custom Domain**
 
 CloudSponge integration is bound to specific domain. In order to use it with
-custom domain you'll need to obtain separate ``domain_key``.
+custom domain you’ll need to obtain separate ``domain_key``.
 
 #. Go to `CloudSponge <https://www.cloudsponge.com/>`_
 #. Add new domain, use your custom domain as domain name

@@ -3,7 +3,7 @@ Talkable Documentation
 
 [![Build Status](https://travis-ci.org/talkable/talkable-docs.svg)](https://travis-ci.org/talkable/talkable-docs)
 
-This GitHub repository represents Talkable's documentation site, located at [docs.talkable.com](http://docs.talkable.com).
+This GitHub repository represents Talkable’s documentation site, located at [docs.talkable.com](http://docs.talkable.com).
 
 The Talkable documentation uses [reStructuredText](http://docutils.sourceforge.net/rst.html) as its markup language and is built using [Sphinx](http://sphinx-doc.org/).
 
@@ -99,12 +99,12 @@ Run `rake server` from "master" branch and open `http://localhost:5000` in brows
 
 ### Deploying
 
-If you're deploying for the first time make sure you have `gh-pages` branch locally. Otherwise run the following command to create it: `git checkout -b gh-pages origin/gh-pages`.
+If you’re deploying for the first time make sure you have `gh-pages` branch locally. Otherwise run the following command to create it: `git checkout -b gh-pages origin/gh-pages`.
 If you did everything right, deploying is as easy as `rake deploy` from "master" branch.
 
 #### Deploying to Staging
 
-If it's your first time deploying to staging, run `rake setup` to setup git remote.
+If it’s your first time deploying to staging, run `rake setup` to setup git remote.
 
 Merge your changes into "void" branch and deploy with `rake deploy:staging`.
 
