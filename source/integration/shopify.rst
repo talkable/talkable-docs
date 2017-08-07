@@ -16,14 +16,14 @@ Automatic integration
 1. Create Talkable account at |signup_link|
 
 |space_indent| - Provide a valid Shopify store URL. Example: |example_link|. |br|
-|space_indent| - Choose “Shopify” as your Platform during registration process
+|space_indent| - Choose “Shopify” as your platform during registration process
 
 2. On the Welcome screen click "I’m a Developer"
 3. Click **Install Shopify App**
 4. You will be redirected to your Shopify store, log in and click the install button
 5. After successful installation you will be redirected back to Talkable
-6. Create, set up, and Launch Campaigns (Invite, Advocate Dashboard, etc.)
-7. Verify your integration using :ref:`Verifying Integration <integration/verify>`.
+6. Create, set up, and launch Campaigns (Invite, Advocate Dashboard, etc.)
+7. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`.
 
   .. note::
 
@@ -45,7 +45,7 @@ Manual integration
    .. include:: /samples/ecommerce/platform/shopify.rst
 
 3. Click **Apply these settings**.
-4. Verify your integration using :ref:`Verifying Integration <integration/verify>`.
+4. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`.
 
 |br|
 
@@ -66,4 +66,4 @@ Manual integration
 
    .. toctree::
 
-      Verifying Integration Instructions <verify>
+      Verifying Integration instructions <verify>
