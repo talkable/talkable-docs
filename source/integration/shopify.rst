@@ -52,7 +52,7 @@ Manual integration
 .. |signup_link| raw:: html
 
   <a
-    href="https://talkable.com/register?object_or_array"
+    href="https://admin.talkable.com/register?object_or_array"
     target="_blank"
   >
     https://admin.talkable.com/register?object_or_array
