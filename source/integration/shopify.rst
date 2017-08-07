@@ -4,7 +4,7 @@
 Shopify Integration
 ===================
 
-Extension integration
+Automatic integration
 ---------------------
 
   .. note::
@@ -18,7 +18,7 @@ Extension integration
 |space_indent| - Provide a valid Shopify store URL. Example: |example_link|. |br|
 |space_indent| - Choose “Shopify” as your Platform during registration process
 
-2. On the Welcome screen click "I’m Developer"
+2. On the Welcome screen click "I’m a Developer"
 3. Click **Install Shopify App**
 4. You will be redirected to your Shopify store, log in and click the install button
 5. After successful installation you will be redirected back to Talkable
@@ -52,10 +52,10 @@ Manual integration
 .. |signup_link| raw:: html
 
   <a
-    href="https://talkable.com/register?object_or_array"
+    href="https://admin.talkable.com/register?object_or_array"
     target="_blank"
   >
-    https://talkable.com/register?object_or_array
+    https://admin.talkable.com/register?object_or_array
   </a>
 
 .. |example_link| raw:: html
