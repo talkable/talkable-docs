@@ -1,3 +1,11 @@
+.. |nbsp| raw:: html
+
+   &nbsp;
+
+.. |space_indent| raw:: html
+
+   <span class="inline mll"></span>
+
 .. |br| raw:: html
 
    <br>

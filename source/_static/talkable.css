@@ -34,20 +34,24 @@ body {
     box-sizing: border-box;
 }
 
-a {
+a, .a {
     color: #D36835;
+    cursor: pointer;
     text-decoration: none;
 }
 
 .current > a,
 a.current,
-a:hover,
-a:focus {
+a:hover {
     color: #3e4f6c;
 }
 
 abbr {
     letter-spacing: 0.08em;
+}
+
+.inline {
+    display: inline-block;
 }
 
 .button {
