@@ -39,7 +39,7 @@ Updates an existing person or creates one if it is not exist.
    ================= ========================================================
    site_slug         Your Talkable Site ID. You can get this from your
                      Talkable dashboard after you log in and create a site.
-   person_slug       Person’s email or username
+   person_slug       Person’s email
    data              JSON object with one or more of following properties:
 
                      * first_name
