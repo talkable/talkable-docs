@@ -65,7 +65,7 @@ Unsubscribes a person from receiving emails.
    ================= ========================================================
    site_slug         Your Talkable Site ID. You can get this from your
                      Talkable dashboard after you log in and create a site.
-   person_slug       Person’s email or username
+   person_slug       Person’s email
    ================= ========================================================
 
 Example
