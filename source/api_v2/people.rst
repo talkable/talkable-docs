@@ -30,7 +30,7 @@ Returns a person.
 
    PUT /people/<person_slug>
 
-Updates an existing person or creates one if it is not exist.
+Updates an existing person or creates one if it does not exist.
 
 .. container:: ptable
 
