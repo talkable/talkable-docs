@@ -30,7 +30,7 @@ Returns a person.
 
    PUT /people/<person_slug>
 
-Updates existing person.
+Updates an existing person or creates one if it does not exist.
 
 .. container:: ptable
 
@@ -39,7 +39,7 @@ Updates existing person.
    ================= ========================================================
    site_slug         Your Talkable Site ID. You can get this from your
                      Talkable dashboard after you log in and create a site.
-   person_slug       Person’s email or username
+   person_slug       Person’s email
    data              JSON object with one or more of following properties:
 
                      * first_name
@@ -48,6 +48,24 @@ Updates existing person.
                      * customer_id
                      * person_custom_properties
 
+   ================= ========================================================
+
+|br|
+
+.. code-block:: text
+
+   POST /people/<person_slug>/unsubscribe
+
+Unsubscribes a person from receiving emails.
+
+.. container:: ptable
+
+   ================= ========================================================
+   Parameter         Description
+   ================= ========================================================
+   site_slug         Your Talkable Site ID. You can get this from your
+                     Talkable dashboard after you log in and create a site.
+   person_slug       Person’s email
    ================= ========================================================
 
 Example
@@ -131,18 +149,15 @@ Unsubscribe a person from receiving emails
 
    {
      "api_key": "i9uil7nQgDjucCiTJu",
-     "site_slug": "my-store",
-     "data": {
-       "unsubscribed": true
-     }
+     "site_slug": "my-store"
    }
 
 .. code-block:: bash
 
    curl -H "Content-Type: application/json" \
-        -X PUT \
-        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","data":{"unsubscribed":true}}' \
-        https://www.talkable.com/api/v2/people/customer@example.com
+        -X POST \
+        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store"}' \
+        https://www.talkable.com/api/v2/people/customer@example.com/unsubscribe
 
 Sample response:
 
