@@ -19,4 +19,4 @@ Link to Talkable cartridge on the Salesforce Commerce Cloud:
 |br|
 `<http://www.demandware.com/link-marketplace/talkable>`_
 
-Link to download integration documentation: `Integration Guide </_static/demandware-cartridge-docs.pdf>`_
+Link to download integration documentation: `Integration Guide </_static/talkable-integration-guide.pdf>`_
