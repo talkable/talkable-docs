@@ -56,5 +56,5 @@
       _talkableq.push(['register_purchase', _talkable_data]);
     }
   </script>
-  <script src="|integration_url|" type="text/javascript"></script>
+  <script async src="|integration_url|" type="text/javascript"></script>
   <!-- End Talkable integration code -->
