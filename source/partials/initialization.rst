@@ -16,6 +16,5 @@ your main layout which is used on every page. This is initialization of the Talk
       last_name: 'Surname' // Optional - Customer last name
     }]);
   </script>
-  <script src="|integration_url|" type="text/javascript"></script>
+  <script async src="|integration_url|" type="text/javascript"></script>
   <!-- End Talkable integration code -->
-

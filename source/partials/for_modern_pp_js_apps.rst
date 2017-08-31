@@ -16,7 +16,7 @@ You can trigger Talkable initialization whenever needed. For example, you can fi
      };
    </script>
 
-   <script src="|integration_url|" type="text/javascript"></script>
+   <script async src="|integration_url|" type="text/javascript"></script>
 
 |br|
 
@@ -38,7 +38,7 @@ Also, you can append Talkable ``iframe`` into your custom container. Add ``ifram
      };
    </script>
 
-   <script src="|integration_url|" type="text/javascript"></script>
+   <script async src="|integration_url|" type="text/javascript"></script>
 
 * You can pass any HTML attributes.
 * Pass ``container`` option to set where you want Talkable iframe to be inserted (this is HTML ``id`` attribute value).
