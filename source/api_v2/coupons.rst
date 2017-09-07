@@ -80,8 +80,7 @@ Sample response:
            "username": null,
            "unsubscribed_at": null,
            "subscribed_at": null,
-           "sub_choice": false,
-           "gender": null
+           "sub_choice": false
          },
          "campaign": {
            "id": 196,
@@ -168,8 +167,7 @@ Check if a coupon belongs to a person
            "username": null,
            "unsubscribed_at": null,
            "subscribed_at": null,
-           "sub_choice": false,
-           "gender": null
+           "sub_choice": false
          },
          "campaign": {
            "id": 196,
