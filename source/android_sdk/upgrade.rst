@@ -6,6 +6,11 @@ Upgrade
 
 Sometimes we need you to upgrade existing integration to use our latest features.
 
+0.4.1
+-----
+
+Fixed an issue inside ``TalkableOfferFragment``.
+
 0.4.0
 -----
 
