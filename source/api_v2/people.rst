@@ -92,7 +92,6 @@ Sample response:
          "last_name": "Smith",
          "email": "customer@example.com",
          "username": null,
-         "gender": null,
          "subscribed_at": null,
          "unsubscribed_at": null,
          "sub_choice": false
@@ -134,7 +133,6 @@ Sample response:
          "last_name": "Smith",
          "email": "customer@example.com",
          "username": "lizard_king",
-         "gender": null,
          "subscribed_at": null,
          "unsubscribed_at": null,
          "sub_choice": false
@@ -173,7 +171,6 @@ Sample response:
          "last_name": "Smith",
          "email": "customer@example.com",
          "username": null,
-         "gender": null,
          "subscribed_at": null,
          "unsubscribed_at": "2014-11-18T05:49:54.000-07:00",
          "sub_choice": false

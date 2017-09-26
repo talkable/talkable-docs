@@ -106,7 +106,6 @@ Triggered when there is a new referral in Talkable.
            "email": "referrer@example.com",
            "first_name": "Bob",
            "last_name": "Crane",
-           "gender": null,
            "sub_choice": false,
            "subscribed_at": null,
            "unsubscribed_at": null
@@ -129,7 +128,6 @@ Triggered when there is a new referral in Talkable.
            "email": "referred@example.com",
            "first_name": "Alice",
            "last_name": "Smith",
-           "gender": null,
            "sub_choice": true,
            "subscribed_at": "2014-08-14T02:01:16.823-07:00",
            "unsubscribed_at": null
@@ -170,7 +168,7 @@ Triggered when there is a new referral in Talkable.
        {
          "id": 316145153,
          "email": "referrer@example.com",
-         "person": { "email": "referrer@example.com", "first_name": "Bob", "last_name": "Crane", "gender": null, "sub_choice": false, "subscribed_at": null, "unsubscribed_at": null },
+         "person": { "email": "referrer@example.com", "first_name": "Bob", "last_name": "Crane", "sub_choice": false, "subscribed_at": null, "unsubscribed_at": null },
          "amount": "5.00",
          "incentive": "rebate",
          "incentive_description": "$5.00 back",
