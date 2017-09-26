@@ -6,6 +6,22 @@ Upgrade
 
 Sometimes we need you to upgrade existing integration to use our latest features.
 
+0.4.2
+-----
+
+Read Contacts permission is optional from this version.
+
+In case you used ``import_contacts`` callback, you have to define ``READ_CONTACTS``
+permission inside the manifest:
+
+   .. code-block:: xml
+
+     <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+       package="com.android.app.myapp" >
+       <uses-permission android:name="android.permission.READ_CONTACTS" />
+       ...
+     </manifest>
+
 0.4.1
 -----
 
