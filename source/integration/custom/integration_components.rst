@@ -59,14 +59,14 @@ script.
 .. code-block:: html
 
   <!-- Begin Talkable integration code -->
-  <script src="https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/your-site-id.min.js"></script>
+  <script async src="https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/your-site-id.min.js"></script>
   <script>
     window._talkableq = window._talkableq || [];
     window._talkableq.unshift(['init', { site_id: 'your-site-id' }]);
     window._talkableq.push(['authenticate_customer', {
-      email: 'customer@example.com',
-      first_name: 'Name',
-      last_name: 'Surname'
+      email: '', // Optional, pass when available. Example: 'customer@example.com'
+      first_name: '', // Optional, pass when available. Example: 'John'
+      last_name: '' // Optional, pass when available. Example: 'Smith'
     }]);
     window._talkableq.push(['register_affiliate', {}]);
   </script>
@@ -108,14 +108,14 @@ passed where division by zero or `null` value does not occur.
   <script>
     var _talkable_data = {
       purchase: {
-        order_number: '100011',
-        subtotal: '23.97', // pre-tax, post-discount
-        coupon_code: 'SAVE20', // can also accept multiple coupons as an array
-        shipping_zip: '02222', // optional - used for fraud protection on matching address
-        shipping_address: 'Apt #, Street address, City, State, ZIP, Country' // optional - please use this order of address fields, comma separated, so Talkable can normalize the address
+        order_number: '', // Unique order number. Example: '100011'
+        subtotal: '', // Order subtotal (pre-tax, post-discount). Example: '23.97'
+        coupon_code: '', // Coupon code that was used at checkout (pass multiple as an array). Example: 'SAVE20'
+        shipping_zip: '',  // Optional - used for fraud protection by address. Example: '02222'
+        shipping_address: '' // Full address of the order, make sure to strictly follow a format: 'Apt #, Street address, City, State, ZIP, Country'
       },
       customer: {
-        email: 'customer@example.com'
+        email: '' // Customer email address who issued a purchase. Example: 'customer@example.com'
       }
     };
     _talkableq.push(['register_purchase', _talkable_data]);

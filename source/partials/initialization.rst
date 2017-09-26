@@ -7,15 +7,14 @@ your main layout which is used on every page. This is initialization of the Talk
   <script>
     window._talkableq = window._talkableq || [];
     _talkableq.push(['init', {
-      site_id: 'YOUR-TALKABLE-SITE-ID' // Required - Talkable Site ID, you can find it on the Dashboard inside Talkable upon login
+      site_id: '' // Required - Talkable Site ID, you can find it on the Dashboard inside Talkable upon login. Example: 'your-talkable-site-id'
     }]);
 
     _talkableq.push(['authenticate_customer', {
-      email: 'customer@example.com', // Optional - Customer email, it is recommended to always pass it when available
-      first_name: 'Name', // Optional - Customer first name
-      last_name: 'Surname' // Optional - Customer last name
+      email: '', // Optional, pass when available. Example: 'customer@example.com'
+      first_name: '', // Optional, pass when available. Example: 'John'
+      last_name: '' // Optional, pass when available. Example: 'Smith'
     }]);
   </script>
-  <script src="|integration_url|" type="text/javascript"></script>
+  <script async src="|integration_url|" type="text/javascript"></script>
   <!-- End Talkable integration code -->
-
