@@ -29,9 +29,11 @@ additional parameters will be present:
 
 * **first_name** — affiliate member’s first name
 * **last_name** — affiliate member’s last name
+* **username** — affiliate member’s username
 * **sub_choice** — subscription choice
 * **subscribed_at** — date affiliate member has subscribed
 * **unsubscribed_at** — date affiliate member has unsubscribed
+* **custom_properties** — hash of affiliate member’s custom properties (optional)
 
 .. raw:: html
 
@@ -53,10 +55,13 @@ additional parameters will be present:
      "email": "john@example.com",
      "first_name": "John",
      "last_name": "Doe",
-     "gender": null,
+     "username": "dodo",
      "sub_choice": false,
      "subscribed_at": "2014-08-14T02:01:16.824-07:00",
-     "unsubscribed_at": null
+     "unsubscribed_at": null,
+     "custom_properties": {
+        "my_property": "some value"
+     }
    }
 
 .. raw:: html
@@ -65,7 +70,7 @@ additional parameters will be present:
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"campaign":{"id":361325654,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"email":"john@example.com","first_name":"John","last_name":"Doe","gender":null,"sub_choice":false,"subscribed_at":"2014-08-14T02:01:16.824-07:00","unsubscribed_at":null}' <url>
+   curl --data 'key=<key>&payload={"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"campaign":{"id":361325654,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"email":"john@example.com","first_name":"John","last_name":"Doe","username":"dodo","sub_choice":false,"subscribed_at":"2014-08-14T02:01:16.824-07:00","unsubscribed_at":null,"custom_properties":{"my_property":"some_value"}}' <url>
 
 .. container:: hidden
 
