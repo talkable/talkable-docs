@@ -63,5 +63,5 @@ In case you cannot find Talkable extension in the sidebar try clearing cache:
    * Click **Flush Magento Cache**.
    * Then click **Select All**, select action *"Refresh"* and click **Submit**.
 
-.. _Magento Talkable extension: http://www.magentocommerce.com/magento-connect/talkable-customizable-refer-a-friend-programs.html
+.. _Magento Talkable extension: https://marketplace.magento.com/talkable-talkable.html
 .. _direct download: https://github.com/talkable/talkable-magento/releases/latest
