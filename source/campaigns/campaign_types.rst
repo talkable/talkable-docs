@@ -4,9 +4,7 @@
 Campaign Types
 ==============
 
-Campaign Types exist to support different goals of your Referral Marketing activities.
-|br|
-Campaign Type also defines which layout the Campaign’s view pages have.
+Encourage customers to share with their friends from anywhere on your site.
 
 Invite
 ------
