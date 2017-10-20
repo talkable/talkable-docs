@@ -82,8 +82,10 @@ First install [Sphinx](http://sphinx-doc.org/). See below.
   ```
   pip install -r requirements.txt
   ```
+  
+  If you have problems, try adding `-I` flag (`--ignore-installed`) to the `pip install` command.
 
-If you get the error "unknown locale: UTF-8" when generating the documentation
+If you get the error "unknown locale: UTF-8" when generating the documentation,
 the solution is to define the following environment variables:
 
     export LANG=en_US.UTF-8
