@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 Referrals Approval
-=======================
+==================
 
 In a perfect world every advocate would receive their reward immediately
 after a legitimate referral purchase to shorten the feedback

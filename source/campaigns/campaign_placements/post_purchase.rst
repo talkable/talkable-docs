@@ -59,7 +59,6 @@ Custom Platform
    and add Talkable to your main site layout by following the instructions on **General Integration** tab.
    Check the integration status with “Verify Integration” button.
 
-
 #. **Add Post Purchase Script.**
    Go to `https://admin.talkable.com/sites/[YOUR-TALKABLE-SITE-ID]/integration` page, copy the
    pregenerated Talkable script and add it to your order confirmation page.

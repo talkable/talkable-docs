@@ -165,7 +165,6 @@ Look in :ref:`installation section <main_activity_setup>` for more detailed info
 
 It’s initial release, nothing to do.
 
-
 .. container:: hidden
 
    .. toctree::

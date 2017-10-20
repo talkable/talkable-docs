@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 API
-==============
+===
 
 Talkable features are also available via API. So there are helper methods in Talkable SDK.
 All methods are available in any place of your app (after :ref:`initialization <main_activity_setup>`).
@@ -84,7 +84,6 @@ You need to build `Origin` using one of examples below:
     origin.setCustomer(customer); // Required
     origin.addItem(item); // Optional
 
-
 API request
 ...........
 
@@ -163,7 +162,6 @@ This method is used to get offer details by it’s short code. Example:
             // Process error
         }
     });
-
 
 Create offer share
 ------------------

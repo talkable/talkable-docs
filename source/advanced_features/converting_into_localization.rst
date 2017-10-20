@@ -45,7 +45,6 @@ A piece that we are going to extract into Localizations is just a copy, without 
 
 .. image:: /_static/img/advanced_features/campaign_localization_sidebar.png
 
-
 .. raw:: html
 
   <h2>Few important things to remember</h2>

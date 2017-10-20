@@ -56,4 +56,3 @@ Defining ``custom_properties`` in your integration might look something like thi
 .. container:: hidden
 
    .. toctree::
-

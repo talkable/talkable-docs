@@ -15,7 +15,6 @@ If you are using more multiple ZeroClipboard instances and one of them is placed
 
 .. _tutorials_single_visitor_for_email_shares:
 
-
 Allow showing coupon in the Friend Share Email and its reminder
 ...............................................................
 
@@ -29,4 +28,3 @@ This option means that there could be only one visitor for each email share (one
 
 **Skip email gating:**
   Allows you to make a smooth user experience for Friend where they can surpass email gating on the Friend Claim page when clicking from the Friend Share email and its reminder(s). This is done for Friend’s convenience.
-

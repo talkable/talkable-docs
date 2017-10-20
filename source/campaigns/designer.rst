@@ -39,7 +39,6 @@ site loaded on the back:
 
 Most common modal size is 800x500px.
 
-
 .. _designer/email:
 
 Email size
@@ -76,8 +75,6 @@ and solid ones:
 2. Purchase on http://typekit.com
 
 3. Choose free Google Font http://www.google.com/fonts
-
-
 
 .. _responsive-views:
 

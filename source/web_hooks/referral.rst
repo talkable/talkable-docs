@@ -50,7 +50,6 @@ Triggered when there is a new referral in Talkable.
     * **id** — unique identifier of the origin event
     * **email** — e-mail address of the referrer person
 
-
 * **friend_rewards** — array of hashes describing the rewards received by referred person, where each hash contains parameters:
 
   * **email** — email of the person that got reward

@@ -17,7 +17,6 @@ By default if no campaign tag was specified SDK uses `ios-invite` and `ios-post-
     [[Talkable manager] registerOrigin:TKBLAffiliateMember params:@{TKBLCampaignTags: @"your-custom-tag"}];
     ...
 
-
 Implement TalkableDelegate
 --------------------------
 
@@ -26,7 +25,6 @@ Implement TalkableDelegate
   .. code-block:: objc
 
     [[Talkable manager] setDelegate: yourObjectConformsTalkableDelegateProtocol];
-
 
 2. Take control of presenting offers to your users. Use next two delegate methods to prevent or give an instruction where you want that offer will be displayed:
 
@@ -55,7 +53,6 @@ Implement TalkableDelegate
   .. note::
 
     Talkable SDK assigns itself to WKWebView navigation delegate. Changing WKWebView navigation delegate may brokes some functionality so we strictly not recommend to do this.
-
 
 Notifications
 -------------
@@ -96,8 +93,8 @@ Subscribe to notifications that Talkable SDK publish and be aware of everything 
   - TKBLMessageOfferClose
   - TKBLMessageCouponIssued
 
-Debuging
---------
+Debugging
+---------
 
 See all debugging information in your console which can help you to realise what is going wrong:
 

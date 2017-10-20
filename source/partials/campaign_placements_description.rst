@@ -12,7 +12,6 @@ Campaign will be embedded as an inline block usually between Header and Footer.
 
 :ref:`Learn more about Standalone Placement <campaigns/campaign_placements/standalone>`
 
-
 .. raw:: html
 
   <h2>Post Purchase</h2>

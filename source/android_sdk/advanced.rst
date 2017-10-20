@@ -83,7 +83,6 @@ Overriding default behaviour
          }
      }
 
-
 2. Pass Class of an activity you want to run a fragment in and the overriden fragment to
    `Talkable.showOffer` call:
 
