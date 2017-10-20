@@ -1,7 +1,7 @@
 Talkable Documentation
 ======================
 
-[![Build Status](https://travis-ci.org/talkable/talkable-docs.svg)](https://travis-ci.org/talkable/talkable-docs)
+[![Build Status](https://ci.solanolabs.com:443/Talkable/talkable-docs/badges/branches/master?badge_token=fb8fc108644b7b323c223fc61de13b634f94fa8b)](https://ci.solanolabs.com:443/Talkable/talkable-docs/suites/695155)
 
 This GitHub repository represents Talkable’s documentation site, located at [docs.talkable.com](http://docs.talkable.com).
 
