@@ -6,7 +6,6 @@ Getting Started
 
 The Getting Started guide shows you how to setup and launch Referral Campaign as quickly as possible with Talkable Android SDK.
 
-
 Installation
 ------------
 
@@ -149,7 +148,6 @@ Here is an example of ``AndroidManifest.xml`` file (with ``"demo-site"`` site sl
       </manifest>
 
 Your environment is all set up! Now you need to :ref:`integrate <android_sdk/integration>` the Talkable campaign piece.
-
 
 Requirements
 ------------

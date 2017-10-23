@@ -1,4 +1,4 @@
-.. _optional:
+.. _advanced_features:
 .. include:: /partials/common.rst
 
 Advanced Features
@@ -48,7 +48,7 @@ each with links to integration details.
 
    * - :ref:`Using URL Parameters <advanced_features/url_parameters>`
      - Override some of the parameters right through URL query string
-     
+
    * - :ref:`White Labeling <advanced_features/white_labeling>`
      - Change all visible URLs to your domain instead of talkable.com
 
@@ -68,3 +68,4 @@ each with links to integration details.
     advanced_features/reg_ex
     advanced_features/url_parameters
     advanced_features/white_labeling
+    advanced_features/single_sign_on

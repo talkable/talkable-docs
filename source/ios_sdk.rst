@@ -26,4 +26,3 @@ Contents:
    ios_sdk/integration
    ios_sdk/advanced
    ios_sdk/example
-   

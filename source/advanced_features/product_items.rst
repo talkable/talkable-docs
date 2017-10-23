@@ -1,7 +1,6 @@
 .. _advanced_features/product_items:
 .. include:: /partials/common.rst
 
-
 Including Product Items
 =======================
 

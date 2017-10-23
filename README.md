@@ -1,7 +1,7 @@
 Talkable Documentation
 ======================
 
-[![Build Status](https://travis-ci.org/talkable/talkable-docs.svg)](https://travis-ci.org/talkable/talkable-docs)
+[![Build Status](https://ci.solanolabs.com:443/Talkable/talkable-docs/badges/branches/master?badge_token=fb8fc108644b7b323c223fc61de13b634f94fa8b)](https://ci.solanolabs.com:443/Talkable/talkable-docs/suites/695155)
 
 This GitHub repository represents Talkable’s documentation site, located at [docs.talkable.com](http://docs.talkable.com).
 
@@ -82,8 +82,10 @@ First install [Sphinx](http://sphinx-doc.org/). See below.
   ```
   pip install -r requirements.txt
   ```
+  
+  If you have problems, try adding `-I` flag (`--ignore-installed`) to the `pip install` command.
 
-If you get the error "unknown locale: UTF-8" when generating the documentation
+If you get the error "unknown locale: UTF-8" when generating the documentation,
 the solution is to define the following environment variables:
 
     export LANG=en_US.UTF-8

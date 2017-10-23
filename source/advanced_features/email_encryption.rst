@@ -36,7 +36,6 @@ Ruby Example
 
     puts encode_email_for_talkable("email_to_encrypt@example.com")
 
-
 Java Example
 ------------
 

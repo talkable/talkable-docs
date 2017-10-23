@@ -89,7 +89,6 @@ Configuration
 
 Your environment is all set up! Now you need to :ref:`integrate <ios_sdk/integration>` the Talkable campaign piece.
 
-
 Requirements
 ------------
 

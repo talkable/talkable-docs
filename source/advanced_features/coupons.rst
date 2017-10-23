@@ -30,8 +30,6 @@ There are several steps that need to be taken for this scenario:
 3. Upload generated coupons to coupon list
 4. Use a coupon list in the Incentive with "Coupon Code" reward type
 
-
-
 .. raw:: html
 
    <h2>REST API to Create Coupons</h2>

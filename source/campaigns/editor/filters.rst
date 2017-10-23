@@ -237,7 +237,6 @@ Pretty useful example for email sending criteria to prevent sending mail when of
      true
    {% endif %}
 
-
 |hr|
 
 interpolate
@@ -580,7 +579,6 @@ SCSS:
    }
 
 .. _Standard liquid filters: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters
-
 
 |hr|
 
