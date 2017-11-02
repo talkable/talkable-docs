@@ -1,6 +1,6 @@
 ---
 ruby_version: ruby-2.3.0
-bundler_version: 1.15.3
+bundler_version: 1.16.0
 python:
   python_version: '3.5'
   pip_requirements_file: requirements.txt
