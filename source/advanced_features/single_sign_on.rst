@@ -41,7 +41,7 @@ Automatic Configuration
 
 Automatic configuration via metadata exchange is by far the easiest way to set up
 SAML SSO. Simply check the box for “Automatically Configure from Metadata” and
-provide the Metadata URL for your IdP. Leave the rest of the fields blank.
+provide the Metadata URL for your IdP.
 
 .. image:: /_static/img/advanced_features/sso_automatic_configuration.png
 
