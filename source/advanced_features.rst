@@ -68,3 +68,4 @@ each with links to integration details.
     advanced_features/reg_ex
     advanced_features/url_parameters
     advanced_features/white_labeling
+    advanced_features/single_sign_on
