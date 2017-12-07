@@ -13,7 +13,7 @@ Automatic integration
      Talkable integration script located in the Additional Content & Scripts section before
      you start the Automatic integration process. See `Manual integration`_ for details.
 
-1. Create Talkable account at |signup_link|
+1. Get a unique link from Talkable manager to sign up
 
 |space_indent| - Provide a valid Shopify store URL. Example: |example_link|. |br|
 |space_indent| - Choose “Shopify” as your platform during registration process
@@ -48,15 +48,6 @@ Manual integration
 4. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`.
 
 |br|
-
-.. |signup_link| raw:: html
-
-  <a
-    href="https://admin.talkable.com/register?object_or_array"
-    target="_blank"
-  >
-    https://admin.talkable.com/register?object_or_array
-  </a>
 
 .. |example_link| raw:: html
 
