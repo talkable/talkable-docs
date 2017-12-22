@@ -4,22 +4,52 @@
 Verifying Integration
 =====================
 
-After installing Talkable, you should verify that the integration is working.
-All you have to do is check out from your store using the special email
-integration@talkable.com.
+After installing Talkable, you should verify that the integration is working:
 
-1. Do a test checkout on your online store and use integration@talkable.com
-   as the customer email address.
-2. After checking out, you should see an integration success page that looks
-   like this:
+`integration@talkable.com`.
 
-   .. image:: /_static/img/integration_success.png
-      :width: 300 px
-      :alt: Integration Success
+1. Open your homepage (assuming the Talkable init script is placed on every page,
+   otherwise visit the page you have placed the :ref:`init script <integration/custom/integration_components/initialization_script>`
+   with a secret URL parameter like so: https://www.site.com/**?tkbl_verify_integration=true**. As a result you should see:
 
-   (Don’t worry. This image is only shown when you use the special
-   integration@talkable.com email address. No one else is seeing that image.)
+   .. image:: /_static/img/integration_check_affiliate_member_success.png
 
-If you can’t complete checkout with integration@talkable.com, we’ll also verify
-your integration whenever someone completes checkout on your store (but they
-won’t see anything).
+2. Issue a test purchase. Order subtotal should be > 0,
+
+   email should be `integration@talkable.com`. Preferably include a coupon code so we
+   can verify it gets passed as well. As a result you should see:
+
+   .. image:: /_static/img/integration_check_purchase_success.png
+
+   Talkable verification dialog only appears to you, it will not be shown to anyone else. All purchases with `integration@talkable.com` email will not be recorded inside Talkable.
+
+Verifying Integration in JS SPAs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In case you are unable to pass **?tkbl_verify_integration=true**
+URL parameter you can alternatively turn Talkable into "Verification mode" by setting:
+
+`talkable.config.verify_integration = true;`
+
+All requests will now be coming with "Verification" flag turned on.
+
+**Note:** do not use it in production, this mode is for debugging purpose only.
+
+Troubleshooting
+~~~~~~~~~~~~~~~
+
+In case you are not seeing the verification popup please make sure the :ref:`init script <integration/custom/integration_components/initialization_script>`
+is installed on the page. You may do so by making right click
+(Chrome) → Inspect Element → Inside Elements tab press Cmd+F (Ctrl+F on Windows) and
+search for `d2jj` → make sure the init script matches the one provided inside your
+Integration tab inside Talkable Admin.
+
+If you see the init script on the page, but the verification popup still does
+not appear on the screen, make sure a request is was passed to Talkable.
+To do that open Network tab (Chrome) → refresh the page → inside Search bar look
+up for "create.html". Make sure you see something like:
+
+.. image:: /_static/img/chrome_network_tab.png
+
+If the request is coming through but you are still not seeing the verification
+popup please contact Talkable support: support@talkable.com.
