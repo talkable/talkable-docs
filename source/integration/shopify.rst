@@ -35,16 +35,37 @@ Automatic integration
 Manual integration
 ------------------
 
-1. In your Shopify administration panel, go to
-   **Settings** |rarr| **Checkout & Payment**.
-2. Under **Order Processing** |rarr| **Additional Content & Scripts**,
-   insert this code:
+1. In your Shopify Admin follow:
 
-   .. include:: /partials/note_sample_code.rst
+    * Online Store
+    * Themes
+    * Click “Customize” near your current theme
+    * Theme actions → Edit code
+    * Open `Layout / theme.liquid` file
+    * Before closing `</head>` paste the following code:
 
-   .. include:: /samples/ecommerce/platform/shopify.rst
+    .. include:: /samples/ecommerce/platform/shopify_init_script.rst
 
-3. Click **Apply these settings**.
+    .. include:: /partials/note_sample_code.rst
+
+    .. include:: /partials/note_sample_integration.rst
+
+    * Click “Save”.
+
+2. Then navigate to:
+
+    * Settings
+    * Checkout
+    * Scroll down to **Order Processing**
+    * Paste the following code into **Additional scripts** field:
+
+    .. include:: /samples/ecommerce/platform/shopify.rst
+
+    .. include:: /partials/note_sample_code.rst
+
+    .. include:: /partials/note_sample_integration.rst
+
+3. Click “Save”.
 4. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`.
 
 |br|
