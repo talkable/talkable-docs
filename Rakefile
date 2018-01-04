@@ -29,18 +29,6 @@ end
 
 task :build => :environment do
   sh "#{SPHINX_BUILD} #{SPHINX_OPTS}"
-  integration_version = open('http://d2jjzw81hqbuqv.cloudfront.net/integration/docs.version', &:read).chomp
-  integration_url = "//d2jjzw81hqbuqv.cloudfront.net/integration/talkable-#{integration_version}.min.js"
-  Rake::FileList["#{BUILD_DIR}/html/**/*.html"].each do |filename|
-    File.open(filename, 'r+') do |file|
-      old_content = file.read
-      new_content = old_content.
-        gsub('|integration_url|', integration_url).
-        gsub('|integration_version|', integration_version)
-      file.tap(&:rewind).write(new_content) if old_content != new_content
-    end
-  end
-
   puts "\nBuild finished. The HTML pages are in #{File.expand_path("#{BUILD_DIR}/html")}."
 end
 
