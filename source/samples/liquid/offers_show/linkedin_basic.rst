@@ -3,7 +3,7 @@
 .. code-block:: html
 
   <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
-  <script type="IN/Share" data-url="{{ short_url_linkedin }}" data-onsuccess="fireOnLinkedInShare"></script>
+  <script type="IN/Share" data-url="{{ 'linkedin' | claim_url }}" data-onsuccess="fireOnLinkedInShare"></script>
 
 **JS:**
 
