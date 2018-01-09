@@ -7,8 +7,7 @@ Verifying Integration
 After installing Talkable, you should verify that the integration is working:
 
 1. Open your homepage (assuming the Talkable init script is placed on every page,
-   otherwise visit the page you have placed the
-   :ref:`init script <integration/custom/integration_components/initialization_script>` (non-platform integration only)
+   otherwise visit the page where the initialization script was placed)
    with a secret URL parameter like so: |br| `https://www.site.com/?tkbl_verify_integration=true`.
    As a result you should see:
 
