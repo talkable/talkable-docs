@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 require 'mkmf'
-require 'open-uri'
 
 SPHINX_BUILD = ENV['SPHINX_BUILD'] || 'sphinx-build'
 SOURCE_DIR   = 'source'
