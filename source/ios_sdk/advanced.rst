@@ -52,7 +52,18 @@ Implement TalkableDelegate
 
   .. note::
 
-    Talkable SDK assigns itself to WKWebView navigation delegate. Changing WKWebView navigation delegate may brokes some functionality so we strictly not recommend to do this.
+    Talkable SDK assigns itself to WKWebView navigation delegate. Changing WKWebView navigation delegate may break some functionality so we strictly recommend not doing this.
+
+5. Manage cases where origin wasn't created or offer hasn't been presented.
+
+  .. code-block:: objc
+
+    - (void)registerOrigin:(TKBLOriginType)type didFailWithError:(NSError*)error;
+
+  .. note::
+
+    `userInfo` may contain detailed information about the error.
+
 
 Notifications
 -------------
