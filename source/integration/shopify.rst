@@ -13,7 +13,7 @@ Automatic integration
      Talkable integration script located in the Additional Content & Scripts section before
      you start the Automatic integration process. See `Manual integration`_ for details.
 
-1. Contact sales@talkable.com to set up an account with Talkable
+1. Contact sales@talkable.com to learn about our pricing and set up an account with Talkable
 
 |space_indent| - Provide a valid Shopify store URL. Example: |example_link|. |br|
 |space_indent| - Choose “Shopify” as your platform during registration process
