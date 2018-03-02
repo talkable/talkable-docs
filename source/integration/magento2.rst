@@ -1,12 +1,12 @@
 .. _integration/magento2:
 .. include:: /partials/common.rst
 
-Magento 2 Integration
-=====================
+Magento 2.x Integration
+=======================
 
 .. note::
 
-  To get started, you must have an account created with Talkable and a Magento Marketplace account.
+  To get started, you must have an account created with Talkable, and a Magento Marketplace account.
   If you do not have a Magento Marketplace account configured, follow
   `these steps <http://docs.magento.com/marketplace/user_guide/quick-tour/install-extension.html>`_
   to connect one to your Magento store.
@@ -32,13 +32,12 @@ Installation
 
    .. image:: /_static/img/magento2/install3.jpg
 
-5. Click **Install** button at the top of the list to install all listed extensions.
-   If you have more than one extension in the list, you can find Talkable extension row
-   and click **Install** link to install just the Talkable extension.
+5. Click the **Install** button at the top of the list to install all listed extensions.
+   To just install Talkable, find the extension in the list and click **Install**.
 
    .. image:: /_static/img/magento2/install4.jpg
 
-6. Follow the steps to complete Talkable extension installation.
+6. Follow the steps to complete the Talkable extension installation.
 
 Activating the Integration
 --------------------------
@@ -79,7 +78,7 @@ Accessing Talkable Configuration
    .. image:: /_static/img/magento2/access1.jpg
 
 2. Then select **Talkable** |rarr| **Talkable Configuration** from the list of available configurations.
-   If you have multiple stores, select desired Store View you want to change settings for.
+   If you have multiple stores, select the desired Store View you want to change settings for.
 
    .. image:: /_static/img/magento2/access2.jpg
 
@@ -93,21 +92,21 @@ The extension configuration screen consists of three sections: Integration_, Cam
 Integration
 ^^^^^^^^^^^
 
-The Integration section allows you to change Talkable Site ID, which is used to connect your store
+The Integration section allows you to change the Talkable Site ID, which is used to connect your store
 to your Talkable account.
 
    .. image:: /_static/img/magento2/configure2.jpg
 
 .. warning::
 
-  Change this setting only if you need to connect your store to a different site in Talkable dashboard.
-  Incorrect value will prevent your campaigns from showing.
+  Only change this setting if you need to connect your store to a different site in the Talkable dashboard.
+  An incorrect value will prevent your campaigns from showing.
 
 .. note::
 
   If you have activated the extension's integration, the Site ID will be prefilled
-  (See `Activating the Integration`_). If you chose not to activate the integration,
-  you need to paste Site ID from your Talkable Site Dashboard into this field.
+  (see `Activating the Integration`_). If you chose not to activate the integration,
+  you need to paste the Site ID from your Talkable Site Dashboard into this field.
 
    .. image:: /_static/img/magento2/configure3.jpg
 
@@ -131,7 +130,7 @@ Default values correspond to default placements in Talkable.
 
 .. warning::
 
-  Change these settings only if you have configured custom placements for these campaign types
+  Only change these settings if you have configured custom placements for these campaign types
   in your Talkable dashboard. Incorrect values will prevent your Standalone or Dashboard campaign from showing.
 
    .. image:: /_static/img/magento2/configure6.jpg
