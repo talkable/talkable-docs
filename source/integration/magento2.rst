@@ -14,6 +14,8 @@ Magento 2.x Integration
 The Magento 2 Integration Extension is available to download in the Magento Marketplace.
 The extension supports all versions of Magento 2.0 or higher.
 
+.. include:: /partials/page_break.rst
+
 Installation
 ------------
 
@@ -39,6 +41,8 @@ Installation
 
 6. Follow the steps to complete the Talkable extension installation.
 
+.. include:: /partials/page_break.rst
+
 Activating the Integration
 --------------------------
 
@@ -58,6 +62,8 @@ Activating the Integration
 
    .. image:: /_static/img/magento2/activate4.jpg
 
+.. include:: /partials/page_break.rst
+
 5. All done! You have successfully integrated Talkable. To verify your Talkable integration,
    please visit **Integration** tab in **Site Settings**.
 
@@ -68,6 +74,8 @@ Activating the Integration
   Activating the integration allows Talkable to configure your extension automatically.
   If you choose not to activate the integration, you will need to specify your Talkable Site ID in
   the Integration_ section of extension settings.
+
+.. include:: /partials/page_break.rst
 
 Accessing Talkable Configuration
 --------------------------------
@@ -82,12 +90,16 @@ Accessing Talkable Configuration
 
    .. image:: /_static/img/magento2/access2.jpg
 
+.. include:: /partials/page_break.rst
+
 Configuring Talkable Extension
 ------------------------------
 
 The extension configuration screen consists of three sections: Integration_, Campaigns_ and `Page URLs`_.
 
    .. image:: /_static/img/magento2/configure1.jpg
+
+.. include:: /partials/page_break.rst
 
 Integration
 ^^^^^^^^^^^
@@ -110,6 +122,8 @@ to your Talkable account.
 
    .. image:: /_static/img/magento2/configure3.jpg
 
+.. include:: /partials/page_break.rst
+
 Campaigns
 ^^^^^^^^^
 
@@ -118,6 +132,8 @@ For example if you don’t have Standalone or Advocate Dashboard campaigns confi
 you can disable these campaigns in extension config so the corresponding pages are not accessible.
 
    .. image:: /_static/img/magento2/configure4.jpg
+
+.. include:: /partials/page_break.rst
 
 Page URLs
 ^^^^^^^^^
