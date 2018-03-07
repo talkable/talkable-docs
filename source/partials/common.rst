@@ -48,3 +48,7 @@
 .. |contact_us| raw:: html
 
    <a href="https://www.talkable.com/contact" target="_blank">contact us</a>
+
+.. |page_break| raw:: html
+
+   <div class="page-break-after"></div>

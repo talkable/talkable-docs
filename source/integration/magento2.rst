@@ -14,7 +14,7 @@ Magento 2.x Integration
 The Magento 2 Integration Extension is available to download in the Magento Marketplace.
 The extension supports all versions of Magento 2.0 or higher.
 
-.. include:: /partials/page_break.rst
+|page_break|
 
 Installation
 ------------
@@ -41,7 +41,7 @@ Installation
 
 6. Follow the steps to complete the Talkable extension installation.
 
-.. include:: /partials/page_break.rst
+|page_break|
 
 Activating the Integration
 --------------------------
@@ -62,7 +62,7 @@ Activating the Integration
 
    .. image:: /_static/img/magento2/activate4.jpg
 
-.. include:: /partials/page_break.rst
+|page_break|
 
 5. All done! You have successfully integrated Talkable. To verify your Talkable integration,
    please visit **Integration** tab in **Site Settings**.
@@ -75,7 +75,7 @@ Activating the Integration
   If you choose not to activate the integration, you will need to specify your Talkable Site ID in
   the Integration_ section of extension settings.
 
-.. include:: /partials/page_break.rst
+|page_break|
 
 Accessing Talkable Configuration
 --------------------------------
@@ -90,7 +90,7 @@ Accessing Talkable Configuration
 
    .. image:: /_static/img/magento2/access2.jpg
 
-.. include:: /partials/page_break.rst
+|page_break|
 
 Configuring Talkable Extension
 ------------------------------
@@ -99,7 +99,7 @@ The extension configuration screen consists of three sections: Integration_, Cam
 
    .. image:: /_static/img/magento2/configure1.jpg
 
-.. include:: /partials/page_break.rst
+|page_break|
 
 Integration
 ^^^^^^^^^^^
@@ -122,18 +122,18 @@ to your Talkable account.
 
    .. image:: /_static/img/magento2/configure3.jpg
 
-.. include:: /partials/page_break.rst
+|page_break|
 
 Campaigns
 ^^^^^^^^^
 
 The Campaigns section allows you to enable or disable different types of campaigns on your site.
-For example if you don’t have Standalone or Advocate Dashboard campaigns configured in Talkable,
-you can disable these campaigns in extension config so the corresponding pages are not accessible.
+For example, if you don’t have Standalone or Advocate Dashboard campaigns configured in Talkable,
+you can disable these campaigns in extension config, so the corresponding pages are not accessible.
 
    .. image:: /_static/img/magento2/configure4.jpg
 
-.. include:: /partials/page_break.rst
+|page_break|
 
 Page URLs
 ^^^^^^^^^
