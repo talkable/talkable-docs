@@ -1,8 +1,8 @@
 ---
 ruby_version: '2.4.2'
-bundler_version: 1.16.0
+bundler_version: 1.16.1
 python:
-  python_version: '3.5'
+  python_version: '3.6'
   pip_requirements_file: requirements.txt
 tests:
   - bundle exec rake test
