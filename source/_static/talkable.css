@@ -574,6 +574,11 @@ div.hidden {
   margin-left: 40px;
 }
 
+.page-break-after,
+.header-printable {
+  display: none;
+}
+
 /* FIREFOX SPECIFIC */
 @-moz-document url-prefix() {
     .button {
@@ -596,4 +601,78 @@ div.hidden {
     .content-container {
         padding: 0 20px;
     }
+}
+
+@media only print {
+  html {
+    background-color: transparent;
+  }
+
+  .nav,
+  .search-form {
+    display: none !important;
+  }
+
+  .header {
+    padding-top: 0;
+    margin-bottom: 40px;
+  }
+
+  .header-logo {
+    background-image: none;
+  }
+
+  .header-logo:after {
+    content: url(img/logo.png);
+  }
+
+  .section li {
+    position: relative;
+    page-break-inside: avoid;
+  }
+
+  .admonition {
+    position: relative;
+    page-break-inside: avoid;
+    page-break-before: avoid;
+  }
+
+  .section,
+  .section li {
+    widows: 2;
+    orphans: 2;
+  }
+
+  .body h1,
+  .body h2,
+  .body h3,
+  .body h4,
+  .body h5,
+  .body h6 {
+    display: block;
+    position: relative;
+    page-break-after: avoid;
+  }
+
+  .body h1 {
+    text-align: center;
+  }
+
+  .body img {
+    display: block;
+    position: relative;
+    page-break-before: avoid;
+    max-height: 700px;
+    margin: 20px 0;
+  }
+
+  .body p {
+    font-size: 20px;
+  }
+
+  .page-break-after {
+    display: block;
+    position: relative;
+    page-break-after: always;
+  }
 }

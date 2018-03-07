@@ -35,6 +35,11 @@ This section comes with full documentation for Talkable integration into E-Comme
 |                                    |   integration/magento          |
 |                                    |                                |
 |                                    | .. toctree::                   |
+|                                    |   :maxdepth: 1                 |
+|                                    |                                |
+|                                    |   integration/magento2         |
+|                                    |                                |
+|                                    | .. toctree::                   |
 |                                    |   :maxdepth: 2                 |
 |                                    |                                |
 |                                    |   integration/demandware       |

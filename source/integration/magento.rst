@@ -1,8 +1,8 @@
 .. _integration/magento:
 .. include:: /partials/common.rst
 
-Magento Integration
-===================
+Magento 1.x Integration
+=======================
 
 .. note::
 
