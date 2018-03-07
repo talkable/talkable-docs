@@ -604,9 +604,26 @@ div.hidden {
 }
 
 @media only print {
-  div.header,
-  div.nav {
+  html {
+    background-color: transparent;
+  }
+
+  .nav,
+  .search-form {
     display: none !important;
+  }
+
+  .header {
+    padding-top: 0;
+    margin-bottom: 40px;
+  }
+
+  .header-logo {
+    background-image: none;
+  }
+
+  .header-logo:after {
+    content: url(img/logo.png);
   }
 
   .section li {
@@ -657,15 +674,5 @@ div.hidden {
     display: block;
     position: relative;
     page-break-after: always;
-  }
-
-  .header-printable {
-    display: block;
-    text-align: center;
-    padding: 80px 0;
-  }
-
-  .header-printable img {
-    max-width: 50%;
   }
 }
