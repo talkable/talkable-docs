@@ -1,4 +1,4 @@
-.. _integration/magento2:
+.. _integration/magento/magento2:
 .. include:: /partials/common.rst
 
 Magento 2.x Integration
