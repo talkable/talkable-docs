@@ -47,7 +47,7 @@ Installation
 
 .. warning::
 
-  Take note of `Magento 2.x system requirements`_ regarding extension installation.
+  Take note of the `Magento 2.x system requirements`_ regarding extension installation.
   Magento recommends that you have 2GB of RAM allocated to PHP for upgrading and installing
   extensions from the Marketplace.
 
@@ -98,7 +98,7 @@ Accessing Talkable Configuration
    .. image:: /_static/img/magento2/access1.jpg
 
 2. Then select **Talkable** |rarr| **Talkable Configuration** from the list of available configurations.
-   If you have multiple stores, select the desired Store View you want to change settings for.
+   If you have multiple stores, select the desired Store View you want to change the settings for.
 
    .. image:: /_static/img/magento2/access2.jpg
 
@@ -151,7 +151,7 @@ Page URLs
 ~~~~~~~~~
 
 The Page URLs section allows you to change paths to the Standalone Share and Advocate Dashboard pages.
-The paths must match placements you have configured in Talkable for this campaign type.
+The paths must match the placements you have configured in Talkable for this campaign type.
 Default values correspond to default placements in Talkable.
 
    .. image:: /_static/img/magento2/configure5.jpg
@@ -168,21 +168,21 @@ Default values correspond to default placements in Talkable.
 Troubleshooting
 ---------------
 
-This section describes some of the common issues that may be encountered during extension
-installation and do not provide helpful error messages or a clear path forward.
-If you encounter an issue that isn't described here, please refer to
-Magento `troubleshooting suggestions`_ for Component Manager and other Magento documentation.
+This section describes the solutions to some common issues encountered during installation
+that do not provide helpful error messages or a clear path forward.
+If you encounter an issue that isn't described here, please refer to the
+Magento `troubleshooting suggestions`_ for the Component Manager and other Magento documentation.
 
 |nbsp|
 
-* **Check Component Dependency** step fails without error message
+* **Check Component Dependency** step fails without an error message
 
   .. image:: /_static/img/magento2/troubleshooting1.jpg
 
-  The Check Component Dependency script has likely ran out of memory.
+  The Check Component Dependency script has likely run out of memory.
   Magento 2.x requires at least 756MB of RAM allocated to PHP.
-  However to use Web Setup Wizard for system upgrades and extension installation,
-  Magento recommends allocating 2GB of memory to PHP. Please refer to `Required PHP Settings`_
+  However, to use Web Setup Wizard for system upgrades and extension installation,
+  Magento recommends allocating 2GB of memory to PHP. Please refer to the `Required PHP Settings`_
   guide and update your configuration.
 
   |nbsp|
@@ -193,7 +193,7 @@ Magento `troubleshooting suggestions`_ for Component Manager and other Magento d
 
   Backup creation in Component Manager is performed as a single web request.
   This request can take a long time, especially if you have chosen all three
-  backup options (*Code*, *Media* and *Database*). If the backup request takes
+  backup options (*Code*, *Media*, and *Database*). If the backup request takes
   longer to complete than allowed by your server configuration, the server will
   terminate the request, resulting in backup failure.
 
@@ -206,10 +206,10 @@ Magento `troubleshooting suggestions`_ for Component Manager and other Magento d
 
      .. image:: /_static/img/magento2/troubleshooting3.jpg
 
-  2. Configure your server to allow long running requests.
+  2. Configure your server to allow long-running requests.
 
     * In PHP configuration, increase ``max_execution_time`` to 300-600 seconds.
-      This can be done either in your ``php.ini`` file, or in the ``.htaccess``
+      This can be done either in your ``php.ini`` file or in the ``.htaccess``
       file in your Magento root folder.
 
     * For Apache 2, increase ``TimeOut`` to 300-600 seconds in your server configuration.
