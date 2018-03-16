@@ -94,7 +94,8 @@ Sample response:
          "username": null,
          "subscribed_at": null,
          "unsubscribed_at": null,
-         "sub_choice": false
+         "sub_choice": false,
+         "customer_id": null
        }
      }
    }
@@ -135,7 +136,8 @@ Sample response:
          "username": "lizard_king",
          "subscribed_at": null,
          "unsubscribed_at": null,
-         "sub_choice": false
+         "sub_choice": false,
+         "customer_id": null
        }
      }
    }
@@ -173,7 +175,8 @@ Sample response:
          "username": null,
          "subscribed_at": null,
          "unsubscribed_at": "2014-11-18T05:49:54.000-07:00",
-         "sub_choice": false
+         "sub_choice": false,
+         "customer_id": null
        }
      }
    }
