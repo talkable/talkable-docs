@@ -6,6 +6,54 @@ Upgrade
 
 Sometimes we need you to upgrade existing integration to use our latest features.
 
+0.5.0
+-----
+
+Added an ability to :ref:`handle errors <error_handling>` when showing Offer.
+
+To update from the previous version please do following steps.
+
+1. Update dependencies inside ``build.gradle``:
+
+   .. code-block:: groovy
+
+     // From
+     compile 'com.google.code.gson:gson:2.7'
+     compile 'com.android.support:support-v4:25.3.1'
+
+     // To
+     compile 'com.google.code.gson:gson:2.8'
+     compile 'com.android.support:support-v4:26.1.0'
+
+2. Use ``showOffer`` functions with a callback parameter.
+
+   .. code-block:: java
+
+     // From
+     showOffer(activity, origin);
+
+     // To
+     showOffer(activity, origin, new TalkableErrorCallback<TalkableOfferLoadException>() {
+         @Override
+         public void onError(final TalkableOfferLoadException error) {
+             // Error handling. Note that it runs on non UI thread
+         }
+     });
+
+3. Use ``Talkable.setSiteSlug`` functions without Context as a parameter.
+
+   .. code-block:: java
+
+     // From
+     setSiteSlug(context, "site-slug");
+
+     // To
+     setSiteSlug("site-slug");
+
+4. ``TalkableOfferFragmentListener`` interface implementation is optional now.
+
+5. In case you used ``TalkableOfferFragment`` directly check out :ref:`a new workflow <using_fragment_directly>`.
+
 0.4.2
 -----
 

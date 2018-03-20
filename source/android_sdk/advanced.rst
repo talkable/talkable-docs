@@ -4,6 +4,25 @@
 Advanced Usage
 ==============
 
+.. _error_handling:
+
+Error Handling
+--------------
+
+Errors from ``Talkable.showOffer`` and ``Talkable.loadOffer`` are handled
+inside ``onError`` callback, which provides an instance of ``TalkableOfferLoadException`` class.
+You can take error type and error message with ``error.getErrorCode()``
+and ``error.getMessage()`` respectively.
+
+Here is a list of possible error codes from ``TalkableOfferLoadException`` with descriptions:
+   ``NETWORK_ERROR``: General network error
+
+   ``API_ERROR``: Talkable API unavailable
+
+   ``REQUEST_ERROR``: Bad request
+
+   ``CAMPAIGN_ERROR``: Campaign not found
+
 Using multiple site slugs
 -------------------------
 
@@ -53,7 +72,7 @@ To use multiple site slugs inside your application, you have to do next steps:
 
      .. code-block:: java
 
-       Talkable.setSiteSlug(context, "some-site-slug");
+       Talkable.setSiteSlug("some-site-slug");
 
      Make sure to add credentials for this site inside the manifest file.
      Otherwise, an exception will be raised.
@@ -88,56 +107,56 @@ Overriding default behaviour
 
    .. code-block:: java
 
-     Talkable.showOffer(activity, affiliateMember, MyFragmentActivity.class, OverridenTalkableOfferFragment.class);
+      Talkable.showOffer(activity, affiliateMember, OverridenTalkableOfferFragment.class, new TalkableErrorCallback<TalkableOfferLoadException>() {
+          @Override
+          public void onError(TalkableOfferLoadException error) {
+              // Error handling. Note that it runs on non UI thread
+          }
+      });
 
-   .. note::
+.. _fragment_listener:
 
-      You can just override ``TalkableOfferFragment`` and use default
-      ``TalkableActivity`` from Talkable SDK.
-      In this case, you shouldn’t change the manifest
-      (if you did steps from :ref:`Getting Started <android_sdk/getting_started>` section).
+In case you want to implement custom offer closing handling you should implement
+``TalkableOfferFragmentListener`` interface from ``TalkableOfferFragment`` inside your Activity.
 
-     .. code-block:: java
+.. code-block:: java
 
-       Talkable.showOffer(activity, affiliateMember, TalkableActivity.class, OverridenTalkableOfferFragment.class);
+   import com.talkable.sdk.TalkableOfferFragment.TalkableOfferFragmentListener;
+
+   public class MyActivity implements TalkableOfferFragmentListener {
+       ...
+       @Override
+       public void onOfferClosed() {
+           finish();
+       }
+       ...
+   }
+
+.. _using_fragment_directly:
 
 Using TalkableOfferFragment directly
 ------------------------------------
 
-To use instance of ``TalkableOfferFragment`` you have to implement ``TalkableOfferFragmentListener``
-interface from ``TalkableOfferFragment`` class inside your activity.
+To use ``TalkableOfferFragment`` directly you shold get Offer's code
+using ``Talkable.loadOffer(origin, callback)`` and pass it to ``TalkableOfferFragment.newInstance(shortCode)``:
 
 .. code-block:: java
 
-  import com.talkable.sdk.TalkableOfferFragment.TalkableOfferFragmentListener;
+   AffiliateMember affiliateMember = new AffiliateMember();
+   ...
 
-  public class MyActivity implements TalkableOfferFragmentListener {
+   loadOffer(affiliateMember, new TalkableCallback<String, TalkableOfferLoadException>() {
+       // Note that it runs on non UI thread
+       @Override
+       public void onSuccess(String offerCode) {
+           TalkableOfferFragment fragment = TalkableOfferFragment.newInstance(offerCode);
+       }
 
-      ...
-
-      @Override
-      public void onOfferClosed() {
-          if (mTalkableOfferFragment.isOfferLoaded()) {
-              finish();
-          }
-      }
-
-      ...
-  }
-
-Then you should :ref:`create an origin <android_sdk/integration>` and
-pass it to ``TalkableOfferFragment`` instance via ``Bundle``.
-After this you can start using the fragment.
-
-.. code-block:: java
-
-  AffiliateMember affiliateMember = new AffiliateMember();
-
-  Bundle arguments = new Bundle();
-  arguments.putParcelable(TalkableOfferFragment.ORIGIN_PARAM, affiliateMember);
-
-  TalkableOfferFragment talkableOfferFragment = new TalkableOfferFragment();
-  talkableOfferFragment.setArguments(arguments);
+       @Override
+       public void onError(TalkableOfferLoadException error) {
+           // Error handling
+       }
+    );
 
 .. _`Android - Getting Started`: https://developers.facebook.com/docs/android/getting-started
 

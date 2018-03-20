@@ -23,8 +23,8 @@ Installation
 
        compile 'com.squareup.okhttp3:okhttp:3.2.0'
        compile 'com.facebook.android:facebook-android-sdk:[4,5)'
-       compile 'com.google.code.gson:gson:2.7'
-       compile 'com.android.support:support-v4:25.3.1'
+       compile 'com.google.code.gson:gson:2.8.0'
+       compile 'com.android.support:support-v4:26.1.0'
        compile project(':talkable-sdk')
 
 .. _setup_credentials:

@@ -39,7 +39,12 @@ Here is an example of a Purchase capturing, this action should be triggered on t
     purchase.setCampaignTag(campaignTag); // Optional
 
     Activity activity = this;
-    Talkable.showOffer(activity, purchase);
+    Talkable.showOffer(activity, purchase, new TalkableErrorCallback<TalkableOfferLoadException>() {
+        @Override
+        public void onError(TalkableOfferLoadException error) {
+            // Error handling. Note that it runs on non UI thread
+        }
+    });
 
 .. note::
 
