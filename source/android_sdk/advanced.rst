@@ -161,7 +161,7 @@ using ``Talkable.loadOffer(origin, callback)`` and pass it to ``TalkableOfferFra
 .. note::
 
    Make sure to `handle configurations changes right`_, as ``TalkableOfferFragment``
-   is built on top of ``WebView`` and restoring it's state is up to you.
+   is built on top of ``WebView`` and restoring its state is up to you.
 
 .. _`Android - Getting Started`: https://developers.facebook.com/docs/android/getting-started
 .. _`handle configurations changes right`: https://developer.android.com/guide/topics/resources/runtime-changes.html
