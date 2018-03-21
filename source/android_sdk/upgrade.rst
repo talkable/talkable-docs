@@ -11,7 +11,7 @@ Sometimes we need you to upgrade existing integration to use our latest features
 
 Added an ability to :ref:`handle errors <error_handling>` when showing Offer.
 
-To update from the previous version please do following steps.
+To update from the previous version, please do following steps.
 
 1. Update dependencies inside ``build.gradle``:
 
@@ -84,7 +84,7 @@ Added multiple site slugs support. Bugs fixing.
 From this moment you can operate with multiple Talkable sites inside Talkable SDK.
 Look in :ref:`Advanced Usage <android_sdk/advanced>` for more detailed information if needed.
 
-To update from the previous version please do following steps.
+To update from the previous version, please do following steps.
 
 1. Update dependencies inside ``build.gradle``.
 
