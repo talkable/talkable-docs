@@ -4,22 +4,41 @@
 Advanced Usage
 ==============
 
+.. _error_handling:
+
+Error Handling
+--------------
+
+Errors from ``Talkable.showOffer`` and ``Talkable.loadOffer`` are handled
+inside ``onError`` callback, which provides an instance of ``TalkableOfferLoadException`` class.
+You can get error type and error message with ``error.getErrorCode()``
+and ``error.getMessage()`` respectively.
+
+Here is a list of possible error codes from ``TalkableOfferLoadException`` with descriptions:
+   ``NETWORK_ERROR``: General network error
+
+   ``API_ERROR``: Talkable API unavailable
+
+   ``REQUEST_ERROR``: Bad request
+
+   ``CAMPAIGN_ERROR``: Campaign not found
+
 Using multiple site slugs
 -------------------------
 
-To use multiple site slugs inside your application, you have to do next steps:
+To use multiple site slugs inside your application, follow these steps:
 
 1. Add credentials for each site you are going to use inside your manifest file.
    Format is the same as from corresponding
    :ref:`Getting Started <setup_credentials>` section.
 
-2. Add deep linking schemas handlers into your main activity entry for each site
-   you are going to use too. Format is the same as from corresponding
+2. Add deep linking schemas handlers into the main activity entry for each site
+   you are going to use. The format is the same as the corresponding
    :ref:`Getting Started <deep_linking_scheme>` section.
 
 3. Set default site slug.
 
-   It can be done by adding this information to the manifest file into
+   This can be done by adding this information into the manifest file using
    ``<application>`` entry:
 
    .. code-block:: xml
@@ -32,7 +51,7 @@ To use multiple site slugs inside your application, you have to do next steps:
           ...
       </application>
 
-   or by passing through ``Talkable.initialize`` in the ``Application``:
+   or by passing it through ``Talkable.initialize`` in the ``Application``:
 
    .. code-block:: java
 
@@ -49,13 +68,13 @@ To use multiple site slugs inside your application, you have to do next steps:
 
    .. note::
 
-     You can set site slug at any time after initialization in the following way:
+     You can set the site slug at any time after initialization in the following way:
 
      .. code-block:: java
 
-       Talkable.setSiteSlug(context, "some-site-slug");
+       Talkable.setSiteSlug("some-site-slug");
 
-     Make sure to add credentials for this site inside the manifest file.
+     Make sure to add the credentials for this site inside the manifest file.
      Otherwise, an exception will be raised.
 
 Sharing via Facebook
@@ -88,58 +107,64 @@ Overriding default behaviour
 
    .. code-block:: java
 
-     Talkable.showOffer(activity, affiliateMember, MyFragmentActivity.class, OverridenTalkableOfferFragment.class);
+      Talkable.showOffer(activity, affiliateMember, OverridenTalkableOfferFragment.class, new TalkableErrorCallback<TalkableOfferLoadException>() {
+          @Override
+          public void onError(TalkableOfferLoadException error) {
+              // Error handling. Note that it runs on non UI thread
+          }
+      });
 
-   .. note::
+.. _fragment_listener:
 
-      You can just override ``TalkableOfferFragment`` and use default
-      ``TalkableActivity`` from Talkable SDK.
-      In this case, you shouldn’t change the manifest
-      (if you did steps from :ref:`Getting Started <android_sdk/getting_started>` section).
+If you want to implement custom offer closing handling you should implement
+``TalkableOfferFragmentListener`` interface from ``TalkableOfferFragment`` inside your Activity.
 
-     .. code-block:: java
+.. code-block:: java
 
-       Talkable.showOffer(activity, affiliateMember, TalkableActivity.class, OverridenTalkableOfferFragment.class);
+   import com.talkable.sdk.TalkableOfferFragment.TalkableOfferFragmentListener;
+
+   public class MyActivity implements TalkableOfferFragmentListener {
+       ...
+       @Override
+       public void onOfferClosed() {
+           finish();
+       }
+       ...
+   }
+
+.. _using_fragment_directly:
 
 Using TalkableOfferFragment directly
 ------------------------------------
 
-To use instance of ``TalkableOfferFragment`` you have to implement ``TalkableOfferFragmentListener``
-interface from ``TalkableOfferFragment`` class inside your activity.
+To use ``TalkableOfferFragment`` directly you should get the Offer's code
+using ``Talkable.loadOffer(origin, callback)`` and pass it to ``TalkableOfferFragment.newInstance(shortCode)``:
 
 .. code-block:: java
 
-  import com.talkable.sdk.TalkableOfferFragment.TalkableOfferFragmentListener;
+   AffiliateMember affiliateMember = new AffiliateMember();
+   ...
 
-  public class MyActivity implements TalkableOfferFragmentListener {
+   loadOffer(affiliateMember, new TalkableCallback<String, TalkableOfferLoadException>() {
+       // Note that it runs on non UI thread
+       @Override
+       public void onSuccess(String offerCode) {
+           TalkableOfferFragment fragment = TalkableOfferFragment.newInstance(offerCode);
+       }
 
-      ...
+       @Override
+       public void onError(TalkableOfferLoadException error) {
+           // Error handling
+       }
+    );
 
-      @Override
-      public void onOfferClosed() {
-          if (mTalkableOfferFragment.isOfferLoaded()) {
-              finish();
-          }
-      }
+.. note::
 
-      ...
-  }
-
-Then you should :ref:`create an origin <android_sdk/integration>` and
-pass it to ``TalkableOfferFragment`` instance via ``Bundle``.
-After this you can start using the fragment.
-
-.. code-block:: java
-
-  AffiliateMember affiliateMember = new AffiliateMember();
-
-  Bundle arguments = new Bundle();
-  arguments.putParcelable(TalkableOfferFragment.ORIGIN_PARAM, affiliateMember);
-
-  TalkableOfferFragment talkableOfferFragment = new TalkableOfferFragment();
-  talkableOfferFragment.setArguments(arguments);
+   Make sure to `handle configurations changes right`_, as ``TalkableOfferFragment``
+   is built on top of ``WebView`` and restoring its state is up to you.
 
 .. _`Android - Getting Started`: https://developers.facebook.com/docs/android/getting-started
+.. _`handle configurations changes right`: https://developer.android.com/guide/topics/resources/runtime-changes.html
 
 .. container:: hidden
 
