@@ -29,7 +29,7 @@ Here is an example of a Purchase capturing, this action should be triggered on t
     Double subtotal = price * quantity; // Required
     Integer orderNumber = 1; // Required
     Date orderDate = Calendar.getInstance().getTime(); // Required
-    String[] coupons = {"EXAMPLE-CODE"}; // Optional;
+    String[] coupons = {"EXAMPLE-CODE"}; // Optional
 
     Purchase purchase = new Purchase(subtotal, orderNumber, orderDate, coupons);
     purchase.setCustomer(customer); // Required
