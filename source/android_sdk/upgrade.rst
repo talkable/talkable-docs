@@ -6,6 +6,11 @@ Upgrade
 
 Sometimes we need you to upgrade existing integration to use our latest features.
 
+0.5.1
+-----
+
+Added multiple coupons support for ``Event`` and ``Purchase``.
+
 0.5.0
 -----
 
