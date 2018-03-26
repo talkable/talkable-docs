@@ -12,7 +12,7 @@ by a purchase and shown to a customer immediately after it.
 Post Purchase campaign usually looks like a pop up right after a user made a purchase. This
 campaign initializes on the order confirmation page and captures order details parameters. You
 need to pass order data that includes your customer’s email address, order id, subtotal, coupon
-code used at checkout in order to close a referral loop. This allows Talkable to detect and
+codes used at checkout in order to close a referral loop. This allows Talkable to detect and
 close the loop on a referral.
 
 Here is an example of a Purchase capturing, this action should be triggered on the order confirmation page:
@@ -29,9 +29,9 @@ Here is an example of a Purchase capturing, this action should be triggered on t
     Double subtotal = price * quantity; // Required
     Integer orderNumber = 1; // Required
     Date orderDate = Calendar.getInstance().getTime(); // Required
-    String coupon = "EXAMPLE-CODE"; // Optional
+    String[] coupons = {"EXAMPLE-CODE"}; // Optional
 
-    Purchase purchase = new Purchase(subtotal, orderNumber, orderDate, coupon);
+    Purchase purchase = new Purchase(subtotal, orderNumber, orderDate, coupons);
     purchase.setCustomer(customer); // Required
     purchase.addItem(item); // Optional
 

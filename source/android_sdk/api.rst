@@ -64,9 +64,9 @@ You need to build `Origin` using one of examples below:
     String eventNumber = "1"; // Required
     String eventCategory = "event-category"; // Required
     Double subtotal = 10.99; // Optional
-    String coupon = "EXAMPLE-CODE"; // Optional
+    String[] coupons = {"EXAMPLE-CODE"}; // Optional
 
-    Event origin = new Event(eventNumber, eventCategory, subtotal, coupon);
+    Event origin = new Event(eventNumber, eventCategory, subtotal, coupons);
     origin.setCustomer(customer); // Required
 
     // Build purchase
@@ -78,9 +78,9 @@ You need to build `Origin` using one of examples below:
     Double subtotal = price * quantity; // Required
     Integer orderNumber = 1; // Required
     Date orderDate = Calendar.getInstance().getTime(); // Required
-    String coupon = "EXAMPLE-CODE"; // Optional
+    String[] coupons = {"EXAMPLE-CODE"}; // Optional
 
-    Purchase origin = new Purchase(subtotal, orderNumber, orderDate, coupon);
+    Purchase origin = new Purchase(subtotal, orderNumber, orderDate, coupons);
     origin.setCustomer(customer); // Required
     origin.addItem(item); // Optional
 
