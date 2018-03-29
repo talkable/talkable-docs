@@ -26,7 +26,7 @@ Here is an example of a Purchase capturing, this action should be triggered on t
     String productId = "1";
     Item item = new Item(subtotal, quantity, productId);
     item.setTitle("Item Title"); // Optional
-    item.setUrl("https://test.com/product.html"); // Optional
+    item.setUrl("https://site.com/product.html"); // Optional
     item.setImageUrl("https://site.com/image.jpg"); // Optional
 
     Double subtotal = price * quantity; // Required
