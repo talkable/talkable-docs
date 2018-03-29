@@ -79,9 +79,9 @@ You need to build `Origin` using one of examples below:
     item.setImageUrl("https://site.com/image.jpg"); // Optional
 
     Double subtotal = price * quantity; // Required
-    Integer orderNumber = 1; // Required
+    String orderNumber = "123456"; // Required
     Date orderDate = Calendar.getInstance().getTime(); // Required
-    String[] coupons = {"EXAMPLE-CODE"}; // Optional
+    String[] coupons = {"EXAMPLE-CODE-1", "EXAMPLE-CODE-2"}; // Optional
 
     Purchase origin = new Purchase(subtotal, orderNumber, orderDate, coupons);
     origin.setCustomer(customer); // Required

@@ -30,9 +30,9 @@ Here is an example of a Purchase capturing, this action should be triggered on t
     item.setImageUrl("https://site.com/image.jpg"); // Optional
 
     Double subtotal = price * quantity; // Required
-    Integer orderNumber = 1; // Required
+    String orderNumber = "123456"; // Required
     Date orderDate = Calendar.getInstance().getTime(); // Required
-    String[] coupons = {"EXAMPLE-CODE"}; // Optional
+    String[] coupons = {"EXAMPLE-CODE-1", "EXAMPLE-CODE-2"}; // Optional
 
     Purchase purchase = new Purchase(subtotal, orderNumber, orderDate, coupons);
     purchase.setCustomer(customer); // Required
