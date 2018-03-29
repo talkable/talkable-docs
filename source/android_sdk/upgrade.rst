@@ -6,6 +6,11 @@ Upgrade
 
 Sometimes we need you to upgrade existing integration to use our latest features.
 
+0.5.2
+-----
+
+Added support of ``title``, ``url`` and ``imageUrl`` attributes  for ``Item``.
+
 0.5.1
 -----
 

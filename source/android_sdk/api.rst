@@ -74,6 +74,9 @@ You need to build `Origin` using one of examples below:
     Integer quantity = 1;
     String productId = "1";
     Item item = new Item(subtotal, quantity, productId);
+    item.setTitle("Item Title"); // Optional
+    item.setUrl("https://test.com/product.html"); // Optional
+    item.setImageUrl("https://site.com/image.jpg"); // Optional
 
     Double subtotal = price * quantity; // Required
     Integer orderNumber = 1; // Required
