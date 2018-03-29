@@ -68,11 +68,17 @@ Manual integration
 3. Click “Save”.
 4. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`.
 
+Watch a |video| demonstrating the full integration from start to finish.
+
 |br|
 
 .. |example_link| raw:: html
 
   <span class="a">http://123test.myshopify.com</span>
+
+.. |video| raw:: html
+
+   <a href="https://youtu.be/NxVscXSRtSA" target="_blank">video</a>
 
 .. container:: hidden
 
