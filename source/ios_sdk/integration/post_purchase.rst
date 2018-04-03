@@ -20,12 +20,15 @@ Here is an example of a Purchase capturing, this action should be triggered on t
        TKBLPurchaseOrderDateKey: [NSDate date], // REQUIRED - Order Date and Time (ISO 8601 formatted datetime)
        TKBLPurchaseEmailKey: @"customer@example.com", // REQUIRED - Customer Email
        TKBLPurchaseSubtotalKey: [NSNumber numberWithDouble:22.33], // REQUIRED - Purchase Subtotal
-       TKBLPurchaseCouponCodeKey: @"TEST25", // REQUIRED - Coupon code used at checkout, pass multiple as an array: @[@"SAVE20",   @"FREE-SHIPPING"]. Pass @"" if there is no coupon code.
+       TKBLPurchaseCouponCodeKey: @"TEST25", // REQUIRED - Coupon code used at checkout, pass multiple as an array: @[@"SAVE20", @"FREE-SHIPPING"]. Pass @"" if there is no coupon code.
        TKBLPurchaseOrderItemsKey:@[
          @{
-           TKBLPurchaseOrderItemProductIDKey: @"sku3", /* Item Product ID */
-           TKBLPurchaseOrderItemPriceKey: [NSNumber numberWithDouble:4.99], /* Item Unit Price */
-           TKBLPurchaseOrderItemQuantityKey: [NSNumber numberWithUnsignedInt:5], /* Item Quantity */
+           TKBLPurchaseOrderItemProductIDKey: @"sku3", // Item Product ID
+           TKBLPurchaseOrderItemPriceKey: [NSNumber numberWithDouble:4.99], // Item Unit Price
+           TKBLPurchaseOrderItemQuantityKey: [NSNumber numberWithUnsignedInt:5], // Item Quantity
+           TKBLPurchaseOrderItemTitleKey: @"Amazing Product 3", // Name of the product
+           TKBLPurchaseOrderItemUrlKey: @"http://www.store.com/product2", // URL of the product page
+           TKBLPurchaseOrderItemImageUrlKey: @"http://www.store.com/product2/image.jpg" // URL of the product image
          }
        ]
      }
