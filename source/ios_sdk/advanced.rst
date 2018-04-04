@@ -7,7 +7,7 @@ Advanced Usage
 Specify a custom campaign tag
 -----------------------------
 
-By default if no campaign tag was specified SDK uses `ios-invite` and `ios-post-purchase` tags for :ref:`Standalone <ios_sdk/integration/standalone>` and
+By default if no campaign tag was specified, SDK uses `ios-invite` and `ios-post-purchase` tags for :ref:`Standalone <ios_sdk/integration/standalone>` and
 :ref:`Post Purchase <ios_sdk/integration/post_purchase>` campaigns. But you can explicitly specify your own tag in this way:
 
   .. code-block:: objc
@@ -20,20 +20,21 @@ By default if no campaign tag was specified SDK uses `ios-invite` and `ios-post-
 Implement TalkableDelegate
 --------------------------
 
-1. Assign your `ViewController` or other object as Talkable delegate by following code:
+1. Assign your `ViewController` or other object as Talkable delegate by using the following code:
 
   .. code-block:: objc
 
     [[Talkable manager] setDelegate: yourObjectConformsTalkableDelegateProtocol];
 
-2. Take control of presenting offers to your users. Use next two delegate methods to prevent or give an instruction where you want that offer will be displayed:
+2. Take control of presenting offers to your users. Use the next two delegate methods to prevent
+   or give an instruction as to where you want that offer to be displayed:
 
   .. code-block:: objc
 
     - (BOOL)shouldPresentTalkableOfferViewController:(UIViewController*)controller;
     - (UIViewController*)viewControllerForPresentingTalkableOfferViewController;
 
-3. Customize ViewContoller title by implementing method below. By default title of offer page is used.
+3. Customize ViewContoller title by implementing the method below. By default, title of offer page is used.
 
   .. code-block:: objc
 
@@ -41,7 +42,7 @@ Implement TalkableDelegate
 
   .. note::
 
-    You can modify page title on Talkable Site during campaign developing.
+    You can modify page title on a Talkable Site during campaign development.
 
 4. Present offers to your users by yourself by handling request url or webView after origin was created.
 
@@ -52,7 +53,8 @@ Implement TalkableDelegate
 
   .. note::
 
-    Talkable SDK assigns itself to WKWebView navigation delegate. Changing WKWebView navigation delegate may break some functionality so we strictly recommend not doing this.
+    Talkable SDK assigns itself to WKWebView navigation delegate. Changing WKWebView navigation delegate
+    may break some functionality so we strictly recommend not doing this.
 
 5. Manage cases where origin wasn't created or offer hasn't been presented.
 
@@ -107,7 +109,7 @@ Subscribe to notifications that Talkable SDK publish and be aware of everything 
 Debugging
 ---------
 
-See all debugging information in your console which can help you to realise what is going wrong:
+See all debugging information in your console which can help you to understand what is going wrong:
 
   .. code-block:: objc
 
