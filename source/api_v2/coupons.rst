@@ -65,6 +65,7 @@ Sample response:
          "id": 233,
          "code": "COUPON_CODE",
          "single_use": false,
+         "used": false,
          "expires_at": "2017-05-03T07:41:30.000-07:00",
          "amount": 10.0,
          "percentage_discount": false
@@ -152,6 +153,7 @@ Check if a coupon belongs to a person
          "id": 233,
          "code": "COUPON_CODE",
          "single_use": false,
+         "used": false,
          "expires_at": "2017-05-03T07:41:30.000-07:00",
          "amount": 10.0,
          "percentage_discount": false
