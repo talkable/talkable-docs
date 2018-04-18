@@ -21,7 +21,7 @@ each with links to integration details.
    * - :ref:`Email encryption <advanced_features/email_encryption>`
      - For additional security, it is possible to encrypt Advocate and Friend e-mails on back-end.
 
-   * - :ref:`Files encryption <advanced_features/files_encryption>`
+   * - :ref:`File encryption <advanced_features/file_encryption>`
      - For additional security, it is possible to encrypt files.
 
    * - :ref:`Including Product Items <advanced_features/product_items>`
@@ -62,7 +62,7 @@ each with links to integration details.
     advanced_features/coupons
     advanced_features/converting_into_localization
     advanced_features/email_encryption
-    advanced_features/files_encryption
+    advanced_features/file_encryption
     advanced_features/product_items
     advanced_features/passing_custom_data
     advanced_features/referrals_approval
