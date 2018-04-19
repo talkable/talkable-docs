@@ -36,7 +36,7 @@ next command is successful:
 Encrypting
 ----------
 
-To encrypt data, you can use following syntax:
+To encrypt data, you can use the following syntax:
 
 .. code-block:: shell
 
