@@ -68,6 +68,24 @@ Unsubscribes a person from receiving emails.
    person_slug       Person’s email
    ================= ========================================================
 
+|br|
+
+.. code-block:: text
+
+   POST /people/<person_slug>/anonymize
+
+Anonymizes a person.
+
+.. container:: ptable
+
+   ================= ========================================================
+   Parameter         Description
+   ================= ========================================================
+   site_slug         Your Talkable Site ID. You can get this from your
+                     Talkable dashboard after you log in and create a site.
+   person_slug       Person’s email
+   ================= ========================================================
+
 Example
 -------
 
@@ -180,6 +198,46 @@ Sample response:
        }
      }
    }
+
+Anonymize a person
+..................
+
+.. code-block:: javascript
+
+   {
+     "api_key": "i9uil7nQgDjucCiTJu",
+     "site_slug": "my-store"
+   }
+
+.. code-block:: bash
+
+   curl -H "Content-Type: application/json" \
+        -X POST \
+        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store"}' \
+        https://www.talkable.com/api/v2/people/customer@example.com/anonymize
+
+Sample response:
+
+.. code-block:: javascript
+
+   {
+     "ok": true,
+     "result": {
+       "person": {
+         "personal_claim_url": null,
+         "events_count": 0,
+         "first_name": null,
+         "last_name": null,
+         "email": "b19b4a80-3bb2-48f2-831a-6e180b4c6a7e@anonymized.email",
+         "username": null,
+         "subscribed_at": null,
+         "unsubscribed_at": null,
+         "sub_choice": false,
+         "customer_id": null
+       }
+     }
+   }
+
 
 .. container:: hidden
 
