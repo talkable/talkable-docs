@@ -27,4 +27,4 @@ the Campaign on all pages of your site.
 
 If you need to change or reconfigure which Campaigns are shown on which URLs then visit
 |br|
-`https://admin.talkable.com/sites/[YOUR-TALKABLE-SITE-ID]/placements` page.
+`https://admin.talkable.com/sites/<YOUR-TALKABLE-SITE-ID>/placements` page.

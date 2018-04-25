@@ -59,10 +59,10 @@ script.
 .. code-block:: html
 
   <!-- Begin Talkable integration code -->
-  <script async src="https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/your-site-id.min.js"></script>
+  <script async src="https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/<YOUR-TALKABLE-SITE-ID>.min.js"></script>
   <script>
     window._talkableq = window._talkableq || [];
-    window._talkableq.unshift(['init', { site_id: 'your-site-id' }]);
+    window._talkableq.unshift(['init', { site_id: '<YOUR-TALKABLE-SITE-ID>' }]);
     window._talkableq.push(['authenticate_customer', {
       email: '', // Optional, pass when available. Example: 'customer@example.com'
       first_name: '', // Optional, pass when available. Example: 'John'
@@ -171,7 +171,7 @@ Advocate Landing Page Notes
    you’ll need to update the Site Placements section inside of Talkable
    for the Invite Advocate Landing Page to match the exact URL path that
    you intend to use via
-   `https://www.admin.talkable.com/sites/your-site-id/placements:`
+   `https://www.admin.talkable.com/sites/<YOUR-TALKABLE-SITE-ID>/placements:`
 
    .. figure:: /_static/img/placement_edit.png
       :alt: Placement Edit
@@ -206,7 +206,7 @@ Referral Dashboard notes:
    you’ll need to update the Site Placements section inside of Talkable
    for the Dashboard Placement to use the exact URL path you intend to
    host the Referral Dashboard on via
-   `https://www.talkable.com/sites/your-site-id/placements`
+   `https://www.talkable.com/sites/<YOUR-TALKABLE-SITE-ID>/placements`
 
 4. **Linking to the Referral Dashboard.** Allow your users to reach the
    Referral Dashboard by adding a link from any place that makes sense
