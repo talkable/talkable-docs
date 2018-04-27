@@ -11,7 +11,7 @@ import\_font
 
 Inserts the font declaration to the page.
 
-.. code-block:: liquid
+.. code-block:: text
 
    {{ "My Font" | import_font }}
 
@@ -21,7 +21,7 @@ Returns:
 
    @font-face {
       font-family: 'My Font';
-      src: url('https://cloudfront.net/font.woff') format('woff'), url('https://cloudfront.net/font.woff2') format('woff2');
+      src: url('https://d2jjzw81hqbuqv.cloudfront.net/static_assets/files/174201/original/font.woff') format('woff'), url('https://d2jjzw81hqbuqv.cloudfront.net/static_assets/files/174202/original/font.woff2') format('woff2');
       font-weight: normal;
       font-style: normal;
    }
