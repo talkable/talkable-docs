@@ -6,10 +6,32 @@ Filters
 
 `Standard liquid filters`_ that are available out of box.
 
+import\_font
+............
+
+Inserts the font declaration to the page.
+
+.. code-block:: text
+
+   {{ "My Font" | import_font }}
+
+Returns:
+
+.. code-block:: css
+
+   @font-face {
+      font-family: 'My Font';
+      src: url('https://d2jjzw81hqbuqv.cloudfront.net/static_assets/files/174201/original/font.woff') format('woff'), url('https://d2jjzw81hqbuqv.cloudfront.net/static_assets/files/174202/original/font.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+   }
+
+|hr|
+
 asset\_url
 ..........
 
-Insert link for a uploaded asset.
+Inserts link for an uploaded asset.
 
 .. code-block:: liquid
 
