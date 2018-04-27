@@ -17,6 +17,8 @@ This API allows you to create visitors. See examples below.
    ================= ========================================================
    Parameter         Description
    ================= ========================================================
+   site_slug         Your Talkable Site ID. You can get this from your
+                     Talkable dashboard after you log in and create a site.
    data              Hash or JSON object with following properties:
 
                      * uuid - UUID of new visitor that will be created
