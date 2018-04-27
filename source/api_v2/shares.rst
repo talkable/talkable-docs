@@ -61,7 +61,8 @@ Create a Facebook share
 
    curl -H "Content-Type: application/json" \
         -X POST \
-        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","channel":"facebook"}' \
+        -u i9uil7nQgDjucCiTJu: \
+        -d '{"site_slug":"my-store","channel":"facebook"}' \
         https://www.talkable.com/api/v2/offers/dZpBwd/shares
 
 Sample response:
@@ -87,7 +88,8 @@ Create an Email share
 
    curl -H "Content-Type: application/json" \
         -X POST \
-        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","channel":"email","recipients":"friend1@example.com,friend2@example.com","email":{"subject":"Hello!"}}' \
+        -u i9uil7nQgDjucCiTJu: \
+        -d '{"site_slug":"my-store","channel":"email","recipients":"friend1@example.com,friend2@example.com","email":{"subject":"Hello!"}}' \
         https://www.talkable.com/api/v2/offers/dZpBwd/shares
 
 Sample response:
