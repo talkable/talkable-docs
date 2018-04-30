@@ -86,6 +86,24 @@ Anonymizes a person.
    person_slug       Person’s email
    ================= ========================================================
 
+|br|
+
+.. code-block:: text
+
+   POST /people/<person_slug>/personal_data
+
+Returns personal data
+
+.. container:: ptable
+
+   ================= ========================================================
+   Parameter         Description
+   ================= ========================================================
+   site_slug         Your Talkable Site ID. You can get this from your
+                     Talkable dashboard after you log in and create a site.
+   person_slug       Person’s email
+   ================= ========================================================
+
 Example
 -------
 
@@ -205,7 +223,6 @@ Anonymize a person
 .. code-block:: javascript
 
    {
-     "api_key": "i9uil7nQgDjucCiTJu",
      "site_slug": "my-store"
    }
 
@@ -213,7 +230,8 @@ Anonymize a person
 
    curl -H "Content-Type: application/json" \
         -X POST \
-        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store"}' \
+        -u i9uil7nQgDjucCiTJu: \
+        -d '{site_slug":"my-store"}' \
         https://www.talkable.com/api/v2/people/customer@example.com/anonymize
 
 Sample response:
@@ -238,6 +256,51 @@ Sample response:
      }
    }
 
+Get personal information about a person
+.......................................
+
+.. code-block:: javascript
+
+   {
+     "site_slug": "my-store"
+   }
+
+.. code-block:: bash
+
+   curl -H "Content-Type: application/json" \
+        -X POST \
+        -u i9uil7nQgDjucCiTJu: \
+        -d '{"site_slug":"my-store"}' \
+        https://www.talkable.com/api/v2/people/customer@example.com/personal_data
+
+Sample response:
+
+.. code-block:: javascript
+
+   {
+     "ok": true,
+     "result": {
+       "person": {
+         "created_at": "2018-04-30T02:14:35.000-07:00",
+         "customer_id": null,
+         "email": "customer@example.com",
+         "first_name": null,
+         "last_name": null,
+         "opted_in_at": null,
+         "unsubscribed_at": null,
+         "username": null,
+         "origins": [
+           {
+             "type": "AffiliateMember",
+             "created_at": "2018-04-30T02:14:35.000-07:00",
+             "ip_address": "1.2.3.4",
+             "order_number": "customer@example.com",
+             "subtotal": 0.0,
+           }
+         ]
+       }
+     }
+   }
 
 .. container:: hidden
 
