@@ -92,7 +92,7 @@ Anonymizes a person.
 
    POST /people/<person_slug>/personal_data
 
-Returns personal data
+Returns personal data.
 
 .. container:: ptable
 
