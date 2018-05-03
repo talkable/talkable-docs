@@ -21,7 +21,7 @@ Creates offer share.
    ================= ========================================================
    site_slug         Your Talkable Site ID. You can get this from your
                      Talkable dashboard after you log in and create a site.
-   short_url_code    Offer short code obtained with
+   offer_id          Offer short code obtained with
                      :ref:`origin creation <api_v2/origins>`.
    ================= ========================================================
 
