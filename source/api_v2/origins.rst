@@ -60,7 +60,6 @@ Create a purchase
 .. code-block:: javascript
 
    {
-     "api_key": "i9uil7nQgDjucCiTJu",
      "site_slug": "my-store",
      "type": "Purchase",
      "data": {
@@ -82,7 +81,8 @@ Create a purchase
 
    curl -H "Content-Type: application/json" \
         -X POST \
-        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","type":"Purchase","data":{"email":"customer@example.com","order_number":12,"subtotal":100,"items":[{"price":25,"quantity":4,"product_id":"TSHIRT"}]}}' \
+        -u i9uil7nQgDjucCiTJu: \
+        -d '{"site_slug":"my-store","type":"Purchase","data":{"email":"customer@example.com","order_number":12,"subtotal":100,"items":[{"price":25,"quantity":4,"product_id":"TSHIRT"}]}}' \
         https://www.talkable.com/api/v2/origins
 
 Sample response:
@@ -116,7 +116,6 @@ Create an event
 .. code-block:: javascript
 
    {
-     "api_key": "i9uil7nQgDjucCiTJu",
      "site_slug": "my-store",
      "type": "Event",
      "data": {
@@ -130,7 +129,8 @@ Create an event
 
    curl -H "Content-Type: application/json" \
         -X POST \
-        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","type":"Event","data":{"email":"customer@example.com","event_category":"newsletter_subscription","event_number":"42"}}' \
+        -u i9uil7nQgDjucCiTJu: \
+        -d '{"site_slug":"my-store","type":"Event","data":{"email":"customer@example.com","event_category":"newsletter_subscription","event_number":"42"}}' \
         https://www.talkable.com/api/v2/origins
 
 Sample response:
@@ -164,7 +164,6 @@ Create an affiliate member
 .. code-block:: javascript
 
    {
-     "api_key": "i9uil7nQgDjucCiTJu",
      "site_slug": "my-store",
      "type": "AffiliateMember",
      "data": {
@@ -176,7 +175,8 @@ Create an affiliate member
 
    curl -H "Content-Type: application/json" \
         -X POST \
-        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","type":"AffiliateMember","data":{"email":"affiliate@example.com"}}' \
+        -u i9uil7nQgDjucCiTJu: \
+        -d '{"site_slug":"my-store","type":"AffiliateMember","data":{"email":"affiliate@example.com"}}' \
         https://www.talkable.com/api/v2/origins
 
 Sample response:
@@ -208,7 +208,6 @@ With sharing links
 .. code-block:: javascript
 
    {
-     "api_key": "i9uil7nQgDjucCiTJu",
      "site_slug": "my-store",
      "type": "AffiliateMember",
      "data": {
@@ -221,7 +220,8 @@ With sharing links
 
    curl -H "Content-Type: application/json" \
         -X POST \
-        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","type":"AffiliateMember","data":{"email":"affiliate@example.com"},"sharing_channels":["facebook","twitter","custom"]}' \
+        -u i9uil7nQgDjucCiTJu: \
+        -d '{"site_slug":"my-store","type":"AffiliateMember","data":{"email":"affiliate@example.com"},"sharing_channels":["facebook","twitter","custom"]}' \
         https://www.talkable.com/api/v2/origins
 
 Sample response:

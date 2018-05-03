@@ -51,7 +51,7 @@ Find a coupon by code
 
 .. code-block:: text
 
-   GET https://www.talkable.com/api/v2/coupons/COUPON_CODE?site_slug=my-store&api_key=i9uil7nQgDjucCiTJu
+   GET https://www.talkable.com/api/v2/coupons/COUPON_CODE?site_slug=my-store
 
 Sample response:
 
@@ -132,7 +132,7 @@ Check if a coupon belongs to a person
 
 .. code-block:: text
 
-   GET https://www.talkable.com/api/v2/coupons/COUPON_CODE/permission/user@example.com?site_slug=my-store&api_key=i9uil7nQgDjucCiTJu
+   GET https://www.talkable.com/api/v2/coupons/COUPON_CODE/permission/user@example.com?site_slug=my-store
 
 .. code-block:: javascript
 

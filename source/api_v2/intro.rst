@@ -19,12 +19,33 @@ All API URLs referenced in this documentation start with the following base part
 Authentication
 --------------
 
-You authenticate to the Talkable API by providing your ``api_key`` in the request.
+You authenticate to the Talkable API by providing your API Key in the request.
 You can manage your API key in the Account Settings.
 
 .. warning:: Keep your API key secret!
 
-   You should not embed the API key within a web page and make Talkable API calls within JavaScript running within a browser. Once someone has your API key, they could create their own API calls
+   You should not embed the API key within a web page and make Talkable API calls
+   within JavaScript running within a browser. Once someone has your API key, they
+   could create their own API calls.
+
+Authentication to the API is performed via `HTTP Basic Auth`_.
+Provide your API key as the basic auth username value. You do not need to provide a password.
+
+.. raw:: html
+
+   <h4>Example Request</h4>
+
+.. code-block:: bash
+
+   curl 'https://www.talkable.com/api/v2/campaigns?site_slug=my-store' \
+     -u i9uil7nQgDjucCiTJu:
+
+``curl`` uses the ``-u`` flag to pass basic auth credentials.
+(Adding a colon after your API key prevents ``curl`` from asking for a password.)
+
+If you need to authenticate via bearer auth (e.g., for a cross-origin request), |br|
+use ``-H "Authorization: Bearer i9uil7nQgDjucCiTJu"`` |br|
+instead of ``-u i9uil7nQgDjucCiTJu:``.
 
 Response Format
 ---------------
@@ -83,6 +104,8 @@ Talkable returns standard HTTP response codes.
                        |br| See the response body for more details.
    500, 502, 503, 504  Server Errors - Something is wrong on Talkable’s end
    =================== ======================================================
+
+.. _HTTP Basic Auth: http://en.wikipedia.org/wiki/Basic_access_authentication
 
 .. container:: hidden
 

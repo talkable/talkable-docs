@@ -76,7 +76,7 @@ Find a person by email
 
 .. code-block:: text
 
-   GET https://www.talkable.com/api/v2/people/customer@example.com?site_slug=my-store&api_key=i9uil7nQgDjucCiTJu
+   GET https://www.talkable.com/api/v2/people/customer@example.com?site_slug=my-store
 
 Sample response:
 
@@ -106,7 +106,6 @@ Update person’s username
 .. code-block:: javascript
 
    {
-     "api_key": "i9uil7nQgDjucCiTJu",
      "site_slug": "my-store",
      "data": {
        "username": "lizard_king"
@@ -117,7 +116,8 @@ Update person’s username
 
    curl -H "Content-Type: application/json" \
         -X PUT \
-        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","data":{"username":"lizard_king"}}' \
+        -u i9uil7nQgDjucCiTJu: \
+        -d '{"site_slug":"my-store","data":{"username":"lizard_king"}}' \
         https://www.talkable.com/api/v2/people/customer@example.com
 
 Sample response:
@@ -148,7 +148,6 @@ Unsubscribe a person from receiving emails
 .. code-block:: javascript
 
    {
-     "api_key": "i9uil7nQgDjucCiTJu",
      "site_slug": "my-store"
    }
 
@@ -156,7 +155,8 @@ Unsubscribe a person from receiving emails
 
    curl -H "Content-Type: application/json" \
         -X POST \
-        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store"}' \
+        -u i9uil7nQgDjucCiTJu: \
+        -d '{"site_slug":"my-store"}' \
         https://www.talkable.com/api/v2/people/customer@example.com/unsubscribe
 
 Sample response:

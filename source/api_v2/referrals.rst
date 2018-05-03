@@ -49,5 +49,6 @@ Approve a Referral
 
    curl -H "Content-Type: application/json" \
         -X PUT \
-        -d '{"api_key":"i9uil7nQgDjucCiTJu","site_slug":"my-store","data":{"status":"approved"}}' \
+        -u i9uil7nQgDjucCiTJu: \
+        -d '{"site_slug":"my-store","data":{"status":"approved"}}' \
         https://www.talkable.com/api/v2/origins/B00K2EOONI/referral

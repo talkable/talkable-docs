@@ -28,7 +28,7 @@ Example
 
 .. code-block:: text
 
-   GET https://www.talkable.com/api/v2/campaigns?site_slug=my-store&api_key=i9uil7nQgDjucCiTJu
+   GET https://www.talkable.com/api/v2/campaigns?site_slug=my-store
 
 Sample response:
 
