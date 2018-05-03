@@ -231,7 +231,7 @@ Anonymize a person
    curl -H "Content-Type: application/json" \
         -X POST \
         -u i9uil7nQgDjucCiTJu: \
-        -d '{site_slug":"my-store"}' \
+        -d '{"site_slug":"my-store"}' \
         https://www.talkable.com/api/v2/people/customer@example.com/anonymize
 
 Sample response:
