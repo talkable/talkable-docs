@@ -295,7 +295,7 @@ Sample response:
              "created_at": "2018-04-30T02:14:35.000-07:00",
              "ip_address": "1.2.3.4",
              "order_number": "customer@example.com",
-             "subtotal": 0.0,
+             "subtotal": 0.0
            }
          ]
        }
