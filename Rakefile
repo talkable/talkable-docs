@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 require 'mkmf'
+require 'open3'
 
 SPHINX_BUILD = ENV['SPHINX_BUILD'] || 'sphinx-build'
 SOURCE_DIR   = 'source'
@@ -19,6 +20,13 @@ end
 task :environment do
   ENV['LANG'] = ENV['LC_ALL'] = 'en_US.UTF-8'
   find_executable(SPHINX_BUILD) || abort("The '#{SPHINX_BUILD}' command was not found. Make sure you have Sphinx installed, then set the SPHINX_BUILD environment variable to point to the full path of the '#{SPHINX_BUILD}' executable. Alternatively you can add the directory with the executable to your PATH. If you do not have Sphinx installed, grab it from http://sphinx-doc.org/")
+
+  regexp = /(\d+\.)?(\d+\.)?(\*|\d+)/
+  required = File.read('requirements.txt').match(regexp).to_s
+  installed = Open3.capture3("#{SPHINX_BUILD} --version")[1].match(regexp).to_s
+  if !required.empty? && !installed.empty? && Gem::Version.new(required) > Gem::Version.new(installed)
+    abort "\nYou are running an outdated version of Sphinx #{installed}. Required version is #{required}. Run `pip install -r requirements.txt` to upgrade Sphinx."
+  end
 end
 
 desc 'Run build in test mode'
