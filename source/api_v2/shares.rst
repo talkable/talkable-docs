@@ -10,7 +10,7 @@ This API allows you to access offer shares.
 
 .. code-block:: text
 
-   POST /offers/<short_url_code>/shares
+   POST /offers/<short_url_code>/shares/<type>
 
 Creates offer share.
 
@@ -23,9 +23,15 @@ Creates offer share.
                      Talkable dashboard after you log in and create a site.
    short_url_code    Offer short code obtained with
                      :ref:`origin creation <api_v2/origins>`.
+   type              Options: `social` or `email`
    ================= ========================================================
 
-For *social share*:
+Social Share
+------------
+
+.. code-block:: text
+
+   POST /offers/<short_url_code>/shares/social
 
 .. container:: ptable
 
@@ -35,20 +41,25 @@ For *social share*:
    channel           Options: `facebook`, `twitter`, `linkedin`, `other`
    ================= ========================================================
 
-Or for *email share*:
+E-mail share
+------------
+
+.. code-block:: text
+
+   POST /offers/<short_url_code>/shares/email
+
 
 .. container:: ptable
 
    ================= ========================================================
    Parameter         Description
    ================= ========================================================
-   channel           `email`
    recipients        List of recipient emails separated by comma or newline.
-   email             Hash or JSON object with following properties:
 
-                     * subject (optional)
-                     * body (optional)
-                     * reminder (optional, `true`/`false`, `true` by default)
+   subject           (optional) Custom subject of the e-mail
+   body              (optional) Custom message added to the e-mail body
+   reminder          (optional, `true`/`false`, `true` by default)
+                     Whether Talkable should send a reminder e-mail later
    ================= ========================================================
 
 Example
@@ -63,7 +74,7 @@ Create a Facebook share
         -X POST \
         -u i9uil7nQgDjucCiTJu: \
         -d '{"site_slug":"my-store","channel":"facebook"}' \
-        https://www.talkable.com/api/v2/offers/dZpBwd/shares
+        https://www.talkable.com/api/v2/offers/dZpBwd/shares/social
 
 Sample response:
 
@@ -89,38 +100,48 @@ Create an Email share
    curl -H "Content-Type: application/json" \
         -X POST \
         -u i9uil7nQgDjucCiTJu: \
-        -d '{"site_slug":"my-store","channel":"email","recipients":"friend1@example.com,friend2@example.com","email":{"subject":"Hello!"}}' \
-        https://www.talkable.com/api/v2/offers/dZpBwd/shares
+        -d '{"site_slug":"my-store","recipients":"friend1@example.com,friend2@example.com","subject":"Hello!","body":"World!","reminder":true}' \
+        https://www.talkable.com/api/v2/offers/dZpBwd/shares/email
 
 Sample response:
 
 .. code-block:: javascript
 
-   {
-     "ok": true,
-     "result": {
-       "reward": {
-         "id": 32005,
-         "reason": "shared",
-         "incentive_type": "discount_coupon",
-         "incentive_description": "shared coupon \"10_OFF\" for $10.00 off",
-         "amount": null,
-         "coupon_code": "10_OFF",
-         "status": "Paid"
-       },
-       "shares": [
-         {
-           "id": 4452107,
-           "email": "friend1@example.com",
-           "type": "EmailOfferShare",
-           "short_url": "https://www.talkable.com/x/lDtvhD"
-         },
-         {
-           "id": 4452108,
-           "email": "friend2@example.com",
-           "type": "EmailOfferShare",
-           "short_url": "https://www.talkable.com/x/VsaTEe"
-         }
-       ]
-     }
-   }
+  {
+    "ok": true,
+    "reward": null,
+    "result": {
+      "success": true,
+      "validation_only": false,
+      "stats": {
+        "currently_sent": 2,
+        "currently_not_sent": 0,
+        "previously_sent": 0,
+        "total_sent": 2,
+        "sent_limit_exceeded": false,
+        "left_emails": 20
+      },
+      "recipients": {
+        "friend1@example.com": {
+          "currently_sent": true,
+          "previously_sent": false,
+          "email_valid": true,
+          "self_referral": false,
+          "unsubscribed": false,
+          "blacklisted": false,
+          "meets_criteria": true,
+          "sharable": true
+        },
+        "friend2@example.com": {
+          "currently_sent": true,
+          "previously_sent": false,
+          "email_valid": true,
+          "self_referral": false,
+          "unsubscribed": false,
+          "blacklisted": false,
+          "meets_criteria": true,
+          "sharable": true
+        }
+      }
+    }
+  }

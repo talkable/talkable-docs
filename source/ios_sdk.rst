@@ -24,5 +24,6 @@ Contents:
 
    ios_sdk/getting_started
    ios_sdk/integration
+   ios_sdk/api_integration
    ios_sdk/advanced
    ios_sdk/example
