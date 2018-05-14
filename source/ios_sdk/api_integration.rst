@@ -80,20 +80,20 @@ call the `createSocialShare:channel:withHandler:` method to sync the share with 
           NSDictionary* rewardParams = [response objectForKey:@"reward"];
       }];
 
-E-mail Share
+Email Share
 ~~~~~~~~~~~~
 
-To share an Offer via e-mail, simply use the `createEmailShare:recipients:withParams:andHandler:` method to send an API request.
-Talkable will send the e-mails for you. You will need to provide an interface for user to specify recipients' email addresses
+To share an Offer via email, simply use the `createEmailShare:recipients:withParams:andHandler:` method to send an API request.
+Talkable will send the emails for you. You will need to provide an interface for the user to specify recipients' email addresses
 and add an optional personal message.
 
 .. code-block:: objc
 
-  NSString* recipients = @"customer@example.com,elon@musk.com"; //comma separated e-mail addresses
+  NSString* recipients = @"customer@example.com,elon@musk.com"; //comma separated email addresses
   NSDictionary* emailShareParams = @{
-      @"subject": @"Custom E-mail Subject",
-      @"body": @"Personal message that will be added to the e-mail body",
-      @"reminder": @YES // Whether Talkable should send a reminder e-mail later
+      @"subject": @"Custom Email Subject",
+      @"body": @"Personal message that will be added to the email body",
+      @"reminder": @NO // Whether Talkable should send a reminder email later
   };
 
   [[Talkable manager] createEmailShare:shortUrlCode recipients:recipients withParams:emailShareParams andHandler:^(NSDictionary* response, NSError* error) {
@@ -106,7 +106,7 @@ and add an optional personal message.
 If a Talkable campaign is configured to give a reward to Advocate just for sharing, the API call to create a :ref:`Share <api_v2/shares>`
 will return a :ref:`Reward <api_v2/rewards>` you can display immediately. In most cases, however, Advocate will receive a reward after
 a Friend responds to a shared link, e.g. makes a purchase.
-To check whether current user has any outstanding rewards, use the `retrieveRewardsWithHandler:` method.
+To check whether the current user has any outstanding rewards, use the `retrieveRewardsWithHandler:` method.
 
 .. code-block:: objc
 
