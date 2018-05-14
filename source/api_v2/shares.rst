@@ -4,7 +4,7 @@
 Shares
 ======
 
-This API allows you to access offer shares.
+This API allows you to create offer shares.
 
 |br|
 
