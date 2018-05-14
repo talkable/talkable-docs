@@ -44,8 +44,12 @@ after they have been rewarded within any other of your Talkable Campaigns.
 
 |hr|
 
-The list of Campaign Placements available for your site is located inside your User menu.
-There you can change your existing Placements, add new, and manage their Campaigns.
+The list of all Campaign Placements is inside header Menu (top right corner) → Campaign Placements:
+[SCREENSHOT WITH EXPANDED MENU → point to Campaign Placements link]
+
+.. raw:: html
+
+  <img src="../_images/campaign_placements.png" />
 
 **Managing Placements**.
 By default you already have all four types of Placements created for you automatically.
