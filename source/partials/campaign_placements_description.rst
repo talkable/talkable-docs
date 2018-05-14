@@ -45,11 +45,10 @@ after they have been rewarded within any other of your Talkable Campaigns.
 |hr|
 
 The list of all Campaign Placements is inside header Menu (top right corner) → Campaign Placements:
-[SCREENSHOT WITH EXPANDED MENU → point to Campaign Placements link]
 
 .. raw:: html
 
-  <img src="../_images/campaign_placements.png" />
+  <img src="../_static/img/campaign_placements/path.png" />
 
 **Managing Placements**.
 By default you already have all four types of Placements created for you automatically.
