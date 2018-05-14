@@ -81,7 +81,7 @@ call the `createSocialShare:channel:withHandler:` method to sync the share with 
       }];
 
 Email Share
-~~~~~~~~~~~~
+~~~~~~~~~~~
 
 To share an Offer via email, simply use the `createEmailShare:recipients:withParams:andHandler:` method to send an API request.
 Talkable will send the emails for you. You will need to provide an interface for the user to specify recipients' email addresses
