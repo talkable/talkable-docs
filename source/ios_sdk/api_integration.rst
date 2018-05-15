@@ -4,13 +4,13 @@
 Native Integration via API
 ==========================
 
-Talkable provides API that can be utilized to implement fully native referral program interface if you don't want to use
-included web-based views. Below are the methods necessary to integrate Talkable referral loop into your iOS app.
+Talkable provides an API that can be utilized to implement a fully native referral program interface if you don't want to use
+included web-based views. Below are the methods necessary to integrate the Talkable referral loop into your iOS app.
 
 1. Create an Origin
 -------------------
 
-The Origin is an user event (e.g. a purchase or simply opening the app) that initiates the referral chain.
+The Origin is a user event (e.g. a purchase or simply opening the app) that initiates the referral chain.
 Create an Origin to retrieve an Offer and display it to an :ref:`Advocate <campaigns>`.
 
 To create an Origin, make a request to :ref:`Origins <api_v2/origins>` endpoint using the `createOrigin:withHandler:` method.
@@ -41,7 +41,7 @@ Sharing an Offer is the next step in the referral chain.
 Social Share
 ~~~~~~~~~~~~
 
-Talkable SDK provides several ways to share an Offer using social media channels.
+The Talkable SDK provides several ways to share an Offer using social media channels.
 
 1. `socialShare:` method will display a sharing dialog directly. Supported channels are Facebook and Twitter.
 
@@ -71,7 +71,7 @@ Talkable SDK provides several ways to share an Offer using social media channels
 
       [self presentViewController:sheet animated:YES completion:^{}];
 
-3. Implement your own way for the Advocate to share the link. On successful share,
+3. Implement your own way for the Advocate to share the link. Upon a successful share,
 call the `createSocialShare:channel:withHandler:` method to sync the share with Talkable and create a :ref:`Share <api_v2/shares>` record.
 
     .. code-block:: objc
@@ -103,8 +103,8 @@ and add an optional personal message.
 3. Check for Reward
 -------------------
 
-If a Talkable campaign is configured to give a reward to Advocate just for sharing, the API call to create a :ref:`Share <api_v2/shares>`
-will return a :ref:`Reward <api_v2/rewards>` you can display immediately. In most cases, however, Advocate will receive a reward after
+If a Talkable campaign is configured to give a reward to the Advocate just for sharing, the API call to create a :ref:`Share <api_v2/shares>`
+will return a :ref:`Reward <api_v2/rewards>` you can display immediately. In most cases, however, the Advocate will receive a reward after
 a Friend responds to a shared link, e.g. makes a purchase.
 To check whether the current user has any outstanding rewards, use the `retrieveRewardsWithHandler:` method.
 
