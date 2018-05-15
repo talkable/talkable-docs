@@ -29,6 +29,8 @@ But you can do anything you need with just create one.
         }
     });
 
+.. _android-api-origins:
+
 Create origin
 -------------
 
@@ -107,6 +109,8 @@ If you have, you need call method like in the example below:
         }
     });
 
+.. _android-api-rewards:
+
 Retrieve rewards
 ----------------
 
@@ -166,26 +170,65 @@ This method is used to get offer details by it’s short code. Example:
         }
     });
 
+.. _android-api-sharing:
+
 Create offer share
 ------------------
 
 If you have your own sharing mechanism, you can create shares using API.
-Firstly, you need to create offer using `registerOrigin <Create origin_>`_ method. Example:
+Firstly, you need to create an Offer using `registerOrigin <Create origin_>`_
+method.
+
+Email Share
+...........
+
+Sharing via Email can be done with ``createEmailShare`` method. Here is an example:
 
 .. code-block:: java
 
-    OfferShare share = new OfferShare(offer, SharingChannel.OTHER);
-    TalkableApi.createShare(share, new Callback2<OfferShare[], Reward>() {
-        @Override
-        public void onSuccess(OfferShare[] shares, Reward reward) {
-            // Process success
-        }
+   String subject = "Email Subject"; // optional
+   String body = "Email custom message"; // optional
+   Boolean reminder = false; // whether Talkable should send a reminder email later; true by default; optional
+   ShareEmail email = new ShareEmail(subject, body, reminder); // optional
 
-        @Override
-        public void onError(ApiError e) {
-            // Process error
-        }
-    });
+   String recipients = "friend1@example.com,friend2@example.com"; // emails separated by commas; required
+   EmailOfferShare share = new EmailOfferShare(offer, recipients, email);
+   TalkableApi.createEmailShare(share, new Callback2<JsonElement, Reward>() {
+       @Override
+       public void onSuccess(JsonElement result, Reward reward) {
+           // Process success
+       }
+       @Override
+       public void onError(ApiError e) {
+           // Process error
+       }
+   });
+
+.. note::
+
+   ``JsonElement result`` from ``onSuccess(JsonElement result, Reward reward)``
+   contains data, described in :ref:`Shares API <email-sharing-response>` under
+   ``result`` key
+
+Social Share
+............
+
+Social sharing can be done with ``createSocialShare`` method. Here is an example:
+
+.. code-block:: java
+
+   SharingChannel channel = SharingChannel.FACEBOOK; // required
+   SocialOfferShare share = new SocialOfferShare(offer, channel);
+   TalkableApi.createSocialShare(share, new Callback2<SocialOfferShare, Reward>() {
+       @Override
+       public void onSuccess(SocialOfferShare createdShare, Reward reward) {
+           // Process success
+       }
+       @Override
+       public void onError(ApiError e) {
+           // Process error
+       }
+   });
 
 .. container:: hidden
 
