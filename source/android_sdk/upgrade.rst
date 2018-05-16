@@ -9,7 +9,7 @@ Sometimes we need you to upgrade existing integration to use our latest features
 0.5.3
 -----
 
-Added ``createEmailShare`` and ``createSocialShare`` method to ``TalkableApi``.
+Added ``createEmailShare`` and ``createSocialShare`` methods to ``TalkableApi``.
 
 Deprecated ``createShare`` methods from ``TalkableApi``.
 

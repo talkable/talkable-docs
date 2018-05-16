@@ -174,7 +174,7 @@ Below are the methods necessary to integrate the Talkable referral loop into
 your Android application.
 
 1. First of all, you should get an ``Offer`` by creating an ``Origin``: :ref:`Create origin <android-api-origins>`
-2. Than, there is should be an ability to share this ``Offer``: :ref:`Create offer share <android-api-sharing>`
+2. Then, there should be an ability to share this ``Offer``: :ref:`Create offer share <android-api-sharing>`
 3. Rewards could be retrieved with the next endpoint: :ref:`Retrieve rewards <android-api-rewards>`
 
 .. _`Android - Getting Started`: https://developers.facebook.com/docs/android/getting-started
