@@ -70,17 +70,26 @@ Sample response:
 
 .. code-block:: javascript
 
-   {
-     "ok": true,
-     "result": {
-       "reward": null,
-       "share": {
-         "id": 4452084,
-         "type": "SocialOfferShare",
-         "short_url": "https://www.talkable.com/x/hQ0SZb"
-       }
-     }
-   }
+  {
+    "ok": true,
+    "result": {
+      "reward": {
+        "id": 24,
+        "reason": "shared",
+        "incentive_type": "discount_coupon",
+        "incentive_description": "shared coupon \"C1383-8321\" for $10 off",
+        "incentive_custom_description": null,
+        "amount": null,
+        "coupon_code": "C1383-8321",
+        "status": "Paid"
+      },
+      "share": {
+        "id": 4452084,
+        "type": "SocialOfferShare",
+        "short_url": "https://www.talkable.com/x/hQ0SZb"
+      }
+    }
+  }
 
 Create an Email share
 .....................
@@ -99,9 +108,9 @@ Sample response:
 
   {
     "ok": true,
-    "reward": null,
     "result": {
       "success": true,
+      "reward": null,
       "validation_only": false,
       "stats": {
         "currently_sent": 2,
