@@ -24,7 +24,7 @@ Creates a social share.
    short_url_code    Offer short code obtained with
                      :ref:`origin creation <api_v2/origins>`.
    channel           Options: `facebook`, `twitter`, `linkedin`, `whatsapp`,
-                     `other`
+                     `sms`, `other`
    ================= ========================================================
 
 |br|
@@ -141,6 +141,6 @@ Sample response:
           "sharable": true
         }
       }
-    },
-    "reward": null
+      "reward": null,
+    }
   }
