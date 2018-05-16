@@ -55,7 +55,7 @@ The Talkable SDK provides several ways to share an Offer using social media chan
         TKBLShareChannel:TKBLShareChannelTwitter,
         TKBLOfferClaimUrlKey:[claimLinks objectForKey:TKBLShareChannelTwitter],
         TKBLShareMessage:@"Personalized message",
-        TKBLShareImage:@"Image URL as NSString", //You can also pass an UIImage
+        TKBLShareImage:@"Image URL as NSString", // You can also pass a UIImage
         TKBLOfferShortUrlCodeKey:shortUrlCode
       }];
 
