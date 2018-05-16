@@ -73,6 +73,11 @@ Sample response:
   {
     "ok": true,
     "result": {
+      "share": {
+        "id": 4452084,
+        "type": "SocialOfferShare",
+        "short_url": "https://www.talkable.com/x/hQ0SZb"
+      },
       "reward": {
         "id": 24,
         "reason": "shared",
@@ -82,11 +87,6 @@ Sample response:
         "amount": null,
         "coupon_code": "C1383-8321",
         "status": "Paid"
-      },
-      "share": {
-        "id": 4452084,
-        "type": "SocialOfferShare",
-        "short_url": "https://www.talkable.com/x/hQ0SZb"
       }
     }
   }
@@ -110,7 +110,6 @@ Sample response:
     "ok": true,
     "result": {
       "success": true,
-      "reward": null,
       "validation_only": false,
       "stats": {
         "currently_sent": 2,
@@ -142,5 +141,6 @@ Sample response:
           "sharable": true
         }
       }
-    }
+    },
+    "reward": null
   }
