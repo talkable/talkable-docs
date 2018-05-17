@@ -140,7 +140,7 @@ Sample response:
           "meets_criteria": true,
           "sharable": true
         }
-      }
-      "reward": null,
+      },
+      "reward": null
     }
   }
