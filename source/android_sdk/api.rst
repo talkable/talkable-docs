@@ -176,13 +176,13 @@ Create offer share
 ------------------
 
 If you have your own sharing mechanism, you can create shares using API.
-Firstly, you need to create an Offer using `registerOrigin <Create origin_>`_
+First, you need to create an Offer using `registerOrigin <Create origin_>`_
 method.
 
 Email Share
 ...........
 
-Sharing via Email can be done with ``createEmailShare`` method. Here is an example:
+Use the ``createEmailShare`` method to share an offer via email.
 
 .. code-block:: java
 
@@ -213,7 +213,7 @@ Sharing via Email can be done with ``createEmailShare`` method. Here is an examp
 Social Share
 ............
 
-Social sharing can be done with ``createSocialShare`` method. Here is an example:
+Use the ``createSocialShare`` method to track a social share.
 
 .. code-block:: java
 
