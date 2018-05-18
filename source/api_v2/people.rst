@@ -90,7 +90,7 @@ Anonymizes a person.
 
 .. code-block:: text
 
-   POST /people/<person_slug>/personal_data
+   GET /people/<person_slug>/personal_data
 
 Returns personal data.
 
@@ -259,19 +259,9 @@ Sample response:
 Get personal information about a person
 .......................................
 
-.. code-block:: javascript
+.. code-block:: text
 
-   {
-     "site_slug": "my-store"
-   }
-
-.. code-block:: bash
-
-   curl -H "Content-Type: application/json" \
-        -X POST \
-        -u i9uil7nQgDjucCiTJu: \
-        -d '{"site_slug":"my-store"}' \
-        https://www.talkable.com/api/v2/people/customer@example.com/personal_data
+   GET https://www.talkable.com/api/v2/people/customer@example.com/personal_data?site_slug=my-store
 
 Sample response:
 
