@@ -259,13 +259,7 @@ Sample response:
 Get personal information about a person
 .......................................
 
-.. code-block:: javascript
-
-   {
-     "site_slug": "my-store"
-   }
-
-.. code-block:: bash
+.. code-block:: text
 
    GET https://www.talkable.com/api/v2/people/customer@example.com/personal_data?site_slug=my-store
 
