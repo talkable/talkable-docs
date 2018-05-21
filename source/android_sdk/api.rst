@@ -175,8 +175,8 @@ This method is used to get offer details by it’s short code. Example:
 Create offer share
 ------------------
 
-If you have your own sharing mechanism, you can create shares using API.
-First, you need to create an Offer using `registerOrigin <Create origin_>`_
+If you have your own sharing mechanism, you can create shares using an API.
+First, you need to create an Offer using the `registerOrigin <Create origin_>`_
 method.
 
 Email Share
@@ -208,7 +208,7 @@ Use the ``createEmailShare`` method to share an offer via email.
 
    ``JsonElement result`` from ``onSuccess(JsonElement result, Reward reward)``
    contains data, described in :ref:`Shares API <email-sharing-response>` under
-   ``result`` key
+   the ``result`` key
 
 Social Share
 ............
