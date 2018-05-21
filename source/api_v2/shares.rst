@@ -24,7 +24,7 @@ Creates a social share.
    short_url_code    Offer short code obtained with
                      :ref:`origin creation <api_v2/origins>`.
    channel           Options: `facebook`, `twitter`, `linkedin`, `whatsapp`,
-                     `other`
+                     `sms`, `other`
    ================= ========================================================
 
 |br|
@@ -70,17 +70,26 @@ Sample response:
 
 .. code-block:: javascript
 
-   {
-     "ok": true,
-     "result": {
-       "reward": null,
-       "share": {
-         "id": 4452084,
-         "type": "SocialOfferShare",
-         "short_url": "https://www.talkable.com/x/hQ0SZb"
-       }
-     }
-   }
+  {
+    "ok": true,
+    "result": {
+      "share": {
+        "id": 4452084,
+        "type": "SocialOfferShare",
+        "short_url": "https://www.talkable.com/x/hQ0SZb"
+      },
+      "reward": {
+        "id": 24,
+        "reason": "shared",
+        "incentive_type": "discount_coupon",
+        "incentive_description": "shared coupon \"C1383-8321\" for $10 off",
+        "incentive_custom_description": null,
+        "amount": null,
+        "coupon_code": "C1383-8321",
+        "status": "Paid"
+      }
+    }
+  }
 
 Create an Email share
 .....................
@@ -101,7 +110,6 @@ Sample response:
 
   {
     "ok": true,
-    "reward": null,
     "result": {
       "success": true,
       "validation_only": false,
@@ -134,6 +142,7 @@ Sample response:
           "meets_criteria": true,
           "sharable": true
         }
-      }
+      },
+      "reward": null
     }
   }

@@ -60,7 +60,7 @@ namespace :deploy do
     sh "git checkout #{html_branch}"
     sh 'git pull'
     sh "find . -not -path './.git' -not -path './.git/*' -not -path './Rakefile' -delete"
-    sh "git checkout #{source_branch} #{SOURCE_DIR} .gitignore"
+    sh "git checkout #{source_branch} #{SOURCE_DIR} .gitignore requirements.txt"
     sh 'git reset HEAD'
     Rake::Task[:build].invoke
     sh "(cd #{BUILD_DIR}/html && tar c ./) | (cd ./ && tar xf -)"
