@@ -4,7 +4,7 @@
 Integration
 ===========
 
-The SDK is installed and setup. Now you can integrate Standalone or/and Post Purchase campaigns into your mobile app.
+The SDK is installed and configured. Now you can integrate Standalone and/or Post Purchase campaigns into your mobile app.
 
 - :ref:`Standalone Campaign <ios_sdk/integration/standalone>`
 - :ref:`Post Purchase Campaign <ios_sdk/integration/post_purchase>`

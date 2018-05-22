@@ -66,6 +66,7 @@ Implement TalkableDelegate
 
     `userInfo` may contain detailed information about the error.
 
+.. _ios_sdk/advanced/notifications:
 
 Notifications
 -------------
@@ -85,7 +86,20 @@ Subscribe to notifications that Talkable SDK publish and be aware of everything 
     }
     ...
 
-2. Catch every message from presented offer:
+2. Receive the reward given to an Advocate:
+
+  .. code-block:: objc
+
+    #import <TalkableSDK/Talkable.h>
+    ...
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(rewardReceived:) name:TKBLDidReceiveReward object:nil];
+    ...
+    - (void)rewardReceived:(NSNotification*)ntf {
+      // Your logic here
+    }
+    ...
+
+3. Catch every message from presented offer:
 
   .. code-block:: objc
 
