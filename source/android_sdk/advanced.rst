@@ -163,6 +163,20 @@ using ``Talkable.loadOffer(origin, callback)`` and pass it to ``TalkableOfferFra
    Make sure to `handle configurations changes right`_, as ``TalkableOfferFragment``
    is built on top of ``WebView`` and restoring its state is up to you.
 
+
+Native integration via API
+--------------------------
+
+Talkable provides an :ref:`API  <android_sdk/api>` that can be utilized to
+implement a fully native referral program interface if the default solution
+(based on ``WebView``) doesn't work for you.
+Below are the methods necessary to integrate the Talkable referral loop into
+your Android application.
+
+1. The first step is to get an ``Offer`` by creating an ``Origin``: :ref:`Create origin <android-api-origins>`
+2. Then, share the obtained ``Offer``: :ref:`Create offer share <android-api-sharing>`
+3. Check for rewards: :ref:`Retrieve rewards <android-api-rewards>`
+
 .. _`Android - Getting Started`: https://developers.facebook.com/docs/android/getting-started
 .. _`handle configurations changes right`: https://developer.android.com/guide/topics/resources/runtime-changes.html
 

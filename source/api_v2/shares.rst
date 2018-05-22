@@ -102,6 +102,8 @@ Create an Email share
         -d '{"site_slug":"my-store","recipients":"friend1@example.com,friend2@example.com","subject":"Hello!","body":"World!","reminder":false}' \
         https://www.talkable.com/api/v2/offers/dZpBwd/shares/email
 
+.. _email-sharing-response:
+
 Sample response:
 
 .. code-block:: javascript
