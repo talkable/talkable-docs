@@ -30,10 +30,20 @@ Example
 Create a visitor
 ................
 
+.. code-block:: bash
+
+   curl -H "Content-Type: application/json" \
+        -X POST \
+        -u i9uil7nQgDjucCiTJu: \
+        -d '{"site_slug":"my-store","data":{"uuid":"b3967d36-4e7f-46bc-92b3-57344347cd6a"}}' \
+        https://www.talkable.com/api/v2/visitors
+
+Sample response:
+
 .. code-block:: javascript
 
    {
-     "data": {
+     "result": {
        "uuid": "b3967d36-4e7f-46bc-92b3-57344347cd6a"
      }
    }
