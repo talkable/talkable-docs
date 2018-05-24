@@ -6,6 +6,11 @@ Upgrade
 
 Sometimes we need you to upgrade existing integration to use our latest features.
 
+0.5.4
+-----
+
+Fixed crashes when the server sends bad responses.
+
 0.5.3
 -----
 
