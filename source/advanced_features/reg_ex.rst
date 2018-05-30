@@ -46,7 +46,13 @@ Examples
 
      /products/product-1|/products/product-5
 
-   |
+4. Show/suppress Campaigns only on the homepage:
+
+   Here is the Regex criteria:
+
+   .. code-block:: text
+
+     /
 
 .. container:: hidden
 
