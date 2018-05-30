@@ -45,9 +45,9 @@ each with links to integration details.
      - Subscribe to Talkable Iframe events such as the campaign is loaded or closed and
        perform some updates to your site based on them.
 
-   * - :ref:`Using Regular Expressions <advanced_features/reg_ex>`
-     - Talkable allows you to use regular expressions (regex for short) inside
-       Campaign Placement options so that you can span multiple URLs instead of an exact one.
+   * - :ref:`Setting up Campaign Placement criteria <advanced_features/reg_ex>`
+     - Walking through a Campaign Placement criteria setup that can support multiple
+       matching techniques
 
    * - :ref:`Using URL Parameters <advanced_features/url_parameters>`
      - Override some of the parameters right through URL query string

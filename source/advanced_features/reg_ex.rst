@@ -1,58 +1,128 @@
 .. _advanced_features/reg_ex:
 .. include:: /partials/common.rst
 
-Using Regular Expressions
-=========================
+Setting up Campaign Placement criteria
+======================================
 
-Talkable allows you to use regular expressions (regex for short) inside Campaign Placement options so that you can span
-multiple URLs instead of an exact one.
-Only Talkable admins are able to use this as an option.
-In order to switch "Shown on" or "Hidden on" field into Regex mode turn on the appropriate checkbox.
-Keep in mind that you don’t need to escape **/** with backslash, those are already escaped for you.
-The rest of the queries need to be backslashed.
-It is recommended to run some checks when coding up Regex criteria: https://regex101.com.
-Here is an example of a URL: `http://www.google.com/test`, you can replace it with your site URL and add your own path(s).
+Talkable allows setting up Campaign Placement “Shown on” / “Hidden on” criteria in two
+formats:
 
-It is not recommended to hardcode your site URL like `http://site.com` because you might also support `https` protocol as
-well as `www` as a part of your domain, all combinations should work.
+1. **Relative match**. If the regex checkbox is turned **off** the relative match mode is
+   used. “Relative” means it only matches the `pathname` of a URL and query parameters,
+   without the domain part. In this mode site URL is always set and you only need to set a
+   relative path. The criteria will only trigger when the relative path is matched (and
+   query parameters when provided). Here are some examples:
 
-Examples
---------
+   * Match only the homepage:
 
-1. Show/suppress Campaigns on URLs that start with **/cart**, i.e.: `http://site.com/cart`, |br| `http://site.com/cart/checkout`,
-   but not `http://site.com/test/cart`.
+     .. code-block:: text
 
-   Here is the Regex criteria:
+       /
 
-   .. code-block:: text
+     Matched URLs (example):
 
-     https?://([\w\-\d]+\.)+[\w\-\d]+/cart
+     * `http://site.com/`
+     * `https://new.domain.com/?utm=test`
 
-2. Show/suppress Campaigns on URLs that contains **/share**, i.e.: `http://site.com/pages/share`, `http://site.com/share`,
-   `http://site.com/pages/share/product`, any URL that contains `/share`.
+     |
 
-   Here is the Regex criteria:
+   * Match “/test/deep” exact path:
 
-   .. code-block:: text
+     .. code-block:: text
 
-     /share
+       /test/deep
 
-3. Show/suppress Campaigns on multiple specific URLs, i.e.: `https://site.com/products/product-1`
-   and `https://site.com/products/product-5`.
+     Matched URLs (example):
 
-   Here is the Regex criteria:
+     * `http://site.com/test/deep`
+     * `https://new.domain.com/test/deep?utm=test`
 
-   .. code-block:: text
+     |
 
-     /products/product-1|/products/product-5
+   * Match “/test/deep?utm=true” exact path and including the requested query parameter:
 
-4. Show/suppress Campaigns only on the homepage:
+     .. code-block:: text
 
-   Here is the Regex criteria:
+       /test/deep?utm=true
 
-   .. code-block:: text
+     Matched URLs (example):
 
-     /
+     * `http://site.com/test/deep?utm=test`
+     * `https://new.domain.com/test/deep?utm=test&other=false`
+
+     |
+
+2. **Regular expression** (regex for short). If the regex checkbox is turned **on** the
+   regex mode is used. In this mode you are controlling full page URL, including the
+   domain part (unlike the relative match mode). If no query parameters set Talkable will
+   ignore query parameters of the original URL in a browser. Don’t escape with backslash,
+   the pattern is already escaped for you. See examples below:
+
+   * Match URLs that contain “/share”:
+
+     .. code-block:: text
+
+       /share
+
+     Matched URLs (example):
+
+     * `http://site.com/share`
+     * `https://new.domain.com/test/share/deep?utm=test`
+
+     |
+
+   * Match URLs containing “/share?utm=true”:
+
+     .. code-block:: text
+
+       /share?utm=true
+
+     Matched URLs (example):
+
+     * `http://site.com/share?utm=test&other=false`
+     * `https://new.domain.com/test/share?utm=test`
+
+     |
+
+   * Match only the “site.com/test” URL. No need to backslash slashes. Also, don’t include
+     protocol to match both http & https:
+
+     .. code-block:: text
+
+       site.com/test(/)?$
+
+     Matched URLs (example):
+
+     * `http://site.com/test`
+     * `https://new.domain.com/test`
+     * `http://www.site.com/test?utm=test`
+
+     |
+
+   * Match URLs that start with “/cart” (works with any domain):
+
+     .. code-block:: text
+
+       https?://([\w\-\d]+\.)+[\w\-\d]+/cart
+
+     Matched URLs (example):
+
+     * `http://site.com/cart`
+     * `http://new.domain.com/cart/deep?utm=test`
+
+     |
+
+   * Match URLs that contain either “/products/one” or “/products/two”:
+
+     .. code-block:: text
+
+       /products/one|/products/two
+
+     Matched URLs (example):
+
+     * `http://site.com/test/products/one`
+     * `http://stage.com/products/two`
+     * `http://test.com/test/products/one/deep?utm=test`
 
 .. container:: hidden
 
