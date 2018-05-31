@@ -13,7 +13,7 @@ formats:
    relative path. The criteria will only trigger when the relative path is matched (and
    query parameters when provided). Here are some examples:
 
-   * Match only the homepage:
+   * Match only the homepage with optional query parameters:
 
      .. code-block:: text
 
@@ -26,7 +26,7 @@ formats:
 
      |
 
-   * Match “/test/deep” exact path:
+   * Match “/test/deep” exact path with optional query parameters:
 
      .. code-block:: text
 
@@ -39,7 +39,7 @@ formats:
 
      |
 
-   * Match “/test/deep?utm=true” exact path and including the requested query parameter:
+   * Match “/test/deep” exact path containing “utm=true” query parameter:
 
      .. code-block:: text
 
@@ -47,8 +47,8 @@ formats:
 
      Matched URLs (example):
 
-     * `http://site.com/test/deep?utm=test`
-     * `https://new.domain.com/test/deep?utm=test&other=false`
+     * `http://site.com/test/deep?utm=true`
+     * `https://new.domain.com/test/deep?other=false&utm=true`
 
      |
 
@@ -58,7 +58,7 @@ formats:
    ignore query parameters of the original URL in a browser. Don’t escape with backslash,
    the pattern is already escaped for you. See examples below:
 
-   * Match URLs that contain “/share”:
+   * Match URLs containing “/share” path with optional query parameters:
 
      .. code-block:: text
 
@@ -71,7 +71,7 @@ formats:
 
      |
 
-   * Match “/share” path with “utm=true” query parameter:
+   * Match “/share” path containing “utm=true” query parameter:
 
      .. code-block:: text
 
@@ -97,7 +97,7 @@ formats:
 
      |
 
-   * Match URLs that start with “/cart” (works with any domain):
+   * Match URLs starting with “/cart” path with optional query parameters:
 
      .. code-block:: text
 
@@ -110,7 +110,8 @@ formats:
 
      |
 
-   * Match URLs that contain either “/products/one” or “/products/two”:
+   * Match URLs containing either “/products/one” or “/products/two” path with optional
+     query parameters:
 
      .. code-block:: text
 
