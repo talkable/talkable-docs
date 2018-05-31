@@ -71,16 +71,16 @@ formats:
 
      |
 
-   * Match URLs containing “/share?utm=true”:
+   * Match “/share” path with “utm=true” query parameter:
 
      .. code-block:: text
 
-       /share.+?utm=true
+       /share.+utm=true
 
      Matched URLs (example):
 
-     * `http://site.com/share?utm=test&other=false`
-     * `https://new.domain.com/test/share?utm=test`
+     * `http://site.com/share?other=false&utm=true`
+     * `https://new.domain.com/test/share?utm=true`
 
      |
 
