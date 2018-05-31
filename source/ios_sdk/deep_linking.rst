@@ -29,7 +29,7 @@ Automated Installation
 Talkable provides the installation script that will add Talkable and GetSocial SDK to your project as well as perform all
 necessary configuration.
 
-1. Download the installation script: [link to talkable.sh] and unzip it into your project's root folder.
+1. Download `the installation script`_ and unzip it into your project's root folder.
 2. Open your XCode project settings, select the target you want to modify and go to *Build Phases* tab.
 3. Create a new *Run Script* phase with content:
 
@@ -117,5 +117,6 @@ Alternatively you can add Talkable and GetSocial frameworks to your project manu
   You don't need to include or call GetSocial framework explicitly for deep linking to work.
   TalkableSDK will detect GetSocial framework if it's present and handle deep linking automatically.
 
+.. _`the installation script`: https://talkable-downloads.s3.amazonaws.com/ios-sdk/talkable.sh
 .. _`TalkableSDK v1.5.0`: https://talkable-downloads.s3.amazonaws.com/ios-sdk/talkable_ios_sdk-1.5.0.zip
 .. _`GetSocial iOS SDK Manual Integration Guide`: https://docs.getsocial.im/knowledge-base/manual-integration/ios/
