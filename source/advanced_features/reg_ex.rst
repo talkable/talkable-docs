@@ -93,7 +93,7 @@ formats:
      Matched URLs (example):
 
      * `http://site.com/test`
-     * `https://new.domain.com/test`
+     * `https://site.com/test/`
 
      |
 
