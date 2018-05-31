@@ -75,7 +75,7 @@ formats:
 
      .. code-block:: text
 
-       /share?utm=true
+       /share.+?utm=true
 
      Matched URLs (example):
 
@@ -84,12 +84,11 @@ formats:
 
      |
 
-   * Match only the “site.com/test” URL. No need to backslash slashes. Also, don’t include
-     protocol to match both http & https:
+   * Match “site.com/test” exact URL with any query parameters:
 
      .. code-block:: text
 
-       site.com/test(/)?$
+       site.com/test/?$
 
      Matched URLs (example):
 
