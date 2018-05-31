@@ -84,7 +84,7 @@ formats:
 
      |
 
-   * Match “site.com/test” exact URL with any query parameters:
+   * Match “site.com/test” exact URL without any query parameters:
 
      .. code-block:: text
 
@@ -94,7 +94,6 @@ formats:
 
      * `http://site.com/test`
      * `https://new.domain.com/test`
-     * `http://www.site.com/test?utm=test`
 
      |
 
