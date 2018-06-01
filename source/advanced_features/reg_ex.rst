@@ -54,9 +54,11 @@ formats:
 
 2. **Regular expression** (regex for short). If the regex checkbox is turned **on** the
    regex mode is used. In this mode you are controlling full page URL, including the
-   domain part (unlike the relative match mode). If no query parameters set Talkable will
-   ignore query parameters of the original URL in a browser. Don’t escape with backslash,
-   the pattern is already escaped for you. See examples below:
+   domain part (unlike the relative match mode). If no query parameters were set Talkable
+   will ignore query parameters of the original URL in a browser.
+
+   Use https://regex101.com to test placement criteria before applying it. Note: slashes
+   are already escaped, no need to backslash them. See examples below:
 
    * Match URLs containing “/share” path with optional query parameters:
 
@@ -71,16 +73,16 @@ formats:
 
      |
 
-   * Match “/share” path containing “utm=true” query parameter:
+   * Match URLs ending with “/share” and containing “utm=true” query parameter:
 
      .. code-block:: text
 
-       /share.+utm=true
+       /share/?\?(.+)?utm=true
 
      Matched URLs (example):
 
      * `http://site.com/share?other=false&utm=true`
-     * `https://new.domain.com/test/share?utm=true`
+     * `https://new.domain.com/test/share/?utm=true&other=false`
 
      |
 
