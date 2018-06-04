@@ -58,7 +58,10 @@ formats:
    will ignore query parameters of the original URL in a browser.
 
    Use https://regex101.com to test placement criteria before applying it. Note: slashes
-   are already escaped, no need to backslash them. See examples below:
+   are already escaped, no need to backslash them. When testing the regex criteria, change
+   delimiters to backqoutes
+   (`screenshot <https://talkable-screenshots.s3.amazonaws.com/Re_talkabletalkable-docs_PR-9264_Write_truthful_doc_for_campaign_placements_criteria_set_up_114_-_iurevychgmail.com_-_2018-06-04_15-40-09.png>`_).
+   See examples below:
 
    * Match URLs containing “/share” path with optional query parameters:
 
@@ -77,7 +80,7 @@ formats:
 
      .. code-block:: text
 
-       /share/?\?(.+)?utm=true
+       /share/?\?(.+&)?utm=true
 
      Matched URLs (example):
 
@@ -90,7 +93,7 @@ formats:
 
      .. code-block:: text
 
-       site.com/test/?$
+       site\.com/test/?$
 
      Matched URLs (example):
 
