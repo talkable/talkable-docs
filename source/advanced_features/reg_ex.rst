@@ -4,14 +4,14 @@
 Setting up Campaign Placement criteria
 ======================================
 
-Talkable allows setting up Campaign Placement “Shown on” / “Hidden on” criteria in two
+Talkable allows setting up of Campaign Placement “Shown on” / “Hidden on” criteria in two
 formats:
 
-1. **Relative match**. If the regex checkbox is turned **off** the relative match mode is
+1. **Relative match**. If the regex checkbox is turned **off**, the relative match mode is
    used. “Relative” means it only matches the `pathname` of a URL and query parameters,
-   without the domain part. In this mode site URL is always set and you only need to set a
-   relative path. The criteria will only trigger when the relative path is matched (and
-   query parameters when provided). Here are some examples:
+   without the domain part. In this mode, the site URL is always set and you only need to
+   set a relative path. The criteria will only trigger when the relative path is matched
+   (and query parameters when provided). Here are some examples:
 
    * Match only the homepage with optional query parameters:
 
@@ -53,7 +53,7 @@ formats:
      |
 
 2. **Regular expression** (regex for short). If the regex checkbox is turned **on** the
-   regex mode is used. In this mode you are controlling full page URL, including the
+   regex mode is used. In this mode you are controlling the full page URL, including the
    domain part (unlike the relative match mode). If no query parameters were set Talkable
    will ignore query parameters of the original URL in a browser.
 
