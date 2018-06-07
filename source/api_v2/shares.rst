@@ -84,7 +84,7 @@ Sample response:
         "incentive_type": "discount_coupon",
         "incentive_description": "shared coupon \"C1383-8321\" for $10 off",
         "incentive_custom_description": null,
-        "amount": null,
+        "amount": 10.0,
         "coupon_code": "C1383-8321",
         "status": "Paid"
       }
