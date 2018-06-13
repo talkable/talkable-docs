@@ -49,7 +49,7 @@ Sample response:
            "reason": "shared",
            "incentive_type": "discount_coupon",
            "incentive_description": "shared coupon \"10_OFF\" for $10.00 off",
-           "amount": null,
+           "amount": 10.0,
            "coupon_code": "10_OFF",
            "status": "Paid"
          },
