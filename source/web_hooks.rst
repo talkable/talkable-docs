@@ -111,3 +111,5 @@ See available web hooks on the navigation sidebar.
       Post Share <web_hooks/post_share>
       Advocate Signup <web_hooks/offer_signup>
       Friend Email Gating <web_hooks/claim_signup>
+      Unsubscribe <web_hooks/unsubscribe>
+      Check Unsubscribe <web_hooks/check_unsubscribe>
