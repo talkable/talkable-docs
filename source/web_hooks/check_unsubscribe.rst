@@ -23,27 +23,25 @@ aimed at checking if the email is also valid on merchant side.
 
    <h2>Payload parameters provided </h2>
 
-* **for_<view category>** — subhash of parameters describing the person
+* **campaign** — subhash of parameters describing the campaign
 
-  * **campaign** — subhash of parameters describing the campaign
+  * **id** — unique campaign ID
+  * **cached_slug** — unique SEO friendly ID
+  * **type** — either *"StandaloneCampaign"* or *"DoubleSidedDealCampaign"*
+  * **tag_names** — array of campaign’s tags
 
-    * **id** — unique campaign ID
-    * **cached_slug** — unique SEO friendly ID
-    * **type** — either *"StandaloneCampaign"* or *"DoubleSidedDealCampaign"*
-    * **tag_names** — array of campaign’s tags
+* **recipient** — subhash of parameters describing the recipient
 
-  * **recipient** — subhash of parameters describing the recipient
+  * **first_name** — recipient's first name
+  * **last_name** — recipient's last name
+  * **email** — recipient's email address
+  * **username** — recipient's username
+  * **unsubscribed_at** — date recipient has unsubscribed
+  * **opted_in_at** — date recipient has subscribed
+  * **sub_choice** — subscription choice
+  * **custom_properties** — hash of recipient’s custom properties (optional)
 
-    * **first_name** — recipient's first name
-    * **last_name** — recipient's last name
-    * **email** — recipient's email address
-    * **username** — recipient's username
-    * **unsubscribed_at** — date recipient has unsubscribed
-    * **opted_in_at** — date recipient has subscribed
-    * **sub_choice** — subscription choice
-    * **custom_properties** — hash of recipient’s custom properties (optional)
-
-  * **email_type** — described view category
+* **email_type** — described view category
 
 .. raw:: html
 
@@ -65,24 +63,22 @@ View category can be one of the following:
 .. code-block:: javascript
 
    {
-     "for_friend_rewards_paid": {
-       "campaign": {
-         "id": 350256053,
-         "type": "StandaloneCampaign",
-         "cached_slug": "affiliate-campaign-test",
-         "tag_names": ["default"]
-       },
-       "recipient": {
-         "first_name": "Bob",
-         "last_name": "Smith",
-         "email": "friend@example.com",
-         "username": "username",
-         "unsubscribed_at": null,
-         "opted_in_at": "2014-08-13T11:14:08.835-07:00",
-         "sub_choice": true
-       },
-       "email_type": "friend_rewards_paid"
-     }
+     "campaign": {
+       "id": 350256053,
+       "type": "StandaloneCampaign",
+       "cached_slug": "affiliate-campaign-test",
+       "tag_names": ["default"]
+     },
+     "recipient": {
+       "first_name": "Bob",
+       "last_name": "Smith",
+       "email": "friend@example.com",
+       "username": "username",
+       "unsubscribed_at": null,
+       "opted_in_at": "2014-08-13T11:14:08.835-07:00",
+       "sub_choice": true
+     },
+     "email_type": "friend_rewards_paid"
    }
 
 .. raw:: html
@@ -91,7 +87,7 @@ View category can be one of the following:
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"for_friend_rewards_paid":{"campaign":{"id": 350256053,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"recipient":{"first_name":"Bob","last_name":"Smith","email":"friend@example.com","username":"username","unsubscribed_at":null,"opted_in_at":"2014-08-13T11:14:08.835-07:00","sub_choice":true},"email_type":"friend_rewards_paid"}}' <url>
+   curl --data 'key=<key>&payload={"campaign":{"id": 350256053,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"recipient":{"first_name":"Bob","last_name":"Smith","email":"friend@example.com","username":"username","unsubscribed_at":null,"opted_in_at":"2014-08-13T11:14:08.835-07:00","sub_choice":true},"email_type":"friend_rewards_paid"}' <url>
 
 .. container:: hidden
 
