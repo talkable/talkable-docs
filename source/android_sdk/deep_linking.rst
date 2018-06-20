@@ -1,3 +1,4 @@
+.. _android_sdk/deep_linking:
 .. include:: /partials/common.rst
 
 Deep Linking
