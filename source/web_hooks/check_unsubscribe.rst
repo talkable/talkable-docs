@@ -9,7 +9,7 @@ aimed at checking if the email is also valid on merchant side.
 
 .. important::
 
-   If this web hook is used, the response returned by merchant
+   If this web hook is used, the response JSON returned by merchant
    must contain the following fields:
 
    .. code-block:: javascript
@@ -32,10 +32,10 @@ aimed at checking if the email is also valid on merchant side.
 
 * **recipient** — subhash of parameters describing the recipient
 
-  * **first_name** — recipient's first name
-  * **last_name** — recipient's last name
-  * **email** — recipient's email address
-  * **username** — recipient's username
+  * **first_name** — recipient’s first name
+  * **last_name** — recipient’s last name
+  * **email** — recipient’s email address
+  * **username** — recipient’s username
   * **unsubscribed_at** — date recipient has unsubscribed
   * **opted_in_at** — date recipient has subscribed
   * **sub_choice** — subscription choice

@@ -12,14 +12,14 @@ Triggered when a person unsubscribes.
 
 * **person** — subhash of parameters describing the person
 
-  * **first_name** — friend's first name
-  * **last_name** — friend's last name
-  * **email** — friend’s email address
-  * **username** — friend’s username
-  * **unsubscribed_at** — date friend has unsubscribed
-  * **opted_in_at** — date friend has subscribed
+  * **first_name** — person’s first name
+  * **last_name** — person’s last name
+  * **email** — person’s email address
+  * **username** — person’s username
+  * **unsubscribed_at** — date person has unsubscribed
+  * **opted_in_at** — date person has subscribed
   * **sub_choice** — subscription choice
-  * **custom_properties** — hash of friend’s custom properties (optional)
+  * **custom_properties** — hash of person’s custom properties (optional)
 
 .. raw:: html
 
@@ -31,7 +31,7 @@ Triggered when a person unsubscribes.
      "person": {
        "first_name": "Bob",
        "last_name": "Smith",
-       "email": "friend@example.com",
+       "email": "person@example.com",
        "username": "username",
        "unsubscribed_at": "2015-08-13T11:14:08.835-07:00",
        "opted_in_at": "2014-08-13T11:14:08.835-07:00",
