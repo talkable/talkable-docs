@@ -1,4 +1,5 @@
-.. _android_sdk/deep_linking:
+:orphan:
+
 .. include:: /partials/common.rst
 
 Deep Linking
