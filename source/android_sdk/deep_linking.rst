@@ -19,14 +19,14 @@ your Android app.
 Application Attributes
 ----------------------
 
-To enable the deep linking, you should provide us *Package name* and
+To enable the deep linking, you should provide us with *Package name* and
 *Signing-certificate fingerprints*.
 
 *Package name* is the ``applicationId`` in your app-level ``build.gradle`` file.
 
 *Signing-certificate fingerprints* is a list of SHA-256 hashes of the certificates
 you use to sign your application. You should provide fingerprints of all keys
-you use to sign app. Here is a link to the tutorial of getting them:
+you use to sign the app. This tutorial tells you how to do this:
 `Finding SHA256 fingerprint for Android signing keys`_
 
 Configure SDK and Dependencies
@@ -57,7 +57,7 @@ Talkable SDK is distributed as an Android Library in ``aar`` format.
           ...
       }
 
-3. Add GetSocial Maven Repository to the list of project dependencies
+3. Add GetSocial Maven Repository to the list of project dependency
    repositories inside your top-level ``build.gradle``:
 
    .. code-block:: groovy
@@ -75,7 +75,7 @@ Configure Manifest
 
 Open your ``AndroidManifest.xml`` file and configure it by following next steps:
 
-1. SetupA Talkable credentials as a meta-data inside the ``<application>`` tag
+1. Specify Talkable credentials as a meta-data inside the ``<application>`` tag
    in the following format:
 
    .. code-block:: xml
@@ -88,7 +88,7 @@ Open your ``AndroidManifest.xml`` file and configure it by following next steps:
            ...
        </application>
 
-2. Setup GetSocial App Id as a meta-data inside the ``<application>`` tag:
+2. Specify GetSocial App ID as a meta-data inside the ``<application>`` tag:
 
    .. code-block:: xml
 
@@ -116,7 +116,7 @@ Open your ``AndroidManifest.xml`` file and configure it by following next steps:
       </application>
 
 4. Configure Install Referrer Receiver as the *first* receiver for ``INSTALL_REFERRER``
-   inside inside the ``<application>`` tag:
+   inside the ``<application>`` tag:
 
    .. code-block:: xml
 
@@ -130,8 +130,8 @@ Open your ``AndroidManifest.xml`` file and configure it by following next steps:
           ...
       </application>
 
-5. Add following intent filter to the activity, that should be opened from the
-   deep link, inside the correspond tag:
+5. Add the following intent filter to the activity, that should be opened from the
+   deep link, inside the corresponding tag:
 
    .. code-block:: xml
 
@@ -160,10 +160,10 @@ Open your ``AndroidManifest.xml`` file and configure it by following next steps:
       </activity>
 
 6. Setup App Links for Android 6+. App Links (supported on Android 6.0
-   (API level 23) and higher) allow taking the user directly to the app
+   (API level 23) and higher) allow the user to be taken directly to the app
    on the link click without the browser window in the middle. Check
    the official `Android App Links docs`_ for more details.
-   To set up them add intent filter with the following host configuration
+   To set them up add intent filter with the following host configuration
    to the activity that must be opened from the deep link:
 
    .. code-block:: xml
