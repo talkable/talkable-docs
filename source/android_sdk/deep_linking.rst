@@ -14,7 +14,8 @@ your Android app.
 
       Credentials, mentioned in this document (``YOUR_SITE_SLUG``, ``YOUR_TALKABLE_PUBLIC_API_KEY``,
       ``YOUR_GETSOCIAL_APP_ID``, ``YOUR_LINK_DOMAIN_PREFIX``), will be provided
-      with the document.
+      with the document. Make sure to replace corresponding placeholders
+      in examples with the providen values.
 
 Application Attributes
 ----------------------
@@ -83,8 +84,8 @@ Open your ``AndroidManifest.xml`` file and configure it by following next steps:
        <application>
            ...
            <meta-data
-               android:name="tkbl-api-key-{{YOUR_SITE_SLUG}}"
-               android:value="{{YOUR_TALKABLE_PUBLIC_API_KEY}}" />
+               android:name="tkbl-api-key-YOUR_SITE_SLUG"
+               android:value="YOUR_TALKABLE_PUBLIC_API_KEY" />
            ...
        </application>
 
@@ -96,7 +97,7 @@ Open your ``AndroidManifest.xml`` file and configure it by following next steps:
           ...
           <meta-data
               android:name="im.getsocial.sdk.AppId"
-              android:value="{{YOUR_GETSOCIAL_APP_ID}}" />
+              android:value="YOUR_GETSOCIAL_APP_ID" />
           ...
       </application>
 
@@ -108,7 +109,7 @@ Open your ``AndroidManifest.xml`` file and configure it by following next steps:
       <application>
           ...
           <provider
-              android:authorities="{{YOUR_GETSOCIAL_APP_ID}}.AutoInitSdkContentProvider"
+              android:authorities="YOUR_GETSOCIAL_APP_ID.AutoInitSdkContentProvider"
               android:exported="false"
               android:enabled="true"
               android:name="im.getsocial.sdk.AutoInitSdkContentProvider" />
@@ -139,12 +140,12 @@ Open your ``AndroidManifest.xml`` file and configure it by following next steps:
           ...
          <intent-filter>
              <action android:name="android.intent.action.VIEW"/>
-         
+
              <category android:name="android.intent.category.DEFAULT"/>
              <category android:name="android.intent.category.BROWSABLE"/>
-         
+
              <data
-                 android:host="{{YOUR_GETSOCIAL_APP_ID}}"
+                 android:host="YOUR_GETSOCIAL_APP_ID"
                  android:scheme="getsocial"/>
          </intent-filter>
 
@@ -154,7 +155,7 @@ Open your ``AndroidManifest.xml`` file and configure it by following next steps:
              <category android:name="android.intent.category.DEFAULT" />
              <category android:name="android.intent.category.BROWSABLE" />
 
-             <data android:scheme="tkbl-{{YOUR_SITE_SLUG}}" />
+             <data android:scheme="tkbl-YOUR_SITE_SLUG" />
          </intent-filter>
          ...
       </activity>
@@ -174,8 +175,8 @@ Open your ``AndroidManifest.xml`` file and configure it by following next steps:
              <action android:name="android.intent.action.VIEW" />
              <category android:name="android.intent.category.DEFAULT" />
              <category android:name="android.intent.category.BROWSABLE" />
-             <data android:scheme="https" android:host="{{YOUR_LINK_DOMAIN_PREFIX}}.gsc.im" />
-             <data android:scheme="https" android:host="{{YOUR_LINK_DOMAIN_PREFIX}}-gsalt.gsc.im" />
+             <data android:scheme="https" android:host="YOUR_LINK_DOMAIN_PREFIX.gsc.im" />
+             <data android:scheme="https" android:host="YOUR_LINK_DOMAIN_PREFIX-gsalt.gsc.im" />
          </intent-filter>
          ...
       </activity>
