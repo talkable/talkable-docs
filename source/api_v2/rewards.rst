@@ -49,7 +49,21 @@ Sample response:
            "reason": "shared",
            "incentive_type": "discount_coupon",
            "incentive_description": "shared coupon \"10_OFF\" for $10.00 off",
+           "incentive_custom_description": null,
            "amount": 10.0,
+           "coupon": {
+             "id": 95012,
+             "code": "10_OFF",
+             "active": true,
+             "valid_until": null,
+             "single_use": true,
+             "used": false,
+             "usages": 0,
+             "amount": 10.0,
+             "percentage_discount": false,
+             "description": "$10.00",
+             "expires_at": null
+           },
            "coupon_code": "10_OFF",
            "status": "Paid"
          },
@@ -59,6 +73,7 @@ Sample response:
            "incentive_type": "rebate",
            "incentive_description": "$10.00 back",
            "amount": 10.0,
+           "coupon": null,
            "coupon_code": null,
            "status": "Paid"
          }
