@@ -85,6 +85,19 @@ Sample response:
         "incentive_description": "shared coupon \"C1383-8321\" for $10 off",
         "incentive_custom_description": null,
         "amount": 10.0,
+        "coupon": {
+          "id": 951,
+          "code": "C1383-8321",
+          "active": true,
+          "valid_until": null,
+          "single_use": true,
+          "used": false,
+          "usages": 0,
+          "amount": 10.0,
+          "percentage_discount": false,
+          "description": "$10",
+          "expires_at": null
+        },
         "coupon_code": "C1383-8321",
         "status": "Paid"
       }
