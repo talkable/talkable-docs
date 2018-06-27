@@ -1,4 +1,4 @@
-.. _ios_sdk/custom_deep_linking:
+.. _ios_sdk/deep_linking:
 .. include:: /partials/common.rst
 
 Deep linking integration

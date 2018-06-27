@@ -26,5 +26,5 @@ Contents:
    ios_sdk/integration
    ios_sdk/api_integration
    ios_sdk/advanced
-   ios_sdk/custom_deep_linking
+   ios_sdk/deep_linking
    ios_sdk/example
