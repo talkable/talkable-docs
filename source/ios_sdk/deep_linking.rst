@@ -17,15 +17,15 @@ Use your deep linking service dashboard to create a deep link and connect it to 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Use the deep link URL as Friend Destination URL in your Talkable campaign,
-appending the following GET parameter: ``?talkable_visitor_uuid={{visitor_uuid}}``.
+appending following GET parameters: ``?talkable_visitor_uuid={{ visitor_uuid }}&talkable_visitor_offer_id={{ friend_offer.id }}``.
 
 The end result should look like one of the following examples:
 
-.. code-block:: bash
+.. code-block:: none
 
-    https://your-app.gsc.im/1/your-link-name?talkable_visitor_uuid={{visitor_uuid}}
+    https://your-app.gsc.im/1/your-link-name?talkable_visitor_uuid={{ visitor_uuid }}&talkable_visitor_offer_id={{ friend_offer.id }}
 
-    https://example.app.link/fzmLEhobLD?talkable_visitor_uuid={{visitor_uuid}}
+    https://example.app.link/fzmLEhobLD?talkable_visitor_uuid={{ visitor_uuid }}&talkable_visitor_offer_id={{ friend_offer.id }}
 
 .. note::
 
