@@ -1,8 +1,8 @@
 .. _ios_sdk/deep_linking:
 .. include:: /partials/common.rst
 
-Deep linking integration
-========================
+Deep Linking
+============
 
 Talkable iOS SDK supports third party deep linking providers such as GetSocial, Branch.io, and Firebase. Talkable can use deep linking functionality to track app installations and reward your advocates and friends for installing your mobile app on their phones.
 
