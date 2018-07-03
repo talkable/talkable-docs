@@ -19,6 +19,11 @@ Use your deep linking service dashboard to create a deep link and connect it to 
 Use the deep link URL as Friend Destination URL in your Talkable campaign,
 appending following GET parameters: ``?talkable_visitor_uuid={{ visitor_uuid }}&talkable_visitor_offer_id={{ friend_offer.id }}``.
 
+.. note::
+
+    To change the Friend Destination URL, navigate to the Campaigns screen in your Talkable admin panel.
+    Select the desired campaign, then go to the Rules |rarr| Advanced section.
+
 The end result should look like one of the following examples:
 
 .. code-block:: none
@@ -33,8 +38,8 @@ The end result should look like one of the following examples:
     This functionality is used to pass friend's identifying information to the TalkableSDK in your iOS app.
     To use this functionality with Firebase, refer to this document: `Manually constructing a Dynamic Link URL`_.
 
-3. Pass deep linking params to TalkableSDK
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3. Pass deep linking params to the Talkable SDK
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Retrieve deep linking params as described in your deep linking provider's documentation
 and pass these params to the Talkable SDK using ``handleOpenURL:`` or ``handleURLParams:`` method.
@@ -49,10 +54,20 @@ Use ``handleURLParams:`` method if you have a ``NSDictionary`` with params in a 
         [[Talkable manager] handleURLParams:params];
     }];
 
+.. note::
+
+    Most deep linking services will add special params to your deep link to indicate whether the app was installed
+    on this device for the first time, reinstalled or simply launched. You can use these params to register installs
+    only when desired conditions are met.
+
+.. code-block:: objc
+
     // For GetSocial
 
     [GetSocial referralDataWithSuccess:^(GetSocialReferralData * _Nullable referralData) {
-        [[Talkable manager] handleURLParams:[referralData linkParams]];
+        if ([referralData isFirstMatch]) {
+            [[Talkable manager] handleURLParams:[referralData linkParams]];
+        }
     } failure:^(NSError * _Nonnull error) {}];
 
 Use ``handleOpenURL:`` method if you handle deep link as ``NSURL`` using the standard
