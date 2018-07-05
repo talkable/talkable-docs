@@ -24,7 +24,7 @@ To use deep linking with Talkable campaigns, simply use your deep link URL as yo
     This functionality is used to pass friend's identifying information to the Talkable SDK in your iOS app.
     To use this functionality with Firebase, refer to this document: `Manually constructing a Dynamic Link URL`_.
 
-3. Pass deep linking params to the Talkable SDK
+2. Pass deep linking params to the Talkable SDK
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Retrieve deep linking params as described in your deep linking provider's documentation
