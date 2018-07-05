@@ -8,34 +8,20 @@ Talkable iOS SDK supports third party deep linking providers such as GetSocial, 
 
 Deep linking services provide a special referral link that can be given to Advocates to be shared with their friends. Once opened on a Friend's mobile device, this link will not only redirect them to App Store to install the app, but also track that the app was installed using a referral link. The deep link can also be used to send a friend to a specific place in the app once it's installed and opened for the first time, show them personalized messages, and more.
 
-1. Create a deep link
-~~~~~~~~~~~~~~~~~~~~~
+1. Configure your Talkable campaign
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use your deep linking service dashboard to create a deep link and connect it to your app. Copy the deep link URL.
+To use deep linking with Talkable campaigns, simply use your deep link URL as your Talkable Site URL.
 
-2. Set up your Talkable campaign
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Use the deep link URL as Friend Destination URL in your Talkable campaign,
-appending following GET parameters: ``?talkable_visitor_uuid={{ visitor_uuid }}&talkable_visitor_offer_id={{ friend_offer.id }}``.
+.. image:: /_static/img/deep_linking/site_url.png
 
 .. note::
 
-    To change the Friend Destination URL, navigate to the Campaigns screen in your Talkable admin panel.
-    Select the desired campaign, then go to the Rules |rarr| Advanced section.
+    If you have configured a custom Friend Destination URL for your campaign, make sure the following GET parameters
+    are present in the final URL: ``?talkable_visitor_uuid={{ visitor_uuid }}&talkable_visitor_offer_id={{ friend_offer.id }}``.
 
-The end result should look like one of the following examples:
-
-.. code-block:: none
-
-    https://your-app.gsc.im/1/your-link-name?talkable_visitor_uuid={{ visitor_uuid }}&talkable_visitor_offer_id={{ friend_offer.id }}
-
-    https://example.app.link/fzmLEhobLD?talkable_visitor_uuid={{ visitor_uuid }}&talkable_visitor_offer_id={{ friend_offer.id }}
-
-.. note::
-
-    All major deep linking providers support passing additional GET parameters to the deep link.
-    This functionality is used to pass friend's identifying information to the TalkableSDK in your iOS app.
+    All major deep linking providers support passing additional GET parameters with the deep link.
+    This functionality is used to pass friend's identifying information to the Talkable SDK in your iOS app.
     To use this functionality with Firebase, refer to this document: `Manually constructing a Dynamic Link URL`_.
 
 3. Pass deep linking params to the Talkable SDK
@@ -44,7 +30,7 @@ The end result should look like one of the following examples:
 Retrieve deep linking params as described in your deep linking provider's documentation
 and pass these params to the Talkable SDK using ``handleOpenURL:`` or ``handleURLParams:`` method.
 
-Use ``handleURLParams:`` method if you have a ``NSDictionary`` with params in a custom handler (Branch.io, GetSocial).
+Use ``handleURLParams:`` method if you have a ``NSDictionary`` with params passed to the deep link handler block (Branch.io, GetSocial).
 
 .. code-block:: objc
 
@@ -56,7 +42,7 @@ Use ``handleURLParams:`` method if you have a ``NSDictionary`` with params in a 
 
 .. note::
 
-    Most deep linking services will add special params to your deep link to indicate whether the app was installed
+    Most deep linking services provide additional parameters in the deep link handler to indicate whether the app was installed
     on this device for the first time, reinstalled or simply launched. You can use these params to register installs
     only when desired conditions are met.
 
@@ -88,4 +74,4 @@ You can then use :ref:`retrieveRewardsWithHandler: <ios_sdk/api_integration>` me
 to a corresponding :ref:`notification <ios_sdk/advanced/notifications>`.
 
 
-.. _Manually constructing a Dynamic Link URL: https://firebase.google.com/docs/dynamic-links/create-manually
+.. _`Manually constructing a Dynamic Link URL`: https://firebase.google.com/docs/dynamic-links/create-manually
