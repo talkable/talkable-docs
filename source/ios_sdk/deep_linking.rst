@@ -4,7 +4,7 @@
 Deep Linking
 ============
 
-Talkable iOS SDK supports third party deep linking providers such as GetSocial, Branch.io, and Firebase. Talkable can use deep linking functionality to track app installations and reward your advocates and friends for installing your mobile app on their phones.
+Talkable can work with third party deep linking providers such as GetSocial, Branch.io, and Firebase. Talkable can use deep linking functionality to track app installations and reward your advocates and friends for installing your mobile app on their phones.
 
 Deep linking services provide a special referral link that can be given to Advocates to be shared with their friends. Once opened on a Friend's mobile device, this link will not only redirect them to App Store to install the app, but also track that the app was installed using a referral link. The deep link can also be used to send a friend to a specific place in the app once it's installed and opened for the first time, show them personalized messages, and more.
 
