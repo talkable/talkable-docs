@@ -28,16 +28,22 @@ To use deep linking with Talkable campaigns, simply use your deep link URL as yo
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Retrieve deep linking params as described in your deep linking provider's documentation
-and pass these params to the Talkable SDK using ``TalkableDeepLinking.track()`` method.
+and pass these params to the Talkable SDK using the ``TalkableDeepLinking.track()`` method.
+This method accepts a single argument of following types:
 
-.. code-block:: objc
+* ``JSONObject`` (Branch.io)
+* ``Map<String, String>`` (GetSocial)
+* ``android.net.Uri`` (Firebase)
+* ``android.app.Activity`` (native deep linking)
+
+.. code-block:: java
 
     // For Branch.io
 
     Branch.getInstance().initSession(new Branch.BranchReferralInitListener() {
         @Override
         public void onInitFinished(JSONObject referringParams, BranchError error) {
-
+            TalkableDeepLinking.track(referringParams);
         }
     }, this.getIntent().getData(), this);
 
@@ -47,32 +53,45 @@ and pass these params to the Talkable SDK using ``TalkableDeepLinking.track()`` 
     on this device for the first time, reinstalled or simply launched. You can use these params to register installs
     only when desired conditions are met.
 
-.. code-block:: objc
+.. code-block:: java
 
     // For GetSocial
 
-    [GetSocial referralDataWithSuccess:^(GetSocialReferralData * _Nullable referralData) {
-        if ([referralData isFirstMatch]) {
-            [[Talkable manager] handleURLParams:[referralData linkParams]];
+    GetSocial.getReferralData(new FetchReferralDataCallback() {
+        @Override
+        public void onSuccess(@Nullable ReferralData referralData) {
+            if(referralData != null && referralData.isFirstMatch()) {
+                TalkableDeepLinking.track(referralData.getLinkParams().getStringValues());
+            }
         }
-    } failure:^(NSError * _Nonnull error) {}];
 
-Use ``handleOpenURL:`` method if you handle deep link as ``NSURL`` using the standard
-``application:openURL:options:`` method (Firebase).
+        @Override
+        public void onFailure(GetSocialException error) {}
+    }
 
-.. code-block:: objc
+.. code-block:: java
 
     // For Firebase
 
-    - (BOOL)application:(UIApplication *)app
-                openURL:(NSURL *)url
-                options:(NSDictionary<NSString *, id> *)options {
-                    [[Talkable manager] handleOpenURL:url];
+    FirebaseDynamicLinks.getInstance()
+        .getDynamicLink(getIntent())
+        .addOnSuccessListener(this, new OnSuccessListener<PendingDynamicLinkData>() {
+            @Override
+            public void onSuccess(PendingDynamicLinkData pendingDynamicLinkData) {
+                // Get deep link from result (may be null if no link is found)
+                Uri deepLink = null;
+                if (pendingDynamicLinkData != null) {
+                    deepLink = pendingDynamicLinkData.getLink();
                 }
 
-Calling either of these methods will register the app installation event in Talkable and complete the referral cycle.
-You can then use the :ref:`retrieveRewardsWithHandler: <ios_sdk/api_integration>` method to check for rewards or subscribe
-to a corresponding :ref:`notification <ios_sdk/advanced/notifications>`.
+                if (deepLink != null) {
+                    TalkableDeepLinking.track(deepLink);
+                }
+            }
+        })
+
+Calling the ``TalkableDeepLinking.track()`` method will register the app installation event in Talkable and complete the referral cycle.
+You can then use the :ref:`TalkableApi.retrieveRewards() <android_sdk/api>` method to check for rewards.
 
 
 .. _`Manually constructing a Dynamic Link URL`: https://firebase.google.com/docs/dynamic-links/create-manually
