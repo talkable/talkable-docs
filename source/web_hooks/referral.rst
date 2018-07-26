@@ -4,7 +4,7 @@
 Referral Web Hook
 =================
 
-Triggered when there is a new referral in Talkable.
+Triggered whenever a referral status becomes “Approved” or “Unblocked”.
 
 .. raw:: html
 
