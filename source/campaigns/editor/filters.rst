@@ -623,7 +623,7 @@ The values are in pixels.
    {{ coupon.code | barcode_image: xdim: 3 }}
    {{ coupon.code | barcode_image: height: 200, xdim: 3 }}
 
-Returns a ``URL`` string.
+Returns a URL string.
 
 |hr|
 
