@@ -605,8 +605,7 @@ SCSS:
 |hr|
 
 barcode\_image
-............
-
+..............
 
 Represents any ``string`` as barcode image in png.
 This filter strictly follows GS1-128 specification: https://en.wikipedia.org/wiki/GS1-128.
