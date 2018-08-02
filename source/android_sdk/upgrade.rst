@@ -6,6 +6,13 @@ Upgrade
 
 Sometimes we need you to upgrade existing integration to use our latest features.
 
+0.5.5
+-----
+
+Added support for :ref:`third party deep linking providers <android_sdk/custom_deep_linking>`.
+
+Improved authentication and error handling for API requests.
+
 0.5.4
 -----
 
