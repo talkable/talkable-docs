@@ -614,7 +614,7 @@ It may take two arguments: ``height`` and ``xdim`` (thickness of the thinnest li
 
 Default values are ``100`` for ``height`` and ``1`` for ``xdim``.
 
-The values are in ``pixels``.
+The values are in pixels.
 
 .. code-block:: liquid
 
