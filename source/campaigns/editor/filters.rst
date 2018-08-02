@@ -604,6 +604,29 @@ SCSS:
 
 |hr|
 
+barcode\_image
+..............
+
+Represents any ``string`` as barcode image in png.
+This filter strictly follows GS1-128 specification: https://en.wikipedia.org/wiki/GS1-128.
+
+It may take two arguments: ``height`` and ``xdim`` (thickness of the thinnest line).
+
+Default values are ``100`` for ``height`` and ``1`` for ``xdim``.
+
+The values are in pixels.
+
+.. code-block:: liquid
+
+   {{ coupon.code | barcode_image }}
+   {{ coupon.code | barcode_image: height: 200 }}
+   {{ coupon.code | barcode_image: xdim: 3 }}
+   {{ coupon.code | barcode_image: height: 200, xdim: 3 }}
+
+Returns a URL string.
+
+|hr|
+
 base64\_encode
 ..............
 
