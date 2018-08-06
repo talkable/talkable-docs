@@ -72,7 +72,6 @@ it is getting paid after Referral is approved.
   * **order_number** - unique identifier of advocate’s order
   * **subtotal** - advocate’s order subtotal
   * **customer_id** - unique identifier of advocate
-  * **order_date** - advocate’s order date in ISO 8601 format
 
 * **friend_origin** - subhash of data related to the friend event
 
@@ -85,7 +84,6 @@ it is getting paid after Referral is approved.
   * **order_number** - unique identifier of friend’s order
   * **subtotal** - friend’s order subtotal
   * **customer_id** - unique identifier of friend
-  * **order_date** - friend’s order date in ISO 8601 format
 
 .. raw:: html
 
@@ -125,7 +123,6 @@ Reward reason can be of 6 following general types.
        "order_number": "698175656",
        "subtotal": 18.76,
        "customer_id": "222388260",
-       "order_date": "2016-11-11T07:33:03.968-08:00",
        "coupon_code": "WHT86000"
      },
      "campaign": {
@@ -153,7 +150,6 @@ Reward reason can be of 6 following general types.
        "order_number": "698175656",
        "subtotal": 18.76,
        "customer_id": "222388260",
-       "order_date": "2016-11-11T07:33:03.968-08:00",
        "coupon_code": "WHT86000"
      },
      "friend_origin": {
@@ -162,7 +158,6 @@ Reward reason can be of 6 following general types.
        "order_number": "991701634",
        "subtotal": 25.39,
        "customer_id": "842273988",
-       "order_date": "2016-11-11T07:33:50.625-08:00",
        "coupon_code": "WHT75815"
      }
    }
@@ -173,7 +168,7 @@ Reward reason can be of 6 following general types.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"person":{"email":"referrer@example.com","first_name":"Bob","last_name":"Smith","sub_choice":true,"subscribed_at":"2014-08-13T11:14:08.835-07:00","unsubscribed_at":null},"origin":{"id":736588136,"type":"Purchase","order_number":"698175656","subtotal":18.76,"customer_id":"222388260","order_date":"2016-11-11T07:33:03.968-08:00","coupon_code":"WHT86000"},"campaign":{"id":146331555,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"reward":{"id":44089,"reason":"referrer","incentive_type":"rebate","incentive_description":"$10.00 back","amount":10.0,"coupon_code":null,"status":"Paid"},"advocate_origin":{"id":736588136,"type":"Purchase","order_number":"698175656","subtotal":18.76,"customer_id":"222388260","order_date":"2016-11-11T07:33:03.968-08:00","coupon_code":"WHT86000"},"friend_origin":{"id":82271,"type":"Purchase","order_number":"991701634","subtotal":25.39,"customer_id":"842273988","order_date":"2016-11-11T07:33:50.625-08:00","coupon_code":"WHT75815"}}' <url>
+   curl --data 'key=<key>&payload={"person":{"email":"referrer@example.com","first_name":"Bob","last_name":"Smith","sub_choice":true,"subscribed_at":"2014-08-13T11:14:08.835-07:00","unsubscribed_at":null},"origin":{"id":736588136,"type":"Purchase","order_number":"698175656","subtotal":18.76,"customer_id":"222388260","coupon_code":"WHT86000"},"campaign":{"id":146331555,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"reward":{"id":44089,"reason":"referrer","incentive_type":"rebate","incentive_description":"$10.00 back","amount":10.0,"coupon_code":null,"status":"Paid"},"advocate_origin":{"id":736588136,"type":"Purchase","order_number":"698175656","subtotal":18.76,"customer_id":"222388260","coupon_code":"WHT86000"},"friend_origin":{"id":82271,"type":"Purchase","order_number":"991701634","subtotal":25.39,"customer_id":"842273988","coupon_code":"WHT75815"}}' <url>
 
 .. container:: hidden
 

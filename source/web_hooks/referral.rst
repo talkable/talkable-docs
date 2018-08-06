@@ -139,7 +139,6 @@ Triggered whenever a referral status becomes “Approved” or “Unblocked”.
            "type": "Purchase",
            "order_number": 381177444,
            "subtotal": 13.43,
-           "order_date": "2014-08-14T02:01:16.824-07:00",
            "coupon_code": "WHT60000"
          }
        }
