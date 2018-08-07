@@ -82,10 +82,9 @@ You need to build `Origin` using one of examples below:
 
     Double subtotal = price * quantity; // Required
     String orderNumber = "123456"; // Required
-    Date orderDate = Calendar.getInstance().getTime(); // Required
     String[] coupons = {"EXAMPLE-CODE-1", "EXAMPLE-CODE-2"}; // Optional
 
-    Purchase origin = new Purchase(subtotal, orderNumber, orderDate, coupons);
+    Purchase origin = new Purchase(subtotal, orderNumber, coupons);
     origin.setCustomer(customer); // Required
     origin.addItem(item); // Optional
 
