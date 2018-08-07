@@ -211,9 +211,9 @@ With sharing links
      "site_slug": "my-store",
      "type": "AffiliateMember",
      "data": {
-       "email": "affiliate@example.com"
-     },
-     "sharing_channels": ["facebook", "twitter", "custom"]
+       "email": "affiliate@example.com",
+       "sharing_channels": ["facebook", "twitter", "custom"]
+     }
    }
 
 .. code-block:: bash
@@ -221,7 +221,7 @@ With sharing links
    curl -H "Content-Type: application/json" \
         -X POST \
         -u i9uil7nQgDjucCiTJu: \
-        -d '{"site_slug":"my-store","type":"AffiliateMember","data":{"email":"affiliate@example.com"},"sharing_channels":["facebook","twitter","custom"]}' \
+        -d '{"site_slug":"my-store","type":"AffiliateMember","data":{"email":"affiliate@example.com","sharing_channels":["facebook","twitter","custom"]}}' \
         https://www.talkable.com/api/v2/origins
 
 Sample response:
