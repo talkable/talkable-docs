@@ -126,6 +126,11 @@ to your Talkable account.
   Only change this setting if you need to connect your store to a different site in the Talkable dashboard.
   An incorrect value will prevent your campaigns from showing.
 
+  Changing the Site ID will invalidate the full page cache. Magento will display a warning message with
+  a link to the Cache Management page. Please follow this link and refresh the invalidated cache types.
+
+  .. image:: /_static/img/magento2/cache.jpg
+
 .. note::
 
   If you have activated the extension's integration, the Site ID will be prefilled
