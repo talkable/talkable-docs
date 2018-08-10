@@ -11,7 +11,7 @@ it is getting paid after Referral is approved.
 
 .. raw:: html
 
-   <h2>Payload parameters provided for Reward Web Hook</h2>
+   <h2>Payload parameters provided for Reward Webhook</h2>
 
 * **campaign** — subhash of parameters describing the campaign
 
