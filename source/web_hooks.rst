@@ -1,40 +1,65 @@
 .. _web_hooks:
 .. include:: /partials/common.rst
 
-Web Hooks
-#########
+Webhooks
+########
 
-Web hooks are "user-defined HTTP callbacks". They are usually triggered by some
-event on Talkable’s site.
+Webhooks are "user-defined HTTP callbacks" triggered by events on Talkable’s
+site. Subscribing to Talkable webhooks allows you to receive notifications about
+various events from Talkable, for example, when a Reward should be given, or
+when a Friend or Advocate opts in to an email newsletter subscription.
+
+After subscribing to a webhook, your app can execute code immediately after
+specific events occur in Talkable.
 
 http://en.wikipedia.org/wiki/Webhook
 
-Each web hook in Talkable is defined with an HTTP URL to deliver web hook data
+Each Webhook in Talkable is defined with an HTTP URL to deliver Webhook data
 (aka payload). This URL should be defined and implemented on the client’s site.
 
 .. raw:: html
 
-   <h2>Setup and Testing</h2>
+   <h2>Setup</h2>
 
-Testing web hooks can be accomplished with the help of RequestBin, an external
+.. image:: /_static/img/menu_webhooks_screenshot.png
+   :alt: Campaign Type - Invite,
+   :class: is-minimal
+
+1. Setup and test Talkable Webhooks by navigating to **Menu** then **Webhooks**
+2. Proceed to **Create New Webhook**
+3. Choose a Webhook from the dropdown and provide your endpoint URL
+4. From here, Send Sample, Edit, Delete or Create New
+5. Take note of your Talkable security key. This key will be the same for all
+   Talkable Webhooks on a given account. Talkable includes a key parameter in
+   Webhooks which are unique to each account as a way to identify Talkable as
+   an authorized server. Your Talkable Webhook security key can be found in
+   the Webhook setup page after at least one Webhook is created.
+
+Talkable Webhooks will trigger automatically based on associated events defined
+by Webhook type.
+
+.. raw:: html
+
+   <h2>Testing</h2>
+
+Testing webhooks can be accomplished with the help of Webhook Tester, an external
 service that tests your post-receive messages.
 
-1. Visit `RequestBin`_ and click **Create a RequestBin**.
-2. Copy the URL you are given.
-3. Open your site on Web Hooks setup page.
-4. Click **New**.
-5. Select web hook type.
-6. Paste your RequestBin URL and save.
-7. Click **Deliver Sample** near the web hook you want to test.
-8. After you finish the implementation on your site **change RequestBin URL
+1. Visit `Webhook Tester`_ and click **Copy** to copy the URL you are given.
+2. Open your site on Webhooks setup page.
+3. Click **New**.
+4. Select webhook type.
+5. Paste your Webhook Tester URL and save.
+6. Click **Deliver Sample** near the webhook you want to test.
+7. After you finish the implementation on your site **change Webhook Tester URL
    to the live URL** on your site.
-9. Click **Deliver Sample** to test web hook with Live URL.
+8. Click **Deliver Sample** to test webhook with Live URL.
 
 .. raw:: html
 
    <h2>Data</h2>
 
-All web hooks are delivered as an HTTP Post request with the main parameter
+All Webhooks are delivered as an HTTP Post request with the main parameter
 called payload. All data inside this parameter is encoded as JSON. Below is
 a PHP parameter decode example:
 
@@ -46,19 +71,18 @@ a PHP parameter decode example:
 
    <h2>Parsing Timestamps</h2>
 
-**Timestamp data type** is not a part of JSON standard. That is why timestamps
-are passed as strings in |iso8601| compatible format. You need to be sure that
-your date parser is compatible to this standard. Otherwise issues may appear.
-People that use Java need to look through: |br|
+**Timestamp data type** is not a part of JSON standard. Timestamps
+are passed as strings in |iso8601| compatible format. To function properly, ensure
+your date parser is compatible to this standard. Java users go here: |br|
 http://stackoverflow.com/questions/2201925/converting-iso8601-compliant-string-to-java-util-date
 
 .. raw:: html
 
    <h2>Response Codes</h2>
 
-Talkable considers a web hook as "delivered successfully" in the case that the site
-server returned a **2xx response status**. Otherwise Talkable will continually
-retry to deliver a webhook after a set interval of time.
+Talkable considers a Webhook as "delivered successfully" when a site
+server returns a **2xx response status**. Otherwise Talkable will continually
+retry to deliver a Webhook after a set interval of time.
 
 .. raw:: html
 
@@ -74,32 +98,33 @@ retry to deliver a webhook after a set interval of time.
 * 206: Partial Content
 
 If you have a problem on your server, you can answer with code 500. If there is
-some problem in our request (problem on Talkable’s side), you can answer "400 Bad Request".
+some problem in our request (problem on Talkable’s side), you can answer
+"400 Bad Request".
 
-Any other error code and we will retry later.
+Talkable will retry delivery of Webhook if any other error code is received.
 
 .. raw:: html
 
    <h2>Security Key</h2>
 
-Also there is a key parameter that has a unique value for each site to identify
-Talkable as an authorized server to call the web hook (please check it against
-a copy on your side). The Security Key for your site can be found in Web Hooks
-setup page if you have at least one web hook created.
+Talkable includes a key parameter in Webhooks which are unique to each account
+as a way to identify Talkable as an authorized server. Your Talkable Webhook
+security key can be found in the Webhook setup page after at least one Webhook
+is created.
 
 .. raw:: html
 
    <h2>Compatibility and Versioning</h2>
 
-Talkable web hooks do not currently have versioning. Current spec will not be
-changed for all existing hooks. But Talkable dev team leave a right to add any
-additional data to them without removing or changing existing one. Your
-implementation should be safe to such changes.
+Talkable Webhooks do not currently incorporate versioning. Current spec will not
+be changed for all existing hooks. Note that Talkable may add additional data
+elements to existing Webhooks, but should not remove or change existing data
+elements.
 
 |hr|
-See available web hooks on the navigation sidebar.
+See available Webhooks on the navigation sidebar.
 
-.. _RequestBin: http://requestb.in/
+.. _`Webhook Tester`: https://webhook.site/
 
 .. container:: hidden
 
