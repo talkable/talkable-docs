@@ -4,8 +4,10 @@
 Webhooks
 #########
 
-Webhooks are "user-defined HTTP callbacks" triggered by some 
-event on Talkable’s site.
+Webhooks are "user-defined HTTP callbacks" triggered by events on Talkable’s site. Subscribing to Talkable webhooks allows you to receive notifications about various events from Talkable, for example, when a Reward should be given, or when a Friend or Advocate opts in to an email newsletter subscription. 
+
+After subscribing to a webhook, your app can execute code immediately after specific events occur in Talkable.
+
 
 http://en.wikipedia.org/wiki/Webhook
 
@@ -15,6 +17,11 @@ Each Webhook in Talkable is defined with an HTTP URL to deliver Webhook data
 .. raw:: html
 
    <h2>Setup</h2>
+
+.. image:: /_static/img/menu_webhooks_screenshot.png
+   :alt: Campaign Type - Invite,
+   :class: is-minimal
+
 
 1. Setup and test Talkable Webhooks by navigating to **Menu** then **Webhooks** 
 2. Proceed to **Create New Webhook** 
@@ -28,19 +35,19 @@ Talkable Webhooks will trigger automatically based on associated events defined 
 
    <h2>Testing</h2>
 
-Testing web hooks can be accomplished with the help of RequestBin, an external
+Testing webhooks can be accomplished with the help of RequestBin, an external
 service that tests your post-receive messages.
 
 1. Visit `RequestBin`_ and click **Create a RequestBin**.
 2. Copy the URL you are given.
-3. Open your site on Web Hooks setup page.
+3. Open your site on Webooks setup page.
 4. Click **New**.
-5. Select web hook type.
+5. Select webhook type.
 6. Paste your RequestBin URL and save.
-7. Click **Deliver Sample** near the web hook you want to test.
+7. Click **Deliver Sample** near the webhook you want to test.
 8. After you finish the implementation on your site **change RequestBin URL
    to the live URL** on your site.
-9. Click **Deliver Sample** to test web hook with Live URL.
+9. Click **Deliver Sample** to test webhook with Live URL.
 
 .. raw:: html
 
