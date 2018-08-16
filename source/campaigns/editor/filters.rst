@@ -610,9 +610,9 @@ barcode\_image
 Represents any ``string`` as barcode image in png.
 This filter strictly follows GS1-128 specification: https://en.wikipedia.org/wiki/GS1-128.
 
-It may take two arguments: ``height`` and ``xdim`` (thickness of the thinnest line).
+It may take the following arguments: ``height``, ``xdim``(thickness of the thinnest line), ``margin`` and ``bg_transparent``.
 
-Default values are ``100`` for ``height`` and ``1`` for ``xdim``.
+Default values are ``100`` for ``height``,  ``1`` for ``xdim``, ``0`` for ``margin`` and ``false`` for ``bg_transparent``.
 
 The values are in pixels.
 
@@ -622,6 +622,8 @@ The values are in pixels.
    {{ coupon.code | barcode_image: height: 200 }}
    {{ coupon.code | barcode_image: xdim: 3 }}
    {{ coupon.code | barcode_image: height: 200, xdim: 3 }}
+   {{ coupon.code | barcode_image: height: 200, xdim: 3, margin: 5 }}
+   {{ coupon.code | barcode_image: height: 200, xdim: 3, margin: 5, bg_transparent: true }}
 
 Returns a URL string.
 
