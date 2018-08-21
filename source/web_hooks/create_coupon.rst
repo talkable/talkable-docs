@@ -1,45 +1,46 @@
 .. _web_hooks/create_coupon:
 .. include:: /partials/common.rst
 
-Create Coupon Web Hook
-======================
+Create Coupon Webhook
+=====================
 
-Used for enterprise clients who want to give unique coupons to each visitor
-and don’t want to manually upload a list of coupon codes to Talkable. In order
-to create coupon codes for a coupon list automatically, Talkable can notify
-a customer site which coupons should be created.
+Talkable Create Coupon Webhook enables automatic coupon creation, which eliminates the need to upload coupon lists into the Talkable platform manually. Talkable creates unique coupon codes then passes those codes via the Create Coupon Webhook to the client; it is then up to the client to enable these coupons on their platform.
 
 .. raw:: html
 
-   <h2>When does Talkable call this web hook?</h2>
+   <h2>When does Talkable call the Create Coupon Webhook?</h2>
 
-Suppose we have some codes in coupon list that are available for use. When the
-number of coupons available drops below Threshold, the system tries to generate
-15 new coupons in the background. If some person needs a coupon code, but there
-are no coupon codes available, the system will try to generate one in the
-foreground and give it to the person that requested it. In both cases coupons
-are sent as a web hook and then inserted into the Talkable database only in case
-when a web hook returns a successful response.
+Create Coupon Webhook is called when the quantity of available coupons drops below a Talkable threshold.
 
-Threshold is dynamically calculated based on number of coupon codes used by
-site in last 21 days. In this way Talkable coupon lists will always hold enough
-available coupons to serve the site for 21 days if integration become broken.
-Minimum Threshold is 20 coupons.
+This threshold is dynamically calculated based on the number of coupon codes used by the client site in the last 21 days. The threshold ensures the Talkable coupon lists will always hold enough available coupons to serve the site for 21 days, even if the integration were to break. The minimum threshold is 20 coupons.
+
+When the number of coupons available to Talkable drops below the threshold, Talkable will call the Create Coupon Webhook with a payload of 15 new coupons in the background. If a user needs a coupon code, but there are no coupon codes available, Talkable will generate one in the foreground and give it to the user that requested it. In both cases, coupons are sent to the client endpoint as a webhook and then inserted into the Talkable database only when a webhook returns a successful response.
 
 .. raw:: html
 
-   <h2>Coupon Expiration timestamp</h2>
+   <h2>Set Up</h2>
 
-Talkable having a hard time making decision when the coupon we are creating should expire.
-Only coupons that should be given on Friend Claim Page can have expiration and only when campaign offers are setup to expire.
-Other coupons given as "Reward For Sharing" or "Advocate Reward for Referral" should not have expiration.
+The Create Coupon Webhook will add coupons to a specific coupon list on Talkable’s backend. These coupon lists must be set up in the Talkable campaign editor before utilizing the Create Coupon Webhook. Follow the below instructions to set up a coupon list for a campaign:
 
-Expiration date for coupon on Friend Claim page is always greater than Advocate Claim Page expiration date + one day buffer.
-So Talkable is making web hooks with expiration set to Friend Claim page expiration + 1 day when it has no coupons that match this criteria in its own database.
+1. Navigate to **Campaigns** then select the campaign you would like to set up coupon list(s) for
+2. Proceed to **Rules** then scroll down to **Incentives** section where incentives for both Advocate and Friend can be configured
+
+.. image:: /_static/img/advocate_referral_incentive.png
+   :alt: Edit Referral Incentives,
+   :class: is-minimal
+
+3. Inside the Referral Incentive Editor choose the **Coupon code type: Single-use** then select an existing Coupon list or create a new coupon list by clicking **Manage Coupon Lists**.
+4. Here you’ll be able to **Create New** and configure a Name, Expiration Date (optional), and Amount ($ or %)
+5. Now go back to **Rules** |rarr| **Incentives** |rarr| **Edit** and select the **Reward Amount** associated with the list created in step 4 and select the newly created list
+6. Optionally, select **Advanced Settings** for additional configuration parameters
+
+Note: Coupons created by the **Create Coupon Webhook** will be added to the coupon list associated with the referral campaign. Multiple referral campaigns can use the same or unique coupon lists. **Advocate** and **Friend** referral incentives can also use the same or unique coupon lists
+
+Once a single-use coupon code list is associated with a campaign, then the Create Coupon Webhook can now be set up. :ref:`Learn more about General Webhook Set Up Steps <web_hooks>`
 
 .. raw:: html
 
-   <h2>Payload parameters provided for Create Coupon Web Hook</h2>
+   <h2>Payload parameters provided by Create Coupon Webhook</h2>
 
 * **coupon_code** — coupon code
 * **discount_amount** — discount amount
