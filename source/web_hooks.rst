@@ -19,13 +19,13 @@ Each Webhook in Talkable is defined with an HTTP URL to deliver Webhook data
 
 .. raw:: html
 
-   <h2>Setup</h2>
+   <h2>Set Up</h2>
 
 .. image:: /_static/img/menu_webhooks_screenshot.png
    :alt: Campaign Type - Invite,
    :class: is-minimal
 
-1. Setup and test Talkable Webhooks by navigating to **Menu** then **Webhooks**
+1. Set up and test Talkable Webhooks by navigating to **Menu** then **Webhooks**
 2. Proceed to **Create New Webhook**
 3. Choose a Webhook from the dropdown and provide your endpoint URL
 4. From here, Send Sample, Edit, Delete or Create New
@@ -33,7 +33,7 @@ Each Webhook in Talkable is defined with an HTTP URL to deliver Webhook data
    Talkable Webhooks on a given account. Talkable includes a key parameter in
    Webhooks which are unique to each account as a way to identify Talkable as
    an authorized server. Your Talkable Webhook security key can be found in
-   the Webhook setup page after at least one Webhook is created.
+   the Webhook set up page after at least one Webhook is created.
 
 Talkable Webhooks will trigger automatically based on associated events defined
 by Webhook type.
@@ -46,7 +46,7 @@ Testing webhooks can be accomplished with the help of Webhook Tester, an externa
 service that tests your post-receive messages.
 
 1. Visit `Webhook Tester`_ and click **Copy** to copy the URL you are given.
-2. Open your site on Webhooks setup page.
+2. Open your site on Webhooks set up page.
 3. Click **New**.
 4. Select webhook type.
 5. Paste your Webhook Tester URL and save.
@@ -109,7 +109,7 @@ Talkable will retry delivery of Webhook if any other error code is received.
 
 Talkable includes a key parameter in Webhooks which are unique to each account
 as a way to identify Talkable as an authorized server. Your Talkable Webhook
-security key can be found in the Webhook setup page after at least one Webhook
+security key can be found in the Webhook set up page after at least one Webhook
 is created.
 
 .. raw:: html
