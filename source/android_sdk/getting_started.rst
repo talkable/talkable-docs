@@ -9,23 +9,24 @@ The Getting Started guide shows you how to setup and launch Referral Campaign as
 Installation
 ------------
 
-1. Download the latest version of `Talkable SDK framework`_.
-2. Add ``talkable-sdk.aar`` and add it as a module dependency in Android studio.
-
-   .. note::
-
-     To do this, open import popup using *File* |rarr| *New* |rarr| *New Module* |rarr| *Import .JAR/.AAR Package*
-     and add Talkable SDK as a module dependency to your main module
-
-   After this, add Talkable SDK dependencies to ``build.gradle``
+1. Add the JitPack repository to your project's top level *build.gradle* file.
 
    .. code-block:: groovy
 
-       compile 'com.squareup.okhttp3:okhttp:3.2.0'
-       compile 'com.facebook.android:facebook-android-sdk:[4,5)'
-       compile 'com.google.code.gson:gson:2.8.0'
-       compile 'com.android.support:support-v4:26.1.0'
-       compile project(':talkable-sdk')
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+
+2. Add the dependency to your module's *build.gradle* file.
+
+   .. code-block:: groovy
+
+	dependencies {
+	        implementation 'com.github.talkable:android-sdk:0.5.7'
+	}
 
 .. _setup_credentials:
 
@@ -149,6 +150,7 @@ Here is an example of ``AndroidManifest.xml`` file (with ``"demo-site"`` site sl
 
 Your environment is all set up! Now you need to :ref:`integrate <android_sdk/integration>` the Talkable campaign piece.
 
+
 Requirements
 ------------
 
@@ -159,3 +161,4 @@ The SDK supports Android 4.1 and later.
 .. container:: hidden
 
    .. toctree::
+
