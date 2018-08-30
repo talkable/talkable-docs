@@ -14,6 +14,9 @@ each with links to integration details.
    * - :ref:`Automatic Coupon Creation <advanced_features/coupons>`
      - Issue single and multi-use coupons automatically for your campaigns
 
+   * - :ref:`Referral Tracking Methods <advanced_features/track_methods>`
+     - The description of the Talkable referral tracking algorithm
+
    * - :ref:`Convert static copy into Localization <advanced_features/converting_into_localization>`
      - Convert all static languange into a customizable copy that’s
        easy to AB test.
@@ -60,6 +63,7 @@ each with links to integration details.
   .. toctree::
 
     advanced_features/coupons
+    advanced_features/track_methods
     advanced_features/converting_into_localization
     advanced_features/email_encryption
     advanced_features/file_encryption
