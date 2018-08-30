@@ -33,12 +33,15 @@ Talkable is composed of the following components:
    - (optional) Shipping Address for additional fraud protection.
    - (optional) Shopping cart line items. This is only necessary if segmenting based on cart contents.
 
-3. :ref:`Advocate Landing Page <integration/custom/integration_components/advocate_landing_page>`.
+3. In case your business has 1-time purchases and subscription model, or you are in SaaS
+   business we recommend integrating through Events. :ref:`Learn more <advanced_features/events>`.
+
+4. :ref:`Advocate Landing Page <integration/custom/integration_components/advocate_landing_page>`.
 
    Create an HTML page (URL path /share) with your standard site header and footer.
    Add the Talkable Container DIV in the body. This tells Talkable where to inject content.
 
-4. :ref:`Referral Dashboard (my account) <integration/custom/integration_components/referral_dashboard>`.
+5. :ref:`Referral Dashboard (my account) <integration/custom/integration_components/referral_dashboard>`.
 
    Similar to the advocate landing page, create an HTML page that’s linked to from a menu in user accounts.
    Add the Talkable Container DIV in the body. This tells Talkable where to inject content.

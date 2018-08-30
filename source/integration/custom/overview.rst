@@ -12,12 +12,15 @@ Integration High Level Overview
 
    Surface purchase detail variables as described in more detail in :ref:`Integration Components <integration/custom/integration_components>`.
 
-3. Create a new HTML page with standard header/footer to host the Talkable Standalone campaign
+3. In case your business has 1-time purchases and subscription model, or you are in SaaS
+   business we recommend integrating through Events. :ref:`Learn more <advanced_features/events>`.
+
+4. Create a new HTML page with standard header/footer to host the Talkable Standalone campaign
    which will be your Advocate Landing page where you can drive traffic from email and other onsite
    and offsite locations to refer friends. Copy & paste the Talkable container DIV element into the
    body as seen in :ref:`Integration Components <integration/custom/integration_components>`.
 
-4. Create an additional new HTML page attached to your user accounts section (if you have one) behind
+5. Create an additional new HTML page attached to your user accounts section (if you have one) behind
    login which is where referring Advocates can go to view referral details of all of the friends
    they’ve shared with. Copy & paste the Talkable container DIV element into the body as seen in
    :ref:`Integration Components <integration/custom/integration_components>`.
