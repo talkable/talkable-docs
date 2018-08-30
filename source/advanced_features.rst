@@ -15,7 +15,7 @@ each with links to integration details.
      - Issue single and multi-use coupons automatically for your campaigns
 
    * - :ref:`Referral Tracking Methods <advanced_features/track_methods>`
-     - The description of the talkable referral tracking algorithm
+     - The description of the Talkable referral tracking algorithm
 
    * - :ref:`Convert static copy into Localization <advanced_features/converting_into_localization>`
      - Convert all static languange into a customizable copy that’s
