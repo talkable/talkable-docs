@@ -30,8 +30,8 @@ can be found inside Reports → Events. Here is an example:
     window._talkableq.push(['register_event', {
       event: {
         event_category: 'subscription',
-        event_number: 1938579813,
-        subtotal: 89,
+        event_number: 'ev1938579813',
+        subtotal: '89',
         coupon_code: 'SAVE20',
       },
       customer: {
@@ -49,8 +49,8 @@ inside Reports → Purchases. Here is an example:
     window._talkableq.push(['register_event', {
       event: {
         event_category: 'purchase',
-        event_number: 1938579814,
-        subtotal: 34,
+        event_number: 'ev1938579814',
+        subtotal: '34.5',
         coupon_code: null,
       },
       customer: {
@@ -87,8 +87,9 @@ Here is a list of available properties each event can include:
                            saved. |br|
                            Example: ``'18934671af'``.
                          * **subtotal** (required) – event subtotal, Any valid positive number
-                           (including floats) or 0 are allowed. |br|
-                           Example: ``198.5``.
+                           (including floats) or 0 are allowed. Preferably it should be passed
+                           as a string to avoid JavaScript issues with rounding floats. |br|
+                           Example: ``'198.5'``.
                          * **coupon_code** (required) – a coupon code that was applied on
                            this event. Pass ``null`` when no coupon code applied. |br|
                            Example: ``'SAVE20'``. You can also pass multiple coupons as
