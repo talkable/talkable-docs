@@ -4,20 +4,24 @@
 Integrating Events
 ==================
 
-Besides regular
-:ref:`purchases <integration/custom/integration_components/post_purchase_script>`
-Talkable also supports more abstract events that you can split into multiple categories
-and set up more advanced rules in your referral campaigns.
+In addition to running a referral campaign around regular
+:ref:`purchases <integration/custom/integration_components/post_purchase_script>`,
+Talkable also supports more abstract events that can be split into multiple categories
+and set up with more advanced rules.
 
 An example of such integration can be a subscription-based business that also supports
-1-time purchases. A referral campaign example can be: |advocate| and |friend| both get $5
-off discount on 1-time purchases, and $15 off when purchasing a subscriptoin plan.
+one-time purchases. A referral campaign example can be: |advocate| and |friend| both get
+$5 off discount on one-time purchases, and $15 off when purchasing a subscription plan.
 
-In this case subscription purchases and 1-time purchases should be
+In this case, the subscription purchases and the one-time purchases should be
 integrated as separate events under different event categories: “subscription” and
-“purchase”. All events should be passed to Talkable, including recurring ones. Talkable
-is equipped with a referral engine that runs each event through a several checks to
-identify if the event was referral or not. Here is an example:
+“purchase”. All events should be passed to Talkable, including recurring events.
+Talkable’s backend referral engine runs each event through several checks to identify
+whether the event was associated with a referral or not. With both “subscription” and
+“purchase” events being passed to Talkable, we are then able to setup referral campaigns
+to report on and reward these events as desired. See some examples below.
+
+Subscription payments should go under “subscription” event category:
 
 .. code-block:: html
 
@@ -34,7 +38,7 @@ identify if the event was referral or not. Here is an example:
     }]);
   </script>
 
-1-time purchases should go under “purchase” event category:
+One-time purchases should go under “purchase” event category:
 
 .. code-block:: html
 
@@ -54,13 +58,14 @@ identify if the event was referral or not. Here is an example:
 .. note::
 
    All recurring subscription purchases should be passed to Talkable as well, to ensure
-   data integrity. In case such recurring transactions happen on backend follow the |br|
+   data integrity. In case such recurring transactions happen from the backend, follow the
+   |br|
    :ref:`Origin API <api_v2/origins>` (see “Create an event” section).
 
 Available properties
 ~~~~~~~~~~~~~~~~~~~~
 
-Here is a list of all available properties each event can include:
+Here is a list of available properties each event can include:
 
 .. container:: ptable
 
@@ -90,7 +95,7 @@ Here is a list of all available properties each event can include:
                            Example:
                            ``'475 Valencia St, 2nd Floor, San Francisco, 94103, USA'``.
                          * **shipping_zip** – Same as **shipping_address**. Include only
-                           the zip part here. |br|
+                           zip here. |br|
                            Example: ``94103``.
 
    **customer**          A person who issued an event (optional):
