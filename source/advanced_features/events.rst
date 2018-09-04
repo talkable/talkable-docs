@@ -22,7 +22,7 @@ whether the event was associated with a referral or not. With both “subscripti
 to report on and reward these events as desired. See some examples below.
 
 Subscription payments should go under “subscription” event category. All such events
-can be found inside Reports → Events. Here is an example:
+can be found inside Reports |rarr| Events. Here is an example:
 
 .. code-block:: html
 
@@ -41,7 +41,7 @@ can be found inside Reports → Events. Here is an example:
   </script>
 
 One-time purchases should go under “purchase” event category. You can find all purchases
-inside Reports → Purchases. Here is an example:
+inside Reports |rarr| Purchases. Here is an example:
 
 .. code-block:: html
 
@@ -133,7 +133,7 @@ Here is a list of available properties each event can include:
 
    **custom_properties** Custom key-value data that can be attached to a person
                          (optional). It can be used for segmentation for example: you can
-                         code up custom criterias in order to show relevant campaigns to
+                         code up custom criteria in order to show relevant campaigns to
                          each segment. Alternatively custom properties can be used for an
                          advanced referral reward logics. Any valid JS object is allowed.
                          Object value should always be a string.

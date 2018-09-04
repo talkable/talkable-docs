@@ -4,9 +4,10 @@
 
 .. important::
 
-   Any code sent via this web hook doesn’t need to be created on merchant site.
-   When Talkable needs more coupons — it always calls
-   :ref:`Create Coupon Web Hook <web_hooks/create_coupon>`.
-   In this web hook Talkable just sends the information to merchant that coupon
-   was given as the reward in case merchant want to store this infomation in
-   its own database.
+   If referral campaigns are set-up to reward either Friends or Advocates with
+   Talkable provided coupon codes, then the Reward Webhook is called for
+   informational purposes only. It is a notification that the reward has been
+   provided. Note, Talkable gets these coupons either by manual upload from the
+   Dashboard, or if configured, Talkable will call the  :ref:`Create Coupon
+   Webhook <web_hooks/create_coupon>` to generate additional coupons
+   automatically.

@@ -8,7 +8,7 @@ Triggered when a person unsubscribes.
 
 .. raw:: html
 
-   <h2>Payload parameters provided </h2>
+   <h2>Payload parameters provided</h2>
 
 * **person** — subhash of parameters describing the person
 
