@@ -22,42 +22,42 @@ whether the event was associated with a referral or not. With both “subscripti
 to report on and reward these events as desired. See some examples below.
 
 Subscription payments should go under “subscription” event category. All such events
-can be found inside Reports → Events. Here is an example:
+can be found inside Reports |rarr| Events. Here is an example:
 
 .. code-block:: html
 
-  <script>
-    window._talkableq.push(['register_event', {
-      event: {
-        event_category: 'subscription',
-        event_number: 1938579813,
-        subtotal: 89,
-        coupon_code: 'SAVE20',
-      },
-      customer: {
-        email: 'customer1@example.com'
-      }
-    }]);
-  </script>
+   <script>
+     window._talkableq.push(['register_event', {
+       event: {
+         event_category: 'subscription',
+         event_number: '1938579813',
+         subtotal: '89.00',
+         coupon_code: 'SAVE20'
+       },
+       customer: {
+         email: 'customer1@example.com'
+       }
+     }]);
+   </script>
 
 One-time purchases should go under “purchase” event category. You can find all purchases
-inside Reports → Purchases. Here is an example:
+inside Reports |rarr| Purchases. Here is an example:
 
 .. code-block:: html
 
-  <script>
-    window._talkableq.push(['register_event', {
-      event: {
-        event_category: 'purchase',
-        event_number: 1938579814,
-        subtotal: 34,
-        coupon_code: null,
-      },
-      customer: {
-        email: 'customer2@example.com'
-      }
-    }]);
-  </script>
+   <script>
+     window._talkableq.push(['register_event', {
+       event: {
+         event_category: 'purchase',
+         event_number: '1938579814',
+         subtotal: '34.00',
+         coupon_code: null
+       },
+       customer: {
+         email: 'customer2@example.com'
+       }
+     }]);
+   </script>
 
 .. note::
 
@@ -89,8 +89,8 @@ Here is a list of available properties each event can include:
                          * **subtotal** (required) – event subtotal, Any valid positive number
                            (including floats) or 0 are allowed. |br|
                            Example: ``198.5``.
-                         * **coupon_code** (required) – a coupon code that was applied on
-                           this event. Pass ``null`` when no coupon code applied. |br|
+                         * **coupon_code** (optional) – a coupon code that was applied on
+                           this event. |br|
                            Example: ``'SAVE20'``. You can also pass multiple coupons as
                            an array: ``['SAVE20', 'SAVE5']`` if they were stacked.
                          * **shipping_address** (optional) – Shipping address in case an event is
@@ -132,7 +132,7 @@ Here is a list of available properties each event can include:
 
    **custom_properties** Custom key-value data that can be attached to a person
                          (optional). It can be used for segmentation for example: you can
-                         code up custom criterias in order to show relevant campaigns to
+                         code up custom criteria in order to show relevant campaigns to
                          each segment. Alternatively custom properties can be used for an
                          advanced referral reward logics. Any valid JS object is allowed.
                          Object value should always be a string.
