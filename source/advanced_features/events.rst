@@ -22,7 +22,7 @@ whether the event was associated with a referral or not. With both “subscripti
 to report on and reward these events as desired. See some examples below.
 
 Subscription payments should go under “subscription” event category. All such events
-can be found inside Reports |rarr| Events. Here is an example:
+can be found inside Reports → Events. Here is an example:
 
 .. code-block:: html
 
@@ -32,7 +32,7 @@ can be found inside Reports |rarr| Events. Here is an example:
         event_category: 'subscription',
         event_number: 'ev1938579813',
         subtotal: '89',
-        coupon_code: 'SAVE20',
+        coupon_code: 'SAVE20'
       },
       customer: {
         email: 'customer1@example.com'
@@ -41,7 +41,7 @@ can be found inside Reports |rarr| Events. Here is an example:
   </script>
 
 One-time purchases should go under “purchase” event category. You can find all purchases
-inside Reports |rarr| Purchases. Here is an example:
+inside Reports → Purchases. Here is an example:
 
 .. code-block:: html
 
@@ -51,7 +51,7 @@ inside Reports |rarr| Purchases. Here is an example:
         event_category: 'purchase',
         event_number: 'ev1938579814',
         subtotal: '34.5',
-        coupon_code: null,
+        coupon_code: null
       },
       customer: {
         email: 'customer2@example.com'
