@@ -13,20 +13,20 @@ Installation
 
    .. code-block:: groovy
 
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
+     allprojects {
+       repositories {
+         ...
+         maven { url 'https://jitpack.io' }
+       }
+     }
 
-2. Add the dependency to your module's *build.gradle* file.
+2. Add TalkableSDK as a dependency to your module's *build.gradle* file.
 
    .. code-block:: groovy
 
-	dependencies {
-	        implementation 'com.github.talkable:android-sdk:0.5.7'
-	}
+     dependencies {
+       implementation 'com.github.talkable:android-sdk:0.5.6'
+     }
 
 .. _setup_credentials:
 
