@@ -150,7 +150,6 @@ Here is an example of ``AndroidManifest.xml`` file (with ``"demo-site"`` site sl
 
 Your environment is all set up! Now you need to :ref:`integrate <android_sdk/integration>` the Talkable campaign piece.
 
-
 Requirements
 ------------
 
@@ -161,4 +160,3 @@ The SDK supports Android 4.1 and later.
 .. container:: hidden
 
    .. toctree::
-
