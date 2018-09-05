@@ -31,7 +31,7 @@ The Create Coupon Webhook will add coupons to a specific coupon list on Talkable
 
 3. Inside the Referral Incentive Editor choose the **Coupon code type: Single-use** then select an existing Coupon list or create a new coupon list by clicking **Manage Coupon Lists**.
 4. Here you’ll be able to **Create New** and configure a Name, Expiration Date (optional), and Amount ($ or %)
-5. Now go back to **Rules** |rarr| **Incentives** |rarr| **Edit** and select the **Reward Amount** associated with the list created in step 4 and select the newly created list
+5. Now go back to **Rules** → **Incentives** → **Edit** and select the **Reward Amount** associated with the list created in step 4 and select the newly created list
 6. Optionally, select **Advanced Settings** for additional configuration parameters
 
 Note: Coupons created by the **Create Coupon Webhook** will be added to the coupon list associated with the referral campaign. Multiple referral campaigns can use the same or unique coupon lists. **Advocate** and **Friend** referral incentives can also use the same or unique coupon lists

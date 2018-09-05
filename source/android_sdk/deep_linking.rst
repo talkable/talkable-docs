@@ -39,7 +39,7 @@ Talkable SDK is distributed as an Android Library in ``aar`` format.
 
    .. note::
 
-     To do this, open import popup using *File* |rarr| *New* |rarr| *New Module* |rarr| *Import .JAR/.AAR Package*
+     To do this, open import popup using *File* → *New* → *New Module* → *Import .JAR/.AAR Package*
      and add Talkable SDK as a module dependency to your main module
 
 2. Add Talkable SDK dependencies to ``build.gradle``:
