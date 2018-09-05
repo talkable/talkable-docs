@@ -33,7 +33,7 @@ Talkable is composed of the following components:
    - (optional) Shipping Address for additional fraud protection.
    - (optional) Shopping cart line items. This is only necessary if segmenting based on cart contents.
 
-3. In case your business has 1-time purchases and subscription model, or you are in SaaS
+3. In case your business has one-time purchases and subscription model, or you are in SaaS
    business we recommend integrating through Events. :ref:`Learn more <advanced_features/events>`.
 
 4. :ref:`Advocate Landing Page <integration/custom/integration_components/advocate_landing_page>`.

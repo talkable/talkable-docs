@@ -12,7 +12,7 @@ Integration High Level Overview
 
    Surface purchase detail variables as described in more detail in :ref:`Integration Components <integration/custom/integration_components>`.
 
-3. In case your business has 1-time purchases and subscription model, or you are in SaaS
+3. In case your business has one-time purchases and subscription model, or you are in SaaS
    business we recommend integrating through Events. :ref:`Learn more <advanced_features/events>`.
 
 4. Create a new HTML page with standard header/footer to host the Talkable Standalone campaign
