@@ -6,6 +6,11 @@ Upgrade
 
 Sometimes we need you to upgrade existing integration to use our latest features.
 
+0.5.6
+-----
+
+SDK is now available as a `Maven package on JitPack <https://jitpack.io/#talkable/android-sdk>`_.
+
 0.5.5
 -----
 
