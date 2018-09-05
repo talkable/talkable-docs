@@ -31,12 +31,12 @@ After pre-validation Talkable campaign level validation kicks in:
 
 1. Who is the recipient? |advocate| or |friend|?
 2. What are the email sending conditions for the campaign?
-3. Time Conditional |rarr| send an email in 3 days
-4. Action Conditional |rarr| send email after friend purchases
-5. Inaction Conditional |rarr| send 2nd email if friend does not purchase
-6. Offer State Conditional |rarr| send email only if offer still valid / send email is
+3. Time Conditional → send an email in 3 days
+4. Action Conditional → send email after friend purchases
+5. Inaction Conditional → send 2nd email if friend does not purchase
+6. Offer State Conditional → send email only if offer still valid / send email is
    offer is expired
-7. Customer Attribute Conditional |rarr| send email if user is new customer
+7. Customer Attribute Conditional → send email if user is new customer
 
 .. raw:: html
 

@@ -73,7 +73,7 @@ Subject line is unique because its default value is set on the Advocate Share Pa
 
     This code creates new Localization named "Friend share email subject" that you are able to change on the Advocate Share Page.
 
-  2. Navigate to Friend Share email |rarr| Extra fields to see Email Subject field:
+  2. Navigate to Friend Share email → Extra fields to see Email Subject field:
 
     .. image:: /_static/img/advanced_features/campaign_editor_subject.png
 

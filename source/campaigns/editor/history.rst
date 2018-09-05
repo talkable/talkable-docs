@@ -26,5 +26,5 @@ you can access from Campaign Editor navigation bar:
 
    |br|
 
-3. To rollback changes preview some particular commit |rarr| save changes.
+3. To rollback changes preview some particular commit → save changes.
    Changes will be saved as a new commit.

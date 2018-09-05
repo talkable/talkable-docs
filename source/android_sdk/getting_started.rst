@@ -14,7 +14,7 @@ Installation
 
    .. note::
 
-     To do this, open import popup using *File* |rarr| *New* |rarr| *New Module* |rarr| *Import .JAR/.AAR Package*
+     To do this, open import popup using *File* → *New* → *New Module* → *Import .JAR/.AAR Package*
      and add Talkable SDK as a module dependency to your main module
 
    After this, add Talkable SDK dependencies to ``build.gradle``
@@ -47,7 +47,7 @@ Installation
      You can locate your credentials inside Talkable site:
 
      - Visit https://admin.talkable.com/account/sites to find your site slug
-     - Select site and go to **Dashboard** |rarr| **Settings** |rarr| **Site Settings**.
+     - Select site and go to **Dashboard** → **Settings** → **Site Settings**.
        Find **Integration settings** section and there you will see your API Keys.
        Use only the public key in your application.
 

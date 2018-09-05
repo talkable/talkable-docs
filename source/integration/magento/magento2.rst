@@ -23,7 +23,7 @@ Installation
 
    .. image:: /_static/img/magento2/install0.jpg
 
-2. Navigate to **System** |rarr| **Web Setup Wizard** in your Magento store admin panel.
+2. Navigate to **System** → **Web Setup Wizard** in your Magento store admin panel.
 
    .. image:: /_static/img/magento2/install1.jpg
 
@@ -58,7 +58,7 @@ Installation
 Activating the Integration
 --------------------------
 
-1. After successful installation, navigate to **System** |rarr| **Integrations** page of your admin panel.
+1. After successful installation, navigate to **System** → **Integrations** page of your admin panel.
 
    .. image:: /_static/img/magento2/activate1.jpg
 
@@ -92,12 +92,12 @@ Activating the Integration
 Accessing Talkable Configuration
 --------------------------------
 
-1. To access Talkable extension settings, navigate to **Stores** |rarr| **Configuration** in
+1. To access Talkable extension settings, navigate to **Stores** → **Configuration** in
    your Magento admin panel.
 
    .. image:: /_static/img/magento2/access1.jpg
 
-2. Then select **Talkable** |rarr| **Talkable Configuration** from the list of available configurations.
+2. Then select **Talkable** → **Talkable Configuration** from the list of available configurations.
    If you have multiple stores, select the desired Store View you want to change the settings for.
 
    .. image:: /_static/img/magento2/access2.jpg

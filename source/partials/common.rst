@@ -14,10 +14,6 @@
 
    <hr>
 
-.. |rarr| raw:: html
-
-   &rarr;
-
 .. role:: underline
    :class: underline
 
