@@ -8,6 +8,7 @@ Talkable Post Share Webhook provides notification of a share event performed wit
 
   * Sending automated 'Thank You' email to an Advocate for performing a share
   * Any event that should be triggered when a user shares 
+  * Data for Business Intelligence and analytics systems 
 
 .. raw:: html
 
