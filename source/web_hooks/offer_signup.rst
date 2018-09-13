@@ -25,7 +25,7 @@ and sharing an offer with Friends.
 
 Advocate Signup Form example:
 
-.. image:: /_static/img/AdvocateSignupForm_webhook.png
+.. image:: /_static/img/advocate_signup_form_webhook.png
    :alt: Edit Referral Incentives,
    :class: is-minimal
 
