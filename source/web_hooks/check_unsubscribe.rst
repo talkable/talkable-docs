@@ -87,7 +87,7 @@ View category can be one of the following:
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"campaign":{"id": 350256053,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"recipient":{"first_name":"Bob","last_name":"Smith","email":"friend@example.com","username":"username","unsubscribed_at":null,"opted_in_at":"2014-08-13T11:14:08.835-07:00","sub_choice":true},"email_type":"friend_rewards_paid"}' <url>
+   curl --data 'key=<key>&payload={"campaign":{"id":350256053,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"recipient":{"first_name":"Bob","last_name":"Smith","email":"friend@example.com","username":"username","unsubscribed_at":null,"opted_in_at":"2014-08-13T11:14:08.835-07:00","sub_choice":true},"email_type":"friend_rewards_paid"}' <url>
 
 .. container:: hidden
 
