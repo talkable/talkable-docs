@@ -2,21 +2,26 @@
 .. include:: /partials/common.rst
 
 Advocate Signup Webhook
-========================
+=======================
 
-The Talkable Advocate Signup Webhook notifies your endpoint of an Advocate Signup forms submission. 
+The Talkable Advocate Signup Webhook notifies your endpoint of an Advocate
+Signup forms submission.
 
 Use cases for the Advocate Signup Webhook include:
 
   * Tracking when users select the checkbox to opt into your email newsletter
-  * Collection of data for Business Intelligence and analytics systems to track users who become Advocates
+  * Collection of data for Business Intelligence and analytics systems to track
+    users who become Advocates
   * Sending automated ‘Thank You’ emails after a user becomes an Advocate
 
 .. raw:: html
 
    <h2>When does Talkable call the Advocate Signup Webhook?</h2>
 
-Talkable Signup Webhook is triggered any time an Advocate Signup form is submitted. The Advocate Signup form is the standard Name & Email (with optional email subscription checkbox) fields a user submits before becoming an Advocate and sharing an offer with Friends. 
+Talkable Signup Webhook is triggered any time an Advocate Signup form is
+submitted. The Advocate Signup form is the standard Name & Email (with optional
+email subscription checkbox) fields a user submits before becoming an Advocate
+and sharing an offer with Friends.
 
 Advocate Signup Form example:
 
@@ -30,7 +35,7 @@ Advocate Signup Form example:
 
 * **offer** — subhash of parameters describing the offer
 
-  * **email** — Advocate's (referrer) email address
+  * **email** — |advocate|’s (referrer) email address
   * **short_url_code**
 
 * **campaign** — subhash of parameters describing the campaign
@@ -85,14 +90,13 @@ additional parameters will be present:
      "unsubscribed_at": null
    }
 
-
 .. raw:: html
 
    <h2>cURL example</h2>
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"campaign": {"cached_slug": 615437538, "id": 615437538, "new_customer": null, "origin_max_age": null, "origin_min_age": null, "tag_names": ["default"], "type": "StandaloneCampaign"}, "email": "john@example.com", "first_name": "John", "gender": null, "last_name": "Doe", "offer": {"email": "referrer@example.com", "short_url_code": "1a2PV"}, "opted_in_at": null, "sub_choice": false, "subscribed_at": null, "unsubscribed_at": null }' <url>
+   curl --data 'key=<key>&payload={"campaign":{"cached_slug":615437538,"id":615437538,"new_customer":null,"origin_max_age":null,"origin_min_age":null,"tag_names":["default"],"type":"StandaloneCampaign"},"email":"john@example.com","first_name":"John","gender":null,"last_name":"Doe","offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"opted_in_at":null,"sub_choice":false,"subscribed_at":null,"unsubscribed_at":null}' <url>
 
 .. container:: hidden
 
