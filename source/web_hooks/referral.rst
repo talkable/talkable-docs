@@ -94,6 +94,7 @@ Triggered whenever a referral status becomes “Approved” or “Unblocked”.
        "type": "Purchase",
        "order_number": 381177444,
        "subtotal": 13.43,
+       "email": "referred@example.com",
        "customer_id": "22726076",
        "coupon_code": "WHT60000"
      },

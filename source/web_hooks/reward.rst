@@ -137,6 +137,7 @@ Webhook Set Up Steps <web_hooks>`
 
   * **order_number** - unique identifier of advocate’s order
   * **subtotal** - advocate’s order subtotal
+  * **email** - advocate’s email address
   * **customer_id** - unique identifier of advocate
   * **order_date** - advocate’s order date in ISO 8601 format
 
@@ -150,6 +151,7 @@ Webhook Set Up Steps <web_hooks>`
   * **id** — unique identifier of the friend’s origin
   * **order_number** - unique identifier of friend’s order
   * **subtotal** - friend’s order subtotal
+  * **subtotal** - friend’s email address
   * **customer_id** - unique identifier of friend
   * **order_date** - friend’s order date in ISO 8601 format
 
@@ -412,6 +414,7 @@ Reward reason can be of 5 following general types.
        "type": "Purchase",
        "order_number": "4190583",
        "subtotal": "73.41",
+       "email": "referred@example.com",
        "customer_id": "323518374",
        "order_date": "2018-08-27T21:43:23.060+03:00",
        "coupon_code": "WHT40052"
@@ -493,6 +496,7 @@ Reward reason can be of 5 following general types.
        "type": "Purchase",
        "order_number": "416466456",
        "subtotal": "48.39",
+       "email": "referred@example.com",
        "customer_id": "401088820",
        "order_date": "2018-08-27T21:46:29.519+03:00",
        "coupon_code": "WHT862"
