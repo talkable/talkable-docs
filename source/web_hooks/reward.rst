@@ -151,7 +151,7 @@ Webhook Set Up Steps <web_hooks>`
   * **id** — unique identifier of the friend’s origin
   * **order_number** - unique identifier of friend’s order
   * **subtotal** - friend’s order subtotal
-  * **subtotal** - friend’s email address
+  * **email** - friend’s email address
   * **customer_id** - unique identifier of friend
   * **order_date** - friend’s order date in ISO 8601 format
 
