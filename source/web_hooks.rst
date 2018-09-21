@@ -21,16 +21,21 @@ Each Webhook in Talkable is defined with an HTTP URL to deliver Webhook data
 
    <h2>Available Webhooks</h2>
 
-Below is a user experience flow showing when Talkable Webhooks are called. For more details concerning specific Talkable Webhooks, click the appropriate Webhook type in the left-hand menu.
+Below is a user experience flow showing when Talkable Webhooks are called.
+For more details concerning specific Talkable Webhooks, click the appropriate
+Webhook type in the left-hand menu.
 
-.. image:: /_static/img/Flowchart_webhooks_1.png
+.. image:: /_static/img/flowchart_webhooks_1.png
    :alt: Campaign Type - Invite,
    :class: is-minimal
 
-**Note:** The Reward Webhooks will only send if there is an associated incentive configured. For example, for the 'Reward Webhook' (reason = signup) to send, there must be a signup incentive configured in the campaign rules. 
+.. note::
+
+   The Reward Webhooks will only send if there is an associated incentive
+   configured. For example, for the 'Reward Webhook' (reason = signup) to send,
+   there must be a signup incentive configured in the campaign rules.
 
 .. raw:: html
- 
 
    <h2>Set Up</h2>
 
