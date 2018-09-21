@@ -61,19 +61,19 @@ script.
 
 .. code-block:: html
 
-  <!-- Begin Talkable integration code -->
-  <script async src="https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/<YOUR-TALKABLE-SITE-ID>.min.js"></script>
-  <script>
-    window._talkableq = window._talkableq || [];
-    window._talkableq.unshift(['init', { site_id: '<YOUR-TALKABLE-SITE-ID>' }]);
-    window._talkableq.push(['authenticate_customer', {
-      email: '', // Optional, pass when available. Example: 'customer@example.com'
-      first_name: '', // Optional, pass when available. Example: 'John'
-      last_name: '' // Optional, pass when available. Example: 'Smith'
-    }]);
-    window._talkableq.push(['register_affiliate', {}]);
-  </script>
-  <!-- End Talkable integration code -->
+   <!-- Begin Talkable integration code -->
+   <script async src="https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/<YOUR-TALKABLE-SITE-ID>.min.js"></script>
+   <script>
+     window._talkableq = window._talkableq || [];
+     window._talkableq.unshift(['init', { site_id: '<YOUR-TALKABLE-SITE-ID>' }]);
+     window._talkableq.push(['authenticate_customer', {
+       email: '', // Optional, pass when available. Example: 'customer@example.com'
+       first_name: '', // Optional, pass when available. Example: 'John'
+       last_name: '' // Optional, pass when available. Example: 'Smith'
+     }]);
+     window._talkableq.push(['register_affiliate', {}]);
+   </script>
+   <!-- End Talkable integration code -->
 
 Initialization Script Notes
 ---------------------------
@@ -107,23 +107,23 @@ passed where division by zero or `null` value does not occur.
 
 .. code-block:: html
 
-  <!-- Begin Talkable integration code -->
-  <script>
-    var _talkable_data = {
-      purchase: {
-        order_number: '', // Unique order number. Example: '100011'
-        subtotal: '', // Order subtotal (pre-tax, post-discount). Example: '23.97'
-        coupon_code: '', // Coupon code that was used at checkout (pass multiple as an array). Example: 'SAVE20'
-        shipping_zip: '',  // Optional - used for fraud protection by address. Example: '02222'
-        shipping_address: '' // Full address of the order, make sure to strictly follow a format: 'Apt #, Street address, City, State, ZIP, Country'
-      },
-      customer: {
-        email: '' // Customer email address who issued a purchase. Example: 'customer@example.com'
-      }
-    };
-    _talkableq.push(['register_purchase', _talkable_data]);
-  </script>
-  <!-- End Talkable integration code -->
+   <!-- Begin Talkable integration code -->
+   <script>
+     var _talkable_data = {
+       purchase: {
+         order_number: '', // Unique order number. Example: '100011'
+         subtotal: '', // Order subtotal (pre-tax, post-discount). Example: '23.97'
+         coupon_code: '', // Coupon code that was used at checkout (pass multiple as an array). Example: 'SAVE20'
+         shipping_zip: '',  // Optional - used for fraud protection by address. Example: '02222'
+         shipping_address: '' // Full address of the order, make sure to strictly follow a format: 'Apt #, Street address, City, State, ZIP, Country'
+       },
+       customer: {
+         email: '' // Customer email address who issued a purchase. Example: 'customer@example.com'
+       }
+     };
+     _talkableq.push(['register_purchase', _talkable_data]);
+   </script>
+   <!-- End Talkable integration code -->
 
 Post Purchase Script Notes
 --------------------------
@@ -159,7 +159,7 @@ in the body of the page between your standard site header and footer:
 
 .. code-block:: html
 
-  <div id="talkable-offer"></div>
+   <div id="talkable-offer"></div>
 
 Advocate Landing Page Notes
 ---------------------------
@@ -192,10 +192,10 @@ the body of the page:
 
 .. code-block:: html
 
-  <div id="talkable-offer"></div>
+   <div id="talkable-offer"></div>
 
-Referral Dashboard notes:
--------------------------
+Referral Dashboard Notes
+------------------------
 
 1. The :ref:`Talkable Initialization Script <integration/custom/integration_components/initialization_script>` must be present in your head
    template in order for the referral dashboard to work

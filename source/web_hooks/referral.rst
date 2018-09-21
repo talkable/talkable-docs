@@ -48,7 +48,7 @@ Triggered whenever a referral status becomes “Approved” or “Unblocked”.
       * *"AffiliateMember"* for standalone campaign
 
     * **id** — unique identifier of the origin event
-    * **email** — e-mail address of the referrer person
+    * **email** — email address of the referrer person
 
 * **friend_rewards** — array of hashes describing the rewards received by referred person, where each hash contains parameters:
 

@@ -30,14 +30,18 @@ Possible events which will trigger the Reward Webhook are:
 * Advocate shares an offer with Friend(s) (Reason = **shared**)
 * Friend passes email gating form (Reason = **click**)
 
-  * Note, if campaign is setup without email gating form, Reward Webhook with
-    Reason = click will trigger when Friend clicks through to site
+  .. note::
+
+     If campaign is setup without email gating form, Reward Webhook with
+     Reason = click will trigger when Friend clicks through to site.
 
 * Friend makes eligible purchase (Reason = **referrer**)
 * Friend makes eligible purchase (Reason = **referred**)
 
-  * Note: Reason = referrer indicates a reward should be given to an Advocate.
-    Reason = referred indicates a reward should be given to a Friend.
+  .. note::
+
+     Reason = referrer indicates a reward should be given to an Advocate.
+     Reason = referred indicates a reward should be given to a Friend.
 
 .. raw:: html
 
@@ -62,12 +66,14 @@ To configure incentives:
    Talkable Customer Success Manager; they will be able to set up “Rebate (store
    credit)” type incentives and “Non-Monetary” type incentives.
 
-**Note:** If there is a delay configured into when the Advocate reward is
-approved then the Reward Webhook trigger when the Advocate reward is ready to be,
-or has been given. For example, if campaigns are set to send an Advocate their
-reward three days after a Friend makes an eligible purchase, then the Reward
-Webhook will be called three days after the Friend makes the eligible purchase.
-You can select these delays under **Fraud Settings**, which is found under **Menu**.
+.. note::
+
+   If there is a delay configured into when the Advocate reward is approved then
+   the Reward Webhook trigger when the Advocate reward is ready to be, or has
+   been given. For example, if campaigns are set to send an Advocate their reward
+   three days after a Friend makes an eligible purchase, then the Reward Webhook
+   will be called three days after the Friend makes the eligible purchase. You
+   can select these delays under **Fraud Settings**, which is found under **Menu**.
 
 Once incentives are configured for a referral campaign, Talkable will then call
 the Reward Webhook any time either an Advocate or a Friend should receive a
@@ -107,7 +113,7 @@ Webhook Set Up Steps <web_hooks>`
     * *"AffiliateMember"* for standalone campaign
 
   * **id** — unique identifier of the origin event
-  * **email** — e-mail address of the referrer (Advocate) person
+  * **email** — email address of the referrer (Advocate) person
 
 * **reward** — subhash of parameters describing the reward itself
 
@@ -131,7 +137,7 @@ Webhook Set Up Steps <web_hooks>`
 
    *For Affiliate Member:*
 
-  * **email** — e-mail address of the referrer (Advocate) person
+  * **email** — email address of the referrer (Advocate) person
 
    *For Purchase:*
 
