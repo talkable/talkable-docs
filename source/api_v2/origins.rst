@@ -100,13 +100,7 @@ Sample response:
          "type": "Purchase",
          "coupon_code": ""
        },
-       "offer": {
-         "id": 89238912,
-         "short_url_code": "dZpBwd",
-         "email": "customer@example.com",
-         "show_url": "https://www.talkable.com/x/iXh4Je",
-         "claim_url": "https://www.talkable.com/x/LSKEAX"
-       }
+       "offer": null
      }
    }
 
@@ -148,18 +142,12 @@ Sample response:
          "customer_id": null,
          "coupon_code": ""
        },
-       "offer": {
-         "id": 89238912,
-         "short_url_code": "dZpBwd",
-         "email": "customer@example.com",
-         "show_url": "https://www.talkable.com/x/iXh4Je",
-         "claim_url": "https://www.talkable.com/x/LSKEAX"
-       }
+       "offer": null
      }
    }
 
-Create an affiliate member
-..........................
+Create an affiliate member and target a campaign
+................................................
 
 .. code-block:: javascript
 
@@ -167,7 +155,8 @@ Create an affiliate member
      "site_slug": "my-store",
      "type": "AffiliateMember",
      "data": {
-       "email": "affiliate@example.com"
+       "email": "affiliate@example.com",
+       "campaign_tags": ["invite"]
      }
    }
 
@@ -176,7 +165,7 @@ Create an affiliate member
    curl -H "Content-Type: application/json" \
         -X POST \
         -u i9uil7nQgDjucCiTJu: \
-        -d '{"site_slug":"my-store","type":"AffiliateMember","data":{"email":"affiliate@example.com"}}' \
+        -d '{"site_slug":"my-store","type":"AffiliateMember","data":{"email":"affiliate@example.com","campaign_tags":["invite"]}}' \
         https://www.talkable.com/api/v2/origins
 
 Sample response:
@@ -212,6 +201,7 @@ With sharing links
      "type": "AffiliateMember",
      "data": {
        "email": "affiliate@example.com",
+       "campaign_tags": ["invite"],
        "sharing_channels": ["facebook", "twitter", "custom"]
      }
    }
@@ -221,7 +211,7 @@ With sharing links
    curl -H "Content-Type: application/json" \
         -X POST \
         -u i9uil7nQgDjucCiTJu: \
-        -d '{"site_slug":"my-store","type":"AffiliateMember","data":{"email":"affiliate@example.com","sharing_channels":["facebook","twitter","custom"]}}' \
+        -d '{"site_slug":"my-store","type":"AffiliateMember","data":{"email":"affiliate@example.com","campaign_tags":["invite"],"sharing_channels":["facebook","twitter","custom"]}}' \
         https://www.talkable.com/api/v2/origins
 
 Sample response:
