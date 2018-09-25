@@ -147,7 +147,7 @@ Sample response:
    }
 
 Create an affiliate member and target a campaign
-..........................
+................................................
 
 .. code-block:: javascript
 
