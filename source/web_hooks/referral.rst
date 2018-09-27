@@ -4,26 +4,29 @@
 Referral Webhook
 =================
 
-The Talkable Referral Webhook notifies your endpoint that an Advocate (referrer) referral status has become  “Approved” or “Unblocked” specifically for a Friend (referee) purchase or event. 
+The Talkable Referral Webhook notifies your endpoint that an |advocate| referral
+status has become “Approved” or “Unblocked” specifically for a |friend| purchase
+or event.
 
 Use cases for the Referral Webhook include:
 
-    * Providing account credit or account upgrades to an Advocate as a reward
-    * Giving non-monetary rewards such as physical gifts to an Advocate
-    * Sending automated ‘Thank You’ emails after a reward is given to an Advocate
-    * Data for business intelligence or analytics systems to track when Advocates receive rewards
-
+* Providing account credit or account upgrades to an Advocate as a reward
+* Giving non-monetary rewards such as physical gifts to an Advocate
+* Sending automated ‘Thank You’ emails after a reward is given to an Advocate
+* Data for business intelligence or analytics systems to track when Advocates receive rewards
 
 .. raw:: html
 
    <h2>When does Talkable call the Referral Webhook?</h2>
 
-Talkable Referral Webhook is triggered any time an Advocate referral status has become  “Approved” or “Unblocked” specifically for a Friend purchase or event. 
+Talkable Referral Webhook is triggered any time an Advocate referral status has become
+“Approved” or “Unblocked” specifically for a Friend purchase or event.
 
-**Note:** Referral Webhook triggers only for Advocate rewards specifically from a Friend Purchase or Friend Event (such as signup event or subscription purchase event). To receive notification of both Advocate and Friend rewards use the Rewards Webhook. 
+**Note:** Referral Webhook triggers only for Advocate rewards specifically from a Friend
+Purchase or Friend Event (such as signup event or subscription purchase event).
+To receive notification of both Advocate and Friend rewards use the Rewards Webhook.
 
-
-.. raw:: html   
+.. raw:: html
 
    <h2>Payload parameters provided for Referral Webhook</h2>
 
@@ -36,12 +39,13 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
 
 * **offer** — subhash of parameters describing the offer
 
-  * **email** — referrer’s email address
-  * **short_url_code**
+  * **email** — |advocate| email address
+  * **short_url_code** – a uniq offer ID
 
 * **referred_origin** - subhash with referred origin made by friend that created a referral
 
-* **advocate_rewards** — array of hashes describing the rewards received by referrer person, where each hash contains parameters:
+* **advocate_rewards** — array of hashes describing the rewards received by |advocate|
+  person, where each hash contains parameters:
 
   * **email** — email of the person that got reward
   * **person** — subhash of parameters describing the person that got reward
@@ -54,20 +58,23 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
     * **unsubscribed_at**
 
   * **amount** — amount of money to reward (null when non-monetary incentive is used)
-  * **incentive** — type of incentive reward (rebate, discount_coupon, other)
+  * **incentive** — type of incentive reward (`rebate`, `discount_coupon`, `other`)
   * **incentive_description** — verbal reward explanation
-  * **reward_coupon_code** — Coupon code received by person as a reward. Only in case when incetive equals discount_coupon.
+  * **reward_coupon_code** — Coupon code received by person as a reward. Only in case when
+    incetive equals `discount_coupon`.
   * **origin** — contains data about the event that issued an offer:
 
     * **type**
 
-      * *"Purchase"* for post-purchase campaign
-      * *"AffiliateMember"* for standalone campaign
+      * *"Purchase"* for post-purchase placement
+      * *"AffiliateMember"* for standalone, floating widget, or gleam placements
+      * *"Event"* for post-event placement
 
     * **id** — unique identifier of the origin event
-    * **email** — e-mail address of the referrer person
+    * **email** — e-mail address of the |advocate| person
 
-* **friend_rewards** — array of hashes describing the rewards received by referred person, where each hash contains parameters:
+* **friend_rewards** — array of hashes describing the rewards received by referred person,
+  where each hash contains parameters:
 
   * **email** — email of the person that got reward
   * **person** — subhash of parameters describing the person that got reward
@@ -82,7 +89,8 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
   * **amount** — amount of money to reward (null when non-monetary incentive is used)
   * **incentive** — type of incentive reward (rebate, discount_coupon, other)
   * **incentive_description** — verbal reward explanation
-  * **reward_coupon_code** — Coupon code received by person as a reward. Only in case when incetive equals discount_coupon.
+  * **reward_coupon_code** — Coupon code received by person as a reward. Only in case when
+    incetive equals discount_coupon.
   * **origin** — contains a data about Purchase that issued a referral
 
 .. include:: /partials/coupon_as_reward.rst
