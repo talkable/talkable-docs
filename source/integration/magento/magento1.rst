@@ -6,7 +6,7 @@ Magento 1.x Integration
 
 .. note::
 
-  You must have Talkable account in order to get started
+   You must have Talkable account in order to get started
 
 A `Magento Talkable extension`_ (`direct download`_) is available for easy
 integration. The extension currently supports Magento versions 1.5+
@@ -19,7 +19,9 @@ integration. The extension currently supports Magento versions 1.5+
 
    .. image:: /_static/img/magento/magento-flow-1.jpg
 
-2. Copy the extension key: **http://connect20.magentocommerce.com/community/talkable** → then paste it into an extension key input field (2) and click **Install** (3). In the table below you should see a status "Ready to install", hit **Proceed** (4):
+2. Copy the extension key: **http://connect20.magentocommerce.com/community/talkable** →
+   then paste it into an extension key input field (2) and click **Install** (3).
+   In the table below you should see a status "Ready to install", hit **Proceed** (4):
 
    .. image:: /_static/img/magento/magento-flow-2.jpg
 
@@ -55,7 +57,7 @@ integration. The extension currently supports Magento versions 1.5+
 
 .. raw:: html
 
-  <h2>Troubleshooting</h2>
+   <h2>Troubleshooting</h2>
 
 In case you cannot find Talkable extension in the sidebar try clearing cache:
 

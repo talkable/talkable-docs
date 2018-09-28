@@ -15,6 +15,7 @@ You can get error type and error message with ``error.getErrorCode()``
 and ``error.getMessage()`` respectively.
 
 Here is a list of possible error codes from ``TalkableOfferLoadException`` with descriptions:
+
    ``NETWORK_ERROR``: General network error
 
    ``API_ERROR``: Talkable API unavailable
@@ -55,27 +56,27 @@ To use multiple site slugs inside your application, follow these steps:
 
    .. code-block:: java
 
-     import com.talkable.sdk.Talkable;
-     import android.app.Application;
+      import com.talkable.sdk.Talkable;
+      import android.app.Application;
 
-     public class App extends Application {
-         @Override
-         public void onCreate() {
-             super.onCreate();
-             Talkable.initialize(this, "your-default-site-slug");
-         }
-     }
+      public class App extends Application {
+          @Override
+          public void onCreate() {
+              super.onCreate();
+              Talkable.initialize(this, "your-default-site-slug");
+          }
+      }
 
    .. note::
 
-     You can set the site slug at any time after initialization in the following way:
+      You can set the site slug at any time after initialization in the following way:
 
-     .. code-block:: java
+      .. code-block:: java
 
-       Talkable.setSiteSlug("some-site-slug");
+         Talkable.setSiteSlug("some-site-slug");
 
-     Make sure to add the credentials for this site inside the manifest file.
-     Otherwise, an exception will be raised.
+   Make sure to add the credentials for this site inside the manifest file.
+   Otherwise, an exception will be raised.
 
 Sharing via Facebook
 --------------------
@@ -91,16 +92,16 @@ Overriding default behaviour
 
    .. code-block:: java
 
-     import com.talkable.sdk.TalkableOfferFragment;
+      import com.talkable.sdk.TalkableOfferFragment;
 
-     public class OverriddenTalkableOfferFragment extends TalkableOfferFragment {
-         @Override
-         public void copyToClipboard(String string) {
-             super.copyToClipboard(string);
+      public class OverriddenTalkableOfferFragment extends TalkableOfferFragment {
+          @Override
+          public void copyToClipboard(String string) {
+              super.copyToClipboard(string);
 
-             Toast.makeText(getActivity(), "Text copied!", Toast.LENGTH_LONG).show();
-         }
-     }
+              Toast.makeText(getActivity(), "Text copied!", Toast.LENGTH_LONG).show();
+          }
+      }
 
 2. Pass Class of an activity you want to run a fragment in and the overriden fragment to
    `Talkable.showOffer` call:
@@ -162,7 +163,6 @@ using ``Talkable.loadOffer(origin, callback)`` and pass it to ``TalkableOfferFra
 
    Make sure to `handle configurations changes right`_, as ``TalkableOfferFragment``
    is built on top of ``WebView`` and restoring its state is up to you.
-
 
 Native integration via API
 --------------------------

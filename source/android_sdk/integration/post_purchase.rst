@@ -19,40 +19,40 @@ Here is an example of a Purchase capturing, this action should be triggered on t
 
 .. code-block:: java
 
-    import com.talkable.sdk.Talkable;
-    ...
-    Double price = 10.99;
-    Integer quantity = 1;
-    String productId = "1";
-    Item item = new Item(subtotal, quantity, productId);
-    item.setTitle("Item Title"); // Optional
-    item.setUrl("https://site.com/product.html"); // Optional
-    item.setImageUrl("https://site.com/image.jpg"); // Optional
+   import com.talkable.sdk.Talkable;
+   ...
+   Double price = 10.99;
+   Integer quantity = 1;
+   String productId = "1";
+   Item item = new Item(subtotal, quantity, productId);
+   item.setTitle("Item Title"); // Optional
+   item.setUrl("https://site.com/product.html"); // Optional
+   item.setImageUrl("https://site.com/image.jpg"); // Optional
 
-    Double subtotal = price * quantity; // Required
-    String orderNumber = "123456"; // Required
-    Date orderDate = Calendar.getInstance().getTime(); // Required
-    String[] coupons = {"EXAMPLE-CODE-1", "EXAMPLE-CODE-2"}; // Optional
+   Double subtotal = price * quantity; // Required
+   String orderNumber = "123456"; // Required
+   Date orderDate = Calendar.getInstance().getTime(); // Required
+   String[] coupons = {"EXAMPLE-CODE-1", "EXAMPLE-CODE-2"}; // Optional
 
-    Purchase purchase = new Purchase(subtotal, orderNumber, orderDate, coupons);
-    purchase.setCustomer(customer); // Required
-    purchase.addItem(item); // Optional
+   Purchase purchase = new Purchase(subtotal, orderNumber, orderDate, coupons);
+   purchase.setCustomer(customer); // Required
+   purchase.addItem(item); // Optional
 
-    String campaignTag = "android-post-purchase";
-    purchase.setCampaignTag(campaignTag); // Optional
+   String campaignTag = "android-post-purchase";
+   purchase.setCampaignTag(campaignTag); // Optional
 
-    Activity activity = this;
-    Talkable.showOffer(activity, purchase, new TalkableErrorCallback<TalkableOfferLoadException>() {
-        @Override
-        public void onError(TalkableOfferLoadException error) {
-            // Error handling. Note that it runs on non UI thread
-        }
-    });
+   Activity activity = this;
+   Talkable.showOffer(activity, purchase, new TalkableErrorCallback<TalkableOfferLoadException>() {
+       @Override
+       public void onError(TalkableOfferLoadException error) {
+           // Error handling. Note that it runs on non UI thread
+       }
+   });
 
 .. note::
 
-  If Post Purchase campaign does not show up when testing make sure you have it live with
-  `android-post-purchase` tag on the Campaigns listing.
+   If Post Purchase campaign does not show up when testing make sure you have it live with
+   `android-post-purchase` tag on the Campaigns listing.
 
 .. container:: hidden
 
