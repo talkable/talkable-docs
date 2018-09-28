@@ -1,14 +1,34 @@
 .. _web_hooks/referral:
 .. include:: /partials/common.rst
 
-Referral Web Hook
-=================
+Referral Webhook
+================
 
-Triggered whenever a referral status becomes “Approved” or “Unblocked”.
+The Talkable Referral Webhook notifies your endpoint that an |advocate| referral
+status has become “Approved” or “Unblocked” specifically for a |friend| purchase
+or event.
+
+Use cases for the Referral Webhook include:
+
+* Providing account credit or account upgrades to an Advocate as a reward
+* Giving non-monetary rewards such as physical gifts to an Advocate
+* Sending automated ‘Thank You’ emails after a reward is given to an Advocate
+* Data for business intelligence or analytics systems to track when Advocates receive rewards
 
 .. raw:: html
 
-   <h2>Payload parameters provided for Referral Web Hook</h2>
+   <h2>When does Talkable call the Referral Webhook?</h2>
+
+Talkable Referral Webhook is triggered any time an Advocate referral status has become
+“Approved” or “Unblocked” specifically for a Friend purchase or event.
+
+**Note:** Referral Webhook triggers only for Advocate rewards specifically from a Friend
+Purchase or Friend Event (such as signup event or subscription purchase event).
+To receive notification of both Advocate and Friend rewards use the Rewards Webhook.
+
+.. raw:: html
+
+   <h2>Payload parameters provided for Referral Webhook</h2>
 
 * **campaign** — subhash of parameters describing the campaign
 
@@ -19,12 +39,13 @@ Triggered whenever a referral status becomes “Approved” or “Unblocked”.
 
 * **offer** — subhash of parameters describing the offer
 
-  * **email** — referrer’s email address
-  * **short_url_code**
+  * **email** — |advocate| email address
+  * **short_url_code** – unique offer ID
 
 * **referred_origin** - subhash with referred origin made by friend that created a referral
 
-* **advocate_rewards** — array of hashes describing the rewards received by referrer person, where each hash contains parameters:
+* **advocate_rewards** — array of hashes describing the rewards received by |advocate|
+  person, where each hash contains parameters:
 
   * **email** — email of the person that got reward
   * **person** — subhash of parameters describing the person that got reward
@@ -37,20 +58,23 @@ Triggered whenever a referral status becomes “Approved” or “Unblocked”.
     * **unsubscribed_at**
 
   * **amount** — amount of money to reward (null when non-monetary incentive is used)
-  * **incentive** — type of incentive reward (rebate, discount_coupon, other)
+  * **incentive** — type of incentive reward (`rebate`, `discount_coupon`, `other`)
   * **incentive_description** — verbal reward explanation
-  * **reward_coupon_code** — Coupon code received by person as a reward. Only in case when incetive equals discount_coupon.
+  * **reward_coupon_code** — Coupon code received by person as a reward. Only in case when
+    incentive equals `discount_coupon`.
   * **origin** — contains data about the event that issued an offer:
 
     * **type**
 
-      * *"Purchase"* for post-purchase campaign
-      * *"AffiliateMember"* for standalone campaign
+      * *"Purchase"* for post-purchase placement
+      * *"AffiliateMember"* for standalone, floating widget, or gleam placements
+      * *"Event"* for post-event placement
 
     * **id** — unique identifier of the origin event
-    * **email** — email address of the referrer person
+    * **email** — email address of the |advocate| person
 
-* **friend_rewards** — array of hashes describing the rewards received by referred person, where each hash contains parameters:
+* **friend_rewards** — array of hashes describing the rewards received by referred person,
+  where each hash contains parameters:
 
   * **email** — email of the person that got reward
   * **person** — subhash of parameters describing the person that got reward
@@ -65,7 +89,8 @@ Triggered whenever a referral status becomes “Approved” or “Unblocked”.
   * **amount** — amount of money to reward (null when non-monetary incentive is used)
   * **incentive** — type of incentive reward (rebate, discount_coupon, other)
   * **incentive_description** — verbal reward explanation
-  * **reward_coupon_code** — Coupon code received by person as a reward. Only in case when incetive equals discount_coupon.
+  * **reward_coupon_code** — Coupon code received by person as a reward. Only in case when
+    incetive equals discount_coupon.
   * **origin** — contains a data about Purchase that issued a referral
 
 .. include:: /partials/coupon_as_reward.rst
@@ -80,9 +105,9 @@ Triggered whenever a referral status becomes “Approved” or “Unblocked”.
 
    {
      "campaign": {
-       "id": 836929610,
+       "id": 593427266,
        "type": "StandaloneCampaign",
-       "cached_slug": 836929610,
+       "cached_slug": 593427266,
        "tag_names": ["default"],
        "origin_min_age": null,
        "origin_max_age": null,
@@ -92,68 +117,111 @@ Triggered whenever a referral status becomes “Approved” or “Unblocked”.
        "email": "referrer@example.com",
        "short_url_code": "1a2PV"
      },
-     "referred_origin": {
-       "id": 543208538,
-       "type": "Purchase",
-       "order_number": "381177444",
-       "subtotal": "13.43",
+     "referrer": {
+       "id": 715729561,
+       "email": "referrer@example.com",
+       "person": {
+         "email": "referrer@example.com",
+         "first_name": "Bob",
+         "last_name": "Crane",
+         "sub_choice": false,
+         "subscribed_at": null,
+         "opted_in_at": null,
+         "unsubscribed_at": null
+       },
+       "amount": "5.00",
+       "incentive": "rebate",
+       "incentive_description": "$5.00 back",
+       "origin": {
+         "id": 159843498,
+         "type": "AffiliateMember",
+         "email": "referrer@example.com",
+         "customer_id": "64227025"
+       }
+     },
+     "referred": {
+       "id": 11192772,
        "email": "referred@example.com",
-       "customer_id": "22726076",
-       "coupon_code": "WHT60000"
+       "person": {
+         "email": "referred@example.com",
+         "first_name": "Alice",
+         "last_name": "Smith",
+         "sub_choice": true,
+         "subscribed_at": "2018-09-14T23:57:18.734+03:00",
+         "opted_in_at": "2018-09-14T23:57:18.734+03:00",
+         "unsubscribed_at": null
+       },
+       "amount": "0.00",
+       "incentive": "other",
+       "incentive_description": "First Month Free",
+       "origin": {
+         "id": 147886587,
+         "type": "Purchase",
+         "order_number": "450901776",
+         "subtotal": 35.03,
+         "customer_id": "565659001",
+         "coupon_code": "WHT29123"
+       }
      },
      "advocate_rewards": [
        {
-         "id": 316145153,
+         "id": 715729561,
          "email": "referrer@example.com",
          "person": {
            "email": "referrer@example.com",
            "first_name": "Bob",
            "last_name": "Crane",
+           "gender": null,
            "sub_choice": false,
            "subscribed_at": null,
-           "unsubscribed_at": null,
            "opted_in_at": null,
-           "username": null
+           "unsubscribed_at": null
          },
          "amount": "5.00",
          "incentive": "rebate",
          "incentive_description": "$5.00 back",
          "origin": {
-           "id": 667277390,
+           "id": 159843498,
            "type": "AffiliateMember",
            "email": "referrer@example.com",
-           "customer_id": null
+           "customer_id": "64227025"
          }
        }
      ],
      "friend_rewards": [
        {
-         "id": 884178819,
+         "id": 11192772,
          "email": "referred@example.com",
          "person": {
            "email": "referred@example.com",
            "first_name": "Alice",
            "last_name": "Smith",
            "sub_choice": true,
-           "subscribed_at": "2014-08-14T02:01:16.823-07:00",
-           "unsubscribed_at": null,
-           "opted_in_at": null,
-           "username": null
+           "subscribed_at": "2018-09-14T23:57:18.734+03:00",
+           "opted_in_at": "2018-09-14T23:57:18.734+03:00",
+           "unsubscribed_at": null
          },
          "amount": "0.00",
          "incentive": "other",
          "incentive_description": "First Month Free",
          "origin": {
-           "id": 543208538,
+           "id": 147886587,
            "type": "Purchase",
-           "order_number": "381177444",
-           "subtotal": "13.43",
-           "email": "referred@example.com",
-           "customer_id": "22726076",
-           "coupon_code": "WHT60000"
+           "order_number": "450901776",
+           "subtotal": 35.03,
+           "customer_id": "565659001",
+           "coupon_code": "WHT29123"
          }
        }
-     ]
+     ],
+     "referred_origin": {
+       "id": 6400368,
+       "type": "Purchase",
+       "order_number": "459179054",
+       "subtotal": 11.39,
+       "customer_id": "376990942",
+       "coupon_code": "WHT59688"
+     }
    }
 
 .. raw:: html
@@ -162,7 +230,7 @@ Triggered whenever a referral status becomes “Approved” or “Unblocked”.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"campaign":{"id":836929610,"type":"StandaloneCampaign","cached_slug":836929610,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"referred_origin":{"id":543208538,"type":"Purchase","order_number":"381177444","subtotal":"13.43","email":"referred@example.com","customer_id":"22726076","coupon_code":"WHT60000"},"advocate_rewards":[{"id":316145153,"email":"referrer@example.com","person":{"email":"referrer@example.com","first_name":"Bob","last_name":"Crane","sub_choice":false,"subscribed_at":null,"unsubscribed_at":null,"opted_in_at":null,"username":null},"amount":"5.00","incentive":"rebate","incentive_description":"$5.00 back","origin":{"id":667277390,"type":"AffiliateMember","email":"referrer@example.com","customer_id":null}}],"friend_rewards":[{"id":884178819,"email":"referred@example.com","person":{"email":"referred@example.com","first_name":"Alice","last_name":"Smith","sub_choice":true,"subscribed_at":"2014-08-14T02:01:16.823-07:00","unsubscribed_at":null,"opted_in_at":null,"username":null},"amount":"0.00","incentive":"other","incentive_description":"First Month Free","origin":{"id":543208538,"type":"Purchase","order_number":"381177444","subtotal":"13.43","email":"referred@example.com","customer_id":"22726076","coupon_code":"WHT60000"}}]}' <url>
+   curl --data 'key=<key>&payload={"campaign":{"id":593427266,"type":"StandaloneCampaign","cached_slug":593427266,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"referrer":{"id":715729561,"email":"referrer@example.com","person":{"email":"referrer@example.com","first_name":"Bob","last_name":"Crane","sub_choice":false,"subscribed_at":null,"opted_in_at":null,"unsubscribed_at":null},"amount":"5.00","incentive":"rebate","incentive_description":"$5.00 back","origin":{"id":159843498,"type":"AffiliateMember","email":"referrer@example.com","customer_id":"64227025"}},"referred":{"id":11192772,"email":"referred@example.com","person":{"email":"referred@example.com","first_name":"Alice","last_name":"Smith","sub_choice":true,"subscribed_at":"2018-09-14T23:57:18.734+03:00","opted_in_at":"2018-09-14T23:57:18.734+03:00","unsubscribed_at":null},"amount":"0.00","incentive":"other","incentive_description":"First Month Free","origin":{"id":147886587,"type":"Purchase","order_number":"450901776","subtotal":35.03,"customer_id":"565659001","coupon_code":"WHT29123"}},"advocate_rewards":[{"id":715729561,"email":"referrer@example.com","person":{"email":"referrer@example.com","first_name":"Bob","last_name":"Crane","gender":null,"sub_choice":false,"subscribed_at":null,"opted_in_at":null,"unsubscribed_at":null},"amount":"5.00","incentive":"rebate","incentive_description":"$5.00 back","origin":{"id":159843498,"type":"AffiliateMember","email":"referrer@example.com","customer_id":"64227025"}}],"friend_rewards":[{"id":11192772,"email":"referred@example.com","person":{"email":"referred@example.com","first_name":"Alice","last_name":"Smith","sub_choice":true,"subscribed_at":"2018-09-14T23:57:18.734+03:00","opted_in_at":"2018-09-14T23:57:18.734+03:00","unsubscribed_at":null},"amount":"0.00","incentive":"other","incentive_description":"First Month Free","origin":{"id":147886587,"type":"Purchase","order_number":"450901776","subtotal":35.03,"customer_id":"565659001","coupon_code":"WHT29123"}}],"referred_origin":{"id":6400368,"type":"Purchase","order_number":"459179054","subtotal":11.39,"customer_id":"376990942","coupon_code":"WHT59688"}}' <url>
 
 .. container:: hidden
 
