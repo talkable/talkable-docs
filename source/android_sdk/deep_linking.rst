@@ -10,12 +10,12 @@ deep linking functionality with its Android SDK. This guide describes how to
 configure your Talkable campaign for deep linking and add support for it to
 your Android app.
 
-   .. note::
+.. note::
 
-      Credentials, mentioned in this document (``YOUR_SITE_SLUG``, ``YOUR_TALKABLE_PUBLIC_API_KEY``,
-      ``YOUR_GETSOCIAL_APP_ID``, ``YOUR_LINK_DOMAIN_PREFIX``), will be provided
-      with the document. Make sure to replace corresponding placeholders
-      in examples with the providen values.
+   Credentials, mentioned in this document (``YOUR_SITE_SLUG``, ``YOUR_TALKABLE_PUBLIC_API_KEY``,
+   ``YOUR_GETSOCIAL_APP_ID``, ``YOUR_LINK_DOMAIN_PREFIX``), will be provided
+   with the document. Make sure to replace corresponding placeholders
+   in examples with the providen values.
 
 Application Attributes
 ----------------------
@@ -39,8 +39,8 @@ Talkable SDK is distributed as an Android Library in ``aar`` format.
 
    .. note::
 
-     To do this, open import popup using *File* → *New* → *New Module* → *Import .JAR/.AAR Package*
-     and add Talkable SDK as a module dependency to your main module
+      To do this, open import popup using *File* → *New* → *New Module* → *Import .JAR/.AAR Package*
+      and add Talkable SDK as a module dependency to your main module
 
 2. Add Talkable SDK dependencies to ``build.gradle``:
 
@@ -188,40 +188,39 @@ SDK Initialization
 
    .. code-block:: java
 
-     import com.talkable.sdk.Talkable;
+      import com.talkable.sdk.Talkable;
 
-     public class App extends Application {
-         @Override
-         public void onCreate() {
-             super.onCreate();
-             Talkable.initialize(this);
-         }
-     }
+      public class App extends Application {
+          @Override
+          public void onCreate() {
+              super.onCreate();
+              Talkable.initialize(this);
+          }
+      }
 
    .. note::
 
-     Make sure to add your application class name as ``android:name`` parameter of
-     the ``<application>`` element in your manifest.
+      Make sure to add your application class name as ``android:name`` parameter
+      of the ``<application>`` element in your manifest.
 
 2. Call the ``Talkable.trackAppOpen`` method inside your main activity:
 
    .. code-block:: java
 
-     import com.talkable.sdk.Talkable;
+      import com.talkable.sdk.Talkable;
 
-     public class MainActivity extends Activity {
-         @Override
-         public void onCreate(Bundle savedInstanceState) {
-             super.onCreate();
-             Talkable.trackAppOpen(this);
-         }
-     }
+      public class MainActivity extends Activity {
+          @Override
+          public void onCreate(Bundle savedInstanceState) {
+              super.onCreate();
+              Talkable.trackAppOpen(this);
+          }
+      }
 
 Requirements
 ------------
 
 The SDK supports Android 4.1 and later.
-
 
 .. _`GetSocial.im`: https://www.getsocial.im
 .. _`Android App Links docs`: https://developer.android.com/training/app-links/index.html

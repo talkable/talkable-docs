@@ -5,17 +5,35 @@ Webhooks
 ########
 
 Webhooks are "user-defined HTTP callbacks" triggered by events on Talkable’s
-site. Subscribing to Talkable webhooks allows you to receive notifications about
+site. Subscribing to Talkable Webhooks allows you to receive notifications about
 various events from Talkable, for example, when a Reward should be given, or
 when a Friend or Advocate opts in to an email newsletter subscription.
 
-After subscribing to a webhook, your app can execute code immediately after
+After subscribing to a Webhook, your app can execute code immediately after
 specific events occur in Talkable.
 
 http://en.wikipedia.org/wiki/Webhook
 
 Each Webhook in Talkable is defined with an HTTP URL to deliver Webhook data
 (aka payload). This URL should be defined and implemented on the client’s site.
+
+.. raw:: html
+
+   <h2>Available Webhooks</h2>
+
+Below is a user experience flow showing when Talkable Webhooks are called.
+For more details concerning specific Talkable Webhooks, click the appropriate
+Webhook type in the left-hand menu.
+
+.. image:: /_static/img/flowchart_webhooks_1.png
+   :alt: Campaign Type - Invite,
+   :class: is-minimal
+
+.. note::
+
+   The Reward Webhooks will only send if there is an associated incentive
+   configured. For example, for the 'Reward Webhook' (reason = signup) to send,
+   there must be a signup incentive configured in the campaign rules.
 
 .. raw:: html
 

@@ -51,38 +51,38 @@ To update from the previous version, please do following steps.
 
    .. code-block:: groovy
 
-     // From
-     compile 'com.google.code.gson:gson:2.7'
-     compile 'com.android.support:support-v4:25.3.1'
+      // From
+      compile 'com.google.code.gson:gson:2.7'
+      compile 'com.android.support:support-v4:25.3.1'
 
-     // To
-     compile 'com.google.code.gson:gson:2.8'
-     compile 'com.android.support:support-v4:26.1.0'
+      // To
+      compile 'com.google.code.gson:gson:2.8'
+      compile 'com.android.support:support-v4:26.1.0'
 
 2. Use ``showOffer`` functions with a callback parameter.
 
    .. code-block:: java
 
-     // From
-     showOffer(activity, origin);
+      // From
+      showOffer(activity, origin);
 
-     // To
-     showOffer(activity, origin, new TalkableErrorCallback<TalkableOfferLoadException>() {
-         @Override
-         public void onError(final TalkableOfferLoadException error) {
-             // Error handling. Note that it runs on non UI thread
-         }
-     });
+      // To
+      showOffer(activity, origin, new TalkableErrorCallback<TalkableOfferLoadException>() {
+          @Override
+          public void onError(final TalkableOfferLoadException error) {
+              // Error handling. Note that it runs on non UI thread
+          }
+      });
 
 3. Use ``Talkable.setSiteSlug`` functions without Context as a parameter.
 
    .. code-block:: java
 
-     // From
-     setSiteSlug(context, "site-slug");
+      // From
+      setSiteSlug(context, "site-slug");
 
-     // To
-     setSiteSlug("site-slug");
+      // To
+      setSiteSlug("site-slug");
 
 4. ``TalkableOfferFragmentListener`` interface implementation is optional now.
 
@@ -98,11 +98,11 @@ permission inside the manifest:
 
    .. code-block:: xml
 
-     <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-       package="com.android.app.myapp" >
-       <uses-permission android:name="android.permission.READ_CONTACTS" />
-       ...
-     </manifest>
+      <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.android.app.myapp" >
+        <uses-permission android:name="android.permission.READ_CONTACTS" />
+        ...
+      </manifest>
 
 0.4.1
 -----
@@ -137,61 +137,61 @@ To update from the previous version, please do following steps.
    .. code-block:: xml
 
       <!-- From -->
-       <application>
-           ...
-           <meta-data
-               android:name="TalkableApiKey"
-               android:value="{{YOUR_TALKABLE_PUBLIC_API_KEY}}" />
-           <meta-data
-               android:name="TalkableSiteSlug"
-               android:value="{{YOUR_SITE_SLUG}}" />
-           ...
-       </application>
+      <application>
+          ...
+          <meta-data
+              android:name="TalkableApiKey"
+              android:value="{{YOUR_TALKABLE_PUBLIC_API_KEY}}" />
+          <meta-data
+              android:name="TalkableSiteSlug"
+              android:value="{{YOUR_SITE_SLUG}}" />
+          ...
+      </application>
 
-       <!-- To -->
-       <application>
-           ...
-           <meta-data
-               android:name="tkbl-api-key-{{YOUR_SITE_SLUG}}"
-               android:value="{{YOUR_TALKABLE_PUBLIC_API_KEY}}" />
-           ...
-       </application>
+      <!-- To -->
+      <application>
+          ...
+          <meta-data
+              android:name="tkbl-api-key-{{YOUR_SITE_SLUG}}"
+              android:value="{{YOUR_TALKABLE_PUBLIC_API_KEY}}" />
+          ...
+      </application>
 
 3. Initialize Talkable in the ``Application``.
 
    .. code-block:: java
 
-     import com.talkable.sdk.Talkable;
-     import android.app.Application;
+      import com.talkable.sdk.Talkable;
+      import android.app.Application;
 
-     public class App extends Application {
-         @Override
-         public void onCreate() {
-             super.onCreate();
-             Talkable.initialize(this);
-         }
-     }
+      public class App extends Application {
+          @Override
+          public void onCreate() {
+              super.onCreate();
+              Talkable.initialize(this);
+          }
+      }
 
    .. note::
 
-     Make sure to add your application class name as ``android:name`` parameter of
-     the ``<application>`` element in your manifest
+      Make sure to add your application class name as ``android:name`` parameter of
+      the ``<application>`` element in your manifest
 
 4. Call ``Talkable.trackAppOpen`` inside you main activity class, like before.
 
    .. code-block:: java
 
-     import com.talkable.sdk.Talkable;
-     import android.app.Activity;
+      import com.talkable.sdk.Talkable;
+      import android.app.Activity;
 
-     public class MainActivity extends Activity {
-         @Override
-         public void onCreate(Bundle savedInstanceState) {
-             ...
+      public class MainActivity extends Activity {
+          @Override
+          public void onCreate(Bundle savedInstanceState) {
+              ...
 
-             Talkable.trackAppOpen(this);
-         }
-     }
+              Talkable.trackAppOpen(this);
+          }
+      }
 
 From this version defining of ``TalkableActivity`` and ``InstallReferrerReceiver``
 inside Android Manifest is not necessary.

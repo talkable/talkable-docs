@@ -22,7 +22,7 @@ each with links to integration details.
        easy to AB test.
 
    * - :ref:`Email encryption <advanced_features/email_encryption>`
-     - For additional security, it is possible to encrypt Advocate and Friend e-mails on back-end.
+     - For additional security, it is possible to encrypt Advocate and Friend emails on back-end.
 
    * - :ref:`File encryption <advanced_features/file_encryption>`
      - For additional security, it is possible to encrypt files.

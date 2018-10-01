@@ -30,14 +30,18 @@ Possible events which will trigger the Reward Webhook are:
 * Advocate shares an offer with Friend(s) (Reason = **shared**)
 * Friend passes email gating form (Reason = **click**)
 
-  * Note, if campaign is setup without email gating form, Reward Webhook with
-    Reason = click will trigger when Friend clicks through to site
+  .. note::
+
+     If campaign is setup without email gating form, Reward Webhook with
+     Reason = click will trigger when Friend clicks through to site.
 
 * Friend makes eligible purchase (Reason = **referrer**)
 * Friend makes eligible purchase (Reason = **referred**)
 
-  * Note: Reason = referrer indicates a reward should be given to an Advocate.
-    Reason = referred indicates a reward should be given to a Friend.
+  .. note::
+
+     Reason = referrer indicates a reward should be given to an Advocate.
+     Reason = referred indicates a reward should be given to a Friend.
 
 .. raw:: html
 
@@ -62,12 +66,14 @@ To configure incentives:
    Talkable Customer Success Manager; they will be able to set up “Rebate (store
    credit)” type incentives and “Non-Monetary” type incentives.
 
-**Note:** If there is a delay configured into when the Advocate reward is
-approved then the Reward Webhook trigger when the Advocate reward is ready to be,
-or has been given. For example, if campaigns are set to send an Advocate their
-reward three days after a Friend makes an eligible purchase, then the Reward
-Webhook will be called three days after the Friend makes the eligible purchase.
-You can select these delays under **Fraud Settings**, which is found under **Menu**.
+.. note::
+
+   If there is a delay configured into when the Advocate reward is approved then
+   the Reward Webhook trigger when the Advocate reward is ready to be, or has
+   been given. For example, if campaigns are set to send an Advocate their reward
+   three days after a Friend makes an eligible purchase, then the Reward Webhook
+   will be called three days after the Friend makes the eligible purchase. You
+   can select these delays under **Fraud Settings**, which is found under **Menu**.
 
 Once incentives are configured for a referral campaign, Talkable will then call
 the Reward Webhook any time either an Advocate or a Friend should receive a
@@ -107,7 +113,7 @@ Webhook Set Up Steps <web_hooks>`
     * *"AffiliateMember"* for standalone campaign
 
   * **id** — unique identifier of the origin event
-  * **email** — e-mail address of the referrer (Advocate) person
+  * **email** — email address of the referrer (Advocate) person
 
 * **reward** — subhash of parameters describing the reward itself
 
@@ -131,14 +137,14 @@ Webhook Set Up Steps <web_hooks>`
 
    *For Affiliate Member:*
 
-  * **email** — e-mail address of the referrer (Advocate) person
+  * **email** — email address of the referrer (Advocate) person
 
    *For Purchase:*
 
   * **order_number** - unique identifier of advocate’s order
   * **subtotal** - advocate’s order subtotal
+  * **email** - advocate’s email address
   * **customer_id** - unique identifier of advocate
-  * **order_date** - advocate’s order date in ISO 8601 format
 
 * **friend_origin** - subhash of data related to the friend event
 
@@ -150,8 +156,8 @@ Webhook Set Up Steps <web_hooks>`
   * **id** — unique identifier of the friend’s origin
   * **order_number** - unique identifier of friend’s order
   * **subtotal** - friend’s order subtotal
+  * **email** - friend’s email address
   * **customer_id** - unique identifier of friend
-  * **order_date** - friend’s order date in ISO 8601 format
 
 .. raw:: html
 
@@ -194,9 +200,7 @@ Reward reason can be of 5 following general types.
        "id": 500548529,
        "type": "StandaloneCampaign",
        "cached_slug": 500548529,
-       "tag_names": [
-         "default"
-       ],
+       "tag_names": ["default"],
        "origin_min_age": null,
        "origin_max_age": null,
        "new_customer": null
@@ -263,9 +267,7 @@ Reward reason can be of 5 following general types.
        "id": 500548529,
        "type": "StandaloneCampaign",
        "cached_slug": 500548529,
-       "tag_names": [
-         "default"
-       ],
+       "tag_names": ["default"],
        "origin_min_age": null,
        "origin_max_age": null,
        "new_customer": null
@@ -327,9 +329,7 @@ Reward reason can be of 5 following general types.
        "id": 312538309,
        "type": "StandaloneCampaign",
        "cached_slug": 312538309,
-       "tag_names": [
-         "default"
-       ],
+       "tag_names": ["default"],
        "origin_min_age": null,
        "origin_max_age": null,
        "new_customer": null
@@ -386,8 +386,7 @@ Reward reason can be of 5 following general types.
        "unsubscribed_at": null,
        "subscribed_at": "2018-08-27T21:42:23.060+03:00",
        "opted_in_at": "2018-08-27T21:42:23.060+03:00",
-       "sub_choice": true,
-       "gender": null
+       "sub_choice": true
      },
      "origin": {
        "id": 280695079,
@@ -395,7 +394,6 @@ Reward reason can be of 5 following general types.
        "order_number": "288015920",
        "subtotal": "6.31",
        "customer_id": "230652117",
-       "order_date": "2018-08-27T21:43:23.059+03:00",
        "coupon_code": "WHT25279"
      },
      "advocate_origin": {
@@ -404,7 +402,6 @@ Reward reason can be of 5 following general types.
        "order_number": "288015920",
        "subtotal": "6.31",
        "customer_id": "230652117",
-       "order_date": "2018-08-27T21:43:23.059+03:00",
        "coupon_code": "WHT25279"
      },
      "friend_origin": {
@@ -412,17 +409,15 @@ Reward reason can be of 5 following general types.
        "type": "Purchase",
        "order_number": "4190583",
        "subtotal": "73.41",
+       "email": "referred@example.com",
        "customer_id": "323518374",
-       "order_date": "2018-08-27T21:43:23.060+03:00",
        "coupon_code": "WHT40052"
      },
      "campaign": {
        "id": 484002505,
        "type": "StandaloneCampaign",
        "cached_slug": 484002505,
-       "tag_names": [
-         "default"
-       ],
+       "tag_names": ["default"],
        "origin_min_age": null,
        "origin_max_age": null,
        "new_customer": null
@@ -450,7 +445,7 @@ Reward reason can be of 5 following general types.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"person":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","username":"username","unsubscribed_at":null,"subscribed_at":"2018-08-27T21:42:23.060+03:00","opted_in_at":"2018-08-27T21:42:23.060+03:00","sub_choice":true,"gender":null},"origin":{"id":280695079,"type":"Purchase","order_number":"288015920","subtotal":"6.31","customer_id":"230652117","order_date":"2018-08-27T21:43:23.059+03:00","coupon_code":"WHT25279"},"advocate_origin":{"id":280695079,"type":"Purchase","order_number":"288015920","subtotal":"6.31","customer_id":"230652117","order_date":"2018-08-27T21:43:23.059+03:00","coupon_code":"WHT25279"},"friend_origin":{"id":264084636,"type":"Purchase","order_number":"4190583","subtotal":"73.41","customer_id":"323518374","order_date":"2018-08-27T21:43:23.060+03:00","coupon_code":"WHT40052"},"campaign":{"id":484002505,"type":"StandaloneCampaign","cached_slug":484002505,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"reward":{"id":8261305,"reason":"referrer","incentive_type":"rebate","incentive_description":"$10.00 back","incentive_custom_description":null,"amount":"10.0","coupon":{},"coupon_code":null,"status":"Paid"}}' <url>
+   curl --data 'key=<key>&payload={"person":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","username":"username","unsubscribed_at":null,"subscribed_at":"2018-08-27T21:42:23.060+03:00","opted_in_at":"2018-08-27T21:42:23.060+03:00","sub_choice":true},"origin":{"id":280695079,"type":"Purchase","order_number":"288015920","subtotal":"6.31","customer_id":"230652117","coupon_code":"WHT25279"},"advocate_origin":{"id":280695079,"type":"Purchase","order_number":"288015920","subtotal":"6.31","customer_id":"230652117","coupon_code":"WHT25279"},"friend_origin":{"id":264084636,"type":"Purchase","order_number":"4190583","subtotal":"73.41","email":"referred@example.com","customer_id":"323518374","coupon_code":"WHT40052"},"campaign":{"id":484002505,"type":"StandaloneCampaign","cached_slug":484002505,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"reward":{"id":8261305,"reason":"referrer","incentive_type":"rebate","incentive_description":"$10.00 back","incentive_custom_description":null,"amount":"10.0","coupon":{},"coupon_code":null,"status":"Paid"}}' <url>
 
 .. raw:: html
 
@@ -467,16 +462,15 @@ Reward reason can be of 5 following general types.
        "unsubscribed_at": null,
        "subscribed_at": "2018-08-27T21:45:29.519+03:00",
        "opted_in_at": "2018-08-27T21:45:29.519+03:00",
-       "sub_choice": true,
-       "gender": null
+       "sub_choice": true
      },
      "origin": {
        "id": 818629076,
        "type": "Purchase",
        "order_number": "416466456",
        "subtotal": "48.39",
+       "email": "referred@example.com",
        "customer_id": "401088820",
-       "order_date": "2018-08-27T21:46:29.519+03:00",
        "coupon_code": "WHT862"
      },
      "advocate_origin": {
@@ -485,7 +479,6 @@ Reward reason can be of 5 following general types.
        "order_number": "529868349",
        "subtotal": "25.76",
        "customer_id": "937735146",
-       "order_date": "2018-08-27T21:46:29.519+03:00",
        "coupon_code": "WHT15105"
      },
      "friend_origin": {
@@ -493,17 +486,15 @@ Reward reason can be of 5 following general types.
        "type": "Purchase",
        "order_number": "416466456",
        "subtotal": "48.39",
+       "email": "referred@example.com",
        "customer_id": "401088820",
-       "order_date": "2018-08-27T21:46:29.519+03:00",
        "coupon_code": "WHT862"
      },
      "campaign": {
        "id": 944706822,
        "type": "StandaloneCampaign",
        "cached_slug": 944706822,
-       "tag_names": [
-         "default"
-       ],
+       "tag_names": ["default"],
        "origin_min_age": null,
        "origin_max_age": null,
        "new_customer": null
@@ -531,7 +522,7 @@ Reward reason can be of 5 following general types.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"person":{"first_name":"Matt","last_name":"Smith","email":"friend@example.com","username":"username","unsubscribed_at":null,"subscribed_at":"2018-08-27T21:45:29.519+03:00","opted_in_at":"2018-08-27T21:45:29.519+03:00","sub_choice":true,"gender":null},"origin":{"id":818629076,"type":"Purchase","order_number":"416466456","subtotal":"48.39","customer_id":"401088820","order_date":"2018-08-27T21:46:29.519+03:00","coupon_code":"WHT862"},"advocate_origin":{"id":77856467,"type":"Purchase","order_number":"529868349","subtotal":"25.76","customer_id":"937735146","order_date":"2018-08-27T21:46:29.519+03:00","coupon_code":"WHT15105"},"friend_origin":{"id":818629076,"type":"Purchase","order_number":"416466456","subtotal":"48.39","customer_id":"401088820","order_date":"2018-08-27T21:46:29.519+03:00","coupon_code":"WHT862"},"campaign":{"id":944706822,"type":"StandaloneCampaign","cached_slug":944706822,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"reward":{"id":8261300,"reason":"referred","incentive_type":"rebate","incentive_description":"$10.00 back","incentive_custom_description":null,"amount":"10.0","coupon":{},"coupon_code":null,"status":"Paid"}}' <url>
+   curl --data 'key=<key>&payload={"person":{"first_name":"Matt","last_name":"Smith","email":"friend@example.com","username":"username","unsubscribed_at":null,"subscribed_at":"2018-08-27T21:45:29.519+03:00","opted_in_at":"2018-08-27T21:45:29.519+03:00","sub_choice":true},"origin":{"id":818629076,"type":"Purchase","order_number":"416466456","subtotal":"48.39","email":"referred@example.com","customer_id":"401088820","coupon_code":"WHT862"},"advocate_origin":{"id":77856467,"type":"Purchase","order_number":"529868349","subtotal":"25.76","customer_id":"937735146","coupon_code":"WHT15105"},"friend_origin":{"id":818629076,"type":"Purchase","order_number":"416466456","subtotal":"48.39","email":"referred@example.com","customer_id":"401088820","coupon_code":"WHT862"},"campaign":{"id":944706822,"type":"StandaloneCampaign","cached_slug":944706822,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"reward":{"id":8261300,"reason":"referred","incentive_type":"rebate","incentive_description":"$10.00 back","incentive_custom_description":null,"amount":"10.0","coupon":{},"coupon_code":null,"status":"Paid"}}' <url>
 
 .. container:: hidden
 
