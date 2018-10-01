@@ -9,10 +9,10 @@ Signup forms submission.
 
 Use cases for the Advocate Signup Webhook include:
 
-  * Tracking when users select the checkbox to opt into your email newsletter
-  * Collection of data for Business Intelligence and analytics systems to track
-    users who become Advocates
-  * Sending automated ‘Thank You’ emails after a user becomes an Advocate
+* Tracking when users select the checkbox to opt into your email newsletter
+* Collection of data for Business Intelligence and analytics systems to track
+  users who become Advocates
+* Sending automated ‘Thank You’ emails after a user becomes an Advocate
 
 .. raw:: html
 
@@ -26,7 +26,7 @@ and sharing an offer with Friends.
 Advocate Signup Form example:
 
 .. image:: /_static/img/advocate_signup_form_webhook.png
-   :alt: Edit Referral Incentives,
+   :alt: Advocate Signup Form,
    :class: is-minimal
 
 .. raw:: html
@@ -71,9 +71,7 @@ additional parameters will be present:
        "new_customer": null,
        "origin_max_age": null,
        "origin_min_age": null,
-       "tag_names": [
-         "default"
-       ],
+       "tag_names": ["default"],
        "type": "StandaloneCampaign"
      },
      "email": "john@example.com",
