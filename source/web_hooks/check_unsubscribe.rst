@@ -2,21 +2,25 @@
 .. include:: /partials/common.rst
 
 Check Unsubscribe Webhook
-==========================
+=========================
 
-Talkable Check Unsubscribe Webhook is used to ensure emails are not sent from Talkable to user email addresses who have unsubscribed from the client side.  This is an optional functionality. Note: users do have the ability to unsubscribe from Talkable referral related emails at any time from those emails directly.
+Talkable Check Unsubscribe Webhook is used to ensure emails are not sent from
+Talkable to user email addresses who have unsubscribed from the client side.
+This is an optional functionality. Note: users do have the ability to unsubscribe
+from Talkable referral related emails at any time from those emails directly.
 
 .. raw:: html
 
-   <h2>When does Talkable call the Check Unsubscribe Webhook?  </h2>
+   <h2>When does Talkable call the Check Unsubscribe Webhook?</h2>
 
-Talkable Check Unsubscribe Webhook is triggered on every attempt to send an otherwise valid customer email, aimed at checking if the email is also valid on merchant side. 
-
+Talkable Check Unsubscribe Webhook is triggered on every attempt to send an
+otherwise valid customer email, aimed at checking if the email is also valid on
+merchant side.
 
 .. important::
 
-   If this Check Unsubscribe Webhook is used, the response JSON returned by merchant
-   must contain the following fields:
+   If this Check Unsubscribe Webhook is used, the response JSON returned by
+   merchant must contain the following fields:
 
    .. code-block:: javascript
 
@@ -27,7 +31,7 @@ Talkable Check Unsubscribe Webhook is triggered on every attempt to send an othe
 
 .. raw:: html
 
-   <h2>Payload parameters provided </h2>
+   <h2>Payload parameters provided</h2>
 
 * **campaign** — subhash of parameters describing the campaign
 
@@ -43,10 +47,9 @@ Talkable Check Unsubscribe Webhook is triggered on every attempt to send an othe
   * **email** — recipient’s email address
   * **username** — recipient’s username
   * **unsubscribed_at** — date recipient has unsubscribed
-  * **subscribed_at** — date person has subscribed (deprecated; use opted_in_at instead) 
+  * **subscribed_at** — date person has subscribed (deprecated; use opted_in_at instead)
   * **opted_in_at** — date recipient has subscribed
   * **sub_choice** — subscription choice
-  * **gender** — recipient's gender
   * **custom_properties** — hash of recipient’s custom properties (optional)
 
 * **email_type** — described view category
@@ -75,9 +78,7 @@ View category can be one of the following:
        "id": 509365458,
        "type": "StandaloneCampaign",
        "cached_slug": 509365458,
-       "tag_names": [
-         "default"
-       ],
+       "tag_names": ["default"],
        "origin_min_age": null,
        "origin_max_age": null,
        "new_customer": null
@@ -90,8 +91,7 @@ View category can be one of the following:
        "unsubscribed_at": null,
        "subscribed_at": "2018-09-27T22:55:40.610+03:00",
        "opted_in_at": "2018-09-27T22:55:40.610+03:00",
-       "sub_choice": true,
-       "gender": null
+       "sub_choice": true
      },
      "email_type": "notifier_offers_email"
    }
@@ -102,7 +102,7 @@ View category can be one of the following:
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"campaign":{"id":509365458,"type":"StandaloneCampaign","cached_slug":509365458,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"recipient":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","username":"username","unsubscribed_at":null,"subscribed_at":"2018-09-27T22:55:40.610+03:00","opted_in_at":"2018-09-27T22:55:40.610+03:00","sub_choice":true,"gender":null},"email_type":"notifier_offers_email"}'
+   curl --data 'key=<key>&payload={"campaign":{"id":509365458,"type":"StandaloneCampaign","cached_slug":509365458,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"recipient":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","username":"username","unsubscribed_at":null,"subscribed_at":"2018-09-27T22:55:40.610+03:00","opted_in_at":"2018-09-27T22:55:40.610+03:00","sub_choice":true},"email_type":"notifier_offers_email"}' <url>
 
 .. container:: hidden
 
