@@ -1,18 +1,41 @@
 .. _web_hooks/offer_signup:
 .. include:: /partials/common.rst
 
-Advocate Signup Web Hook
-========================
+Advocate Signup Webhook
+=======================
 
-Triggered when Advocate Signup form is submitted.
+The Talkable Advocate Signup Webhook notifies your endpoint of an Advocate
+Signup forms submission.
+
+Use cases for the Advocate Signup Webhook include:
+
+  * Tracking when users select the checkbox to opt into your email newsletter
+  * Collection of data for Business Intelligence and analytics systems to track
+    users who become Advocates
+  * Sending automated ‘Thank You’ emails after a user becomes an Advocate
 
 .. raw:: html
 
-   <h2>Payload parameters provided for Advocate Signup Web Hook</h2>
+   <h2>When does Talkable call the Advocate Signup Webhook?</h2>
+
+Talkable Signup Webhook is triggered any time an Advocate Signup form is
+submitted. The Advocate Signup form is the standard Name & Email (with optional
+email subscription checkbox) fields a user submits before becoming an Advocate
+and sharing an offer with Friends.
+
+Advocate Signup Form example:
+
+.. image:: /_static/img/advocate_signup_form_webhook.png
+   :alt: Edit Referral Incentives,
+   :class: is-minimal
+
+.. raw:: html
+
+   <h2>Payload parameters provided for Advocate Signup Webhook</h2>
 
 * **offer** — subhash of parameters describing the offer
 
-  * **email** — referrer’s email address
+  * **email** — |advocate|’s (referrer) email address
   * **short_url_code**
 
 * **campaign** — subhash of parameters describing the campaign
@@ -42,26 +65,29 @@ additional parameters will be present:
 .. code-block:: javascript
 
    {
+     "campaign": {
+       "cached_slug": 615437538,
+       "id": 615437538,
+       "new_customer": null,
+       "origin_max_age": null,
+       "origin_min_age": null,
+       "tag_names": [
+         "default"
+       ],
+       "type": "StandaloneCampaign"
+     },
+     "email": "john@example.com",
+     "first_name": "John",
+     "gender": null,
+     "last_name": "Doe",
      "offer": {
        "email": "referrer@example.com",
        "short_url_code": "1a2PV"
      },
-     "campaign": {
-       "id": 361325654,
-       "type": "StandaloneCampaign",
-       "cached_slug": "affiliate-campaign-test",
-       "tag_names": ["default"]
-     },
-     "email": "john@example.com",
-     "first_name": "John",
-     "last_name": "Doe",
-     "username": "dodo",
+     "opted_in_at": null,
      "sub_choice": false,
-     "subscribed_at": "2014-08-14T02:01:16.824-07:00",
-     "unsubscribed_at": null,
-     "custom_properties": {
-        "my_property": "some value"
-     }
+     "subscribed_at": null,
+     "unsubscribed_at": null
    }
 
 .. raw:: html
@@ -70,7 +96,7 @@ additional parameters will be present:
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"campaign":{"id":361325654,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"email":"john@example.com","first_name":"John","last_name":"Doe","username":"dodo","sub_choice":false,"subscribed_at":"2014-08-14T02:01:16.824-07:00","unsubscribed_at":null,"custom_properties":{"my_property":"some_value"}}' <url>
+   curl --data 'key=<key>&payload={"campaign":{"cached_slug":615437538,"id":615437538,"new_customer":null,"origin_max_age":null,"origin_min_age":null,"tag_names":["default"],"type":"StandaloneCampaign"},"email":"john@example.com","first_name":"John","gender":null,"last_name":"Doe","offer":{"email":"referrer@example.com","short_url_code":"1a2PV"},"opted_in_at":null,"sub_choice":false,"subscribed_at":null,"unsubscribed_at":null}' <url>
 
 .. container:: hidden
 
