@@ -4,7 +4,7 @@
 Metrics
 =======
 
-This API allows you to access Talkable metrics. Go to Reports -> Metric
+This API allows you to access Talkable metrics. Go to Reports → Metric
 descriptions to see the list of available metrics.
 
 |br|
@@ -59,14 +59,14 @@ Sample response:
 
 .. code-block:: javascript
 
-  {
-    "ok": true,
-    "result": {
-      "plain": 1234,
-      "formatted": "1234",
-      "result_type": "number"
-    }
-  }
+   {
+     "ok": true,
+     "result": {
+       "plain": 1234,
+       "formatted": "1234",
+       "result_type": "number"
+     }
+   }
 
 Revenue percentage metric with precision
 ........................................
@@ -79,14 +79,14 @@ Sample response:
 
 .. code-block:: javascript
 
-  {
-    "ok": true,
-    "result": {
-      "plain": 34.35,
-      "formatted": "34.35%",
-      "result_type": "percent"
-    }
-  }
+   {
+     "ok": true,
+     "result": {
+       "plain": 34.35,
+       "formatted": "34.35%",
+       "result_type": "percent"
+     }
+   }
 
 Average order value metric
 ..........................
@@ -99,11 +99,11 @@ Sample response:
 
 .. code-block:: javascript
 
-  {
-    "ok": true,
-    "result": {
-      "plain": 5432,
-      "formatted": "$5432",
-      "result_type": "money"
-    }
-  }
+   {
+     "ok": true,
+     "result": {
+       "plain": 5432,
+       "formatted": "$5432",
+       "result_type": "money"
+     }
+   }
