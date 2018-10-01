@@ -1,10 +1,25 @@
 .. _web_hooks/unsubscribe:
 .. include:: /partials/common.rst
 
-Unsubscribe Web Hook
-====================
+Unsubscribe Webhook
+===================
 
-Triggered when a person unsubscribes.
+Talkable Unsubscribe Webhook provides notification of a user unsubscribing from
+Talkable sent referral email.
+
+Use cases for the Unsubscribe Webhook include:
+
+* Unsubscribing users from in-house marketing newsletters when user unsubscribes
+  from Talkable referral emails
+* Any event that should be triggered when a user unsubscribes from Talkable
+  referral emails
+
+.. raw:: html
+
+   <h2>When does Talkable call the Unsubscribe Webhook?</h2>
+
+Talkable Unsubscribe Webhook is called any time a user unsubscribes from a
+Talkable sent email.
 
 .. raw:: html
 
@@ -17,6 +32,7 @@ Triggered when a person unsubscribes.
   * **email** — person’s email address
   * **username** — person’s username
   * **unsubscribed_at** — date person has unsubscribed
+  * **subscribed_at** — date person has subscribed (deprecated; use opted_in_at instead)
   * **opted_in_at** — date person has subscribed
   * **sub_choice** — subscription choice
   * **custom_properties** — hash of person’s custom properties (optional)
@@ -31,10 +47,11 @@ Triggered when a person unsubscribes.
      "person": {
        "first_name": "Bob",
        "last_name": "Smith",
-       "email": "person@example.com",
+       "email": "referrer@example.com",
        "username": "username",
-       "unsubscribed_at": "2015-08-13T11:14:08.835-07:00",
-       "opted_in_at": "2014-08-13T11:14:08.835-07:00",
+       "unsubscribed_at": null,
+       "subscribed_at": "2018-09-27T22:55:13.860+03:00",
+       "opted_in_at": "2018-09-27T22:55:13.860+03:00",
        "sub_choice": true
      }
    }
@@ -45,7 +62,7 @@ Triggered when a person unsubscribes.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"person":{"first_name":"Bob","last_name":"Smith","email":"friend@example.com","username":"username","unsubscribed_at":"2015-08-13T11:14:08.835-07:00","opted_in_at":"2014-08-13T11:14:08.835-07:00","sub_choice":true}}' <url>
+   curl --data 'key=<key>&payload={"person":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","username":"username","unsubscribed_at":null,"subscribed_at":"2018-09-27T22:55:13.860+03:00","opted_in_at":"2018-09-27T22:55:13.860+03:00","sub_choice":true}}' <url>
 
 .. container:: hidden
 
