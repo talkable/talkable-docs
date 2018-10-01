@@ -1,16 +1,26 @@
 .. _web_hooks/check_unsubscribe:
 .. include:: /partials/common.rst
 
-Check Unsubscribe Web Hook
-==========================
+Check Unsubscribe Webhook
+=========================
 
-Triggered on every attempt to send an otherwise valid customer email,
-aimed at checking if the email is also valid on merchant side.
+Talkable Check Unsubscribe Webhook is used to ensure emails are not sent from
+Talkable to user email addresses who have unsubscribed from the client side.
+This is an optional functionality. Note: users do have the ability to unsubscribe
+from Talkable referral related emails at any time from those emails directly.
+
+.. raw:: html
+
+   <h2>When does Talkable call the Check Unsubscribe Webhook?</h2>
+
+Talkable Check Unsubscribe Webhook is triggered on every attempt to send an
+otherwise valid customer email, aimed at checking if the email is also valid on
+merchant side.
 
 .. important::
 
-   If this web hook is used, the response JSON returned by merchant
-   must contain the following fields:
+   If this Check Unsubscribe Webhook is used, the response JSON returned by
+   merchant must contain the following fields:
 
    .. code-block:: javascript
 
@@ -21,7 +31,7 @@ aimed at checking if the email is also valid on merchant side.
 
 .. raw:: html
 
-   <h2>Payload parameters provided </h2>
+   <h2>Payload parameters provided</h2>
 
 * **campaign** — subhash of parameters describing the campaign
 
@@ -37,6 +47,7 @@ aimed at checking if the email is also valid on merchant side.
   * **email** — recipient’s email address
   * **username** — recipient’s username
   * **unsubscribed_at** — date recipient has unsubscribed
+  * **subscribed_at** — date person has subscribed (deprecated; use opted_in_at instead)
   * **opted_in_at** — date recipient has subscribed
   * **sub_choice** — subscription choice
   * **custom_properties** — hash of recipient’s custom properties (optional)
@@ -64,21 +75,25 @@ View category can be one of the following:
 
    {
      "campaign": {
-       "id": 350256053,
+       "id": 509365458,
        "type": "StandaloneCampaign",
-       "cached_slug": "affiliate-campaign-test",
-       "tag_names": ["default"]
+       "cached_slug": 509365458,
+       "tag_names": ["default"],
+       "origin_min_age": null,
+       "origin_max_age": null,
+       "new_customer": null
      },
      "recipient": {
        "first_name": "Bob",
        "last_name": "Smith",
-       "email": "friend@example.com",
+       "email": "referrer@example.com",
        "username": "username",
        "unsubscribed_at": null,
-       "opted_in_at": "2014-08-13T11:14:08.835-07:00",
+       "subscribed_at": "2018-09-27T22:55:40.610+03:00",
+       "opted_in_at": "2018-09-27T22:55:40.610+03:00",
        "sub_choice": true
      },
-     "email_type": "friend_rewards_paid"
+     "email_type": "notifier_offers_email"
    }
 
 .. raw:: html
@@ -87,7 +102,7 @@ View category can be one of the following:
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"campaign":{"id":350256053,"type":"StandaloneCampaign","cached_slug":"affiliate-campaign-test","tag_names":["default"]},"recipient":{"first_name":"Bob","last_name":"Smith","email":"friend@example.com","username":"username","unsubscribed_at":null,"opted_in_at":"2014-08-13T11:14:08.835-07:00","sub_choice":true},"email_type":"friend_rewards_paid"}' <url>
+   curl --data 'key=<key>&payload={"campaign":{"id":509365458,"type":"StandaloneCampaign","cached_slug":509365458,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"recipient":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","username":"username","unsubscribed_at":null,"subscribed_at":"2018-09-27T22:55:40.610+03:00","opted_in_at":"2018-09-27T22:55:40.610+03:00","sub_choice":true},"email_type":"notifier_offers_email"}' <url>
 
 .. container:: hidden
 
