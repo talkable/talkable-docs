@@ -36,8 +36,8 @@ Friend Email Gating form example:
 * **offer** — subhash of parameters describing the offer
 
   * **email** — referrer’s email address
+  * **ip_address** - referrer’s IP address
   * **short_url_code**
-  * **ip_address**
 
 * **campaign** — subhash of parameters describing the campaign
 
@@ -56,6 +56,7 @@ Friend Email Gating form example:
 * **email** — friend’s email address
 * **first_name** — friend’s first name
 * **last_name** — friend’s last name
+* **ip_address** — friend’s IP address
 * **sub_choice** — subscription choice (optional, present only if the form
   included subscription checkbox)
 * **subscribed_at** — date friend has subscribed (deprecated; use opted_in_at instead)
@@ -86,6 +87,7 @@ Friend Email Gating form example:
      "email": "john@example.com",
      "first_name": null,
      "last_name": null,
+     "ip_address": "127.0.0.1",
      "sub_choice": true,
      "subscribed_at": "2018-09-27T22:54:28.345+03:00",
      "opted_in_at": "2018-09-27T22:54:28.345+03:00",
@@ -98,7 +100,7 @@ Friend Email Gating form example:
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"offer":{"email":"referrer@example.com","short_url_code":"1a2PV","ip_address":"127.0.0.1"},"campaign":{"id":465427859,"type":"StandaloneCampaign","cached_slug":465427859,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"email":"john@example.com","first_name":null,"last_name":null,"sub_choice":true,"subscribed_at":"2018-09-27T22:54:28.345+03:00","opted_in_at":"2018-09-27T22:54:28.345+03:00","unsubscribed_at":null}' <url>
+   curl --data 'key=<key>&payload={"offer":{"email":"referrer@example.com","short_url_code":"1a2PV","ip_address":"127.0.0.1"},"campaign":{"id":465427859,"type":"StandaloneCampaign","cached_slug":465427859,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"email":"john@example.com","first_name":null,"last_name":null,"ip_address":"127.0.0.1","sub_choice":true,"subscribed_at":"2018-09-27T22:54:28.345+03:00","opted_in_at":"2018-09-27T22:54:28.345+03:00","unsubscribed_at":null}' <url>
 
 .. container:: hidden
 
