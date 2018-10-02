@@ -97,6 +97,7 @@ Sample response:
          "order_number": 12,
          "subtotal": 100.0,
          "customer_id": null,
+         "ip_address": "127.0.0.1",
          "type": "Purchase",
          "coupon_code": ""
        },
@@ -140,6 +141,7 @@ Sample response:
          "event_number": "42",
          "event_category": "newsletter_subscription",
          "customer_id": null,
+         "ip_address": "127.0.0.1",
          "coupon_code": ""
        },
        "offer": null
@@ -179,6 +181,7 @@ Sample response:
          "id": 31386400,
          "email": "affiliate@example.com",
          "customer_id": null,
+         "ip_address": "127.0.0.1",
          "type": "AffiliateMember"
        },
        "offer": {
@@ -225,6 +228,7 @@ Sample response:
          "id": 31386400,
          "email": "affiliate@example.com",
          "customer_id": null,
+         "ip_address": "127.0.0.1",
          "type": "AffiliateMember"
        },
        "offer": {
