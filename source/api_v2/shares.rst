@@ -46,10 +46,10 @@ Creates an email share.
                      :ref:`origin creation <api_v2/origins>`.
    recipients        List of recipient emails separated by comma or newline.
 
-   subject           (optional) Custom subject of the e-mail
-   body              (optional) Custom message added to the e-mail body
+   subject           (optional) Custom subject of the email
+   body              (optional) Custom message added to the email body
    reminder          (optional, `true`/`false`, `true` by default)
-                     Whether Talkable should send a reminder e-mail later
+                     Whether Talkable should send a reminder email later
    ================= ========================================================
 
 Example
