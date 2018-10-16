@@ -167,7 +167,7 @@ using ``Talkable.loadOffer(origin, callback)`` and pass it to ``TalkableOfferFra
 Native integration via API
 --------------------------
 
-Talkable provides an :ref:`API  <android_sdk/api>` that can be utilized to
+Talkable provides an :ref:`API <android_sdk/api>` that can be utilized to
 implement a fully native referral program interface if the default solution
 (based on ``WebView``) doesn't work for you.
 Below are the methods necessary to integrate the Talkable referral loop into
