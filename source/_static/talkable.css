@@ -190,7 +190,7 @@ abbr {
 }
 
 .header-logo {
-    background: url("img/logo.png");
+    background: url("img/logo.svg") no-repeat;
     color: transparent;
     display: inline-block;
     font-size: 0;
@@ -199,6 +199,7 @@ abbr {
     text-indent: -99999em;
     vertical-align: middle;
     width: 189px;
+    background-size: 100%;
 }
 
 blockquote.epigraph {
