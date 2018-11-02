@@ -624,7 +624,7 @@ div.hidden {
   }
 
   .header-logo:after {
-    content: url(img/logo.png);
+    content: url(img/logo.svg);
   }
 
   .section li {
