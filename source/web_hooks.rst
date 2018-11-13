@@ -48,10 +48,10 @@ Webhook type in the left-hand menu.
 3. Choose a Webhook from the dropdown and provide your endpoint URL
 4. From here, Send Sample, Edit, Delete or Create New
 5. Take note of your Talkable security key. This key will be the same for all
-   Talkable Webhooks on a given account. Talkable includes a key parameter in
-   Webhooks which are unique to each account as a way to identify Talkable as
+   Talkable Webhooks on a given site. Talkable includes a key parameter in
+   Webhooks which are unique to each site as a way to identify Talkable as
    an authorized server. Your Talkable Webhook security key can be found in
-   the Webhook set up page after at least one Webhook is created.
+   the Webhook set up page.
 
 Talkable Webhooks will trigger automatically based on associated events defined
 by Webhook type.
@@ -125,10 +125,9 @@ Talkable will retry delivery of Webhook if any other error code is received.
 
    <h2>Security Key</h2>
 
-Talkable includes a key parameter in Webhooks which are unique to each account
+Talkable includes a key parameter in Webhooks which are unique to each site
 as a way to identify Talkable as an authorized server. Your Talkable Webhook
-security key can be found in the Webhook set up page after at least one Webhook
-is created.
+security key can be found in the Webhook set up page.
 
 .. raw:: html
 
