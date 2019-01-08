@@ -1,7 +1,5 @@
 .. note::
 
    Replace **YOUR-PER-CLIENT-INTEGRATION** with the link to your per-client
-   integration library. In the header click Menu → Integration →
-   Switch to “Other platform”. There you will see a <script> tag,
-   copy its `src` attribute value. Example:
+   integration library which is displayed on the integration page. Example:
    **//d2jjzw81hqbuqv.cloudfront.net/integration/clients/test.min.js**.
