@@ -703,7 +703,7 @@ Liquid
 
 .. code-block:: liquid
 
-   {{  'async_dashboard_data' | async_rendering: some_key: "[[ dashboard.possible_rewards | money: strip_insignificant_zeros: true]]", other_key: "[[ friend_info.purchases_count ]]" }}
+   {{ 'async_dashboard_data' | async_rendering: some_key: "[[ dashboard.possible_rewards | money: strip_insignificant_zeros: true ]]", other_key: "[[ friend_info.purchases_count ]]" }}
 
 JavaScript API call
 
@@ -745,4 +745,4 @@ Rendered Liquid
 
 .. code-block:: text
 
-  "Whatever Liquid you would live to have"
+  "Whatever Liquid you would like to have"
