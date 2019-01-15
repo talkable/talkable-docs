@@ -671,7 +671,7 @@ Returns ``[{ad incentive config}, {fr incentive config}]``
 async\_rendering
 ................
 
-Stores liquid partial that can be later rendered via ``Talkable.loadLiquid`` function.
+Stores Liquid partial that can be later rendered via ``Talkable.loadLiquid`` function.
 
 Example 1
 ~~~~~~~~~
