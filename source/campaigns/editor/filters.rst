@@ -680,21 +680,21 @@ Liquid
 
 .. code-block:: liquid
 
-   {{ "async_advocate_info" | async_rendering: 'template for rendering with data [[ advocate_info.email ]]' }}
+  {{ "async_advocate_info" | async_rendering: 'template for rendering with data [[ advocate_info.email ]]' }}
 
 JavaScript API call
 
 .. code-block:: javascript
 
-    Talkable.loadLiquid("async_advocate_info", function(rendered_template) {
-      console.log(rendered_template);
-    });
+  Talkable.loadLiquid("async_advocate_info", function(rendered_template) {
+    console.log(rendered_template);
+  });
 
 Rendered Liquid
 
 .. code-block:: text
 
-            "template for rendering with data advocate@example.com"
+  "template for rendering with data advocate@example.com"
 
 Example 2
 ~~~~~~~~~
@@ -703,7 +703,7 @@ Liquid
 
 .. code-block:: liquid
 
-   {{ 'async_dashboard_data' | async_rendering: some_key: "[[ dashboard.possible_rewards | money: strip_insignificant_zeros: true ]]", other_key: "[[ friend_info.purchases_count ]]" }}
+  {{ 'async_dashboard_data' | async_rendering: some_key: "[[ dashboard.possible_rewards | money: strip_insignificant_zeros: true ]]", other_key: "[[ friend_info.purchases_count ]]" }}
 
 JavaScript API call
 
