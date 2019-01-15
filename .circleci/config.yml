@@ -20,7 +20,7 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install --upgrade pip
-            pip check || pip install -r requirements.txt
+            pip install -r requirements.txt
       - save_cache:
           key: v1-dependencies-{{ checksum "requirements.txt" }}
           paths:
