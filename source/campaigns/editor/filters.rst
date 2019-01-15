@@ -673,8 +673,8 @@ async\_rendering
 
 Stores liquid partial that can be later rendered via ``Talkable.loadLiquid`` function.
 
-Expample 1
-~~~~~~~~~~
+Example 1
+~~~~~~~~~
 
 Liquid
 
@@ -682,7 +682,7 @@ Liquid
 
    {{ "async_advocate_info" | async_rendering: 'template for rendering with data [[ advocate_info.email ]]' }}
 
-Javascript API call
+JavaScript API call
 
 .. code-block:: javascript
 
@@ -690,22 +690,22 @@ Javascript API call
       console.log(rendered_template);
     });
 
-Rendered liquid
+Rendered Liquid
 
 .. code-block:: text
 
             "template for rendering with data advocate@example.com"
 
-Expample 2
-~~~~~~~~~~
+Example 2
+~~~~~~~~~
 
 Liquid
 
 .. code-block:: liquid
 
-   {{  'async_dashboard_data' | async_rendering: some_key: "[[ dashboard.possible_rewards | money: strip_insignificant_zeros: true]]",  other_key: "[[ friend_info.purchases_count ]]" }}
+   {{  'async_dashboard_data' | async_rendering: some_key: "[[ dashboard.possible_rewards | money: strip_insignificant_zeros: true]]", other_key: "[[ friend_info.purchases_count ]]" }}
 
-Javascript API call
+JavaScript API call
 
 .. code-block:: javascript
 
@@ -713,14 +713,14 @@ Javascript API call
     console.log(rendered_data);
   });
 
-Rendered liquid
+Rendered Liquid
 
 .. code-block:: text
 
   {some_key: "$420", other_key: 12}
 
-Expample 3
-~~~~~~~~~~
+Example 3
+~~~~~~~~~
 
 Liquid
 
@@ -728,12 +728,12 @@ Liquid
 
   {% capture some_liquid_block %}
   {% raw %}
-  Whatever liquid you would live to have
+  Whatever Liquid you would like to have
   {% endraw %}
   {% endcapture %}
   {{ 'async_liquid_reference' | async_rendering: some_liquid_block }}
 
-Javascript API call
+JavaScript API call
 
 .. code-block:: javascript
 
@@ -741,8 +741,8 @@ Javascript API call
     console.log(rendered_template);
   });
 
-Rendered liquid
+Rendered Liquid
 
 .. code-block:: text
 
-  "Whatever liquid you would live to have"
+  "Whatever Liquid you would live to have"
