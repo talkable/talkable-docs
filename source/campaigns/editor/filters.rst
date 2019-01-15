@@ -665,3 +665,84 @@ Takes a hash and returns the array of its values.
    {% assign incentive_configs = incentives | values %}
 
 Returns ``[{ad incentive config}, {fr incentive config}]``
+
+|hr|
+
+async\_rendering
+................
+
+Stores liquid partial that can be later rendered via ``Talkable.loadLiquid`` function.
+
+Expample 1
+~~~~~~~~~~
+
+Liquid
+
+.. code-block:: liquid
+
+   {{ "async_advocate_info" | async_rendering: 'template for rendering with data [[ advocate_info.email ]]' }}
+
+Javascript API call
+
+.. code-block:: javascript
+
+    Talkable.loadLiquid("async_advocate_info", function(rendered_template) {
+      console.log(rendered_template);
+    });
+
+Rendered liquid
+
+.. code-block:: text
+
+            "template for rendering with data advocate@example.com"
+
+Expample 2
+~~~~~~~~~~
+
+Liquid
+
+.. code-block:: liquid
+
+   {{  'async_dashboard_data' | async_rendering: some_key: "[[ dashboard.possible_rewards | money: strip_insignificant_zeros: true]]",  other_key: "[[ friend_info.purchases_count ]]" }}
+
+Javascript API call
+
+.. code-block:: javascript
+
+  Talkable.loadLiquid("async_dashboard_data", function(rendered_data) {
+    console.log(rendered_data);
+  });
+
+Rendered liquid
+
+.. code-block:: text
+
+  {some_key: "$420", other_key: 12}
+
+Expample 3
+~~~~~~~~~~
+
+Liquid
+
+.. code-block:: liquid
+
+  {% capture some_liquid_block %}
+  {% raw %}
+  Whatever liquid you would live to have
+  {% endraw %}
+  {% endcapture %}
+  {{ 'async_liquid_reference' | async_rendering: some_liquid_block }}
+
+Javascript API call
+
+.. code-block:: javascript
+
+  Talkable.loadLiquid("async_liquid_reference", function(rendered_template) {
+    console.log(rendered_template);
+  });
+
+Rendered liquid
+
+.. code-block:: text
+
+  "Whatever liquid you would live to have"
