@@ -29,13 +29,13 @@ Here is an example of a Purchase capturing, this action should be triggered on t
    item.setUrl("https://site.com/product.html"); // Optional
    item.setImageUrl("https://site.com/image.jpg"); // Optional
 
-    Double subtotal = price * quantity; // Required
-    String orderNumber = "123456"; // Required
-    String[] coupons = {"EXAMPLE-CODE-1", "EXAMPLE-CODE-2"}; // Optional
+   Double subtotal = price * quantity; // Required
+   String orderNumber = "123456"; // Required
+   String[] coupons = {"EXAMPLE-CODE-1", "EXAMPLE-CODE-2"}; // Optional
 
-    Purchase purchase = new Purchase(subtotal, orderNumber, coupons);
-    purchase.setCustomer(customer); // Required
-    purchase.addItem(item); // Optional
+   Purchase purchase = new Purchase(subtotal, orderNumber, coupons);
+   purchase.setCustomer(customer); // Required
+   purchase.addItem(item); // Optional
 
    String campaignTag = "android-post-purchase";
    purchase.setCampaignTag(campaignTag); // Optional
