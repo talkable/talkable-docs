@@ -717,7 +717,7 @@ Rendered Liquid
 
 .. code-block:: text
 
-  {some_key: "$420", other_key: 12}
+  {"some_key":"$420","other_key":12}
 
 Example 3
 ~~~~~~~~~
