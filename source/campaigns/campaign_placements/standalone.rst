@@ -17,7 +17,7 @@ Flow
 ----
 
 .. image:: /_static/img/campaign_placements/standalone.png
-   :alt: Talkable campaign flow — Standalone placement,
+   :alt: Talkable campaign flow — Standalone placement
    :class: is-minimal
 
 Integration instructions

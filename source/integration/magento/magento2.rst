@@ -6,10 +6,10 @@ Magento 2.x Integration
 
 .. note::
 
-  To get started, you must have an account created with Talkable, and a Magento Marketplace account.
-  If you do not have a Magento Marketplace account configured, follow
-  `these steps <http://docs.magento.com/marketplace/user_guide/quick-tour/install-extension.html>`_
-  to connect one to your Magento store.
+   To get started, you must have an account created with Talkable, and a Magento Marketplace account.
+   If you do not have a Magento Marketplace account configured, follow
+   `these steps <http://docs.magento.com/marketplace/user_guide/quick-tour/install-extension.html>`_
+   to connect one to your Magento store.
 
 The `Magento 2 Integration Extension`_ is available to download in the Magento Marketplace.
 The extension supports all versions of Magento 2.0 or higher.
@@ -23,7 +23,7 @@ Installation
 
    .. image:: /_static/img/magento2/install0.jpg
 
-2. Navigate to **System** |rarr| **Web Setup Wizard** in your Magento store admin panel.
+2. Navigate to **System** → **Web Setup Wizard** in your Magento store admin panel.
 
    .. image:: /_static/img/magento2/install1.jpg
 
@@ -47,18 +47,18 @@ Installation
 
 .. warning::
 
-  Take note of the `Magento 2.x system requirements`_ regarding extension installation.
-  Magento recommends that you have 2GB of RAM allocated to PHP for upgrading and installing
-  extensions from the Marketplace.
+   Take note of the `Magento 2.x system requirements`_ regarding extension installation.
+   Magento recommends that you have 2GB of RAM allocated to PHP for upgrading and installing
+   extensions from the Marketplace.
 
-  Refer to `Troubleshooting`_ section of this guide if you encounter problems during this step.
+   Refer to `Troubleshooting`_ section of this guide if you encounter problems during this step.
 
 |page_break|
 
 Activating the Integration
 --------------------------
 
-1. After successful installation, navigate to **System** |rarr| **Integrations** page of your admin panel.
+1. After successful installation, navigate to **System** → **Integrations** page of your admin panel.
 
    .. image:: /_static/img/magento2/activate1.jpg
 
@@ -92,12 +92,12 @@ Activating the Integration
 Accessing Talkable Configuration
 --------------------------------
 
-1. To access Talkable extension settings, navigate to **Stores** |rarr| **Configuration** in
+1. To access Talkable extension settings, navigate to **Stores** → **Configuration** in
    your Magento admin panel.
 
    .. image:: /_static/img/magento2/access1.jpg
 
-2. Then select **Talkable** |rarr| **Talkable Configuration** from the list of available configurations.
+2. Then select **Talkable** → **Talkable Configuration** from the list of available configurations.
    If you have multiple stores, select the desired Store View you want to change the settings for.
 
    .. image:: /_static/img/magento2/access2.jpg
@@ -123,14 +123,19 @@ to your Talkable account.
 
 .. warning::
 
-  Only change this setting if you need to connect your store to a different site in the Talkable dashboard.
-  An incorrect value will prevent your campaigns from showing.
+   Only change this setting if you need to connect your store to a different site in the Talkable dashboard.
+   An incorrect value will prevent your campaigns from showing.
+
+   Changing the Site ID will invalidate the full page cache. Magento will display a warning message with
+   a link to the Cache Management page. Please follow this link and refresh the invalidated cache types.
+
+   .. image:: /_static/img/magento2/cache.jpg
 
 .. note::
 
-  If you have activated the extension's integration, the Site ID will be prefilled
-  (see `Activating the Integration`_). If you chose not to activate the integration,
-  you need to paste the Site ID from your Talkable Site Dashboard into this field.
+   If you have activated the extension's integration, the Site ID will be prefilled
+   (see `Activating the Integration`_). If you chose not to activate the integration,
+   you need to paste the Site ID from your Talkable Site Dashboard into this field.
 
    .. image:: /_static/img/magento2/configure3.jpg
 
@@ -143,7 +148,7 @@ The Campaigns section allows you to enable or disable different types of campaig
 For example, if you don’t have Standalone or Advocate Dashboard campaigns configured in Talkable,
 you can disable these campaigns in extension config, so the corresponding pages are not accessible.
 
-   .. image:: /_static/img/magento2/configure4.jpg
+.. image:: /_static/img/magento2/configure4.jpg
 
 |page_break|
 
@@ -154,14 +159,14 @@ The Page URLs section allows you to change paths to the Standalone Share and Adv
 The paths must match the placements you have configured in Talkable for this campaign type.
 Default values correspond to default placements in Talkable.
 
-   .. image:: /_static/img/magento2/configure5.jpg
+.. image:: /_static/img/magento2/configure5.jpg
 
 .. warning::
 
-  Only change these settings if you have configured custom placements for these campaign types
-  in your Talkable dashboard. Incorrect values will prevent your Standalone or Dashboard campaign from showing.
+   Only change these settings if you have configured custom placements for these campaign types
+   in your Talkable dashboard. Incorrect values will prevent your Standalone or Dashboard campaign from showing.
 
-   .. image:: /_static/img/magento2/configure6.jpg
+.. image:: /_static/img/magento2/configure6.jpg
 
 |page_break|
 
@@ -222,7 +227,7 @@ Magento `troubleshooting suggestions`_ for the Component Manager and other Magen
 
       .. warning::
 
-        Increased request timeout settings can negatively affect server performance.
+         Increased request timeout settings can negatively affect server performance.
 
 .. _Talkable extension:
 .. _Magento 2 Integration Extension: https://marketplace.magento.com/talkable-magento2-integration.html

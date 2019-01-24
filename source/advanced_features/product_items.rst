@@ -14,4 +14,5 @@ Below is an example with product items passed along with purchase data (notice F
 
 .. note::
 
-  All product items are included into Purchase details inside Purchases report. This information is helpful for debugging.
+   All product items are included into Purchase details inside Purchases report.
+   This information is helpful for debugging.

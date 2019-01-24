@@ -12,17 +12,19 @@ Talkable allows overriding some of the parameters right through URL query string
 * traffic_source - :ref:`Traffic Source <advanced_features/traffic_source>` value
 * campaign_tags - overrides campaign tag to be loaded
 
-Below is an example of |advocate| authorization through URL. Given the URL of the page where Talkable campaign is integrated: http://example.com/share:
+Below is an example of |advocate| authorization through URL. Given the URL of
+the page where Talkable campaign is integrated: http://example.com/share:
 
 .. code-block:: html
 
-  http://example.com/share?email=advocate%40example.com
+   http://example.com/share?email=advocate%40example.com
 
-Location parameters have higher priority than explicit parameters passed in the integration.
+Location parameters have higher priority than explicit parameters passed in the
+integration.
 
 .. note::
 
-  Don’t forget to escape URL parameters with URI parameter encoder.
+   Don’t forget to escape URL parameters with URI parameter encoder.
 
 .. container:: hidden
 

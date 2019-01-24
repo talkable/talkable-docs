@@ -14,12 +14,15 @@ each with links to integration details.
    * - :ref:`Automatic Coupon Creation <advanced_features/coupons>`
      - Issue single and multi-use coupons automatically for your campaigns
 
+   * - :ref:`Referral Tracking Methods <advanced_features/track_methods>`
+     - The description of the Talkable referral tracking algorithm
+
    * - :ref:`Convert static copy into Localization <advanced_features/converting_into_localization>`
      - Convert all static languange into a customizable copy that’s
        easy to AB test.
 
    * - :ref:`Email encryption <advanced_features/email_encryption>`
-     - For additional security, it is possible to encrypt Advocate and Friend e-mails on back-end.
+     - For additional security, it is possible to encrypt Advocate and Friend emails on back-end.
 
    * - :ref:`File encryption <advanced_features/file_encryption>`
      - For additional security, it is possible to encrypt files.
@@ -27,6 +30,11 @@ each with links to integration details.
    * - :ref:`Including Product Items <advanced_features/product_items>`
      - Let your customers share specific items that they’ve purchased
        and pass product details along with purchase data
+
+   * - :ref:`Integrating Events <advanced_features/events>`
+     - Fits SaaS, subscription-based, and other businesses that require integrating
+       additional events to build more advanced referral logics on top of regular
+       purchases.
 
    * - :ref:`Pass custom user data <advanced_features/passing_custom_data>`
      - Pass additional data to Talkable to operate with it inside campaigns
@@ -60,8 +68,10 @@ each with links to integration details.
   .. toctree::
 
     advanced_features/coupons
+    advanced_features/track_methods
     advanced_features/converting_into_localization
     advanced_features/email_encryption
+    advanced_features/events
     advanced_features/file_encryption
     advanced_features/product_items
     advanced_features/passing_custom_data

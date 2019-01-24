@@ -35,8 +35,7 @@ There are several steps that need to be taken for this scenario:
    <h2>REST API to Create Coupons</h2>
 
 Talkable can create coupons via a webhook using your REST API end point.
-Read :ref:`Coupon Webhook Documentation <web_hooks/create_coupon>` for details how to implement the API end point
-Read `User Guide <http://help.talkable.com/questions/54519-Using-Webhooks-to-create-Single-Use-Coupon-Codes>`_ for details how to make talkable use your API end point.
+Read :ref:`Create Coupon Webhook Documentation <web_hooks/create_coupon>` for implementation details. 
 
 .. container:: hidden
 

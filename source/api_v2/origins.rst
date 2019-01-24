@@ -4,7 +4,67 @@
 Origins
 =======
 
-This API allows you to create origins. See examples below.
+The Talkable Origins API allows the registration of ‘off-site’ or ‘backend’
+purchases or CRM events so they can be used in the referral flow. This
+functionality is generally utilized by businesses using subscription billing,
+off-site transactions, or other off-site events.
+
+.. note::
+
+   The :ref:`standard front-end <integration/custom/overview>` Talkable
+   integration will capture all one-time purchases happening on the client
+   e-commerce site, but will not on its own capture purchases or CRM events
+   happening on the backend. To do this, the Origins API must be utilized to
+   feed ‘off-site’ or ‘backend’ purchases or CRM events to Talkable.
+
+.. raw:: html
+
+   <h2>Example use cases for the Origins API</h2>
+
+**Subscription:**
+
+* A company whose customers sign up for a monthly service by making an initial
+  ‘on-site’ payment, then are charged monthly on the backend for subsequent
+  subscription payments. This company would like to reward |advocate| users
+  (referrers) with a reward after their |friend| has been a member for three
+  billing cycles.
+
+  * Talkable’s :ref:`standard front-end <integration/custom/overview>`
+    integration captures the initial ‘on-site’ payment.
+
+  * For Talkable to reward the |Advocate| after the third billing cycle of the
+    |friend| subscription, the Company must pass the subsequent subscription
+    data to Talkable’s Origins API using ``"type": "Event"``.
+
+**Off-Site Events:**
+
+* A company whose customers purchase product or perform events off-site. This
+  company would like to reward |advocate| users (referrers) with a reward after
+  their |friend| has purchased a product in the brick and mortar store, or
+  attended an in-person appointment.
+
+  * Talkable’s :ref:`standard front-end <integration/custom/overview>`
+    integration captures an initial ‘on-site’ signup event if there is one.
+
+  * For Talkable to reward the |advocate| after the in-person |friend| store
+    purchase, or appointment attendance, the Company must pass the in store
+    purchase, or appointment attendance data to Talkable’s Origins API with
+    either ``"type": "Purchase"`` for a purchase or ``"type": "Event"`` for an
+    appointment attendance.
+
+**User Approval:**
+
+* User approval use cases start with customers who need to submit an application
+  by performing an initial ‘on-site’ sign-up event. This company would like to
+  reward |advocate| users (referrers) with a reward after their |friend|
+  application is approved.
+
+  * Talkable’s :ref:`standard front-end <integration/custom/overview>`
+    integration captures the initial ‘on-site’ application sign-up event.
+
+  * In order for Talkable to reward the |advocate| after the |friend|
+    application approval, the Company must pass the approval data to Talkable’s
+    Origins API using ``"type": "Event"``.
 
 |br|
 
@@ -97,16 +157,11 @@ Sample response:
          "order_number": 12,
          "subtotal": 100.0,
          "customer_id": null,
+         "ip_address": "127.0.0.1",
          "type": "Purchase",
          "coupon_code": ""
        },
-       "offer": {
-         "id": 89238912,
-         "short_url_code": "dZpBwd",
-         "email": "customer@example.com",
-         "show_url": "https://www.talkable.com/x/iXh4Je",
-         "claim_url": "https://www.talkable.com/x/LSKEAX"
-       }
+       "offer": null
      }
    }
 
@@ -146,20 +201,15 @@ Sample response:
          "event_number": "42",
          "event_category": "newsletter_subscription",
          "customer_id": null,
+         "ip_address": "127.0.0.1",
          "coupon_code": ""
        },
-       "offer": {
-         "id": 89238912,
-         "short_url_code": "dZpBwd",
-         "email": "customer@example.com",
-         "show_url": "https://www.talkable.com/x/iXh4Je",
-         "claim_url": "https://www.talkable.com/x/LSKEAX"
-       }
+       "offer": null
      }
    }
 
-Create an affiliate member
-..........................
+Create an affiliate member and target a campaign
+................................................
 
 .. code-block:: javascript
 
@@ -167,7 +217,8 @@ Create an affiliate member
      "site_slug": "my-store",
      "type": "AffiliateMember",
      "data": {
-       "email": "affiliate@example.com"
+       "email": "affiliate@example.com",
+       "campaign_tags": ["invite"]
      }
    }
 
@@ -176,7 +227,7 @@ Create an affiliate member
    curl -H "Content-Type: application/json" \
         -X POST \
         -u i9uil7nQgDjucCiTJu: \
-        -d '{"site_slug":"my-store","type":"AffiliateMember","data":{"email":"affiliate@example.com"}}' \
+        -d '{"site_slug":"my-store","type":"AffiliateMember","data":{"email":"affiliate@example.com","campaign_tags":["invite"]}}' \
         https://www.talkable.com/api/v2/origins
 
 Sample response:
@@ -190,6 +241,7 @@ Sample response:
          "id": 31386400,
          "email": "affiliate@example.com",
          "customer_id": null,
+         "ip_address": "127.0.0.1",
          "type": "AffiliateMember"
        },
        "offer": {
@@ -211,9 +263,10 @@ With sharing links
      "site_slug": "my-store",
      "type": "AffiliateMember",
      "data": {
-       "email": "affiliate@example.com"
-     },
-     "sharing_channels": ["facebook", "twitter", "custom"]
+       "email": "affiliate@example.com",
+       "campaign_tags": ["invite"],
+       "sharing_channels": ["facebook", "twitter", "custom"]
+     }
    }
 
 .. code-block:: bash
@@ -221,7 +274,7 @@ With sharing links
    curl -H "Content-Type: application/json" \
         -X POST \
         -u i9uil7nQgDjucCiTJu: \
-        -d '{"site_slug":"my-store","type":"AffiliateMember","data":{"email":"affiliate@example.com"},"sharing_channels":["facebook","twitter","custom"]}' \
+        -d '{"site_slug":"my-store","type":"AffiliateMember","data":{"email":"affiliate@example.com","campaign_tags":["invite"],"sharing_channels":["facebook","twitter","custom"]}}' \
         https://www.talkable.com/api/v2/origins
 
 Sample response:
@@ -235,6 +288,7 @@ Sample response:
          "id": 31386400,
          "email": "affiliate@example.com",
          "customer_id": null,
+         "ip_address": "127.0.0.1",
          "type": "AffiliateMember"
        },
        "offer": {
