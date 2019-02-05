@@ -767,6 +767,6 @@ JavaScript API call
 
 Rendered Liquid
 
-.. code-block:: text
+.. code-block:: javascript
 
   {"first_name":null,"last_name":null,"email":"advocate@example.com","username":null,"external_customer_id":null,"opted_in_at":null,"sub_choice":false,"purchases_sum":0.0,"purchases_count":0,"events_count":0,"events_count_by_category":{"friend_signup":0,"purchase":0},"referrals_count":0,"referred_by":null,"custom_properties":{},"unsubscribed":false}
