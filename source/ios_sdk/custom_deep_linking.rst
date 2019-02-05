@@ -1,7 +1,7 @@
 .. _ios_sdk/custom_deep_linking:
 .. include:: /partials/common.rst
 
-Integration With Third Party Deep Linking Services
+Integration with Third Party Deep Linking Services
 ==================================================
 
 Talkable can work with third party deep linking providers such as GetSocial, Branch.io, and Firebase. Talkable is able to use deep linking functionality to track app installations and reward your Advocates and Friends for installing your mobile app on their phones.
