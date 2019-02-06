@@ -59,7 +59,7 @@ namespace :deploy do
   def deploy(domain:, html_branch:, source_branch:, disallow_robots:, push_command:)
     sh "git checkout #{html_branch}"
     sh 'git pull'
-    sh "find . -not -path './.git' -not -path './.git/*' -not -path './Rakefile' -delete"
+    sh "find . -not -path './.git' -not -path './.git/*' -not -path './Rakefile' -not -path './.circleci' -not -path './.circleci/*' -delete"
     sh "git checkout #{source_branch} #{SOURCE_DIR} .gitignore requirements.txt"
     sh 'git reset HEAD'
     Rake::Task[:build].invoke
