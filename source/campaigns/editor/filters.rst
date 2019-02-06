@@ -756,7 +756,7 @@ Liquid
 
 .. code-block:: liquid
 
-  {{ 'async_advocate_info' | async_rendering: '[[ advocate_info | json ]]'}}
+  {{ 'async_advocate_info' | async_rendering: '[[ advocate_info | json ]]' }}
 
 JavaScript API call
 
