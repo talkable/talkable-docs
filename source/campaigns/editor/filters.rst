@@ -746,3 +746,47 @@ Rendered Liquid
 .. code-block:: text
 
   "Whatever Liquid you would like to have"
+
+Example 4
+~~~~~~~~~
+
+Use ``json`` Liquid filter to transform deeply nested object structure into a valid JSON.
+
+Liquid
+
+.. code-block:: liquid
+
+  {{ 'async_advocate_info' | async_rendering: '[[ advocate_info | json ]]' }}
+
+JavaScript API call
+
+.. code-block:: javascript
+
+  Talkable.loadLiquid("async_advocate_info", function(rendered_template) {
+    console.log(rendered_template);
+  });
+
+Rendered Liquid
+
+.. code-block:: javascript
+
+  {
+    "first_name": null,
+    "last_name": null,
+    "email": "advocate@example.com",
+    "username": null,
+    "external_customer_id": null,
+    "opted_in_at": null,
+    "sub_choice": false,
+    "purchases_sum": 0.0,
+    "purchases_count": 0,
+    "events_count": 0,
+    "events_count_by_category": {
+        "friend_signup": 0,
+        "purchase": 0
+    },
+    "referrals_count": 0,
+    "referred_by": null,
+    "custom_properties": {},
+    "unsubscribed": false
+  }
