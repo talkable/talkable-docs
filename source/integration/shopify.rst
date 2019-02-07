@@ -54,6 +54,21 @@ Manual integration
 
 2. Then navigate to:
 
+    * Open `Templates / Add a new template`
+    * Create a new template for `page` called `talkable`
+    * Paste the following code inside layout of this page:
+
+    .. code-block:: html
+
+      <div id="talkable-offer"></div>
+
+3. Then navigate to:
+
+    * Open `Pages / Add page`
+    * Create a new page with `page.talkable` template
+
+4. Then navigate to:
+
     * Settings
     * Checkout
     * Scroll down to **Order Processing**
@@ -65,8 +80,8 @@ Manual integration
 
     .. include:: /partials/note_sample_integration.rst
 
-3. Click “Save”.
-4. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`.
+5. Click “Save”.
+6. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`.
 
 Watch a |video| demonstrating the full integration from start to finish.
 
