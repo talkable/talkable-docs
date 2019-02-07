@@ -6,6 +6,13 @@ Upgrade
 
 Sometimes we need you to upgrade existing integration to use our latest features.
 
+0.5.7
+-----
+
+Added :ref:`debug mode <android_sdk/testing>` to facilitate testing.
+
+Fixed bug with missing getter methods in the `Reward` model.
+
 0.5.6
 -----
 
