@@ -54,7 +54,8 @@ Manual integration
 
 2. Then navigate to:
 
-    * Open `Templates / Add a new template`
+    * Open `Themes/Templates`
+    * Click `Add a new template`
     * Create a new template for `page` called `talkable`
     * Paste the following code inside layout of this page:
 
@@ -62,10 +63,14 @@ Manual integration
 
       <div id="talkable-offer"></div>
 
+    * Click “Save”
+
 3. Then navigate to:
 
-    * Open `Pages / Add page`
-    * Create a new page with `page.talkable` template
+    * Open `Online Store / Pages`
+    * Click `Add page`
+    * Select Template suffix `page.talkable`
+    * Click “Save”
 
 4. Then navigate to:
 
