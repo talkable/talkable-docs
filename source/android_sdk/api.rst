@@ -61,6 +61,7 @@ You need to build `Origin` using one of examples below:
     // Building AffiliateMember
     AffiliateMember origin = new AffiliateMember();
     origin.setCustomer(customer); // Required
+    origin.setCampaignTag("your-campaign-tag");
 
     // Building Event
     String eventNumber = "1"; // Required
@@ -70,6 +71,7 @@ You need to build `Origin` using one of examples below:
 
     Event origin = new Event(eventNumber, eventCategory, subtotal, coupons);
     origin.setCustomer(customer); // Required
+    origin.setCampaignTag("your-campaign-tag");
 
     // Build purchase
     Double price = 10.99;
@@ -87,6 +89,7 @@ You need to build `Origin` using one of examples below:
 
     Purchase origin = new Purchase(subtotal, orderNumber, orderDate, coupons);
     origin.setCustomer(customer); // Required
+    origin.setCampaignTag("your-campaign-tag");
     origin.addItem(item); // Optional
 
 API request
