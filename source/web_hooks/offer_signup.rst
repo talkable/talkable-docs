@@ -35,9 +35,7 @@ Advocate Signup Form example:
 
 * **offer** — subhash of parameters describing the offer
 
-  * **email** — |advocate|’s (referrer) email address
-  * **short_url_code**
-  * **ip_address**
+  .. include:: /partials/offer_fields.rst
 
 * **campaign** — subhash of parameters describing the campaign
 

@@ -90,8 +90,7 @@ Webhook Set Up Steps <web_hooks>`
 
 * **offer** — subhash of parameters describing the offer
 
-  * **email** — referrer’s (Advocate's) email address
-  * **short_url_code**
+  .. include:: /partials/offer_fields.rst
 
 * **person** — subhash of parameters describing the person that got reward (note: might be **null**)
 

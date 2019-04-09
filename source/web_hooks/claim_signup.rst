@@ -35,9 +35,7 @@ Friend Email Gating form example:
 
 * **offer** — subhash of parameters describing the offer
 
-  * **email** — referrer’s email address
-  * **ip_address** - referrer’s IP address
-  * **short_url_code**
+  .. include:: /partials/offer_fields.rst
 
 * **campaign** — subhash of parameters describing the campaign
 
