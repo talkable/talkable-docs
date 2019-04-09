@@ -98,13 +98,7 @@ Webhook Set Up Steps <web_hooks>`
 
 * **origin** — subhash of data related to the event that issued an offer
 
-  * **type**
-
-    * *"Purchase"* for post-purchase campaign
-    * *"AffiliateMember"* for standalone campaign
-
-  * **id** — unique identifier of the origin event
-  * **email** — email address of the referrer (Advocate) person
+  .. include:: /partials/origin_fields.rst
 
 * **reward** — subhash of parameters describing the reward itself
 

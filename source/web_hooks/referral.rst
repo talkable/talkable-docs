@@ -57,14 +57,7 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
     incentive equals `discount_coupon`.
   * **origin** — contains data about the event that issued an offer:
 
-    * **type**
-
-      * *"Purchase"* for post-purchase placement
-      * *"AffiliateMember"* for standalone, floating widget, or gleam placements
-      * *"Event"* for post-event placement
-
-    * **id** — unique identifier of the origin event
-    * **email** — email address of the |advocate| person
+    .. include:: /partials/origin_fields.rst
 
 * **friend_rewards** — array of hashes describing the rewards received by referred person,
   where each hash contains parameters:
