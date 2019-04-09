@@ -34,10 +34,7 @@ triggered twice.
 
 * **campaign** — subhash of parameters describing the campaign
 
-  * **id** — unique campaign ID
-  * **cached_slug** — unique SEO friendly ID
-  * **type** — either *"StandaloneCampaign"* or *"DoubleSidedDealCampaign"*
-  * **tag_names** — an array of campaign’s tags
+  .. include:: /partials/campaign_fields.rst
   * **origin_min_age** — timeframe from first site visit when an offer is
     available to Advocate
   * **origin_max_age** — timeframe from first site visit when an offer is

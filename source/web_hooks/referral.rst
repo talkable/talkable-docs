@@ -32,10 +32,7 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
 
 * **campaign** — subhash of parameters describing the campaign
 
-  * **id** — unique campaign ID
-  * **cached_slug** — unique SEO friendly ID
-  * **type** — either *"StandaloneCampaign"* or *"DoubleSidedDealCampaign"*
-  * **tag_names** — array of campaign’s tags
+  .. include:: /partials/campaign_fields.rst
 
 * **offer** — subhash of parameters describing the offer
 

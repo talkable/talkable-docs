@@ -41,10 +41,7 @@ Friend Email Gating form example:
 
 * **campaign** — subhash of parameters describing the campaign
 
-  * **id** — unique campaign ID
-  * **cached_slug** — unique SEO friendly ID
-  * **type** — either *"StandaloneCampaign"* or *"DoubleSidedDealCampaign"*
-  * **tag_names** — array of campaign’s tags
+  .. include:: /partials/campaign_fields.rst
   * **origin_min_age** — The timeframe from first site visit when an offer is
     available to Advocate
   * **origin_max_age** — The timeframe from first site visit when an offer is
