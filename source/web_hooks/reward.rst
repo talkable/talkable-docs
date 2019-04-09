@@ -95,12 +95,7 @@ Webhook Set Up Steps <web_hooks>`
 
 * **person** — subhash of parameters describing the person that got reward (note: might be **null**)
 
-  * **email**
-  * **first_name**
-  * **last_name**
-  * **sub_choice**
-  * **opted_in_at**
-  * **unsubscribed_at**
+  .. include:: /partials/person_fields.rst
 
 * **origin** — subhash of data related to the event that issued an offer
 

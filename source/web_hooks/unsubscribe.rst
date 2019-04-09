@@ -27,15 +27,7 @@ Talkable sent email.
 
 * **person** — subhash of parameters describing the person
 
-  * **first_name** — person’s first name
-  * **last_name** — person’s last name
-  * **email** — person’s email address
-  * **username** — person’s username
-  * **unsubscribed_at** — date person has unsubscribed
-  * **subscribed_at** — date person has subscribed (deprecated; use opted_in_at instead)
-  * **opted_in_at** — date person has subscribed
-  * **sub_choice** — subscription choice
-  * **custom_properties** — hash of person’s custom properties (optional)
+  .. include:: /partials/person_fields.rst
 
 .. raw:: html
 

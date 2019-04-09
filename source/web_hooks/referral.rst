@@ -48,12 +48,7 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
   * **email** — email of the person that got reward
   * **person** — subhash of parameters describing the person that got reward
 
-    * **email**
-    * **first_name**
-    * **last_name**
-    * **sub_choice**
-    * **subscribed_at**
-    * **unsubscribed_at**
+    .. include:: /partials/person_fields.rst
 
   * **amount** — amount of money to reward (null when non-monetary incentive is used)
   * **incentive** — type of incentive reward (`rebate`, `discount_coupon`, `other`)
@@ -77,12 +72,7 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
   * **email** — email of the person that got reward
   * **person** — subhash of parameters describing the person that got reward
 
-    * **email**
-    * **first_name**
-    * **last_name**
-    * **sub_choice**
-    * **subscribed_at**
-    * **unsubscribed_at**
+    .. include:: /partials/person_fields.rst
 
   * **amount** — amount of money to reward (null when non-monetary incentive is used)
   * **incentive** — type of incentive reward (rebate, discount_coupon, other)
