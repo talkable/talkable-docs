@@ -48,6 +48,11 @@ merchant side.
   * **opted_in_at** — date recipient has subscribed
   * **sub_choice** — subscription choice
   * **custom_properties** — hash of recipient’s custom properties (optional)
+  * **referral_counts** - subhash of |advocate|'s referral counts
+
+    * **total** — created referrals count
+    * **approved** — approved referrals count
+    * **pending** — count of waiting for approval referrals
 
 * **email_type** — described view category
 
