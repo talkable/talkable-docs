@@ -88,8 +88,7 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
        "unsubscribed_at": null,
        "subscribed_at": "2019-04-11T07:25:17.272-07:00",
        "opted_in_at": "2019-04-11T07:25:17.272-07:00",
-       "sub_choice": true,
-       "gender": null
+       "sub_choice": true
      }
    }
 
@@ -118,18 +117,25 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
        "unsubscribed_at": null,
        "subscribed_at": "2019-04-11T07:27:31.258-07:00",
        "opted_in_at": "2019-04-11T07:27:31.258-07:00",
-       "sub_choice": true,
-       "gender": null
+       "sub_choice": true
      }
    }
 
 .. raw:: html
 
-   <h2>cURL example</h2>
+   <h2>cURL example | Event</h2>
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&site=<site>&type=event_web_hook&payload={"origin":{"id":654689661,"type":"Purchase","order_number":"426692385","subtotal":29.39,"customer_id":"162638070","order_date":"2019-04-11T07:28:31.258-07:00","coupon_code":"WHT79679","ip_address":"127.0.0.1"},"person":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","username":"username","unsubscribed_at":null,"subscribed_at":"2019-04-11T07:27:31.258-07:00","opted_in_at":"2019-04-11T07:27:31.258-07:00","sub_choice":true,"gender":null}}' <url>
+   curl --data 'key=<key>&site=<site>&type=event_web_hook&payload={"origin":{"id":998181034,"type":"Event","event_number":"352670218","event_category":"webhook-test","subtotal":21.36,"customer_id":"472735863","order_date":"2019-04-16T06:20:47.079-07:00","coupon_code":"WHT65226","ip_address":"127.0.0.1"},"person":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","username":"username","unsubscribed_at":null,"subscribed_at":"2019-04-16T06:19:47.079-07:00","opted_in_at":"2019-04-16T06:19:47.079-07:00","sub_choice":true}}' <url>
+
+.. raw:: html
+
+   <h2>cURL example | Purchase</h2>
+
+.. code-block:: bash
+
+   curl --data 'key=<key>&site=<site>&type=event_web_hook&payload={"origin":{"id":654689661,"type":"Purchase","order_number":"426692385","subtotal":29.39,"customer_id":"162638070","order_date":"2019-04-11T07:28:31.258-07:00","coupon_code":"WHT79679","ip_address":"127.0.0.1"},"person":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","username":"username","unsubscribed_at":null,"subscribed_at":"2019-04-11T07:27:31.258-07:00","opted_in_at":"2019-04-11T07:27:31.258-07:00","sub_choice":true}}' <url>
 
 .. container:: hidden
 
