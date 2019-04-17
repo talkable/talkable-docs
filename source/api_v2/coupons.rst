@@ -81,7 +81,12 @@ Sample response:
            "username": null,
            "unsubscribed_at": null,
            "subscribed_at": null,
-           "sub_choice": false
+           "sub_choice": false,
+           "referral_counts": {
+             "total": 0,
+             "approved": 0,
+             "pending": 0
+           }
          },
          "campaign": {
            "id": 196,
@@ -169,7 +174,12 @@ Check if a coupon belongs to a person
            "username": null,
            "unsubscribed_at": null,
            "subscribed_at": null,
-           "sub_choice": false
+           "sub_choice": false,
+           "referral_counts": {
+             "total": 0,
+             "approved": 0,
+             "pending": 0
+           }
          },
          "campaign": {
            "id": 196,
