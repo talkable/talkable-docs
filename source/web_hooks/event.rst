@@ -37,30 +37,22 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
 
      * **email** - email address associated with the Purchase
      * **order_number** - unique identifier of the Purchase
-     * **customer_id** - unique external identifier of a customer who make the purchase
+     * **customer_id** - unique external identifier of a customer who made the purchase
      * **subtotal** - order subtotal for the purchase
-     * **coupon_code** - unique external identifier of a customer who make the purchase
+     * **coupon_code** - coupon code used with the purchase
 
   *For Event:*
 
      * **email** - email address associated with the Event
      * **event_category** - identifier of an action that trigger the Event (e.g. ``app_installed``)
      * **event_number** - unique identifier of the Event within the associated **event_category**
-     * **customer_id** - unique external identifier of a customer who make the purchase
+     * **customer_id** - unique external identifier of a customer who triggered the event
      * **subtotal** - optional monetary attribute of the Event
      * **coupon_code** - optional coupon code associated with the Event
 
 * **person** - subhash of data describing the person who triggered the event
 
-  * **first_name** — person’s first name
-  * **last_name** — person’s last name
-  * **email** — person’s email address
-  * **username** — person’s username
-  * **unsubscribed_at** — date person has unsubscribed
-  * **subscribed_at** — date person has subscribed (deprecated; use opted_in_at instead)
-  * **opted_in_at** — date person has subscribed
-  * **sub_choice** — subscription choice
-  * **custom_properties** — hash of person’s custom properties (optional)
+ .. include:: /partials/person_fields.rst
 
 .. raw:: html
 
