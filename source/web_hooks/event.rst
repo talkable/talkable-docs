@@ -52,7 +52,7 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
 
 * **person** - subhash of data describing the person who triggered the event
 
- .. include:: /partials/person_fields.rst
+    .. include:: /partials/person_fields.rst
 
 .. raw:: html
 
