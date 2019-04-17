@@ -86,34 +86,19 @@ Webhook Set Up Steps <web_hooks>`
 
 * **campaign** — subhash of parameters describing the campaign
 
-  * **id** — unique campaign ID
-  * **cached_slug** — unique SEO friendly ID
-  * **type** — either *"StandaloneCampaign"* or *"DoubleSidedDealCampaign"*
-  * **tag_names** — array of campaign’s tags
+  .. include:: /partials/campaign_fields.rst
 
 * **offer** — subhash of parameters describing the offer
 
-  * **email** — referrer’s (Advocate's) email address
-  * **short_url_code**
+  .. include:: /partials/offer_fields.rst
 
 * **person** — subhash of parameters describing the person that got reward (note: might be **null**)
 
-  * **email**
-  * **first_name**
-  * **last_name**
-  * **sub_choice**
-  * **opted_in_at**
-  * **unsubscribed_at**
+  .. include:: /partials/person_fields.rst
 
 * **origin** — subhash of data related to the event that issued an offer
 
-  * **type**
-
-    * *"Purchase"* for post-purchase campaign
-    * *"AffiliateMember"* for standalone campaign
-
-  * **id** — unique identifier of the origin event
-  * **email** — email address of the referrer (Advocate) person
+  .. include:: /partials/origin_fields.rst
 
 * **reward** — subhash of parameters describing the reward itself
 
@@ -393,7 +378,12 @@ Reward reason can be of 5 following general types.
        "unsubscribed_at": null,
        "subscribed_at": "2018-08-27T21:42:23.060+03:00",
        "opted_in_at": "2018-08-27T21:42:23.060+03:00",
-       "sub_choice": true
+       "sub_choice": true,
+       "referral_counts": {
+         "total": 0,
+         "approved": 0,
+         "pending": 0
+       }
      },
      "origin": {
        "id": 280695079,
@@ -456,7 +446,7 @@ Reward reason can be of 5 following general types.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"person":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","username":"username","unsubscribed_at":null,"subscribed_at":"2018-08-27T21:42:23.060+03:00","opted_in_at":"2018-08-27T21:42:23.060+03:00","sub_choice":true},"origin":{"id":280695079,"type":"Purchase","order_number":"288015920","subtotal":"6.31","customer_id":"230652117","ip_address":"127.0.0.1","coupon_code":"WHT25279"},"advocate_origin":{"id":280695079,"type":"Purchase","order_number":"288015920","subtotal":"6.31","customer_id":"230652117","ip_address":"127.0.0.1","coupon_code":"WHT25279"},"friend_origin":{"id":264084636,"type":"Purchase","order_number":"4190583","subtotal":"73.41","email":"referred@example.com","customer_id":"323518374","ip_address":"127.0.0.1","coupon_code":"WHT40052"},"campaign":{"id":484002505,"type":"StandaloneCampaign","cached_slug":484002505,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV","ip_address":"127.0.0.1"},"reward":{"id":8261305,"reason":"referrer","incentive_type":"rebate","incentive_description":"$10.00 back","incentive_custom_description":null,"amount":"10.0","coupon":{},"coupon_code":null,"status":"Paid"}}' <url>
+   curl --data 'key=<key>&payload={"person":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","username":"username","unsubscribed_at":null,"subscribed_at":"2018-08-27T21:42:23.060+03:00","opted_in_at":"2018-08-27T21:42:23.060+03:00","sub_choice":true,"referral_counts":{"total":0,"approved":0,"pending":0}},"origin":{"id":280695079,"type":"Purchase","order_number":"288015920","subtotal":"6.31","customer_id":"230652117","ip_address":"127.0.0.1","coupon_code":"WHT25279"},"advocate_origin":{"id":280695079,"type":"Purchase","order_number":"288015920","subtotal":"6.31","customer_id":"230652117","ip_address":"127.0.0.1","coupon_code":"WHT25279"},"friend_origin":{"id":264084636,"type":"Purchase","order_number":"4190583","subtotal":"73.41","email":"referred@example.com","customer_id":"323518374","ip_address":"127.0.0.1","coupon_code":"WHT40052"},"campaign":{"id":484002505,"type":"StandaloneCampaign","cached_slug":484002505,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV","ip_address":"127.0.0.1"},"reward":{"id":8261305,"reason":"referrer","incentive_type":"rebate","incentive_description":"$10.00 back","incentive_custom_description":null,"amount":"10.0","coupon":{},"coupon_code":null,"status":"Paid"}}' <url>
 
 .. raw:: html
 
@@ -473,7 +463,12 @@ Reward reason can be of 5 following general types.
        "unsubscribed_at": null,
        "subscribed_at": "2018-08-27T21:45:29.519+03:00",
        "opted_in_at": "2018-08-27T21:45:29.519+03:00",
-       "sub_choice": true
+       "sub_choice": true,
+       "referral_counts": {
+         "total": 0,
+         "approved": 0,
+         "pending": 0
+       }
      },
      "origin": {
        "id": 818629076,
@@ -537,7 +532,7 @@ Reward reason can be of 5 following general types.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"person":{"first_name":"Matt","last_name":"Smith","email":"friend@example.com","username":"username","unsubscribed_at":null,"subscribed_at":"2018-08-27T21:45:29.519+03:00","opted_in_at":"2018-08-27T21:45:29.519+03:00","sub_choice":true},"origin":{"id":818629076,"type":"Purchase","order_number":"416466456","subtotal":"48.39","email":"referred@example.com","customer_id":"401088820","ip_address":"127.0.0.1","coupon_code":"WHT862"},"advocate_origin":{"id":77856467,"type":"Purchase","order_number":"529868349","subtotal":"25.76","customer_id":"937735146","ip_address":"127.0.0.1","coupon_code":"WHT15105"},"friend_origin":{"id":818629076,"type":"Purchase","order_number":"416466456","subtotal":"48.39","email":"referred@example.com","customer_id":"401088820","ip_address":"127.0.0.1","coupon_code":"WHT862"},"campaign":{"id":944706822,"type":"StandaloneCampaign","cached_slug":944706822,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV","ip_address":"127.0.0.1"},"reward":{"id":8261300,"reason":"referred","incentive_type":"rebate","incentive_description":"$10.00 back","incentive_custom_description":null,"amount":"10.0","coupon":{},"coupon_code":null,"status":"Paid"}}' <url>
+   curl --data 'key=<key>&payload={"person":{"first_name":"Matt","last_name":"Smith","email":"friend@example.com","username":"username","unsubscribed_at":null,"subscribed_at":"2018-08-27T21:45:29.519+03:00","opted_in_at":"2018-08-27T21:45:29.519+03:00","sub_choice":true,"referral_counts":{"total":0,"approved":0,"pending":0}},"origin":{"id":818629076,"type":"Purchase","order_number":"416466456","subtotal":"48.39","email":"referred@example.com","customer_id":"401088820","ip_address":"127.0.0.1","coupon_code":"WHT862"},"advocate_origin":{"id":77856467,"type":"Purchase","order_number":"529868349","subtotal":"25.76","customer_id":"937735146","ip_address":"127.0.0.1","coupon_code":"WHT15105"},"friend_origin":{"id":818629076,"type":"Purchase","order_number":"416466456","subtotal":"48.39","email":"referred@example.com","customer_id":"401088820","ip_address":"127.0.0.1","coupon_code":"WHT862"},"campaign":{"id":944706822,"type":"StandaloneCampaign","cached_slug":944706822,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV","ip_address":"127.0.0.1"},"reward":{"id":8261300,"reason":"referred","incentive_type":"rebate","incentive_description":"$10.00 back","incentive_custom_description":null,"amount":"10.0","coupon":{},"coupon_code":null,"status":"Paid"}}' <url>
 
 .. container:: hidden
 

@@ -27,15 +27,7 @@ Talkable sent email.
 
 * **person** — subhash of parameters describing the person
 
-  * **first_name** — person’s first name
-  * **last_name** — person’s last name
-  * **email** — person’s email address
-  * **username** — person’s username
-  * **unsubscribed_at** — date person has unsubscribed
-  * **subscribed_at** — date person has subscribed (deprecated; use opted_in_at instead)
-  * **opted_in_at** — date person has subscribed
-  * **sub_choice** — subscription choice
-  * **custom_properties** — hash of person’s custom properties (optional)
+  .. include:: /partials/person_fields.rst
 
 .. raw:: html
 
@@ -52,7 +44,12 @@ Talkable sent email.
        "unsubscribed_at": null,
        "subscribed_at": "2018-09-27T22:55:13.860+03:00",
        "opted_in_at": "2018-09-27T22:55:13.860+03:00",
-       "sub_choice": true
+       "sub_choice": true,
+       "referral_counts": {
+         "total": 0,
+         "approved": 0,
+         "pending": 0
+       }
      }
    }
 
@@ -62,7 +59,7 @@ Talkable sent email.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"person":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","username":"username","unsubscribed_at":null,"subscribed_at":"2018-09-27T22:55:13.860+03:00","opted_in_at":"2018-09-27T22:55:13.860+03:00","sub_choice":true}}' <url>
+   curl --data 'key=<key>&payload={"person":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","username":"username","unsubscribed_at":null,"subscribed_at":"2018-09-27T22:55:13.860+03:00","opted_in_at":"2018-09-27T22:55:13.860+03:00","sub_choice":true,"referral_counts":{"total":0,"approved":0,"pending":0}}}' <url>
 
 .. container:: hidden
 

@@ -34,10 +34,7 @@ triggered twice.
 
 * **campaign** — subhash of parameters describing the campaign
 
-  * **id** — unique campaign ID
-  * **cached_slug** — unique SEO friendly ID
-  * **type** — either *"StandaloneCampaign"* or *"DoubleSidedDealCampaign"*
-  * **tag_names** — an array of campaign’s tags
+  .. include:: /partials/campaign_fields.rst
   * **origin_min_age** — timeframe from first site visit when an offer is
     available to Advocate
   * **origin_max_age** — timeframe from first site visit when an offer is
@@ -65,15 +62,7 @@ triggered twice.
   Facebook and Twitter shares)
 * **origin** — contains data about the event that issued an offer:
 
-  * **type**
-
-    * *"Purchase"* for post-purchase campaign
-    * *"AffiliateMember"* for standalone campaign
-    * *"Event"* for event type origin (such as a signup page which triggers a
-      referral campaign)
-
-  * **id** — unique identifier of the origin event
-  * **email** — email address of the Advocate (referrer)
+  .. include:: /partials/origin_fields.rst
 
 .. raw:: html
 

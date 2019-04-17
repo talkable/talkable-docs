@@ -32,10 +32,7 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
 
 * **campaign** — subhash of parameters describing the campaign
 
-  * **id** — unique campaign ID
-  * **cached_slug** — unique SEO friendly ID
-  * **type** — either *"StandaloneCampaign"* or *"DoubleSidedDealCampaign"*
-  * **tag_names** — array of campaign’s tags
+  .. include:: /partials/campaign_fields.rst
 
 * **offer** — subhash of parameters describing the offer
 
@@ -51,12 +48,7 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
   * **email** — email of the person that got reward
   * **person** — subhash of parameters describing the person that got reward
 
-    * **email**
-    * **first_name**
-    * **last_name**
-    * **sub_choice**
-    * **subscribed_at**
-    * **unsubscribed_at**
+    .. include:: /partials/person_fields.rst
 
   * **amount** — amount of money to reward (null when non-monetary incentive is used)
   * **incentive** — type of incentive reward (`rebate`, `discount_coupon`, `other`)
@@ -65,14 +57,7 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
     incentive equals `discount_coupon`.
   * **origin** — contains data about the event that issued an offer:
 
-    * **type**
-
-      * *"Purchase"* for post-purchase placement
-      * *"AffiliateMember"* for standalone, floating widget, or gleam placements
-      * *"Event"* for post-event placement
-
-    * **id** — unique identifier of the origin event
-    * **email** — email address of the |advocate| person
+    .. include:: /partials/origin_fields.rst
 
 * **friend_rewards** — array of hashes describing the rewards received by referred person,
   where each hash contains parameters:
@@ -80,12 +65,7 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
   * **email** — email of the person that got reward
   * **person** — subhash of parameters describing the person that got reward
 
-    * **email**
-    * **first_name**
-    * **last_name**
-    * **sub_choice**
-    * **subscribed_at**
-    * **unsubscribed_at**
+    .. include:: /partials/person_fields.rst
 
   * **amount** — amount of money to reward (null when non-monetary incentive is used)
   * **incentive** — type of incentive reward (rebate, discount_coupon, other)
@@ -129,7 +109,12 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
          "sub_choice": false,
          "subscribed_at": null,
          "opted_in_at": null,
-         "unsubscribed_at": null
+         "unsubscribed_at": null,
+         "referral_counts": {
+           "total": 0,
+           "approved": 0,
+           "pending": 0
+         }
        },
        "amount": "5.00",
        "incentive": "rebate",
@@ -152,7 +137,12 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
          "sub_choice": true,
          "subscribed_at": "2018-09-14T23:57:18.734+03:00",
          "opted_in_at": "2018-09-14T23:57:18.734+03:00",
-         "unsubscribed_at": null
+         "unsubscribed_at": null,
+         "referral_counts": {
+           "total": 0,
+           "approved": 0,
+           "pending": 0
+         }
        },
        "amount": "0.00",
        "incentive": "other",
@@ -179,7 +169,12 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
            "sub_choice": false,
            "subscribed_at": null,
            "opted_in_at": null,
-           "unsubscribed_at": null
+           "unsubscribed_at": null,
+           "referral_counts": {
+             "total": 0,
+             "approved": 0,
+             "pending": 0
+           }
          },
          "amount": "5.00",
          "incentive": "rebate",
@@ -204,7 +199,12 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
            "sub_choice": true,
            "subscribed_at": "2018-09-14T23:57:18.734+03:00",
            "opted_in_at": "2018-09-14T23:57:18.734+03:00",
-           "unsubscribed_at": null
+           "unsubscribed_at": null,
+           "referral_counts": {
+             "total": 0,
+             "approved": 0,
+             "pending": 0
+           }
          },
          "amount": "0.00",
          "incentive": "other",
@@ -237,7 +237,7 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"campaign":{"id":593427266,"type":"StandaloneCampaign","cached_slug":593427266,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV","ip_address":"127.0.0.1"},"referrer":{"id":715729561,"email":"referrer@example.com","person":{"email":"referrer@example.com","first_name":"Bob","last_name":"Crane","sub_choice":false,"subscribed_at":null,"opted_in_at":null,"unsubscribed_at":null},"amount":"5.00","incentive":"rebate","incentive_description":"$5.00 back","origin":{"id":159843498,"type":"AffiliateMember","email":"referrer@example.com","customer_id":"64227025","ip_address":"127.0.0.1"}},"referred":{"id":11192772,"email":"referred@example.com","person":{"email":"referred@example.com","first_name":"Alice","last_name":"Smith","sub_choice":true,"subscribed_at":"2018-09-14T23:57:18.734+03:00","opted_in_at":"2018-09-14T23:57:18.734+03:00","unsubscribed_at":null},"amount":"0.00","incentive":"other","incentive_description":"First Month Free","origin":{"id":147886587,"type":"Purchase","order_number":"450901776","subtotal":35.03,"customer_id":"565659001","ip_address":"127.0.0.1","coupon_code":"WHT29123"}},"advocate_rewards":[{"id":715729561,"email":"referrer@example.com","person":{"email":"referrer@example.com","first_name":"Bob","last_name":"Crane","gender":null,"sub_choice":false,"subscribed_at":null,"opted_in_at":null,"unsubscribed_at":null},"amount":"5.00","incentive":"rebate","incentive_description":"$5.00 back","origin":{"id":159843498,"type":"AffiliateMember","email":"referrer@example.com","customer_id":"64227025","ip_address": "127.0.0.1"}}],"friend_rewards":[{"id":11192772,"email":"referred@example.com","person":{"email":"referred@example.com","first_name":"Alice","last_name":"Smith","sub_choice":true,"subscribed_at":"2018-09-14T23:57:18.734+03:00","opted_in_at":"2018-09-14T23:57:18.734+03:00","unsubscribed_at":null},"amount":"0.00","incentive":"other","incentive_description":"First Month Free","origin":{"id":147886587,"type":"Purchase","order_number":"450901776","subtotal":35.03,"customer_id":"565659001","ip_address":"127.0.0.1","coupon_code":"WHT29123"}}],"referred_origin":{"id":6400368,"type":"Purchase","order_number":"459179054","subtotal":11.39,"customer_id":"376990942","ip_address":"127.0.0.1","coupon_code":"WHT59688"}}' <url>
+   curl --data 'key=<key>&payload={"campaign":{"id":593427266,"type":"StandaloneCampaign","cached_slug":593427266,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV","ip_address":"127.0.0.1"},"referrer":{"id":715729561,"email":"referrer@example.com","person":{"email":"referrer@example.com","first_name":"Bob","last_name":"Crane","sub_choice":false,"subscribed_at":null,"opted_in_at":null,"unsubscribed_at":null,"referral_counts":{"total":0,"approved":0,"pending":0}},"amount":"5.00","incentive":"rebate","incentive_description":"$5.00 back","origin":{"id":159843498,"type":"AffiliateMember","email":"referrer@example.com","customer_id":"64227025","ip_address":"127.0.0.1"}},"referred":{"id":11192772,"email":"referred@example.com","person":{"email":"referred@example.com","first_name":"Alice","last_name":"Smith","sub_choice":true,"subscribed_at":"2018-09-14T23:57:18.734+03:00","opted_in_at":"2018-09-14T23:57:18.734+03:00","unsubscribed_at":null,"referral_counts":{"total":0,"approved":0,"pending":0}},"amount":"0.00","incentive":"other","incentive_description":"First Month Free","origin":{"id":147886587,"type":"Purchase","order_number":"450901776","subtotal":35.03,"customer_id":"565659001","ip_address":"127.0.0.1","coupon_code":"WHT29123"}},"advocate_rewards":[{"id":715729561,"email":"referrer@example.com","person":{"email":"referrer@example.com","first_name":"Bob","last_name":"Crane","gender":null,"sub_choice":false,"subscribed_at":null,"opted_in_at":null,"unsubscribed_at":null,"referral_counts":{"total":0,"approved":0,"pending":0}},"amount":"5.00","incentive":"rebate","incentive_description":"$5.00 back","origin":{"id":159843498,"type":"AffiliateMember","email":"referrer@example.com","customer_id":"64227025","ip_address": "127.0.0.1"}}],"friend_rewards":[{"id":11192772,"email":"referred@example.com","person":{"email":"referred@example.com","first_name":"Alice","last_name":"Smith","sub_choice":true,"subscribed_at":"2018-09-14T23:57:18.734+03:00","opted_in_at":"2018-09-14T23:57:18.734+03:00","unsubscribed_at":null,"referral_counts":{"total":0,"approved":0,"pending":0}},"amount":"0.00","incentive":"other","incentive_description":"First Month Free","origin":{"id":147886587,"type":"Purchase","order_number":"450901776","subtotal":35.03,"customer_id":"565659001","ip_address":"127.0.0.1","coupon_code":"WHT29123"}}],"referred_origin":{"id":6400368,"type":"Purchase","order_number":"459179054","subtotal":11.39,"customer_id":"376990942","ip_address":"127.0.0.1","coupon_code":"WHT59688"}}' <url>
 
 .. container:: hidden
 
