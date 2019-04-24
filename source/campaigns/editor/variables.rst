@@ -69,18 +69,28 @@ Personal data for |advocate|.
 
 .. container:: ptable
 
-   ===================== ================================= ==================================================================
-   Property              Value                             Description
-   ===================== ================================= ==================================================================
-   id                    1234567890                        Advocate origin id
-   new_customer          false | true                      Advocate is a new customer or not
-   created_at            "2016-07-27T00:00:00.000+03:00"   Time when Advocate origin was created
-   event_category        "purchase"                        Advocate origin event category
-   coupon_codes          ["AD_DISCOUNT"]                   Coupon codes that are used in Advocate origin
-   location.country      "United States"                   Advocate geolocation country based on their IP address
-   location.city         "San Jose"                        Advocate geolocation city based on their IP address
-   location.country_code "US"                              Advocate geolocation country code based on their IP address
-   ===================== ================================= ==================================================================
+   ============================== ================================= ================================================================================================
+   Property                       Value                             Description
+   ============================== ================================= ================================================================================================
+   id                             1234567890                        Advocate origin id
+   new_customer                   false | true                      Advocate is a new customer or not
+   created_at                     "2016-07-27T00:00:00.000+03:00"   Time when Advocate origin was created
+   event_category                 "purchase"                        Advocate origin event category
+   coupon_codes                   ["AD_DISCOUNT"]                   Coupon codes that are used in Advocate origin
+   ip.address                     "52.6.41.1"                       Advocate IP address
+   ip.qa                          false                             Shows if the IP address is listed as QA
+   ip.location.country            "United States"                   Advocate geolocation country based on their IP address
+   ip.location.city               "San Jose"                        Advocate geolocation city based on their IP address
+   ip.location.country_code       "US"                              Advocate geolocation country code based on their IP address
+   ip.location.subdivision_1_code "VA"                              Region-portion of the ISO 3166-2 code for the 1st level region associated with the IP address.
+   ip.location.subdivision_1_code ""                                Region-portion of the ISO 3166-2 code for the 2nd level region associated with the IP address.
+   product.sku                    "AJ7292-002"                      Product SKU
+   product.title                  "Nike Air VaporMax 95"            Product title
+   product.url                    "https://bit.ly/2IPp0rX"          Product URL
+   product.image_url              "https://bit.ly/2GuVAMQ"          Product Image URL
+   product.description            "Cool sneakers"                   Product Description
+   product.custom_properties      {"price": "190"}                  Product Custom properties
+   ============================== ================================= ================================================================================================
 
 |br|
 
