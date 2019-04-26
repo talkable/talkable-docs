@@ -125,9 +125,36 @@ Talkable will retry delivery of Webhook if any other error code is received.
 
    <h2>Security Key</h2>
 
-Talkable includes a key parameter in Webhooks which are unique to each site
+Talkable includes a ``key`` parameter in Webhooks which are unique to each site
 as a way to identify Talkable as an authorized server. Your Talkable Webhook
 security key can be found in the Webhook set up page.
+
+.. raw:: html
+
+   <h2>Type</h2>
+
+The ``type`` parameter of a Webhook request can be used to identify which Webhook
+is received without looking at the payload. This will be useful if you point multiple
+Webhooks to the same URL; for instance, for data collection purposes.
+
+Possible types are:
+
+* ``referral_web_hook``
+* ``create_coupon_web_hook``
+* ``post_share_web_hook``
+* ``offer_signup_web_hook``
+* ``claim_signup_web_hook``
+* ``reward_web_hook``
+* ``unsubscribe_web_hook``
+* ``check_unsubscribe_web_hook``
+* ``event_web_hook``
+
+.. raw:: html
+
+   <h2>Site</h2>
+
+Every Webhook has a ``site`` parameter that identifies which Talkable site sent
+this request. This is useful if you have a multi-site setup or use a staging site.
 
 .. raw:: html
 
@@ -155,3 +182,4 @@ See available Webhooks on the navigation sidebar.
       Friend Email Gating <web_hooks/claim_signup>
       Unsubscribe <web_hooks/unsubscribe>
       Check Unsubscribe <web_hooks/check_unsubscribe>
+      Event <web_hooks/event>

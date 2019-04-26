@@ -97,7 +97,7 @@ triggered twice.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"campaign":{"id":83587635,"type":"StandaloneCampaign","cached_slug":83587635,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"share_type":"email","share_info":{"recipients":["john@example.com"]},"origin":{"id":273085748,"type":"Purchase","email":"referrer@example.com"}}' <url>
+   curl --data 'key=<key>&site=<site>&type=post_share_web_hook&payload={"campaign":{"id":83587635,"type":"StandaloneCampaign","cached_slug":83587635,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"share_type":"email","share_info":{"recipients":["john@example.com"]},"origin":{"id":273085748,"type":"Purchase","email":"referrer@example.com"}}' <url>
 
 .. container:: hidden
 

@@ -105,7 +105,7 @@ Friend Email Gating form example:
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"offer":{"email":"referrer@example.com","short_url_code":"1a2PV","ip_address":"127.0.0.1"},"campaign":{"id":465427859,"type":"StandaloneCampaign","cached_slug":465427859,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"email":"john@example.com","first_name":null,"last_name":null,"ip_address":"127.0.0.1","sub_choice":true,"subscribed_at":"2018-09-27T22:54:28.345+03:00","opted_in_at":"2018-09-27T22:54:28.345+03:00","unsubscribed_at":null,"referral_counts":{"total":0,"approved":0,"pending":0}}' <url>
+   curl --data 'key=<key>&site=<site>&type=claim_signup_web_hook&payload={"offer":{"email":"referrer@example.com","short_url_code":"1a2PV","ip_address":"127.0.0.1"},"campaign":{"id":465427859,"type":"StandaloneCampaign","cached_slug":465427859,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"email":"john@example.com","first_name":null,"last_name":null,"ip_address":"127.0.0.1","sub_choice":true,"subscribed_at":"2018-09-27T22:54:28.345+03:00","opted_in_at":"2018-09-27T22:54:28.345+03:00","unsubscribed_at":null,"referral_counts":{"total":0,"approved":0,"pending":0}}' <url>
 
 .. container:: hidden
 
