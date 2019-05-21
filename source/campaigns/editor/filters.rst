@@ -807,6 +807,6 @@ Returns
 .. code-block:: javascript
 
     [
-      {  order_number: 98237519, email: "ad@site.com", subtotal: 100, coupon_codes: ["OFF5"], created_at: "Wed, 13 Oct 2010 22:05:30 PDT -07:00" },
-      {  order_number: 98237520, email: "ad@site.com", subtotal: 200, coupon_codes: ["OFF5"], created_at: "Wed, 13 Oct 2010 22:05:30 PDT -07:00" },
+      {  order_number: 98237519, email: "ad@site.com", subtotal: 100, coupon_codes: ["OFF5"], created_at: "Wed, 15 Oct 2018 22:05:30 PDT -07:00" },
+      {  order_number: 98237520, email: "ad@site.com", subtotal: 200, coupon_codes: ["OFF5"], created_at: "Wed, 15 Oct 2018 22:05:30 PDT -07:00" },
     ]
