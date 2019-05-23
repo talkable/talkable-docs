@@ -805,18 +805,19 @@ Person collection of events from the certain date (or for all time when ``from_d
 Returns
 
 .. code-block:: liquid
-
-      {
-        "coupon_codes" => ["OFF5"],
-        "created_at" => "2019-05-22T15:53:41-07:00",
-        "email" => "ad@site.com",
-        "order_number" => 98237519,
-        "subtotal" => 100.0
-      }
-      {
-        "coupon_codes" => ["OFF5"],
-        "created_at" => "2019-05-22T15:53:41-07:00",
-        "email" => "ad@site.com",
-        "order_number" => 98237520,
-        "subtotal" => 200.0
-      }
+  [
+    {
+      "coupon_codes" => ["OFF5"],
+      "created_at" => "2019-05-22T15:53:41-07:00",
+      "email" => "ad@site.com",
+      "order_number" => 98237519,
+      "subtotal" => 100.0
+    },
+    {
+      "coupon_codes" => ["OFF5"],
+      "created_at" => "2019-05-22T15:53:41-07:00",
+      "email" => "ad@site.com",
+      "order_number" => 98237520,
+      "subtotal" => 200.0
+    }
+  ]
