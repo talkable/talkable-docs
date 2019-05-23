@@ -804,7 +804,8 @@ Person collection of events from the certain date (or for all time when ``from_d
 
 Returns
 
-.. code-block:: liquid
+.. code-block:: javascript
+
   [
     {
       "coupon_codes" => ["OFF5"],
