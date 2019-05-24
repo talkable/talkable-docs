@@ -782,11 +782,43 @@ Rendered Liquid
     "purchases_count": 0,
     "events_count": 0,
     "events_count_by_category": {
-        "friend_signup": 0,
-        "purchase": 0
+      "friend_signup": 0,
+      "purchase": 0
     },
     "referrals_count": 0,
     "referred_by": null,
     "custom_properties": {},
     "unsubscribed": false
   }
+
+|hr|
+
+events\_collection
+..................
+
+Collection of person’s events from the certain date (or for all time when ``from_date`` is not set).
+
+.. code-block:: liquid
+
+   {{ "purchase" | events_collection: from_date: "10/14/2018" }}
+
+Returns
+
+.. code-block:: javascript
+
+  [
+    {
+      "coupon_codes" => ["OFF5"],
+      "created_at" => "2019-05-22T15:53:41-07:00",
+      "email" => "ad@site.com",
+      "order_number" => 98237519,
+      "subtotal" => 100.0
+    },
+    {
+      "coupon_codes" => ["OFF5"],
+      "created_at" => "2019-05-22T15:53:41-07:00",
+      "email" => "ad@site.com",
+      "order_number" => 98237520,
+      "subtotal" => 200.0
+    }
+  ]
