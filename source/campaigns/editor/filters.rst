@@ -796,7 +796,7 @@ Rendered Liquid
 events\_collection
 ..................
 
-Person collection of events from the certain date (or for all time when ``from_date`` is not set).
+Collection of person’s events from the certain date (or for all time when ``from_date`` is not set).
 
 .. code-block:: liquid
 
