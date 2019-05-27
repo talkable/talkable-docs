@@ -610,7 +610,7 @@ barcode\_image
 Represents any ``string`` as barcode image in png.
 This filter strictly follows GS1-128 specification: https://en.wikipedia.org/wiki/GS1-128.
 
-It may take the following arguments: ``height``, ``xdim``(thickness of the thinnest line), ``margin`` and ``bg_transparent``.
+It may take the following arguments: ``height``, ``xdim`` (thickness of the thinnest line), ``margin`` and ``bg_transparent``.
 
 Default values are ``100`` for ``height``,  ``1`` for ``xdim``, ``0`` for ``margin`` and ``false`` for ``bg_transparent``.
 
