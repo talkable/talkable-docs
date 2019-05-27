@@ -139,6 +139,8 @@ Check if a coupon belongs to a person
 
    GET https://www.talkable.com/api/v2/coupons/COUPON_CODE/permission/user@example.com?site_slug=my-store
 
+Sample response:
+
 .. code-block:: javascript
 
    {
