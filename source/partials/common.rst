@@ -35,11 +35,15 @@
 
 .. |iso8601| raw:: html
 
-   <a href="http://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>
+   <a href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>
+
+.. |iso3166| raw:: html
+
+   <a href="https://en.wikipedia.org/wiki/ISO_3166-2" target="_blank">ISO 3166-2</a>
 
 .. |liquid| raw:: html
 
-   <a href="http://github.com/Shopify/liquid" target="_blank">Liquid</a>
+   <a href="https://github.com/Shopify/liquid" target="_blank">Liquid</a>
 
 .. |contact_us| raw:: html
 

@@ -34,10 +34,7 @@ triggered twice.
 
 * **campaign** — subhash of parameters describing the campaign
 
-  * **id** — unique campaign ID
-  * **cached_slug** — unique SEO friendly ID
-  * **type** — either *"StandaloneCampaign"* or *"DoubleSidedDealCampaign"*
-  * **tag_names** — an array of campaign’s tags
+  .. include:: /partials/campaign_fields.rst
   * **origin_min_age** — timeframe from first site visit when an offer is
     available to Advocate
   * **origin_max_age** — timeframe from first site visit when an offer is
@@ -65,15 +62,7 @@ triggered twice.
   Facebook and Twitter shares)
 * **origin** — contains data about the event that issued an offer:
 
-  * **type**
-
-    * *"Purchase"* for post-purchase campaign
-    * *"AffiliateMember"* for standalone campaign
-    * *"Event"* for event type origin (such as a signup page which triggers a
-      referral campaign)
-
-  * **id** — unique identifier of the origin event
-  * **email** — email address of the Advocate (referrer)
+  .. include:: /partials/origin_fields.rst
 
 .. raw:: html
 
@@ -108,7 +97,7 @@ triggered twice.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"campaign":{"id":83587635,"type":"StandaloneCampaign","cached_slug":83587635,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"share_type":"email","share_info":{"recipients":["john@example.com"]},"origin":{"id":273085748,"type":"Purchase","email":"referrer@example.com"}}' <url>
+   curl --data 'key=<key>&site=<site>&type=post_share_web_hook&payload={"campaign":{"id":83587635,"type":"StandaloneCampaign","cached_slug":83587635,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"share_type":"email","share_info":{"recipients":["john@example.com"]},"origin":{"id":273085748,"type":"Purchase","email":"referrer@example.com"}}' <url>
 
 .. container:: hidden
 

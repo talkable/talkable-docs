@@ -104,7 +104,7 @@ Create Coupon Webhook can now be set up.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&payload={"coupon_code":"WHT58574","discount_amount":10,"percentage_discount":false,"usage_limit":1,"expires_at":"2014-04-14T06:17:14.309-07:00","coupon_list_id":1,"coupon_list_name":"$10 off"}' <url>
+   curl --data 'key=<key>&site=<site>&type=create_coupon_web_hook&payload={"coupon_code":"WHT58574","discount_amount":10,"percentage_discount":false,"usage_limit":1,"expires_at":"2014-04-14T06:17:14.309-07:00","coupon_list_id":1,"coupon_list_name":"$10 off"}' <url>
 
 .. container:: hidden
 

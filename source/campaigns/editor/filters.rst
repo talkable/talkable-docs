@@ -665,3 +665,160 @@ Takes a hash and returns the array of its values.
    {% assign incentive_configs = incentives | values %}
 
 Returns ``[{ad incentive config}, {fr incentive config}]``
+
+|hr|
+
+async\_rendering
+................
+
+Stores Liquid partial that can be later rendered via ``Talkable.loadLiquid`` function.
+
+Example 1
+~~~~~~~~~
+
+Liquid
+
+.. code-block:: liquid
+
+  {{ "async_advocate_info" | async_rendering: 'template for rendering with data [[ advocate_info.email ]]' }}
+
+JavaScript API call
+
+.. code-block:: javascript
+
+  Talkable.loadLiquid("async_advocate_info", function(rendered_template) {
+    console.log(rendered_template);
+  });
+
+Rendered Liquid
+
+.. code-block:: text
+
+  "template for rendering with data advocate@example.com"
+
+Example 2
+~~~~~~~~~
+
+Liquid
+
+.. code-block:: liquid
+
+  {{ 'async_dashboard_data' | async_rendering: some_key: "[[ dashboard.possible_rewards | money: strip_insignificant_zeros: true ]]", other_key: "[[ friend_info.purchases_count ]]" }}
+
+JavaScript API call
+
+.. code-block:: javascript
+
+  Talkable.loadLiquid("async_dashboard_data", function(rendered_data) {
+    console.log(rendered_data);
+  });
+
+Rendered Liquid
+
+.. code-block:: text
+
+  {"some_key":"$420","other_key":12}
+
+Example 3
+~~~~~~~~~
+
+Liquid
+
+.. code-block:: liquid
+
+  {% capture some_liquid_block %}
+  {% raw %}
+  Whatever Liquid you would like to have
+  {% endraw %}
+  {% endcapture %}
+  {{ 'async_liquid_reference' | async_rendering: some_liquid_block }}
+
+JavaScript API call
+
+.. code-block:: javascript
+
+  Talkable.loadLiquid("async_liquid_reference", function(rendered_template) {
+    console.log(rendered_template);
+  });
+
+Rendered Liquid
+
+.. code-block:: text
+
+  "Whatever Liquid you would like to have"
+
+Example 4
+~~~~~~~~~
+
+Use ``json`` Liquid filter to transform deeply nested object structure into a valid JSON.
+
+Liquid
+
+.. code-block:: liquid
+
+  {{ 'async_advocate_info' | async_rendering: '[[ advocate_info | json ]]' }}
+
+JavaScript API call
+
+.. code-block:: javascript
+
+  Talkable.loadLiquid("async_advocate_info", function(rendered_template) {
+    console.log(rendered_template);
+  });
+
+Rendered Liquid
+
+.. code-block:: javascript
+
+  {
+    "first_name": null,
+    "last_name": null,
+    "email": "advocate@example.com",
+    "username": null,
+    "external_customer_id": null,
+    "opted_in_at": null,
+    "sub_choice": false,
+    "purchases_sum": 0.0,
+    "purchases_count": 0,
+    "events_count": 0,
+    "events_count_by_category": {
+      "friend_signup": 0,
+      "purchase": 0
+    },
+    "referrals_count": 0,
+    "referred_by": null,
+    "custom_properties": {},
+    "unsubscribed": false
+  }
+
+|hr|
+
+events\_collection
+..................
+
+Collection of person’s events from the certain date (or for all time when ``from_date`` is not set).
+
+.. code-block:: liquid
+
+   {{ "purchase" | events_collection: from_date: "10/14/2018" }}
+
+Returns
+
+.. code-block:: javascript
+
+  [
+    {
+      "coupon_codes" => ["OFF5"],
+      "created_at" => "2019-05-22T15:53:41-07:00",
+      "email" => "ad@site.com",
+      "order_number" => 98237519,
+      "subtotal" => 100.0
+    },
+    {
+      "coupon_codes" => ["OFF5"],
+      "created_at" => "2019-05-22T15:53:41-07:00",
+      "email" => "ad@site.com",
+      "order_number" => 98237520,
+      "subtotal" => 200.0
+    }
+  ]
