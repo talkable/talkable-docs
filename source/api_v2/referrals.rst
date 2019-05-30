@@ -87,3 +87,26 @@ Approve a Referral
         -u i9uil7nQgDjucCiTJu: \
         -d '{"site_slug":"my-store","data":{"status":"approved"}}' \
         https://www.talkable.com/api/v2/origins/B00K2EOONI/referral
+
+Sample response:
+
+.. code-block:: javascript
+
+   {
+     "ok": true,
+     "result": {
+       "referral": {
+         "ad_rewarded": true,
+         "campaign_id": 196,
+         "created_at": "2019-05-27T15:41:31.000-07:00",
+         "id": 233,
+         "offer_id": 867,
+         "qa_generated": false,
+         "referred_origin_id": 622,
+         "referred_subtotal": 35.03,
+         "status": "approved",
+         "track_method": "coupon",
+         "updated_at": "2019-05-27T15:41:31.000-07:00"
+       }
+     }
+   }
