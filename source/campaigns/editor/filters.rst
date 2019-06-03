@@ -710,14 +710,14 @@ JavaScript API call
 .. code-block:: javascript
 
   Talkable.loadLiquid("async_dashboard_data", function(rendered_data) {
-    console.log(rendered_data);
+    console.log(rendered_data.some_key);
   });
 
 Rendered Liquid
 
 .. code-block:: text
 
-  {"some_key":"$420","other_key":12}
+  "$420"
 
 Example 3
 ~~~~~~~~~
@@ -763,7 +763,7 @@ JavaScript API call
 .. code-block:: javascript
 
   Talkable.loadLiquid("async_advocate_info", function(rendered_template) {
-    console.log(rendered_template);
+    console.log(JSON.parse(rendered_template));
   });
 
 Rendered Liquid
