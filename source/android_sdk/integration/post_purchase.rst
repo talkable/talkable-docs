@@ -33,6 +33,12 @@ Here is an example of a Purchase capturing, this action should be triggered on t
    String orderNumber = "123456"; // Required
    String[] coupons = {"EXAMPLE-CODE-1", "EXAMPLE-CODE-2"}; // Optional
 
+   HashMap<String, String> customProperties = new HashMap<String, String>();
+   customProperties.put("property_key", "property_value");
+
+   Customer customer = new Customer(email);
+   customer.setCustomProperties(customProperties);
+
    Purchase purchase = new Purchase(subtotal, orderNumber, coupons);
    purchase.setCustomer(customer); // Required
    purchase.addItem(item); // Optional
