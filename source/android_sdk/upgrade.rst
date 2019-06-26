@@ -6,6 +6,15 @@ Upgrade
 
 Sometimes we need you to upgrade existing integration to use our latest features.
 
+0.5.8
+-----
+
+Added compatibility with Gradle 5.x
+
+Added ability to :ref:`set custom properties <android_sdk/integration/standalone>` on Customer
+
+Updated Visitor registration logic to meet updated Talkable requirements
+
 0.5.7
 -----
 
