@@ -834,6 +834,6 @@ Requires Rybbon Access Key set up in Site Settings in order to work.
 
 .. code-block:: liquid
 
-    {{ "a9a3472f4ea858758e0cd686de8408e2" | rybbon }}
+   {{ "a9a3472f4ea858758e0cd686de8408e2" | rybbon }}
 
 Returns ``https://www.rybbon.net/redeem.php?claimcode=ee645de47765bdbede751c8c6f08a619``
