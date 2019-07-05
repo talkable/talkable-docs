@@ -822,3 +822,19 @@ Returns
       "subtotal" => 200.0
     }
   ]
+
+|hr|
+
+tremendous
+..........
+
+Takes a campaign key of a Tremendous campaign.
+Makes a claim request within the scope of the given campaign and returns a gift claim link.
+Requires Tremendous Access Token set up in Site Settings in order to work.
+Implies that there is only one funding source in the Tremendous account.
+
+.. code-block:: liquid
+
+   {{ "DEM8ULSSATK0" | tremendous }}
+
+Returns ``https://www.tremendous.com/rewards/payout/reward123``
