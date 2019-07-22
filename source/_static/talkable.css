@@ -218,6 +218,7 @@ table.docutils th,
 table.docutils td {
     border-bottom: 2px solid #e0e0e0;
     padding: 8px 8px 8px 0px;
+    vertical-align: top;
 }
 
 .ptable table {
