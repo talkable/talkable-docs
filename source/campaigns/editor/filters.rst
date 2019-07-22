@@ -837,3 +837,19 @@ Requires Rybbon Access Key set up in Site Settings in order to work.
    {{ "a9a3472f4ea858758e0cd686de8408e2" | rybbon }}
 
 Returns ``https://www.rybbon.net/redeem.php?claimcode=ee645de47765bdbede751c8c6f08a619``
+
+|hr|
+
+tremendous
+..........
+
+Takes a campaign key of a Tremendous campaign.
+Makes a claim request within the scope of the given campaign and returns a gift claim link.
+Requires Tremendous Access Token set up in Site Settings in order to work.
+Implies that there is only one funding source in the Tremendous account.
+
+.. code-block:: liquid
+
+   {{ "DEM8ULSSATK0" | tremendous }}
+
+Returns ``https://www.tremendous.com/rewards/payout/reward123``
