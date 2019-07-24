@@ -68,21 +68,20 @@ First install [Sphinx](http://sphinx-doc.org/). See below.
 
 * Install Ruby and [Bundler](http://bundler.io/), and run `bundle install` to install dependencies.
 
-* Install Python and pip:
+* Install Python (>= 3.5) and pip:
 
   ```
   brew install python
-  easy_install pip
   ```
 
-  More information in case of trouble: https://github.com/Homebrew/homebrew/wiki/Homebrew-and-Python
+  More information in case of trouble: https://docs.brew.sh/Homebrew-and-Python
 
 * Install dependencies:
 
   ```
-  pip install -r requirements.txt
+  pip3 install -r requirements.txt
   ```
-  
+
   If you have problems, try adding `-I` flag (`--ignore-installed`) to the `pip install` command.
 
 If you get the error "unknown locale: UTF-8" when generating the documentation,
