@@ -17,6 +17,9 @@ each with links to integration details.
    * - :ref:`Referral Tracking Methods <advanced_features/track_methods>`
      - The description of the Talkable referral tracking algorithm
 
+   * - :ref:`Advocate Personal Coupon Sharing <advanced_features/personal_coupon_sharing>`
+     - The description of the Talkable Advocate Personal Coupon Sharing
+
    * - :ref:`Convert static copy into Localization <advanced_features/converting_into_localization>`
      - Convert all static languange into a customizable copy that’s
        easy to AB test.
@@ -69,6 +72,7 @@ each with links to integration details.
 
     advanced_features/coupons
     advanced_features/track_methods
+    advanced_features/personal_coupon_sharing
     advanced_features/converting_into_localization
     advanced_features/email_encryption
     advanced_features/events
