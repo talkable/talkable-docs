@@ -26,7 +26,7 @@ Installation
    .. code-block:: groovy
 
       dependencies {
-        implementation 'com.github.talkable:android-sdk:0.5.6'
+        implementation 'com.github.talkable:android-sdk:0.5.9'
       }
 
 .. _setup_credentials:
