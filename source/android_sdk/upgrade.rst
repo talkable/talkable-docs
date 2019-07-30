@@ -6,6 +6,11 @@ Upgrade
 
 Sometimes we need you to upgrade existing integration to use our latest features.
 
+0.5.9
+-----
+
+Added support for native email sharing.
+
 0.5.8
 -----
 
