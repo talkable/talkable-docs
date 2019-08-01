@@ -34,6 +34,8 @@ If the request is successful, the ``handler`` block will receive attributes of c
   }];
 
 
+.. _ios_sdk/api_integration/sharing:
+
 2. Create a Share
 -----------------
 

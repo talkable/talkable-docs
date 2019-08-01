@@ -14,7 +14,6 @@ This article describes how to use Talkable SDK with social sharing in various sc
 
 Social Sharing from a web-based campaign
 ----------------------------------------
---------------------------------------
 
 The default Talkable iOS integration utilizes WebView to display web-based campaign views in your app.
 If you have Facebook or Twitter sharing button on your sharing page, Talkable iOS SDK will automatically
@@ -122,8 +121,8 @@ Example
       }];
    }
 
-Legacy Social Sharing using Social.framework
---------------------------------------------
+Legacy Sharing using Social.framework
+-------------------------------------
 
 Prior to v1.4.9, TalkableSDK used Social.framework to automatically display Facebook and Twitter sharing dialog
 when the user taps on a corresponding button. This way of sharing relied on functionality built into iOS and did not
@@ -147,6 +146,6 @@ to ensure a seamless transition to new implementations.
 
 Social Sharing from a native campaign
 -------------------------------------
------------------------------------
 
-If you
+The methods documented above are designed to work with web-based campaigns only. If you have integrated using our API,
+please refer to the :ref:`Sharing <ios_sdk/api_integration/sharing>` section of the Native Integration page.
