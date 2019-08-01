@@ -68,7 +68,7 @@ Implement TalkableDelegate
 
     `userInfo` may contain detailed information about the error.
 
-6. Receive notification when user taps Facebook or Twitter sharing button in the WebView and trigger
+6. Receive notification when the user taps Facebook or Twitter sharing button in the WebView and trigger
    corresponding sharing view.
 
    .. code-block:: objc
