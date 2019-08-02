@@ -30,8 +30,11 @@ If the request is successful, the ``handler`` block will receive attributes of c
 
   [[Talkable manager] createOrigin:originParams withHandler:^(NSDictionary* response, NSError* error) {
       NSDictionary* offerParams = [response objectForKey:TKBLOfferKey];
+      NSDictionary* claimLinks = [offerParams objectForKey:@"claim_links"];
   }];
 
+
+.. _ios_sdk/api_integration/sharing:
 
 2. Create a Share
 -----------------
@@ -42,50 +45,107 @@ Sharing an Offer is the next step in the referral chain. You will need the ``sho
 
   NSString* shortUrlCode = [offerParams objectForKey:TKBLOfferShortUrlCodeKey];
 
-Social Share
-~~~~~~~~~~~~
+Native sharing
+~~~~~~~~~~~~~~
 
-The Talkable SDK provides several ways to share an Offer using social media channels.
+The ``nativeShare:`` method will display a native iOS sharing dialog. When content is shared,
+the share will be automatically registered with Talkable and reflected on your dashboard.
 
-1. ``socialShare:`` method will display a sharing dialog directly. Supported channels are Facebook and Twitter.
+.. code-block:: objc
 
-    .. code-block:: objc
+  UIActivityViewController* sheet = [[Talkable manager] nativeShare:@{
+      TKBLOfferShortUrlCodeKey: shortUrlCode,
+      TKBLOfferClaimUrlKey: [claimLinks objectForKey:TKBLShareChannelOther]
+  }];
 
-      SLComposeViewController* sheet = [[Talkable manager] socialShare:@{
-        TKBLShareChannel:TKBLShareChannelTwitter,
-        TKBLOfferClaimUrlKey:[claimLinks objectForKey:TKBLShareChannelTwitter],
-        TKBLShareMessage:@"Personalized message",
-        TKBLShareImage:@"Image URL as NSString", // You can also pass a UIImage
-        TKBLOfferShortUrlCodeKey:shortUrlCode
-      }];
+  [self presentViewController:sheet animated:YES completion:^{}];
 
-      [self presentViewController:sheet animated:YES completion:^{}];
+Social sharing
+~~~~~~~~~~~~~~
 
-2. ``nativeShare:`` method will display a native iOS sharing dialog.
+Use frameworks provided by social networks to share your offer. Upon a successful share,
+call the ``createSocialShare:channel:withHandler:`` method to register the share with Talkable and
+create a :ref:`Share <api_v2/shares>` record.
 
-    .. code-block:: objc
+.. code-block:: objc
 
-      NSDictionary* claimLinks = [offerParams objectForKey:@"claim_links"];
+  [[Talkable manager] createSocialShare:shortUrlCode channel:TKBLShareChannelOther withHandler:^(NSDictionary* response, NSError* error) {
+      NSDictionary* rewardParams = [response objectForKey:@"reward"];
+  }];
 
-      UIActivityViewController* sheet = [[Talkable manager] nativeShare:@{
-          TKBLOfferShortUrlCodeKey: shortUrlCode,
-          TKBLOfferClaimUrlKey: [claimLinks objectForKey:TKBLShareChannelOther]
-      }];
+.. raw:: html
 
-      [self presentViewController:sheet animated:YES completion:^{}];
+  <h4>Facebook example</h4>
 
-3. Implement your own way for the Advocate to share the link. Upon a successful share,
-call the ``createSocialShare:channel:withHandler:`` method to sync the share with Talkable and create a :ref:`Share <api_v2/shares>` record.
+.. code-block:: objc
 
-    .. code-block:: objc
+   MyFBSDKDelegateClass* delegate = [self myFBSDKDelegate];
+   delegate.shortUrlCode = shortUrlCode;
+   FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
+   content.contentURL = [NSURL URLWithString:[params objectForKey:[claimLinks objectForKey:TKBLShareChannelFacebook]]];
+   [FBSDKShareDialog showFromViewController:self
+                                withContent:content
+                                   delegate:delegate];
 
-      [[Talkable manager] createSocialShare:shortUrlCode channel:TKBLShareChannelOther withHandler:^(NSDictionary* response, NSError* error) {
-          NSDictionary* rewardParams = [response objectForKey:@"reward"];
-      }];
+   ...
 
-    .. note::
+   @implementation MyFBSDKDelegateClass
 
-      This method will be called automatically when you use ``socialShare:`` or ``nativeShare:`` methods.
+   @synthesize shortUrlCode;
+
+   - (void)sharer:(id)sharer didCompleteWithResults:(NSDictionary<NSString *, id> *)results {
+    if (_shortUrlCode != nil)
+       [[Talkable manager] createSocialShare:_shortUrlCode
+                                     channel:TKBLShareChannelFacebook
+                                 withHandler:^(NSDictionary* response, NSError* error) {...}];
+   }
+
+   @end
+
+.. raw:: html
+
+  <h4>Twitter example</h4>
+
+.. code-block:: objc
+
+   TWTRComposer *composer = [[TWTRComposer alloc] init];
+   [composer setText:[params objectForKey:TKBLShareMessage]];
+   [composer showFromViewController:self completion:^(TWTRComposerResult result) {
+     if (result == TWTRComposerResultDone) {
+       [[Talkable manager] createSocialShare:shortUrlCode
+                                     channel:TKBLShareChannelTwitter
+                                 withHandler:^(NSDictionary* response, NSError* error) {...}];
+     }
+   }];
+
+.. note::
+
+  This method will be called automatically when you use ``socialShare:`` or ``nativeShare:`` methods.
+
+Legacy social sharing
+~~~~~~~~~~~~~~~~~~~~~
+
+3. The legacy ``socialShare:`` method was used prior to v1.4.9 and is provided for backwards compatibility.
+   It will attempt to display a sharing dialog directly using the deprecated Social.framework.
+   Only the Facebook sharing channel is currently supported.
+
+   .. code-block:: objc
+
+     SLComposeViewController* sheet = [[Talkable manager] socialShare:@{
+       TKBLShareChannel:TKBLShareChannelFacebook,
+       TKBLOfferClaimUrlKey:[claimLinks objectForKey:TKBLShareChannelFacebook],
+       TKBLShareMessage:@"Personalized message",
+       TKBLOfferShortUrlCodeKey:shortUrlCode
+     }];
+
+     [self presentViewController:sheet animated:YES completion:^{}];
+
+   .. warning::
+
+      Starting with v1.4.9, this method is deprecated and offers only limited Facebook sharing support.
+      Native sharing or custom implementation based on Facebook/Twitter SDK should be used instead.
+      See :ref:`Social Sharing <ios_sdk/social_sharing>` for details.
+
 
 Email Share
 ~~~~~~~~~~~
@@ -99,7 +159,7 @@ Talkable will send the emails for you. You will need to provide an interface for
   NSDictionary* emailShareParams = @{
       @"subject": @"Custom Email Subject",
       @"body": @"Personal message that will be added to the email body",
-      @"reminder": @NO // Whether Talkable should send a reminder email later
+      @"reminder": NO // Whether Talkable should send a reminder email later
   };
 
   [[Talkable manager] createEmailShare:shortUrlCode recipients:recipients withParams:emailShareParams andHandler:^(NSDictionary* response, NSError* error) {

@@ -17,6 +17,8 @@ By default if no campaign tag was specified, SDK uses `ios-invite` and `ios-post
     [[Talkable manager] registerOrigin:TKBLAffiliateMember params:@{TKBLCampaignTags: @"your-custom-tag"}];
     ...
 
+.. _ios_sdk/advanced/delegate:
+
 Implement TalkableDelegate
 --------------------------
 
@@ -24,7 +26,7 @@ Implement TalkableDelegate
 
   .. code-block:: objc
 
-    [[Talkable manager] setDelegate: yourObjectConformsTalkableDelegateProtocol];
+    [[Talkable manager] setDelegate: yourObjectConformsToTalkableDelegateProtocol];
 
 2. Take control of presenting offers to your users. Use the next two delegate methods to prevent
    or give an instruction as to where you want that offer to be displayed:
@@ -65,6 +67,19 @@ Implement TalkableDelegate
   .. note::
 
     `userInfo` may contain detailed information about the error.
+
+6. Receive notification when the user taps Facebook or Twitter sharing button in the WebView and trigger
+   corresponding sharing view.
+
+   .. code-block:: objc
+
+      - (void)showFacebookShareDialogWithParams:(NSDictionary*)params delegate:(id)delegate;
+      - (void)showFacebookShareDialogWithParams:(NSDictionary*)params completion:(void (^)())completionHandler;
+      - (void)showTwitterShareDialogWithParams:(NSDictionary*)params completion:(void (^)())completionHandler;
+
+   .. note::
+
+      See :ref:`Social Sharing <ios_sdk/social_sharing>` for details.
 
 .. _ios_sdk/advanced/notifications:
 

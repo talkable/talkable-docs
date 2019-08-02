@@ -92,7 +92,7 @@ Your environment is all set up! Now you need to :ref:`integrate <ios_sdk/integra
 Requirements
 ------------
 
-The SDK supports iOS 8.0 and later.
+The SDK supports iOS 9.0 and later.
 
 .. _`Talkable SDK framework`: https://talkable-downloads.s3.amazonaws.com/ios-sdk/talkable_ios_sdk.zip
 
