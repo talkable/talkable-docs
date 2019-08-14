@@ -796,11 +796,11 @@ Rendered Liquid
 events\_collection
 ..................
 
-Collection of person’s events from the certain date (or for all time when ``from_date`` is not set).
+Collection of person’s events from the certain date (or for all time when ``from_time`` is not set).
 
 .. code-block:: liquid
 
-   {{ "purchase" | events_collection: from_date: "10/14/2018" }}
+   {{ "purchase" | events_collection: from_time: "10/14/2018" }}
 
 Returns
 
