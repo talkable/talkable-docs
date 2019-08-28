@@ -6,7 +6,7 @@ Custom Events
 
 In addition to Signup and Purchase incentives, Talkable campaigns can utilize :ref:`custom events <advanced_features/events>` to issue rewards based on other actions performed by Advocates and Friends, such as purchasing a subscription, completing a game level, or simply visiting a certain place in your app. Register an event every time the user performs the desired action in your app.
 
-An Event has two required properties: event category and event number. Please refer to :ref:`available properties` for a complete list of optional properties.
+An Event has two required properties: event category and event number. Please refer to :ref:`available properties <advanced_features/events/available_properties>` for a complete list of optional properties.
 
 .. code-block:: objc
 
@@ -14,7 +14,7 @@ An Event has two required properties: event category and event number. Please re
     TKBLCampaignTags: @"your-campaign-tag",
     TKBLEventKey: @{
       TKBLEventCategoryKey: @"subscription_purchased",
-      TKBLEventNumberKey: [[NSUUID UUID] UUIDString] //must be unique for category
+      TKBLEventNumberKey: [[NSUUID UUID] UUIDString] //must be unique for given category
     }
   };
   [[Talkable manager] registerOrigin:TKBLEvent params:params];

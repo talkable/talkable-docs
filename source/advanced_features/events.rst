@@ -65,6 +65,8 @@ in the Reports → Purchases section of your Talkable Dashboard. Here is an exam
    |br|
    :ref:`Origin API <api_v2/origins>` (see “Create an event” section).
 
+.. _advanced_features/events/available_properties:
+
 Available properties
 ~~~~~~~~~~~~~~~~~~~~
 
