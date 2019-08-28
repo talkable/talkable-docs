@@ -8,6 +8,7 @@ The SDK is installed and configured. Now you can integrate Standalone and/or Pos
 
 - :ref:`Standalone Campaign <ios_sdk/integration/standalone>`
 - :ref:`Post Purchase Campaign <ios_sdk/integration/post_purchase>`
+- :ref:`Custom Events <ios_sdk/integration/event>`
 
 .. container:: hidden
 
@@ -15,3 +16,4 @@ The SDK is installed and configured. Now you can integrate Standalone and/or Pos
 
       Standalone Campaign <integration/standalone>
       Post Purchase Campaign <integration/post_purchase>
+      Custom Events <integration/event>

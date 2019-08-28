@@ -8,6 +8,7 @@ The SDK is installed and setup. Now you can integrate Standalone or/and Post Pur
 
 - :ref:`Standalone Campaign <android_sdk/integration/standalone>`
 - :ref:`Post Purchase Campaign <android_sdk/integration/post_purchase>`
+- :ref:`Custom Events <android_sdk/integration/event>`
 
 .. container:: hidden
 
@@ -15,3 +16,4 @@ The SDK is installed and setup. Now you can integrate Standalone or/and Post Pur
 
       Standalone Campaign <integration/standalone>
       Post Purchase Campaign <integration/post_purchase>
+      Custom Events <integration/event>
