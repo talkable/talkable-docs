@@ -169,7 +169,7 @@ To use ``TalkableOfferFragment`` directly, follow these steps:
 
 .. note::
 
-   Make sure to `handle configuration changes correctly`_, as ``TalkableOfferFragment``
+   Make sure to `handle configuration changes`_, as ``TalkableOfferFragment``
    is built on top of ``WebView`` and restoring its state is up to you.
 
 Native integration via API
@@ -186,7 +186,7 @@ your Android application.
 3. Check for rewards: :ref:`Retrieve rewards <android-api-rewards>`
 
 .. _`Android - Getting Started`: https://developers.facebook.com/docs/android/getting-started
-.. _`handle configurations changes correctly`: https://developer.android.com/guide/topics/resources/runtime-changes.html
+.. _`handle configuration changes`: https://developer.android.com/guide/topics/resources/runtime-changes.html
 .. _`Fragment`: https://developer.android.com/guide/components/fragments
 .. _`Fragment Transactions`: https://developer.android.com/guide/components/fragments#Transactions
 
