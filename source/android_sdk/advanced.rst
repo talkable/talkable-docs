@@ -138,19 +138,27 @@ If you want to implement custom offer closing handling you should implement
 Using TalkableOfferFragment directly
 ------------------------------------
 
-To use ``TalkableOfferFragment`` directly you should get the Offer's code
-using ``Talkable.loadOffer(origin, callback)`` and pass it to ``TalkableOfferFragment.newInstance(shortCode)``:
+By default Talkable Android SDK displays Talkable offer as a fullscreen modal view. If you need to embed the Talkable offer into your layout
+or otherwise control the way it's displayed, you can obtain an instance of ``TalkableOfferFragment``, which is a `Fragment`_ that comes
+preloaded with Talkable offer content and can be added to your layout dynamically.
+
+To use ``TalkableOfferFragment`` directly, follow these steps:
+
+1. Get an offer code using the ``Talkable.loadOffer(origin, callback)`` method
+2. Create a fragment instance by passing the offer code to the ``TalkableOfferFragment.newInstance(shortCode)`` method
+3. Use `Fragment Transactions`_ or another method of your choice to display the fragment.
 
 .. code-block:: java
 
    AffiliateMember affiliateMember = new AffiliateMember();
    ...
 
-   loadOffer(affiliateMember, new TalkableCallback<String, TalkableOfferLoadException>() {
+   Talkable.loadOffer(affiliateMember, new TalkableCallback<String, TalkableOfferLoadException>() {
        // Note that it runs on non UI thread
        @Override
        public void onSuccess(String offerCode) {
            TalkableOfferFragment fragment = TalkableOfferFragment.newInstance(offerCode);
+           myMethodToDisplayTalkableOfferFragment(fragment);
        }
 
        @Override
@@ -161,7 +169,7 @@ using ``Talkable.loadOffer(origin, callback)`` and pass it to ``TalkableOfferFra
 
 .. note::
 
-   Make sure to `handle configurations changes right`_, as ``TalkableOfferFragment``
+   Make sure to `handle configuration changes correctly`_, as ``TalkableOfferFragment``
    is built on top of ``WebView`` and restoring its state is up to you.
 
 Native integration via API
@@ -178,7 +186,9 @@ your Android application.
 3. Check for rewards: :ref:`Retrieve rewards <android-api-rewards>`
 
 .. _`Android - Getting Started`: https://developers.facebook.com/docs/android/getting-started
-.. _`handle configurations changes right`: https://developer.android.com/guide/topics/resources/runtime-changes.html
+.. _`handle configurations changes correctly`: https://developer.android.com/guide/topics/resources/runtime-changes.html
+.. _`Fragment`: https://developer.android.com/guide/components/fragments
+.. _`Fragment Transactions`: https://developer.android.com/guide/components/fragments#Transactions
 
 .. container:: hidden
 
