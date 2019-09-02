@@ -127,9 +127,9 @@ Here is a list of available properties each event can include:
 
                          Alternatively, you can use
                          :ref:`Campaign Placements <campaigns/campaign_placements>`
-                         feature to set up routing right inside Talkable and do not
-                         control it through JS integration on your end. Campaign
-                         Placements are easy to change, no code changes is needed on your
+                         feature to set up routing in your Talkable Dashboard instead
+                         of controlling it through the JS integration on your end. Campaign
+                         Placements are easy to change, no code changes are needed on your
                          end.
 
    **custom_properties** Custom key-value data that can be attached to a person
