@@ -42,5 +42,5 @@ Customer data can be added to the registered event. Custom properties passed wit
 
      TalkableApi.createOrigin(event, new Callback2<Origin, Offer>() {...});
 
-Please refer to the :ref:`Integrating Events <advanced_features/events>` page to learn more about event-based campaings.
+Please refer to the :ref:`Integrating Events <advanced_features/events>` page to learn more about event-based campaigns.
 

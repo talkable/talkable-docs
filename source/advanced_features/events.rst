@@ -91,7 +91,7 @@ Here is a list of available properties each event can include:
                            (including floats) or 0 are allowed. Preferably it should be passed
                            as a string to avoid JavaScript issues with rounding floats. |br|
                            Example: ``'198.5'``.
-                         * **coupon_code**  – a coupon code that was applied on
+                         * **coupon_code**  – a coupon code that was applied to
                            this event. |br|
                            Example: ``'SAVE20'``. You can also pass multiple coupons as
                            an array: ``['SAVE20', 'SAVE5']`` if they were stacked.

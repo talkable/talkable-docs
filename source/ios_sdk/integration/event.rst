@@ -43,4 +43,4 @@ Customer data can be added to the registered event. Custom properties passed wit
   };
   [[Talkable manager] registerOrigin:TKBLEvent params:params];
 
-Please refer to the :ref:`Integrating Events <advanced_features/events>` page to learn more about event-based campaings.
+Please refer to the :ref:`Integrating Events <advanced_features/events>` page to learn more about event-based campaigns.
