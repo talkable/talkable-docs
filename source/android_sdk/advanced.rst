@@ -27,7 +27,7 @@ Here is a list of possible error codes from ``TalkableOfferLoadException`` with 
 Using multiple site slugs
 -------------------------
 
-To use multiple site slugs inside your application, follow these steps:
+To use multiple site slugs in your application, follow these steps:
 
 1. Add credentials for each site you are going to use inside your manifest file.
    Format is the same as from corresponding
@@ -170,7 +170,10 @@ To use ``TalkableOfferFragment`` directly, follow these steps:
 .. note::
 
    Make sure to `handle configuration changes`_, as ``TalkableOfferFragment``
-   is built on top of ``WebView`` and restoring its state is up to you.
+   is built on top of ``WebView`` and restoring its state is up to you. If you
+   need to reinitialize a fragment, you don't need to call ``loadOffer`` again.
+   Simply store the ``offerCode`` and use it to create a new ``TalkableOfferFragment``
+   instance.
 
 Native integration via API
 --------------------------
