@@ -101,13 +101,25 @@ Run `rake server` from "master" branch and open `http://localhost:5000` in brows
 ### Deploying
 
 If you’re deploying for the first time make sure you have `gh-pages` branch locally. Otherwise run the following command to create it: `git checkout -b gh-pages origin/gh-pages`.
+
+General flow:
+1. Pull changes from master
+2. Checout your new branch from master
+3. Make changes
+4. Create a Pull Request to master branch
+5. Merge pull request once it passes the review
+6. Deploy
+
 If you did everything right, deploying is as easy as `rake deploy` from "master" branch.
 
 #### Deploying to Staging
 
 If it’s your first time deploying to staging, run `rake setup` to setup git remote.
 
-Merge your changes into "void" branch and deploy with `rake deploy:staging`.
+1. Pull void branch latest changes ```git checkout void``` ```git pull```
+2. Run ```git merge %your_branch_name%``` locally
+3. Push changes to remote void ```git push origin void```
+4. Deploy ```rake deploy:staging```
 
 ---
 
