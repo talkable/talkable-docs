@@ -15,10 +15,10 @@ each with links to integration details.
      - Issue single and multi-use coupons automatically for your campaigns
 
    * - :ref:`Referral Tracking Methods <advanced_features/track_methods>`
-     - The description of the Talkable referral tracking algorithm
+     - See how Talkable tracks referrals and what data is used in the tracking process
 
    * - :ref:`Advocate Personal Coupon Sharing <advanced_features/personal_coupon_sharing>`
-     - The description of the Talkable Advocate Personal Coupon Sharing
+     - Find out how to add personal coupon sharing into a Talkable campaign in addition to link sharing
 
    * - :ref:`Convert static copy into Localization <advanced_features/converting_into_localization>`
      - Convert all static languange into a customizable copy that’s
