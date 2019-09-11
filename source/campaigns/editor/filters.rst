@@ -217,7 +217,7 @@ unless time zone is specified.
 |hr|
 
 date\_greater\_than\_or\_equal
-...........................
+..............................
 
 Return boolean that indicates whether a date is the same as
 or more recent than another date.
