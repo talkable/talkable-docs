@@ -4,54 +4,74 @@
 Pass Custom User Data
 =====================
 
-``custom_properties`` is a variable that allows you to pass custom data
-to Talkable in the form of Key-Value pairs via integration.
-
-``custom_properties`` has robust uses as you are able to define and pass
-any key value pairs you wish.
-
-The values you define for some key should be JSON Key-Value pairs themselves,
-this means complex data structures can be passed through.
-
-Any ``custom_properties`` data passed through is tied to the |advocate| or the |friend|,
-that means there is only one instance of each field in
-existence at any time: the most recently passed data.
+The ``custom_properties`` variable allows you to pass any custom data
+to Talkable as a collection of Key-Value pairs.
+Those can be used for various segmentation purposes, since join criteria and incentive criteria are capable of using the ones in conditions.
 
 All data associated with ``custom_properties`` is available for use
-across all Campaign Views. Accessing this data beings by creating a variable
-to store your custom_properties:
+across all Campaign Views.
 
-.. code-block:: liquid
 
-   {% assign data = advocate_custom_properties %}
+How to set
+==========
 
-or
+**Initialization script**
 
-.. code-block:: liquid
-
-   {% assign data = friend_custom_properties %}
-
-Key Value pairs can be referenced through your newly created object by referencing
-the value name such as:
-
-.. code-block:: liquid
-
-   {{ data.favorite_color }}
-
-Defining ``custom_properties`` in your integration might look something like this:
+Add the ``custom_properties`` collection in the ``register_affiliate`` call of the Initialization script.
 
 .. code-block:: javascript
 
-   var _talkable_data = {
-     ...
-     custom_properties: {
-       person_occupation: 'marketing',
-       height: '72 inches',
-       eye_color: 'brown',
-       birthday: '07/03/1983'
-     }
-     ...
-   }
+  _talkableq.push(['register_affiliate', {
+    custom_properties: {
+      person_occupation: 'marketing',
+      eye_color: 'brown'
+    }
+  }]);
+
+**Post-purchase script**
+
+Add the ``custom_properties`` collection to the data passed in the ``register_purchase`` call. It should be nested the same as ``purchase`` collection.
+
+.. code-block:: javascript
+
+  var _talkable_data = {
+    purchase: {
+      order_number: '',
+      subtotal: '',
+    },
+    custom_properties: {
+      person_occupation: 'marketing',
+      eye_color: 'brown'
+    }
+  };
+  _talkableq.push(['register_purchase', _talkable_data]);
+
+
+.. note::
+
+    The values you pass in the ``custom_properties`` have to be JSON Key-Value pairs themselves,
+    meaning that complex nested data structures can not be passed through.
+
+How to use
+==========
+
+To access ``custom_properties`` in Talkable, use:
+
+.. code-block:: liquid
+
+   {{ advocate_custom_properties }}
+   {{ friend_custom_properties }}
+
+Key-Value pairs can be referenced calling the desired data key, such as:
+
+.. code-block:: liquid
+
+   {{ advocate_custom_properties.eye_color }}
+
+.. note::
+
+    Any ``custom_properties`` data passed through is tied to the |advocate| or the |friend|.
+    If Talkable receives a custom property that was previously defined for the user, the property gets overwritten with a new value.
 
 .. container:: hidden
 
