@@ -182,6 +182,81 @@ A/B testing style:
 
 |hr|
 
+date\_diff
+..........
+
+Return absolute difference between two dates in seconds.
+
+Date is compared to current time if no argument is passed.
+
+All dates are interpreted in context of the site time zone
+unless time zone is specified.
+
+.. code-block:: text
+
+   {{ valid_until | date_diff }}
+   {{ valid_until | date_diff: 'Apr 4, 2019' }}
+   {{ '2019-09-01 08:30:00' | date_diff: current_time }}
+
+|hr|
+
+date\_more\_than
+................
+
+Return boolean that indicates whether a date is more recent
+than another date.
+
+All dates are interpreted in context of the site time zone
+unless time zone is specified.
+
+.. code-block:: liquid
+
+   {{ current_time | date_more_than: valid_until }}
+   {{ valid_until | date_more_than: '2019-09-01 08:30:00' }}
+
+|hr|
+
+date\_more\_than\_or\_equal
+...........................
+
+Return boolean that indicates whether a date is the same as
+or more recent than another date.
+
+All dates are interpreted in context of the site time zone
+unless time zone is specified.
+
+.. code-block:: liquid
+
+   {{ current_time | date_more_than_or_equal: valid_until }}
+   {{ valid_until | date_more_than_or_equal: '2019-09-01 08:30:00' }}
+
+|hr|
+
+add\_time
+.........
+
+Add a specified amount of time to a date and return the result.
+
+Time unit defaults to seconds.
+
+Available time units (can be used in plural form as well):
+
+* ``second``
+* ``minute``
+* ``hour``
+* ``day``
+* ``week``
+* ``fortnight``
+* ``month``
+* ``year``
+
+.. code-block:: liquid
+
+   {{ valid_until | add_time: 42 }}
+   {{ valid_until | add_time: 3, 'months' }}
+
+|hr|
+
 .. _liquid_filter_format_date:
 
 format\_date
