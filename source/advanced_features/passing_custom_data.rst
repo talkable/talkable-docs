@@ -62,7 +62,7 @@ To access ``custom_properties`` in Talkable, use:
    {{ advocate_custom_properties }}
    {{ friend_custom_properties }}
 
-Key Value pairs can be referenced calling the desired data key, such as:
+Key-Value pairs can be referenced calling the desired data key, such as:
 
 .. code-block:: liquid
 
