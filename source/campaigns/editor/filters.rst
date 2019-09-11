@@ -200,7 +200,7 @@ unless time zone is specified.
 
 |hr|
 
-date\_more\_than
+date\_greater\_than
 ................
 
 Return boolean that indicates whether a date is more recent
@@ -211,12 +211,12 @@ unless time zone is specified.
 
 .. code-block:: liquid
 
-   {{ current_time | date_more_than: valid_until }}
-   {{ valid_until | date_more_than: '2019-09-01 08:30:00' }}
+   {{ current_time | date_greater_than: valid_until }}
+   {{ valid_until | date_greater_than: '2019-09-01 08:30:00' }}
 
 |hr|
 
-date\_more\_than\_or\_equal
+date\_greater\_than\_or\_equal
 ...........................
 
 Return boolean that indicates whether a date is the same as
@@ -227,8 +227,8 @@ unless time zone is specified.
 
 .. code-block:: liquid
 
-   {{ current_time | date_more_than_or_equal: valid_until }}
-   {{ valid_until | date_more_than_or_equal: '2019-09-01 08:30:00' }}
+   {{ current_time | date_greater_than_or_equal: valid_until }}
+   {{ valid_until | date_greater_than_or_equal: '2019-09-01 08:30:00' }}
 
 |hr|
 
