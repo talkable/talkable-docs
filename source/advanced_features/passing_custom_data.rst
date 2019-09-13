@@ -11,9 +11,9 @@ Those can be used for various segmentation purposes, since join criteria and inc
 All data associated with ``custom_properties`` is available for use
 across all Campaign Views.
 
+.. raw:: html
 
-How to set
-==========
+   <h2>How to set</h2>
 
 **Initialization script**
 
@@ -52,8 +52,9 @@ Add the ``custom_properties`` collection to the data passed in the ``register_pu
     The values you pass in the ``custom_properties`` have to be JSON Key-Value pairs themselves,
     meaning that complex nested data structures can not be passed through.
 
-How to use
-==========
+.. raw:: html
+
+   <h2>How to use</h2>
 
 To access ``custom_properties`` in Talkable, use:
 
