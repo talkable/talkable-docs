@@ -13,7 +13,7 @@ across all Campaign Views.
 
 
 How to set
-==========
+----------
 
 **Initialization script**
 
@@ -53,7 +53,7 @@ Add the ``custom_properties`` collection to the data passed in the ``register_pu
     meaning that complex nested data structures can not be passed through.
 
 How to use
-==========
+----------
 
 To access ``custom_properties`` in Talkable, use:
 
