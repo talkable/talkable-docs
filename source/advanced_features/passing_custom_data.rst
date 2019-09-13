@@ -12,8 +12,8 @@ All data associated with ``custom_properties`` is available for use
 across all Campaign Views.
 
 .. raw:: html
-  <h2>How to set</h2>
 
+   <h2>How to set</h2>
 
 **Initialization script**
 
@@ -53,7 +53,8 @@ Add the ``custom_properties`` collection to the data passed in the ``register_pu
     meaning that complex nested data structures can not be passed through.
 
 .. raw:: html
-  <h2>How to use</h2>
+
+   <h2>How to use</h2>
 
 To access ``custom_properties`` in Talkable, use:
 
