@@ -6,8 +6,7 @@ Integrating Events
 
 In addition to running a referral campaign around regular
 :ref:`purchases <integration/custom/integration_components/post_purchase_script>`,
-Talkable also supports more abstract events that can be split into multiple categories
-and set up with more advanced rules.
+Talkable also supports custom events that can be split into multiple categories and be used to set up advanced campaign rules.
 
 An example of such integration can be a subscription-based business that also supports
 one-time purchases. A referral campaign example can be: |advocate| and |friend| both get
@@ -18,11 +17,11 @@ integrated as separate events under different event categories: “subscription�
 “purchase”. All events should be passed to Talkable, including recurring events.
 Talkable’s backend referral engine runs each event through several checks to identify
 whether the event was associated with a referral or not. With both “subscription” and
-“purchase” events being passed to Talkable, we are then able to setup referral campaigns
+“purchase” events being passed to Talkable, we are then able to set up referral campaigns
 to report on and reward these events as desired. See some examples below.
 
-Subscription payments should go under “subscription” event category. All such events
-can be found inside Reports → Events. Here is an example:
+Subscription payments should be registered under the “subscription” event category. All such events
+can be found in the Reports → Events section of your Talkable Dashboard. Here is an example:
 
 .. code-block:: html
 
@@ -40,8 +39,8 @@ can be found inside Reports → Events. Here is an example:
     }]);
   </script>
 
-One-time purchases should go under “purchase” event category. You can find all purchases
-inside Reports → Purchases. Here is an example:
+One-time purchases should go under the “purchase” event category. You can find all purchases
+in the Reports → Purchases section of your Talkable Dashboard. Here is an example:
 
 .. code-block:: html
 
@@ -62,9 +61,11 @@ inside Reports → Purchases. Here is an example:
 .. note::
 
    All recurring subscription purchases should be passed to Talkable as well, to ensure
-   data integrity. In case such recurring transactions happen from the backend, follow the
+   data integrity. If recurring transactions occur on the backend, follow the
    |br|
    :ref:`Origin API <api_v2/origins>` (see “Create an event” section).
+
+.. _advanced_features/events/available_properties:
 
 Available properties
 ~~~~~~~~~~~~~~~~~~~~
@@ -86,12 +87,12 @@ Here is a list of available properties each event can include:
                            should have a unique event number, duplicate events will not be
                            saved. |br|
                            Example: ``'18934671af'``.
-                         * **subtotal** (required) – event subtotal, Any valid positive number
+                         * **subtotal** – event subtotal, Any valid positive number
                            (including floats) or 0 are allowed. Preferably it should be passed
                            as a string to avoid JavaScript issues with rounding floats. |br|
                            Example: ``'198.5'``.
-                         * **coupon_code** (required) – a coupon code that was applied on
-                           this event. Pass ``null`` when no coupon code applied. |br|
+                         * **coupon_code**  – a coupon code that was applied to
+                           this event. |br|
                            Example: ``'SAVE20'``. You can also pass multiple coupons as
                            an array: ``['SAVE20', 'SAVE5']`` if they were stacked.
                          * **shipping_address** (optional) – Shipping address in case an event is
@@ -124,17 +125,17 @@ Here is a list of available properties each event can include:
                          You can control campaign tags inside Campaign Rules. Each
                          Talkable campaign can have different tags.
 
-                         Alternatively you can use
+                         Alternatively, you can use
                          :ref:`Campaign Placements <campaigns/campaign_placements>`
-                         feature to set up routing right inside Talkable and do not
-                         control it through JS integration on your end. Campaign
-                         Placements are easy to change, no code changes is needed on your
+                         feature to set up routing in your Talkable Dashboard instead
+                         of controlling it through the JS integration on your end. Campaign
+                         Placements are easy to change, no code changes are needed on your
                          end.
 
    **custom_properties** Custom key-value data that can be attached to a person
                          (optional). It can be used for segmentation for example: you can
-                         code up custom criteria in order to show relevant campaigns to
-                         each segment. Alternatively custom properties can be used for an
+                         code up custom criteria to show relevant campaigns to
+                         each segment. Alternatively, custom properties can be used for an
                          advanced referral reward logics. Any valid JS object is allowed.
                          Object value should always be a string.
 
