@@ -74,6 +74,7 @@ Configuration
       <array>
         <string>tkbl-your-site-slug</string>
         <string>fb-messenger</string>
+        <string>fbauth2</string>
         <string>whatsapp</string>
       </array>
 
