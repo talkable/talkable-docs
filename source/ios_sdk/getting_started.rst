@@ -66,7 +66,7 @@ Configuration
         </dict>
       </array>
 
-  - Add `tkbl-<your-site-slug>` scheme and `fb-messenger` sheme to the list of schemes are queried within application:
+  - Add `tkbl-<your-site-slug>` scheme to the list of schemes that are queried within application. Also add `fb-messenger`, `fbauth2`, `whatsapp` schemes if you going to utilize these sharing channels:
 
     .. code-block:: xml
 
@@ -74,6 +74,8 @@ Configuration
       <array>
         <string>tkbl-your-site-slug</string>
         <string>fb-messenger</string>
+        <string>fbauth2</string>
+        <string>whatsapp</string>
       </array>
 
   .. note::
