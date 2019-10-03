@@ -28,7 +28,8 @@ Alternate Post Purchase Script for cart line item passing
         shipping_address: '' // Full address of the order, make sure to strictly follow a format: 'Apt #, Street address, City, State, ZIP, Country'
       },
       customer: {
-        email: '' // Customer email address who issued a purchase. Example: 'customer@example.com'
+        email: '', // Customer email address who issued a purchase. Example: 'customer@example.com'
+        traffic_source: '' // The source of the traffic driven to the campaign. Example: 'facebook'
       }
     };
     _talkableq.push(['register_purchase', _talkable_data]);
