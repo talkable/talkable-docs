@@ -28,6 +28,14 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
 
 .. raw:: html
 
+   <h2>How to use Referral Webhook</h2>
+
+To approve a referral, respond with 200 code to the webhook request.
+
+To block a referral, first void the referral using :ref:`Referrals API <api_v2/referrals>`, and then respond with 200 code to the webhook request.
+
+.. raw:: html
+
    <h2>Payload parameters provided for Referral Webhook</h2>
 
 * **campaign** — subhash of parameters describing the campaign
