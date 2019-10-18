@@ -10,7 +10,7 @@ Sometimes we need you to upgrade existing integration to use our latest features
 ------
 
 Added flag about availability of native email sharing to the native features header.
-Improved native feautures stability.
+Improved native features stability.
 
 0.5.9
 -----
