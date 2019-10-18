@@ -6,6 +6,12 @@ Upgrade
 
 Sometimes we need you to upgrade existing integration to use our latest features.
 
+0.5.10
+------
+
+Added flag about availability of native email sharing to the native features header.
+Improved native features stability.
+
 0.5.9
 -----
 
