@@ -1,6 +1,9 @@
 .. _campaigns/tutorials/global:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: Learn how to work with multiple ZeroClipboard instances.
+
 Global
 ------
 

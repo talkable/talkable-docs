@@ -1,6 +1,9 @@
 .. _campaigns/editor/files:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: The Files lets you upload static assets such as images, fonts, and everything else you need to enhance your referral campaign.
+
 Files
 -----
 

@@ -1,6 +1,9 @@
 .. _campaigns/offers_expiration:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: You can enhance your referral campaign performance by setting up the expiry date for the offer.
+
 Offers Expiration
 #################
 

@@ -1,6 +1,9 @@
 .. _campaigns/tutorials/offers_show:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: Instant reward campaign lets you reward your brand advocate immediately — right after a referral link to a friend was sent.
+
 Advocate Share Page
 -------------------
 
