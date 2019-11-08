@@ -1,6 +1,9 @@
 .. _web_hooks/event:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: The Talkable Event Webhook lets you know when a purchase was made.
+
 Event Webhook
 =============
 

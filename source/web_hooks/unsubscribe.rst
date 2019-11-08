@@ -1,6 +1,9 @@
 .. _web_hooks/unsubscribe:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: Talkable Unsubscribe Webhook notifies you that a user unsubscribed from Talkable referral email.
+
 Unsubscribe Webhook
 ===================
 

@@ -1,6 +1,9 @@
 .. _web_hooks/post_share:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: Talkable Post Share Webhook provides notification of share events performed within a referral campaign workflow.
+
 Post Share Webhook
 ==================
 

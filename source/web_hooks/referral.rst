@@ -1,6 +1,9 @@
 .. _web_hooks/referral:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: The Talkable Referral Webhook notifies your endpoint that your brand advocate’s referral status “Approved” or “Unblocked”.
+
 Referral Webhook
 ================
 

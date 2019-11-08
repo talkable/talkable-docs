@@ -1,6 +1,9 @@
 .. _web_hooks/offer_signup:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: The Talkable Advocate Signup Webhook notifies your endpoint of an advocate signup forms submission.
+
 Advocate Signup Webhook
 =======================
 

@@ -1,6 +1,9 @@
 .. _web_hooks/check_unsubscribe:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: Talkable Check Unsubscribe Webhook ensures that emails are not sent to unsubscribed users.
+
 Check Unsubscribe Webhook
 =========================
 
