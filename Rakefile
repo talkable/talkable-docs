@@ -40,7 +40,7 @@ task :build => :environment do
   Rake::FileList["#{BUILD_DIR}/html/**/*.html"].each do |filename|
     File.open(filename, "r+") do |file|
       old_content = file.read
-      new_content = old_content.gsub('<a href="http', '<a rel="nofollow" href="http')
+      new_content = old_content.gsub(%r{<a href="(https?://(?!(?:www\.)?talkable\.com).*?)"}, '<a rel="nofollow" href="\1"')
       file.tap(&:rewind).write(new_content) if old_content != new_content
     end
   end
