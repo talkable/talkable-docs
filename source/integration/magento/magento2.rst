@@ -1,6 +1,9 @@
 .. _integration/magento/magento2:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: The Magento 2 Integration Extension is available to download in the Magento Marketplace. The extension supports all versions of Magento 2.0 or higher.
+
 Magento 2.x Integration
 =======================
 

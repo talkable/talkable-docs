@@ -1,6 +1,9 @@
 .. _integration/verify:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: After installing Talkable, you should verify that the integration is working.
+
 Verifying Integration
 =====================
 

@@ -1,6 +1,9 @@
 .. _integration/custom/integration_components:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: Find the components of what Talkable is composed.
+
 Integration Components
 ======================
 

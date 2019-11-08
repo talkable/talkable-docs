@@ -1,6 +1,9 @@
 .. _integration/custom/validating_integration:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: This is all about validating integration, from a checklist to testing.
+
 Validating the Integration
 ==========================
 
