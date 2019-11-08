@@ -1,6 +1,9 @@
 .. _advanced_features/email_encryption:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: It is possible to encrypt advocate and friend emails on back-end if you want to provide additional security.
+
 Email Encryption
 ================
 

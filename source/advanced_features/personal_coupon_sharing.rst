@@ -1,5 +1,8 @@
 .. _advanced_features/personal_coupon_sharing:
 
+.. meta::
+   :description: By clicking on the share link each friend sees the discount on the friend claim page.
+
 Advocate Personal Coupon Sharing
 ================================
 

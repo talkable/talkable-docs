@@ -1,6 +1,9 @@
 .. _advanced_features:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: Talkable provides optional features for your referral program. Unlock them to increase conversions.
+
 Advanced Features
 #################
 

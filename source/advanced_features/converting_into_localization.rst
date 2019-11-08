@@ -1,6 +1,9 @@
 .. _advanced_features/converting_into_localization:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: This is a how-to guide to help you get the most out of Localizations.
+
 Converting Into Localization
 ============================
 

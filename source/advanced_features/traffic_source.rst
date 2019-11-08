@@ -1,6 +1,9 @@
 .. _advanced_features/traffic_source:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: While driving traffic to one of your campaigns, you can include a traffic source parameter as a URL query string. This will help to segment your reporting.
+
 Segment With Traffic Source
 ===========================
 

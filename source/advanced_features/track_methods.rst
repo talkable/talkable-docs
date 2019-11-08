@@ -1,6 +1,9 @@
 .. _advanced_features/track_methods:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: Tracking referrals feature lets you track each referral.
+
 Referral Tracking Methods
 #########################
 
