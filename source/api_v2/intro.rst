@@ -1,6 +1,9 @@
 .. _api_v2/intro:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: The Talkable API is built on HTTP. Our API is RESTful, returns JSON, and responds with standard HTTP response codes to indicate errors.
+
 Introduction
 ============
 

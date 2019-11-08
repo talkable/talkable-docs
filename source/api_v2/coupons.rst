@@ -1,6 +1,9 @@
 .. _api_v2/coupons:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: This API allows you to access and check coupons.
+
 Coupons
 =======
 
