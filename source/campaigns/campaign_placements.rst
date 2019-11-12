@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Campaign Placements let you find the best place for your campaign, so your customers will never miss them.
+   :description: Campaign Placements let you find the best place for your campaign, so your customers will never miss it.
 
 Campaign Placements
 ===================
