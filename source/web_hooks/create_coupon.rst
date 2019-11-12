@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Talkable Create Coupon Webhook enables automatic coupon creation. That means you are no longer need to upload coupon lists into the Talkable platform manually.
+   :description: Create Coupon Webhook enables automatic coupon creation. That means you are no longer need to upload coupon lists into the Talkable platform manually.
 
 Create Coupon Webhook
 =====================
