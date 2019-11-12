@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: There are videos for you to dive in Liquid. Learn how you can navigate your liquid customize screens within  Talkable.
+   :description: There are videos for you to dive in Liquid. Learn how you can customize screens within Talkable.
 
 Videos
 ======
