@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Email gating lets you get a referred friend’s email — just ask for it in exchange for a reward.
+   :description: Email gating lets you get a referred Friend’s email — just ask for it in exchange for a reward.
 
 Friend Claim Page
 -----------------

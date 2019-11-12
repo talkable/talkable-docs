@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Tell a friend that every link they share will be rewarded.
+   :description: Tell a Friend that every link they share will be rewarded.
 
 .. _friend_claim_page_view:
 

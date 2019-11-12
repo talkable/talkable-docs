@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: When you create an incentive for advocate or friend, you can set terms and conditions.
+   :description: When you create an incentive for Advocate or Friend, you can set terms and conditions.
 
 Incentive Criteria
 ------------------

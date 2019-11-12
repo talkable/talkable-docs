@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Send email to your brand advocate when their account has been credited or a partial refund has been issued.
+   :description: Send email to your brand Advocate when their account has been credited or a partial refund has been issued.
 
 Advocate Reward Paid Email
 --------------------------

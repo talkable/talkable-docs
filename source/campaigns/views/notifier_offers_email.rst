@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Send email to tell your advocate what your referral program is about. Motivate them to share your offer.
+   :description: Send email to tell your Advocate what your referral program is about. Motivate them to share your offer.
 
 Advocate Offer Email
 --------------------

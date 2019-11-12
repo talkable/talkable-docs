@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Advocate Share Page shows the value proposition to advocate and friend — they both will receive an exclusive discount.
+   :description: Advocate Share Page shows the value proposition to Advocate and Friend — they both will receive an exclusive discount.
 
 .. _advocate_share_page_view:
 

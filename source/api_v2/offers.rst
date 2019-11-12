@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: This API allows you to access advocate offers.
+   :description: This API allows you to access Advocate offers.
 
 Advocate Offers
 ===============
