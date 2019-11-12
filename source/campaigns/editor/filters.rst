@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Standard liquid filters that are available out of box.
+   :description: Standard Liquid filters that are available out of box.
 
 Filters
 -------
