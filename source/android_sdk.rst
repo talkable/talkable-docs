@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Talkable has an Android framework enabling you to use Talkable in Andoid Apps.
+   :description: Talkable has an Android framework enabling you to use Talkable in Android apps.
 
 Talkable Android SDK
 ####################
