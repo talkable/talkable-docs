@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: The Talkable Reward Webhook notifies your endpoint that a reward is ready to be given, or it has been already given.
+   :description: Reward Webhook notifies your endpoint that a reward is ready to be given, or it has been already given.
 
 Reward Webhook
 ==============
