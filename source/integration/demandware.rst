@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Talkable cartridge is a self-contained cartridge, which you can easily integrate into any salesforce commerce cloud project.
+   :description: Talkable cartridge is a self-contained cartridge, which you can easily integrate into any Salesforce Commerce Cloud project.
 
 Demandware Integration
 ======================

@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: The Talkable Friend Email Gating Webhook notifies your endpoint that friend email gating form was submitted.
+   :description: Friend Email Gating Webhook notifies your endpoint that friend email gating form was submitted.
 
 Friend Email Gating Webhook
 ===========================

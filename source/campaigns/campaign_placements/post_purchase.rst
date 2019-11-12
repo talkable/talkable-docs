@@ -4,7 +4,6 @@
 .. meta::
    :description: With the Post Purchase placement, your Campaign will show up automatically as a popup once the customer made a successful purchase on your site.
 
-
 Post Purchase Placement
 =======================
 

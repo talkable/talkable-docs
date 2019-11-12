@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: You can integrate Talkable referral marketing platform to e-commerce sites a few quick steps.
+   :description: You can integrate Talkable referral marketing platform to e-commerce sites in a few quick steps.
 
 Integration High-Level Overview
 ===============================

@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Send an invite email to a friend showing their special share link. Make the email looks personal — just like it's written for them. 
+   :description: Send an invite email to a Friend showing their special share link. Make the email looks personal — just like it's written for them.
 
 .. _friend_share_email_view:
 

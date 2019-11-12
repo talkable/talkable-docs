@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Here’s how you can you can integrate Talkable Shopify app with your store.
+   :description: Here’s how you can integrate Talkable Shopify app with your store.
 
 Shopify Integration
 ===================

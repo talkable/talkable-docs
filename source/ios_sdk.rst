@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Talkable has an iOS framework enabling you to use Talkable in iOS Apps
+   :description: Talkable has an iOS framework enabling you to use Talkable in iOS apps
 
 Talkable iOS SDK
 ################
