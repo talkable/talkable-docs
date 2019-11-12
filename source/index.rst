@@ -6,7 +6,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Talkable campaigns, features and integration docs for referral program launch and settings
+   :description: Talkable campaigns, features and integration docs for referral program launch and settings.
 
 Talkable Basics
 ===============
