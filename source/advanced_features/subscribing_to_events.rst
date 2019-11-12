@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Talkable JS integration script embeds Talkable campaign as an iframe with src attribute starting with www.talkable.com domain.
+   :description: Talkable JS integration script embeds Talkable campaign as an iframe.
 
 Subscribing To Iframe Events
 ============================
