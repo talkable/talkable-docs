@@ -1,6 +1,9 @@
 .. _campaigns/designer:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: That’s where the beauty of your referral campaign is.
+
 Designer
 ========
 

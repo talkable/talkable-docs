@@ -1,6 +1,9 @@
 .. _campaigns/views/advocate_rewards_confirmation:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: Want to know if your brand Advocate likes your reward? Send them a confirmation email — and get to know if it’s yes or no.
+
 .. _advocate_rewards_confirmation:
 
 Advocate Reward Confirmation Email

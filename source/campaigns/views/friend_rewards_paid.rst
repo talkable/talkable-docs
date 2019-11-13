@@ -1,6 +1,9 @@
 .. _campaigns/views/friend_rewards_paid:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: It`s good to give thanks to a Friend. Send a reward via email, and remind them about it later on.
+
 .. _friend_rewards_paid:
 
 Friend Reward Paid Email

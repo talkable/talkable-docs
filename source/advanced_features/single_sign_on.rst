@@ -1,6 +1,9 @@
 .. _advanced_features/single_sign_on:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: Talkable fully supports the SAML v2.0 standard, making it easy to add more security and convenience to your Talkable program.
+
 Single Sign-On (SSO)
 ====================
 

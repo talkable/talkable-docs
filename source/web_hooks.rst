@@ -1,6 +1,9 @@
 .. _web_hooks:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: Webhooks are triggered by events on Talkable’s site.
+
 Webhooks
 ########
 

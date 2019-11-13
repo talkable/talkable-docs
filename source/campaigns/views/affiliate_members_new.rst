@@ -1,6 +1,9 @@
 .. _campaigns/views/affiliate_members_new:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: Advocate referral program sign up page means that advocate signs up by entering their email address.
+
 .. _advocate_signup_page_view:
 
 Advocate Signup Page

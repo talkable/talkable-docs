@@ -1,6 +1,9 @@
 .. _api_v2/visitors:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: This API allows you to create visitors.
+
 Visitors
 ========
 

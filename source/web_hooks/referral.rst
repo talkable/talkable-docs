@@ -1,6 +1,9 @@
 .. _web_hooks/referral:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: Referral Webhook notifies your endpoint that your brand Advocate’s referral status has become “Approved” or “Unblocked”.
+
 Referral Webhook
 ================
 

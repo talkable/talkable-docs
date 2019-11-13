@@ -1,6 +1,9 @@
 .. _campaigns/campaign_placements/floating_widget:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: Floating Widget appears from the corner of each page showing call-to-action messages to your customers. And it all happens smoothly.
+
 Floating Widget Placement
 =========================
 

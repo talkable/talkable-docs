@@ -1,6 +1,9 @@
 .. _campaigns/editor/filters:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: Standard Liquid filters that are available out of box.
+
 Filters
 -------
 

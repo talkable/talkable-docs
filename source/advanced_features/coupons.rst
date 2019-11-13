@@ -1,6 +1,9 @@
 .. _advanced_features/coupons:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: You can reward Advocate and their Friend with coupons. Talkable supports both one-time-use coupons as well as multi-use coupons.
+
 Automatic Coupon Creation
 =========================
 

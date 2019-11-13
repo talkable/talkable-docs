@@ -1,6 +1,9 @@
 .. _integration/magento/magento1:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: A Magento Talkable extension is available for easy integration. The extension supports Magento versions 1.5+
+
 Magento 1.x Integration
 =======================
 

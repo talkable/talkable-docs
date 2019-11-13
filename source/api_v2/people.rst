@@ -1,6 +1,9 @@
 .. _api_v2/people:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: This API allows you to access and update the list of people.
+
 People
 ======
 

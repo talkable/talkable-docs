@@ -1,6 +1,9 @@
 .. _api_v2:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: Here you can learn about API. Choose the category you’re most interested in.
+
 API Reference
 #############
 

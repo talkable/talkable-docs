@@ -1,6 +1,9 @@
 .. _web_hooks/offer_signup:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: Advocate Signup Webhook notifies your endpoint of an Advocate signup forms submission.
+
 Advocate Signup Webhook
 =======================
 

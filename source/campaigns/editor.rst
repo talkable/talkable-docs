@@ -1,6 +1,9 @@
 .. _campaigns/editor:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: Talkable Campaign Editor allows developers to edit a referral campaign up to their liking and business goals.
+
 Editor
 ======
 

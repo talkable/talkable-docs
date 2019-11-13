@@ -1,6 +1,9 @@
 .. _advanced_features/product_sku:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: From now on, you can show a campaign on post purchase placement only to those customers who purchased a particular product or a set of products.
+
 Segment With Product SKU
 ========================
 

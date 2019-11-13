@@ -1,6 +1,9 @@
 .. _campaigns/views/offers_show:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: Advocate Share Page shows the value proposition to Advocate and Friend — they both will receive an exclusive discount.
+
 .. _advocate_share_page_view:
 
 Advocate Share Page

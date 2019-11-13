@@ -1,6 +1,9 @@
 .. _api_v2/rewards:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: This API allows you to access visitor rewards.
+
 Rewards
 =======
 

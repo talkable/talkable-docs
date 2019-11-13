@@ -1,6 +1,9 @@
 .. _campaigns/views/notifier_rewards_paid:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: Send email to your brand Advocate when their account has been credited or a partial refund has been issued.
+
 Advocate Reward Paid Email
 --------------------------
 

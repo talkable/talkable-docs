@@ -1,6 +1,9 @@
 .. _advanced_features/referrals_approval:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: The approvals process helps automatically detect fake new user accounts. Cheaters won’t get through the system.
+
 Referrals Approval
 ==================
 

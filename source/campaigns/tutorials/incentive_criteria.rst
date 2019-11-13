@@ -1,6 +1,9 @@
 .. _campaigns/tutorials/incentive_criteria:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: When you create an incentive for Advocate or Friend, you can set terms and conditions.
+
 Incentive Criteria
 ------------------
 

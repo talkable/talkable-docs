@@ -1,6 +1,9 @@
 .. _campaigns/views/offers_claim:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: Tell a Friend that every link they share will be rewarded.
+
 .. _friend_claim_page_view:
 
 Friend Claim Page

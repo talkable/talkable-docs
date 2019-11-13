@@ -1,6 +1,9 @@
 .. _api_v2/metrics:
 .. include:: /partials/common.rst
 
+.. meta::
+   :description: This API allows you to access Talkable metrics.
+
 Metrics
 =======
 
