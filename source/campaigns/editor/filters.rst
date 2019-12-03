@@ -916,7 +916,7 @@ Requires Rybbon Access Key set up in Site Settings in order to work.
 
 Returns ``https://www.rybbon.net/redeem.php?claimcode=ee645de47765bdbede751c8c6f08a619``
 
-Supports custom amount for campaigns with denomination value in the range of $10 to $1000. By default restricted to the maximum as $50.
+Accepts custom amount of reward for Rybbon campaigns with variable denomination. Maximum amount is 50.
 
 .. code-block:: liquid
 
