@@ -183,7 +183,7 @@ htmlhelp_basename = 'Talkabledoc'
 
 # The URL which points to the root of the HTML documentation.
 # It is used to indicate the location of document like canonical_url.
-html_baseurl = 'https://www.docs.talkable.com'
+html_baseurl = 'https://docs.talkable.com'
 
 # -- Options for manual page output ---------------------------------------
 
