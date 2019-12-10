@@ -916,7 +916,7 @@ Requires Rybbon Access Key set up in Site Settings in order to work.
 
 Returns ``https://www.rybbon.net/redeem.php?claimcode=ee645de47765bdbede751c8c6f08a619``
 
-Accepts custom amount of reward for Rybbon campaigns with variable denomination. The minimum amount conforms to each specific Rybbon gift card restrictions and the maximum amount is 50.
+Accepts custom amount of reward for Rybbon campaigns with variable denomination. The minimum amount conforms to each specific Rybbon gift card restrictions. The maximum amount is 50.
 
 .. code-block:: liquid
 
