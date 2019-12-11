@@ -27,6 +27,10 @@ each with links to integration details.
      - Convert all static languange into a customizable copy that’s
        easy to AB test.
 
+   * - :ref:`Сustomer service portal <advanced_features/сustomer_service_portal>`
+     - Explore full  details for each individual customer and their referral journey,
+       manage their rewards and deliver excellent customer service.
+
    * - :ref:`Email encryption <advanced_features/email_encryption>`
      - For additional security, it is possible to encrypt Advocate and Friend emails on back-end.
 
@@ -77,6 +81,7 @@ each with links to integration details.
     advanced_features/track_methods
     advanced_features/personal_coupon_sharing
     advanced_features/converting_into_localization
+    advanced_features/сustomer_service_portal
     advanced_features/email_encryption
     advanced_features/events
     advanced_features/file_encryption
