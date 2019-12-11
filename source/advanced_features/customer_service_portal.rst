@@ -168,3 +168,91 @@ about the referral program. Look for the “Advocate Reward Paid Email”. There
 To ensure we find the desired email we need to go back to the referral details and see a referral approval date:
 
 .. image:: /_static/img/advanced_features/customer_service_portal/approve_date.png
+
+Navigating back to “Emails” tab. Look for “Advocate reward paid email” from the same campaign that the referral dated
+04/16/2015 or a few days later. There is a suitable email with status ‘Clicked’ 04/17/2015:
+
+.. image:: /_static/img/advanced_features/customer_service_portal/email_status.png
+
+Click on ‘Details’ and compare the referral created date with the email created date to ensure that we found
+the desired email:
+
+.. image:: /_static/img/advanced_features/customer_service_portal/email_letter_details.png
+
+In this case we can see the email was delivered and that the Advocate successfully opened the email and clicked
+through on the CTA inside the email.
+
+There may be cases when the delivered status has a timestamp, however the opened status is blank. It will mean that the
+recipient has not yet opened the email. In this case you would instruct the user to search their inbox and see if
+they can find the email.  You can also tell them the email address in the “From” field which may help them
+in their search.
+
+If they still can’t find the email you may click the “Resend now” button on the email ‘Details’ page and the same
+email will be sent to the recipient email again.
+
+Here is what email statuses mean:
+
+- **Sent**: Talkable was able to compose an email and pass it to the Talkable ESP to prepare for delivery.
+- **Delivered**: Talkable ESP was able to send an email to the recipient (Stephanie).
+- **Opened**: Stephanie has opened the email.
+- **Clicked**: Stephanie has clicked on the CTA inside the email.
+- **Rejected**: the email was rejected by some reason.
+
+Use case #3: Who should get the reward?
+---------------------------------------
+
+In not all referral cases does Talkable issue a reward. There may be numerous reasons why a reward is not issued to
+an Advocate or Friend. The easiest way to find out the reward status is by visiting the Referrals tab:
+
+.. image:: /_static/img/advanced_features/customer_service_portal/referrals.png
+
+Navigating to each referral ‘Details’ page we can find out the status for each reward. Reason near the reward
+status explains why the reward was not given.
+
+.. image:: /_static/img/advanced_features/customer_service_portal/reason_reward.png
+
+Every reward has the following possible statuses:
+
+- **Pending**: the reward is awaiting referral approval. The referral can either be approved manually or automatically,
+  depending on your configuration. If the referral status is Pending you may wait until the referral auto-approval
+  happens. Otherwise please press “Void” or “Approve” button in the referral actions section, to either block or issue
+  the reward.
+
+- **Waiting for coupon**: there are not enough coupons left to pay the reward. Click on the reward link → Incentive
+  type → Remember the coupon list chosen → Manage coupon lists → Find the desired coupon list and press “Add coupons”.
+
+- **Given**: the reward was paid to the person but Talkable does not have information whether it was used or not.
+  Most likely it was not yet used.
+
+- **Voided**: the reward was voided because the referral was voided by a user manually.
+
+- **Blocked/No reward**: the reward was blocked either because the associated referral was blocked according to
+  Fraud Settings or because of other reasons: incentive criteria has blocked it, or the person was blacklisted.
+
+.. image:: /_static/img/advanced_features/customer_service_portal/referral_incentive.png
+(All incentive criteria are defined in Campaign Rules → Incentives. See reward criteria section.)
+
+Here are some common incentive criteria block reasons:
+
+- **Friend didn’t meet minimum purchase requirement**. On a screenshot above Friend’s referral purchase subtotal
+  should be over $20. The incentive criteria will block Advocate’s reward in case Friend’s order subtotal will
+  be less (post discount).
+
+- **Friend’s offer was expired**. Based on Campaign Rules setup, Friend’s offer may expire after a certain period
+  of time. Most likely the Friend received their coupon code by visiting a share link and then decided to save their
+  discount for later. If Friend makes a purchase after their offer expires (using that coupon) the Advocate will not
+  get a reward.
+
+- **Friend is not a new customer**. Friend was an existing customer (> 1 purchase tracked) while making their referral
+  purchase, however the incentive configuration only allows referring new customers.
+
+- **Friend has already been referred**. The Advocate has already referred this Friend before but the incentive
+  configuration only allows referring the same Friend only once.
+
+Other reasons why a reward can be blocked (not incentive related):
+
+- **Advocate has reached maximum rewards**. This is because Talkable has set a threshold for the maximum number of
+  rewards that an Advocate can receive. The Friend may be rewarded in this case (as in the example above),
+  but not the Advocate.
+
+- The associated referral was blocked/voided for self/cross referral.
