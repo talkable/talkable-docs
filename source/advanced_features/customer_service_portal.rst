@@ -19,8 +19,6 @@ Once you are logged into your Talkable account, navigate to the Customer Service
 
 .. image:: /_static/img/advanced_features/customer_service_portal/logging.png
 
-**Logging In**
-
 Navigating to the Customer Service Portal
 
 The Customer Service Portal provides a simple search box that will allow you to search by 4 criteria:
@@ -30,11 +28,10 @@ The Customer Service Portal provides a simple search box that will allow you to 
 - **Friend order number**: the order number of Friend purchase.
 - **Coupon code**: the single-use coupon code that the Friend applied during
   checkout.
-  
+
 Example Customer Service Portal post login:
 
 .. image:: /_static/img/advanced_features/customer_service_portal/login.png
-
 
 
 Terminology
