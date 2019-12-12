@@ -77,12 +77,12 @@ the referral details the IP address and cookie to see if they match:
 .. image:: /_static/img/advanced_features/customer_service_portal/fraud_settings.png
 
 4. If it’s not obvious why the customer was flagged for self referral (meaning that none of these three items matched),
-then you should click “Details” to dive deeper.
+   then you should click “Details” to dive deeper.
 
 5. Inspect to see if any other “blocked reasons” appear. In the below case, we see that not only do the email addresses
-match, but there was also a matching cookie on the Friend purchase (meaning they used the same browsing session to both
-share as an Advocate and click on the share link as a Friend), and lastly, there’s a matching combination of IP address
-and user agent - meaning the Advocate and Friend were using the same device and IP address, in combination.
+   match, but there was also a matching cookie on the Friend purchase (meaning they used the same browsing session to both
+   share as an Advocate and click on the share link as a Friend), and lastly, there’s a matching combination of IP address
+   and user agent - meaning the Advocate and Friend were using the same device and IP address, in combination.
 
 .. image:: /_static/img/advanced_features/customer_service_portal/blocked_reasons.png
 
