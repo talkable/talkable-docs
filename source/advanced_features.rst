@@ -5,7 +5,7 @@
    :description: Talkable provides optional features for your referral program. Unlock them to increase conversions.
 
 Features
-#################
+########
 
 Talkable provides several optional features that help increase conversions
 and make your referral program incredibly easy to manage. Here’s an overview of
