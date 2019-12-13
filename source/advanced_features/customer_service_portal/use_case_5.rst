@@ -12,7 +12,7 @@ To blacklist a user, first navigate to the “Blacklisting” section of the Cus
 
 .. image:: /_static/img/advanced_features/customer_service_portal/blacklist.png
 
-5.1 Adding a user to be blacklisted
+Adding a user to be blacklisted
 -----------------------------------
 
 .. image:: /_static/img/advanced_features/customer_service_portal/adding_blacklist.png
@@ -36,7 +36,7 @@ Email blacklisting is easy!  Just enter the email address into the list and hit 
 Notice we support wildcard so if you notice a pattern of abuse you can explicitly disallow users who match that
 email address as well.
 
-5.2 How do I UnBlacklist a user?
+How do I UnBlacklist a user?
 --------------------------------
 
 If you realize that you made a mistake in Blacklisting a user who should actually be receiving rewards,

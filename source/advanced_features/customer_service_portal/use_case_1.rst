@@ -4,7 +4,7 @@
 Use case #1: Where do I find referrals?
 =======================================
 
-1.1 Person Lookup
+Person Lookup
 -----------------
 
 When a customer calls in, often their first question is: “I’ve referred my Friend but haven’t received my reward.”
@@ -26,7 +26,7 @@ Here are the steps we’re going to take:
 
 (After entering in Stephanie’s email the screen populates with information associated with her email address.)
 
-1.2 Referral details
+Referral details
 --------------------
 .. image:: /_static/img/advanced_features/customer_service_portal/click_to_referral_details.png
 

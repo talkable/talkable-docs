@@ -4,7 +4,7 @@
 Use case #3: Who should get the reward?
 =======================================
 
-In not all referral cases does Talkable issue a reward. There may be numerous reasons why a reward is not issued to
+Talkable does not issue a reward in all referral cases. There may be numerous reasons why a reward is not issued to
 an Advocate or Friend. The easiest way to find out the reward status is by visiting the Referrals tab:
 
 .. image:: /_static/img/advanced_features/customer_service_portal/referrals.png
@@ -61,10 +61,10 @@ Other reasons why a reward can be blocked (not incentive related):
 
 - The associated referral was blocked/voided for self/cross referral.
 
-3.1 Handling customer inquiries
+Handling customer inquiries
 -------------------------------
 
-Here is how to detect self referrals in case you’ve got an email/call from a customer:
+Here is how to detect self-referrals in case you’ve got an email/call from a customer:
 
 1. Enter the customer’s email address in the Person Lookup.
 2. Review the “Referrals” tab and look for a “self-referral” alert:
@@ -76,7 +76,7 @@ the referral details the IP address and cookie to see if they match:
 
 .. image:: /_static/img/advanced_features/customer_service_portal/fraud_settings.png
 
-4. If it’s not obvious why the customer was flagged for self referral (meaning that none of these three items matched),
+4. If it’s not obvious why the customer was flagged for self-referral (meaning that none of these three items matched),
    then you should click “Details” to dive deeper.
 
 5. Inspect to see if any other “blocked reasons” appear. In the below case, we see that not only do the email addresses
@@ -86,11 +86,11 @@ the referral details the IP address and cookie to see if they match:
 
 .. image:: /_static/img/advanced_features/customer_service_portal/blocked_reasons.png
 
-3.2 Cross referrals
+Cross referrals
 -------------------
 
 The last use case is when an Advocate has not received his or her reward due to **Cross Referral**. Cross referral
-occurs when an advocate shares with a Friend who purchases and that same Friend then shares with an Advocate
+occurs when an Advocate shares with a Friend who purchases and that same Friend then shares with an Advocate
 in an attempt to get both the Advocate and Friend rewards.
 
 We identify this in the same way as described above.

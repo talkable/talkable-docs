@@ -8,7 +8,7 @@ This example shows how to create a referral reward for some Advocate. A common c
 from an Advocate who is wondering why they didn’t receive their referral reward. This example shows you how to manually
 create a reward for this Advocate.
 
-6.1 Gathering the info
+Gathering the info
 ----------------------
 
 In order to create a referral you need to know:
@@ -24,7 +24,7 @@ To find (2) Advocate’s participating campaign:
 
 .. image:: /_static/img/advanced_features/customer_service_portal/offers.png
 
-6.2 Creating the referral
+Creating the referral
 -------------------------
 
 Now that you know the Advocate and a campaign they have participated in, you are now able to create a referral
@@ -33,7 +33,7 @@ with this information:
 1. Visit “Create referral” section.
 2. Paste Advocate email into the “Advocate’s email” field.
 3. Provide some valid order subtotal (there is a chance the reward may be blocked due to low subtotal amount,
-   you can either set it pretty high or check campaign rules → Incentives → Advocate referral incentive
+   you can either set it pretty high or check Campaign Rules → Incentives → Advocate referral incentive
    criteria beforehand).
 4. Choose the campaign. You can paste its name from the step 6.1 in the campaigns search bar and the requested
    campaign will appear immediately.
@@ -41,7 +41,7 @@ with this information:
 
 .. image:: /_static/img/advanced_features/customer_service_portal/create_referral.png
 
-6.3 Viewing the results of the manually created referral
+Viewing the results of the manually created referral
 --------------------------------------------------------
 
 After creating the referral manually you will be taken to the newly created referral details page:

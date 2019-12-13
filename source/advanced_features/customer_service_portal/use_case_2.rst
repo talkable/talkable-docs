@@ -18,7 +18,7 @@ Here are the steps we will take:
 
 .. image:: /_static/img/advanced_features/customer_service_portal/email_details.png
 
-2.1 Email delivery
+Email delivery
 ------------------
 
 Navigate to ‘Emails’ tab after entering in Stephanie’s email. The “Emails” tab shows all emails sent to the Advocate

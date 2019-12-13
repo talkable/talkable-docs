@@ -36,7 +36,7 @@ scope of the particular Advocate share.
 
 The same logic works for other sharing channels such as ‘Direct link’, ‘Facebook’, ‘SMS’ etc.
 
-4.1 Friend was blocked for self-referral
+Friend was blocked for self-referral
 ----------------------------------------
 
 Again, the above only references valid cases where the Friend should have in fact received a reward. The alternative
