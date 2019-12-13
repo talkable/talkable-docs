@@ -31,7 +31,7 @@ We also have additional features that enable you to disqualify more IP addresses
 
 (We can also blacklist by subnet mask - in this case please ask a Talkable rep for more details.)
 
-Email blacklisting is easy!  Just enter the email address into the list and hit “Save Changes”.
+Email blacklisting is easy! Just enter the email address into the list and hit “Save Changes”.
 
 Notice we support wildcard so if you notice a pattern of abuse you can explicitly disallow users who match that
 email address as well.

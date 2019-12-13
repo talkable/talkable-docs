@@ -7,7 +7,7 @@ Terminology
 Referral
 --------
 
-This is a connection between an Advocate (who invites) and a Friend who completed a referral purchase from the
+This is a connection between an |advocate| and a |friend| who completed a referral purchase from the
 Advocate’s invite (a share). A referral will not be created unless the following 3 pieces are known: Advocate Email,
 Friend Email, and a Purchase made by a Referred Friend. Each referral is passed through several fraud checks
 (configured inside Fraud Settings). As a result of the fraud checks each referral status can be:
@@ -22,7 +22,7 @@ Friend Email, and a Purchase made by a Referred Friend. Each referral is passed 
     Settings). No rewards are issued at this point.
 
  3. **Flagged**: due to having many different options to configure referral fraud checks, it is not always possible to
-    set up automatic resolution for each referral. For such cases, you may want to Flag referrals that are in a so
+    set up an automatic resolution for each referral. For such cases, you may want to Flag referrals that are in a so
     called grey area, where the chance of fraud is around 50% and it is impossible to make the decision automatically.
     All flagged referrals are added to a queue for manual resolution and can be accessed inside CSP → Referrals.
     No rewards are issued at this point.
@@ -52,7 +52,7 @@ This is what the person gets as a result of some action (incentive). Available r
   depending on your configuration.
 
 - **Waiting for coupon**: there are not enough coupons left to pay the reward. The reward will remain in a 'waiting'
-  status until more coupons will be uploaded into the associated coupon list.
+  status until more coupons are uploaded into the associated coupon list.
 
 - **Given**: the reward was paid to the person but Talkable does not have information as to whether it was used or not.
   Most likely it was not yet used.
