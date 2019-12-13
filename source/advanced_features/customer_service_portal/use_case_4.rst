@@ -4,7 +4,7 @@
 Use case #4: Did my Friend get an email?
 ========================================
 
-To investigate did an Advocate’s Friend get an email, we’ll need to have their Friend’s email. All Advocate shares
+To investigate if the Advocate’s Friend has got an email, we’ll need to have their Friend’s email. All Advocate shares
 are located inside “Shares” tab:
 
 .. image:: /_static/img/advanced_features/customer_service_portal/shares_1.png

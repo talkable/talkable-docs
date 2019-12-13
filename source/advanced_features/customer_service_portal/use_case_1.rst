@@ -46,7 +46,8 @@ Let’s also expand fraud filters section to check the details:
 
 .. image:: /_static/img/advanced_features/customer_service_portal/fraud_filters.png
 
-This looks like a valid referral. Let’s move on to Use case #2.
+This looks like a valid referral. Let’s move on to
+:ref:`Use case #2 <advanced_features/customer_service_portal/use_case_2>`.
 
 .. container:: hidden
 
