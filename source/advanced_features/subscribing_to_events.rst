@@ -7,40 +7,38 @@
 Subscribing To Iframe Events
 ============================
 
-Talkable JS integration script embeds Talkable campaign as an iframe with `src` attribute starting with `www.talkable.com` domain (or custom domain if the :ref:`white-labeling <advanced_features/white_labeling>` is setup).
+Talkable integration embeds a referral campaign as an iframe with `src` attribute starting with `www.talkable.com` domain (or custom domain if the :ref:`white-labeling <advanced_features/white_labeling>` is setup).
 
-Due to same-origin_ policy it is not possible to pass/get any data to the iframe directly. Talkable JS integration library has a built-in subscription mechanism for that which is based on JS window.postmessage_ method.
+In order to subscribe to an iframe Event you need to know `name` HTML attribute of the Talkable iframe and the Event name.
+Iframe 'name' attribute may change depending on the campaign step opened. Thus, to use the right iframe name, open the campaign step you want to capture events from and copy the iframe name from the HTML of the page.
 
-.. _same-origin: https://en.wikipedia.org/wiki/Same-origin_policy
-.. _window.postmessage: https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage
+Below is an example of subscription to `offer_loaded` Talkable iframe Event.
 
-In order to subscribe to an iframe Event you need to know `id` HTML attribute of the Container DIV that holds it, and the Event name. Below is an example of subscription to `offer_loaded` Talkable iframe Event.
-
-Given we have integrated Campaign for :ref:`Standalone <campaigns/campaign_placements/standalone>` Placement, its JS-generated HTML tag looks similar to the following:
+Given we have integrated Campaign for :ref:`Standalone <campaigns/campaign_placements/standalone>` Placement, its HTML iframe reference looks like that:
 
 .. code-block:: html
 
   <div id="talkable-offer">
-    <iframe name="talkable-offer" src="https://www.talkable.com/..."></iframe>
+    <iframe name="talkable-offer-iframe" src="https://www.talkable.com/..."></iframe>
   </div>
 
-Knowing the container `id` attribute is `talkable-offer` the subscription JS will be:
+Knowing the container `name` attribute of the iframe is `talkable-offer-iframe` the subscription JS will be:
 
 .. code-block:: javascript
 
-  talkable.subscribe("offer_loaded", "talkable-offer", function(data, iframe) {
+  talkable.subscribe("offer_loaded", "talkable-offer-iframe", function(data, iframe) {
     alert("Talkable campaign iframe is loaded!");
   });
 
-Notice the callback function with two arguments:
+Notice two arguments passed in the callback:
 
-  1. `data` object — this is the data which gets passed by the iframe upon firing the event. You can use it to receive data from Talkable.
-  2. `iframe` object — this is iframe’s `HTML DOM reference`_
+  1. `data` object — the data passed by the iframe upon firing the event
+  2. `iframe` object — iframe’s `HTML DOM reference`_
 
 .. _HTML DOM reference: http://www.w3schools.com/jsref/dom_obj_frame.asp
 
-Talkable Events
----------------
+Iframe Events List
+------------------
 
 Talkable campaigns are equipped with the following set of events:
 
