@@ -10,12 +10,12 @@ on social media pages.
 
 To blacklist a user, first navigate to the “Blacklisting” section of the Customer Service Portal:
 
-.. image:: /_static/img/advanced_features/customer_service_portal/blacklist.png
+.. image:: /_static/img/advanced_features/customer_service_portal/blacklist.jpg
 
 Adding a user to be blacklisted
 -----------------------------------
 
-.. image:: /_static/img/advanced_features/customer_service_portal/adding_blacklist.png
+.. image:: /_static/img/advanced_features/customer_service_portal/adding_blacklist.jpg
 
 (We support adding users to a blacklist using two methods, by Email or by IP address. To add an email to the
 blacklist, just enter the email into the “Blacklisted emails” field and press “Save Changes”. Note that emails are
@@ -23,11 +23,11 @@ not separated by comma, but are new line delimited.)
 
 We also have additional features that enable you to disqualify more IP addresses or emails.
 
-.. image:: /_static/img/advanced_features/customer_service_portal/ip_adress.png
+.. image:: /_static/img/advanced_features/customer_service_portal/ip_adress.jpg
 
 (You can add a single IP address or an entire range of IP addresses.)
 
-.. image:: /_static/img/advanced_features/customer_service_portal/wildcard_emails.png
+.. image:: /_static/img/advanced_features/customer_service_portal/wildcard_emails.jpg
 
 (We can also blacklist by subnet mask - in this case please ask a Talkable rep for more details.)
 

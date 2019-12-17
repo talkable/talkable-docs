@@ -7,19 +7,19 @@ Use case #4: Did my Friend get an email?
 To investigate if the Advocate’s Friend has got an email, we’ll need to have their Friend’s email. All Advocate shares
 are located inside “Shares” tab:
 
-.. image:: /_static/img/advanced_features/customer_service_portal/shares_1.png
+.. image:: /_static/img/advanced_features/customer_service_portal/shares_1.jpg
 
-.. image:: /_static/img/advanced_features/customer_service_portal/shares_2.png
+.. image:: /_static/img/advanced_features/customer_service_portal/shares_2.jpg
 
 In this case we can see that the Friend received the email, opened it, and clicked through.
 
-.. image:: /_static/img/advanced_features/customer_service_portal/shares_clicks.png
+.. image:: /_static/img/advanced_features/customer_service_portal/shares_clicks.jpg
 
 If the Friend did not open the email you will see 0 in the ‘Friends’ tab.
 
 There also can be a case when an Advocate share has several Friends and clicks:
 
-.. image:: /_static/img/advanced_features/customer_service_portal/friends_click.png
+.. image:: /_static/img/advanced_features/customer_service_portal/friends_click.jpg
 
 'Friends' column displays the number of Friend offers created per each share. 'Clicks' column displays the number
 of Friend clicks per each share. The numbers may be different in case:
@@ -50,7 +50,7 @@ To validate this use case simply lookup for the Friend’s email address and bro
 flagged/blocked ones. We see that the blocked reason in this case is “Matching email”, in some cases it may be
 “Similar email match”:
 
-.. image:: /_static/img/advanced_features/customer_service_portal/marked_as_fraud.png
+.. image:: /_static/img/advanced_features/customer_service_portal/marked_as_fraud.jpg
 
 .. container:: hidden
 

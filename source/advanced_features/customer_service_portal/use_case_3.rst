@@ -7,12 +7,12 @@ Use case #3: Who should get the reward?
 Talkable does not issue a reward in all referral cases. There may be numerous reasons why a reward is not issued to
 an Advocate or Friend. The easiest way to find out the reward status is by visiting the Referrals tab:
 
-.. image:: /_static/img/advanced_features/customer_service_portal/referrals.png
+.. image:: /_static/img/advanced_features/customer_service_portal/referrals.jpg
 
 Navigating to each referral ‘Details’ page we can find out the status for each reward. Reason near the reward
 status explains why the reward was not given.
 
-.. image:: /_static/img/advanced_features/customer_service_portal/reason_reward.png
+.. image:: /_static/img/advanced_features/customer_service_portal/reason_reward.jpg
 
 Every reward has the following possible statuses:
 
@@ -32,7 +32,7 @@ Every reward has the following possible statuses:
 - **Blocked/No reward**: the reward was blocked either because the associated referral was blocked according to
   Fraud Settings or because of other reasons: incentive criteria has blocked it, or the person was blacklisted.
 
-.. image:: /_static/img/advanced_features/customer_service_portal/referral_incentive.png
+.. image:: /_static/img/advanced_features/customer_service_portal/referral_incentive.jpg
 
 (All incentive criteria are defined in Campaign Rules → Incentives. See reward criteria section.)
 
@@ -69,12 +69,12 @@ Here is how to detect self-referrals in case you’ve got an email/call from a c
 1. Enter the customer’s email address in the Person Lookup.
 2. Review the “Referrals” tab and look for a “self-referral” alert:
 
-.. image:: /_static/img/advanced_features/customer_service_portal/self_referral.png
+.. image:: /_static/img/advanced_features/customer_service_portal/self_referral.jpg
 
 3. Inspect the customer’s email address to see if it’s the same or similar to the Friends; you  can also inspect inside
 the referral details the IP address and cookie to see if they match:
 
-.. image:: /_static/img/advanced_features/customer_service_portal/fraud_settings.png
+.. image:: /_static/img/advanced_features/customer_service_portal/fraud_settings.jpg
 
 4. If it’s not obvious why the customer was flagged for self-referral (meaning that none of these three items matched),
    then you should click “Details” to dive deeper.
@@ -84,7 +84,7 @@ the referral details the IP address and cookie to see if they match:
    share as an Advocate and click on the share link as a Friend), and lastly, there’s a matching combination of IP address
    and user agent - meaning the Advocate and Friend were using the same device and IP address, in combination.
 
-.. image:: /_static/img/advanced_features/customer_service_portal/blocked_reasons.png
+.. image:: /_static/img/advanced_features/customer_service_portal/blocked_reasons.jpg
 
 Cross referrals
 -------------------

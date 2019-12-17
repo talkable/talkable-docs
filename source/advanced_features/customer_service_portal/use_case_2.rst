@@ -16,7 +16,7 @@ Here are the steps we will take:
 4. Click on Details.
 5. Provide information to the customer from the details page.
 
-.. image:: /_static/img/advanced_features/customer_service_portal/email_details.png
+.. image:: /_static/img/advanced_features/customer_service_portal/email_details.jpg
 
 Email delivery
 ------------------
@@ -24,21 +24,21 @@ Email delivery
 Navigate to ‘Emails’ tab after entering in Stephanie’s email. The “Emails” tab shows all emails sent to the Advocate
 about the referral program. Look for the “Advocate Reward Paid Email”. There may be multiple emails like this.
 
-.. image:: /_static/img/advanced_features/customer_service_portal/email_delivery.png
+.. image:: /_static/img/advanced_features/customer_service_portal/email_delivery.jpg
 
 To ensure we find the desired email we need to go back to the referral details and see a referral approval date:
 
-.. image:: /_static/img/advanced_features/customer_service_portal/approve_date.png
+.. image:: /_static/img/advanced_features/customer_service_portal/approve_date.jpg
 
 Navigating back to the “Emails” tab. Look for “Advocate reward paid email” from the same campaign that the referral dated
 04/16/2015 or a few days later. There is a suitable email with status ‘Clicked’ 04/17/2015:
 
-.. image:: /_static/img/advanced_features/customer_service_portal/email_status.png
+.. image:: /_static/img/advanced_features/customer_service_portal/email_status.jpg
 
 Click on ‘Details’ and compare the referral creation date with the email created date to ensure that we found
 the desired email:
 
-.. image:: /_static/img/advanced_features/customer_service_portal/email_letter_details.png
+.. image:: /_static/img/advanced_features/customer_service_portal/email_letter_details.jpg
 
 In this case we can see the email was delivered and that the Advocate successfully opened the email and clicked
 through on the CTA inside the email.

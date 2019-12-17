@@ -9,7 +9,7 @@ Logging In
 
 Once you are logged into your Talkable account, navigate to the Customer Service Portal in the top navigation.
 
-.. image:: /_static/img/advanced_features/customer_service_portal/logging.png
+.. image:: /_static/img/advanced_features/customer_service_portal/logging.jpg
 
 Navigating to the Customer Service Portal
 -----------------------------------------
@@ -24,7 +24,7 @@ The Customer Service Portal provides a simple search box that will allow you to 
 
 Example Customer Service Portal post login:
 
-.. image:: /_static/img/advanced_features/customer_service_portal/login.png
+.. image:: /_static/img/advanced_features/customer_service_portal/login.jpg
 
 .. container:: hidden
 

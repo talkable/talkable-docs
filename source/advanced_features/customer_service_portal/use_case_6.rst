@@ -22,7 +22,7 @@ To find (2) Advocate’s participating campaign:
 2. Navigate to “Offers” tab to see the participating campaigns.
 3. Remember the Advocate’s Email and Campaign for Part 2.
 
-.. image:: /_static/img/advanced_features/customer_service_portal/offers.png
+.. image:: /_static/img/advanced_features/customer_service_portal/offers.jpg
 
 Creating the referral
 -------------------------
@@ -39,14 +39,14 @@ with this information:
    campaign will appear immediately.
 5. Press “Create Referral” button.
 
-.. image:: /_static/img/advanced_features/customer_service_portal/create_referral.png
+.. image:: /_static/img/advanced_features/customer_service_portal/create_referral.jpg
 
 Viewing the results of the manually created referral
 --------------------------------------------------------
 
 After creating the referral manually you will be taken to the newly created referral details page:
 
-.. image:: /_static/img/advanced_features/customer_service_portal/advocate_reward.png
+.. image:: /_static/img/advanced_features/customer_service_portal/advocate_reward.jpg
 
 Advocate reward may be blocked due to incentive criteria, make sure to check the Advocate’s reward status as shown
 on the screenshot above.
