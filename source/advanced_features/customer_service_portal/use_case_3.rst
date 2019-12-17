@@ -62,7 +62,7 @@ Other reasons why a reward can be blocked (not incentive related):
 - The associated referral was blocked/voided for self/cross referral.
 
 Handling customer inquiries
--------------------------------
+---------------------------
 
 Here is how to detect self-referrals in case you’ve got an email/call from a customer:
 
