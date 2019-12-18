@@ -57,6 +57,7 @@ Here is what email statuses mean:
 - **Delivered**: Talkable ESP was able to send an email to the recipient (Stephanie).
 - **Opened**: Stephanie has opened the email.
 - **Clicked**: Stephanie has clicked on the CTA inside the email.
+- **Scheduled**: the email will be sent on a specified date.
 - **Rejected**: the email was rejected by some reason.
 
 .. container:: hidden
