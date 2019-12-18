@@ -10,6 +10,8 @@ Customer Service Portal
 Explore full details for each individual customer and their referral journey, manage their rewards and deliver
 excellent customer service.
 
+Contents:
+
 .. toctree::
    :maxdepth: 2
 
