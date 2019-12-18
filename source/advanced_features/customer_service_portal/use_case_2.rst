@@ -19,7 +19,7 @@ Here are the steps we will take:
 .. image:: /_static/img/advanced_features/customer_service_portal/email_details.jpg
 
 Email delivery
-------------------
+--------------
 
 Navigate to ‘Emails’ tab after entering in Stephanie’s email. The “Emails” tab shows all emails sent to the Advocate
 about the referral program. Look for the “Advocate Reward Paid Email”. There may be multiple emails like this.

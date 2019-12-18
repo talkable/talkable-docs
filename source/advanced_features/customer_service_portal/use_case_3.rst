@@ -87,7 +87,7 @@ the referral details the IP address and cookie to see if they match:
 .. image:: /_static/img/advanced_features/customer_service_portal/blocked_reasons.jpg
 
 Cross referrals
--------------------
+---------------
 
 The last use case is when an Advocate has not received his or her reward due to **Cross Referral**. Cross referral
 occurs when an Advocate shares with a Friend who purchases and that same Friend then shares with an Advocate

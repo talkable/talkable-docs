@@ -9,7 +9,7 @@ from an Advocate who is wondering why they didn’t receive their referral rewar
 create a reward for this Advocate.
 
 Gathering the info
-----------------------
+------------------
 
 In order to create a referral you need to know:
 
@@ -25,7 +25,7 @@ To find (2) Advocate’s participating campaign:
 .. image:: /_static/img/advanced_features/customer_service_portal/offers.jpg
 
 Creating the referral
--------------------------
+---------------------
 
 Now that you know the Advocate and a campaign they have participated in, you are now able to create a referral
 with this information:

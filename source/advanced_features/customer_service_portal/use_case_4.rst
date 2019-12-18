@@ -37,7 +37,7 @@ scope of the particular Advocate share.
 The same logic works for other sharing channels such as ‘Direct link’, ‘Facebook’, ‘SMS’ etc.
 
 Friend was blocked for self-referral
-----------------------------------------
+------------------------------------
 
 Again, the above only references valid cases where the Friend should have in fact received a reward. The alternative
 cases are listed below where Talkable identified that a Friend may be trying to game the system and therefore did NOT
