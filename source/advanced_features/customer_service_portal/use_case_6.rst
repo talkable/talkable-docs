@@ -42,7 +42,7 @@ with this information:
 .. image:: /_static/img/advanced_features/customer_service_portal/create_referral.jpg
 
 Viewing the results of the manually created referral
---------------------------------------------------------
+----------------------------------------------------
 
 After creating the referral manually you will be taken to the newly created referral details page:
 
