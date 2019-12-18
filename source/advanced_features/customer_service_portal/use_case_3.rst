@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 Use case #3: |br| Who should get the reward?
-=======================================
+============================================
 
 Talkable does not issue a reward in all referral cases. There may be numerous reasons why a reward is not issued to
 an Advocate or Friend. The easiest way to find out the reward status is by visiting the Referrals tab:

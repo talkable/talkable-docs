@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 Use case #1: |br| Where do I find referrals?
-=======================================
+============================================
 
 Person Lookup
 -------------

@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 Use case #5: |br| Blacklisting a user
-================================
+=====================================
 
 Occasionally you may want to blacklist a user or a group of users from participating in the program. This may happen
 if you discover that a user is posting links to a discounting coupon site or posting without your permission

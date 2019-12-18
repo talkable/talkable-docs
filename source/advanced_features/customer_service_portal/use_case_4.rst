@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 Use case #4: |br| Did my Friend get an email?
-========================================
+=============================================
 
 To investigate if the Advocate’s Friend has got an email, we’ll need to have their Friend’s email. All Advocate shares
 are located inside “Shares” tab:

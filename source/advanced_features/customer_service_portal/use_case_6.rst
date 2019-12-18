@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 Use case #6: |br| Creating a referral for an Advocate
-================================================
+=====================================================
 
 This example shows how to create a referral reward for some Advocate. A common customer service inquiry comes
 from an Advocate who is wondering why they didn’t receive their referral reward. This example shows you how to manually
