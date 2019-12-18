@@ -1,7 +1,7 @@
 .. _advanced_features/customer_service_portal/use_case_2:
 .. include:: /partials/common.rst
 
-Use case #2: Where is Advocate reward?
+Use case #2: |br| Where is Advocate reward?
 ======================================
 
 Advocates will receive an email with their reward for each qualified Friend they refer. In most cases this email will

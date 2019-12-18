@@ -1,7 +1,7 @@
 .. _advanced_features/customer_service_portal/use_case_1:
 .. include:: /partials/common.rst
 
-Use case #1: Where do I find referrals?
+Use case #1: |br| Where do I find referrals?
 =======================================
 
 Person Lookup

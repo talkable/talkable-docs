@@ -1,7 +1,7 @@
 .. _advanced_features/customer_service_portal/use_case_3:
 .. include:: /partials/common.rst
 
-Use case #3: Who should get the reward?
+Use case #3: |br| Who should get the reward?
 =======================================
 
 Talkable does not issue a reward in all referral cases. There may be numerous reasons why a reward is not issued to

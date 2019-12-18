@@ -1,7 +1,7 @@
 .. _advanced_features/customer_service_portal/use_case_4:
 .. include:: /partials/common.rst
 
-Use case #4: Did my Friend get an email?
+Use case #4: |br| Did my Friend get an email?
 ========================================
 
 To investigate if the Advocate’s Friend has got an email, we’ll need to have their Friend’s email. All Advocate shares
