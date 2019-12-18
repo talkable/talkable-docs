@@ -57,6 +57,8 @@ This is what the person gets as a result of some action (incentive). Available r
 - **Given**: the reward was paid to the person but Talkable does not have information as to whether it was used or not.
   Most likely it was not yet used.
 
+- **Voided**: the reward was voided because the referral was voided by a user manually.
+
 - **Blocked/No reward**: there was no reward created either because the associated referral was blocked according to
   Fraud Settings or because of other reasons: incentive criteria has blocked it, or the person was blacklisted.
 
