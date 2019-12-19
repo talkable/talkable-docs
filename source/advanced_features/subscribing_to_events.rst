@@ -10,7 +10,7 @@ Subscribing To Iframe Events
 Talkable integration embeds a referral campaign as an iframe with `src` attribute starting with `www.talkable.com` domain (or custom domain if the :ref:`white-labeling <advanced_features/white_labeling>` is setup).
 
 In order to subscribe to an iframe Event you need to know `name` HTML attribute of the Talkable iframe and the Event name.
-Iframe 'name' attribute may change depending on the campaign step opened. Thus, to use the right iframe name, open the campaign step you want to capture events from and copy the iframe name from the HTML of the page.
+Iframe 'name' attribute may change depending on the :ref:`campaign view <campaigns/views>` opened. Thus, to use the right iframe name, open the campaign view you want to capture events from and copy the iframe name from the HTML of the page.
 
 Below is an example of subscription to `offer_loaded` Talkable iframe Event.
 
