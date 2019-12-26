@@ -135,10 +135,10 @@ Post Purchase Script Notes
 --------------------------
 
 1. Mandatory parameters must be passed or the purchase will not be
-   passed to Talkable. Mandatory parameters are: {email, order\_number,
-   subtotal}
+   passed to Talkable. Mandatory parameters are: `email`, `order\_number`,
+   `subtotal`
 
-2. {coupon_code} is not mandatory, but it's preferred to be passed via the script, since some of the fraud checks and referral tracking methods rely on those
+2. `coupon_code` is not mandatory, but it's preferred to be passed via the script, since some of the fraud checks and referral tracking methods rely on those
 
 3. Shipping parameters are optional but gives the added benefit of
    additional fraud protection
