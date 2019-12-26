@@ -1,9 +1,8 @@
 .. code-block:: html
 
   <!-- Begin Talkable integration code -->
-  <div id="talkable-offer"></div>
-
   <script>
+    window._talkableq = window._talkableq || [];
     var _talkable_purchase_items = [];
 
     // Start for loop
@@ -19,13 +18,19 @@
 
     var _talkable_data = {
       purchase: {
-        order_number: '100011', // Required - Order number
-        subtotal: '23.97', // Required - Purchase Subtotal
-        coupon_code: 'SAVE20', // Required - Coupon code used at checkout, multiple coupons allowed as JS array: ['SAVE20', 'FREE-SHIPPING']. Pass null if when no coupon code was used at the checkout.
-        items: _talkable_purchase_items
+        order_number: '', // Required - Unique order number. Example: '100011'
+        subtotal: '', // Required - Order subtotal (pre-tax, post-discount). Example: '23.97'
+        coupon_code: '', // Coupon code that was used at checkout (pass multiple as an array). Example: 'SAVE20'
+        shipping_zip: '',  // Used for fraud protection by address. Example: '02222'
+        shipping_address: '', // Full address of the order, make sure to strictly follow a format: 'Apt #, Street address, City, State, ZIP, Country'
+        items: _talkable_purchase_items // Cart items declared in the example above
+      },
+      customer: {
+        email: '', // Required - email of the customer who issued a purchase. Example: 'customer@example.com'
+        traffic_source: '' // The source of the traffic driven to the campaign. Example: 'facebook'
       }
     };
 
-    _talkableq.push(['register_purchase', _talkable_data]); // Pass data to Talkable and show Post Purchase campaign as a result
+    window._talkableq.push(['register_purchase', _talkable_data]); // Pass data to Talkable and show Post Purchase campaign as a result
   </script>
   <!-- End Talkable integration code -->
