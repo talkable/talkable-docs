@@ -24,7 +24,7 @@ Talkable is composed of the following components:
 
    **Script Location.** The Post Purchase script should be placed on the checkout confirmation page.
 
-   **Script Dependency.** The Post Purchase script is dependent on the Initialization script to run.
+   **Script Dependency.** The Post Purchase script should be fired after the Initialization script.
 
    **Data Capture.** This script needs to capture purchase based details
 
@@ -113,20 +113,21 @@ passed where division by zero or `null` value does not occur.
 
    <!-- Begin Talkable integration code -->
    <script>
+     window._talkableq = window._talkableq || [];
      var _talkable_data = {
        purchase: {
-         order_number: '', // Unique order number. Example: '100011'
-         subtotal: '', // Order subtotal (pre-tax, post-discount). Example: '23.97'
+         order_number: '', // Required - Unique order number. Example: '100011'
+         subtotal: '', // Required - Order subtotal (pre-tax, post-discount). Example: '23.97'
          coupon_code: '', // Coupon code that was used at checkout (pass multiple as an array). Example: 'SAVE20'
-         shipping_zip: '',  // Optional - used for fraud protection by address. Example: '02222'
+         shipping_zip: '', // Used for fraud protection by address. Example: '02222'
          shipping_address: '' // Full address of the order, make sure to strictly follow a format: 'Apt #, Street address, City, State, ZIP, Country'
        },
        customer: {
-         email: '', // Customer email address who issued a purchase. Example: 'customer@example.com'
+         email: '', // Required - Email of the customer who issued a purchase. Example: 'customer@example.com'
          traffic_source: '' // The source of the traffic driven to the campaign. Example: 'facebook'
        }
      };
-     _talkableq.push(['register_purchase', _talkable_data]);
+     window._talkableq.push(['register_purchase', _talkable_data]);
    </script>
    <!-- End Talkable integration code -->
 
@@ -134,12 +135,10 @@ Post Purchase Script Notes
 --------------------------
 
 1. Mandatory parameters must be passed or the purchase will not be
-   passed to Talkable. Mandatory parameters are: {email, order\_number,
-   subtotal}
+   passed to Talkable. Mandatory parameters are: `email`, `order\_number`,
+   `subtotal`
 
-2. Coupon code is not mandatory, and Talkable will still consider it a
-   valid purchase without this, however if you have the ability to
-   surface this variable, then it should be passed.
+2. `coupon_code` is not mandatory, but it's preferred to be passed via the script, since some of the fraud checks and referral tracking methods rely on those
 
 3. Shipping parameters are optional but gives the added benefit of
    additional fraud protection
@@ -152,7 +151,7 @@ Post Purchase Script Notes
 5. If you’re using a tag manager :ref:`click here <integration/custom/integration_tag_manager>`.
 
 6. If you need to pass shopping cart line items, to see the alternate
-   post purchase integration script :ref:`click here <integration/custom/alternate_post_purchase>`.
+   post purchase integration script :ref:`click here <advanced_features/product_items>`.
 
 .. _integration/custom/integration_components/advocate_landing_page:
 
