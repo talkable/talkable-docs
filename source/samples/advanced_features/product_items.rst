@@ -26,7 +26,7 @@
         items: _talkable_purchase_items // Cart items declared in the example above
       },
       customer: {
-        email: '', // Required - email of the customer who issued a purchase. Example: 'customer@example.com'
+        email: '', // Required - Email of the customer who issued a purchase. Example: 'customer@example.com'
         traffic_source: '' // The source of the traffic driven to the campaign. Example: 'facebook'
       }
     };
