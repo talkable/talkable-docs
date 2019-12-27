@@ -25,7 +25,7 @@ Alternate Post Purchase Script for cart line item passing
         subtotal: '', // Required - Order subtotal (pre-tax, post-discount). Example: '23.97'
         coupon_code: '', // Coupon code that was used at checkout (pass multiple as an array). Example: 'SAVE20'
         items: _talkable_purchase_items,  // Cart items declared in the example above
-        shipping_zip: '',  // Used for fraud protection by address. Example: '02222'
+        shipping_zip: '', // Used for fraud protection by address. Example: '02222'
         shipping_address: '' // Full address of the order, make sure to strictly follow a format: 'Apt #, Street address, City, State, ZIP, Country'
       },
       customer: {
