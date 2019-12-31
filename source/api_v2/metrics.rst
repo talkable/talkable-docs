@@ -46,6 +46,8 @@ Returns a metric value which includes plain value, formatted value and result’
    traffic_sources   Optional: array of traffic sources for which data
                      is pulled.
    precision         Optional: integer value of precision for the result.
+   mobile_visitor    Optional: Boolean value. `true` - for only mobile visitors,
+                     `false` - for only desktop visitors.
    ================= ========================================================
 
 Example
