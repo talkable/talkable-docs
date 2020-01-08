@@ -54,6 +54,7 @@ Add the ``custom_properties`` collection to the data passed in the ``register_pu
 
     The values you pass in the ``custom_properties`` have to be JSON Key-Value pairs themselves,
     meaning that complex nested data structures can not be passed through.
+    Property names (``eye_color``) can contain lowercase letters, numbers and '_' only and cannot begin with a number
 
 .. raw:: html
 
