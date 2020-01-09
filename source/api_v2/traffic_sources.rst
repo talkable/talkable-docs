@@ -15,7 +15,7 @@ This API allows you to access traffic sources. Traffic source can be used to fil
 
    GET /traffic_sources
 
-Returns all traffic sources
+Returns traffic sources.
 
 .. container:: ptable
 
@@ -28,9 +28,6 @@ Returns all traffic sources
 
 Example
 -------
-
-Offers metric
-.............
 
 .. code-block:: text
 
