@@ -164,17 +164,11 @@ Sample response:
    }
 
 Detalized metric
-..........................
+................
 
 .. code-block:: text
 
-  curl -H "Content-Type: application/json" \
-     -X GET \
-     -u i9uil7nQgDjucCiTJu: \
-     -d '{"site_slug":"test","start_date":"2019-12-25",
-     "end_date":"2020-01-21","sharing_channels":["SMS","Email"],
-     "detalize_by":{"sharing_channels":"true","period": "month"}}' \
-     https://www.talkable.com/api/v2/metrics/shares/detalize
+  GET https://admin.talkable.com/api/v2/metrics/shares/detalize?site_slug=my-store&start_date=2019-12-25&end_date=2020-01-21&sharing_channels%5B%5D=Email&sharing_channels%5B%5D=SMS&detalize_by%5Bsharing_channels%5D=true&detalize_by%5Bperiod%5D=month
 
 Sample response:
 
