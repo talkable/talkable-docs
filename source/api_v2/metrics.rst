@@ -68,7 +68,7 @@ Returns a metric value which includes plain value, formatted value and result’
      metric            Specific metric name.
      start_date        Start of the period for which data is pulled, inclusively.
      end_date          End of the period for which data is pulled, inclusively.
-     detalize_by       Hash of specific detalization parameters for
+     detalize_by       JSON object with specific detalization parameters for
                        which data is pulled.
 
                        Options:
