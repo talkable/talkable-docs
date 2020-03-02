@@ -162,3 +162,56 @@ Sample response:
        "result_type": "money"
      }
    }
+
+Detalized metric
+..........................
+
+.. code-block:: text
+
+  curl -H "Content-Type: application/json" \
+     -X GET \
+     -u i9uil7nQgDjucCiTJu: \
+     -d '{"site_slug":"test","start_date":"2019-12-25",
+     "end_date":"2020-01-21","sharing_channels":["SMS","Email"],
+     "detalize_by":{"sharing_channels":"true","period": "month"}}' \
+     https://www.talkable.com/api/v2/metrics/shares/detalize
+
+Sample response:
+
+.. code-block:: javascript
+
+  {
+    "ok": true,
+    "result": {
+      "detalized": [
+        {
+          "formatted": "765",
+          "period": "12/25/19 - 12/31/19",
+          "plain": 765,
+          "result_type": "number",
+          "sharing_channel": "Email"
+        },
+        {
+          "formatted": "567",
+          "period": "1/1/20 - 1/21/20",
+          "plain": 567,
+          "result_type": "number",
+          "sharing_channel": "Email"
+        },
+        {
+          "formatted": "123",
+          "period": "12/25/19 - 12/31/19",
+          "plain": 123,
+          "result_type": "number",
+          "sharing_channel": "SMS"
+        },
+        {
+          "formatted": "321",
+          "period": "1/1/20 - 1/21/20",
+          "plain": 321,
+          "result_type": "number",
+          "sharing_channel": "SMS"
+        }
+      ]
+    }
+  }
