@@ -164,7 +164,7 @@ this request. This is useful if you have a multi-site setup or use a staging sit
    <h2>Whitelisting Talkable IPs</h2>
 
 In case your servers are behind firewall, you may need to whitelist Talkable IP
-addresses so webhooks can be delivered.  Pass list of these addresses to your network administrator:
+addresses so webhooks can be delivered. Pass list of these addresses to your network administrator:
 
 .. hlist::
    :columns: 4
