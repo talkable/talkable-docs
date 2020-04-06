@@ -47,8 +47,8 @@ Configuration
 
     - Visit https://admin.talkable.com/account/sites to find your site slug
     - Select site and go to **Dashboard** → **Settings** → **Site Settings**.
-      Find **Integration settings** section and there you will see your API Keys.
-      Use only the public key in your application submitted to the App Store.
+      Find **API integration** section and there you will see your API Keys.
+      Use only the *public key* in your application submitted to the App Store.
 
 2. Register talkable URL scheme:
 
