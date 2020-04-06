@@ -26,7 +26,8 @@ Installation
    .. code-block:: groovy
 
       dependencies {
-        implementation 'com.github.talkable:android-sdk:0.5.9'
+        ...
+        implementation 'com.github.talkable:android-sdk:0.5.10'
       }
 
 .. _setup_credentials:
@@ -50,8 +51,8 @@ Installation
 
       - Visit https://admin.talkable.com/account/sites to find your site slug
       - Select site and go to **Dashboard** → **Settings** → **Site Settings**.
-        Find **Integration settings** section and there you will see your API Keys.
-        Use only the public key in your application.
+        Find **API integration** section and there you will see your API Keys.
+        Use only the *public key* in your application.
 
 .. _deep_linking_scheme:
 
@@ -60,14 +61,17 @@ Installation
 
    .. code-block:: xml
 
-      <intent-filter>
-          <action android:name="android.intent.action.VIEW" />
+      <activity>
+          ...
+          <intent-filter>
+              <action android:name="android.intent.action.VIEW" />
 
-          <category android:name="android.intent.category.DEFAULT" />
-          <category android:name="android.intent.category.BROWSABLE" />
+              <category android:name="android.intent.category.DEFAULT" />
+              <category android:name="android.intent.category.BROWSABLE" />
 
-          <data android:scheme="tkbl-{{YOUR_SITE_SLUG}}" />
-      </intent-filter>
+              <data android:scheme="tkbl-{{YOUR_SITE_SLUG}}" />
+          </intent-filter>
+      </activity>
 
 .. _main_activity_setup:
 
