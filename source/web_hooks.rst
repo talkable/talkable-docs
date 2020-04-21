@@ -161,6 +161,42 @@ this request. This is useful if you have a multi-site setup or use a staging sit
 
 .. raw:: html
 
+   <h2>Whitelisting Talkable IPs</h2>
+
+In case your servers are behind firewall, you may need to whitelist Talkable IP
+addresses so webhooks can be delivered. Pass list of these addresses to your network administrator:
+
+.. hlist::
+   :columns: 4
+
+   * 100.26.94.244
+   * 18.207.91.200
+   * 184.73.206.68
+   * 23.21.155.129
+   * 3.226.56.48
+   * 3.82.131.34
+   * 34.195.139.227
+   * 34.197.54.191
+   * 34.226.253.236
+   * 34.231.104.179
+   * 34.234.27.220
+   * 35.169.186.170
+   * 35.171.77.58
+   * 35.173.174.244
+   * 50.17.244.178
+   * 52.2.244.36
+   * 52.22.0.55
+   * 52.44.214.85
+   * 52.45.68.245
+   * 52.6.41.1
+   * 52.7.94.243
+   * 54.162.235.87
+   * 54.164.128.44
+   * 54.208.14.192
+   * 54.86.208.153
+
+.. raw:: html
+
    <h2>Compatibility and Versioning</h2>
 
 Talkable Webhooks do not currently incorporate versioning. Current spec will not
