@@ -908,7 +908,7 @@ rybbon
 
 Takes a campaign key of a Rybbon Talkable campaign.
 Makes a claim request within the scope of the given campaign and returns a gift claim link.
-Requires Rybbon Access Key set up in Site Settings in order to work.
+Requires Rybbon app to be installed and enabled in order to work.
 
 .. code-block:: liquid
 
@@ -929,7 +929,7 @@ tremendous
 
 Takes a campaign key of a Tremendous campaign.
 Makes a claim request within the scope of the given campaign and returns a gift claim link.
-Requires Tremendous Access Token set up in Site Settings in order to work.
+Requires Tremendous app to be installed and enabled in order to work.
 Implies that there is only one funding source in the Tremendous account.
 
 .. code-block:: liquid
