@@ -17,7 +17,7 @@ Installation
 2. Drag and place the `TalkableSDK.framework` somewhere suitable into your Xcode project. Make sure to add the framework to the relevant targets.
 3. Add the following frameworks to your project:
 
-  - `AddressBook.framework`
+  - `Contacts.framework`
   - `MessageUI.framework`
   - `SafariServices.framework`
   - `Security.framework`
