@@ -12,7 +12,6 @@ and encourage |advocate| to share using the buttons.
 
 - For Standalone Campaign it triggers when |advocate| signs up.
 - For Post-Checkout Campaign it triggers when |advocate| makes store purchase.
-  It is not recommended to use this email here since it may look spammy.
 
 Main |cta| should point to an Advocate Share Page — ``{{ share_page_url }}``.
 
