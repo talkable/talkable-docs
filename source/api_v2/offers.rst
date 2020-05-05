@@ -110,7 +110,7 @@ With sharing links
 
 .. code-block:: text
 
-   GET https://www.talkable.com/api/v2/offers/89238912?site_slug=my-store&sharing_channels=facebook,twitter,custom
+   GET https://www.talkable.com/api/v2/offers/89238912?site_slug=my-store&sharing_channels[]=facebook&sharing_channels[]=twitter&sharing_channels[]=custom
 
 Sample response:
 
