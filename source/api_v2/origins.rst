@@ -252,7 +252,55 @@ Sample response:
          "short_url_code": "Jp8qY9",
          "email": "affiliate@example.com",
          "show_url": "https://www.talkable.com/x/5BN5h7",
-         "claim_url": "https://www.talkable.com/x/TM2OhR"
+         "claim_url": "https://www.talkable.com/x/TM2OhR",
+         "coupon_code": null,
+         "incentives": [
+           "referrer": {
+             "action_type": "referrer",
+             "description": "$5",
+             "percentage": false,
+             "amount": 5,
+             "criteria_config": {
+               "new_customer": true,
+               "new_optin": false,
+               "subtotal_min": null,
+               "subtotal_max": null,
+               "referrals_min": null,
+               "referrals_max": null,
+               "reward_uniqueness": "once_per_friend",
+               "friend_event_category": "purchase",
+               "has_liquid_criteria": false
+             },
+             "for_advocate": true,
+             "for_friend": false,
+             "highest_amount": true,
+             "identifier": "referrer",
+             "incentive_type": "discount_coupon",
+             "coupon_expires_at": null
+           },
+           "friend_new_customer": {
+             "action_type": "click",
+             "description": "$5",
+             "percentage": false,
+             "amount": 5,
+             "criteria_config": {
+               "once_per_person": true,
+               "new_customer": true,
+               "new_optin": false,
+               "allow_on_expired_offer": false,
+               "allow_on_self_referral": false,
+               "has_liquid_criteria": false
+             },
+             "for_advocate": false,
+             "for_friend": true,
+             "highest_amount": true,
+             "identifier": "friend_new_customer",
+             "incentive_type": "discount_coupon",
+             "coupon_expires_at": null
+           }
+         ],
+         "trigger_widget": false,
+         "campaign_tags": ["invite"]
        }
      }
    }
@@ -298,7 +346,55 @@ Sample response:
          "short_url_code": "Jp8qY9",
          "email": "affiliate@example.com",
          "show_url": "https://www.talkable.com/x/5BN5h7",
-         "claim_url": "https://www.talkable.com/x/TM2OhR"
+         "claim_url": "https://www.talkable.com/x/TM2OhR",
+         "coupon_code": null,
+         "incentives": [
+           "referrer": {
+             "action_type": "referrer",
+             "description": "$5",
+             "percentage": false,
+             "amount": 5,
+             "criteria_config": {
+               "new_customer": true,
+               "new_optin": false,
+               "subtotal_min": null,
+               "subtotal_max": null,
+               "referrals_min": null,
+               "referrals_max": null,
+               "reward_uniqueness": "once_per_friend",
+               "friend_event_category": "purchase",
+               "has_liquid_criteria": false
+             },
+             "for_advocate": true,
+             "for_friend": false,
+             "highest_amount": true,
+             "identifier": "referrer",
+             "incentive_type": "discount_coupon",
+             "coupon_expires_at": null
+           },
+           "friend_new_customer": {
+             "action_type": "click",
+             "description": "$5",
+             "percentage": false,
+             "amount": 5,
+             "criteria_config": {
+               "once_per_person": true,
+               "new_customer": true,
+               "new_optin": false,
+               "allow_on_expired_offer": false,
+               "allow_on_self_referral": false,
+               "has_liquid_criteria": false
+             },
+             "for_advocate": false,
+             "for_friend": true,
+             "highest_amount": true,
+             "identifier": "friend_new_customer",
+             "incentive_type": "discount_coupon",
+             "coupon_expires_at": null
+           }
+         ],
+         "trigger_widget": false,
+         "campaign_tags": ["invite"]
        },
        "claim_links": {
          "facebook": "https://www.talkable.com/x/8L6xO2",
