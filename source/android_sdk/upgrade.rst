@@ -6,6 +6,11 @@ Upgrade
 
 Sometimes we need you to upgrade existing integration to use our latest features.
 
+0.5.11
+------
+
+Added WhatsApp sharing support. Fixed `WebView` reload bug.
+
 0.5.10
 ------
 
