@@ -15,21 +15,24 @@ Friend Email, and a Purchase made by a Referred Friend. Each referral is passed 
  1. **In progress**: Talkable referral engine is processing the referral. Such action usually takes less than a second
     so it is highly unlikely that you will see this status. No rewards are issued at this point.
 
- 2. **Pending**: a referral is pending approval. Talkable referral engine can either approve referrals automatically
-    with some delay (optionally) or leave this decision to the user (manual, not recommended as it leads to
-    backlogged referrals). Thus, if the referral fraud checks were passed successfully each referral stays in Pending
-    status until they are approved automatically based on the auto-approval delay configuration (configured inside Fraud
-    Settings). No rewards are issued at this point.
+ 2. **Pending**: a referral is pending approval. Talkable referral engine approves pending referrals automatically
+    with a delay set under fraud settings. A user can also approve a referral manually until the auto-approval happens.
+    Thus, if the referral fraud checks were passed successfully each referral will eventually become approved.
+    No rewards are issued up until approval.
 
- 3. **Flagged**: due to having many different options to configure referral fraud checks, it is not always possible to
-    set up an automatic resolution for each referral. For such cases, you may want to Flag referrals that are in a so
-    called grey area, where the chance of fraud is around 50% and it is impossible to make the decision automatically.
-    All flagged referrals are added to a queue for manual resolution and can be accessed inside CSP → Referrals.
-    No rewards are issued at this point.
+ 3. **Flagged**: due to having many different options to configure referral fraud checks,
+    it is not always possible to set up an automatic resolution for each referral.
+    For such cases, you may want to Flag referrals that are in a so-called grey area,
+    where the chance of fraud is around 50% and it is impossible to make the decision automatically.
+    All flagged referrals are added to a queue and can be accessed inside CSP → Referrals.
+    No rewards are issued at this point. All flagged referrals will be automatically resolved
+    to either voided or approved status, depending on the fraud settings configuration.
+    It is recommended to void flagged referrals automatically so you can only approve valid ones manually.
+    As a result this can save lots of time as most flagged referrals are rather suspicious than valid.
 
- 4. **Approved**: this is a valid referral status which either gets set by the Talkable referral engine with automatic
-    approval or by a user in case of manual resolution. Flagged referrals can also turn to approved since they are
-    resolved manually. All rewards associated with the referral are then passed to the next stage to verify if they
+ 4. **Approved**: this is a valid referral status which either gets set by the Talkable referral engine
+    or by a user. Flagged referrals can also turn to approved. All rewards associated
+    with the referral are then passed to the next stage to verify if they
     can be issued.
 
  5. **Voided**: this status is set by a user manually if they decide a referral is invalid and there should be no
@@ -48,8 +51,7 @@ Reward
 
 This is what the person gets as a result of some action (incentive). Available reward statuses:
 
-- **Pending**: the reward is awaiting referral approval. The referral can either be approved manually or automatically,
-  depending on your configuration.
+- **Pending**: the reward is awaiting referral approval.
 
 - **Waiting for coupon**: there are not enough coupons left to pay the reward. The reward will remain in a 'waiting'
   status until more coupons are uploaded into the associated coupon list.
