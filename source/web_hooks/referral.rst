@@ -2,13 +2,13 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Referral Webhook notifies your endpoint that your brand Advocate’s referral status has become “Approved” or “Unblocked”.
+   :description: Referral Webhook notifies your endpoint that your brand Advocate’s referral status has become “Approved”.
 
 Referral Webhook
 ================
 
 The Talkable Referral Webhook notifies your endpoint that an |advocate| referral
-status has become “Approved” or “Unblocked” specifically for a |friend| purchase
+status has become “Approved” specifically for a |friend| purchase
 or event.
 
 Use cases for the Referral Webhook include:
@@ -23,7 +23,7 @@ Use cases for the Referral Webhook include:
    <h2>When does Talkable call the Referral Webhook?</h2>
 
 Talkable Referral Webhook is triggered any time an Advocate referral status has become
-“Approved” or “Unblocked” specifically for a Friend purchase or event.
+“Approved” specifically for a Friend purchase or event.
 
 **Note:** Referral Webhook triggers only for Advocate rewards specifically from a Friend
 Purchase or Friend Event (such as signup event or subscription purchase event).
