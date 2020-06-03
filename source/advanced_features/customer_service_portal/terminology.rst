@@ -42,10 +42,6 @@ Friend Email, and a Purchase made by a Referred Friend. Each referral is passed 
  6. **Blocked**: when some fraud checks are failed Talkable referral engine blocks the referral immediately. All rewards
     associated with the referral are getting blocked as a result.
 
- 7. **Unblocked**: this status gets set manually by a user if they decide to approve the referral in case it was blocked
-    automatically (due to some fraud checks failed) but the user thinks it is a valid referral after checking it
-    manually. All rewards associated with the referral are then passed to the next stage to verify if they can be issued.
-
 Reward
 ------
 
