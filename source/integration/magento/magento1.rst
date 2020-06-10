@@ -11,7 +11,7 @@ Magento 1.x Integration
 
    You must have Talkable account in order to get started
 
-A `Magento Talkable extension`_ (`direct download`_) is available for easy
+A `Magento Talkable extension`_ is available for easy
 integration. The extension currently supports Magento versions 1.5+
 
 1. Log into your Magento Admin Panel (usually located at
@@ -64,9 +64,8 @@ integration. The extension currently supports Magento versions 1.5+
 
 In case you cannot find Talkable extension in the sidebar try clearing cache:
 
-   * In Admin Panel, go to **System** → **Cache Management**.
+   * In Admin Panel, go to **System** → **Cache Management**.y
    * Click **Flush Magento Cache**.
    * Then click **Select All**, select action *"Refresh"* and click **Submit**.
 
-.. _Magento Talkable extension: https://marketplace.magento.com/talkable-talkable.html
-.. _direct download: https://github.com/talkable/talkable-magento/releases/latest
+.. _Magento Talkable extension: https://github.com/talkable/talkable-magento/releases/latest
