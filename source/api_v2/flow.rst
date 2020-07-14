@@ -50,7 +50,7 @@ This is last step before |friend| proceeds to your site or app.
 
 You need to pass the visitor `uuid` variable to your site via destination URL GET paramter and store it somewhere in order to later pass it with :ref:`Origin <api_v2/origins>`
 
-Example destination URL: `http://merchant.com?talkable_visitor_uuid={{visitor_uuid}}&utm_source=talkable&...`
+Example destination URL: `http://merchant.com?tkbl_cvuuid={{visitor_uuid}}&utm_source=talkable&...`
 
 Submit Origin data to talkable to generate the referral
 -------------------------------------------------------

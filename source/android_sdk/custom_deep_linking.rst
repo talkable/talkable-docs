@@ -27,7 +27,7 @@ To use deep linking with Talkable campaigns, simply use your deep link URL as yo
 
    If you have configured a custom Friend Destination URL for your campaign,
    make sure the following GET parameters are present in the final URL:
-   ``?talkable_visitor_uuid={{ visitor_uuid }}&talkable_visitor_offer_id={{ friend_offer.id }}``.
+   ``?tkbl_cvuuid={{ visitor_uuid }}&talkable_visitor_offer_id={{ friend_offer.id }}``.
 
    All major deep linking providers support passing additional GET parameters
    with the deep link. This functionality is used to pass the Friend's identifying
