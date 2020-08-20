@@ -33,6 +33,13 @@ The list of tracking methods by their priority:
 
 .. raw:: html
 
+   <h2>Force Manually Generated</h2>
+
+- Only applies when the referral is made from Talkable admin pages.
+- This is a Manually Generated Referral with skipped all fraud policy rules and incentive criterias.
+
+.. raw:: html
+
    <h2>Sticky Advocate</h2>
 
 - Only available for sites that have this feature enabled in the site settings.
