@@ -13,6 +13,12 @@ The Getting Started guide shows you how to setup and launch Referral Campaign as
 Installation
 ------------
 
+Talkable SDK could be integrated using CocoaPods or as a static library.
+
+If you want to use CocoaPods way, here is `Talkable SDK pod's page`_.
+
+To integrate the SDK as a static library, please follow next intructions:
+
 1. Download the latest version of `Talkable SDK framework`_.
 2. Drag and place the `TalkableSDK.framework` somewhere suitable into your Xcode project. Make sure to add the framework to the relevant targets.
 3. Add the following frameworks to your project:
@@ -97,6 +103,7 @@ Requirements
 The SDK supports iOS 9.0 and later.
 
 .. _`Talkable SDK framework`: https://talkable-downloads.s3.amazonaws.com/ios-sdk/talkable_ios_sdk.zip
+.. _`Talkable SDK pod's page`: https://cocoapods.org/pods/TalkableSDK
 
 .. container:: hidden
 
