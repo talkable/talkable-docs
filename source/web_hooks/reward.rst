@@ -105,14 +105,32 @@ Webhook Set Up Steps <web_hooks>`
 
 * **reward** — subhash of parameters describing the reward itself
 
+  * **id** — unique identifier of the reward
   * **reason** — reason why this reward was given
+  * **status** — status of the reward (i.e. "Paid", "Unpaid", "Voided")
   * **incentive_type** — type of incentive (rebate, discount_coupon, other)
-  * **incentive_description** — description of incentive (human readable, equals
+  * **incentive_identifier** — unique human-readable identifier of the incentive
+  * **incentive_description** — description of incentive (human-readable, equals
     to non monetary description if **incentive_type** is other)
   * **amount** — amount of money to reward (null when **incentive_type** is
     discount_coupon or other)
-  * **coupon_code** — coupon code received by person as a reward (null when
-    **incentive_type** is rebate or other)
+
+  * **coupon** — reward coupon details (null when **incentive_type**
+    is rebate or other)
+
+    * **active** — true if the coupon has not expired yet
+    * **amount** — amount of the discount that the coupon provides
+    * **code** — unique coupon code
+    * **description** — human-readable representation of the discount
+      (e.g. "$15" or "10%")
+    * **id** — unique identifier of the coupon
+    * **percentage_discount** — true if the coupon amount is percentage
+      as opposed to a fixed value
+    * **single_use** — true if the coupon is single-use
+    * **usages** — number of times the coupon has been used
+      (null if the coupon is multi-use)
+    * **used** — true if the coupon has been used
+    * **valid_until** — expiration time of the coupon
 
 * **advocate_origin** - subhash of data related to the advocate event
 
