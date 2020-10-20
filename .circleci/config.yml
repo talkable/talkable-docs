@@ -1,15 +1,16 @@
-version: 2
+version: 2.1
+
+executors:
+  default:
+    docker:
+      - auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_ACCESS_TOKEN
+        image: circleci/python:3.8
+
 jobs:
   build:
-    docker:
-      - image: circleci/python:3.7
-
-    working_directory: ~/talkable-docs
-
-    branches:
-      ignore:
-        - gh-pages
-        - /.*-gh-pages/
+    executor: default
 
     steps:
       - checkout
@@ -34,3 +35,15 @@ jobs:
       - run:
           name: Build documentation
           command: venv/bin/sphinx-build -nW -b html -d build/doctrees source build/html
+
+workflows:
+  workflow:
+    jobs:
+      - build:
+          context:
+            - org-global
+          filters:
+            branches:
+              ignore:
+                - gh-pages
+                - /.*-gh-pages/

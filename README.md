@@ -1,7 +1,7 @@
 Talkable Documentation
 ======================
 
-[![Build Status](https://circleci.com/gh/talkable/talkable-docs.svg?style=svg&circle-token=cc33458158e7b0c1f6f8cbf1bcbf74f00ee28a8e)](https://circleci.com/gh/talkable/talkable-docs)
+[![Build Status](https://circleci.com/gh/talkable/talkable-docs.svg?style=svg&circle-token=cc33458158e7b0c1f6f8cbf1bcbf74f00ee28a8e)](https://circleci.com/gh/talkable/workflows/talkable-docs)
 
 This GitHub repository represents Talkable’s documentation site, located at [docs.talkable.com](http://docs.talkable.com).
 
