@@ -44,41 +44,41 @@ Sample response:
          {
            "appearance": "inline",
            "id": 35944,
-           "joinable_category_names": ["affiliate_member"],
            "name": "API campaign",
            "new_customer": null,
            "origin_max_age": null,
            "origin_min_age": null,
            "tag_names": ["api"],
-           "slug": "35944-api-campaign",
+           "slug": 35944,
            "type": "Standalone Campaign",
-           "is_active": true
+           "is_active": true,
+           "status": "Live"
          },
          {
            "appearance": "popup",
            "id": 34601,
-           "joinable_category_names": ["purchase"],
            "name": "PP campaign",
            "new_customer": null,
            "origin_max_age": null,
            "origin_min_age": null,
            "tag_names": ["default"],
-           "slug": "34601-pp-campaign",
+           "slug": 34601,
            "type": "Post-Checkout Campaign",
-           "is_active": true
+           "is_active": true,
+           "status": "Live"
          },
          {
            "appearance": "inline",
            "id": 34376,
-           "joinable_category_names": ["affiliate_member"],
            "name": "Inactive campaign",
            "new_customer": null,
            "origin_max_age": null,
            "origin_min_age": null,
            "tag_names": ["default"],
-           "slug": "34376",
+           "slug": 34376,
            "type": "Standalone Campaign",
-           "is_active": false
+           "is_active": false,
+           "status": "Disabled"
          }
        ]
      }
