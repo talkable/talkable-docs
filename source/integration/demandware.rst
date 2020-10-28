@@ -4,8 +4,8 @@
 .. meta::
    :description: Talkable cartridge is a self-contained cartridge, which you can easily integrate into any Salesforce Commerce Cloud project.
 
-Demandware Integration
-======================
+Salesforce Commerce Cloud Integration
+=====================================
 
 .. note::
 
@@ -20,6 +20,6 @@ of Talkable marketing programs applied to their site.
 
 Link to Talkable cartridge on the Salesforce Commerce Cloud:
 |br|
-`<http://www.demandware.com/link-marketplace/talkable>`_
+`<https://www.salesforce.com/products/commerce-cloud/partner-marketplace/partners/talkable/>`_
 
 Link to download integration documentation: `Integration Guide </_static/talkable-integration-guide.pdf>`_
