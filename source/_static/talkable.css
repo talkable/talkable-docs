@@ -14,6 +14,14 @@ body {
     padding: 0;
 }
 
+div.admonition, div.topic, blockquote {
+  clear: none;
+}
+
+div.sidebar::after, div.topic::after, div.admonition::after, blockquote::after {
+  clear: none;
+}
+
 .clearfix {
     *zoom: 1;
 }
