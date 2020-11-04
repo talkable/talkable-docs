@@ -7,7 +7,7 @@
 Params Encryption
 =================
 
-For additional security, it is possible to encrypt Advocate emails, Friend emails and :ref:`Custom User Data <advanced_features/passing_custom_data>` on back-end.
+For additional security, it is possible to encrypt Advocate email, Friend email and :ref:`Custom User Data <advanced_features/passing_custom_data>` on back-end.
 This can be done by using 2048-bit key `Talkable Public Key`_.
 So, instead of sending params in plain text, you can send them encrypted.
 
