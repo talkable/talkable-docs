@@ -1,15 +1,15 @@
-.. _advanced_features/email_encryption:
+.. _advanced_features/params_encryption:
 .. include:: /partials/common.rst
 
 .. meta::
    :description: It is possible to encrypt Advocate and Friend emails on back-end if you want to provide additional security.
 
-Email Encryption
+Params Encryption
 ================
 
-For additional security, it is possible to encrypt Advocate and Friend emails on back-end.
+For additional security, it is possible to encrypt Advocate emails, Friend emails and :ref:`Custom User Data <advanced_features/passing_custom_data>` on back-end.
 This can be done by using 2048-bit key `Talkable Public Key`_.
-So, instead of sending email addresses in plain text, you can send them encrypted.
+So, instead of sending params in plain text, you can send them encrypted.
 
 Passing email as a GET parameter to Standalone Campaign
 -------------------------------------------------------
@@ -136,5 +136,6 @@ Please modify the front-end using this pseudo code example:
    </script>
 
 .. _Talkable Public Key: https://d2jjzw81hqbuqv.cloudfront.net/integration/talkable_public_key.pem
+.. _Custom User Data
 .. _Bouncy Castle Library: https://www.bouncycastle.org
 .. _Bouncy Castle Latest Releases: https://www.bouncycastle.org/latest_releases.html
