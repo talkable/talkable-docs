@@ -139,6 +139,5 @@ Please modify the front-end using this pseudo code example:
    </script>
 
 .. _Talkable Public Key: https://d2jjzw81hqbuqv.cloudfront.net/integration/talkable_public_key.pem
-.. _Custom User Data
 .. _Bouncy Castle Library: https://www.bouncycastle.org
 .. _Bouncy Castle Latest Releases: https://www.bouncycastle.org/latest_releases.html
