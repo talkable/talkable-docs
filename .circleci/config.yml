@@ -6,7 +6,7 @@ executors:
       - auth:
           username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_ACCESS_TOKEN
-        image: circleci/python:3.8
+        image: circleci/python:3.9
 
 jobs:
   build:
