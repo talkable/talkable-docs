@@ -14,11 +14,18 @@ body {
     padding: 0;
 }
 
-div.admonition, div.topic, blockquote {
+div.admonition,
+div.topic,
+blockquote,
+pre, div[class*="highlight-"] {
   clear: none;
 }
 
-div.sidebar::after, div.topic::after, div.admonition::after, blockquote::after {
+div.sidebar::after,
+div.topic::after,
+div.admonition::after,
+blockquote::after,
+div.section::after {
   clear: none;
 }
 
