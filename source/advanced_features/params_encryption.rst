@@ -1,15 +1,15 @@
-.. _advanced_features/email_encryption:
+.. _advanced_features/params_encryption:
 .. include:: /partials/common.rst
 
 .. meta::
    :description: It is possible to encrypt Advocate and Friend emails on back-end if you want to provide additional security.
 
-Email Encryption
-================
+Params Encryption
+=================
 
-For additional security, it is possible to encrypt Advocate and Friend emails on back-end.
+For additional security, it is possible to encrypt Advocate email, Friend email and :ref:`Custom User Data <advanced_features/passing_custom_data>` on back-end.
 This can be done by using 2048-bit key `Talkable Public Key`_.
-So, instead of sending email addresses in plain text, you can send them encrypted.
+So, instead of sending params in plain text, you can send them encrypted.
 
 Passing email as a GET parameter to Standalone Campaign
 -------------------------------------------------------
@@ -32,12 +32,12 @@ Ruby Example
      end
    end
 
-   def encode_email_for_talkable(email)
-     encrypted_email = key.public_encrypt(email)
-     Base64.strict_encode64(encrypted_email)
+   def encode_param_for_talkable(param)
+     encrypted_param = key.public_encrypt(param)
+     Base64.strict_encode64(encrypted_param)
    end
 
-   puts encode_email_for_talkable("email_to_encrypt@example.com")
+   puts encode_param_for_talkable("email_to_encrypt@example.com")
 
 Java Example
 ------------
@@ -70,7 +70,7 @@ that can be downloaded from `Bouncy Castle Latest Releases`_.
    import org.bouncycastle.openssl.jcajce.JcaPEMKeyConverter;
 
    public class EncryptionDemo {
-       static class EmailEncryptor {
+       static class ParamEncryptor {
            private Cipher cipher;
            private Key publicKey;
 
@@ -86,37 +86,37 @@ that can be downloaded from `Bouncy Castle Latest Releases`_.
                cipher.init(Cipher.ENCRYPT_MODE, publicKey);
            }
 
-           public EmailEncryptor() throws IOException, GeneralSecurityException {
+           public ParamEncryptor() throws IOException, GeneralSecurityException {
                initPublicKey();
                initCipher();
            }
 
-           public String encryptEmail(String email) throws BadPaddingException, IllegalBlockSizeException {
-               byte[] input = email.getBytes();
+           public String encryptParam(String param) throws BadPaddingException, IllegalBlockSizeException {
+               byte[] input = param.getBytes();
                byte[] cipherText = cipher.doFinal(input);
                byte[] encodedBytes = Base64.getEncoder().encode(cipherText);
                return new String(encodedBytes);
            }
        }
 
-       static EmailEncryptor emailEncryptor;
+       static ParamEncryptor paramEncryptor;
 
        static {
            Security.addProvider(new BouncyCastleProvider());
            try {
-               emailEncryptor = new EmailEncryptor();
+               paramEncryptor = new ParamEncryptor();
            } catch (IOException | GeneralSecurityException e) {
                e.printStackTrace();
            }
        }
 
-       public static String encryptEmail(String email) throws BadPaddingException, IllegalBlockSizeException {
-           return emailEncryptor.encryptEmail(email);
+       public static String encryptParam(String param) throws BadPaddingException, IllegalBlockSizeException {
+           return paramEncryptor.encryptParam(param);
        }
 
        public static void main(String[] args) throws Exception {
            String email = "encrypted_email@example.com";
-           System.out.println(encryptEmail(email));
+           System.out.println(encryptParam(email));
        }
    }
 
@@ -129,9 +129,12 @@ Please modify the front-end using this pseudo code example:
 
    <script>
      _talkableq.push(['authenticate_customer', {
-       email: '<%= to_json(TalkableEmail.encrypt(current_user.email)) %>',
+       email: '<%= to_json(TalkableEncryptionService.encrypt(current_user.email)) %>',
        first_name: '<%= to_json(current_user.first_name) %>',
-       last_name: '<%= to_json(current_user.last_name) %>'
+       last_name: '<%= to_json(current_user.last_name) %>',
+       person_custom_properties: {
+         secret: '<%= to_json(TalkableEncryptionService.encrypt(current_user.secret)) %>'
+       }
      }]);
    </script>
 

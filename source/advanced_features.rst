@@ -31,7 +31,7 @@ each with links to integration details.
      - Explore full details for each individual customer and their referral journey,
        manage their rewards and deliver excellent customer service.
 
-   * - :ref:`Email encryption <advanced_features/email_encryption>`
+   * - :ref:`Params encryption <advanced_features/params_encryption>`
      - For additional security, it is possible to encrypt Advocate and Friend emails on back-end.
 
    * - :ref:`File encryption <advanced_features/file_encryption>`
@@ -82,7 +82,7 @@ each with links to integration details.
     advanced_features/personal_coupon_sharing
     advanced_features/converting_into_localization
     advanced_features/customer_service_portal
-    advanced_features/email_encryption
+    advanced_features/params_encryption
     advanced_features/events
     advanced_features/file_encryption
     advanced_features/product_items
