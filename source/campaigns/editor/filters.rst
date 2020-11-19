@@ -407,7 +407,7 @@ Available options:
 |hr|
 
 points
-.....
+......
 
 Formats number using conversion rate for loyalty from site settings.
 
