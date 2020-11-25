@@ -474,7 +474,7 @@ Accepts singular (required) and plural (optional) forms.
    ``{{ 2 | pluralize: "sheep" }}``                               ``2 sheep``
    ``{{ 1 | pluralize: "day off" }}``                             ``1 day off``
    ``{{ 5 | pluralize: "day off" }}``                             ``5 day offs``
-   ``{{ 5 | pluralize: "day off", "days off" }}``                 ``5 days off``
+   ``{{ 0 | pluralize: "day off", "days off" }}``                 ``0 days off``
    ============================================================== ==============
 
 As shown in the table, simple words can be pluralized without specifying plural form.
