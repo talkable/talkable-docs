@@ -44,7 +44,7 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
      * **subtotal** - order subtotal for the purchase
      * **coupon_code** - coupon code used with the purchase
      * **traffic_source** - traffic source of the Purchase
-     * **ip_address**
+     * **ip_address** - IP address of the Purchase
 
   *For Event:*
 
@@ -55,7 +55,7 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
      * **subtotal** - optional monetary attribute of the Event
      * **coupon_code** - optional coupon code associated with the Event
      * **traffic_source** - traffic source of the Event
-     * **ip_address**
+     * **ip_address** - IP address of the Event
 
 * **person** - subhash of data describing the person who triggered the event
 

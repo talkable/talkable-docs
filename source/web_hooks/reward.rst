@@ -151,6 +151,8 @@ Webhook Set Up Steps <web_hooks>`
   * **subtotal** - advocate’s order subtotal
   * **email** - advocate’s email address
   * **customer_id** - unique identifier of advocate
+  * **ip_address** - advocate’s order IP address
+  * **traffic_source** — advocate’s order traffic source
 
 * **friend_origin** - subhash of data related to the friend event
 
@@ -164,6 +166,8 @@ Webhook Set Up Steps <web_hooks>`
   * **subtotal** - friend’s order subtotal
   * **email** - friend’s email address
   * **customer_id** - unique identifier of friend
+  * **ip_address** - friend’s order IP address
+  * **traffic_source** — friend’s order traffic source
 
 .. raw:: html
 
