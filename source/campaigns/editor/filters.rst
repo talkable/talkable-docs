@@ -459,6 +459,29 @@ Returns ``value``.
 
 |hr|
 
+pluralize
+.........
+
+Returns the singular or plural form of a word based on the value of a number.
+Accepts singular (required) and plural (optional) forms.
+
+.. container:: ptable
+
+   ============================================================== ==============
+   Example                                                        Result
+   ============================================================== ==============
+   ``{{ 5 | pluralize: "point" }}``                               ``5 points``
+   ``{{ 2 | pluralize: "sheep" }}``                               ``2 sheep``
+   ``{{ 1 | pluralize: "day off" }}``                             ``1 day off``
+   ``{{ 5 | pluralize: "day off" }}``                             ``5 day offs``
+   ``{{ 0 | pluralize: "day off", "days off" }}``                 ``0 days off``
+   ============================================================== ==============
+
+As shown in the table, simple words can be pluralized without specifying plural form.
+However, more advanced cases require explicit plural form to work correctly.
+
+|hr|
+
 claim\_url
 ..........
 
