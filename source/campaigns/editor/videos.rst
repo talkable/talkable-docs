@@ -28,21 +28,21 @@ Liquid Tutorial 1: Intro & Navigation
 
 .. raw:: html
 
-   <iframe src="http://fast.wistia.net/embed/iframe/akeaiptdp2" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="640" height="363"></iframe>
+   <iframe src="https://fast.wistia.net/embed/iframe/akeaiptdp2" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="640" height="363"></iframe>
 
 Liquid Tutorial 2: Using Variables and Filters
 ----------------------------------------------
 
 .. raw:: html
 
-   <iframe src="http://fast.wistia.net/embed/iframe/upf8tdkdy4" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="640" height="372"></iframe>
+   <iframe src="https://fast.wistia.net/embed/iframe/upf8tdkdy4" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="640" height="372"></iframe>
 
 Liquid Tutorial 3: Using Custom Assets
 --------------------------------------
 
 .. raw:: html
 
-   <iframe src="http://fast.wistia.net/embed/iframe/p08rp1t2gy" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="640" height="336"></iframe>
+   <iframe src="https://fast.wistia.net/embed/iframe/p08rp1t2gy" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="640" height="336"></iframe>
 
 .. |liquid_basics| raw:: html
 
