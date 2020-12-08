@@ -64,7 +64,7 @@ Manual integration
 
 8. Then navigate to:
 
-    * Open `Themes/Templates`
+    * Open `Themes / Templates`
     * Click “Add a new template“
     * Create a new template for `page` called `talkable`
     * Paste the following code inside layout of this page instead of `{{ page.content }}`:
