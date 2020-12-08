@@ -97,7 +97,7 @@ Manual integration
     * Click “Add page“
     * Add title `Referral Dashboard`
     * Select Template suffix `page.dashboard.talkable`
-    * Click “Save” (Customer accounts must be enabled in Settings/Checkout)
+    * Click “Save” (Customer accounts must be enabled in `Settings / Checkout`)
 
 10. Then navigate to:
 
