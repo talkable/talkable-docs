@@ -88,9 +88,14 @@ triggered twice.
        "recipients": ["john@example.com"]
      },
      "origin": {
-       "id": 273085748,
+       "id": 147886587,
        "type": "Purchase",
-       "email": "referrer@example.com"
+       "order_number": "450901776",
+       "subtotal": 35.03,
+       "customer_id": "565659001",
+       "ip_address": "127.0.0.1",
+       "coupon_code": "WHT29123",
+       "traffic_source": "post-checkout"
      }
    }
 
@@ -100,7 +105,7 @@ triggered twice.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&site=<site>&type=post_share_web_hook&payload={"campaign":{"id":83587635,"type":"StandaloneCampaign","cached_slug":83587635,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"share_type":"email","share_info":{"recipients":["john@example.com"]},"origin":{"id":273085748,"type":"Purchase","email":"referrer@example.com"}}' <url>
+   curl --data 'key=<key>&site=<site>&type=post_share_web_hook&payload={"campaign":{"id":83587635,"type":"StandaloneCampaign","cached_slug":83587635,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"share_type":"email","share_info":{"recipients":["john@example.com"]},"origin":{"id":654689661,"type":"Purchase","order_number":"426692385","subtotal":29.39,"customer_id":"162638070","order_date":"2019-04-11T07:28:31.258-07:00","coupon_code":"WHT79679","ip_address":"127.0.0.1","traffic_source":"post-checkout"}}' <url>
 
 .. container:: hidden
 
