@@ -2,7 +2,7 @@
 
 ## Demo
 <!--- Please provide a link to a demo -->
-http://void-docs.talkable.com/
+https://deploy-preview-{{id}}--talkable-docs.netlify.app/
 
 ## Related Stories
 <!--- If this pull request is related to JIRA story, please link to the story here -->
