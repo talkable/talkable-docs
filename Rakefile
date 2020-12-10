@@ -66,6 +66,7 @@ task :deploy => :'deploy:production'
 
 namespace :deploy do
   def deploy(domain:, html_branch:, source_branch:, disallow_robots:, push_command:)
+    sh "pip3 install -r requirements.txt"
     sh "git checkout #{html_branch}"
     sh 'git pull'
     sh "find . -not -path './.git' -not -path './.git/*' -not -path './Rakefile' -not -path './.circleci' -not -path './.circleci/*' -delete"
