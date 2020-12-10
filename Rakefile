@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 require 'mkmf'
-require 'open3'
 
 SPHINX_BUILD = ENV['SPHINX_BUILD'] || 'sphinx-build'
 SOURCE_DIR   = 'source'
@@ -23,7 +22,7 @@ task :environment do
 
   regexp = /(\d+\.)?(\d+\.)?(\*|\d+)/
   required = File.read('requirements.txt').match(regexp).to_s
-  installed = Open3.capture3("#{SPHINX_BUILD} --version")[1].match(regexp).to_s
+  installed = `#{SPHINX_BUILD} --version`.match(regexp).to_s rescue ''
   if !required.empty? && !installed.empty? && Gem::Version.new(required) > Gem::Version.new(installed)
     abort "\nYou are running an outdated version of Sphinx #{installed}. Required version is #{required}. Run `pip3 install -r requirements.txt` to upgrade Sphinx."
   end
