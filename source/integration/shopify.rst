@@ -21,12 +21,14 @@ Automatic integration
 |space_indent| - Provide a valid Shopify store URL. Example: |example_link|. |br|
 |space_indent| - Choose “Shopify” as your platform during registration process
 
-2. On the Welcome screen click "I’m a Developer"
-3. Click **Install Shopify App**
+2. On the Welcome screen click “I’m a Developer“
+3. Pass Shopify authorization
 4. You will be redirected to your Shopify store, log in and click the install button
 5. After successful installation you will be redirected back to Talkable
-6. Create, set up, and launch Campaigns (Invite, Advocate Dashboard, etc.)
-7. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`.
+6. Click “Integrate automatically“
+7. Turn on coupon auto-sync checkbox
+8. Create, set up, and launch Campaigns (Invite, Advocate Dashboard, etc.)
+9. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`.
 
   .. note::
 
@@ -38,12 +40,17 @@ Automatic integration
 Manual integration
 ------------------
 
-1. In your Shopify Admin follow:
+1. Provide a valid Shopify store URL and choose “Shopify” as your platform during registration process
+2. On the Welcome screen click “I’m a Developer”
+3. Pass Shopify authorization
+4. You will be redirected to your Shopify store, log in and click the install button
+5. After successful installation you will be redirected back to Talkable
+6. Click “Integrate manually“
+7. In your Shopify Admin follow:
 
     * Online Store
     * Themes
-    * Click “Customize” near your current theme
-    * Theme actions → Edit code
+    * Actions → Edit code
     * Open `Layout / theme.liquid` file
     * Before closing `</head>` paste the following code:
 
@@ -55,27 +62,44 @@ Manual integration
 
     * Click “Save”.
 
-2. Then navigate to:
+8. Then navigate to:
 
-    * Open `Themes/Templates`
-    * Click `Add a new template`
+    * Open `Themes / Templates`
+    * Click “Add a new template“
     * Create a new template for `page` called `talkable`
-    * Paste the following code inside layout of this page:
+    * Paste the following code inside layout of this page instead of `{{ page.content }}`:
 
     .. code-block:: html
 
       <div id="talkable-offer"></div>
 
     * Click “Save”
+    * Create a new template for page called dashboard.talkable
+    * Paste the following code inside layout of this page instead of `{{ page.content }}`:
 
-3. Then navigate to:
+    .. code-block:: html
+
+      {% if shop.customer_accounts_enabled %}
+        {% if customer %}
+          <div id="talkable-offer"></div>
+        {% else %}
+          {{ 'Log in' | customer_login_link }}
+        {% endif %}
+      {% endif %}
+
+9. Then navigate to:
 
     * Open `Online Store / Pages`
-    * Click `Add page`
+    * Click “Add page“
+    * Add title `Share`
     * Select Template suffix `page.talkable`
     * Click “Save”
+    * Click “Add page“
+    * Add title `Referral Dashboard`
+    * Select Template suffix `page.dashboard.talkable`
+    * Click “Save” (Customer accounts must be enabled in `Settings / Checkout`)
 
-4. Then navigate to:
+10. Then navigate to:
 
     * Settings
     * Checkout
@@ -88,20 +112,12 @@ Manual integration
 
     .. include:: /partials/note_sample_integration.rst
 
-5. Click “Save”.
-6. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`.
-
-Watch a |video| demonstrating the full integration from start to finish.
-
-|br|
+11. Click “Save”.
+12. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`.
 
 .. |example_link| raw:: html
 
   <span class="a">http://123test.myshopify.com</span>
-
-.. |video| raw:: html
-
-   <a href="https://youtu.be/NxVscXSRtSA" target="_blank">video</a>
 
 .. container:: hidden
 
