@@ -143,8 +143,6 @@ Default values correspond to default placements in Talkable.
 
 .. image:: /_static/img/magento2/configure6.jpg
 
-|page_break|
-
 .. _Talkable extension:
 .. _Magento 2 Integration Extension: https://marketplace.magento.com/talkable-magento2-integration.html
 .. _Magento Extensions Guide: https://devdocs.magento.com/extensions/install/

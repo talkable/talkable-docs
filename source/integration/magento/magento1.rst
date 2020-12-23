@@ -8,7 +8,7 @@ Magento 1.x Integration
 =======================
 .. warning::
 
-   From June 30, 2020 Adobe doesn't support Magento 1.
+   Magento 1 is not supported from July 1st, 2020.
 
 .. note::
 
@@ -18,13 +18,13 @@ A `Magento Talkable extension`_ is available for easy
 integration. The extension currently supports Magento versions 1.5+
 
 1. Since Magento 1 reached EOL and Magento 1 extensions were removed from the
-   Magento Marketplace, you only have ability to download them manually via SSH / FTP.
+   Magento Marketplace, you’re only able to download them manually via SSH / FTP.
 
 2. After the extension has been installed, you must enable the extension and set
    your Talkable Site ID. Click the **Return to Admin** link and navigate to
    **System** → **Configuration**:
 
-   .. image:: /_static/img/magento/magento-flow-3.jpg
+   .. image:: /_static/img/magento/magento-flow-1.jpg
 
    Note: If you have more than one store, set the **Current Configuration Scope**
    on the top left to the store you want to enable Talkable on. Note this must be
@@ -32,12 +32,12 @@ integration. The extension currently supports Magento versions 1.5+
 
 3. In the left sidebar navigation click on **Talkable** → **Extension Options** tab:
 
-   .. image:: /_static/img/magento/magento-flow-4.jpg
+   .. image:: /_static/img/magento/magento-flow-2.jpg
 
 4. Then, enter your Talkable Site ID. You can copy it from the integration page
    inside Talkable, or on your Talkable Site Dashboard:
 
-   .. image:: /_static/img/magento/magento-flow-5.jpg
+   .. image:: /_static/img/magento/magento-flow-3.jpg
 
    Note: If you see an error opening Talkable extension settings, please
    re-login to Admin Panel and try again.
@@ -46,7 +46,7 @@ integration. The extension currently supports Magento versions 1.5+
 
 5. Go back to Talkable Integration page and click "Verify Integration" button:
 
-   .. image:: /_static/img/magento/magento-flow-6.jpg
+   .. image:: /_static/img/magento/magento-flow-4.jpg
 
 .. raw:: html
 
