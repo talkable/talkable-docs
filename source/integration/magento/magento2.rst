@@ -11,7 +11,7 @@ Magento 2.x Integration
 
    To get started, you must have an account created with Talkable, and a Magento Marketplace account.
    If you do not have a Magento Marketplace account configured, follow
-   `these steps <http://docs.magento.com/marketplace/user_guide/quick-tour/install-extension.html>`_
+   `these steps <https://docs.magento.com/user-guide/magento/magento-marketplace.html#marketplace-credentials>`_
    to connect one to your Magento store.
 
 The `Magento 2 Integration Extension`_ is available to download in the Magento Marketplace.
