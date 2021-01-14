@@ -406,6 +406,42 @@ Available options:
 
 |hr|
 
+points
+......
+
+Formats number using conversion rate for loyalty from site settings.
+
+.. code-block:: liquid
+
+   {{ "50" | points }}
+
+Returns ``500``.
+
+Available options:
+
+* ``delimiter``
+* ``format``
+* ``percentage_discount (boolean)``
+* ``convert (boolean)`` - It will work like money filter if value `false`
+
+.. container:: ptable
+
+   ============================================================== ==============
+   Example                                                        Result
+   ============================================================== ==============
+   ``{{ "10050" | points: delimiter: "_" }}``                     ``100_500``
+   -------------------------------------------------------------- --------------
+   ``{{ "100" | points: format: "%nP" }}``                        ``1000P``
+   -------------------------------------------------------------- --------------
+   ``{{ "100" | points: convert: false }}``                       ``$100.00``
+   ``{{ "1000" | points: convert: false, delimiter: "," }}``      ``$1,000.00``
+   ``{{ "100" | points: convert: false, unit: "€" }}``            ``€100.00``
+   -------------------------------------------------------------- --------------
+   ``{{ "100" | points: percentage_discount: true }}``            ``500``
+   ============================================================== ==============
+
+|hr|
+
 strip
 .....
 
