@@ -11,7 +11,7 @@ Magento 2.x Integration
 
    To get started, you must have an account created with Talkable, and a Magento Marketplace account.
    If you do not have a Magento Marketplace account configured, follow
-   `these steps <http://docs.magento.com/marketplace/user_guide/quick-tour/install-extension.html>`_
+   `these steps <https://docs.magento.com/user-guide/magento/magento-marketplace.html#marketplace-credentials>`_
    to connect one to your Magento store.
 
 The `Magento 2 Integration Extension`_ is available to download in the Magento Marketplace.
@@ -26,35 +26,7 @@ Installation
 
    .. image:: /_static/img/magento2/install0.jpg
 
-2. Navigate to **System** → **Web Setup Wizard** in your Magento store admin panel.
-
-   .. image:: /_static/img/magento2/install1.jpg
-
-3. Choose **Extension Manager**.
-
-   .. image:: /_static/img/magento2/install2.jpg
-
-4. The Extension Manager will indicate that you have extensions ready to be installed.
-   Click the **Review and Install** button.
-
-   .. image:: /_static/img/magento2/install3.jpg
-
-5. Click the **Install** button at the top of the list to install all listed extensions.
-   To just install Talkable, find the extension in the list and click **Install**.
-
-   .. image:: /_static/img/magento2/install4.jpg
-
-6. Follow the steps to complete the Talkable extension installation.
-
-   .. image:: /_static/img/magento2/install5.jpg
-
-.. warning::
-
-   Take note of the `Magento 2.x system requirements`_ regarding extension installation.
-   Magento recommends that you have 2GB of RAM allocated to PHP for upgrading and installing
-   extensions from the Marketplace.
-
-   Refer to `Troubleshooting`_ section of this guide if you encounter problems during this step.
+2. Follow `Magento Extensions Guide`_ for installation.
 
 |page_break|
 
@@ -171,69 +143,6 @@ Default values correspond to default placements in Talkable.
 
 .. image:: /_static/img/magento2/configure6.jpg
 
-|page_break|
-
-Troubleshooting
----------------
-
-This section describes the solutions to some common issues encountered during installation
-that do not provide helpful error messages or a clear path forward.
-If you encounter an issue that isn't described here, please refer to the
-Magento `troubleshooting suggestions`_ for the Component Manager and other Magento documentation.
-
-|nbsp|
-
-* **Check Component Dependency** step fails without an error message
-
-  .. image:: /_static/img/magento2/troubleshooting1.jpg
-
-  The Check Component Dependency script has likely run out of memory.
-  Magento 2.x requires at least 756MB of RAM allocated to PHP.
-  However, to use Web Setup Wizard for system upgrades and extension installation,
-  Magento recommends allocating 2GB of memory to PHP. Please refer to the `Required PHP Settings`_
-  guide and update your configuration.
-
-  |nbsp|
-
-* **Create Backup** step fails without error message
-
-  .. image:: /_static/img/magento2/troubleshooting2.jpg
-
-  Backup creation in Component Manager is performed as a single web request.
-  This request can take a long time, especially if you have chosen all three
-  backup options (*Code*, *Media*, and *Database*). If the backup request takes
-  longer to complete than allowed by your server configuration, the server will
-  terminate the request, resulting in backup failure.
-
-  |page_break|
-
-  Possible solutions:
-
-  1. Choose to only back up *Code* at the Create Backup step. If you have your own backup procedure
-     set up, we recommend performing it prior to installing the extension.
-
-     .. image:: /_static/img/magento2/troubleshooting3.jpg
-
-  2. Configure your server to allow long-running requests.
-
-    * In PHP configuration, increase ``max_execution_time`` to 300-600 seconds.
-      This can be done either in your ``php.ini`` file or in the ``.htaccess``
-      file in your Magento root folder.
-
-    * For Apache 2, increase ``TimeOut`` to 300-600 seconds in your server configuration.
-
-    * For nginx + php-fpm, set the following directives in your server configuration::
-
-        client_header_timeout 300s;
-        client_body_timeout 300s;
-        fastcgi_read_timeout 300s;
-
-      .. warning::
-
-         Increased request timeout settings can negatively affect server performance.
-
 .. _Talkable extension:
 .. _Magento 2 Integration Extension: https://marketplace.magento.com/talkable-magento2-integration.html
-.. _Magento 2.X system requirements: http://devdocs.magento.com/guides/v2.0/install-gde/system-requirements-tech.html
-.. _Required PHP Settings: http://devdocs.magento.com/guides/v2.0/install-gde/prereq/php-settings.html
-.. _troubleshooting suggestions: http://devdocs.magento.com/guides/v2.0/comp-mgr/trouble/tshoot.html
+.. _Magento Extensions Guide: https://devdocs.magento.com/extensions/install/
