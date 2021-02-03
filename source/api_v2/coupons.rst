@@ -92,16 +92,17 @@ Sample response:
            }
          },
          "campaign": {
+           "appearance": "inline",
            "id": 196,
            "name": "Deal for friends",
-           "tag_names": ["invite"],
-           "joinable_category_names": ["affiliate_member"],
+           "new_customer": null,
            "origin_min_age": null,
            "origin_max_age": null,
-           "new_customer": null,
+           "tag_names": ["invite"],
            "slug": 196,
            "type": "Standalone Campaign",
-           "is_active": true
+           "is_active": true,
+           "status": "Live"
          },
          "incentive": {
            "amount": 10.0,
@@ -187,16 +188,17 @@ Sample response:
            }
          },
          "campaign": {
+           "appearance": "inline",
            "id": 196,
            "name": "Deal for friends",
            "tag_names": ["invite"],
-           "joinable_category_names": ["affiliate_member"],
            "origin_min_age": null,
            "origin_max_age": null,
            "new_customer": null,
            "slug": 196,
            "type": "Standalone Campaign",
-           "is_active": true
+           "is_active": true,
+           "status": "Live"
          },
          "incentive": {
            "amount": 10.0,

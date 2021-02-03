@@ -24,7 +24,7 @@ to change campaign functionality and appearance.
 |br| This choice was made mainly because of developers who are already
 familiar with Liquid templating in Shopify.
 
-To start editing Views simple visit ``Editor`` page from the Campaign dashboard.
+To start editing Views simply visit ``Editor`` page from the Campaign dashboard.
 
 .. raw:: html
 
