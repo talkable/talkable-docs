@@ -105,7 +105,7 @@ Sample response:
             "email": "customer@example.com",
             "first_name": null,
             "last_name": null
-          },
+         },
          "campaign_id": 196,
          "created_at": "2019-05-27T15:41:31.000-07:00",
          "friend_person": {
@@ -113,7 +113,7 @@ Sample response:
             "email": "friend@example.com",
             "first_name": null,
             "last_name": null
-          },
+         },
          "id": 233,
          "offer_id": 867,
          "qa_generated": false,

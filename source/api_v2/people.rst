@@ -179,7 +179,7 @@ Sample response:
      "ok": true,
      "result": {
        "person": {
-         "personal_claim_url": "http://share.mystore.com/by/customer@example.com",
+         "personal_claim_url": "https://share.mystore.com/by/customer@example.com",
          "events_count": 0,
          "first_name": "John",
          "last_name": "Smith",
@@ -212,7 +212,7 @@ Sample response:
      }
    }
 
-Person referrals
+Get Friends referred by Advocate
 ......................
 
 .. code-block:: text
@@ -254,8 +254,20 @@ Sample response:
         },
         {
           "ad_rewarded": true,
+          "advocate_person": {
+            "id": 39198,
+            "email": "customer@example.com",
+            "first_name": null,
+            "last_name": null
+          },
           "campaign_id": 145,
           "created_at": "2021-03-02T09:16:15.000-08:00",
+          "friend_person": {
+            "id": 39200,
+            "email": "john@example.com",
+            "first_name": "John",
+            "last_name": null
+          },
           "id": 2,
           "offer_id": 71,
           "qa_generated": false,
@@ -264,24 +276,12 @@ Sample response:
           "status": "approved",
           "track_method": "cookie",
           "updated_at": "2021-03-02T09:16:16.000-08:00",
-          "advocate_person": {
-            "id": 39198,
-            "email": "customer@example.com",
-            "first_name": null,
-            "last_name": null
-          },
-          "friend_person": {
-            "id": 39200,
-            "email": "john@example.com",
-            "first_name": "John",
-            "last_name": null
-          }
         }
       ]
     }
   }
 
-Person rewards
+Get rewards received by person
 ......................
 
 .. code-block:: text
@@ -335,7 +335,7 @@ Sample response:
   }
 
 
-Person shares
+Get shares made by person
 ......................
 
 .. code-block:: text
@@ -351,16 +351,16 @@ Sample response:
     "result": {
       "shares": [
         {
-          "short_url": "http://www.talkable.com/x/8t9d2p",
+          "short_url": "https://www.talkable.com/x/8t9d2p",
           "channel_identifier": "facebook",
           "id": 11,
           "type": "SocialOfferShare",
           "offer": {
-            "claim_url": "http://www.talkable.com/x/14PMvl",
+            "claim_url": "https://www.talkable.com/x/14PMvl",
             "email": "test-offer@gmail.com",
             "id": 71,
             "short_url_code": "0EiKB3",
-            "show_url": "http://www.talkable.com/x/ArhsqM",
+            "show_url": "https://www.talkable.com/x/ArhsqM",
             "coupon_code": null,
             "incentives": {
               "referrer": {
@@ -408,42 +408,36 @@ Sample response:
               }
             },
             "trigger_widget": false,
-            "campaign_tags": [
-              "test-invite"
-            ]
+            "campaign_tags": ["test-invite"]
           },
           "campaign": {
             "slug": 145,
             "is_active": true,
             "appearance": "inline",
             "id": 145,
-            "joinable_category_names": [
-              "affiliate_member"
-            ],
+            "joinable_category_names": ["affiliate_member"],
             "name": "Standalone landing page",
             "new_customer": null,
             "origin_max_age": null,
             "origin_min_age": null,
             "status": "Test",
-            "tag_names": [
-              "test-invite"
-            ],
+            "tag_names": ["test-invite"],
             "type": "Standalone Campaign"
           },
           "friends_count": 0,
           "friend_clicks_count": 0
         },
         {
-          "short_url": "http://www.talkable.com/x/14PMvl",
+          "short_url": "https://www.talkable.com/x/14PMvl",
           "channel_identifier": "other",
           "id": 10,
           "type": "SocialOfferShare",
           "offer": {
-            "claim_url": "http://www.talkable.com/x/14PMvl",
+            "claim_url": "https://www.talkable.com/x/14PMvl",
             "email": "test-offer@gmail.com",
             "id": 71,
             "short_url_code": "0EiKB3",
-            "show_url": "http://www.talkable.com/x/ArhsqM",
+            "show_url": "https://www.talkable.com/x/ArhsqM",
             "coupon_code": null,
             "incentives": {
               "referrer": {
@@ -491,26 +485,20 @@ Sample response:
               }
             },
             "trigger_widget": false,
-            "campaign_tags": [
-              "test-invite"
-            ]
+            "campaign_tags": ["test-invite"]
           },
           "campaign": {
             "slug": 145,
             "is_active": true,
             "appearance": "inline",
             "id": 145,
-            "joinable_category_names": [
-              "affiliate_member"
-            ],
+            "joinable_category_names": ["affiliate_member"],
             "name": "Standalone landing page",
             "new_customer": null,
             "origin_max_age": null,
             "origin_min_age": null,
             "status": "Test",
-            "tag_names": [
-              "test-invite"
-            ],
+            "tag_names": ["test-invite"],
             "type": "Standalone Campaign"
           },
           "friends_count": 4,
@@ -548,7 +536,7 @@ Sample response:
      "ok": true,
      "result": {
        "person": {
-         "personal_claim_url": "http://share.mystore.com/by/lizard_king",
+         "personal_claim_url": "https://share.mystore.com/by/lizard_king",
          "events_count": 0,
          "first_name": "John",
          "last_name": "Smith",
@@ -606,7 +594,7 @@ Sample response:
      "ok": true,
      "result": {
        "person": {
-         "personal_claim_url": "http://share.mystore.com/by/customer@example.com",
+         "personal_claim_url": "https://share.mystore.com/by/customer@example.com",
          "events_count": 0,
          "first_name": "John",
          "last_name": "Smith",

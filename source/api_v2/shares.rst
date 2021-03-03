@@ -134,26 +134,20 @@ Sample response:
             }
           },
           "trigger_widget": false,
-          "campaign_tags": [
-            "test-invite"
-          ]
+          "campaign_tags": ["test-invite"]
         },
         "campaign": {
           "slug": 145,
           "is_active": true,
           "appearance": "inline",
           "id": 145,
-          "joinable_category_names": [
-            "affiliate_member"
-          ],
+          "joinable_category_names": ["affiliate_member"],
           "name": "Standalone landing page",
           "new_customer": null,
           "origin_max_age": null,
           "origin_min_age": null,
           "status": "Test",
-          "tag_names": [
-            "test-invite"
-          ],
+          "tag_names": ["test-invite"],
           "type": "Standalone Campaign"
         },
         "friends_count": 4,
