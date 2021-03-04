@@ -50,7 +50,6 @@ Sample response:
            "origin_min_age": null,
            "tag_names": ["api"],
            "slug": 35944,
-           "type": "Standalone Campaign",
            "is_active": true,
            "status": "Live"
          },
@@ -63,7 +62,6 @@ Sample response:
            "origin_min_age": null,
            "tag_names": ["default"],
            "slug": 34601,
-           "type": "Post-Checkout Campaign",
            "is_active": true,
            "status": "Live"
          },
@@ -76,7 +74,6 @@ Sample response:
            "origin_min_age": null,
            "tag_names": ["default"],
            "slug": 34376,
-           "type": "Standalone Campaign",
            "is_active": false,
            "status": "Disabled"
          }

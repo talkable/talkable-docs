@@ -147,8 +147,7 @@ Sample response:
           "origin_max_age": null,
           "origin_min_age": null,
           "status": "Test",
-          "tag_names": ["test-invite"],
-          "type": "Standalone Campaign"
+          "tag_names": ["test-invite"]
         },
         "friends_count": 4,
         "friend_clicks_count": 1,

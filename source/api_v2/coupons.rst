@@ -100,7 +100,6 @@ Sample response:
            "origin_max_age": null,
            "tag_names": ["invite"],
            "slug": 196,
-           "type": "Standalone Campaign",
            "is_active": true,
            "status": "Live"
          },
@@ -196,7 +195,6 @@ Sample response:
            "origin_max_age": null,
            "new_customer": null,
            "slug": 196,
-           "type": "Standalone Campaign",
            "is_active": true,
            "status": "Live"
          },
