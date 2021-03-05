@@ -213,7 +213,7 @@ Sample response:
    }
 
 Get Friends referred by Advocate
-......................
+................................
 
 .. code-block:: text
 
@@ -282,7 +282,7 @@ Sample response:
   }
 
 Get rewards received by person
-......................
+..............................
 
 .. code-block:: text
 
@@ -336,7 +336,7 @@ Sample response:
 
 
 Get shares made by person
-......................
+.........................
 
 .. code-block:: text
 
