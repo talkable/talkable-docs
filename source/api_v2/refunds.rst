@@ -36,7 +36,7 @@ Makes refund.
 
    data              Optional: JSON object with ``refunded_at`` property.
 
-                     E.g. ``{"refunded_at": "12345"}`` or  ``{"refunded_at": "12345"}``
+                     E.g. ``{"refunded_at": "2020-04-27T00:00:00.000-07:00"}``
 
    ================= ========================================================
 
@@ -61,31 +61,16 @@ Sample response:
    {
      "ok": true,
      "result": {
-       "referral": {
-         "ad_rewarded": true,
-         "advocate_person": {
-            "id": 39198,
-            "email": "customer@example.com",
-            "first_name": null,
-            "last_name": null
-         },
-         "campaign_id": 196,
-         "created_at": "2019-05-27T15:41:31.000-07:00",
-         "friend_person": {
-            "id": 39202,
-            "email": "friend@example.com",
-            "first_name": null,
-            "last_name": null
-         },
-         "id": 233,
-         "offer_id": 867,
-         "qa_generated": false,
-         "referred_origin_id": 622,
-         "referred_subtotal": 35.03,
-         "status": "approved",
-         "track_method": "coupon",
-         "updated_at": "2019-05-27T15:41:31.000-07:00"
-       }
+       "customer_id": null,
+       "email": "ad160654@gmail.com",
+       "id": 5,
+       "ip_address": "100.107.1.171",
+       "order_number": "1357007111724",
+       "subtotal": 100.0,
+       "type": "Purchase",
+       "order_date": "2020-01-20T01:46:10.000-07:00",
+       "refunded_at": "2020-04-27T00:00:00.000-07:00",
+       "coupon_code": ""
      }
    }
 

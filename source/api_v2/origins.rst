@@ -162,6 +162,7 @@ Sample response:
          "customer_id": null,
          "ip_address": "127.0.0.1",
          "type": "Purchase",
+         "refunded_at": null,
          "coupon_code": ""
        },
        "offer": null
@@ -205,6 +206,7 @@ Sample response:
          "event_category": "newsletter_subscription",
          "customer_id": null,
          "ip_address": "127.0.0.1",
+         "refunded_at": null,
          "coupon_code": ""
        },
        "offer": null
