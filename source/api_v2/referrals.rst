@@ -108,6 +108,21 @@ Sample response:
          },
          "campaign_id": 196,
          "created_at": "2019-05-27T15:41:31.000-07:00",
+         "fraud_details": null,
+         "fraud_policies_status": {
+           "blocked": [],
+           "flagged": [],
+           "skipped": [
+             "Matching by IP Address only"
+           ],
+           "passed": [
+             "Matching Email or Cookie on Friend Purchase",
+             "Similar Email Match",
+             "Matching Shipping Address",
+             "Matching by Combination of IP Address &amp; User Agent",
+             "Friend and Advocate Refer Each Other"
+           ]
+         },
          "friend_person": {
             "id": 39202,
             "email": "friend@example.com",

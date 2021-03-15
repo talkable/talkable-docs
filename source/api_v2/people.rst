@@ -237,6 +237,21 @@ Sample response:
           },
           "campaign_id": 145,
           "created_at": "2021-03-02T09:24:55.000-08:00",
+          "fraud_details": null,
+          "fraud_policies_status": {
+            "blocked": [],
+            "flagged": [],
+            "skipped": [
+              "Matching by IP Address only"
+            ],
+            "passed": [
+              "Matching Email or Cookie on Friend Purchase",
+              "Similar Email Match",
+              "Matching Shipping Address",
+              "Matching by Combination of IP Address &amp; User Agent",
+              "Friend and Advocate Refer Each Other"
+            ]
+          },
           "friend_person": {
             "id": 39202,
             "email": "friend@example.com",
@@ -262,6 +277,21 @@ Sample response:
           },
           "campaign_id": 145,
           "created_at": "2021-03-02T09:16:15.000-08:00",
+          "fraud_details": null,
+          "fraud_policies_status": {
+            "blocked": [],
+            "flagged": [],
+            "skipped": [
+              "Matching by IP Address only"
+            ],
+            "passed": [
+              "Matching Email or Cookie on Friend Purchase",
+              "Similar Email Match",
+              "Matching Shipping Address",
+              "Matching by Combination of IP Address &amp; User Agent",
+              "Friend and Advocate Refer Each Other"
+            ]
+          },
           "friend_person": {
             "id": 39200,
             "email": "john@example.com",
@@ -276,6 +306,46 @@ Sample response:
           "status": "approved",
           "track_method": "cookie",
           "updated_at": "2021-03-02T09:16:16.000-08:00",
+        },
+        {
+          "ad_rewarded": false,
+          "advocate_person": {
+            "id": 39198,
+            "email": "customer@example.com",
+            "first_name": null,
+            "last_name": null
+          },
+          "campaign_id": 143,
+          "created_at": "2021-03-15T04:44:55.000-07:00",
+          "fraud_details": "Self Referral",
+          "fraud_policies_status": {
+            "blocked": [
+              "Matching Email or Cookie on Friend Purchase",
+              "Similar Email Match",
+              "Matching by IP Address only",
+              "Friend and Advocate Refer Each Other"
+            ],
+            "flagged": [],
+            "skipped": [],
+            "passed": [
+              "Matching Shipping Address",
+              "Matching by Combination of IP Address &amp; User Agent"
+            ]
+          },
+          "friend_person": {
+            "id": 39202,
+            "email": "friend@example.com",
+            "first_name": null,
+            "last_name": null
+          },
+          "id": 5332,
+          "offer_id": 74,
+          "qa_generated": false,
+          "referred_origin_id": 40090,
+          "referred_subtotal": 23,
+          "status": "blocked",
+          "track_method": "cookie",
+          "updated_at": "2021-03-15T04:44:56.000-07:00",
         }
       ]
     }
