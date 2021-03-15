@@ -15,7 +15,7 @@ This API allows you to make refunds. See examples below.
 
    POST /api/v2/origins/<origin_slug>/refund
 
-Makes refund.
+Marks origin as refunded.
 
 .. container:: ptable
 
@@ -43,8 +43,8 @@ Makes refund.
 Example
 -------
 
-Refund a Purchase
-.................
+Mark Purchase as Refunded
+.........................
 
 .. code-block:: bash
 
@@ -65,7 +65,7 @@ Sample response:
        "email": "ad160654@gmail.com",
        "id": 5,
        "ip_address": "100.107.1.171",
-       "order_number": "1357007111724",
+       "order_number": "B00K2EOONI",
        "subtotal": 100.0,
        "type": "Purchase",
        "order_date": "2020-01-20T01:46:10.000-07:00",
