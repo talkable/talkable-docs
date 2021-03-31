@@ -59,12 +59,7 @@ Initialization Script Notes
    .. figure:: /_static/img/site_id.png
       :alt: Site ID
 
-2. **Variables.** Use your dynamic variables to pass user details {email,
-   first_name, last_name} if the user is logged in and the data
-   exists. If the data does not exist, you can pass a null value or a
-   blank string. If your website doesn’t have a user accounts section
-   and this info is never available, it’s acceptable to completely omit
-   the parameters, or pass empty strings.
+2. **Variables.** Use your dynamic variables to pass user details
 
 |hr|
 
