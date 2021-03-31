@@ -42,7 +42,7 @@ Integration
 
      <div id="talkable-loyalty"></div>
 
-   It is recommended to add it above the discount field. Here is two examples:
+   It is recommended to add it above the discount field. Examples:
 
    .. figure:: /_static/img/loyalty/loyalty_checkout.png
       :alt: Sample checkout
