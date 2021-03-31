@@ -79,7 +79,7 @@ the body of the page:
 Loyalty Dashboard Notes
 -----------------------
 
-1. The :ref:`Talkable Initialization Script <integration/custom/integration_components/initialization_script>` must be present in your head
+1. The :ref:`Talkable Initialization Script <integration/loyalty/integration_components/initialization_script>` must be present in your head
    template in order for the loyalty dashboard to work
 
 2. Talkable will inject loyalty content where Talkable Container
