@@ -14,17 +14,13 @@ Talkable Loyalty is composed of the following components:
    **Script Location.** The Initialization script should be placed in the head template or some template
    that spans every page. All other integration components are dependent on the Init script.
 
-   **Data Capture** The Initialization Script should be passed variables for logged in users:
+   **Data Capture** The Initialization Script should pass variables for logged in users:
 
     - Email
-    - Custom Properties
 
-2. **??? Purchases.** In case your business has one-time purchases and subscription model, or you are in SaaS
-   business we recommend integrating through Events. :ref:`Learn more <advanced_features/events>`.
+2. :ref:`Loyalty Dashboard <integration/loyalty/integration_components/loyalty_dashboard>`
 
-3. :ref:`Loyalty Dashboard <integration/loyaty/integration_components/loyalty_dashboard>`.
-
-4. :ref:`Loyalty Redeem Widget <integration/loyaty/integration_components/loyalty_redeem_widget>`.
+3. :ref:`Loyalty Redeem Widget <integration/loyalty/integration_components/loyalty_redeem_widget>`
 
 |hr|
 
@@ -47,15 +43,9 @@ script.
      window._talkableq = window._talkableq || [];
      window._talkableq.unshift(['init', { site_id: '<YOUR-TALKABLE-SITE-ID>' }]);
 
-     ///
      window._talkableq.push(['authenticate_customer', {
-       email: '', // Optional, pass when available. Example: 'customer@example.com'
-       first_name: '', // Optional, pass when available. Example: 'John'
-       last_name: '', // Optional, pass when available. Example: 'Smith'
-       traffic_source: '' // Optional, the source of the traffic driven to the campaign. Example: 'facebook'
+       email: '', // required, loyalty program is only available to logged in users. Example: 'customer@example.com'
      }]);
-     window._talkableq.push(['register_affiliate', {}]);
-     ///
    </script>
    <!-- End Talkable integration code -->
 
@@ -106,7 +96,6 @@ Loyalty Dashboard Notes
    from any place that makes sense considering your website configuration.
    Most common uses are links in the user accounts section, or from the user accounts menu.
 
-
 |hr|
 
 .. _integration/loyalty/integration_components/loyalty_redeem_widget:
@@ -114,9 +103,8 @@ Loyalty Dashboard Notes
 Loyalty Redeem Widget
 ~~~~~~~~~~~~~~~~~~~~~
 
-Create a new HTML page with URL
-path (`www.your-site.com/loyalty`) and add the Talkable Container DIV in
-the body of the page:
+Add Talkable container DIV element at the checkout
+exactly where the loyalty points redemption widget should render:
 
 .. code-block:: html
 
