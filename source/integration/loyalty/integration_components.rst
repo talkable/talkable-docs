@@ -9,18 +9,18 @@ Integration Components
 
 Talkable Loyalty is composed of the following components:
 
-1. :ref:`Initialization Script <integration/loyalty/integration_components/initialization_script>`
+1. `Initialization Script <Initialization Script_>`_
 
    **Script Location.** The Initialization script should be placed in the head template or some template
    that spans every page. All other integration components are dependent on the Init script.
 
-   **Data Capture** The Initialization Script should pass variables for logged in users:
+   **Data Capture.** The Initialization Script should pass variables for logged in users:
 
     - Email
 
-2. :ref:`Loyalty Dashboard <integration/loyalty/integration_components/loyalty_dashboard>`
+2. :ref:`Loyalty Dashboard`
 
-3. :ref:`Loyalty Redeem Widget <integration/loyalty/integration_components/loyalty_redeem_widget>`
+3. :ref:`Loyalty Redeem Widget`
 
 |hr|
 
@@ -44,7 +44,7 @@ script.
      window._talkableq.unshift(['init', { site_id: '<YOUR-TALKABLE-SITE-ID>' }]);
 
      window._talkableq.push(['authenticate_customer', {
-       email: '', // required, loyalty program is only available to logged in users. Example: 'customer@example.com'
+       email: '' // required, loyalty program is only available to logged in users. Example: 'customer@example.com'
      }]);
    </script>
    <!-- End Talkable integration code -->
@@ -59,11 +59,11 @@ Initialization Script Notes
    .. figure:: /_static/img/site_id.png
       :alt: Site ID
 
-2. **Variables.** Use your dynamic variables to pass user details
+2. **Variables.** Use your dynamic variables to pass user details.
 
 |hr|
 
-.. _integration/loyalty/integration_components/loyalty_dashboard:
+.. _Loyalty Dashboard:
 
 Loyalty Dashboard
 ~~~~~~~~~~~~~~~~~
@@ -79,8 +79,8 @@ the body of the page:
 Loyalty Dashboard Notes
 -----------------------
 
-1. The :ref:`Talkable Initialization Script <integration/loyalty/integration_components/initialization_script>` must be present in your head
-   template in order for the loyalty dashboard to work
+1. The `Talkable Initialization Script <Initialization script>`_ must be
+   present in your head template in order for the Loyalty Dashboard to work.
 
 2. Talkable will inject loyalty content where Talkable Container
    resides in your DOM. Adding a new page is only a suggestion. The
@@ -93,7 +93,7 @@ Loyalty Dashboard Notes
 
 |hr|
 
-.. _integration/loyalty/integration_components/loyalty_redeem_widget:
+.. _Loyalty Redeem Widget:
 
 Loyalty Redeem Widget
 ~~~~~~~~~~~~~~~~~~~~~

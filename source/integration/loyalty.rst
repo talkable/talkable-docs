@@ -20,7 +20,7 @@ Integration
 
  .. note::
 
-   Skip this step if you already have Talkable integrated on your site
+    Skip this step if you already have Talkable integrated on your site
 
 2. Add Loyalty Dashboard.
 
@@ -31,7 +31,7 @@ Integration
 
    .. code-block:: html
 
-     <div id="talkable-loyalty"></div>
+      <div id="talkable-loyalty"></div>
 
 3. Add Redeem Widget.
 
@@ -40,7 +40,7 @@ Integration
 
    .. code-block:: html
 
-     <div id="talkable-loyalty"></div>
+      <div id="talkable-loyalty"></div>
 
    It is recommended to add it above the discount field. Examples:
 
@@ -53,7 +53,7 @@ Integration
 
    For every redemption batch please generate single-use coupons for a certain discount amount ($40 off, $100 off, etc) and upload all coupons lists into Talkable loyalty coupon lists.
 
-   It is recommended to upload 100K single-use coupons into every coupon list.
+   It is recommended to upload 100,000 single-use coupons into every coupon list.
 
    .. figure:: /_static/img/loyalty/redemption_batches.png
       :alt: Redemption batches
@@ -76,4 +76,4 @@ Requirements
 
  .. toctree::
 
-   loyalty/integration_components
+    loyalty/integration_components
