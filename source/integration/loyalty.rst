@@ -10,8 +10,9 @@ Loyalty Integration (beta)
 Integrating Talkable Loyalty to e-commerce sites is done in
 a few quick steps by adding the below scripts to your site.
 
-Integration
------------
+.. raw:: html
+
+   <h2>Integration</h2>
 
 1. Initialize Talkable integration library.
 
@@ -65,8 +66,9 @@ Integration
     All design and loyalty campaign setup is done inside the Talkable platform,
     then via iframe loyalty campaign content is injected into the site.
 
-Requirements
-------------
+.. raw:: html
+
+   <h2>Requirements</h2>
 
 1. User accounts. The website must support user accounts since the loyalty program is only available to logged in users.
 
