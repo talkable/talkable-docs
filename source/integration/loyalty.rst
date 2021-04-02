@@ -24,8 +24,8 @@ Integration
 
 2. Add Loyalty Dashboard.
 
-   To host the Loyalty campaign, create a new HTML page with standard
-   header/footer. Best practice is to create this page on ``www.your-site.com/loyalty``
+   To host the Loyalty campaign, create a new HTML page with a standard
+   header/footer. The best practice is to create this page on ``www.your-site.com/loyalty``
 
    Copy Talkable container DIV element & paste it exactly where the Talkable iframe should be rendered, similarly to the referral standalone placement:
 
@@ -49,9 +49,11 @@ Integration
 
 4. Define Loyalty points redemption batches.
 
-   Each redemption batch determines progressive point redemption options based on the available points balance of the loyalty member. For example: 500 points would equal a discount coupon for $40 off, 1000 points would equal $100 and so on.
+   Each redemption batch determines progressive point redemption options based on the available points balance of the loyalty member.
+   For example, 500 points would equal a discount coupon for $50 off, 1000 points would equal $100, and so on.
 
-   For every redemption batch please generate single-use coupons for a certain discount amount ($40 off, $100 off, etc) and upload all coupons lists into Talkable loyalty coupon lists.
+   For every redemption batch, please generate single-use coupons for
+   a certain discount amount ($50 off, $100 off, etc.) and upload all coupon lists into Talkable loyalty coupon lists.
 
    It is recommended to upload 100,000 single-use coupons into every coupon list.
 
@@ -68,9 +70,11 @@ Requirements
 
 1. User accounts. The website must support user accounts since the loyalty program is only available to logged in users.
 
-2. Single-use coupons. Every loyalty member will have a choice of redemption batches to redeem points for a one-time discount. When pressing a redeem button Talkable deducts points and issues a single-use coupon in return.
+2. Single-use coupons. Every loyalty member will have a choice of redemption batches to redeem points for a one-time discount.
+   When pressing a redeem button Talkable deducts points and issues a single-use coupon in return.
 
-3. Ideally only purchases without tax & shipping cost should be passed to Talkable. This simplifies future refunds support as taxes and shipping cost are not refundable.
+3. Ideally, only purchases without tax & shipping costs should be passed to Talkable.
+   This simplifies future refunds support as taxes and shipping costs are not refundable.
 
 .. container:: hidden
 
