@@ -79,7 +79,7 @@ the body of the page:
 Loyalty Dashboard Notes
 -----------------------
 
-1. The `Talkable Initialization Script <Initialization script>`_ must be
+1. The `Talkable Initialization Script <Initialization Script_>`_ must be
    present in your head template in order for the Loyalty Dashboard to work.
 
 2. Talkable will inject loyalty content where Talkable Container
