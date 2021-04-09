@@ -42,6 +42,11 @@ This section comes with full documentation for Talkable integration into E-Comme
 |                                    |   :maxdepth: 2                 |
 |                                    |                                |
 |                                    |   integration/demandware       |
+|                                    |                                |
+|                                    | .. toctree::                   |
+|                                    |   :maxdepth: 2                 |
+|                                    |                                |
+|                                    |   integration/loyalty          |
 +------------------------------------+--------------------------------+
 
 .. raw:: html
