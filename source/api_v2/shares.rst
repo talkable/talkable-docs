@@ -215,7 +215,7 @@ Sample response:
           "email_valid": true,
           "self_referral": false,
           "unsubscribed": false,
-          "blacklisted": false,
+          "blocklisted": false,
           "meets_criteria": true,
           "sharable": true
         },
@@ -225,7 +225,7 @@ Sample response:
           "email_valid": true,
           "self_referral": false,
           "unsubscribed": false,
-          "blacklisted": false,
+          "blocklisted": false,
           "meets_criteria": true,
           "sharable": true
         }

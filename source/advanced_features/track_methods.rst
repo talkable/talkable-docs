@@ -97,7 +97,7 @@ The list of tracking methods by their priority:
 - Friend used the same IP address as when clicking the referral link.
 - Time limit: only applies when a Friend made a purchase or event within 1 hour
   after clicking the referral link.
-- The method doesn’t apply to the blacklisted IP addresses, blacklisted emails,
+- The method doesn’t apply to the blocked IP addresses, blocked emails,
   QA IP addresses and QA emails.
 
 .. raw:: html
@@ -107,4 +107,4 @@ The list of tracking methods by their priority:
 - Friend was already referred before and this is his subsequent event. In this
   case, this event is automatically attributed to the same Advocate as the
   previous one.
-- The method doesn’t apply to blacklisted emails and IP addresses.
+- The method doesn’t apply to blocked emails and IP addresses.
