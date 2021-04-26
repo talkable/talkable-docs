@@ -11,12 +11,31 @@ The Talkable Referral Webhook notifies your endpoint that an |advocate| referral
 status has become “Approved” specifically for a |friend| purchase
 or event.
 
+“Approved” referral status signifies the following:
+
+* Neither Advocate nor Friend are blocked by email or IP
+* Advocate passed enabled fraud checks and is considered non-fraudulent
+
 Use cases for the Referral Webhook include:
 
 * Providing account credit or account upgrades to an Advocate as a reward
 * Giving non-monetary rewards such as physical gifts to an Advocate
 * Sending automated ‘Thank You’ emails after a reward is given to an Advocate
 * Data for business intelligence or analytics systems to track when Advocates receive rewards
+
+**Note:** “Approved” referral status does not guarantee that Advocate will receive a reward.
+
+Things that can prevent Advocate or Friend from being rewarded:
+
+* Share wasn't active at the moment of referral event creation
+* Advocate Referral Incentive rewards limit (per month or in total) has been reached
+* Coupon cycling has been detected (when Friend uses Advocate's coupon in referred event)
+* Incentive criteria does not match
+* Rewards issuing is not allowed for auto-approved referrals
+
+.. important::
+   Referral Webhook keeps retrying until it gets 2xx HTTP status in response.
+   Only after that rewards associated with the referral can be paid.
 
 .. raw:: html
 
@@ -45,37 +64,29 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
 
 * **referred_origin** - subhash with referred origin made by friend that created a referral
 
+  .. include:: /partials/origin_fields.rst
+
 * **advocate_rewards** — array of hashes describing the rewards received by |advocate|
-  person, where each hash contains parameters:
+  person (except for rewards paid in loyalty points), where each hash contains parameters:
 
-  * **email** — email of the person that got reward
-  * **person** — subhash of parameters describing the person that got reward
+  .. include:: /partials/reward_fields.rst
 
-    .. include:: /partials/person_fields.rst
+* **friend_rewards** — array of hashes describing the rewards received by referred person
+  (except for rewards paid in loyalty points), where each hash contains parameters:
 
-  * **amount** — amount of money to reward (null when non-monetary incentive is used)
-  * **incentive** — type of incentive reward (`rebate`, `discount_coupon`, `other`)
-  * **incentive_description** — verbal reward explanation
-  * **reward_coupon_code** — Coupon code received by person as a reward. Only in case when
-    incentive equals `discount_coupon`.
-  * **origin** — contains data about the event that issued an offer:
+  .. include:: /partials/reward_fields.rst
 
-    .. include:: /partials/origin_fields.rst
+* **share** — details about share:
 
-* **friend_rewards** — array of hashes describing the rewards received by referred person,
-  where each hash contains parameters:
+  * **channel** — sharing channel involved in the referral
 
-  * **email** — email of the person that got reward
-  * **person** — subhash of parameters describing the person that got reward
+* **referrer** — Advocate referral incentive reward details (optional, absent if reward was paid in loyalty points)
 
-    .. include:: /partials/person_fields.rst
+  .. include:: /partials/reward_fields.rst
 
-  * **amount** — amount of money to reward (null when non-monetary incentive is used)
-  * **incentive** — type of incentive reward (rebate, discount_coupon, other)
-  * **incentive_description** — verbal reward explanation
-  * **reward_coupon_code** — Coupon code received by person as a reward. Only in case when
-    incetive equals discount_coupon.
-  * **origin** — contains a data about Purchase that issued a referral
+* **referred** — Friend referred incentive reward details (optional, absent if reward was paid in loyalty points)
+
+  .. include:: /partials/reward_fields.rst
 
 .. include:: /partials/coupon_as_reward.rst
 
@@ -96,6 +107,7 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
        "origin_min_age": null,
        "origin_max_age": null,
        "new_customer": null
+       "joinable_category_names": ["affiliate_member"],
      },
      "offer": {
        "email": "referrer@example.com",
@@ -138,6 +150,7 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
          "email": "referred@example.com",
          "first_name": "Alice",
          "last_name": "Smith",
+         "username": null,
          "sub_choice": true,
          "subscribed_at": "2018-09-14T23:57:18.734+03:00",
          "opted_in_at": "2018-09-14T23:57:18.734+03:00",
@@ -146,11 +159,13 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
            "total": 0,
            "approved": 0,
            "pending": 0
-         }
+         },
+         "custom_properties": {}
        },
        "amount": "0.00",
        "incentive": "other",
        "incentive_description": "First Month Free",
+       "reward_coupon_code": null,
        "origin": {
          "id": 147886587,
          "type": "Purchase",
@@ -170,7 +185,7 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
            "email": "referrer@example.com",
            "first_name": "Bob",
            "last_name": "Crane",
-           "gender": null,
+           "username": null,
            "sub_choice": false,
            "subscribed_at": null,
            "opted_in_at": null,
@@ -179,18 +194,24 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
              "total": 0,
              "approved": 0,
              "pending": 0
-           }
+           },
+           "custom_properties": {}
          },
          "amount": "5.00",
          "incentive": "rebate",
          "incentive_description": "$5.00 back",
+         "reward_coupon_code": null,
          "origin": {
-           "id": 159843498,
-           "type": "AffiliateMember",
-           "email": "referrer@example.com",
-           "customer_id": "64227025",
+           "id": 6400368,
+           "type": "Purchase",
+           "order_number": "459179054",
+           "order_date": "2021-04-23T19:08:17.000-08:00"
+           "subtotal": 11.39,
+           "email": "referred@example.com"
+           "customer_id": "376990942",
            "ip_address": "127.0.0.1",
-           "traffic_source": "unknown"
+           "coupon_code": "WHT59688",
+           "traffic_source": "post-checkout"
          }
        }
      ],
@@ -202,6 +223,7 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
            "email": "referred@example.com",
            "first_name": "Alice",
            "last_name": "Smith",
+           "username": null,
            "sub_choice": true,
            "subscribed_at": "2018-09-14T23:57:18.734+03:00",
            "opted_in_at": "2018-09-14T23:57:18.734+03:00",
@@ -210,11 +232,13 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
              "total": 0,
              "approved": 0,
              "pending": 0
-           }
+           },
+           "custom_properties": {}
          },
          "amount": "0.00",
          "incentive": "other",
          "incentive_description": "First Month Free",
+         "reward_coupon_code": null,
          "origin": {
            "id": 147886587,
            "type": "Purchase",
@@ -231,7 +255,9 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
        "id": 6400368,
        "type": "Purchase",
        "order_number": "459179054",
+       "order_date": "2021-04-23T19:08:17.000-08:00"
        "subtotal": 11.39,
+       "email": "referred@example.com"
        "customer_id": "376990942",
        "ip_address": "127.0.0.1",
        "coupon_code": "WHT59688",
