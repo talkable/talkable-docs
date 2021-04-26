@@ -23,7 +23,9 @@ Use cases for the Referral Webhook include:
 * Sending automated ‘Thank You’ emails after a reward is given to an Advocate
 * Data for business intelligence or analytics systems to track when Advocates receive rewards
 
-**Note:** “Approved” referral status does not guarantee that Advocate will receive a reward.
+.. note::
+
+   “Approved” referral status does not guarantee that Advocate will receive a reward.
 
 Things that can prevent Advocate or Friend from being rewarded:
 
@@ -34,6 +36,7 @@ Things that can prevent Advocate or Friend from being rewarded:
 * Rewards issuing is not allowed for auto-approved referrals
 
 .. important::
+
    Referral Webhook keeps retrying until it gets 2xx HTTP status in response.
    Only after that rewards associated with the referral can be paid.
 
@@ -44,9 +47,11 @@ Things that can prevent Advocate or Friend from being rewarded:
 Talkable Referral Webhook is triggered any time an Advocate referral status has become
 “Approved” specifically for a Friend purchase or event.
 
-**Note:** Referral Webhook triggers only for Advocate rewards specifically from a Friend
-Purchase or Friend Event (such as signup event or subscription purchase event).
-To receive notification of both Advocate and Friend rewards use the Rewards Webhook.
+.. note::
+
+   Referral Webhook triggers only for Advocate rewards specifically from a Friend
+   Purchase or Friend Event (such as signup event or subscription purchase event).
+   To receive notification of both Advocate and Friend rewards use the Rewards Webhook.
 
 .. raw:: html
 
