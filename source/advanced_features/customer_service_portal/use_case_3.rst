@@ -30,7 +30,7 @@ Every reward has the following possible statuses:
 - **Voided**: the reward was voided because the referral was voided by a user manually.
 
 - **Blocked/No reward**: the reward was blocked either because the associated referral was blocked according to
-  Fraud Settings or because of other reasons: incentive criteria has blocked it, or the person was blacklisted.
+  Fraud Settings or because of other reasons: incentive criteria has blocked it, or the person was blocklisted.
 
 .. image:: /_static/img/advanced_features/customer_service_portal/referral_incentive.jpg
 
