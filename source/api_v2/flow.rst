@@ -22,7 +22,7 @@ Initial Origin
 
 Invite |advocate| to referral program at some point by creating an :ref:`Origin <api_v2/origins>` and obtaining :ref:`Offer <api_v2/offers>` to share.
 
-Displaying and Sharing the offer
+Displaying and Sharing the Offer
 --------------------------------
 
 Display options for |advocate| to share with their |friend|\s.
@@ -52,7 +52,7 @@ You need to pass the visitor `uuid` variable to your site via destination URL GE
 
 Example destination URL: `http://merchant.com?tkbl_cvuuid={{visitor_uuid}}&utm_source=talkable&...`
 
-Submit Origin data to talkable to generate the referral
+Submit Origin data to Talkable to generate the Referral
 -------------------------------------------------------
 
 Once any user makes an action which implies possible close of a referral chain, send an :ref:`Origin <api_v2/origins>`. Please include `uuid` in this request if possible.

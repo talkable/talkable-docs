@@ -8,7 +8,7 @@ Localization
 ############
 
 Each template can be localized.
-Localization is not a part of the view template. Default talkable campaigns are comming with localization now. It is stored in campaign allowing multiple campaign to use same template with different locazation and ability to edit Copy of a campaign outside of liquid editor (making interface significatly easier for marketer).
+Localization is not a part of the view template. Default Talkable campaigns are comming with localization now. It is stored in campaign allowing multiple campaign to use same template with different locazation and ability to edit Copy of a campaign outside of liquid editor (making interface significatly easier for marketer).
 
 Campaign localization is done using a liquid filter `localize`:
 

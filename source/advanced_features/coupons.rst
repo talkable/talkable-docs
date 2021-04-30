@@ -15,7 +15,7 @@ to export a list of coupons or provide a multi-use coupon code creation end poin
 Multi-use Coupons
 -----------------
 
-Multi-use Coupons can be given to talkable customers as a reward by create an Incentive with reward type "Coupon".
+Multi-use Coupons can be given to Talkable customers as a reward by create an Incentive with reward type "Coupon".
 It can be done from Campaign Rules page.
 
 Multi-use coupon will be given to any customer that perfomed action that matcher Incentive Reward Criteria.
@@ -38,7 +38,7 @@ There are several steps that need to be taken for this scenario:
    <h2>REST API to Create Coupons</h2>
 
 Talkable can create coupons via a webhook using your REST API end point.
-Read :ref:`Create Coupon Webhook Documentation <web_hooks/create_coupon>` for implementation details. 
+Read :ref:`Create Coupon Webhook Documentation <web_hooks/create_coupon>` for implementation details.
 
 .. container:: hidden
 

@@ -56,7 +56,7 @@ Configuration
       Find **API integration** section and there you will see your API Keys.
       Use only the *public key* in your application submitted to the App Store.
 
-2. Register talkable URL scheme:
+2. Register Talkable URL scheme:
 
   - Defines `tkbl-<your-site-slug>` as URL Scheme in your Info.plist file:
 

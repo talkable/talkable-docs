@@ -74,7 +74,7 @@ Manual integration
       <div id="talkable-offer"></div>
 
     * Click “Save”
-    * Create a new template for page called dashboard.talkable
+    * Create a new template for page called `dashboard.talkable`
     * Paste the following code inside layout of this page instead of `{{ page.content }}`:
 
     .. code-block:: html

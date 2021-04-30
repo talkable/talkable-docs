@@ -37,5 +37,5 @@ by specifying specific date or setting offer duration in hours.
 - |Friend| offer deadline should never be earlier than |Advocate| offer deadline
   (because there is no sense to share offer that cannot be claimed).
 - When |Friend| offer is expired, |Friend| and |Advocate| are not able to receive any rewards.
-  But they still may try to use coupon they received earlier because talkable platform doesn’t control coupon expiration. Only merchant site does that.
+  But they still may try to use coupon they received earlier because Talkable platform doesn’t control coupon expiration. Only merchant site does that.
 - When campaign is copied only offer duration gets copied, but not deadline.
