@@ -1,11 +1,11 @@
-.. _api_v2/loyalty:
+.. _api_v2/loyalty_members:
 .. include:: /partials/common.rst
 
 .. meta::
    :description: This API allows you to find loyalty members and adjust their points balance.
 
-Loyalty
-=======
+Loyalty members
+===============
 
 This API allows you to find loyalty members and adjust their points balance.
 See examples below.
