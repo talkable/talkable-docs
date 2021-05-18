@@ -25,3 +25,4 @@ Contents:
    api_v2/coupons
    api_v2/metrics
    api_v2/traffic_sources
+   api_v2/loyalty_members
