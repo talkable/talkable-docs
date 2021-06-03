@@ -38,16 +38,16 @@ Adjusts loyalty member’s points balance.
 
 .. container:: ptable
 
-   ================= ========================================================
+   ================= ===============================================================================
    Parameter         Description
-   ================= ========================================================
+   ================= ===============================================================================
    site_slug         Your Talkable Site ID. You can get this from your
                      Talkable dashboard after you log in and create a site.
    email             Loyalty member’s email
-   data              JSON object with ``points`` property.
+   data              JSON object with ``points`` property and optional ``description``.
 
-                     E.g. ``{"points": 100}`` or ``{"points": -100}``
-   ================= ========================================================
+                     E.g. ``{"points": 100}`` or ``{"points": -100, "description": "For cheating"}``
+   ================= ===============================================================================
 
 Example
 -------
@@ -81,7 +81,7 @@ Adjust loyalty member’s points balance
    curl -H "Content-Type: application/json" \
         -X POST \
         -u i9uil7nQgDjucCiTJu: \
-        -d '{"site_slug":"my-store","data":{"points":100}}' \
+        -d '{"site_slug":"my-store","data":{"points":100,"description":"For being a loyal customer"}}' \
         https://www.talkable.com/api/v2/loyalty/members/customer@example.com/manual_adjustment_actions
 
 Sample response:
