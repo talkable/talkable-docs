@@ -105,9 +105,9 @@ Update loyalty member's custom properties
 .. code-block:: bash
 
    curl -H "Content-Type: application/json" \
-        -X POST \
+        -X PUT \
         -u i9uil7nQgDjucCiTJu: \
-        -d '{"site_slug":"my-store","data":{"custom_properties":{"contest_participant":true}}}}' \
+        -d '{"site_slug":"my-store","data":{"custom_properties":{"contest_participant":true}}}' \
         https://www.talkable.com/api/v2/loyalty/members/customer@example.com
 
 Sample response:
