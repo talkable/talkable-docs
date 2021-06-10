@@ -32,6 +32,31 @@ Returns a loyalty member.
 
 .. code-block:: text
 
+   PUT /loyalty/members/<email>
+
+Updates loyalty member data.
+
+.. container:: ptable
+
+   ================= ==============================================================
+   Parameter         Description
+   ================= ==============================================================
+   site_slug         Your Talkable Site ID. You can get this from your
+                     Talkable dashboard after you log in and create a site.
+   email             Loyalty member’s email
+   data              JSON object with ``custom_properties`` JSON object.
+
+                     E.g. ``{"custom_properties": {"contest_participant": true}}``.
+
+                     Note that all values in ``custom_properties`` object will be
+                     stored as strings, e.g. ``false`` will become ``"f"``,
+                     and ``123`` will become ``"123"``.
+   ================= ==============================================================
+
+|br|
+
+.. code-block:: text
+
    POST /loyalty/members/<email>/manual_adjustment_actions
 
 Adjusts loyalty member’s points balance.
@@ -67,6 +92,35 @@ Sample response:
      "ok": true,
      "result": {
        "loyalty_member": {
+         "custom_properties": {},
+         "email": "customer@example.com",
+         "points_balance": 1000
+       }
+     }
+   }
+
+Update loyalty member's custom properties
+.........................................
+
+.. code-block:: bash
+
+   curl -H "Content-Type: application/json" \
+        -X PUT \
+        -u i9uil7nQgDjucCiTJu: \
+        -d '{"site_slug":"my-store","data":{"custom_properties":{"contest_participant":true}}}' \
+        https://www.talkable.com/api/v2/loyalty/members/customer@example.com
+
+Sample response:
+
+.. code-block:: javascript
+
+   {
+     "ok": true,
+     "result": {
+       "loyalty_member": {
+         "custom_properties": {
+           "contest_participant": "t"
+         },
          "email": "customer@example.com",
          "points_balance": 1000
        }
@@ -92,6 +146,7 @@ Sample response:
      "ok": true,
      "result": {
        "loyalty_member": {
+         "custom_properties": {},
          "email": "customer@example.com",
          "points_balance": 1100
        }
