@@ -20,11 +20,12 @@ across all Campaign Views.
 
 **Initialization script**
 
-Add the ``custom_properties`` collection in the ``register_affiliate`` call of the Initialization script.
+Add the ``custom_properties`` collection in the ``authenticate_customer`` call of the Initialization script.
 
 .. code-block:: javascript
 
-  _talkableq.push(['register_affiliate', {
+  _talkableq.push(['authenticate_customer', {
+    email: '',
     custom_properties: {
       person_occupation: 'marketing',
       eye_color: 'brown'
@@ -49,6 +50,27 @@ Add the ``custom_properties`` collection to the data passed in the ``register_pu
   };
   _talkableq.push(['register_purchase', _talkable_data]);
 
+**Loyalty script**
+
+Add the ``custom_properties`` collection to the data passed in one of the following calls:
+
+- ``show_loyalty``
+- ``show_loyalty_redeem_widget``
+- ``join_loyalty``
+- ``register_loyalty_action``
+
+If no ``custom_properties`` are passed explicitly, they will be taken from ``authenticate_customer`` params.
+
+.. code-block:: javascript
+
+  var _talkable_data = {
+    email: '',
+    custom_properties: {
+      person_occupation: 'marketing',
+      eye_color: 'brown'
+    }
+  };
+  _talkableq.push(['show_loyalty', _talkable_data]);
 
 .. note::
 
@@ -66,6 +88,7 @@ To access ``custom_properties`` in Talkable, use:
 
    {{ advocate_custom_properties }}
    {{ friend_custom_properties }}
+   {{ member_info.custom_properties }}
 
 Key-Value pairs can be referenced calling the desired data key, such as:
 
@@ -75,7 +98,7 @@ Key-Value pairs can be referenced calling the desired data key, such as:
 
 .. note::
 
-    Any ``custom_properties`` data passed through is tied to the |advocate| or the |friend|.
+    Any ``custom_properties`` data passed through is tied to the |advocate|, |friend| or |loyalty member|.
     If Talkable receives a custom property that was previously defined for the user, the property gets overwritten with a new value.
 
 .. container:: hidden

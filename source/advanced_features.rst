@@ -32,7 +32,8 @@ each with links to integration details.
        manage their rewards and deliver excellent customer service.
 
    * - :ref:`Params encryption <advanced_features/params_encryption>`
-     - For additional security, it is possible to encrypt Advocate and Friend emails on back-end.
+     - For additional security, it is possible to encrypt Advocate, Friend and Loyalty member emails on back-end,
+       as well as their custom properties.
 
    * - :ref:`File encryption <advanced_features/file_encryption>`
      - For additional security, it is possible to encrypt files.

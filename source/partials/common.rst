@@ -23,11 +23,15 @@
 
 .. |advocate| raw:: html
 
-   <abbr title="Person, who shares an offer with their Friend(s)">Advocate</abbr>
+   <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>
 
 .. |friend| raw:: html
 
-   <abbr title="Person, who is invited to participate in Campaign by Advocate">Friend</abbr>
+   <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr>
+
+.. |loyalty member| raw:: html
+
+   <abbr title="Person who participates in the Loyalty program">Loyalty member</abbr>
 
 .. |origin| raw:: html
 
