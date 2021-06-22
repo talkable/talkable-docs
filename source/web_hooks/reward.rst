@@ -415,7 +415,9 @@ Reward reason can be of 5 following general types.
          "total": 0,
          "approved": 0,
          "pending": 0
-       }
+       },
+       "is_loyalty_member": false,
+       "loyalty_member": null
      },
      "origin": {
        "id": 280695079,
@@ -504,7 +506,9 @@ Reward reason can be of 5 following general types.
          "total": 0,
          "approved": 0,
          "pending": 0
-       }
+       },
+       "is_loyalty_member": false,
+       "loyalty_member": null
      },
      "origin": {
        "id": 818629076,

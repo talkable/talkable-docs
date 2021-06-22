@@ -134,7 +134,9 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
            "total": 0,
            "approved": 0,
            "pending": 0
-         }
+         },
+         "is_loyalty_member": false,
+         "loyalty_member": null
        },
        "amount": "5.00",
        "incentive": "rebate",
@@ -165,7 +167,9 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
            "approved": 0,
            "pending": 0
          },
-         "custom_properties": {}
+         "custom_properties": {},
+         "is_loyalty_member": false,
+         "loyalty_member": null
        },
        "amount": "0.00",
        "incentive": "other",
@@ -200,7 +204,9 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
              "approved": 0,
              "pending": 0
            },
-           "custom_properties": {}
+           "custom_properties": {},
+           "is_loyalty_member": false,
+           "loyalty_member": null
          },
          "amount": "5.00",
          "incentive": "rebate",
@@ -238,7 +244,9 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
              "approved": 0,
              "pending": 0
            },
-           "custom_properties": {}
+           "custom_properties": {},
+           "is_loyalty_member": false,
+           "loyalty_member": null
          },
          "amount": "0.00",
          "incentive": "other",
