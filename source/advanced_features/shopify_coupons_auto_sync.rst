@@ -58,7 +58,7 @@ Some other Price Rule attributes that we set when generating Price Rule:
 
 
 Why aren’t there any coupons created for my auto-synced list?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Auto-sync generates and uploads coupons when there is demand for them. That means that nothing will happen before there are rewards waiting for coupons from this coupon list. When there is at least one such reward, Talkable generates a code and syncs it with Shopify, while scheduling a refill task that will generate a bunch of codes in advance. This logic is triggered every time a coupon is issued, so there always should be some available coupons for future rewards.
 
