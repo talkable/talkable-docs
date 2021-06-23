@@ -75,13 +75,14 @@ It is recommended to create a new Price Rule in Shopify if there is a need to us
 .. warning::
   Talkable validates Price Rule attached to coupon list. There are certain Price Rule attributes that must match coupon list configuration.
   These include:
-    `value` - must correspond to coupon list amount
 
-    `value_type` - must correspond to coupon list type
+  `value` - must correspond to coupon list amount
 
-    `ends_at` - must be greater than or equal to coupon list expiration (and absent if coupon list has no expiration)
+  `value_type` - must correspond to coupon list type
 
-    `prerequisite_subtotal_range` - must match coupon list minimum subtotal
+  `ends_at` - must be greater than or equal to coupon list expiration (and absent if coupon list has no expiration)
+
+  `prerequisite_subtotal_range` - must match coupon list minimum subtotal
 
 If Price Rule passes validation, it can be attached to a coupon list and will be used as a new destination for all the coupons created from that moment on.
 
