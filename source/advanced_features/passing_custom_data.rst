@@ -98,7 +98,7 @@ Key-Value pairs can be referenced calling the desired data key, such as:
 
 .. note::
 
-    Any ``custom_properties`` data passed through is tied to the |advocate|, |friend| or |loyalty member|.
+    Any ``custom_properties`` data passed through is tied to the |advocate|, |friend|, or |loyalty_member|.
     If Talkable receives a custom property that was previously defined for the user, the property gets overwritten with a new value.
 
 .. container:: hidden

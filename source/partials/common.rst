@@ -29,7 +29,7 @@
 
    <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr>
 
-.. |loyalty member| raw:: html
+.. |loyalty_member| raw:: html
 
    <abbr title="Person who participates in the Loyalty program">Loyalty member</abbr>
 

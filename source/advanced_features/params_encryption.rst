@@ -2,12 +2,12 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: It is possible to encrypt Advocate, Friend and Loyalty member emails on back-end if you want to provide additional security.
+   :description: It is possible to encrypt Advocate, Friend, and Loyalty member emails on back-end if you want to provide additional security.
 
 Params Encryption
 =================
 
-For additional security, it is possible to encrypt |advocate|, |friend|, and |loyalty member| email,
+For additional security, it is possible to encrypt |advocate|, |friend|, and |loyalty_member| email,
 as well as :ref:`Custom User Data <advanced_features/passing_custom_data>` on back-end.
 This can be done by using 2048-bit key `Talkable Public Key`_.
 So, instead of sending params in plain text, you can send them encrypted.
