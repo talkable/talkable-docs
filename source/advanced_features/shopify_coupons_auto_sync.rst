@@ -44,17 +44,25 @@ Some other Price Rule attributes that we set when generating Price Rule:
 
 .. container:: ptable
 
-  ======================== ====================================== ========================
-  Price Rule attribute     Value                                  Attribute effect
-  ======================== ====================================== ========================
-  `title`                  e.g. "Talkable single-use coupons $10" Describes Price Rule.
-  `target_type`            `line_item`                            The price rule applies to the cart's line items.
-  `target_selection`       `all`                                  The price rule applies the discount to all line items in the checkout.
-  `allocation_method`      `across`                               The calculated discount amount will be applied across the entitled items. For example, for a price rule that takes $15 off, the discount will be applied across all the entitled items.
-  `usage_limit`            `1`                                    Each discount code can be used exactly once.
-  `customer_selection`     `all`                                  The price rule is valid for all customers.
-  `starts_at`              Time of coupon list creation           The date and time when the price rule starts.
-  ======================== ====================================== ========================
+  ======================== ======================= =============================================
+  Price Rule attribute     Value                   Attribute effect
+  ======================== ======================= =============================================
+  `title`                  e.g. "Talkable          Describes Price Rule.
+                           single-use coupons $10"
+  `target_type`            `line_item`             The price rule applies to the cart's line
+                                                   items.
+  `target_selection`       `all`                   The price rule applies the discount to all
+                                                   line items in the checkout.
+  `allocation_method`      `across`                The calculated discount amount will be
+                                                   applied across the entitled items.
+                                                   For example, for a price rule that takes
+                                                   $15 off, the discount will be applied across
+                                                   all the entitled items.
+  `usage_limit`            `1`                     Each discount code can be used exactly once.
+  `customer_selection`     `all`                   The price rule is valid for all customers.
+  `starts_at`              Time of coupon list     The date and time when the price rule starts.
+                           creation
+  ======================== ======================= =============================================
 
 
 Why aren't there any coupons created for my auto-synced list?
