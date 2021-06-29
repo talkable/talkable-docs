@@ -6,28 +6,28 @@
 Shopify coupon auto-sync
 ========================
 
-Talkable supports coupon auto-sync for Shopify. This feature allows to avoid manual coupon uploads and/or Shopify Price Rule management.
+Talkable supports coupon auto-sync for Shopify. This feature allows the automation of code creation and management of Shopify Price Rules, rather than manual code creation and upload to the Talkable Platform.
 
 Get started
 -----------
 
-Before using coupon auto-sync, you have to install our Shopify app (Settings → Shopify Integration → click Authorize).
+Before using coupon auto-sync, you’ll need to install the Talkable Shopify app (Settings → Shopify Integration → Authorize).
 
-To enable coupon auto-sync in a coupon list, go to coupon list edit/create page (All reports → Coupon lists) and check "Enable Coupon List Shopify Auto Sync". If this checkbox is disabled, it means this site uses :ref:`Coupon Webhook <web_hooks/create_coupon>`, and no coupons can be directly uploaded to Shopify. Instead, coupons are delivered to Coupon Webhook URL, and that’s where they should be handled.
+To enable coupon auto-sync in a coupon list, go to the coupon list edit/create page (All reports → Coupon lists) and check “Enable Coupon List Shopify Auto Sync”. If this checkbox is disabled, it means this site uses :ref:`Coupon Webhook <web_hooks/create_coupon>`, and no coupons can be directly uploaded to Shopify. Instead, coupons are delivered to Coupon Webhook URL, and should be handled from there.
 
 .. note::
-  Talkable uses Shopify Price Rule ID (if present) to determine where to upload newly generated coupons. It is recommended to leave it blank when creating coupon lists. In that case, Talkable will create a Price Rule based on coupon list configuration and store its ID in the coupon list. Please see **Advanced features** for more information about Shopify Price Rule ID.
+  Talkable uses a Shopify Price Rule ID (if present) to determine where to upload newly generated coupons. It is recommended to leave it blank when creating coupon lists. If blank, Talkable will create a Price Rule based on coupon list configuration and store its ID in the coupon list. Please see **Advanced features** for more information about Shopify Price Rule ID.
 
 
 What is Price Rule?
 ~~~~~~~~~~~~~~~~~~~
 
-Price rule is the closest thing to Talkable coupon lists in Shopify. It defines properties and applicability of associated coupon codes.
+A price rule is the closest thing to Talkable coupon lists in Shopify. It defines the properties and applicability of associated coupon codes. You can read more on the Shopify site `here <https://shopify.dev/docs/admin-api/rest/reference/discounts/pricerule>`_.
 
 What attributes will the auto-generated Price Rule have?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Talkable applies coupon list settings onto Price Rule:
+Talkable applies the below coupon list settings onto Price Rule:
 
 .. container:: ptable
 
@@ -57,10 +57,10 @@ Some other Price Rule attributes that we set when generating Price Rule:
   ======================== ====================================== ========================
 
 
-Why aren’t there any coupons created for my auto-synced list?
+Why aren't there any coupons created for my auto-synced list?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Auto-sync generates and uploads coupons when there is demand for them. That means that nothing will happen before there are rewards waiting for coupons from this coupon list. When there is at least one such reward, Talkable generates a code and syncs it with Shopify, while scheduling a refill task that will generate a bunch of codes in advance. This logic is triggered every time a coupon is issued, so there always should be some available coupons for future rewards.
+Auto-sync generates and uploads coupons when there is demand for them. That means that nothing will happen until the first reward is requested from a specific coupon list. When this happens, Talkable will generate a code and sync it with Shopify, while scheduling a refill task that will generate a set of codes in advance. This logic is triggered every time a coupon is issued, so there  will always be some coupons available for future rewards.
 
 Advanced features
 -----------------
@@ -68,12 +68,12 @@ Advanced features
 Shopify Price Rule ID
 ~~~~~~~~~~~~~~~~~~~~~
 
-Talkable allows to assign custom Price Rule ID to a coupon list. This might be helpful if you want to deviate from our default Price Rule settings, e.g. restrict price rule to a group of customers or kinds of products.
+Talkable allows you to assign a custom Price Rule ID to a coupon list. This might be helpful if you want to deviate from our default Price Rule settings, e.g. restrict codes to a group of customers or group of products.
 
 It is recommended to create a new Price Rule in Shopify if there is a need to use a custom one, instead of editing the Price Rule generated by Talkable.
 
 .. warning::
-  Talkable validates Price Rule attached to the coupon list. There are certain Price Rule attributes that must match coupon list configuration.
+  Talkable validates the Price Rule attached to a coupon list. There are certain Price Rule attributes that must match the coupon list configuration.
   These include:
 
   `value` - must correspond to coupon list amount
@@ -84,15 +84,15 @@ It is recommended to create a new Price Rule in Shopify if there is a need to us
 
   `prerequisite_subtotal_range` - must match coupon list minimum subtotal
 
-If Price Rule passes validation, it can be attached to a coupon list and will be used as a new destination for all the coupons created from that moment on.
+If the Price Rule passes validation, it can be attached to a coupon list and will be used as a new destination for all the coupons created from that moment on.
 
 .. note::
-  All the previously generated coupons will remain in the Price Rule that was used when they were auto-synced.
+  All previously generated coupons will retain the attributes of the Price Rule that was used at the point at which they were created (auto-synced).
 
 Shopify Price Rule Changed Email Notification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You might modify Price Rules on Shopify by mistake, making them incompatible with the coupon lists they are attached to. In order to find out about such changes as early as possible, we have a daily monitoring job that checks that Price Rules have no critical differences from respective coupon lists.
+If you modify a Price Rules on Shopify, it could make them incompatible with the coupon lists they are attached to. In order to find out about such changes as early as possible, we have a daily monitoring job that checks that Price Rules have no critical differences from respective coupon lists.
 
 Attributes that are checked in this job are the following:
 
@@ -108,7 +108,7 @@ Attributes that are checked in this job are the following:
 
 If any of these attributes differ from what they are expected to be and Talkable cannot fix that by updating a coupon list (see **Coupon list sync**), Talkable sends an email notification.
 
-Once Price Rule becomes critically different from the coupon list it is assigned to, the coupon list is no longer editable. Please encourage clients to fix the issues listed in the email notification to remedy this situation.
+Once the Price Rule becomes critically different from the coupon list it is assigned to, the coupon list is no longer editable. Please fix the issues listed in the email notification to remedy this situation.
 
 Coupon list sync
 ~~~~~~~~~~~~~~~~
@@ -122,6 +122,6 @@ As long as the Price Rule is otherwise valid for a coupon list, we update the co
 **minimum subtotal**
 
 .. note::
-  If there are any other changes in Price Rule that make it not suitable for a certain coupon list, we won’t sync coupon list. In this case a Shopify Price Rule Changed Email Notification will be delivered and actions from clients will be required to fix the issue.
+  If there are any other changes in the Price Rule that make it not suitable for a certain coupon list, we won’t sync the coupon list. In this case, a Shopify Price Rule Changed Email Notification will be delivered and action will be required to fix the issue.
 
-  This sync is performed daily. Do not expect immediate effect after Price Rule update.
+  This sync is performed daily. Do not expect an immediate change to be reflected  after a Price Rule update.
