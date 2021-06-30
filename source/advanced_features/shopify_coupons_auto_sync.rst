@@ -13,7 +13,7 @@ Get started
 
 Before using coupon auto-sync, you’ll need to install the Talkable Shopify app (Settings → Shopify Integration → Authorize).
 
-To enable coupon auto-sync in a coupon list, go to the coupon list edit/create page (All reports → Coupon lists) and check “Enable Coupon List Shopify Auto Sync”. If this checkbox is disabled, it means this site uses :ref:`Coupon Webhook <web_hooks/create_coupon>`, and no coupons can be directly uploaded to Shopify. Instead, coupons are delivered to Coupon Webhook URL, and should be handled from there.
+To enable coupon auto-sync in a coupon list, go to the coupon list edit/create page (All reports → Coupon lists) and check "Enable Coupon List Shopify Auto Sync". If this checkbox is disabled (you are unable to check/uncheck), it means this site already uses the :ref:`Coupon Webhook <web_hooks/create_coupon>` and will be created automatically — no coupons can be directly uploaded to Shopify. Instead, coupons are delivered to Coupon Webhook URL, and should be handled from there. If you’d like to turn on/off Shopify auto-sync, you’ll need to first disable the Coupon Webhook.
 
 .. note::
   Talkable uses a Shopify Price Rule ID (if present) to determine where to upload newly generated coupons. It is recommended to leave it blank when creating coupon lists. If blank, Talkable will create a Price Rule based on coupon list configuration and store its ID in the coupon list. Please see **Advanced features** for more information about Shopify Price Rule ID.
