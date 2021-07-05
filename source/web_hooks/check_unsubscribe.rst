@@ -101,7 +101,9 @@ View category can be one of the following:
          "total": 0,
          "approved": 0,
          "pending": 0
-       }
+       },
+       "is_loyalty_member": false,
+       "loyalty_member": null
      },
      "email_type": "notifier_offers_email"
    }
