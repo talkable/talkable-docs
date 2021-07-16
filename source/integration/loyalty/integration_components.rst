@@ -69,12 +69,17 @@ Loyalty Dashboard
 ~~~~~~~~~~~~~~~~~
 
 Create a new HTML page with URL
-path (`www.your-site.com/loyalty`) and add the Talkable Container DIV in
-the body of the page:
+path (`www.your-site.com/loyalty`), add the Talkable Container DIV in
+the body of the page and show loyalty campaign with the JS API function:
 
 .. code-block:: html
 
    <div id="talkable-loyalty"></div>
+   <script>
+     window._talkableq.push(['show_loyalty', {
+       optin: true // optional, determines whether a customer agreed to participate in the loyalty program
+     }]);
+   </script>
 
 Loyalty Dashboard Notes
 -----------------------
@@ -91,6 +96,10 @@ Loyalty Dashboard Notes
    from any place that makes sense considering your website configuration.
    Most common uses are links in the user accounts section, or from the user accounts menu.
 
+4. `show_loyalty` optionally accepts `email`, `first_name`, `last_name`, and `custom_properties`,
+   which override respective values from `authenticate_customer`. Email must be provided in either of the sources to
+   show loyalty dashboard.
+
 |hr|
 
 .. _Loyalty Redeem Widget:
@@ -99,8 +108,44 @@ Loyalty Redeem Widget
 ~~~~~~~~~~~~~~~~~~~~~
 
 Add Talkable container DIV element at the checkout
-exactly where the loyalty points redemption widget should render:
+exactly where the loyalty points redemption widget should render, and call JS API function to render the widget:
 
 .. code-block:: html
 
    <div id="talkable-loyalty"></div>
+   <script>
+     window._talkableq.push(['show_loyalty_redeem_widget', {}]);
+   </script>
+
+Loyalty Redeem Widget Notes
+---------------------------
+
+1. `show_loyalty_redeem_widget` optionally accepts `email` and `custom_properties`. If none provided, values will be
+   taken from respective parameters of `authenticate_customer`. If email is not available from either of the sources,
+   signup widget will be rendered instead.
+
+|hr|
+
+.. _Loyalty Actions:
+
+Loyalty Actions
+~~~~~~~~~~~~~~~
+
+To register custom loyalty actions (e.g. completing surveys, adding reviews, uploading something on site),
+use the following code:
+
+.. code-block:: html
+
+   <script>
+     window._talkableq.push(['register_loyalty_action', {
+       rule_identifier: '', // required, can be found in Campaign Rules -> Loyalty action configurations -> "identifier" field
+       traffic_source: '' // optional
+     }]);
+   </script>
+
+Loyalty Actions Notes
+---------------------
+
+1. `register_loyalty_action` optionally accepts `email` and `custom_properties`. If none provided, values will be
+   taken from respective parameters of `authenticate_customer`. Email must be provided in either of the sources to
+   register loyalty actions.
