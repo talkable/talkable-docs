@@ -98,7 +98,7 @@ Custom app supports several actions. In context of loyalty, the following might 
 </ul>
 <p>To make the app useful, it is recommended to modify the payload that will be sent when the app is triggered.
 By default, custom app payload for loyalty-related actions contains only <cite>email</cite>.</p>
-<p>To set up a custom app, go to All site settings -&gt; App store -&gt; Custom app.</p>
+<p>To set up a custom app, go to <strong>All site settings</strong> → <strong>App store</strong> → <strong>Custom app</strong>.</p>
 <section id="sync-loyalty-actions">
 <h2>Sync loyalty actions<a class="headerlink" href="#sync-loyalty-actions" title="Permalink to this headline">¶</a></h2>
 <p>This action sends Talkable data to the configured endpoint URL when:</p>
@@ -109,8 +109,8 @@ By default, custom app payload for loyalty-related actions contains only <cite>e
 </ul>
 <section id="liquid-variables-hints">
 <h3>Liquid variables hints<a class="headerlink" href="#liquid-variables-hints" title="Permalink to this headline">¶</a></h3>
-<p>To determine which loyalty action triggered the custom app, use <cite>action.identifier</cite> liquid variable in the payload.</p>
-<p><cite>action.identifier</cite> can have the following values:</p>
+<p>To determine which loyalty action triggered the custom app, use <cite>{{ action.identifier }}</cite> liquid variable in the payload.</p>
+<p><cite>{{ action.identifier }}</cite> can have the following values:</p>
 <ul>
 <li><p>when loyalty member exchanges points for a coupon, it’s always <em>“redeem”</em>;</p></li>
 <li><p>when loyalty member gains or loses points due to a manual points adjustment, it’s always <em>“manual_adjustment”</em>;</p></li>
@@ -125,10 +125,10 @@ By default, custom app payload for loyalty-related actions contains only <cite>e
 </div></blockquote>
 </li>
 </ul>
-<p><cite>action.rule</cite> contains details about the action configuration that is responsible for a particular points collection.</p>
+<p><cite>{{ action.rule }}</cite> contains details about the action configuration that is responsible for a particular points collection.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><cite>action.rule</cite> is optional for <em>“manual_adjustment”</em> actions and always blank for <em>“redeem”</em> actions.</p>
+<p><cite>{{ action.rule }}</cite> is optional for <em>“manual_adjustment”</em> actions and always blank for <em>“redeem”</em> actions.</p>
 </div>
 <p>To see the full list of available variables, click “Show available variables” at custom app action configuration page.</p>
 </section>
@@ -138,7 +138,7 @@ By default, custom app payload for loyalty-related actions contains only <cite>e
 <p>This action sends Talkable data to the configured endpoint URL when a loyalty member reaches a new tier.</p>
 <section id="id1">
 <h3>Liquid variables hints<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p><cite>tier_transition.reason</cite> is either <em>“upgrade”</em> or <em>“downgrade”</em>, depending on the direction of the transition.</p>
+<p><cite>{{ tier_transition.reason }}</cite> is either <em>“upgrade”</em> or <em>“downgrade”</em>, depending on the direction of the transition.</p>
 <p>To see the full list of available variables, click “Show available variables” at custom app action configuration page.</p>
 </section>
 </section>
