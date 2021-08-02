@@ -22,6 +22,8 @@ Talkable Loyalty is composed of the following components:
 
 3. :ref:`Loyalty Redeem Widget`
 
+4. :ref:`Loyalty Actions`
+
 |hr|
 
 .. _integration/loyalty/integration_components/initialization_script:
