@@ -90,31 +90,31 @@
             
   <span class="target" id="integration-loyalty-custom-app"></span><section id="custom-app-for-loyalty">
 <h1>Custom App for Loyalty<a class="headerlink" href="#custom-app-for-loyalty" title="Permalink to this headline">¶</a></h1>
-<p>Talkable offers a Custom app that allows sending Talkable data to desired destination such as your site, ESP, CDP.
-Custom app supports several actions. In context of loyalty, the following might be useful:</p>
+<p>Talkable offers a Custom app that allows sending Talkable data to the desired destinations such as your site, ESP, CDP.
+The Custom App supports several actions. In the context of loyalty, the following might be useful:</p>
 <ul class="simple">
 <li><p>Sync loyalty actions</p></li>
 <li><p>Sync loyalty tier transitions</p></li>
 </ul>
 <p>To make the app useful, it is recommended to modify the payload that will be sent when the app is triggered.
-By default, custom app payload for loyalty-related actions contains only <cite>email</cite>.</p>
-<p>To set up a custom app, go to <strong>All site settings</strong> → <strong>App store</strong> → <strong>Custom app</strong>.</p>
+By default, Custom app payload contains only <cite>email</cite> for loyalty-related actions.</p>
+<p>To set up a Custom app, go to <strong>All site settings</strong> → <strong>App store</strong> → <strong>Custom app</strong>.</p>
 <section id="sync-loyalty-actions">
 <h2>Sync loyalty actions<a class="headerlink" href="#sync-loyalty-actions" title="Permalink to this headline">¶</a></h2>
-<p>This action sends Talkable data to the configured endpoint URL when:</p>
+<p>This action sends Talkable data to the configured endpoint URL in the following cases:</p>
 <ul class="simple">
 <li><p>loyalty member collects points according to loyalty action configurations;</p></li>
 <li><p>loyalty member gains or loses points due to a manual points adjustment;</p></li>
-<li><p>loyalty member exchanges points for a coupon.</p></li>
+<li><p>loyalty member exchanges (redeems) points for a coupon discount.</p></li>
 </ul>
 <section id="liquid-variables-hints">
 <h3>Liquid variables hints<a class="headerlink" href="#liquid-variables-hints" title="Permalink to this headline">¶</a></h3>
-<p>To determine which loyalty action triggered the custom app, use <cite>{{ action.identifier }}</cite> liquid variable in the payload.</p>
+<p>To determine which loyalty action triggered the Custom app, use <cite>{{ action.identifier }}</cite> liquid variable in the payload.</p>
 <p><cite>{{ action.identifier }}</cite> can have the following values:</p>
 <ul>
 <li><p>when loyalty member exchanges points for a coupon, it’s always <em>“redeem”</em>;</p></li>
 <li><p>when loyalty member gains or loses points due to a manual points adjustment, it’s always <em>“manual_adjustment”</em>;</p></li>
-<li><p>when loyalty member collects points according to loyalty action configurations, it can vary based on the action configuration type:</p>
+<li><p>when loyalty member earns points according to loyalty action configurations, it can vary based on the action configuration type:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p><em>“optin”</em> for “Loyalty join”;</p></li>
@@ -130,16 +130,16 @@ By default, custom app payload for loyalty-related actions contains only <cite>e
 <p class="admonition-title">Note</p>
 <p><cite>{{ action.rule }}</cite> is optional for <em>“manual_adjustment”</em> actions and always blank for <em>“redeem”</em> actions.</p>
 </div>
-<p>To see the full list of available variables, click “Show available variables” at custom app action configuration page.</p>
+<p>To see the full list of available variables, click “Show available variables” on Custom app action configuration page.</p>
 </section>
 </section>
 <section id="sync-loyalty-tier-transitions">
 <h2>Sync loyalty tier transitions<a class="headerlink" href="#sync-loyalty-tier-transitions" title="Permalink to this headline">¶</a></h2>
-<p>This action sends Talkable data to the configured endpoint URL when a loyalty member reaches a new tier.</p>
+<p>This action sends Talkable data to the configured endpoint URL once a loyalty member reaches a new tier.</p>
 <section id="id1">
 <h3>Liquid variables hints<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p><cite>{{ tier_transition.reason }}</cite> is either <em>“upgrade”</em> or <em>“downgrade”</em>, depending on the direction of the transition.</p>
-<p>To see the full list of available variables, click “Show available variables” at custom app action configuration page.</p>
+<p>To see the full list of available variables, click “Show available variables” on Custom app action configuration page.</p>
 </section>
 </section>
 </section>
