@@ -109,10 +109,37 @@ A setting to enable this behavior can be found under <strong>Site settings</stro
 <p class="admonition-title">Note</p>
 <p><cite>join_loyalty</cite> is available since integration version 4.5.9.</p>
 </div>
-<section id="code-example">
-<h3>Code Example:<a class="headerlink" href="#code-example" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s2">&quot;authenticate_customer&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nx">email</span><span class="o">:</span> <span class="s2">&quot;loyalty@talkable.com&quot;</span><span class="p">}]);</span>
-<span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s2">&quot;join_loyalty&quot;</span><span class="p">,</span> <span class="p">{}]);</span>
+<section id="code-example-1">
+<h3>Code Example #1:<a class="headerlink" href="#code-example-1" title="Permalink to this headline">¶</a></h3>
+<p>Use <cite>authenticate_customer</cite> to store current user data.</p>
+<p>When you call <cite>join_loyalty</cite>, you can pass empty object since Talkable will have access to the data from <cite>authenticate_customer</cite>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><cite>authenticate_customer</cite> data can also be reused by other integration functions.</p>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s2">&quot;authenticate_customer&quot;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">email</span><span class="o">:</span> <span class="s2">&quot;loyalty@talkable.com&quot;</span><span class="p">,</span> <span class="c1">// required for `join_loyalty`</span>
+  <span class="nx">first_name</span><span class="o">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
+  <span class="nx">last_name</span><span class="o">:</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span>
+  <span class="nx">custom_properties</span><span class="o">:</span> <span class="p">{}</span>
+<span class="p">}]);</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;join_loyalty&quot;</span><span class="p">,</span> <span class="p">{})</span>
+</pre></div>
+</div>
+</section>
+<section id="code-example-2">
+<h3>Code Example #2:<a class="headerlink" href="#code-example-2" title="Permalink to this headline">¶</a></h3>
+<p>Pass loyalty member data directly to <cite>join_loyalty</cite>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Arguments passed with <cite>join_loyalty</cite> override respective arguments from <cite>authenticate_customer</cite>.</p>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s2">&quot;join_loyalty&quot;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">email</span><span class="o">:</span> <span class="s2">&quot;loyalty@talkable.com&quot;</span><span class="p">,</span> <span class="c1">// required</span>
+  <span class="nx">first_name</span><span class="o">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
+  <span class="nx">last_name</span><span class="o">:</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span>
+  <span class="nx">custom_properties</span><span class="o">:</span> <span class="p">{}</span>
+<span class="p">}]);</span>
 </pre></div>
 </div>
 </section>
