@@ -29,6 +29,9 @@ Enrollment via JS Integration
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Enroll users to loyalty without showing the campaign using `join_loyalty`.
+For example, this could be used for enrolling users during registration or login.
+
+Don't forget to include a consent checkbox that would inform your user that they are about to join the loyalty program.
 
 .. note::
    `join_loyalty` is available since integration version 4.5.9.
