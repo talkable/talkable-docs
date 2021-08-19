@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Learn how to use Custom app to receive data about loyalty events." name="description" />
+
+    <title>Custom App for Loyalty &#8212; Talkable Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <link rel="canonical" href="https://docs.talkable.com/integration/loyalty/custom_app.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Auto-Enrollment" href="auto_enrollment.html" />
+    <link rel="prev" title="Integration Components" href="integration_components.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+  <link href="../../_static/pygments-github.css" rel="stylesheet">
+  <link href="../../_static/img/favicon.ico" rel="shortcut icon" />
+  </head><body>
+  
+    <div class="header">
+      <a href="../../index.html" class="header-logo">Talkable docs</a>
+          <form class="search-form" action="../../search.html" method="get">
+            <input type="text" class="textfield search-form-field" name="q" placeholder="Search docs" />
+            <input type="submit" class="button search-form-button" value="Search" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+      <div class="header-disclaimer">
+        Visit
+        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+      </div>
+    </div> <!-- /.header -->
+  
+
+  <div class="content-container content clearfix">
+      <div class="nav">
+        <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../campaigns.html">Talkable Campaigns</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced_features.html">Features</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../custom_integration.html">Standard Integration</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../shopify.html">Shopify Integration</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../magento.html">Magento Integration</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../demandware.html">Salesforce Commerce Cloud Integration</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../loyalty.html">Loyalty Integration (beta)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="integration_components.html">Integration Components</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Custom App for Loyalty</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sync-loyalty-actions">Sync loyalty actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sync-loyalty-tier-transitions">Sync loyalty tier transitions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="auto_enrollment.html">Auto-Enrollment</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api_v2.html">API Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../web_hooks.html">Webhooks</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../ios_sdk.html">Talkable iOS SDK</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../android_sdk.html">Talkable Android SDK</a></li>
+</ul>
+
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <span class="target" id="integration-loyalty-custom-app"></span><section id="custom-app-for-loyalty">
+<h1>Custom App for Loyalty<a class="headerlink" href="#custom-app-for-loyalty" title="Permalink to this headline">¶</a></h1>
+<p>Talkable offers a Custom App that allows you to send Talkable data to an outside destination such as your site, ESP, or CDP.
+The Custom App supports several actions. In the context of loyalty, the following actions might be useful:</p>
+<ul class="simple">
+<li><p>Sync loyalty actions</p></li>
+<li><p>Sync loyalty tier transitions</p></li>
+</ul>
+<p>By default, the Custom App payload contains only <cite>email</cite> for loyalty-related actions.
+However, it is recommended to modify the payload that will be sent when the app is triggered.</p>
+<p>To set up a Custom App, go to <strong>All site settings</strong> → <strong>App store</strong> → <strong>Custom app</strong>.</p>
+<section id="sync-loyalty-actions">
+<h2>Sync loyalty actions<a class="headerlink" href="#sync-loyalty-actions" title="Permalink to this headline">¶</a></h2>
+<p>This feature sends Talkable data to the configured endpoint URL in the following cases:</p>
+<ul class="simple">
+<li><p>when a loyalty member earns points according to loyalty action configurations (eg. by subscribing to your newsletter);</p></li>
+<li><p>when a loyalty member earns or has points deducted due to a manual points adjustment (eg. made by a Customer Service representative);</p></li>
+<li><p>when a loyalty member exchanges (redeems) points for a coupon discount.</p></li>
+</ul>
+<section id="liquid-variables-hints">
+<h3>Liquid variables hints<a class="headerlink" href="#liquid-variables-hints" title="Permalink to this headline">¶</a></h3>
+<p>To determine which loyalty action triggered the Custom App, use <cite>{{ action.identifier }}</cite> liquid variable in the payload.</p>
+<p><cite>{{ action.identifier }}</cite> can have the following values:</p>
+<ul>
+<li><p>when loyalty member exchanges points for a coupon, the Action Identifier is <em>“redeem”</em>;</p></li>
+<li><p>when loyalty member gains or loses points due to a manual points adjustment, the Action Identifier is <em>“manual_adjustment”</em>;</p></li>
+<li><p>when loyalty member earns points according to loyalty action configurations, the Action Identifier varies based on the action configuration type:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><em>“optin”</em> for “Loyalty join”;</p></li>
+<li><p><em>“event”</em> for “Purchase points” and “Event points”;</p></li>
+<li><p><em>“referral”</em> for “Refer a friend”;</p></li>
+<li><p>for a custom type, the Identifier is taken straight from the action configuration “Identifier” field.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p><cite>{{ action.rule }}</cite> contains details about the action configuration that is responsible for a particular points collection.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><cite>{{ action.rule }}</cite> is optional for <em>“manual_adjustment”</em> actions and always blank for <em>“redeem”</em> actions.</p>
+</div>
+<p>To see the full list of available variables, click “Show available variables” on the Custom App action configuration page.</p>
+</section>
+</section>
+<section id="sync-loyalty-tier-transitions">
+<h2>Sync loyalty tier transitions<a class="headerlink" href="#sync-loyalty-tier-transitions" title="Permalink to this headline">¶</a></h2>
+<p>This feature sends Talkable data to the configured endpoint URL once a loyalty member reaches a new tier.</p>
+<section id="id1">
+<h3>Liquid variables hints<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p><cite>{{ tier_transition.reason }}</cite> is either <em>“upgrade”</em> or <em>“downgrade”</em>, depending on the direction of the transition.</p>
+<p>To see the full list of available variables, click “Show available variables” on the Custom App action configuration page.</p>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </div> <!-- /.content-container -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-63500208-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  </body>
+</html>

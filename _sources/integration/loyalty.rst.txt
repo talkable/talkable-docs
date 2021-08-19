@@ -83,3 +83,5 @@ a few quick steps by adding the below scripts to your site.
  .. toctree::
 
     loyalty/integration_components
+    loyalty/custom_app
+    loyalty/auto_enrollment
