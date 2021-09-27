@@ -3,13 +3,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="This is a public key encryption program that has become the most popular standard for email encryption." name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="This is a public key encryption program that has become the most popular standard for email encryption." name="description" />
 
     <title>File Encryption &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -74,15 +73,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../integration/custom_integration.html">Standard Integration</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../integration/shopify.html">Shopify Integration</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../integration/magento.html">Magento Integration</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../integration/demandware.html">Salesforce Commerce Cloud Integration</a></li>
-</ul>
-<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/ecommerce_platforms.html">E-commerce Platforms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../integration/loyalty.html">Loyalty Integration (beta)</a></li>
 </ul>
 <ul>
@@ -97,6 +88,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../android_sdk.html">Talkable Android SDK</a></li>
 </ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../email_marketing.html">Email marketing</a></li>
+</ul>
 
       </div>
 
@@ -106,7 +100,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="advanced-features-file-encryption"></span><section id="file-encryption">
+  <span class="target" id="advanced-features-file-encryption"></span><div class="section" id="file-encryption">
 <h1>File Encryption<a class="headerlink" href="#file-encryption" title="Permalink to this headline">¶</a></h1>
 <p>For encrypting sensitive data when sending it through the Internet, you can use
 PGP encryption. It is a public key encryption program that has become the most
@@ -118,7 +112,7 @@ yet, first follow the instructions under “Set Up GPG Keys” in this tutorial:
 <a class="reference external" rel="nofollow" href="https://www.digitalocean.com/community/tutorials/how-to-use-gpg-to-encrypt-and-sign-messages#set-up-gpg-keys">How To Use GPG to Encrypt and Sign Messages</a>.
 Also, you can find a brief list of software that has PGP capability
 <a class="reference external" rel="nofollow" href="https://www.openpgp.org/software/">here</a>.</p>
-<section id="how-to-import-the-talkable-public-key">
+<div class="section" id="how-to-import-the-talkable-public-key">
 <h2>How To Import the Talkable Public Key<a class="headerlink" href="#how-to-import-the-talkable-public-key" title="Permalink to this headline">¶</a></h2>
 <p>Before encrypting or decrypting you should import the Talkable public key.
 Here is a command to do it:</p>
@@ -130,8 +124,8 @@ the next command is successful:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gpg --list-keys dev@talkable.com
 </pre></div>
 </div>
-</section>
-<section id="encrypting">
+</div>
+<div class="section" id="encrypting">
 <h2>Encrypting<a class="headerlink" href="#encrypting" title="Permalink to this headline">¶</a></h2>
 <p>To encrypt data, you can use the following syntax:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gpg --encrypt --sign --armor -r dev@talkable.com name_of_file
@@ -147,8 +141,8 @@ as well.</p>
 <p>You should include a second <code class="docutils literal notranslate"><span class="pre">&quot;-r&quot;</span></code> recipient with your own email address if
 you want to be able to read the encrypted message.</p>
 </div>
-</section>
-<section id="decrypting">
+</div>
+<div class="section" id="decrypting">
 <h2>Decrypting<a class="headerlink" href="#decrypting" title="Permalink to this headline">¶</a></h2>
 <p>To decrypt a file simply call GPG on it:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gpg file_name.asc
@@ -158,8 +152,8 @@ you want to be able to read the encrypted message.</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>

@@ -3,12 +3,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Getting Started &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -47,15 +46,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../integration/custom_integration.html">Standard Integration</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../integration/shopify.html">Shopify Integration</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../integration/magento.html">Magento Integration</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../integration/demandware.html">Salesforce Commerce Cloud Integration</a></li>
-</ul>
-<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/ecommerce_platforms.html">E-commerce Platforms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../integration/loyalty.html">Loyalty Integration (beta)</a></li>
 </ul>
 <ul>
@@ -84,6 +75,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../android_sdk.html">Talkable Android SDK</a></li>
 </ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../email_marketing.html">Email marketing</a></li>
+</ul>
 
       </div>
 
@@ -93,7 +87,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="ios-sdk-getting-started"></span><section id="getting-started">
+  <span class="target" id="ios-sdk-getting-started"></span><div class="section" id="getting-started">
 <h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
 <p>The Getting Started guide shows you how to setup and launch Referral Campaign as quickly as possible with Talkable iOS SDK.</p>
 <blockquote>
@@ -102,7 +96,7 @@
 <p>Make sure your application meets the <a class="reference internal" href="#requirements">Requirements</a></p>
 </div>
 </div></blockquote>
-<section id="installation">
+<div class="section" id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>Talkable SDK could be integrated using CocoaPods or as a static library.</p>
 <p>If you want to use CocoaPods way, here is <a class="reference external" rel="nofollow" href="https://cocoapods.org/pods/TalkableSDK">Talkable SDK pod’s page</a>.</p>
@@ -131,14 +125,14 @@
 </pre></div>
 </div>
 </div></blockquote>
-</section>
-<section id="configuration">
+</div>
+<div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li><p>Initialize Talkable in your <cite>application:didFinishLaunchingWithOptions:</cite> method, like so:</p></li>
 </ol>
 <blockquote>
-<div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">setApiKey</span><span class="p">:</span><span class="s">@&quot;YOUR_TALKABLE_PUBLIC_API_KEY&quot;</span> <span class="nl">andSiteSlug</span><span class="p">:</span><span class="s">@&quot;YOUR_SITE_SLUG&quot;</span><span class="p">];</span>
+<div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">setApiKey</span><span class="p">:</span><span class="s">@&quot;YOUR_TALKABLE_PUBLIC_API_KEY&quot;</span><span class="w"> </span><span class="nl">andSiteSlug</span><span class="p">:</span><span class="s">@&quot;YOUR_SITE_SLUG&quot;</span><span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -192,21 +186,21 @@ able to find on your site <strong>Dashboard</strong> at <a class="reference exte
 <li><p>Add following lines to <cite>application:handleOpenURL:</cite> or <cite>application:openURL:sourceApplication:annotation:</cite></p></li>
 </ol>
 <blockquote>
-<div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">handleOpenURL</span><span class="p">:</span><span class="n">url</span><span class="p">];</span>
+<div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">handleOpenURL</span><span class="p">:</span><span class="n">url</span><span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>
 <p>Your environment is all set up! Now you need to <a class="reference internal" href="integration.html#ios-sdk-integration"><span class="std std-ref">integrate</span></a> the Talkable campaign piece.</p>
-</section>
-<section id="requirements">
+</div>
+<div class="section" id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p>The SDK supports iOS 9.0 and later.</p>
 <div class="hidden docutils container">
 <div class="toctree-wrapper compound">
 </div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>

@@ -3,20 +3,19 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="You can integrate Talkable Loyalty to e-commerce sites in a few quick steps." name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="You can integrate Talkable Loyalty to e-commerce sites in a few quick steps." name="description" />
 
     <title>Loyalty Integration (beta) &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/integration/loyalty.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Integration Components" href="loyalty/integration_components.html" />
-    <link rel="prev" title="Salesforce Commerce Cloud Integration" href="demandware.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <link rel="prev" title="Magento 2.x Integration" href="ecommerce_platforms/magento/magento2.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
   <link href="../_static/pygments-github.css" rel="stylesheet">
   <link href="../_static/img/favicon.ico" rel="shortcut icon" />
   </head><body>
@@ -47,16 +46,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="custom_integration.html">Standard Integration</a></li>
 </ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="shopify.html">Shopify Integration</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="magento.html">Magento Integration</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="demandware.html">Salesforce Commerce Cloud Integration</a></li>
-</ul>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ecommerce_platforms.html">E-commerce Platforms</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Loyalty Integration (beta)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="loyalty/integration_components.html">Integration Components</a></li>
 <li class="toctree-l2"><a class="reference internal" href="loyalty/custom_app.html">Custom App for Loyalty</a></li>
@@ -76,6 +67,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../android_sdk.html">Talkable Android SDK</a></li>
 </ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../email_marketing.html">Email marketing</a></li>
+</ul>
 
       </div>
 
@@ -85,7 +79,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="integration-loyalty"></span><section id="loyalty-integration-beta">
+  <span class="target" id="integration-loyalty"></span><div class="section" id="loyalty-integration-beta">
 <h1>Loyalty Integration (beta)<a class="headerlink" href="#loyalty-integration-beta" title="Permalink to this headline">¶</a></h1>
 <p>Integrating Talkable Loyalty to e-commerce sites is done in
 a few quick steps by adding the below scripts to your site.</p>
@@ -117,9 +111,9 @@ exactly where the loyalty points redemption widget should render:</p>
 </pre></div>
 </div>
 <p>It is recommended to add it above the discount field. Examples:</p>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="Sample checkout" src="../_images/loyalty_checkout.png" />
-</figure>
+</div>
 </li>
 <li><p>Define Loyalty points redemption batches.</p>
 <p>Each redemption batch determines progressive point redemption options based on the available points balance of the loyalty member.
@@ -127,9 +121,9 @@ For example, 500 points would equal a discount coupon for $50 off, 1000 points w
 <p>For every redemption batch, please generate single-use coupons for
 a certain discount amount ($50 off, $100 off, etc.) and upload all coupon lists into Talkable loyalty coupon lists.</p>
 <p>It is recommended to upload 100,000 single-use coupons into every coupon list.</p>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="Redemption batches" src="../_images/redemption_batches.png" />
-</figure>
+</div>
 </li>
 </ol>
 <blockquote>
@@ -191,7 +185,7 @@ This simplifies future refunds support as taxes and shipping costs are not refun
 </ul>
 </div>
 </div>
-</section>
+</div>
 
 
             <div class="clearer"></div>

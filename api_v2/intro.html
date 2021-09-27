@@ -3,13 +3,12 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="The Talkable API is built on HTTP. Our API is RESTful, returns JSON, and responds with standard HTTP response codes to indicate errors." name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="The Talkable API is built on HTTP. Our API is RESTful, returns JSON, and responds with standard HTTP response codes to indicate errors." name="description" />
 
     <title>Introduction &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -48,15 +47,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../integration/custom_integration.html">Standard Integration</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../integration/shopify.html">Shopify Integration</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../integration/magento.html">Magento Integration</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../integration/demandware.html">Salesforce Commerce Cloud Integration</a></li>
-</ul>
-<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/ecommerce_platforms.html">E-commerce Platforms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../integration/loyalty.html">Loyalty Integration (beta)</a></li>
 </ul>
 <ul class="current">
@@ -95,6 +86,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../android_sdk.html">Talkable Android SDK</a></li>
 </ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../email_marketing.html">Email marketing</a></li>
+</ul>
 
       </div>
 
@@ -104,18 +98,18 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="api-v2-intro"></span><section id="introduction">
+  <span class="target" id="api-v2-intro"></span><div class="section" id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
 <p>The Talkable API is built on HTTP. Our API is RESTful, returns JSON and responds
 with standard HTTP response codes to indicate errors.</p>
-<section id="base-url">
+<div class="section" id="base-url">
 <h2>Base URL<a class="headerlink" href="#base-url" title="Permalink to this headline">¶</a></h2>
 <p>All API URLs referenced in this documentation start with the following base part:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>https://www.talkable.com/api/v2
 </pre></div>
 </div>
-</section>
-<section id="authentication">
+</div>
+<div class="section" id="authentication">
 <h2>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline">¶</a></h2>
 <p>You authenticate to the Talkable API by providing your API Key in the request.
 You can manage your API key in the Account Settings.</p>
@@ -137,8 +131,8 @@ Provide your API key as the basic auth username value. You do not need to provid
 <p>If you need to authenticate via bearer auth (e.g., for a cross-origin request), <br>
 use <code class="docutils literal notranslate"><span class="pre">-H</span> <span class="pre">&quot;Authorization:</span> <span class="pre">Bearer</span> <span class="pre">i9uil7nQgDjucCiTJu&quot;</span></code> <br>
 instead of <code class="docutils literal notranslate"><span class="pre">-u</span> <span class="pre">i9uil7nQgDjucCiTJu:</span></code>.</p>
-</section>
-<section id="response-format">
+</div>
+<div class="section" id="response-format">
 <h2>Response Format<a class="headerlink" href="#response-format" title="Permalink to this headline">¶</a></h2>
 <p>The API returns JSON-encoded objects (content-type: application/json).</p>
 <p>Responses vary according to the method used, but every successful response
@@ -146,8 +140,8 @@ envelope includes these common parts:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;ok&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="o">:</span> <span class="p">...}</span>
 </pre></div>
 </div>
-</section>
-<section id="date-format">
+</div>
+<div class="section" id="date-format">
 <h2>Date Format<a class="headerlink" href="#date-format" title="Permalink to this headline">¶</a></h2>
 <p>Talkable returns JSON for all API calls. JSON does not have a built-in date type,
 dates are passed as strings encoded according to <a rel="nofollow" href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>.
@@ -155,8 +149,8 @@ This format is supported by most programming languages out of the box:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>2014-04-02T02:43:58.797-07:00
 </pre></div>
 </div>
-</section>
-<section id="errors">
+</div>
+<div class="section" id="errors">
 <h2>Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h2>
 <p>The following represents a common JSON error response resulting from a failed
 Talkable API call:</p>
@@ -206,8 +200,8 @@ or delete cannot be performed due to validation errors.
 <div class="toctree-wrapper compound">
 </div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>

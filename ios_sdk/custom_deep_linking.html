@@ -3,12 +3,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Integration with Third Party Deep Linking Services &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -47,15 +46,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../integration/custom_integration.html">Standard Integration</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../integration/shopify.html">Shopify Integration</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../integration/magento.html">Magento Integration</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../integration/demandware.html">Salesforce Commerce Cloud Integration</a></li>
-</ul>
-<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/ecommerce_platforms.html">E-commerce Platforms</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../integration/loyalty.html">Loyalty Integration (beta)</a></li>
 </ul>
 <ul>
@@ -83,6 +74,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../android_sdk.html">Talkable Android SDK</a></li>
 </ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../email_marketing.html">Email marketing</a></li>
+</ul>
 
       </div>
 
@@ -92,11 +86,11 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="ios-sdk-custom-deep-linking"></span><section id="integration-with-third-party-deep-linking-services">
+  <span class="target" id="ios-sdk-custom-deep-linking"></span><div class="section" id="integration-with-third-party-deep-linking-services">
 <h1>Integration with Third Party Deep Linking Services<a class="headerlink" href="#integration-with-third-party-deep-linking-services" title="Permalink to this headline">¶</a></h1>
 <p>Talkable can work with third party deep linking providers such as GetSocial, Branch.io, and Firebase. Talkable is able to use deep linking functionality to track app installations and reward your Advocates and Friends for installing your mobile app on their phones.</p>
 <p>Deep linking services provide a special referral link that can be given to Advocates to be shared with their Friends. Once opened on a Friend’s mobile device, this link will not only redirect them to the App Store to install the app, but also track that the app was installed using a referral link. Deep linking can also be used to send a Friend to a specific place in the app once it’s installed and opened for the first time, show them personalized messages, and more.</p>
-<section id="configure-your-talkable-campaign">
+<div class="section" id="configure-your-talkable-campaign">
 <h2>1. Configure your Talkable campaign<a class="headerlink" href="#configure-your-talkable-campaign" title="Permalink to this headline">¶</a></h2>
 <p>To use deep linking with Talkable campaigns, simply use your deep link URL as your Talkable Site URL.</p>
 <img alt="../_images/site_url.png" src="../_images/site_url.png" />
@@ -108,17 +102,17 @@ are present in the final URL: <code class="docutils literal notranslate"><span c
 This functionality is used to pass the Friend’s identifying information to the Talkable SDK in your iOS app.
 To use this functionality with Firebase, refer to this document: <a class="reference external" rel="nofollow" href="https://firebase.google.com/docs/dynamic-links/create-manually">Manually constructing a Dynamic Link URL</a>.</p>
 </div>
-</section>
-<section id="pass-deep-linking-params-to-the-talkable-sdk">
+</div>
+<div class="section" id="pass-deep-linking-params-to-the-talkable-sdk">
 <h2>2. Pass deep linking params to the Talkable SDK<a class="headerlink" href="#pass-deep-linking-params-to-the-talkable-sdk" title="Permalink to this headline">¶</a></h2>
 <p>Retrieve deep linking params as described in your deep linking provider’s documentation
 and pass these params to the Talkable SDK using <code class="docutils literal notranslate"><span class="pre">handleOpenURL:</span></code> or <code class="docutils literal notranslate"><span class="pre">handleURLParams:</span></code> method.</p>
 <p>Use <code class="docutils literal notranslate"><span class="pre">handleURLParams:</span></code> method if you have a <code class="docutils literal notranslate"><span class="pre">NSDictionary</span></code> with params passed to the deep link handler block (Branch.io, GetSocial).</p>
 <div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="c1">// For Branch.io</span>
 
-<span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">initSessionWithLaunchOptions</span><span class="p">:</span><span class="n">launchOptions</span> <span class="nl">andRegisterDeepLinkHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span> <span class="o">*</span><span class="n">params</span><span class="p">,</span> <span class="bp">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
-    <span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">handleURLParams</span><span class="p">:</span><span class="n">params</span><span class="p">];</span>
-<span class="p">}];</span>
+<span class="p">[[</span><span class="n">Branch</span><span class="w"> </span><span class="n">getInstance</span><span class="p">]</span><span class="w"> </span><span class="nl">initSessionWithLaunchOptions</span><span class="p">:</span><span class="n">launchOptions</span><span class="w"> </span><span class="nl">andRegisterDeepLinkHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="w"> </span><span class="o">*</span><span class="n">params</span><span class="p">,</span><span class="w"> </span><span class="bp">NSError</span><span class="w"> </span><span class="o">*</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">handleURLParams</span><span class="p">:</span><span class="n">params</span><span class="p">];</span><span class="w"></span>
+<span class="p">}];</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -129,29 +123,29 @@ only when desired conditions are met.</p>
 </div>
 <div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="c1">// For GetSocial</span>
 
-<span class="p">[</span><span class="n">GetSocial</span> <span class="nl">referralDataWithSuccess</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">GetSocialReferralData</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">referralData</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">([</span><span class="n">referralData</span> <span class="n">isFirstMatch</span><span class="p">])</span> <span class="p">{</span>
-        <span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">handleURLParams</span><span class="p">:[</span><span class="n">referralData</span> <span class="n">linkParams</span><span class="p">]];</span>
-    <span class="p">}</span>
-<span class="p">}</span> <span class="nl">failure</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSError</span> <span class="o">*</span> <span class="n">_Nonnull</span> <span class="n">error</span><span class="p">)</span> <span class="p">{}];</span>
+<span class="p">[</span><span class="n">GetSocial</span><span class="w"> </span><span class="nl">referralDataWithSuccess</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">GetSocialReferralData</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_Nullable</span><span class="w"> </span><span class="n">referralData</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">([</span><span class="n">referralData</span><span class="w"> </span><span class="n">isFirstMatch</span><span class="p">])</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">handleURLParams</span><span class="p">:[</span><span class="n">referralData</span><span class="w"> </span><span class="n">linkParams</span><span class="p">]];</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="nl">failure</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSError</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_Nonnull</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{}];</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Use <code class="docutils literal notranslate"><span class="pre">handleOpenURL:</span></code> method if you handle deep link as <code class="docutils literal notranslate"><span class="pre">NSURL</span></code> using the standard
 <code class="docutils literal notranslate"><span class="pre">application:openURL:options:</span></code> method (Firebase).</p>
 <div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="c1">// For Firebase</span>
 
-<span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">app</span>
-            <span class="nf">openURL:</span><span class="p">(</span><span class="bp">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
-            <span class="nf">options:</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">&lt;</span><span class="bp">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="kt">id</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span> <span class="p">{</span>
-                <span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">handleOpenURL</span><span class="p">:</span><span class="n">url</span><span class="p">];</span>
-            <span class="p">}</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">app</span><span class="w"></span>
+<span class="w">            </span><span class="nf">openURL:</span><span class="p">(</span><span class="bp">NSURL</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">url</span><span class="w"></span>
+<span class="w">            </span><span class="nf">options:</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">&lt;</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="kt">id</span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">options</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">handleOpenURL</span><span class="p">:</span><span class="n">url</span><span class="p">];</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Calling either of these methods will register the app installation event in Talkable and complete the referral cycle.
 You can then use the <a class="reference internal" href="api_integration.html#ios-sdk-api-integration"><span class="std std-ref">retrieveRewardsWithHandler:</span></a> method to check for rewards or subscribe
 to a corresponding <a class="reference internal" href="advanced.html#ios-sdk-advanced-notifications"><span class="std std-ref">notification</span></a>.</p>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
