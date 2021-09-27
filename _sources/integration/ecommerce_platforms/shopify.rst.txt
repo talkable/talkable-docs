@@ -123,4 +123,4 @@ Manual integration
 
    .. toctree::
 
-      Verifying Integration instructions <verify>
+      Verifying Integration instructions <../verify>
