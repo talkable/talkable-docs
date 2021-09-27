@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: LOREM IPSUM
+  :description: With Mailchimp app clients can synchronize emails that Talkable collected.
 
 Mailchimp
 =========

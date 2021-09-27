@@ -66,10 +66,10 @@ Follow our instructions on how to integrate Talkable into your native mobile app
 |   ios_sdk          |   android_sdk      |
 +--------------------+--------------------+
 
-Email
-===================
+Email marketing
+===============
 
-LOREM IPSUM
+With these apps Talkable synchronizes all people who opt in for Talkable email marketing during signup. This way you will keep all your emails in one place in an automated way.
 
 +--------------------+
 | .. toctree::       |

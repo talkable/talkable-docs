@@ -2,13 +2,12 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: LOREM IPSUM
+   :description: With these ESP apps Talkable synchronizes all people who opt in for Talkable email marketing during signup.
 
-Email Marketing
+Email marketing
 ###############
 
-Talkable has an iOS framework enabling you to use Talkable in iOS Apps. Once integrated you can use the following Talkable capabilities:
-
+With these ESP apps Talkable synchronizes all people who opt in for Talkable email marketing during signup. This way you will keep all your emails in one place in an automated way.
 
 Contents:
 
