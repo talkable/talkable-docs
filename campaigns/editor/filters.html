@@ -193,7 +193,7 @@ First parameter is a maximum random number.</p>
 <div class="section" id="regexp-captures">
 <h2>regexp_captures<a class="headerlink" href="#regexp-captures" title="Permalink to this headline">¶</a></h2>
 <p>Parses input with a given regexp and returning
-<a class="reference external" rel="nofollow" href="http://www.regular-expressions.info/brackets.html">regular expression captures</a>
+<a class="reference external" rel="nofollow" href="https://www.regular-expressions.info/brackets.html">regular expression captures</a>
 as an array.</p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="s1">&#39;12345678&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">regexp_captures</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;(....)(....)&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">join</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;-&#39;</span><span class="w"> </span><span class="p">}}</span>
 <span class="p">{{</span><span class="w"> </span><span class="s1">&#39;bogdan@example.com&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">regexp_captures</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;^([a-z]+)\@([a-z]+)\.([a-z]+)&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">json</span><span class="w"> </span><span class="p">}}</span>
@@ -291,7 +291,7 @@ unless time zone is specified.</p>
 <span id="liquid-filter-format-date"></span><h2>format_date<a class="headerlink" href="#format-date" title="Permalink to this headline">¶</a></h2>
 <p>Format date for current localization.</p>
 <p>Default format: Apr 04, 2014</p>
-<p>Reference to all available formatting can be found in <a class="reference external" rel="nofollow" href="http://apidock.com/ruby/DateTime/strftime">strftime documentation</a></p>
+<p>Reference to all available formatting can be found in <a class="reference external" rel="nofollow" href="https://apidock.com/ruby/DateTime/strftime">strftime documentation</a></p>
 <p>Reference to all available locales can be found in <a class="reference external" rel="nofollow" href="https://github.com/svenfuchs/rails-i18n#available-locales">rails-i18n documentation</a></p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="nv">valid_until</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">format_date</span><span class="w"> </span><span class="p">}}</span>
 <span class="p">{{</span><span class="w"> </span><span class="nv">valid_until</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">format_date</span><span class="p">:</span><span class="w"> </span><span class="na">format</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;%Y-%m-%d&quot;</span><span class="w"> </span><span class="p">}}</span>
