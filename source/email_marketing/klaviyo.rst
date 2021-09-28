@@ -37,8 +37,11 @@ Please use the following guide to start using an app you need:
 
 1. Navigate into the app store:
 
-  .. image:: /_static/img/email_marketing/app_store.png
-    :alt: App store
+  .. image:: /_static/img/email_marketing/app_store_step_1.png
+      :alt: App store step 1
+
+  .. image:: /_static/img/email_marketing/app_store_step_2.png
+      :alt: App store step 2
 
 2. Choose an app you need by clicking “Install”
 3. Fill in all necessary fields. You can use tips on the right that instruct how to find all necessary credentials.
