@@ -70,14 +70,14 @@ color, not image:
 There are many options for embedding custom fonts, here are most popular
 and solid ones:
 
-1. Purchase web-compatible font on http://myfonts.com
+1. Purchase web-compatible font on https://www.myfonts.com
 
 .. image:: /_static/img/liquid/designer/image6.png
    :alt: myfonts.com
 
-2. Purchase on http://typekit.com
+2. Purchase on https://fonts.adobe.com
 
-3. Choose free Google Font http://www.google.com/fonts
+3. Choose free Google Font https://fonts.google.com
 
 .. _responsive-views:
 

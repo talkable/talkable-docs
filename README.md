@@ -3,19 +3,19 @@ Talkable Documentation
 
 [![Build Status](https://circleci.com/gh/talkable/talkable-docs.svg?style=svg&circle-token=cc33458158e7b0c1f6f8cbf1bcbf74f00ee28a8e)](https://circleci.com/gh/talkable/workflows/talkable-docs)
 
-This GitHub repository represents Talkable’s documentation site, located at [docs.talkable.com](http://docs.talkable.com).
+This GitHub repository represents Talkable’s documentation site, located at [docs.talkable.com](https://docs.talkable.com).
 
-The Talkable documentation uses [reStructuredText](http://docutils.sourceforge.net/rst.html) as its markup language and is built using [Sphinx](http://sphinx-doc.org/).
+The Talkable documentation uses [reStructuredText](https://docutils.sourceforge.io/rst.html) as its markup language and is built using [Sphinx](https://www.sphinx-doc.org).
 
 Sphinx
 ------
 
-For more details see [The Sphinx Documentation](http://sphinx-doc.org/contents.html).
+For more details see [The Sphinx Documentation](https://www.sphinx-doc.org).
 
 reStructuredText
 ----------------
 
-For more details see [The reST Quickref](http://docutils.sourceforge.net/docs/user/rst/quickref.html).
+For more details see [The reST Quickref](https://docutils.sourceforge.io/docs/user/rst/quickref.html).
 
 ### Sections
 
@@ -60,13 +60,13 @@ name "Talkable Section".
 Build the documentation
 -----------------------
 
-First install [Sphinx](http://sphinx-doc.org/). See below.
+First install [Sphinx](https://www.sphinx-doc.org). See below.
 
 ### Installing Sphinx on OS X
 
-* Install [Homebrew](http://brew.sh/).
+* Install [Homebrew](https://brew.sh).
 
-* Install Ruby and [Bundler](http://bundler.io/), and run `bundle install` to install dependencies.
+* Install Ruby and [Bundler](https://bundler.io), and run `bundle install` to install dependencies.
 
 * Install Python (>= 3.5) and pip:
 
@@ -132,4 +132,4 @@ See "master" branch: https://github.com/talkable/talkable-docs
 
 See "gh-pages" branch: https://github.com/talkable/talkable-docs/tree/gh-pages
 
-See GitHub Page (auto generated): http://docs.talkable.com
+See GitHub Page (auto generated): https://docs.talkable.com

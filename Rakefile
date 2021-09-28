@@ -60,7 +60,7 @@ task :server => :preview do
   sh 'bundle exec foreman start'
 end
 
-desc 'Commit and deploy changes to http://docs.talkable.com'
+desc 'Commit and deploy changes to https://docs.talkable.com'
 task :deploy => :'deploy:production'
 
 namespace :deploy do
@@ -79,7 +79,7 @@ namespace :deploy do
     sh 'git add -A'
     sh "git commit -m \"Generated gh-pages for `git log #{source_branch} -1 --pretty=short --abbrev-commit`\" && #{push_command} ; git checkout #{source_branch}"
 
-    puts "\nDeployment finished. Check updated docs at http://#{domain}"
+    puts "\nDeployment finished. Check updated docs at https://#{domain}"
   end
 
   task :production do
@@ -92,7 +92,7 @@ namespace :deploy do
     )
   end
 
-  desc 'Commit and deploy changes to http://void-docs.talkable.com'
+  desc 'Commit and deploy changes to https://void-docs.talkable.com'
   task :staging do
     deploy(
       domain: 'void-docs.talkable.com',

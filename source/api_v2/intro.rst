@@ -108,7 +108,7 @@ Talkable returns standard HTTP response codes.
    500, 502, 503, 504  Server Errors - Something is wrong on Talkable’s end
    =================== ======================================================
 
-.. _HTTP Basic Auth: http://en.wikipedia.org/wiki/Basic_access_authentication
+.. _HTTP Basic Auth: https://en.wikipedia.org/wiki/Basic_access_authentication
 
 .. container:: hidden
 

@@ -12,7 +12,7 @@ Variables
 Variables are used to show dynamic data like Campaign tag, Advocate info, etc.
 |br|
 All Variables are enclosed into ``{{ }}`` which means
-`Liquid Output <http://docs.shopify.com/themes/liquid-basics/output>`_.
+`Liquid Output <https://shopify.dev/api/liquid#liquid-syntax>`_.
 
 Each Campaign View has its own set of Variables located inside Editor
 navigation:
