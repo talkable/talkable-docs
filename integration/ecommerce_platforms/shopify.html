@@ -98,7 +98,7 @@ you start the Automatic integration process. See <a class="reference internal" h
 <ol class="arabic simple">
 <li><p>Contact <a class="reference external" href="mailto:sales&#37;&#52;&#48;talkable&#46;com">sales<span>&#64;</span>talkable<span>&#46;</span>com</a> to learn about our pricing and set up an account with Talkable</p></li>
 </ol>
-<p><span class="inline mll"></span> - Provide a valid Shopify store URL. Example: <span class="a">http://123test.myshopify.com</span>. <br>
+<p><span class="inline mll"></span> - Provide a valid Shopify store URL. Example: <span class="a">https://123test.myshopify.com</span>. <br>
 <span class="inline mll"></span> - Choose “Shopify” as your platform during registration process</p>
 <ol class="arabic simple" start="2">
 <li><p>On the Welcome screen click “I’m a Developer“</p></li>
@@ -228,7 +228,7 @@ integration library which is displayed on the integration page. Example:
   <span class="k">if</span> <span class="p">(</span><span class="nx">Shopify</span> <span class="o">&amp;&amp;</span> <span class="nx">Shopify</span><span class="p">.</span><span class="nx">checkout</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">checkout</span> <span class="o">=</span> <span class="nx">Shopify</span><span class="p">.</span><span class="nx">checkout</span>
     <span class="kd">var</span> <span class="nx">_talkable_order_items</span> <span class="o">=</span> <span class="p">[];</span>
-    <span class="k">for</span> <span class="p">(</span><span class="nx">idx</span> <span class="ow">in</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">line_items</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="nx">idx</span> <span class="k">in</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">line_items</span><span class="p">)</span> <span class="p">{</span>
       <span class="nx">line</span> <span class="o">=</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">line_items</span><span class="p">[</span><span class="nx">idx</span><span class="p">];</span>
       <span class="nx">_talkable_order_items</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
         <span class="nx">product_id</span><span class="o">:</span> <span class="nx">line</span><span class="p">.</span><span class="nx">sku</span> <span class="o">||</span> <span class="nx">line</span><span class="p">.</span><span class="nx">product_id</span><span class="p">,</span> <span class="c1">// REQUIRED - First Item Product ID</span>
@@ -257,7 +257,7 @@ integration library which is displayed on the integration page. Example:
       <span class="nx">shipping_fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;address1&#39;</span><span class="p">,</span> <span class="s1">&#39;address2&#39;</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">,</span> <span class="s1">&#39;province&#39;</span><span class="p">,</span> <span class="s1">&#39;zip&#39;</span><span class="p">,</span> <span class="s1">&#39;country&#39;</span><span class="p">];</span>
       <span class="nx">address</span> <span class="o">=</span> <span class="p">[];</span>
 
-      <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">idx</span> <span class="ow">in</span> <span class="nx">shipping_fields</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">idx</span> <span class="k">in</span> <span class="nx">shipping_fields</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">address_key</span> <span class="o">=</span> <span class="nx">shipping_fields</span><span class="p">[</span><span class="nx">idx</span><span class="p">];</span>
         <span class="k">if</span> <span class="p">(</span><span class="nx">shipping_address</span><span class="p">[</span><span class="nx">address_key</span><span class="p">])</span> <span class="p">{</span>
           <span class="nx">address</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">shipping_address</span><span class="p">[</span><span class="nx">address_key</span><span class="p">]);</span>
