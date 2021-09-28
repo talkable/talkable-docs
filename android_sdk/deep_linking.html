@@ -3,8 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deep Linking &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
@@ -77,7 +76,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="deep-linking">
+  <div class="section" id="deep-linking">
 <h1>Deep Linking<a class="headerlink" href="#deep-linking" title="Permalink to this headline">¶</a></h1>
 <p>Talkable uses <a class="reference external" rel="nofollow" href="https://www.getsocial.im">GetSocial.im</a> technology to provide installation attribution and
 deep linking functionality with its Android SDK. This guide describes how to
@@ -90,7 +89,7 @@ your Android app.</p>
 with the document. Make sure to replace corresponding placeholders
 in examples with the providen values.</p>
 </div>
-<section id="application-attributes">
+<div class="section" id="application-attributes">
 <h2>Application Attributes<a class="headerlink" href="#application-attributes" title="Permalink to this headline">¶</a></h2>
 <p>To enable the deep linking, you should provide us with <em>Package name</em> and
 <em>Signing-certificate fingerprints</em>.</p>
@@ -99,8 +98,8 @@ in examples with the providen values.</p>
 you use to sign your application. You should provide fingerprints of all keys
 you use to sign the app. This tutorial tells you how to do this:
 <a class="reference external" rel="nofollow" href="https://docs.getsocial.im/knowledge-base/android-signing-key-sha256/">Finding SHA256 fingerprint for Android signing keys</a></p>
-</section>
-<section id="configure-sdk-and-dependencies">
+</div>
+<div class="section" id="configure-sdk-and-dependencies">
 <h2>Configure SDK and Dependencies<a class="headerlink" href="#configure-sdk-and-dependencies" title="Permalink to this headline">¶</a></h2>
 <p>Talkable SDK is distributed as an Android Library in <code class="docutils literal notranslate"><span class="pre">aar</span></code> format.</p>
 <ol class="arabic">
@@ -120,7 +119,7 @@ and add Talkable SDK as a module dependency to your main module</p>
     <span class="n">implementation</span> <span class="s1">&#39;com.android.installreferrer:installreferrer:1.0&#39;</span>
     <span class="n">implementation</span> <span class="s1">&#39;com.google.code.gson:gson:2.8.0&#39;</span>
     <span class="n">implementation</span> <span class="s1">&#39;com.android.support:support-v4:27.1.1&#39;</span>
-    <span class="n">implementation</span> <span class="n">project</span><span class="o">(</span><span class="s1">&#39;:talkable-sdk&#39;</span><span class="o">)</span>
+    <span class="n">implementation</span> <span class="nf">project</span><span class="o">(</span><span class="s1">&#39;:talkable-sdk&#39;</span><span class="o">)</span>
     <span class="o">...</span>
 <span class="o">}</span>
 </pre></div>
@@ -139,8 +138,8 @@ repositories inside your top-level <code class="docutils literal notranslate"><s
 </div>
 </li>
 </ol>
-</section>
-<section id="configure-manifest">
+</div>
+<div class="section" id="configure-manifest">
 <h2>Configure Manifest<a class="headerlink" href="#configure-manifest" title="Permalink to this headline">¶</a></h2>
 <p>Open your <code class="docutils literal notranslate"><span class="pre">AndroidManifest.xml</span></code> file and configure it by following next steps:</p>
 <ol class="arabic">
@@ -244,8 +243,8 @@ to the activity that must be opened from the deep link:</p>
 </div>
 </li>
 </ol>
-</section>
-<section id="sdk-initialization">
+</div>
+<div class="section" id="sdk-initialization">
 <h2>SDK Initialization<a class="headerlink" href="#sdk-initialization" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p>Initialize Talkable in the <code class="docutils literal notranslate"><span class="pre">Application</span></code>:</p>
@@ -280,16 +279,16 @@ of the <code class="docutils literal notranslate"><span class="pre">&lt;applicat
 </div>
 </li>
 </ol>
-</section>
-<section id="requirements">
+</div>
+<div class="section" id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p>The SDK supports Android 4.1 and later.</p>
 <div class="hidden docutils container">
 <div class="toctree-wrapper compound">
 </div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>

@@ -3,8 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Native Integration via API &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
@@ -94,11 +93,11 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="ios-sdk-api-integration"></span><section id="native-integration-via-api">
+  <span class="target" id="ios-sdk-api-integration"></span><div class="section" id="native-integration-via-api">
 <h1>Native Integration via API<a class="headerlink" href="#native-integration-via-api" title="Permalink to this headline">¶</a></h1>
 <p>Talkable provides an API that can be utilized to implement a fully native referral program interface if you don’t want to use
 included WKWebView-based functionality. Below are the methods necessary to integrate the Talkable referral loop into your iOS app.</p>
-<section id="create-an-origin">
+<div class="section" id="create-an-origin">
 <h2>1. Create an Origin<a class="headerlink" href="#create-an-origin" title="Permalink to this headline">¶</a></h2>
 <p>The Origin is a user event (e.g. a purchase or simply opening the app) that initiates the referral chain.
 Create an Origin to retrieve an Offer and display it to an <a class="reference internal" href="../campaigns.html#campaigns"><span class="std std-ref">Advocate</span></a>.</p>
@@ -120,14 +119,14 @@ If the request is successful, the <code class="docutils literal notranslate"><sp
 <span class="p">}];</span>
 </pre></div>
 </div>
-</section>
-<section id="create-a-share">
+</div>
+<div class="section" id="create-a-share">
 <span id="ios-sdk-api-integration-sharing"></span><h2>2. Create a Share<a class="headerlink" href="#create-a-share" title="Permalink to this headline">¶</a></h2>
 <p>Sharing an Offer is the next step in the referral chain. You will need the <code class="docutils literal notranslate"><span class="pre">short_url_code</span></code> of the Offer obtained from a previous request.</p>
 <div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="bp">NSString</span><span class="o">*</span> <span class="n">shortUrlCode</span> <span class="o">=</span> <span class="p">[</span><span class="n">offerParams</span> <span class="nl">objectForKey</span><span class="p">:</span><span class="n">TKBLOfferShortUrlCodeKey</span><span class="p">];</span>
 </pre></div>
 </div>
-<section id="native-sharing">
+<div class="section" id="native-sharing">
 <h3>Native sharing<a class="headerlink" href="#native-sharing" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">nativeShare:</span></code> method will display a native iOS sharing dialog. When content is shared,
 the share will be automatically registered with Talkable and reflected on your dashboard.</p>
@@ -139,8 +138,8 @@ the share will be automatically registered with Talkable and reflected on your d
 <span class="p">[</span><span class="nb">self</span> <span class="nl">presentViewController</span><span class="p">:</span><span class="n">sheet</span> <span class="nl">animated</span><span class="p">:</span><span class="nb">YES</span> <span class="nl">completion</span><span class="p">:</span><span class="o">^</span><span class="p">{}];</span>
 </pre></div>
 </div>
-</section>
-<section id="social-sharing">
+</div>
+<div class="section" id="social-sharing">
 <h3>Social sharing<a class="headerlink" href="#social-sharing" title="Permalink to this headline">¶</a></h3>
 <p>Use frameworks provided by social networks to share your offer. Upon a successful share,
 call the <code class="docutils literal notranslate"><span class="pre">createSocialShare:channel:withHandler:</span></code> method to register the share with Talkable and
@@ -189,8 +188,8 @@ create a <a class="reference internal" href="../api_v2/shares.html#api-v2-shares
 <p class="admonition-title">Note</p>
 <p>This method will be called automatically when you use <code class="docutils literal notranslate"><span class="pre">socialShare:</span></code> or <code class="docutils literal notranslate"><span class="pre">nativeShare:</span></code> methods.</p>
 </div>
-</section>
-<section id="legacy-social-sharing">
+</div>
+<div class="section" id="legacy-social-sharing">
 <h3>Legacy social sharing<a class="headerlink" href="#legacy-social-sharing" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic" start="3">
 <li><p>The legacy <code class="docutils literal notranslate"><span class="pre">socialShare:</span></code> method was used prior to v1.4.9 and is provided for backwards compatibility.
@@ -214,8 +213,8 @@ See <a class="reference internal" href="social_sharing.html#ios-sdk-social-shari
 </div>
 </li>
 </ol>
-</section>
-<section id="email-share">
+</div>
+<div class="section" id="email-share">
 <h3>Email Share<a class="headerlink" href="#email-share" title="Permalink to this headline">¶</a></h3>
 <p>To share an Offer via email, simply use the <code class="docutils literal notranslate"><span class="pre">createEmailShare:recipients:withParams:andHandler:</span></code> method to send an API request.
 Talkable will send the emails for you. You will need to provide an interface for the user to specify recipients’ email addresses, a subject, and a personal message.</p>
@@ -231,9 +230,9 @@ Talkable will send the emails for you. You will need to provide an interface for
 <span class="p">}];</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="check-for-reward">
+</div>
+</div>
+<div class="section" id="check-for-reward">
 <h2>3. Check for Reward<a class="headerlink" href="#check-for-reward" title="Permalink to this headline">¶</a></h2>
 <p>If a Talkable campaign is configured to give a reward to the Advocate just for sharing, the API call to create a <a class="reference internal" href="../api_v2/shares.html#api-v2-shares"><span class="std std-ref">Share</span></a>
 will return a <a class="reference internal" href="../api_v2/rewards.html#api-v2-rewards"><span class="std std-ref">Reward</span></a> you can display immediately. In most cases, however, the Advocate will receive a reward after
@@ -244,10 +243,10 @@ To check whether the current user has any outstanding rewards, use the <code cla
 <span class="p">}];</span>
 </pre></div>
 </div>
-</section>
-<section id="extra-functionality">
+</div>
+<div class="section" id="extra-functionality">
 <h2>Extra Functionality<a class="headerlink" href="#extra-functionality" title="Permalink to this headline">¶</a></h2>
-<section id="retrieve-an-offer-by-short-code">
+<div class="section" id="retrieve-an-offer-by-short-code">
 <h3>Retrieve an Offer by Short Code<a class="headerlink" href="#retrieve-an-offer-by-short-code" title="Permalink to this headline">¶</a></h3>
 <p>If you need to access an Offer for the Origin you’ve created earlier, store the offer’s <code class="docutils literal notranslate"><span class="pre">short_url_code</span></code> and then use <code class="docutils literal notranslate"><span class="pre">retrieveOffer:withHandler:</span></code> method
 to fetch the Offer.</p>
@@ -261,9 +260,9 @@ to fetch the Offer.</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
             <div class="clearer"></div>

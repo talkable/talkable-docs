@@ -3,8 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Find out how to auto-enroll loyalty members." name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="Find out how to auto-enroll loyalty members." name="description" />
 
     <title>Auto-Enrollment &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
@@ -89,7 +88,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="integration-loyalty-auto-enrollment"></span><section id="auto-enrollment">
+  <span class="target" id="integration-loyalty-auto-enrollment"></span><div class="section" id="auto-enrollment">
 <h1>Auto-Enrollment<a class="headerlink" href="#auto-enrollment" title="Permalink to this headline">¶</a></h1>
 <p>Talkable allows to enroll users to loyalty without showing the loyalty dashboard page.</p>
 <p>There are a couple of ways to do that:</p>
@@ -97,12 +96,12 @@
 <li><p><a class="reference internal" href="#post-purchase-enrollment"><span class="std std-ref">Post-Purchase Enrollment</span></a></p></li>
 <li><p><a class="reference internal" href="#enrollment-via-js-integration"><span class="std std-ref">Enrollment via JS Integration</span></a></p></li>
 </ul>
-<section id="post-purchase-enrollment">
+<div class="section" id="post-purchase-enrollment">
 <span id="id1"></span><h2>Post-Purchase Enrollment<a class="headerlink" href="#post-purchase-enrollment" title="Permalink to this headline">¶</a></h2>
 <p>Enroll users to loyalty after they make a purchase.
 A setting to enable this behavior can be found under <strong>Site settings</strong> → <strong>Loyalty settings</strong> → <strong>General</strong> → <strong>Auto-enrollment</strong>.</p>
-</section>
-<section id="enrollment-via-js-integration">
+</div>
+<div class="section" id="enrollment-via-js-integration">
 <span id="id2"></span><h2>Enrollment via JS Integration<a class="headerlink" href="#enrollment-via-js-integration" title="Permalink to this headline">¶</a></h2>
 <p>Enroll users to loyalty without showing the campaign using <cite>join_loyalty</cite>.
 For example, this could be used for enrolling users during registration or login.</p>
@@ -111,7 +110,7 @@ For example, this could be used for enrolling users during registration or login
 <p class="admonition-title">Note</p>
 <p><cite>join_loyalty</cite> is available since integration version 4.5.9.</p>
 </div>
-<section id="code-example-1">
+<div class="section" id="code-example-1">
 <h3>Code Example #1:<a class="headerlink" href="#code-example-1" title="Permalink to this headline">¶</a></h3>
 <p>Use <cite>authenticate_customer</cite> to store current user data.</p>
 <p>When you call <cite>join_loyalty</cite>, you can pass empty object since Talkable will have access to the data from <cite>authenticate_customer</cite>.</p>
@@ -128,8 +127,8 @@ For example, this could be used for enrolling users during registration or login
 <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;join_loyalty&quot;</span><span class="p">,</span> <span class="p">{})</span>
 </pre></div>
 </div>
-</section>
-<section id="code-example-2">
+</div>
+<div class="section" id="code-example-2">
 <h3>Code Example #2:<a class="headerlink" href="#code-example-2" title="Permalink to this headline">¶</a></h3>
 <p>Pass loyalty member data directly to <cite>join_loyalty</cite>.</p>
 <div class="admonition note">
@@ -144,9 +143,9 @@ For example, this could be used for enrolling users during registration or login
 <span class="p">}]);</span>
 </pre></div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
             <div class="clearer"></div>
