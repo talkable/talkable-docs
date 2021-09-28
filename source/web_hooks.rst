@@ -15,7 +15,7 @@ when a Friend or Advocate opts in to an email newsletter subscription.
 After subscribing to a Webhook, your app can execute code immediately after
 specific events occur in Talkable.
 
-http://en.wikipedia.org/wiki/Webhook
+https://en.wikipedia.org/wiki/Webhook
 
 Each Webhook in Talkable is defined with an HTTP URL to deliver Webhook data
 (aka payload). This URL should be defined and implemented on the client’s site.
@@ -95,7 +95,7 @@ a PHP parameter decode example:
 **Timestamp data type** is not a part of JSON standard. Timestamps
 are passed as strings in |iso8601| compatible format. To function properly, ensure
 your date parser is compatible to this standard. Java users go here: |br|
-http://stackoverflow.com/questions/2201925/converting-iso8601-compliant-string-to-java-util-date
+https://stackoverflow.com/questions/2201925/converting-iso-8601-compliant-string-to-java-util-date
 
 .. raw:: html
 
