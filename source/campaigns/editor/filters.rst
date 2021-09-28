@@ -137,7 +137,7 @@ regexp\_captures
 ................
 
 Parses input with a given regexp and returning
-`regular expression captures <http://www.regular-expressions.info/brackets.html>`_
+`regular expression captures <https://www.regular-expressions.info/brackets.html>`_
 as an array.
 
 .. code-block:: liquid
@@ -273,7 +273,7 @@ Reference to all available formatting can be found in `strftime documentation`_
 
 Reference to all available locales can be found in `rails-i18n documentation`_
 
-.. _strftime documentation: http://apidock.com/ruby/DateTime/strftime
+.. _strftime documentation: https://apidock.com/ruby/DateTime/strftime
 .. _rails-i18n documentation: https://github.com/svenfuchs/rails-i18n#available-locales
 
 .. code-block:: liquid

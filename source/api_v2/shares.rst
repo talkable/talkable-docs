@@ -82,11 +82,11 @@ Sample response:
         "id": 10,
         "type": "SocialOfferShare",
         "offer": {
-          "claim_url": "http://www.talkable.com/x/14PMvl",
+          "claim_url": "https://www.talkable.com/x/14PMvl",
           "email": "test-offer@gmail.com",
           "id": 71,
           "short_url_code": "0EiKB3",
-          "show_url": "http://www.talkable.com/x/ArhsqM",
+          "show_url": "https://www.talkable.com/x/ArhsqM",
           "coupon_code": null,
           "incentives": {
             "referrer": {

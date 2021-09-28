@@ -117,7 +117,7 @@ Manual integration
 
 .. |example_link| raw:: html
 
-  <span class="a">http://123test.myshopify.com</span>
+  <span class="a">https://123test.myshopify.com</span>
 
 .. container:: hidden
 
