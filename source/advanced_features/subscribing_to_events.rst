@@ -35,7 +35,7 @@ Notice two arguments passed in the callback:
   1. `data` object — the data passed by the iframe upon firing the event
   2. `iframe` object — iframe’s `HTML DOM reference`_
 
-.. _HTML DOM reference: http://www.w3schools.com/jsref/dom_obj_frame.asp
+.. _HTML DOM reference: https://www.w3schools.com/jsref/dom_obj_frame.asp
 
 Iframe Events List
 ------------------

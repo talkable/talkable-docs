@@ -76,7 +76,7 @@ Sample response:
        "associated_reward": {
          "created_at": "2017-04-26T07:41:31.000-07:00",
          "person": {
-           "personal_claim_url": "http://share.mystore.com/by/customer@example.com",
+           "personal_claim_url": "https://share.mystore.com/by/customer@example.com",
            "events_count": 0,
            "first_name": "John",
            "last_name": "Smith",
@@ -171,7 +171,7 @@ Sample response:
        "associated_reward": {
          "created_at": "2017-04-26T07:41:31.000-07:00",
          "person": {
-           "personal_claim_url": "http://share.mystore.com/by/customer@example.com",
+           "personal_claim_url": "https://share.mystore.com/by/customer@example.com",
            "events_count": 0,
            "first_name": "John",
            "last_name": "Smith",
