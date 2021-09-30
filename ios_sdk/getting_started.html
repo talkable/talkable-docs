@@ -46,16 +46,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../integration/custom_integration.html">Standard Integration</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../integration/shopify.html">Shopify Integration</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../integration/magento.html">Magento Integration</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../integration/demandware.html">Salesforce Commerce Cloud Integration</a></li>
-</ul>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="../integration/loyalty.html">Loyalty Integration (beta)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integration/ecommerce_platforms.html">E-commerce Platforms</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../email_marketing.html">Email Marketing</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../api_v2.html">API Reference</a></li>
@@ -137,7 +132,7 @@
 <li><p>Initialize Talkable in your <cite>application:didFinishLaunchingWithOptions:</cite> method, like so:</p></li>
 </ol>
 <blockquote>
-<div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">setApiKey</span><span class="p">:</span><span class="s">@&quot;YOUR_TALKABLE_PUBLIC_API_KEY&quot;</span> <span class="nl">andSiteSlug</span><span class="p">:</span><span class="s">@&quot;YOUR_SITE_SLUG&quot;</span><span class="p">];</span>
+<div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">setApiKey</span><span class="p">:</span><span class="s">@&quot;YOUR_TALKABLE_PUBLIC_API_KEY&quot;</span><span class="w"> </span><span class="nl">andSiteSlug</span><span class="p">:</span><span class="s">@&quot;YOUR_SITE_SLUG&quot;</span><span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -191,7 +186,7 @@ able to find on your site <strong>Dashboard</strong> at <a class="reference exte
 <li><p>Add following lines to <cite>application:handleOpenURL:</cite> or <cite>application:openURL:sourceApplication:annotation:</cite></p></li>
 </ol>
 <blockquote>
-<div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">handleOpenURL</span><span class="p">:</span><span class="n">url</span><span class="p">];</span>
+<div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">handleOpenURL</span><span class="p">:</span><span class="n">url</span><span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>

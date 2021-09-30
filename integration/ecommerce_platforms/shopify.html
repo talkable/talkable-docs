@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="Here’s how you can integrate Talkable Shopify app with your store." name="description" />
 
     <title>Shopify Integration &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <link rel="canonical" href="https://docs.talkable.com/integration/shopify.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <link rel="canonical" href="https://docs.talkable.com/integration/ecommerce_platforms/shopify.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Magento Integration" href="magento.html" />
-    <link rel="prev" title="F.A.Q." href="custom/questions.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-  <link href="../_static/pygments-github.css" rel="stylesheet">
-  <link href="../_static/img/favicon.ico" rel="shortcut icon" />
+    <link rel="prev" title="Salesforce Commerce Cloud Integration" href="demandware.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+  <link href="../../_static/pygments-github.css" rel="stylesheet">
+  <link href="../../_static/img/favicon.ico" rel="shortcut icon" />
   </head><body>
   
     <div class="header">
-      <a href="../index.html" class="header-logo">Talkable docs</a>
-          <form class="search-form" action="../search.html" method="get">
+      <a href="../../index.html" class="header-logo">Talkable docs</a>
+          <form class="search-form" action="../../search.html" method="get">
             <input type="text" class="textfield search-form-field" name="q" placeholder="Search docs" />
             <input type="submit" class="button search-form-button" value="Search" />
             <input type="hidden" name="check_keywords" value="yes" />
@@ -38,44 +38,41 @@
   <div class="content-container content clearfix">
       <div class="nav">
         <ul>
-<li class="toctree-l1"><a class="reference internal" href="../campaigns.html">Talkable Campaigns</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../campaigns.html">Talkable Campaigns</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../advanced_features.html">Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced_features.html">Features</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="custom_integration.html">Standard Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../custom_integration.html">Standard Integration</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Shopify Integration</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#automatic-integration">Automatic integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#manual-integration">Manual integration</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="verify.html">Verifying Integration instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../loyalty.html">Loyalty Integration (beta)</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../ecommerce_platforms.html">E-commerce Platforms</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="demandware.html">Salesforce Commerce Cloud Integration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Shopify Integration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#automatic-integration">Automatic integration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manual-integration">Manual integration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="magento.html">Magento Integration</a></li>
 </ul>
 </li>
 </ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../email_marketing.html">Email Marketing</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="magento.html">Magento Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api_v2.html">API Reference</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="demandware.html">Salesforce Commerce Cloud Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../web_hooks.html">Webhooks</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="loyalty.html">Loyalty Integration (beta)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ios_sdk.html">Talkable iOS SDK</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../api_v2.html">API Reference</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../web_hooks.html">Webhooks</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../ios_sdk.html">Talkable iOS SDK</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../android_sdk.html">Talkable Android SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../android_sdk.html">Talkable Android SDK</a></li>
 </ul>
 
       </div>
@@ -111,7 +108,7 @@ you start the Automatic integration process. See <a class="reference internal" h
 <li><p>Click “Integrate automatically“</p></li>
 <li><p>Turn on coupon auto-sync checkbox</p></li>
 <li><p>Create, set up, and launch Campaigns (Invite, Advocate Dashboard, etc.)</p></li>
-<li><p>Verify your integration using <a class="reference internal" href="verify.html#integration-verify"><span class="std std-ref">Verifying Integration instructions</span></a>.</p></li>
+<li><p>Verify your integration using <a class="reference internal" href="../verify.html#integration-verify"><span class="std std-ref">Verifying Integration instructions</span></a>.</p></li>
 </ol>
 <blockquote>
 <div><div class="admonition note">
@@ -231,7 +228,7 @@ integration library which is displayed on the integration page. Example:
   <span class="k">if</span> <span class="p">(</span><span class="nx">Shopify</span> <span class="o">&amp;&amp;</span> <span class="nx">Shopify</span><span class="p">.</span><span class="nx">checkout</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">checkout</span> <span class="o">=</span> <span class="nx">Shopify</span><span class="p">.</span><span class="nx">checkout</span>
     <span class="kd">var</span> <span class="nx">_talkable_order_items</span> <span class="o">=</span> <span class="p">[];</span>
-    <span class="k">for</span> <span class="p">(</span><span class="nx">idx</span> <span class="k">in</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">line_items</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="nx">idx</span> <span class="ow">in</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">line_items</span><span class="p">)</span> <span class="p">{</span>
       <span class="nx">line</span> <span class="o">=</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">line_items</span><span class="p">[</span><span class="nx">idx</span><span class="p">];</span>
       <span class="nx">_talkable_order_items</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
         <span class="nx">product_id</span><span class="o">:</span> <span class="nx">line</span><span class="p">.</span><span class="nx">sku</span> <span class="o">||</span> <span class="nx">line</span><span class="p">.</span><span class="nx">product_id</span><span class="p">,</span> <span class="c1">// REQUIRED - First Item Product ID</span>
@@ -260,7 +257,7 @@ integration library which is displayed on the integration page. Example:
       <span class="nx">shipping_fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;address1&#39;</span><span class="p">,</span> <span class="s1">&#39;address2&#39;</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">,</span> <span class="s1">&#39;province&#39;</span><span class="p">,</span> <span class="s1">&#39;zip&#39;</span><span class="p">,</span> <span class="s1">&#39;country&#39;</span><span class="p">];</span>
       <span class="nx">address</span> <span class="o">=</span> <span class="p">[];</span>
 
-      <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">idx</span> <span class="k">in</span> <span class="nx">shipping_fields</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">idx</span> <span class="ow">in</span> <span class="nx">shipping_fields</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">address_key</span> <span class="o">=</span> <span class="nx">shipping_fields</span><span class="p">[</span><span class="nx">idx</span><span class="p">];</span>
         <span class="k">if</span> <span class="p">(</span><span class="nx">shipping_address</span><span class="p">[</span><span class="nx">address_key</span><span class="p">])</span> <span class="p">{</span>
           <span class="nx">address</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">shipping_address</span><span class="p">[</span><span class="nx">address_key</span><span class="p">]);</span>
@@ -294,14 +291,14 @@ integration library which is displayed on the integration page. Example:
 </div>
 </li>
 <li><p>Click “Save”.</p></li>
-<li><p>Verify your integration using <a class="reference internal" href="verify.html#integration-verify"><span class="std std-ref">Verifying Integration instructions</span></a>.</p></li>
+<li><p>Verify your integration using <a class="reference internal" href="../verify.html#integration-verify"><span class="std std-ref">Verifying Integration instructions</span></a>.</p></li>
 </ol>
 <div class="hidden docutils container">
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="verify.html">Verifying Integration instructions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="verify.html#verifying-integration-in-js-spas">Verifying Integration in JS SPAs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="verify.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../verify.html">Verifying Integration instructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../verify.html#verifying-integration-in-js-spas">Verifying Integration in JS SPAs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../verify.html#troubleshooting">Troubleshooting</a></li>
 </ul>
 </li>
 </ul>

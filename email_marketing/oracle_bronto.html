@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="With Oracle Bronto app clients can synchronize emails that Talkable collected." name="description" />
+
+    <title>Oracle Bronto &#8212; Talkable Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="canonical" href="https://docs.talkable.com/email_marketing/oracle_bronto.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Mailchimp" href="mailchimp.html" />
+    <link rel="prev" title="Klaviyo" href="klaviyo.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+  <link href="../_static/pygments-github.css" rel="stylesheet">
+  <link href="../_static/img/favicon.ico" rel="shortcut icon" />
+  </head><body>
+  
+    <div class="header">
+      <a href="../index.html" class="header-logo">Talkable docs</a>
+          <form class="search-form" action="../search.html" method="get">
+            <input type="text" class="textfield search-form-field" name="q" placeholder="Search docs" />
+            <input type="submit" class="button search-form-button" value="Search" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+      <div class="header-disclaimer">
+        Visit
+        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+      </div>
+    </div> <!-- /.header -->
+  
+
+  <div class="content-container content clearfix">
+      <div class="nav">
+        <ul>
+<li class="toctree-l1"><a class="reference internal" href="../campaigns.html">Talkable Campaigns</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced_features.html">Features</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/custom_integration.html">Standard Integration</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/loyalty.html">Loyalty Integration (beta)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integration/ecommerce_platforms.html">E-commerce Platforms</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../email_marketing.html">Email Marketing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="klaviyo.html">Klaviyo</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Oracle Bronto</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-add-a-new-app">How to add a new app?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="mailchimp.html">Mailchimp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sailthru.html">Sailthru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hubspot.html">Hubspot</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api_v2.html">API Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../web_hooks.html">Webhooks</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ios_sdk.html">Talkable iOS SDK</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../android_sdk.html">Talkable Android SDK</a></li>
+</ul>
+
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <span class="target" id="email-marketing-oracle-bronto"></span><div class="section" id="oracle-bronto">
+<h1>Oracle Bronto<a class="headerlink" href="#oracle-bronto" title="Permalink to this headline">¶</a></h1>
+<p>With ESP apps clients can synchronize emails that Talkable acquires with their ESP. Here are the conditions when Talkable acquires emails:</p>
+<ol class="arabic simple">
+<li><p>Advocate signs up and opts in for Talkable marketing emails:</p></li>
+</ol>
+<blockquote>
+<div><img alt="Subscribe" src="../_images/subscribe.png" />
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>A friend passes email gating and opts in for Talkable marketing emails:</p></li>
+</ol>
+<blockquote>
+<div><img alt="Signup" src="../_images/signup.png" />
+</div></blockquote>
+<p>Each ESP application allows custom attributes to be included with each request. The following interpolation variables are allowed:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">person</span> <span class="pre">}}</span></code> - a data object for either advocate or friend whenever they sign up or pass email gating and opt-in for marketing emails.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">ip</span> <span class="pre">}}</span></code> – a data object from which IP address either a signup or email gating occurred.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">campaign</span> <span class="pre">}}</span></code> – a data object with details about the campaign within which the email was captured.</p></li>
+</ol>
+<img alt="Variables" src="../_images/variables.png" />
+<p>Each variable is described in the “Available variables” sidebar and can be expanded to see all nested properties.</p>
+<div class="section" id="how-to-add-a-new-app">
+<h2>How to add a new app?<a class="headerlink" href="#how-to-add-a-new-app" title="Permalink to this headline">¶</a></h2>
+<p>Please use the following guide to start using an app you need:</p>
+<ol class="arabic simple">
+<li><p>Navigate into the app store:</p></li>
+</ol>
+<blockquote>
+<div><img alt="App store step 1" src="../_images/app_store_step_1.png" />
+<img alt="App store step 2" src="../_images/app_store_step_2.png" />
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Choose an app you need by clicking “Install”</p></li>
+<li><p>Fill in all necessary fields. You can use tips on the right that instruct how to find all necessary credentials.</p></li>
+<li><p>Complete installation and enable the app:</p></li>
+</ol>
+<blockquote>
+<div><img alt="Oracle Bronto" src="../_images/oracle_bronto.jpg" />
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>Test the app by pressing on the “Send sample payload” and then check if you are seeing a test request inside your ESP:</p></li>
+</ol>
+<blockquote>
+<div><img alt="Send same payload" src="../_images/send_same_payload.png" />
+</div></blockquote>
+</div>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </div> <!-- /.content-container -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-63500208-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  </body>
+</html>

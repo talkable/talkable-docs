@@ -46,16 +46,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../integration/custom_integration.html">Standard Integration</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../integration/shopify.html">Shopify Integration</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../integration/magento.html">Magento Integration</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../integration/demandware.html">Salesforce Commerce Cloud Integration</a></li>
-</ul>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="../integration/loyalty.html">Loyalty Integration (beta)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integration/ecommerce_platforms.html">E-commerce Platforms</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../email_marketing.html">Email Marketing</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../api_v2.html">API Reference</a></li>
@@ -115,9 +110,9 @@ and pass these params to the Talkable SDK using <code class="docutils literal no
 <p>Use <code class="docutils literal notranslate"><span class="pre">handleURLParams:</span></code> method if you have a <code class="docutils literal notranslate"><span class="pre">NSDictionary</span></code> with params passed to the deep link handler block (Branch.io, GetSocial).</p>
 <div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="c1">// For Branch.io</span>
 
-<span class="p">[[</span><span class="n">Branch</span> <span class="n">getInstance</span><span class="p">]</span> <span class="nl">initSessionWithLaunchOptions</span><span class="p">:</span><span class="n">launchOptions</span> <span class="nl">andRegisterDeepLinkHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span> <span class="o">*</span><span class="n">params</span><span class="p">,</span> <span class="bp">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
-    <span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">handleURLParams</span><span class="p">:</span><span class="n">params</span><span class="p">];</span>
-<span class="p">}];</span>
+<span class="p">[[</span><span class="n">Branch</span><span class="w"> </span><span class="n">getInstance</span><span class="p">]</span><span class="w"> </span><span class="nl">initSessionWithLaunchOptions</span><span class="p">:</span><span class="n">launchOptions</span><span class="w"> </span><span class="nl">andRegisterDeepLinkHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="w"> </span><span class="o">*</span><span class="n">params</span><span class="p">,</span><span class="w"> </span><span class="bp">NSError</span><span class="w"> </span><span class="o">*</span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">handleURLParams</span><span class="p">:</span><span class="n">params</span><span class="p">];</span><span class="w"></span>
+<span class="p">}];</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -128,22 +123,22 @@ only when desired conditions are met.</p>
 </div>
 <div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="c1">// For GetSocial</span>
 
-<span class="p">[</span><span class="n">GetSocial</span> <span class="nl">referralDataWithSuccess</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">GetSocialReferralData</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">referralData</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">([</span><span class="n">referralData</span> <span class="n">isFirstMatch</span><span class="p">])</span> <span class="p">{</span>
-        <span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">handleURLParams</span><span class="p">:[</span><span class="n">referralData</span> <span class="n">linkParams</span><span class="p">]];</span>
-    <span class="p">}</span>
-<span class="p">}</span> <span class="nl">failure</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSError</span> <span class="o">*</span> <span class="n">_Nonnull</span> <span class="n">error</span><span class="p">)</span> <span class="p">{}];</span>
+<span class="p">[</span><span class="n">GetSocial</span><span class="w"> </span><span class="nl">referralDataWithSuccess</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">GetSocialReferralData</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_Nullable</span><span class="w"> </span><span class="n">referralData</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">([</span><span class="n">referralData</span><span class="w"> </span><span class="n">isFirstMatch</span><span class="p">])</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">handleURLParams</span><span class="p">:[</span><span class="n">referralData</span><span class="w"> </span><span class="n">linkParams</span><span class="p">]];</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="nl">failure</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSError</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">_Nonnull</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{}];</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Use <code class="docutils literal notranslate"><span class="pre">handleOpenURL:</span></code> method if you handle deep link as <code class="docutils literal notranslate"><span class="pre">NSURL</span></code> using the standard
 <code class="docutils literal notranslate"><span class="pre">application:openURL:options:</span></code> method (Firebase).</p>
 <div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="c1">// For Firebase</span>
 
-<span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span> <span class="o">*</span><span class="p">)</span><span class="nv">app</span>
-            <span class="nf">openURL:</span><span class="p">(</span><span class="bp">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
-            <span class="nf">options:</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">&lt;</span><span class="bp">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="kt">id</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span> <span class="p">{</span>
-                <span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">handleOpenURL</span><span class="p">:</span><span class="n">url</span><span class="p">];</span>
-            <span class="p">}</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">application:</span><span class="p">(</span><span class="bp">UIApplication</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">app</span><span class="w"></span>
+<span class="w">            </span><span class="nf">openURL:</span><span class="p">(</span><span class="bp">NSURL</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">url</span><span class="w"></span>
+<span class="w">            </span><span class="nf">options:</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">&lt;</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="kt">id</span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">options</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">handleOpenURL</span><span class="p">:</span><span class="n">url</span><span class="p">];</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Calling either of these methods will register the app installation event in Talkable and complete the referral cycle.

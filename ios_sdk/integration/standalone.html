@@ -46,16 +46,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../integration/custom_integration.html">Standard Integration</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../integration/shopify.html">Shopify Integration</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../integration/magento.html">Magento Integration</a></li>
-</ul>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../integration/demandware.html">Salesforce Commerce Cloud Integration</a></li>
-</ul>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="../../integration/loyalty.html">Loyalty Integration (beta)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../integration/ecommerce_platforms.html">E-commerce Platforms</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../email_marketing.html">Email Marketing</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../api_v2.html">API Reference</a></li>
@@ -98,9 +93,9 @@
 <p>Usually Standalone campaign look like a separate widget that people can access by clicking on the “Invite friends” button inside app navigation.</p>
 <p>Once you’ve got a Standalone campaign set up inside Talkable you can integrate the campaign with the following line of code:</p>
 <div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="cp">#import &lt;TalkableSDK/Talkable.h&gt;</span>
-<span class="p">...</span>
-<span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">registerOrigin</span><span class="p">:</span><span class="n">TKBLAffiliateMember</span> <span class="nl">params</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
-<span class="p">...</span>
+<span class="p">...</span><span class="w"></span>
+<span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">registerOrigin</span><span class="p">:</span><span class="n">TKBLAffiliateMember</span><span class="w"> </span><span class="nl">params</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -109,20 +104,20 @@
 </div>
 <p>Note that <cite>params</cite> are empty, in this case user will see the <a class="reference internal" href="../../campaigns/views/affiliate_members_new.html#campaigns-views-affiliate-members-new"><span class="std std-ref">Advocate Signup Page</span></a>, which is used to collect the user’s email address. Your application may already know/have access to the user’s email, if so, you should pass this parameter which will automatically skip the SignUp Page in the flow and show the <a class="reference internal" href="../../campaigns/views/offers_show.html#campaigns-views-offers-show"><span class="std std-ref">Advocate Share Page</span></a>. You have the ability to pass any custom data you think might be useful by using “person custom properties” to define any number of custom key/value pairs. For example, below we are creating and passing a custom key value pair of <em>eye color</em> = <em>green</em>. Any data passed through here will be accessible on a campaign level for segmentation or other logic.</p>
 <div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="cp">#import &lt;TalkableSDK/Talkable.h&gt;</span>
-<span class="p">...</span>
-<span class="bp">NSDictionary</span><span class="o">*</span> <span class="n">params</span> <span class="o">=</span> <span class="l">@{</span>
-  <span class="nl">TKBLAffiliateMemberKey</span><span class="p">:</span> <span class="l">@{</span>
-    <span class="nl">TKBLAffiliateMemberEmailKey</span><span class="p">:</span> <span class="s">@&quot;advocate@example.com&quot;</span><span class="p">,</span>
-    <span class="nl">TKBLAffiliateMemberFirstNameKey</span><span class="p">:</span> <span class="s">@&quot;John&quot;</span><span class="p">,</span>
-    <span class="nl">TKBLAffiliateMemberLastNameKey</span><span class="p">:</span> <span class="s">@&quot;Smith&quot;</span><span class="p">,</span>
-    <span class="nl">TKBLAffiliateMemberPersonCustomPropertiesKey</span><span class="p">:</span> <span class="l">@{</span>
-      <span class="s">@&quot;eye_color&quot;</span><span class="o">:</span> <span class="s">@&quot;brown&quot;</span>
-    <span class="l">}</span>
-  <span class="l">}</span>
-<span class="l">}</span><span class="p">;</span>
-<span class="p">...</span>
-<span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">registerOrigin</span><span class="p">:</span><span class="n">TKBLAffiliateMember</span> <span class="nl">params</span><span class="p">:</span><span class="n">params</span><span class="p">];</span>
-<span class="p">...</span>
+<span class="p">...</span><span class="w"></span>
+<span class="bp">NSDictionary</span><span class="o">*</span><span class="w"> </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="l">@{</span><span class="w"></span>
+<span class="w">  </span><span class="nl">TKBLAffiliateMemberKey</span><span class="p">:</span><span class="w"> </span><span class="l">@{</span><span class="w"></span>
+<span class="w">    </span><span class="nl">TKBLAffiliateMemberEmailKey</span><span class="p">:</span><span class="w"> </span><span class="s">@&quot;advocate@example.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nl">TKBLAffiliateMemberFirstNameKey</span><span class="p">:</span><span class="w"> </span><span class="s">@&quot;John&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nl">TKBLAffiliateMemberLastNameKey</span><span class="p">:</span><span class="w"> </span><span class="s">@&quot;Smith&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nl">TKBLAffiliateMemberPersonCustomPropertiesKey</span><span class="p">:</span><span class="w"> </span><span class="l">@{</span><span class="w"></span>
+<span class="w">      </span><span class="s">@&quot;eye_color&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">@&quot;brown&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="l">}</span><span class="w"></span>
+<span class="w">  </span><span class="l">}</span><span class="w"></span>
+<span class="l">}</span><span class="p">;</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">registerOrigin</span><span class="p">:</span><span class="n">TKBLAffiliateMember</span><span class="w"> </span><span class="nl">params</span><span class="p">:</span><span class="n">params</span><span class="p">];</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="hidden docutils container">
