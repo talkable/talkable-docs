@@ -62,13 +62,13 @@ Build the documentation
 
 First install [Sphinx](https://www.sphinx-doc.org). See below.
 
-### Installing Sphinx on OS X
+### Installing Sphinx on macOS
 
 * Install [Homebrew](https://brew.sh).
 
 * Install Ruby and [Bundler](https://bundler.io), and run `bundle install` to install dependencies.
 
-* Install Python (>= 3.5) and pip:
+* Install Python (>= 3.6) and pip:
 
   ```
   brew install python
