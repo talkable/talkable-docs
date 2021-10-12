@@ -87,21 +87,21 @@
   <span class="target" id="campaigns-localization"></span><div class="section" id="localization">
 <h1>Localization<a class="headerlink" href="#localization" title="Permalink to this headline">¶</a></h1>
 <p>Each template can be localized.
-Localization is not a part of the view template. Default Talkable campaigns are comming with localization now. It is stored in campaign allowing multiple campaign to use same template with different locazation and ability to edit Copy of a campaign outside of liquid editor (making interface significatly easier for marketer).</p>
+Localization is not a part of the view template. Default Talkable campaigns are comming with localization now. It is stored in campaign allowing multiple campaign to use same template with different localization and ability to edit Copy of a campaign outside of liquid editor (making interface significantly easier for marketer).</p>
 <p>Campaign localization is done using a liquid filter <cite>localize</cite>:</p>
-<div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="s2">&quot;offer_title&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">localize</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;Get [[incentives.referrer.descrition]]&#39;</span><span class="w"> </span><span class="p">}}</span>
+<div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="s2">&quot;offer_title&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">localize</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;Get [[incentives.referrer.description]]&#39;</span><span class="w"> </span><span class="p">}}</span>
 </pre></div>
 </div>
 <p>After adding this filter call to the template, go to campaign page and click “Localization” from the navigation menu:</p>
 <img alt="../_images/campaign-localization.jpg" src="../_images/campaign-localization.jpg" />
 <p>Any campaign that uses view with <cite>localize</cite> call have this data appeared.
-Now you are able to change the default value to something else like <cite>Obten {{incentives.referrer.descrition}}</cite> (Spanish)</p>
+Now you are able to change the default value to something else like <cite>Obten {{incentives.referrer.description}}</cite> (Spanish)</p>
 <p>Campaign Localization is copied when campaign is copied, so you are able to use the following flow:</p>
 <ol class="arabic simple">
 <li><p>Create Campaign</p></li>
 <li><p>Build templates with localization support</p></li>
-<li><p>Make a copy of the compaign</p></li>
-<li><p>Translate lozalization in a copy to different language.</p></li>
+<li><p>Make a copy of the campaign</p></li>
+<li><p>Translate localization in a copy to different language.</p></li>
 </ol>
 </div>
 
