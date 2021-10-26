@@ -7,7 +7,7 @@
 Loyalty Manual Shopify integration
 ==================================
 
-1. Pass Shopify authorization :ref:`my-reference-label`.
+1. Pass Shopify authorization
 2. You will be redirected to your Shopify store, log in and click the install button
 3. After successful installation you will be redirected back to Talkable
 4. Click “Integrate manually“
