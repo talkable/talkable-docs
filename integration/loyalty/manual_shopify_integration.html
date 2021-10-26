@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Learn how to manually setup loyalty shopify integration." name="description" />
+
+    <title>Loyalty Manual Shopify integration &#8212; Talkable Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <link rel="canonical" href="https://docs.talkable.com/integration/loyalty/manual_shopify_integration.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="E-commerce Platforms" href="../ecommerce_platforms.html" />
+    <link rel="prev" title="Auto-Enrollment" href="auto_enrollment.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+  <link href="../../_static/pygments-github.css" rel="stylesheet">
+  <link href="../../_static/img/favicon.ico" rel="shortcut icon" />
+  </head><body>
+  
+    <div class="header">
+      <a href="../../index.html" class="header-logo">Talkable docs</a>
+          <form class="search-form" action="../../search.html" method="get">
+            <input type="text" class="textfield search-form-field" name="q" placeholder="Search docs" />
+            <input type="submit" class="button search-form-button" value="Search" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+      <div class="header-disclaimer">
+        Visit
+        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+      </div>
+    </div> <!-- /.header -->
+  
+
+  <div class="content-container content clearfix">
+      <div class="nav">
+        <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../campaigns.html">Talkable Campaigns</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced_features.html">Features</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../custom_integration.html">Standard Integration</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../loyalty.html">Loyalty Integration (beta)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="integration_components.html">Integration Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_app.html">Custom App for Loyalty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_enrollment.html">Auto-Enrollment</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Loyalty Manual Shopify integration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ecommerce_platforms.html">E-commerce Platforms</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../email_marketing.html">Email Marketing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api_v2.html">API Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../web_hooks.html">Webhooks</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../ios_sdk.html">Talkable iOS SDK</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../android_sdk.html">Talkable Android SDK</a></li>
+</ul>
+
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <span class="target" id="integration-loyalty-manual-shopify-integration"></span><section id="loyalty-manual-shopify-integration">
+<h1>Loyalty Manual Shopify integration<a class="headerlink" href="#loyalty-manual-shopify-integration" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic">
+<li><p>Pass Shopify authorization <span class="xref std std-ref">my-reference-label</span>.</p></li>
+<li><p>You will be redirected to your Shopify store, log in and click the install button</p></li>
+<li><p>After successful installation you will be redirected back to Talkable</p></li>
+<li><p>Click “Integrate manually“</p></li>
+<li><p>In your Shopify Admin follow:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Online Store</p></li>
+<li><p>Themes</p></li>
+<li><p>Actions → Edit code</p></li>
+<li><p>Open <cite>Layout / theme.liquid</cite> file</p></li>
+<li><p>Before closing <cite>&lt;/head&gt;</cite> paste the following code:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;talkable-loyalty&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Click “Save”.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Then navigate to:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Open <cite>Themes / Templates</cite></p></li>
+<li><p>Click “Add a new template“</p></li>
+<li><p>Create a new template for <cite>page</cite> called <cite>loyalty-dashboard</cite></p></li>
+<li><p>Paste the following code inside layout:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{% if shop.customer_accounts_enabled %}
+   {% if customer %}
+     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;talkable-loyalty&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+   {% else %}
+     {{ &#39;Log in&#39; | customer_login_link }}
+   {% endif %}
+{% endif %}
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Click “Save”</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Then navigate to:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Open <cite>Online Store / Pages</cite></p></li>
+<li><p>Click “Add page“</p></li>
+<li><p>Add title <cite>loyalty-dashboard</cite></p></li>
+<li><p>Select Theme template <cite>loyalty-dashboard</cite></p></li>
+<li><p>Click “Save”</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </div> <!-- /.content-container -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-63500208-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  </body>
+</html>

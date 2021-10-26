@@ -3,7 +3,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Social Sharing &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
@@ -87,7 +88,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="ios-sdk-social-sharing"></span><div class="section" id="social-sharing">
+  <span class="target" id="ios-sdk-social-sharing"></span><section id="social-sharing">
 <h1>Social Sharing<a class="headerlink" href="#social-sharing" title="Permalink to this headline">¶</a></h1>
 <p>Talkable iOS SDK provides the functionality to facilitate sharing offers via social networks.
 Older versions of the SDK prior to 1.4.9 used Apple-provided Social.framework to implement
@@ -96,13 +97,13 @@ officially deprecated following Apple’s decision to deprecate the framework.</
 <p>We still provide limited support of Social.framework to ensure the stability of legacy implementations.
 However, developers are encouraged to use Facebook and Twitter SDKs to enable sharing to these platforms.</p>
 <p>This article describes how to use the Talkable SDK with social sharing in various scenarios.</p>
-<div class="section" id="social-sharing-from-a-web-based-campaign">
+<section id="social-sharing-from-a-web-based-campaign">
 <h2>Social Sharing from a web-based campaign<a class="headerlink" href="#social-sharing-from-a-web-based-campaign" title="Permalink to this headline">¶</a></h2>
 <p>The default Talkable iOS integration utilizes WebView to display web-based campaign views in your app.
 If you have Facebook or Twitter available on your sharing page, the Talkable iOS SDK will automatically
 detect when the user clicks on the share button and trigger one of the corresponding delegate methods
 (see <a class="reference internal" href="advanced.html#ios-sdk-advanced-delegate"><span class="std std-ref">Talkable Delegate</span></a>).</p>
-<div class="section" id="showfacebooksharedialogwithparams-delegate">
+<section id="showfacebooksharedialogwithparams-delegate">
 <h3>showFacebookShareDialogWithParams:delegate:<a class="headerlink" href="#showfacebooksharedialogwithparams-delegate" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">showFacebookShareDialogWithParams:</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">*</span><span class="p">)</span><span class="nv">params</span><span class="w"> </span><span class="nf">delegate:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">delegate</span><span class="p">;</span><span class="w"></span>
 </pre></div>
@@ -119,8 +120,8 @@ The <code class="docutils literal notranslate"><span class="pre">params</span></
 Pass this object as a <code class="docutils literal notranslate"><span class="pre">delegate:</span></code> param when sharing the link using FBSDK to automatically notify the Talkable SDK
 that sharing was completed successfully. Talkable SDK will then register the share with Talkable so that you can see it
 in your Talkable Dashboard.</p>
-</div>
-<div class="section" id="example">
+</section>
+<section id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">showFacebookShareDialogWithParams:</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">params</span><span class="w"> </span><span class="nf">delegate:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">delegate</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">     </span><span class="n">FBSDKShareLinkContent</span><span class="w"> </span><span class="o">*</span><span class="n">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="n">FBSDKShareLinkContent</span><span class="w"> </span><span class="n">alloc</span><span class="p">]</span><span class="w"> </span><span class="n">init</span><span class="p">];</span><span class="w"></span>
@@ -131,8 +132,8 @@ in your Talkable Dashboard.</p>
 <span class="w"> </span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="showfacebooksharedialogwithparams-completionhandler">
+</section>
+<section id="showfacebooksharedialogwithparams-completionhandler">
 <h3>showFacebookShareDialogWithParams:completionHandler:<a class="headerlink" href="#showfacebooksharedialogwithparams-completionhandler" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">showFacebookShareDialogWithParams:</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">*</span><span class="p">)</span><span class="nv">params</span><span class="w"> </span><span class="nf">completion:</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">^</span><span class="p">)())</span><span class="nv">completionHandler</span><span class="p">;</span><span class="w"></span>
 </pre></div>
@@ -142,8 +143,8 @@ provides the <code class="docutils literal notranslate"><span class="pre">comple
 this method if you already have a delegate object that you use for Facebook sharing.
 Pass the <code class="docutils literal notranslate"><span class="pre">completionHandler</span></code> block to the delegate object and call it in your
 <code class="docutils literal notranslate"><span class="pre">sharer:didCompleteWithResults:</span></code> method.</p>
-</div>
-<div class="section" id="id1">
+</section>
+<section id="id1">
 <h3>Example<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">showFacebookShareDialogWithParams:</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">params</span><span class="w"> </span><span class="nf">completion:</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">^</span><span class="p">)())</span><span class="nv">completionHandler</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">MyFBSDKDelegateClass</span><span class="o">*</span><span class="w"> </span><span class="n">delegate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nb">self</span><span class="w"> </span><span class="n">myFBSDKDelegate</span><span class="p">];</span><span class="w"></span>
@@ -169,16 +170,16 @@ Pass the <code class="docutils literal notranslate"><span class="pre">completion
 <span class="k">@end</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="showtwittersharedialogwithparams-completionhandler">
+</section>
+<section id="showtwittersharedialogwithparams-completionhandler">
 <h3>showTwitterShareDialogWithParams:completionHandler:<a class="headerlink" href="#showtwittersharedialogwithparams-completionhandler" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">showTwitterShareDialogWithParams:</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">*</span><span class="p">)</span><span class="nv">params</span><span class="w"> </span><span class="nf">completion:</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">^</span><span class="p">)())</span><span class="nv">completionHandler</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>This method is called when the user clicks on the Twitter Share button. The <code class="docutils literal notranslate"><span class="pre">params</span></code> and <code class="docutils literal notranslate"><span class="pre">completionHandler</span></code>
 attributes are analogous to the previous method.</p>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h3>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">showTwitterShareDialogWithParams:</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">params</span><span class="w"> </span><span class="nf">completion:</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="p">(</span><span class="o">^</span><span class="p">)())</span><span class="nv">completionHandler</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">   </span><span class="n">TWTRComposer</span><span class="w"> </span><span class="o">*</span><span class="n">composer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="n">TWTRComposer</span><span class="w"> </span><span class="n">alloc</span><span class="p">]</span><span class="w"> </span><span class="n">init</span><span class="p">];</span><span class="w"></span>
@@ -193,9 +194,9 @@ attributes are analogous to the previous method.</p>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="legacy-sharing-using-social-framework">
+</section>
+</section>
+<section id="legacy-sharing-using-social-framework">
 <h2>Legacy Sharing using Social.framework<a class="headerlink" href="#legacy-sharing-using-social-framework" title="Permalink to this headline">¶</a></h2>
 <p>Prior to v1.4.9, the TalkableSDK used Social.framework to automatically display Facebook and Twitter sharing dialog
 when the user clicks on on a corresponding button. This type of sharing relied on functionality built into iOS, and did not
@@ -217,13 +218,13 @@ with your current implementation, please upgrade to the latest version. Note tha
 transitioning experience, and this fallback should not be regarded as a permanent solution. We encourage developers to switch
 to delegate methods for social sharing.</p>
 </div>
-</div>
-<div class="section" id="social-sharing-from-a-native-campaign">
+</section>
+<section id="social-sharing-from-a-native-campaign">
 <h2>Social Sharing from a native campaign<a class="headerlink" href="#social-sharing-from-a-native-campaign" title="Permalink to this headline">¶</a></h2>
 <p>The methods documented above are designed to work with web-based campaigns only. If you have integrated using our API,
 please refer to the <a class="reference internal" href="api_integration.html#ios-sdk-api-integration-sharing"><span class="std std-ref">Sharing</span></a> section of the Native Integration page.</p>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>
