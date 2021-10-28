@@ -1,4 +1,4 @@
-.. _integration/shopify:
+.. _integration/ecommerce_platforms/shopify:
 .. include:: /partials/common.rst
 
 .. meta::
@@ -6,6 +6,8 @@
 
 Shopify Integration
 ===================
+
+.. _integration/ecommerce_platforms/shopify/automation:
 
 Automatic integration
 ---------------------
@@ -36,6 +38,8 @@ Automatic integration
 
      To check how Standalone Campaign looks visit */pages/share* or */pages/invite* links of your store.
      You can edit these links in Administrative panel of your store.
+
+.. _integration/ecommerce_platforms/shopify/manual:
 
 Manual integration
 ------------------
