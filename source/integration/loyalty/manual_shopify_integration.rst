@@ -11,7 +11,7 @@ Manual Shopify integration
 2. You will be redirected to your Shopify store, log in and click the Install button
 3. After successful installation you will be redirected back to Talkable
 4. Click “Integrate manually“
-5. In your Shopify Admin follow:
+5. Set up Referral Integration :ref:`manually <integration/shopify>`
 
     * Online Store
     * Themes
