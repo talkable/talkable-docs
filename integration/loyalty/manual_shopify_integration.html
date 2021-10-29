@@ -88,37 +88,17 @@
 <li><p>You will be redirected to your Shopify store, log in and click the Install button</p></li>
 <li><p>After successful installation you will be redirected back to Talkable</p></li>
 <li><p>Click “Integrate manually“</p></li>
-<li><p>In your Shopify Admin follow:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Online Store</p></li>
-<li><p>Themes</p></li>
-<li><p>Actions → Edit code</p></li>
-<li><p>Open <cite>Layout / theme.liquid</cite> file</p></li>
-<li><p>Before closing <cite>&lt;/head&gt;</cite> paste the following code:</p></li>
-</ul>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;talkable-loyalty&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Click “Save”.</p></li>
-</ul>
-</div></blockquote>
-</li>
+<li><p>Set up Referral Integration <a class="reference internal" href="../ecommerce_platforms/shopify.html#integration-ecommerce-platforms-shopify-manual-integration"><span class="std std-ref">manually</span></a></p></li>
 <li><p>Then navigate to:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>Open <cite>Themes / Templates</cite></p></li>
 <li><p>Click “Add a new template“</p></li>
-<li><p>Create a new template for <cite>page</cite> called <cite>loyalty-dashboard</cite></p></li>
+<li><p>Create a new template for <cite>page</cite> called <cite>loyalty</cite></p></li>
 <li><p>Paste the following code inside layout:</p></li>
 </ul>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{% if shop.customer_accounts_enabled %}
-   {% if customer %}
-     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;talkable-loyalty&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-   {% else %}
-     {{ &#39;Log in&#39; | customer_login_link }}
-   {% endif %}
+   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;talkable-loyalty&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 {% endif %}
 </pre></div>
 </div>
@@ -132,13 +112,14 @@
 <div><ul class="simple">
 <li><p>Open <cite>Online Store / Pages</cite></p></li>
 <li><p>Click “Add page“</p></li>
-<li><p>Add title <cite>loyalty-dashboard</cite></p></li>
-<li><p>Select Theme template <cite>loyalty-dashboard</cite></p></li>
+<li><p>Add title <cite>loyalty</cite></p></li>
+<li><p>Select Theme template <cite>loyalty</cite></p></li>
 <li><p>Click “Save”</p></li>
 </ul>
 </div></blockquote>
 </li>
 </ol>
+<h2>Requirements</h2><p>User accounts. The website must support user accounts since the loyalty program is only available to logged in users.</p>
 </section>
 
 
