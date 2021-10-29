@@ -1,4 +1,4 @@
-.. _integration/magento:
+.. _integration/ecommerce_platforms/magento:
 .. include:: /partials/common.rst
 
 .. meta::
