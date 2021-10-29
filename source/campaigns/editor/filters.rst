@@ -445,7 +445,8 @@ Available options:
 loyalty_points_to_be_expired
 ............................
 
-Returns amount of points that would be expired in the next N days.
+Returns the number of points that expire soon.
+For example, to count the number of points that expire in 10 days, use:
 
 .. code-block:: liquid
 
