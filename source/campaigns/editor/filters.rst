@@ -442,6 +442,19 @@ Available options:
 
 |hr|
 
+loyalty_points_to_be_expired
+............................
+
+Returns amount of points that would be expired in the next N days.
+
+.. code-block:: liquid
+
+   {{ 10 | loyalty_points_to_be_expired }}
+
+Returns ``33``.
+
+|hr|
+
 strip
 .....
 
