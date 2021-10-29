@@ -11,35 +11,18 @@ Manual Shopify integration
 2. You will be redirected to your Shopify store, log in and click the Install button
 3. After successful installation you will be redirected back to Talkable
 4. Click “Integrate manually“
-5. In your Shopify Admin follow:
-
-    * Online Store
-    * Themes
-    * Actions → Edit code
-    * Open `Layout / theme.liquid` file
-    * Before closing `</head>` paste the following code:
-
-    .. code-block:: html
-
-      <div id="talkable-loyalty"></div>
-
-    * Click “Save”.
-
+5. Set up Referral Integration :ref:`manually <integration/ecommerce_platforms/shopify/manual_integration>`
 6. Then navigate to:
 
     * Open `Themes / Templates`
     * Click “Add a new template“
-    * Create a new template for `page` called `loyalty-dashboard`
+    * Create a new template for `page` called `loyalty`
     * Paste the following code inside layout:
 
     .. code-block:: html
 
       {% if shop.customer_accounts_enabled %}
-         {% if customer %}
-           <div id="talkable-loyalty"></div>
-         {% else %}
-           {{ 'Log in' | customer_login_link }}
-         {% endif %}
+         <div id="talkable-loyalty"></div>
       {% endif %}
 
     * Click “Save”
@@ -48,6 +31,12 @@ Manual Shopify integration
 
     * Open `Online Store / Pages`
     * Click “Add page“
-    * Add title `loyalty-dashboard`
-    * Select Theme template `loyalty-dashboard`
+    * Add title `loyalty`
+    * Select Theme template `loyalty`
     * Click “Save”
+
+.. raw:: html
+
+   <h2>Requirements</h2>
+
+User accounts. The website must support user accounts since the loyalty program is only available to logged in users.

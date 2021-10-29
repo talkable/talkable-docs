@@ -1,4 +1,4 @@
-.. _integration/demandware:
+.. _integration/ecommerce_platforms/demandware:
 .. include:: /partials/common.rst
 
 .. meta::
