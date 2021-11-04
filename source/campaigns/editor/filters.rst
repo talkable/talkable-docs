@@ -442,8 +442,8 @@ Available options:
 
 |hr|
 
-loyalty_points_to_be_expired
-............................
+loyalty\_points\_to\_be\_expired
+................................
 
 Returns the number of points that expire soon.
 For example, to count the number of points that expire in 10 days, use:
