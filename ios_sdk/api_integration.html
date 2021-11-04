@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Native Integration via API &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/ios_sdk/api_integration.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Advanced Usage" href="advanced.html" />
@@ -89,166 +89,166 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="ios-sdk-api-integration"></span><section id="native-integration-via-api">
-<h1>Native Integration via API<a class="headerlink" href="#native-integration-via-api" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="native-integration-via-api">
+<span id="ios-sdk-api-integration"></span><h1>Native Integration via API<a class="headerlink" href="#native-integration-via-api" title="Permalink to this headline">¶</a></h1>
 <p>Talkable provides an API that can be utilized to implement a fully native referral program interface if you don’t want to use
 included WKWebView-based functionality. Below are the methods necessary to integrate the Talkable referral loop into your iOS app.</p>
-<section id="create-an-origin">
+<div class="section" id="create-an-origin">
 <h2>1. Create an Origin<a class="headerlink" href="#create-an-origin" title="Permalink to this headline">¶</a></h2>
 <p>The Origin is a user event (e.g. a purchase or simply opening the app) that initiates the referral chain.
 Create an Origin to retrieve an Offer and display it to an <a class="reference internal" href="../campaigns.html#campaigns"><span class="std std-ref">Advocate</span></a>.</p>
 <p>To create an Origin, make a request to <a class="reference internal" href="../api_v2/origins.html#api-v2-origins"><span class="std std-ref">Origins</span></a> endpoint using the <code class="docutils literal notranslate"><span class="pre">createOrigin:withHandler:</span></code> method.
 If the request is successful, the <code class="docutils literal notranslate"><span class="pre">handler</span></code> block will receive attributes of created Origin and <a class="reference internal" href="../api_v2/offers.html#api-v2-offers"><span class="std std-ref">Offer</span></a> entities.</p>
-<div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="bp">NSDictionary</span><span class="o">*</span><span class="w"> </span><span class="n">originParams</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="l">@{</span><span class="w"></span>
-<span class="w">    </span><span class="nl">TKBLOriginTypeKey</span><span class="p">:</span><span class="w"> </span><span class="n">TKBLOriginTypePurchase</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nl">TKBLOriginDataKey</span><span class="p">:</span><span class="w"> </span><span class="l">@{</span><span class="w"></span>
-<span class="w">        </span><span class="nl">TKBLPurchaseEmailKey</span><span class="p">:</span><span class="w"> </span><span class="s">@&quot;test@example.com&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nl">TKBLPurchaseSubtotalKey</span><span class="p">:</span><span class="w"> </span><span class="s">@&quot;17.43&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nl">TKBLPurchaseOrderNumberKey</span><span class="p">:</span><span class="w"> </span><span class="s">@&quot;100125&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="s">@&quot;campaign_tags&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">@&quot;your-campaign-tag&quot;</span><span class="w"></span>
-<span class="w">    </span><span class="l">}</span><span class="w"></span>
-<span class="l">}</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="bp">NSDictionary</span><span class="o">*</span> <span class="n">originParams</span> <span class="o">=</span> <span class="l">@{</span>
+    <span class="nl">TKBLOriginTypeKey</span><span class="p">:</span> <span class="n">TKBLOriginTypePurchase</span><span class="p">,</span>
+    <span class="nl">TKBLOriginDataKey</span><span class="p">:</span> <span class="l">@{</span>
+        <span class="nl">TKBLPurchaseEmailKey</span><span class="p">:</span> <span class="s">@&quot;test@example.com&quot;</span><span class="p">,</span>
+        <span class="nl">TKBLPurchaseSubtotalKey</span><span class="p">:</span> <span class="s">@&quot;17.43&quot;</span><span class="p">,</span>
+        <span class="nl">TKBLPurchaseOrderNumberKey</span><span class="p">:</span> <span class="s">@&quot;100125&quot;</span><span class="p">,</span>
+        <span class="s">@&quot;campaign_tags&quot;</span><span class="o">:</span> <span class="s">@&quot;your-campaign-tag&quot;</span>
+    <span class="l">}</span>
+<span class="l">}</span><span class="p">;</span>
 
-<span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">createOrigin</span><span class="p">:</span><span class="n">originParams</span><span class="w"> </span><span class="nl">withHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">*</span><span class="w"> </span><span class="n">response</span><span class="p">,</span><span class="w"> </span><span class="bp">NSError</span><span class="o">*</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="bp">NSDictionary</span><span class="o">*</span><span class="w"> </span><span class="n">offerParams</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">response</span><span class="w"> </span><span class="nl">objectForKey</span><span class="p">:</span><span class="n">TKBLOfferKey</span><span class="p">];</span><span class="w"></span>
-<span class="w">    </span><span class="bp">NSDictionary</span><span class="o">*</span><span class="w"> </span><span class="n">claimLinks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">offerParams</span><span class="w"> </span><span class="nl">objectForKey</span><span class="p">:</span><span class="s">@&quot;claim_links&quot;</span><span class="p">];</span><span class="w"></span>
-<span class="p">}];</span><span class="w"></span>
+<span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">createOrigin</span><span class="p">:</span><span class="n">originParams</span> <span class="nl">withHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">*</span> <span class="n">response</span><span class="p">,</span> <span class="bp">NSError</span><span class="o">*</span> <span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="bp">NSDictionary</span><span class="o">*</span> <span class="n">offerParams</span> <span class="o">=</span> <span class="p">[</span><span class="n">response</span> <span class="nl">objectForKey</span><span class="p">:</span><span class="n">TKBLOfferKey</span><span class="p">];</span>
+    <span class="bp">NSDictionary</span><span class="o">*</span> <span class="n">claimLinks</span> <span class="o">=</span> <span class="p">[</span><span class="n">offerParams</span> <span class="nl">objectForKey</span><span class="p">:</span><span class="s">@&quot;claim_links&quot;</span><span class="p">];</span>
+<span class="p">}];</span>
 </pre></div>
 </div>
-</section>
-<section id="create-a-share">
+</div>
+<div class="section" id="create-a-share">
 <span id="ios-sdk-api-integration-sharing"></span><h2>2. Create a Share<a class="headerlink" href="#create-a-share" title="Permalink to this headline">¶</a></h2>
 <p>Sharing an Offer is the next step in the referral chain. You will need the <code class="docutils literal notranslate"><span class="pre">short_url_code</span></code> of the Offer obtained from a previous request.</p>
-<div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="bp">NSString</span><span class="o">*</span><span class="w"> </span><span class="n">shortUrlCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">offerParams</span><span class="w"> </span><span class="nl">objectForKey</span><span class="p">:</span><span class="n">TKBLOfferShortUrlCodeKey</span><span class="p">];</span><span class="w"></span>
+<div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="bp">NSString</span><span class="o">*</span> <span class="n">shortUrlCode</span> <span class="o">=</span> <span class="p">[</span><span class="n">offerParams</span> <span class="nl">objectForKey</span><span class="p">:</span><span class="n">TKBLOfferShortUrlCodeKey</span><span class="p">];</span>
 </pre></div>
 </div>
-<section id="native-sharing">
+<div class="section" id="native-sharing">
 <h3>Native sharing<a class="headerlink" href="#native-sharing" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">nativeShare:</span></code> method will display a native iOS sharing dialog. When content is shared,
 the share will be automatically registered with Talkable and reflected on your dashboard.</p>
-<div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="bp">UIActivityViewController</span><span class="o">*</span><span class="w"> </span><span class="n">sheet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">nativeShare</span><span class="p">:</span><span class="l">@{</span><span class="w"></span>
-<span class="w">    </span><span class="nl">TKBLOfferShortUrlCodeKey</span><span class="p">:</span><span class="w"> </span><span class="n">shortUrlCode</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nl">TKBLOfferClaimUrlKey</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">claimLinks</span><span class="w"> </span><span class="nl">objectForKey</span><span class="p">:</span><span class="n">TKBLShareChannelOther</span><span class="p">]</span><span class="w"></span>
-<span class="l">}</span><span class="p">];</span><span class="w"></span>
+<div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="bp">UIActivityViewController</span><span class="o">*</span> <span class="n">sheet</span> <span class="o">=</span> <span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">nativeShare</span><span class="p">:</span><span class="l">@{</span>
+    <span class="nl">TKBLOfferShortUrlCodeKey</span><span class="p">:</span> <span class="n">shortUrlCode</span><span class="p">,</span>
+    <span class="nl">TKBLOfferClaimUrlKey</span><span class="p">:</span> <span class="p">[</span><span class="n">claimLinks</span> <span class="nl">objectForKey</span><span class="p">:</span><span class="n">TKBLShareChannelOther</span><span class="p">]</span>
+<span class="l">}</span><span class="p">];</span>
 
-<span class="p">[</span><span class="nb">self</span><span class="w"> </span><span class="nl">presentViewController</span><span class="p">:</span><span class="n">sheet</span><span class="w"> </span><span class="nl">animated</span><span class="p">:</span><span class="nb">YES</span><span class="w"> </span><span class="nl">completion</span><span class="p">:</span><span class="o">^</span><span class="p">{}];</span><span class="w"></span>
+<span class="p">[</span><span class="nb">self</span> <span class="nl">presentViewController</span><span class="p">:</span><span class="n">sheet</span> <span class="nl">animated</span><span class="p">:</span><span class="nb">YES</span> <span class="nl">completion</span><span class="p">:</span><span class="o">^</span><span class="p">{}];</span>
 </pre></div>
 </div>
-</section>
-<section id="social-sharing">
+</div>
+<div class="section" id="social-sharing">
 <h3>Social sharing<a class="headerlink" href="#social-sharing" title="Permalink to this headline">¶</a></h3>
 <p>Use frameworks provided by social networks to share your offer. Upon a successful share,
 call the <code class="docutils literal notranslate"><span class="pre">createSocialShare:channel:withHandler:</span></code> method to register the share with Talkable and
 create a <a class="reference internal" href="../api_v2/shares.html#api-v2-shares"><span class="std std-ref">Share</span></a> record.</p>
-<div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">createSocialShare</span><span class="p">:</span><span class="n">shortUrlCode</span><span class="w"> </span><span class="nl">channel</span><span class="p">:</span><span class="n">TKBLShareChannelOther</span><span class="w"> </span><span class="nl">withHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">*</span><span class="w"> </span><span class="n">response</span><span class="p">,</span><span class="w"> </span><span class="bp">NSError</span><span class="o">*</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="bp">NSDictionary</span><span class="o">*</span><span class="w"> </span><span class="n">rewardParams</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">response</span><span class="w"> </span><span class="nl">objectForKey</span><span class="p">:</span><span class="s">@&quot;reward&quot;</span><span class="p">];</span><span class="w"></span>
-<span class="p">}];</span><span class="w"></span>
+<div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">createSocialShare</span><span class="p">:</span><span class="n">shortUrlCode</span> <span class="nl">channel</span><span class="p">:</span><span class="n">TKBLShareChannelOther</span> <span class="nl">withHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">*</span> <span class="n">response</span><span class="p">,</span> <span class="bp">NSError</span><span class="o">*</span> <span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="bp">NSDictionary</span><span class="o">*</span> <span class="n">rewardParams</span> <span class="o">=</span> <span class="p">[</span><span class="n">response</span> <span class="nl">objectForKey</span><span class="p">:</span><span class="s">@&quot;reward&quot;</span><span class="p">];</span>
+<span class="p">}];</span>
 </pre></div>
 </div>
-<h4>Facebook example</h4><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="n">MyFBSDKDelegateClass</span><span class="o">*</span><span class="w"> </span><span class="n">delegate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nb">self</span><span class="w"> </span><span class="n">myFBSDKDelegate</span><span class="p">];</span><span class="w"></span>
-<span class="n">delegate</span><span class="p">.</span><span class="n">shortUrlCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shortUrlCode</span><span class="p">;</span><span class="w"></span>
-<span class="n">FBSDKShareLinkContent</span><span class="w"> </span><span class="o">*</span><span class="n">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="n">FBSDKShareLinkContent</span><span class="w"> </span><span class="n">alloc</span><span class="p">]</span><span class="w"> </span><span class="n">init</span><span class="p">];</span><span class="w"></span>
-<span class="n">content</span><span class="p">.</span><span class="n">contentURL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="bp">NSURL</span><span class="w"> </span><span class="nl">URLWithString</span><span class="p">:[</span><span class="n">params</span><span class="w"> </span><span class="nl">objectForKey</span><span class="p">:[</span><span class="n">claimLinks</span><span class="w"> </span><span class="nl">objectForKey</span><span class="p">:</span><span class="n">TKBLShareChannelFacebook</span><span class="p">]]];</span><span class="w"></span>
-<span class="p">[</span><span class="n">FBSDKShareDialog</span><span class="w"> </span><span class="nl">showFromViewController</span><span class="p">:</span><span class="nb">self</span><span class="w"></span>
-<span class="w">                             </span><span class="nl">withContent</span><span class="p">:</span><span class="n">content</span><span class="w"></span>
-<span class="w">                                </span><span class="nl">delegate</span><span class="p">:</span><span class="n">delegate</span><span class="p">];</span><span class="w"></span>
+<h4>Facebook example</h4><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="n">MyFBSDKDelegateClass</span><span class="o">*</span> <span class="n">delegate</span> <span class="o">=</span> <span class="p">[</span><span class="nb">self</span> <span class="n">myFBSDKDelegate</span><span class="p">];</span>
+<span class="n">delegate</span><span class="p">.</span><span class="n">shortUrlCode</span> <span class="o">=</span> <span class="n">shortUrlCode</span><span class="p">;</span>
+<span class="n">FBSDKShareLinkContent</span> <span class="o">*</span><span class="n">content</span> <span class="o">=</span> <span class="p">[[</span><span class="n">FBSDKShareLinkContent</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+<span class="n">content</span><span class="p">.</span><span class="n">contentURL</span> <span class="o">=</span> <span class="p">[</span><span class="bp">NSURL</span> <span class="nl">URLWithString</span><span class="p">:[</span><span class="n">params</span> <span class="nl">objectForKey</span><span class="p">:[</span><span class="n">claimLinks</span> <span class="nl">objectForKey</span><span class="p">:</span><span class="n">TKBLShareChannelFacebook</span><span class="p">]]];</span>
+<span class="p">[</span><span class="n">FBSDKShareDialog</span> <span class="nl">showFromViewController</span><span class="p">:</span><span class="nb">self</span>
+                             <span class="nl">withContent</span><span class="p">:</span><span class="n">content</span>
+                                <span class="nl">delegate</span><span class="p">:</span><span class="n">delegate</span><span class="p">];</span>
 
-<span class="p">...</span><span class="w"></span>
+<span class="p">...</span>
 
-<span class="k">@implementation</span> <span class="nc">MyFBSDKDelegateClass</span><span class="w"></span>
+<span class="k">@implementation</span> <span class="nc">MyFBSDKDelegateClass</span>
 
-<span class="k">@synthesize</span><span class="w"> </span><span class="n">shortUrlCode</span><span class="p">;</span><span class="w"></span>
+<span class="k">@synthesize</span> <span class="n">shortUrlCode</span><span class="p">;</span>
 
-<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sharer:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">sharer</span><span class="w"> </span><span class="nf">didCompleteWithResults:</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">&lt;</span><span class="bp">NSString</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="kt">id</span><span class="o">&gt;</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="nv">results</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">_shortUrlCode</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nb">nil</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">createSocialShare</span><span class="p">:</span><span class="n">_shortUrlCode</span><span class="w"></span>
-<span class="w">                                  </span><span class="nl">channel</span><span class="p">:</span><span class="n">TKBLShareChannelFacebook</span><span class="w"></span>
-<span class="w">                              </span><span class="nl">withHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">*</span><span class="w"> </span><span class="n">response</span><span class="p">,</span><span class="w"> </span><span class="bp">NSError</span><span class="o">*</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{...}];</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sharer:</span><span class="p">(</span><span class="kt">id</span><span class="p">)</span><span class="nv">sharer</span> <span class="nf">didCompleteWithResults:</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">&lt;</span><span class="bp">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="kt">id</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">results</span> <span class="p">{</span>
+ <span class="k">if</span> <span class="p">(</span><span class="n">_shortUrlCode</span> <span class="o">!=</span> <span class="nb">nil</span><span class="p">)</span>
+    <span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">createSocialShare</span><span class="p">:</span><span class="n">_shortUrlCode</span>
+                                  <span class="nl">channel</span><span class="p">:</span><span class="n">TKBLShareChannelFacebook</span>
+                              <span class="nl">withHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">*</span> <span class="n">response</span><span class="p">,</span> <span class="bp">NSError</span><span class="o">*</span> <span class="n">error</span><span class="p">)</span> <span class="p">{...}];</span>
+<span class="p">}</span>
 
-<span class="k">@end</span><span class="w"></span>
+<span class="k">@end</span>
 </pre></div>
 </div>
-<h4>Twitter example</h4><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="n">TWTRComposer</span><span class="w"> </span><span class="o">*</span><span class="n">composer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="n">TWTRComposer</span><span class="w"> </span><span class="n">alloc</span><span class="p">]</span><span class="w"> </span><span class="n">init</span><span class="p">];</span><span class="w"></span>
-<span class="p">[</span><span class="n">composer</span><span class="w"> </span><span class="nl">setText</span><span class="p">:[</span><span class="n">params</span><span class="w"> </span><span class="nl">objectForKey</span><span class="p">:</span><span class="n">TKBLShareMessage</span><span class="p">]];</span><span class="w"></span>
-<span class="p">[</span><span class="n">composer</span><span class="w"> </span><span class="nl">showFromViewController</span><span class="p">:</span><span class="nb">self</span><span class="w"> </span><span class="nl">completion</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">TWTRComposerResult</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">TWTRComposerResultDone</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">createSocialShare</span><span class="p">:</span><span class="n">shortUrlCode</span><span class="w"></span>
-<span class="w">                                  </span><span class="nl">channel</span><span class="p">:</span><span class="n">TKBLShareChannelTwitter</span><span class="w"></span>
-<span class="w">                              </span><span class="nl">withHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">*</span><span class="w"> </span><span class="n">response</span><span class="p">,</span><span class="w"> </span><span class="bp">NSError</span><span class="o">*</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{...}];</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}];</span><span class="w"></span>
+<h4>Twitter example</h4><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="n">TWTRComposer</span> <span class="o">*</span><span class="n">composer</span> <span class="o">=</span> <span class="p">[[</span><span class="n">TWTRComposer</span> <span class="n">alloc</span><span class="p">]</span> <span class="n">init</span><span class="p">];</span>
+<span class="p">[</span><span class="n">composer</span> <span class="nl">setText</span><span class="p">:[</span><span class="n">params</span> <span class="nl">objectForKey</span><span class="p">:</span><span class="n">TKBLShareMessage</span><span class="p">]];</span>
+<span class="p">[</span><span class="n">composer</span> <span class="nl">showFromViewController</span><span class="p">:</span><span class="nb">self</span> <span class="nl">completion</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">TWTRComposerResult</span> <span class="n">result</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">result</span> <span class="o">==</span> <span class="n">TWTRComposerResultDone</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">createSocialShare</span><span class="p">:</span><span class="n">shortUrlCode</span>
+                                  <span class="nl">channel</span><span class="p">:</span><span class="n">TKBLShareChannelTwitter</span>
+                              <span class="nl">withHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">*</span> <span class="n">response</span><span class="p">,</span> <span class="bp">NSError</span><span class="o">*</span> <span class="n">error</span><span class="p">)</span> <span class="p">{...}];</span>
+  <span class="p">}</span>
+<span class="p">}];</span>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This method will be called automatically when you use <code class="docutils literal notranslate"><span class="pre">socialShare:</span></code> or <code class="docutils literal notranslate"><span class="pre">nativeShare:</span></code> methods.</p>
+<p class="first admonition-title">Note</p>
+<p class="last">This method will be called automatically when you use <code class="docutils literal notranslate"><span class="pre">socialShare:</span></code> or <code class="docutils literal notranslate"><span class="pre">nativeShare:</span></code> methods.</p>
 </div>
-</section>
-<section id="legacy-social-sharing">
+</div>
+<div class="section" id="legacy-social-sharing">
 <h3>Legacy social sharing<a class="headerlink" href="#legacy-social-sharing" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic" start="3">
-<li><p>The legacy <code class="docutils literal notranslate"><span class="pre">socialShare:</span></code> method was used prior to v1.4.9 and is provided for backwards compatibility.
+<li><p class="first">The legacy <code class="docutils literal notranslate"><span class="pre">socialShare:</span></code> method was used prior to v1.4.9 and is provided for backwards compatibility.
 It will attempt to display a sharing dialog directly using the deprecated Social.framework.
 Only the Facebook sharing channel is currently supported.</p>
-<div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="bp">SLComposeViewController</span><span class="o">*</span><span class="w"> </span><span class="n">sheet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">socialShare</span><span class="p">:</span><span class="l">@{</span><span class="w"></span>
-<span class="w">  </span><span class="nl">TKBLShareChannel</span><span class="p">:</span><span class="n">TKBLShareChannelFacebook</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nl">TKBLOfferClaimUrlKey</span><span class="p">:[</span><span class="n">claimLinks</span><span class="w"> </span><span class="nl">objectForKey</span><span class="p">:</span><span class="n">TKBLShareChannelFacebook</span><span class="p">],</span><span class="w"></span>
-<span class="w">  </span><span class="nl">TKBLShareMessage</span><span class="p">:</span><span class="s">@&quot;Personalized message&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nl">TKBLOfferShortUrlCodeKey</span><span class="p">:</span><span class="n">shortUrlCode</span><span class="w"></span>
-<span class="l">}</span><span class="p">];</span><span class="w"></span>
+<div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="bp">SLComposeViewController</span><span class="o">*</span> <span class="n">sheet</span> <span class="o">=</span> <span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">socialShare</span><span class="p">:</span><span class="l">@{</span>
+  <span class="nl">TKBLShareChannel</span><span class="p">:</span><span class="n">TKBLShareChannelFacebook</span><span class="p">,</span>
+  <span class="nl">TKBLOfferClaimUrlKey</span><span class="p">:[</span><span class="n">claimLinks</span> <span class="nl">objectForKey</span><span class="p">:</span><span class="n">TKBLShareChannelFacebook</span><span class="p">],</span>
+  <span class="nl">TKBLShareMessage</span><span class="p">:</span><span class="s">@&quot;Personalized message&quot;</span><span class="p">,</span>
+  <span class="nl">TKBLOfferShortUrlCodeKey</span><span class="p">:</span><span class="n">shortUrlCode</span>
+<span class="l">}</span><span class="p">];</span>
 
-<span class="p">[</span><span class="nb">self</span><span class="w"> </span><span class="nl">presentViewController</span><span class="p">:</span><span class="n">sheet</span><span class="w"> </span><span class="nl">animated</span><span class="p">:</span><span class="nb">YES</span><span class="w"> </span><span class="nl">completion</span><span class="p">:</span><span class="o">^</span><span class="p">{}];</span><span class="w"></span>
+<span class="p">[</span><span class="nb">self</span> <span class="nl">presentViewController</span><span class="p">:</span><span class="n">sheet</span> <span class="nl">animated</span><span class="p">:</span><span class="nb">YES</span> <span class="nl">completion</span><span class="p">:</span><span class="o">^</span><span class="p">{}];</span>
 </pre></div>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Starting with v1.4.9, this method is deprecated and offers only limited Facebook sharing support.
+<p class="first admonition-title">Warning</p>
+<p class="last">Starting with v1.4.9, this method is deprecated and offers only limited Facebook sharing support.
 Native sharing or custom implementation based on Facebook/Twitter SDK should be used instead.
 See <a class="reference internal" href="social_sharing.html#ios-sdk-social-sharing"><span class="std std-ref">Social Sharing</span></a> for details.</p>
 </div>
 </li>
 </ol>
-</section>
-<section id="email-share">
+</div>
+<div class="section" id="email-share">
 <h3>Email Share<a class="headerlink" href="#email-share" title="Permalink to this headline">¶</a></h3>
 <p>To share an Offer via email, simply use the <code class="docutils literal notranslate"><span class="pre">createEmailShare:recipients:withParams:andHandler:</span></code> method to send an API request.
 Talkable will send the emails for you. You will need to provide an interface for the user to specify recipients’ email addresses, a subject, and a personal message.</p>
-<div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="bp">NSString</span><span class="o">*</span><span class="w"> </span><span class="n">recipients</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@&quot;customer@example.com,elon@musk.com&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// comma separated email addresses</span>
-<span class="bp">NSDictionary</span><span class="o">*</span><span class="w"> </span><span class="n">emailShareParams</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="l">@{</span><span class="w"></span>
-<span class="w">    </span><span class="s">@&quot;subject&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">@&quot;Custom Email Subject&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s">@&quot;body&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">@&quot;Personal message that will be added to the email body&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s">@&quot;reminder&quot;</span><span class="o">:</span><span class="w"> </span><span class="nb">NO</span><span class="w"> </span><span class="c1">// Whether Talkable should send a reminder email later</span>
-<span class="l">}</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="bp">NSString</span><span class="o">*</span> <span class="n">recipients</span> <span class="o">=</span> <span class="s">@&quot;customer@example.com,elon@musk.com&quot;</span><span class="p">;</span> <span class="c1">// comma separated email addresses</span>
+<span class="bp">NSDictionary</span><span class="o">*</span> <span class="n">emailShareParams</span> <span class="o">=</span> <span class="l">@{</span>
+    <span class="s">@&quot;subject&quot;</span><span class="o">:</span> <span class="s">@&quot;Custom Email Subject&quot;</span><span class="p">,</span>
+    <span class="s">@&quot;body&quot;</span><span class="o">:</span> <span class="s">@&quot;Personal message that will be added to the email body&quot;</span><span class="p">,</span>
+    <span class="s">@&quot;reminder&quot;</span><span class="o">:</span> <span class="nb">NO</span> <span class="c1">// Whether Talkable should send a reminder email later</span>
+<span class="l">}</span><span class="p">;</span>
 
-<span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">createEmailShare</span><span class="p">:</span><span class="n">shortUrlCode</span><span class="w"> </span><span class="nl">recipients</span><span class="p">:</span><span class="n">recipients</span><span class="w"> </span><span class="nl">withParams</span><span class="p">:</span><span class="n">emailShareParams</span><span class="w"> </span><span class="nl">andHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">*</span><span class="w"> </span><span class="n">response</span><span class="p">,</span><span class="w"> </span><span class="bp">NSError</span><span class="o">*</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// process delivery stats</span>
-<span class="p">}];</span><span class="w"></span>
+<span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">createEmailShare</span><span class="p">:</span><span class="n">shortUrlCode</span> <span class="nl">recipients</span><span class="p">:</span><span class="n">recipients</span> <span class="nl">withParams</span><span class="p">:</span><span class="n">emailShareParams</span> <span class="nl">andHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">*</span> <span class="n">response</span><span class="p">,</span> <span class="bp">NSError</span><span class="o">*</span> <span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// process delivery stats</span>
+<span class="p">}];</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="check-for-reward">
+</div>
+</div>
+<div class="section" id="check-for-reward">
 <h2>3. Check for Reward<a class="headerlink" href="#check-for-reward" title="Permalink to this headline">¶</a></h2>
 <p>If a Talkable campaign is configured to give a reward to the Advocate just for sharing, the API call to create a <a class="reference internal" href="../api_v2/shares.html#api-v2-shares"><span class="std std-ref">Share</span></a>
 will return a <a class="reference internal" href="../api_v2/rewards.html#api-v2-rewards"><span class="std std-ref">Reward</span></a> you can display immediately. In most cases, however, the Advocate will receive a reward after
 a Friend responds to a shared link, e.g. makes a purchase.
 To check whether the current user has any outstanding rewards, use the <code class="docutils literal notranslate"><span class="pre">retrieveRewardsWithHandler:</span></code> method.</p>
-<div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">retrieveRewardsWithHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">*</span><span class="w"> </span><span class="n">response</span><span class="p">,</span><span class="w"> </span><span class="bp">NSError</span><span class="o">*</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="bp">NSArray</span><span class="w"> </span><span class="o">*</span><span class="n">rewards</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="bp">NSArray</span><span class="w"> </span><span class="o">*</span><span class="p">)[</span><span class="n">response</span><span class="w"> </span><span class="nl">objectForKey</span><span class="p">:</span><span class="s">@&quot;rewards&quot;</span><span class="p">];</span><span class="w"></span>
-<span class="p">}];</span><span class="w"></span>
+<div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">retrieveRewardsWithHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">*</span> <span class="n">response</span><span class="p">,</span> <span class="bp">NSError</span><span class="o">*</span> <span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="bp">NSArray</span> <span class="o">*</span><span class="n">rewards</span> <span class="o">=</span> <span class="p">(</span><span class="bp">NSArray</span> <span class="o">*</span><span class="p">)[</span><span class="n">response</span> <span class="nl">objectForKey</span><span class="p">:</span><span class="s">@&quot;rewards&quot;</span><span class="p">];</span>
+<span class="p">}];</span>
 </pre></div>
 </div>
-</section>
-<section id="extra-functionality">
+</div>
+<div class="section" id="extra-functionality">
 <h2>Extra Functionality<a class="headerlink" href="#extra-functionality" title="Permalink to this headline">¶</a></h2>
-<section id="retrieve-an-offer-by-short-code">
+<div class="section" id="retrieve-an-offer-by-short-code">
 <h3>Retrieve an Offer by Short Code<a class="headerlink" href="#retrieve-an-offer-by-short-code" title="Permalink to this headline">¶</a></h3>
 <p>If you need to access an Offer for the Origin you’ve created earlier, store the offer’s <code class="docutils literal notranslate"><span class="pre">short_url_code</span></code> and then use <code class="docutils literal notranslate"><span class="pre">retrieveOffer:withHandler:</span></code> method
 to fetch the Offer.</p>
-<div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">retrieveOffer</span><span class="p">:</span><span class="n">shortUrlCode</span><span class="w"> </span><span class="nl">withHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">*</span><span class="w"> </span><span class="n">response</span><span class="p">,</span><span class="w"> </span><span class="bp">NSError</span><span class="o">*</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="bp">NSDictionary</span><span class="o">*</span><span class="w"> </span><span class="n">offerParams</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">response</span><span class="w"> </span><span class="nl">objectForKey</span><span class="p">:</span><span class="n">TKBLOfferKey</span><span class="p">];</span><span class="w"></span>
-<span class="p">}];</span><span class="w"></span>
+<div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">retrieveOffer</span><span class="p">:</span><span class="n">shortUrlCode</span> <span class="nl">withHandler</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="bp">NSDictionary</span><span class="o">*</span> <span class="n">response</span><span class="p">,</span> <span class="bp">NSError</span><span class="o">*</span> <span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="bp">NSDictionary</span><span class="o">*</span> <span class="n">offerParams</span> <span class="o">=</span> <span class="p">[</span><span class="n">response</span> <span class="nl">objectForKey</span><span class="p">:</span><span class="n">TKBLOfferKey</span><span class="p">];</span>
+<span class="p">}];</span>
 </pre></div>
 </div>
 <p>Alternatively, you can subscribe to a <code class="docutils literal notranslate"><span class="pre">TKBLDidReceiveReward</span></code> notification as described in the <a class="reference internal" href="advanced.html#ios-sdk-advanced-notifications"><span class="std std-ref">Advanced Usage</span></a> section.</p>
@@ -256,12 +256,11 @@ to fetch the Offer.</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>

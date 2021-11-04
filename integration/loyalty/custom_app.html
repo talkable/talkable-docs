@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Learn how to use Custom app to receive data about loyalty events." name="description" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="Learn how to use Custom app to receive data about loyalty events." name="description" />
 
     <title>Custom App for Loyalty &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
+    <link rel="stylesheet" href="../../_static/talkable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/integration/loyalty/custom_app.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Auto-Enrollment" href="auto_enrollment.html" />
@@ -85,64 +85,65 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="integration-loyalty-custom-app"></span><section id="custom-app-for-loyalty">
+  <span class="target" id="integration-loyalty-custom-app"></span><div class="section" id="custom-app-for-loyalty">
 <h1>Custom App for Loyalty<a class="headerlink" href="#custom-app-for-loyalty" title="Permalink to this headline">¶</a></h1>
 <p>Talkable offers a Custom App that allows you to send Talkable data to an outside destination such as your site, ESP, or CDP.
 The Custom App supports several actions. In the context of loyalty, the following actions might be useful:</p>
 <ul class="simple">
-<li><p>Sync loyalty actions</p></li>
-<li><p>Sync loyalty tier transitions</p></li>
+<li>Sync loyalty actions</li>
+<li>Sync loyalty tier transitions</li>
 </ul>
 <p>By default, the Custom App payload contains only <cite>email</cite> for loyalty-related actions.
 However, it is recommended to modify the payload that will be sent when the app is triggered.</p>
 <p>To set up a Custom App, go to <strong>All site settings</strong> → <strong>App store</strong> → <strong>Custom app</strong>.</p>
-<section id="sync-loyalty-actions">
+<div class="section" id="sync-loyalty-actions">
 <h2>Sync loyalty actions<a class="headerlink" href="#sync-loyalty-actions" title="Permalink to this headline">¶</a></h2>
 <p>This feature sends Talkable data to the configured endpoint URL in the following cases:</p>
 <ul class="simple">
-<li><p>when a loyalty member earns points according to loyalty action configurations (eg. by subscribing to your newsletter);</p></li>
-<li><p>when a loyalty member earns or has points deducted due to a manual points adjustment (eg. made by a Customer Service representative);</p></li>
-<li><p>when a loyalty member exchanges (redeems) points for a coupon discount.</p></li>
+<li>when a loyalty member earns points according to loyalty action configurations (eg. by subscribing to your newsletter);</li>
+<li>when a loyalty member earns or has points deducted due to a manual points adjustment (eg. made by a Customer Service representative);</li>
+<li>when a loyalty member exchanges (redeems) points for a coupon discount.</li>
 </ul>
-<section id="liquid-variables-hints">
+<div class="section" id="liquid-variables-hints">
 <h3>Liquid variables hints<a class="headerlink" href="#liquid-variables-hints" title="Permalink to this headline">¶</a></h3>
 <p>To determine which loyalty action triggered the Custom App, use <cite>{{ action.identifier }}</cite> liquid variable in the payload.</p>
 <p><cite>{{ action.identifier }}</cite> can have the following values:</p>
 <ul>
-<li><p>when loyalty member exchanges points for a coupon, the Action Identifier is <em>“redeem”</em>;</p></li>
-<li><p>when loyalty member gains or loses points due to a manual points adjustment, the Action Identifier is <em>“manual_adjustment”</em>;</p></li>
-<li><p>when loyalty member earns points according to loyalty action configurations, the Action Identifier varies based on the action configuration type:</p>
+<li><p class="first">when loyalty member exchanges points for a coupon, the Action Identifier is <em>“redeem”</em>;</p>
+</li>
+<li><p class="first">when loyalty member gains or loses points due to a manual points adjustment, the Action Identifier is <em>“manual_adjustment”</em>;</p>
+</li>
+<li><p class="first">when loyalty member earns points according to loyalty action configurations, the Action Identifier varies based on the action configuration type:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><em>“optin”</em> for “Loyalty join”;</p></li>
-<li><p><em>“event”</em> for “Purchase points” and “Event points”;</p></li>
-<li><p><em>“referral”</em> for “Refer a friend”;</p></li>
-<li><p>for a custom type, the Identifier is taken straight from the action configuration “Identifier” field.</p></li>
+<li><em>“optin”</em> for “Loyalty join”;</li>
+<li><em>“event”</em> for “Purchase points” and “Event points”;</li>
+<li><em>“referral”</em> for “Refer a friend”;</li>
+<li>for a custom type, the Identifier is taken straight from the action configuration “Identifier” field.</li>
 </ul>
 </div></blockquote>
 </li>
 </ul>
 <p><cite>{{ action.rule }}</cite> contains details about the action configuration that is responsible for a particular points collection.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p><cite>{{ action.rule }}</cite> is optional for <em>“manual_adjustment”</em> actions and always blank for <em>“redeem”</em> actions.</p>
+<p class="first admonition-title">Note</p>
+<p class="last"><cite>{{ action.rule }}</cite> is optional for <em>“manual_adjustment”</em> actions and always blank for <em>“redeem”</em> actions.</p>
 </div>
 <p>To see the full list of available variables, click “Show available variables” on the Custom App action configuration page.</p>
-</section>
-</section>
-<section id="sync-loyalty-tier-transitions">
+</div>
+</div>
+<div class="section" id="sync-loyalty-tier-transitions">
 <h2>Sync loyalty tier transitions<a class="headerlink" href="#sync-loyalty-tier-transitions" title="Permalink to this headline">¶</a></h2>
 <p>This feature sends Talkable data to the configured endpoint URL once a loyalty member reaches a new tier.</p>
-<section id="id1">
+<div class="section" id="id1">
 <h3>Liquid variables hints<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p><cite>{{ tier_transition.reason }}</cite> is either <em>“upgrade”</em> or <em>“downgrade”</em>, depending on the direction of the transition.</p>
 <p>To see the full list of available variables, click “Show available variables” on the Custom App action configuration page.</p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>

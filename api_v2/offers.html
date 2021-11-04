@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="This API allows you to access Advocate offers." name="description" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="This API allows you to access Advocate offers." name="description" />
 
     <title>Advocate Offers &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/api_v2/offers.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Shares" href="shares.html" />
@@ -95,7 +95,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="api-v2-offers"></span><section id="advocate-offers">
+  <span class="target" id="api-v2-offers"></span><div class="section" id="advocate-offers">
 <h1>Advocate Offers<a class="headerlink" href="#advocate-offers" title="Permalink to this headline">¶</a></h1>
 <p>This API allows you to access advocate offers.</p>
 <p><br></p>
@@ -104,28 +104,28 @@
 </div>
 <p>Returns advocate offer.</p>
 <div class="ptable docutils container">
-<table class="docutils align-default">
+<table border="1" class="docutils">
 <colgroup>
-<col style="width: 21%" />
-<col style="width: 79%" />
+<col width="21%" />
+<col width="79%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Parameter</p></th>
-<th class="head"><p>Description</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameter</th>
+<th class="head">Description</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>site_slug</p></td>
-<td><p>Your Talkable Site ID. You can get this from your
-Talkable dashboard after you log in and create a site.</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>site_slug</td>
+<td>Your Talkable Site ID. You can get this from your
+Talkable dashboard after you log in and create a site.</td>
 </tr>
-<tr class="row-odd"><td><p>id</p></td>
-<td><p>Offer ID obtained with <a class="reference internal" href="origins.html#api-v2-origins"><span class="std std-ref">origin creation</span></a>.</p></td>
+<tr class="row-odd"><td>id</td>
+<td>Offer ID obtained with <a class="reference internal" href="origins.html#api-v2-origins"><span class="std std-ref">origin creation</span></a>.</td>
 </tr>
-<tr class="row-even"><td><p>sharing_channels</p></td>
-<td><p>Optional: array of social sharing channels for which will be
+<tr class="row-even"><td>sharing_channels</td>
+<td><p class="first">Optional: array of social sharing channels for which will be
 generated sharing links.</p>
-<p>Options: <cite>facebook</cite>, <cite>twitter</cite>, <cite>linkedin</cite>, <cite>sms</cite>,
+<p class="last">Options: <cite>facebook</cite>, <cite>twitter</cite>, <cite>linkedin</cite>, <cite>sms</cite>,
 <cite>other</cite> or custom, except <cite>email</cite>, <cite>reminder</cite>,
 <cite>facebook_sponsored</cite> and <cite>coupon</cite>.</p>
 </td>
@@ -133,7 +133,7 @@ generated sharing links.</p>
 </tbody>
 </table>
 </div>
-<section id="example">
+<div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GET https://www.talkable.com/api/v2/offers/89238912?site_slug=my-store
 </pre></div>
@@ -143,7 +143,7 @@ generated sharing links.</p>
   <span class="s2">&quot;ok&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
   <span class="s2">&quot;result&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;offer&quot;</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">89238912</span><span class="p">,</span>
+      <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">89238912</span><span class="p">,</span>
       <span class="s2">&quot;short_url_code&quot;</span><span class="o">:</span> <span class="s2">&quot;dZpBwd&quot;</span><span class="p">,</span>
       <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;customer@example.com&quot;</span><span class="p">,</span>
       <span class="s2">&quot;show_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://www.talkable.com/x/iEov9g&quot;</span><span class="p">,</span>
@@ -154,7 +154,7 @@ generated sharing links.</p>
           <span class="s2">&quot;action_type&quot;</span><span class="o">:</span> <span class="s2">&quot;referrer&quot;</span><span class="p">,</span>
           <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;$5&quot;</span><span class="p">,</span>
           <span class="s2">&quot;percentage&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-          <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mf">5</span><span class="p">,</span>
+          <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
           <span class="s2">&quot;criteria_config&quot;</span><span class="o">:</span> <span class="p">{</span>
             <span class="s2">&quot;new_customer&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
             <span class="s2">&quot;new_optin&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
@@ -177,7 +177,7 @@ generated sharing links.</p>
           <span class="s2">&quot;action_type&quot;</span><span class="o">:</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span>
           <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;$5&quot;</span><span class="p">,</span>
           <span class="s2">&quot;percentage&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-          <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mf">5</span><span class="p">,</span>
+          <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
           <span class="s2">&quot;criteria_config&quot;</span><span class="o">:</span> <span class="p">{</span>
             <span class="s2">&quot;once_per_person&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
             <span class="s2">&quot;new_customer&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -201,7 +201,7 @@ generated sharing links.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<section id="with-sharing-links">
+<div class="section" id="with-sharing-links">
 <h3>With sharing links<a class="headerlink" href="#with-sharing-links" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GET https://www.talkable.com/api/v2/offers/89238912?site_slug=my-store&amp;sharing_channels[]=facebook&amp;sharing_channels[]=twitter&amp;sharing_channels[]=custom
 </pre></div>
@@ -211,7 +211,7 @@ generated sharing links.</p>
   <span class="s2">&quot;ok&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
   <span class="s2">&quot;result&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;offer&quot;</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">89238912</span><span class="p">,</span>
+      <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">89238912</span><span class="p">,</span>
       <span class="s2">&quot;short_url_code&quot;</span><span class="o">:</span> <span class="s2">&quot;dZpBwd&quot;</span><span class="p">,</span>
       <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;customer@example.com&quot;</span><span class="p">,</span>
       <span class="s2">&quot;show_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://www.talkable.com/x/iEov9g&quot;</span><span class="p">,</span>
@@ -222,7 +222,7 @@ generated sharing links.</p>
           <span class="s2">&quot;action_type&quot;</span><span class="o">:</span> <span class="s2">&quot;referrer&quot;</span><span class="p">,</span>
           <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;$5&quot;</span><span class="p">,</span>
           <span class="s2">&quot;percentage&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-          <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mf">5</span><span class="p">,</span>
+          <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
           <span class="s2">&quot;criteria_config&quot;</span><span class="o">:</span> <span class="p">{</span>
             <span class="s2">&quot;new_customer&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
             <span class="s2">&quot;new_optin&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
@@ -245,7 +245,7 @@ generated sharing links.</p>
           <span class="s2">&quot;action_type&quot;</span><span class="o">:</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span>
           <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;$5&quot;</span><span class="p">,</span>
           <span class="s2">&quot;percentage&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-          <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mf">5</span><span class="p">,</span>
+          <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span>
           <span class="s2">&quot;criteria_config&quot;</span><span class="o">:</span> <span class="p">{</span>
             <span class="s2">&quot;once_per_person&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
             <span class="s2">&quot;new_customer&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -274,12 +274,11 @@ generated sharing links.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>

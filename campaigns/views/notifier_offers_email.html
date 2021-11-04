@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Send email to tell your Advocate what your referral program is about. Motivate them to share your offer." name="description" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="Send email to tell your Advocate what your referral program is about. Motivate them to share your offer." name="description" />
 
     <title>Advocate Offer Email &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
+    <link rel="stylesheet" href="../../_static/talkable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/campaigns/views/notifier_offers_email.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Friend Share Email" href="notifier_offers_share_via_email.html" />
@@ -96,46 +96,45 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="campaigns-views-notifier-offers-email"></span><section id="advocate-offer-email">
+  <span class="target" id="campaigns-views-notifier-offers-email"></span><div class="section" id="advocate-offer-email">
 <h1>Advocate Offer Email<a class="headerlink" href="#advocate-offer-email" title="Permalink to this headline">¶</a></h1>
 <p>Email is triggered to an <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> on sign up. Explain the value proposition
 and encourage <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> to share using the buttons.</p>
 <ul class="simple">
-<li><p>For Standalone Campaign it triggers when <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> signs up.</p></li>
-<li><p>For Post-Checkout Campaign it triggers when <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> makes store purchase.</p></li>
+<li>For Standalone Campaign it triggers when <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> signs up.</li>
+<li>For Post-Checkout Campaign it triggers when <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> makes store purchase.</li>
 </ul>
 <p>Main <abbr title="Call to action">CTA</abbr> should point to an Advocate Share Page — <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">share_page_url</span> <span class="pre">}}</span></code>.</p>
 <p><br></p>
 <img alt="../../_images/advocate-offer-email.png" src="../../_images/advocate-offer-email.png" />
 <p><br></p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Ideal email width is 480px. This is a most universal width for both
+<p class="first admonition-title">Note</p>
+<p class="last">Ideal email width is 480px. This is a most universal width for both
 mobile and desktop platforms.
 <a class="reference internal" href="../designer.html#designer-email"><span class="std std-ref">Read more about email design</span></a>.</p>
 </div>
 <h2>Email sending conditions</h2><p>By default is sent immediately after the offer is created, but can be delayed by configuration.</p>
 <ol class="arabic simple">
-<li><p>Talkable creates an offer based on the following criteria:</p></li>
+<li>Talkable creates an offer based on the following criteria:</li>
 </ol>
 <blockquote>
 <div><ul class="simple">
-<li><p>Purchase creation</p></li>
-<li><p>Affiliate member signup. <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> can sign up manually by entering their email, or their email is passed via JS integration (or URL). For example, a customer signs up to refer-a-friend on a /share page. This triggers an affiliate member signup.</p></li>
+<li>Purchase creation</li>
+<li>Affiliate member signup. <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> can sign up manually by entering their email, or their email is passed via JS integration (or URL). For example, a customer signs up to refer-a-friend on a /share page. This triggers an affiliate member signup.</li>
 </ul>
 </div></blockquote>
 <ol class="arabic simple" start="2">
-<li><p>Main email sending criteria (unable to change):</p></li>
+<li>Main email sending criteria (unable to change):</li>
 </ol>
 <blockquote>
 <div><ul class="simple">
-<li><p>If <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> offer is active</p></li>
+<li>If <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> offer is active</li>
 </ul>
 </div></blockquote>
-</section>
+</div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>

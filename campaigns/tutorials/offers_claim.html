@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Email gating lets you get a referred Friend’s email — just ask for it in exchange for a reward." name="description" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="Email gating lets you get a referred Friend’s email — just ask for it in exchange for a reward." name="description" />
 
     <title>Friend Claim Page &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
+    <link rel="stylesheet" href="../../_static/talkable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/campaigns/tutorials/offers_claim.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Incentive Criteria" href="incentive_criteria.html" />
@@ -91,9 +91,9 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="campaigns-tutorials-offers-claim"></span><section id="friend-claim-page">
+  <span class="target" id="campaigns-tutorials-offers-claim"></span><div class="section" id="friend-claim-page">
 <h1>Friend Claim Page<a class="headerlink" href="#friend-claim-page" title="Permalink to this headline">¶</a></h1>
-<section id="email-gating">
+<div class="section" id="email-gating">
 <span id="tutorials-email-gating"></span><h2>Email Gating<a class="headerlink" href="#email-gating" title="Permalink to this headline">¶</a></h2>
 <p>Email gating is used when you need RD to provide an email to get a
 reward. It is used on the Friend Claim Page and looks like a popup with email
@@ -160,9 +160,9 @@ field, submit button, and “signup for latest news” checkbox.</p>
 </div>
 <p><strong>Advanced Setup</strong></p>
 <ol class="arabic simple">
-<li><p>‘Click to copy’ functionality for coupon code</p></li>
-<li><p>‘Sign up for news’ checkbox</p></li>
-<li><p>Email validation messages</p></li>
+<li>‘Click to copy’ functionality for coupon code</li>
+<li>‘Sign up for news’ checkbox</li>
+<li>Email validation messages</li>
 </ol>
 <p><strong>HTML:</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{% if gated_email != blank %}
@@ -204,19 +204,19 @@ field, submit button, and “signup for latest news” checkbox.</p>
 
   <span class="kd">function</span> <span class="nx">displayNotice</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">$notice</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-    <span class="nx">$notice</span><span class="p">.</span><span class="nx">fadeIn</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span>
+    <span class="nx">$notice</span><span class="p">.</span><span class="nx">fadeIn</span><span class="p">(</span><span class="mi">300</span><span class="p">);</span>
     <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nx">$notice</span><span class="p">.</span><span class="nx">fadeOut</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span>
-    <span class="p">},</span> <span class="mf">3000</span><span class="p">);</span>
+      <span class="nx">$notice</span><span class="p">.</span><span class="nx">fadeOut</span><span class="p">(</span><span class="mi">300</span><span class="p">);</span>
+    <span class="p">},</span> <span class="mi">3000</span><span class="p">);</span>
   <span class="p">}</span>
 
   <span class="nx">Talkable</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s1">&#39;email_gating_passed&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">$contentGating</span><span class="p">.</span><span class="nx">slideUp</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span>
+    <span class="nx">$contentGating</span><span class="p">.</span><span class="nx">slideUp</span><span class="p">(</span><span class="mi">300</span><span class="p">);</span>
     <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nx">$contentHidden</span><span class="p">.</span><span class="nx">slideDown</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span>
+      <span class="nx">$contentHidden</span><span class="p">.</span><span class="nx">slideDown</span><span class="p">(</span><span class="mi">300</span><span class="p">);</span>
       <span class="nx">$couponCode</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">coupon_code</span><span class="p">);</span> <span class="c1">// Insert coupon code</span>
       <span class="nx">bindClipToCopy</span><span class="p">(</span><span class="s1">&#39;.js-coupon-code&#39;</span><span class="p">);</span>
-    <span class="p">},</span> <span class="mf">300</span><span class="p">);</span>
+    <span class="p">},</span> <span class="mi">300</span><span class="p">);</span>
   <span class="p">});</span>
 
   <span class="kd">function</span> <span class="nx">unlockGating</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
@@ -243,8 +243,8 @@ field, submit button, and “signup for latest news” checkbox.</p>
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="like-gating">
+</div>
+<div class="section" id="like-gating">
 <span id="tutorials-like-gating"></span><h2>Like Gating<a class="headerlink" href="#like-gating" title="Permalink to this headline">¶</a></h2>
 <img alt="" src="../../_images/image21.png" />
 <p><strong>Basic Setup</strong></p>
@@ -295,10 +295,10 @@ field, submit button, and “signup for latest news” checkbox.</p>
     <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">timer</span><span class="p">);</span>
     <span class="nx">notice</span>
       <span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
-      <span class="p">.</span><span class="nx">fadeIn</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span>
+      <span class="p">.</span><span class="nx">fadeIn</span><span class="p">(</span><span class="mi">300</span><span class="p">);</span>
     <span class="nx">timer</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nx">notice</span><span class="p">.</span><span class="nx">fadeOut</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span>
-    <span class="p">},</span> <span class="nx">delay</span> <span class="o">?</span> <span class="nx">delay</span> <span class="o">:</span> <span class="mf">5000</span><span class="p">);</span>
+      <span class="nx">notice</span><span class="p">.</span><span class="nx">fadeOut</span><span class="p">(</span><span class="mi">300</span><span class="p">);</span>
+    <span class="p">},</span> <span class="nx">delay</span> <span class="o">?</span> <span class="nx">delay</span> <span class="o">:</span> <span class="mi">5000</span><span class="p">);</span>
   <span class="p">};</span>
 
   <span class="nx">Talkable</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s1">&#39;like_gating_succeeded&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
@@ -308,10 +308,10 @@ field, submit button, and “signup for latest news” checkbox.</p>
   <span class="nx">Talkable</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s1">&#39;like_gating_passed&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">coupon_code</span><span class="p">)</span> <span class="p">{</span>
       <span class="nx">populateCouponCode</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">coupon_code</span><span class="p">);</span>
-      <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-before&#39;</span><span class="p">).</span><span class="nx">slideUp</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span>
+      <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-before&#39;</span><span class="p">).</span><span class="nx">slideUp</span><span class="p">(</span><span class="mi">300</span><span class="p">);</span>
       <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-after&#39;</span><span class="p">).</span><span class="nx">slideDown</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span>
-      <span class="p">},</span> <span class="mf">300</span><span class="p">);</span>
+        <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-after&#39;</span><span class="p">).</span><span class="nx">slideDown</span><span class="p">(</span><span class="mi">300</span><span class="p">);</span>
+      <span class="p">},</span> <span class="mi">300</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
       <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;No coupon provided.&#39;</span><span class="p">);</span>
       <span class="nx">displayNotice</span><span class="p">(</span><span class="s1">&#39;No coupon provided.&#39;</span><span class="p">);</span>
@@ -325,11 +325,10 @@ field, submit button, and “signup for latest news” checkbox.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>

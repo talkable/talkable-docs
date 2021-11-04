@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Find the components of what Talkable is composed." name="description" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="Find the components of what Talkable is composed." name="description" />
 
     <title>Integration Components &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
+    <link rel="stylesheet" href="../../_static/talkable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/integration/custom/integration_components.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Alternate Post Purchase Script for cart line item passing" href="alternate_post_purchase.html" />
@@ -88,49 +88,50 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="integration-custom-integration-components"></span><section id="integration-components">
+  <span class="target" id="integration-custom-integration-components"></span><div class="section" id="integration-components">
 <h1>Integration Components<a class="headerlink" href="#integration-components" title="Permalink to this headline">¶</a></h1>
 <p>Talkable is composed of the following components:</p>
 <ol class="arabic">
-<li><p><a class="reference internal" href="#integration-custom-integration-components-initialization-script"><span class="std std-ref">Initialization Script</span></a></p>
+<li><p class="first"><a class="reference internal" href="#integration-custom-integration-components-initialization-script"><span class="std std-ref">Initialization Script</span></a></p>
 <p><strong>Script Location.</strong> The Initialization script should be placed in the head template or some template
 that spans every page. All other integration components are dependent on the Init script.</p>
 <p><strong>Data Capture.</strong> The Initialization Script should pass variables for logged in users:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Email</p></li>
-<li><p>First Name</p></li>
-<li><p>Last Name</p></li>
+<li>Email</li>
+<li>First Name</li>
+<li>Last Name</li>
 </ul>
 </div></blockquote>
 </li>
-<li><p><a class="reference internal" href="#integration-custom-integration-components-post-purchase-script"><span class="std std-ref">Post Purchase Script</span></a></p>
+<li><p class="first"><a class="reference internal" href="#integration-custom-integration-components-post-purchase-script"><span class="std std-ref">Post Purchase Script</span></a></p>
 <p><strong>Script Location.</strong> The Post Purchase script should be placed on the checkout confirmation page.</p>
 <p><strong>Script Dependency.</strong> The Post Purchase script should be fired after the Initialization script.</p>
 <p><strong>Data Capture.</strong> This script needs to capture purchase based details</p>
 <ul class="simple">
-<li><p>Email of purchaser</p></li>
-<li><p>Order Number</p></li>
-<li><p>Subtotal (pre-tax, post-discount amount)</p></li>
-<li><p>Coupon code(s) used at checkout (can accept an array of strings if you allow for multiple coupons to
-be applied at checkout)</p></li>
-<li><p>(optional) Shipping Address for additional fraud protection.</p></li>
-<li><p>(optional) Shopping cart line items. This is only necessary if segmenting based on cart contents.</p></li>
+<li>Email of purchaser</li>
+<li>Order Number</li>
+<li>Subtotal (pre-tax, post-discount amount)</li>
+<li>Coupon code(s) used at checkout (can accept an array of strings if you allow for multiple coupons to
+be applied at checkout)</li>
+<li>(optional) Shipping Address for additional fraud protection.</li>
+<li>(optional) Shopping cart line items. This is only necessary if segmenting based on cart contents.</li>
 </ul>
 </li>
-<li><p>In case your business has one-time purchases and subscription model, or you are in SaaS
-business we recommend integrating through Events. <a class="reference internal" href="../../advanced_features/events.html#advanced-features-events"><span class="std std-ref">Learn more</span></a>.</p></li>
-<li><p><a class="reference internal" href="#integration-custom-integration-components-advocate-landing-page"><span class="std std-ref">Advocate Landing Page</span></a>.</p>
+<li><p class="first">In case your business has one-time purchases and subscription model, or you are in SaaS
+business we recommend integrating through Events. <a class="reference internal" href="../../advanced_features/events.html#advanced-features-events"><span class="std std-ref">Learn more</span></a>.</p>
+</li>
+<li><p class="first"><a class="reference internal" href="#integration-custom-integration-components-advocate-landing-page"><span class="std std-ref">Advocate Landing Page</span></a>.</p>
 <p>Create an HTML page (URL path /share) with your standard site header and footer.
 Add the Talkable Container DIV in the body. This tells Talkable where to inject content.</p>
 </li>
-<li><p><a class="reference internal" href="#integration-custom-integration-components-referral-dashboard"><span class="std std-ref">Referral Dashboard (my account)</span></a>.</p>
+<li><p class="first"><a class="reference internal" href="#integration-custom-integration-components-referral-dashboard"><span class="std std-ref">Referral Dashboard (my account)</span></a>.</p>
 <p>Similar to the advocate landing page, create an HTML page that’s linked to from a menu in user accounts.
 Add the Talkable Container DIV in the body. This tells Talkable where to inject content.</p>
 </li>
 </ol>
 <p><hr></p>
-<section id="initialization-script">
+<div class="section" id="initialization-script">
 <span id="integration-custom-integration-components-initialization-script"></span><h2>Initialization Script<a class="headerlink" href="#initialization-script" title="Permalink to this headline">¶</a></h2>
 <p>The Initialization script should be placed in the head template or some
 template that spans every page. Talkable JS library size is typically
@@ -153,27 +154,28 @@ script.</p>
 <span class="c">&lt;!-- End Talkable integration code --&gt;</span>
 </pre></div>
 </div>
-<section id="initialization-script-notes">
+<div class="section" id="initialization-script-notes">
 <h3>Initialization Script Notes<a class="headerlink" href="#initialization-script-notes" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic">
-<li><p><strong>Site ID.</strong> You can obtain your Site ID by logging into the Talkable
+<li><p class="first"><strong>Site ID.</strong> You can obtain your Site ID by logging into the Talkable
 platform where Site ID is displayed on your Dashboard and URL as seen
 here:</p>
-<figure class="align-default">
+<div class="figure">
 <img alt="Site ID" src="../../_images/site_id.png" />
-</figure>
+</div>
 </li>
-<li><p><strong>Variables.</strong> Use your dynamic variables to pass user details {email,
+<li><p class="first"><strong>Variables.</strong> Use your dynamic variables to pass user details {email,
 first_name, last_name} if the user is logged in and the data
 exists. If the data does not exist, you can pass a null value or a
 blank string. If your website doesn’t have a user accounts section
 and this info is never available, it’s acceptable to completely omit
-the parameters, or pass empty strings.</p></li>
+the parameters, or pass empty strings.</p>
+</li>
 </ol>
 <p><hr></p>
-</section>
-</section>
-<section id="post-purchase-script">
+</div>
+</div>
+<div class="section" id="post-purchase-script">
 <span id="integration-custom-integration-components-post-purchase-script"></span><h2>Post Purchase Script<a class="headerlink" href="#post-purchase-script" title="Permalink to this headline">¶</a></h2>
 <p>The post purchase script should be placed on your checkout confirmation
 page or any page that immediately follows checkout. All parameters can
@@ -201,53 +203,55 @@ passed where division by zero or <cite>null</cite> value does not occur.</p>
 <span class="c">&lt;!-- End Talkable integration code --&gt;</span>
 </pre></div>
 </div>
-<section id="post-purchase-script-notes">
+<div class="section" id="post-purchase-script-notes">
 <h3>Post Purchase Script Notes<a class="headerlink" href="#post-purchase-script-notes" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
-<li><p>Mandatory parameters must be passed or the purchase will not be
+<li>Mandatory parameters must be passed or the purchase will not be
 passed to Talkable. Mandatory parameters are: <cite>email</cite>, <cite>order_number</cite>,
-<cite>subtotal</cite></p></li>
-<li><p><cite>coupon_code</cite> is not mandatory, but it’s preferred to be passed via the script, since some of the fraud checks and referral tracking methods rely on those</p></li>
-<li><p>Shipping parameters are optional but gives the added benefit of
-additional fraud protection</p></li>
-<li><p>If you’re using a payment gateway that directs the user away from
+<cite>subtotal</cite></li>
+<li><cite>coupon_code</cite> is not mandatory, but it’s preferred to be passed via the script, since some of the fraud checks and referral tracking methods rely on those</li>
+<li>Shipping parameters are optional but gives the added benefit of
+additional fraud protection</li>
+<li>If you’re using a payment gateway that directs the user away from
 your domain, you should ensure that some auto return feature is
 enabled so that the user returns to the checkout confirmation page to
-allow the post purchase script to run.</p></li>
-<li><p>If you’re using a tag manager <a class="reference internal" href="integration_tag_manager.html#integration-custom-integration-tag-manager"><span class="std std-ref">click here</span></a>.</p></li>
-<li><p>If you need to pass shopping cart line items, to see the alternate
-post purchase integration script <a class="reference internal" href="../../advanced_features/product_items.html#advanced-features-product-items"><span class="std std-ref">click here</span></a>.</p></li>
+allow the post purchase script to run.</li>
+<li>If you’re using a tag manager <a class="reference internal" href="integration_tag_manager.html#integration-custom-integration-tag-manager"><span class="std std-ref">click here</span></a>.</li>
+<li>If you need to pass shopping cart line items, to see the alternate
+post purchase integration script <a class="reference internal" href="../../advanced_features/product_items.html#advanced-features-product-items"><span class="std std-ref">click here</span></a>.</li>
 </ol>
-</section>
-</section>
-<section id="advocate-landing-page">
+</div>
+</div>
+<div class="section" id="advocate-landing-page">
 <span id="integration-custom-integration-components-advocate-landing-page"></span><h2>Advocate Landing Page<a class="headerlink" href="#advocate-landing-page" title="Permalink to this headline">¶</a></h2>
 <p>Create a new HTML page with URL path (<cite>www.your-site.com/share</cite>) and add the Talkable Container DIV
 in the body of the page between your standard site header and footer:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;talkable-offer&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<section id="advocate-landing-page-notes">
+<div class="section" id="advocate-landing-page-notes">
 <h3>Advocate Landing Page Notes<a class="headerlink" href="#advocate-landing-page-notes" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic">
-<li><p>The Talkable Initialization script must be present in your head
-template in order for the advocate landing page to work</p></li>
-<li><p>Talkable will inject referral content where Talkable Container
-resides in your DOM</p></li>
-<li><p>URL Path: If you can’t use URL path <cite>www.your-site.com/share</cite> then
+<li><p class="first">The Talkable Initialization script must be present in your head
+template in order for the advocate landing page to work</p>
+</li>
+<li><p class="first">Talkable will inject referral content where Talkable Container
+resides in your DOM</p>
+</li>
+<li><p class="first">URL Path: If you can’t use URL path <cite>www.your-site.com/share</cite> then
 you’ll need to update the Site Placements section inside of Talkable
 for the Invite Advocate Landing Page to match the exact URL path that
 you intend to use via
 <cite>https://www.admin.talkable.com/sites/&lt;YOUR-TALKABLE-SITE-ID&gt;/placements:</cite></p>
-<figure class="align-default">
+<div class="figure">
 <img alt="Placement Edit" src="../../_images/placement_edit.png" />
-</figure>
+</div>
 </li>
 </ol>
 <p><hr></p>
-</section>
-</section>
-<section id="referral-dashboard">
+</div>
+</div>
+<div class="section" id="referral-dashboard">
 <span id="integration-custom-integration-components-referral-dashboard"></span><h2>Referral Dashboard<a class="headerlink" href="#referral-dashboard" title="Permalink to this headline">¶</a></h2>
 <p>Similar to the Advocate Landing Page, create a new HTML page with URL
 path (<cite>www.your-site.com/referrals</cite>) and add the Talkable Container DIV in
@@ -255,29 +259,29 @@ the body of the page:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;talkable-offer&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<section id="referral-dashboard-notes">
+<div class="section" id="referral-dashboard-notes">
 <h3>Referral Dashboard Notes<a class="headerlink" href="#referral-dashboard-notes" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
-<li><p>The <a class="reference internal" href="#integration-custom-integration-components-initialization-script"><span class="std std-ref">Talkable Initialization Script</span></a> must be present in your head
-template in order for the referral dashboard to work</p></li>
-<li><p>Talkable will inject referral content where Talkable Container
+<li>The <a class="reference internal" href="#integration-custom-integration-components-initialization-script"><span class="std std-ref">Talkable Initialization Script</span></a> must be present in your head
+template in order for the referral dashboard to work</li>
+<li>Talkable will inject referral content where Talkable Container
 resides in your DOM. Adding a new page is only a suggestion. The
 dashboard can be added inline inside your user accounts menu, however
-the dashboard content width for proper display is 980px.</p></li>
-<li><p><strong>URL Path.</strong> If you don’t host on <cite>www.your-site.com/referrals</cite> then
+the dashboard content width for proper display is 980px.</li>
+<li><strong>URL Path.</strong> If you don’t host on <cite>www.your-site.com/referrals</cite> then
 you’ll need to update the Site Placements section inside of Talkable
 for the Dashboard Placement to use the exact URL path you intend to
 host the Referral Dashboard on via
-<cite>https://www.talkable.com/sites/&lt;YOUR-TALKABLE-SITE-ID&gt;/placements</cite></p></li>
-<li><p><strong>Linking to the Referral Dashboard.</strong> Allow your users to reach the
+<cite>https://www.talkable.com/sites/&lt;YOUR-TALKABLE-SITE-ID&gt;/placements</cite></li>
+<li><strong>Linking to the Referral Dashboard.</strong> Allow your users to reach the
 Referral Dashboard by adding a link from any place that makes sense
 considering your website configuration. Most common uses are links in
-the user accounts section, or from the user accounts menu.</p></li>
-<li><p><strong>Host on a page that’s only accessible behind login.</strong> The Referral
+the user accounts section, or from the user accounts menu.</li>
+<li><strong>Host on a page that’s only accessible behind login.</strong> The Referral
 Dashboard contains semi-sensitive information about an Advocate’s
 referral history. If you don’t have user logins, then the Referral
 Dashboard can be configured to display partially obfuscated data for
-public access.</p></li>
+public access.</li>
 </ol>
 <div class="hidden docutils container">
 <div class="toctree-wrapper compound">
@@ -287,12 +291,11 @@ public access.</p></li>
 </ul>
 </div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>

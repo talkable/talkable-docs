@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Send email to your brand Advocate when their account has been credited or a partial refund has been issued." name="description" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="Send email to your brand Advocate when their account has been credited or a partial refund has been issued." name="description" />
 
     <title>Advocate Reward Paid Email &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
+    <link rel="stylesheet" href="../../_static/talkable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/campaigns/views/advocate_rewards_paid.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Friend Reward Paid Email" href="friend_rewards_paid.html" />
@@ -96,15 +96,15 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="campaigns-views-notifier-rewards-paid"></span><section id="advocate-reward-paid-email">
+  <span class="target" id="campaigns-views-notifier-rewards-paid"></span><div class="section" id="advocate-reward-paid-email">
 <h1>Advocate Reward Paid Email<a class="headerlink" href="#advocate-reward-paid-email" title="Permalink to this headline">¶</a></h1>
 <p>Email is triggered to an Advocate when Referral marked as <code class="docutils literal notranslate"><span class="pre">Approved</span></code>. <br>
 Let Advocate know their account has been credited or a partial refund has
 been issued.</p>
 <p>Frequently used Variables:</p>
 <ul class="simple">
-<li><p>To show Reward Coupon Code use <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">coupon_code</span> <span class="pre">}}</span></code>.</p></li>
-<li><p>Main <abbr title="Call to action">CTA</abbr> should point to a merchant site to start shopping <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">proceed_to_merchant_path</span> <span class="pre">}}</span></code>.</p></li>
+<li>To show Reward Coupon Code use <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">coupon_code</span> <span class="pre">}}</span></code>.</li>
+<li>Main <abbr title="Call to action">CTA</abbr> should point to a merchant site to start shopping <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">proceed_to_merchant_path</span> <span class="pre">}}</span></code>.</li>
 </ul>
 <p><br></p>
 <img alt="Advocate Reward Paid Email" src="../../_images/advocate-reward-paid-email.png" />
@@ -114,16 +114,15 @@ been issued.</p>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Ideal email width is 480px. This is a most universal width for both
+<p class="first admonition-title">Note</p>
+<p class="last">Ideal email width is 480px. This is a most universal width for both
 mobile and desktop platforms.
 <a class="reference internal" href="../designer.html#designer-email"><span class="std std-ref">Read more about email design</span></a>.</p>
 </div>
 <h2>Email sending conditions</h2><p>By default is sent immediately after the reward status turns into <cite>Paid</cite>, but can be delayed by configuration. This View is available only for <strong>Advocate Incentive</strong> where <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> is rewarded after <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> buys using their coupon code.</p>
-</section>
+</div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>
