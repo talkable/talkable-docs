@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="This is all about validating integration, from a checklist to testing." name="description" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="This is all about validating integration, from a checklist to testing." name="description" />
 
     <title>Validating the Integration &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
+    <link rel="stylesheet" href="../../_static/talkable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/integration/custom/validating_integration.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Verifying Integration" href="../verify.html" />
@@ -102,21 +103,21 @@ section below.</p>
 <div class="section" id="validation-checklist">
 <h2>Validation Checklist<a class="headerlink" href="#validation-checklist" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
-<li><p>Perform a test checkout.</p>
+<li><p class="first">Perform a test checkout.</p>
 <p><strong>Confirm Visual Result</strong> You should see visual confirmation content
 on the checkout confirmation page if the post purchase campaign is enabled.</p>
 <p><strong>Confirm Data Result</strong> Navigate to Reports &gt; Purchases tab inside
 the Talkable platform to ensure all parameters that you’re using
 in the post purchase script are being passed. Data populates in real time.</p>
 </li>
-<li><p>Visit your Home Page.</p>
+<li><p class="first">Visit your Home Page.</p>
 <p><strong>Confirm Visual Result</strong> You should see the floating Talkable Widget button.</p>
 </li>
-<li><p>Visit your Advocate Landing Page.</p>
+<li><p class="first">Visit your Advocate Landing Page.</p>
 <p><strong>Confirm Visual Result</strong> You should see visual confirmation content
 in the location where you placed the Talkable Container DIV.</p>
 </li>
-<li><p>Visit your Referral Dashboard Page.</p>
+<li><p class="first">Visit your Referral Dashboard Page.</p>
 <p><strong>Confirm Visual Result</strong> You should see visual confirmation content
 in the location where you placed the Talkable Container DIV.</p>
 </li>
@@ -128,21 +129,21 @@ in the location where you placed the Talkable Container DIV.</p>
 display.</p>
 <p>There are 4 types:</p>
 <ol class="arabic simple">
-<li><p><span class="underline">Post Purchase:</span> displays as a pop up after checkout</p></li>
-<li><p><span class="underline">Floating Widget:</span> displays as a floating widget button on your home
-page (and every page)</p></li>
-<li><p><span class="underline">Invite Standalone:</span> displays inline on your /share advocate landing
-page</p></li>
-<li><p><span class="underline">Advocate Dashboard Standalone:</span> displays inline in your /referrals
-page</p></li>
+<li><span class="underline">Post Purchase:</span> displays as a pop up after checkout</li>
+<li><span class="underline">Floating Widget:</span> displays as a floating widget button on your home
+page (and every page)</li>
+<li><span class="underline">Invite Standalone:</span> displays inline on your /share advocate landing
+page</li>
+<li><span class="underline">Advocate Dashboard Standalone:</span> displays inline in your /referrals
+page</li>
 </ol>
 <ul class="simple">
-<li><p><span class="underline">How to create campaigns:</span> Here’s a video showing you how to quickly
+<li><span class="underline">How to create campaigns:</span> Here’s a video showing you how to quickly
 create all campaigns in less than 1 minute
-<a class="reference external" rel="nofollow" href="https://youtu.be/HDK-zFlCAkw">https://youtu.be/HDK-zFlCAkw</a></p></li>
-<li><p><span class="underline">How to enable campaigns:</span> Here’s a video showing you how to enable
+<a class="reference external" rel="nofollow" href="https://youtu.be/HDK-zFlCAkw">https://youtu.be/HDK-zFlCAkw</a></li>
+<li><span class="underline">How to enable campaigns:</span> Here’s a video showing you how to enable
 campaigns (ignore any warnings for now and note the site display placement)
-<a class="reference external" rel="nofollow" href="https://youtu.be/HgR6WQYeASg">https://youtu.be/HgR6WQYeASg</a></p></li>
+<a class="reference external" rel="nofollow" href="https://youtu.be/HgR6WQYeASg">https://youtu.be/HgR6WQYeASg</a></li>
 </ul>
 </div>
 <div class="section" id="test-mode-display">
@@ -153,27 +154,26 @@ a campaign in test mode which prevents anyone else from seeing visual display.
 Note that each campaign has campaign ID under the campaign name and you can reference
 these in the URL using the following guidelines:</p>
 <ol class="arabic">
-<li><p>Floating widget on your homepage:</p>
+<li><p class="first">Floating widget on your homepage:</p>
 <p><cite>www.your-site.com?tkbl_campaign_id=11111</cite></p>
 </li>
-<li><p>Advocate Landing Page /share:</p>
+<li><p class="first">Advocate Landing Page /share:</p>
 <p><cite>www.your-site.com/share?tkbl_campaign_id=11112</cite></p>
 </li>
-<li><p>Referral Dashboard:</p>
+<li><p class="first">Referral Dashboard:</p>
 <p><cite>www.your-site.com/referrals?tkbl_campaign_id=11113</cite></p>
 </li>
 </ol>
 <p>Note that campaigns must be newly created campaigns in test mode to be
 eligible for test mode display. Use the following image as a visual
 guideline:</p>
-<div class="figure align-default">
+<div class="figure">
 <img alt="Campaigns" src="../../_images/campaigns_dashboard.png" />
 </div>
 </div>
 </div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>

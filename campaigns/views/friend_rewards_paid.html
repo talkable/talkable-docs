@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="It`s good to give thanks to a Friend. Send a reward via email, and remind them about it later on." name="description" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="It`s good to give thanks to a Friend. Send a reward via email, and remind them about it later on." name="description" />
 
     <title>Friend Reward Paid Email &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
+    <link rel="stylesheet" href="../../_static/talkable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/campaigns/views/friend_rewards_paid.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Tutorials" href="../tutorials.html" />
@@ -104,11 +105,11 @@ Email is triggered to a <abbr title="Person who is invited to participate in Cam
 <p>The email will be sent once Talkable knows Friend’s email which they provides on the Friend Claim Page (such technique works great for email capturing). See <a class="reference internal" href="../tutorials/offers_claim.html#tutorials-email-gating"><span class="std std-ref">Email Gating</span></a> for more details.</p>
 <p>Frequently used Variables:</p>
 <ul class="simple">
-<li><p>Main <abbr title="Call to action">CTA</abbr> should point to a merchant site to start shopping
-<code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">proceed_to_merchant_path</span> <span class="pre">}}</span></code>.</p></li>
-<li><p>To show coupon code use <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">coupon_code</span> <span class="pre">}}</span></code>.</p></li>
-<li><p>To show expiration date use <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">valid_until</span> <span class="pre">}}</span></code>.
-<a class="reference internal" href="../editor/filters.html#liquid-filter-format-date"><span class="std std-ref">Formatting options</span></a>.</p></li>
+<li>Main <abbr title="Call to action">CTA</abbr> should point to a merchant site to start shopping
+<code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">proceed_to_merchant_path</span> <span class="pre">}}</span></code>.</li>
+<li>To show coupon code use <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">coupon_code</span> <span class="pre">}}</span></code>.</li>
+<li>To show expiration date use <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">valid_until</span> <span class="pre">}}</span></code>.
+<a class="reference internal" href="../editor/filters.html#liquid-filter-format-date"><span class="std std-ref">Formatting options</span></a>.</li>
 </ul>
 <p><br></p>
 <img alt="Friend Claim Email" src="../../_images/friend-claim-email.png" />
@@ -120,19 +121,18 @@ Coupon code: <span class="p">{{</span><span class="w"> </span><span class="nv">c
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Ideal email width is 480px. This is a most universal width for both
+<p class="first admonition-title">Note</p>
+<p class="last">Ideal email width is 480px. This is a most universal width for both
 mobile and desktop platforms.
 <a class="reference internal" href="../designer.html#designer-email"><span class="std std-ref">Read more about email design</span></a>.</p>
 </div>
 <h2>Email sending conditions</h2><p>By default is sent immediately after the reward is created, but can be delayed by configuration.</p>
 <p>Main email sending criteria (unable to change):</p>
 <ul class="simple">
-<li><p>The Email <strong>will not</strong> be sent only if all three conditions meet:</p>
-<ol class="arabic simple">
-<li><p>Reward type is Click</p></li>
-<li><p>‘Allow coupon in the Friend Share Email’ is enabled inside Campaign Rules</p></li>
-<li><p>Friend Share Email is already sent</p></li>
+<li>The Email <strong>will not</strong> be sent only if all three conditions meet:<ol class="arabic">
+<li>Reward type is Click</li>
+<li>‘Allow coupon in the Friend Share Email’ is enabled inside Campaign Rules</li>
+<li>Friend Share Email is already sent</li>
 </ol>
 </li>
 </ul>
@@ -140,7 +140,6 @@ mobile and desktop platforms.
 </div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>

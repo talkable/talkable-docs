@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="Find the components of what Talkable is composed." name="description" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="Find the components of what Talkable is composed." name="description" />
 
     <title>Integration Components &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
+    <link rel="stylesheet" href="../../_static/talkable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/integration/loyalty/integration_components.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Custom App for Loyalty" href="custom_app.html" />
@@ -89,19 +90,22 @@
 <h1>Integration Components<a class="headerlink" href="#integration-components" title="Permalink to this headline">¶</a></h1>
 <p>Talkable Loyalty is composed of the following components:</p>
 <ol class="arabic">
-<li><p><a class="reference internal" href="#initialization-script">Initialization Script</a></p>
+<li><p class="first"><a class="reference internal" href="#initialization-script">Initialization Script</a></p>
 <p><strong>Script Location.</strong> The Initialization script should be placed in the head template or some template
 that spans every page. All other integration components are dependent on the Init script.</p>
 <p><strong>Data Capture.</strong> The Initialization Script should pass variables for logged in users:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>Email</p></li>
+<li>Email</li>
 </ul>
 </div></blockquote>
 </li>
-<li><p><a class="reference internal" href="#loyalty-dashboard"><span class="std std-ref">Loyalty Dashboard</span></a></p></li>
-<li><p><a class="reference internal" href="#loyalty-redeem-widget"><span class="std std-ref">Loyalty Redeem Widget</span></a></p></li>
-<li><p><a class="reference internal" href="#loyalty-actions"><span class="std std-ref">Loyalty Actions</span></a></p></li>
+<li><p class="first"><a class="reference internal" href="#loyalty-dashboard"><span class="std std-ref">Loyalty Dashboard</span></a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#loyalty-redeem-widget"><span class="std std-ref">Loyalty Redeem Widget</span></a></p>
+</li>
+<li><p class="first"><a class="reference internal" href="#loyalty-actions"><span class="std std-ref">Loyalty Actions</span></a></p>
+</li>
 </ol>
 <p><hr></p>
 <div class="section" id="initialization-script">
@@ -127,14 +131,15 @@ script.</p>
 <div class="section" id="initialization-script-notes">
 <h3>Initialization Script Notes<a class="headerlink" href="#initialization-script-notes" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic">
-<li><p><strong>Site ID.</strong> You can obtain your Site ID by logging into the Talkable
+<li><p class="first"><strong>Site ID.</strong> You can obtain your Site ID by logging into the Talkable
 platform where Site ID is displayed on your Dashboard and URL as seen
 here:</p>
-<div class="figure align-default">
+<div class="figure">
 <img alt="Site ID" src="../../_images/site_id.png" />
 </div>
 </li>
-<li><p><strong>Variables.</strong> Use your dynamic variables to pass user details.</p></li>
+<li><p class="first"><strong>Variables.</strong> Use your dynamic variables to pass user details.</p>
+</li>
 </ol>
 <p><hr></p>
 </div>
@@ -155,18 +160,18 @@ the body of the page and show loyalty campaign with the JS API function:</p>
 <div class="section" id="loyalty-dashboard-notes">
 <h3>Loyalty Dashboard Notes<a class="headerlink" href="#loyalty-dashboard-notes" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
-<li><p>The <a class="reference internal" href="#initialization-script">Talkable Initialization Script</a> must be
-present in your head template in order for the Loyalty Dashboard to work.</p></li>
-<li><p>Talkable will inject loyalty content where Talkable Container
+<li>The <a class="reference internal" href="#initialization-script">Talkable Initialization Script</a> must be
+present in your head template in order for the Loyalty Dashboard to work.</li>
+<li>Talkable will inject loyalty content where Talkable Container
 resides in your DOM. Adding a new page is only a suggestion. The
 dashboard can be added inline inside your user accounts menu, however
-the dashboard content width for proper display is 980px.</p></li>
-<li><p>Allow your users to reach the Loyalty Dashboard by adding a link
+the dashboard content width for proper display is 980px.</li>
+<li>Allow your users to reach the Loyalty Dashboard by adding a link
 from any place that makes sense considering your website configuration.
-Most common uses are links in the user accounts section, or from the user accounts menu.</p></li>
-<li><p><cite>show_loyalty</cite> optionally accepts <cite>email</cite>, <cite>first_name</cite>, <cite>last_name</cite>, and <cite>custom_properties</cite>,
+Most common uses are links in the user accounts section, or from the user accounts menu.</li>
+<li><cite>show_loyalty</cite> optionally accepts <cite>email</cite>, <cite>first_name</cite>, <cite>last_name</cite>, and <cite>custom_properties</cite>,
 which override respective values from <cite>authenticate_customer</cite>. Email must be provided in either of the sources to
-show loyalty dashboard.</p></li>
+show loyalty dashboard.</li>
 </ol>
 <p><hr></p>
 </div>
@@ -184,9 +189,9 @@ exactly where the loyalty points redemption widget should render, and call JS AP
 <div class="section" id="loyalty-redeem-widget-notes">
 <h3>Loyalty Redeem Widget Notes<a class="headerlink" href="#loyalty-redeem-widget-notes" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
-<li><p><cite>show_loyalty_redeem_widget</cite> optionally accepts <cite>email</cite> and <cite>custom_properties</cite>. If none provided, values will be
+<li><cite>show_loyalty_redeem_widget</cite> optionally accepts <cite>email</cite> and <cite>custom_properties</cite>. If none provided, values will be
 taken from respective parameters of <cite>authenticate_customer</cite>. If email is not available from either of the sources,
-signup widget will be rendered instead.</p></li>
+signup widget will be rendered instead.</li>
 </ol>
 <p><hr></p>
 </div>
@@ -206,16 +211,15 @@ use the following code:</p>
 <div class="section" id="loyalty-actions-notes">
 <h3>Loyalty Actions Notes<a class="headerlink" href="#loyalty-actions-notes" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
-<li><p><cite>register_loyalty_action</cite> optionally accepts <cite>email</cite> and <cite>custom_properties</cite>. If none provided, values will be
+<li><cite>register_loyalty_action</cite> optionally accepts <cite>email</cite> and <cite>custom_properties</cite>. If none provided, values will be
 taken from respective parameters of <cite>authenticate_customer</cite>. Email must be provided in either of the sources to
-register loyalty actions.</p></li>
+register loyalty actions.</li>
 </ol>
 </div>
 </div>
 </div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>

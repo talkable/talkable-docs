@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="This is a how-to guide to help you get the most out of Localizations." name="description" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="This is a how-to guide to help you get the most out of Localizations." name="description" />
 
     <title>Converting Into Localization &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/advanced_features/converting_into_localization.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Customer Service Portal" href="customer_service_portal.html" />
@@ -107,24 +108,24 @@
 <p>Few benefits you get out of using Localizations:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>It is extremely easy to set up an AB test if your copy is coded up as a Localization.</p></li>
-<li><p>For non-technical people it is easier to change the copy inside Localization Editor because they are afraid to code.</p></li>
+<li>It is extremely easy to set up an AB test if your copy is coded up as a Localization.</li>
+<li>For non-technical people it is easier to change the copy inside Localization Editor because they are afraid to code.</li>
 </ol>
 </div></blockquote>
 <ol class="arabic simple">
-<li><p>Visit Campaign Editor:</p></li>
+<li>Visit Campaign Editor:</li>
 </ol>
 <img alt="../_images/campaign_navigation.png" src="../_images/campaign_navigation.png" />
 <ol class="arabic simple" start="2">
-<li><p>Swith to HTML &amp; CSS editor:</p></li>
+<li>Swith to HTML &amp; CSS editor:</li>
 </ol>
 <img alt="../_images/campaign_navigation_html_css_editor.png" src="../_images/campaign_navigation_html_css_editor.png" />
 <ol class="arabic simple" start="3">
-<li><p>Find a View you would like to convert a static copy at:</p></li>
+<li>Find a View you would like to convert a static copy at:</li>
 </ol>
 <img alt="../_images/campaign_view_navigation.png" src="../_images/campaign_view_navigation.png" />
 <ol class="arabic simple" start="4">
-<li><p>Find a copy that you’d like to convert into a Localization. You can hit <cite>Cmd+F</cite> (<cite>Ctrl+F</cite> on Windows) to search within HTML area.</p></li>
+<li>Find a copy that you’d like to convert into a Localization. You can hit <cite>Cmd+F</cite> (<cite>Ctrl+F</cite> on Windows) to search within HTML area.</li>
 </ol>
 <p>Static copy is basically a piece of text that sits inside HTML &amp; CSS Editor and usually looks like this:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>
@@ -139,16 +140,16 @@
 </pre></div>
 </div>
 <ol class="arabic simple" start="5">
-<li><p>Go back to Editor to see newly created Localization:</p></li>
+<li>Go back to Editor to see newly created Localization:</li>
 </ol>
 <img alt="../_images/campaign_localization_sidebar.png" src="../_images/campaign_localization_sidebar.png" />
 <h2>Few important things to remember</h2><ol class="arabic simple">
-<li><p>Don’t forget to change <cite>{{</cite> into <cite>[[</cite> inside interpolation variables, otherwise variables will lose its function and become just a plain text.</p></li>
-<li><p>Keep in mind that <cite>identifier</cite> (“advocate_share_page_headline” in the example above) is a campaign-level Localization in fact, always remember to provide unique names for them, otherwise you will be overriding a value of one Localization.</p></li>
+<li>Don’t forget to change <cite>{{</cite> into <cite>[[</cite> inside interpolation variables, otherwise variables will lose its function and become just a plain text.</li>
+<li>Keep in mind that <cite>identifier</cite> (“advocate_share_page_headline” in the example above) is a campaign-level Localization in fact, always remember to provide unique names for them, otherwise you will be overriding a value of one Localization.</li>
 </ol>
 <div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Talkable does not allow coding up Localizations within CSS area. If you want to move some CSS property into localizations use inline &lt;style&gt; tag inside HTML area.</p>
+<p class="first admonition-title">Warning</p>
+<p class="last">Talkable does not allow coding up Localizations within CSS area. If you want to move some CSS property into localizations use inline &lt;style&gt; tag inside HTML area.</p>
 </div>
 <div class="section" id="moving-subject-line-into-localization">
 <h2>Moving Subject Line Into Localization<a class="headerlink" href="#moving-subject-line-into-localization" title="Permalink to this headline">¶</a></h2>
@@ -156,7 +157,7 @@
 <p>Subject line is unique because its default value is set on the Advocate Share Page along with other email sharing fields (email body, reminder checkbox value), not Friend Share email as it might sounded logical. Here is the plan:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>Create Subject Line as a Localization on the Advocate Share Page, provide its default value, it will be used inside <cite>value</cite> attribute of the “subject” form field:</p></li>
+<li>Create Subject Line as a Localization on the Advocate Share Page, provide its default value, it will be used inside <cite>value</cite> attribute of the “subject” form field:</li>
 </ol>
 <blockquote>
 <div><img alt="../_images/subject_line_setup_inside_share_page.png" src="../_images/subject_line_setup_inside_share_page.png" />
@@ -166,13 +167,13 @@
 <p>This code creates new Localization named “Friend share email subject” that you are able to change on the Advocate Share Page.</p>
 </div></blockquote>
 <ol class="arabic simple" start="2">
-<li><p>Navigate to Friend Share email → Extra fields to see Email Subject field:</p></li>
+<li>Navigate to Friend Share email → Extra fields to see Email Subject field:</li>
 </ol>
 <blockquote>
 <div><img alt="../_images/campaign_editor_subject.png" src="../_images/campaign_editor_subject.png" />
 </div></blockquote>
 <ol class="arabic simple" start="3">
-<li><p>Put the following code in there:</p></li>
+<li>Put the following code in there:</li>
 </ol>
 <blockquote>
 <div><div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">custom_message_subject</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nv">blank</span><span class="w"> </span><span class="p">%}</span>
@@ -191,13 +192,13 @@
 <p>Another example would be localizing font color of a headline, all copy at once, or a background color of a button. You can use <cite>color</cite> trait of a Localization for that.</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>Navigate to HTML &amp; CSS editor of the View you want to add a color Localization on:</p></li>
+<li>Navigate to HTML &amp; CSS editor of the View you want to add a color Localization on:</li>
 </ol>
 <blockquote>
 <div><img alt="../_images/campaign_navigation_html_css_editor.png" src="../_images/campaign_navigation_html_css_editor.png" />
 </div></blockquote>
 <ol class="arabic simple" start="2">
-<li><p>At the very bottom of the HTML area add <code class="docutils literal notranslate"><span class="pre">&lt;style&gt;&lt;/style&gt;</span></code> tag with CSS that will override default styling of the element you want to localize:</p></li>
+<li>At the very bottom of the HTML area add <code class="docutils literal notranslate"><span class="pre">&lt;style&gt;&lt;/style&gt;</span></code> tag with CSS that will override default styling of the element you want to localize:</li>
 </ol>
 <blockquote>
 <div><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>.button {
@@ -209,7 +210,7 @@
 <p>In the code example above we created new Color Localization with default HEX color <cite>#f94d08</cite> which is used for <cite>background-color</cite> and <cite>border-color</cite> CSS properties of <cite>.button</cite> selector. Whenever you set a new color inside Campaign Editor it will be changed across both places because we’re using the same Localization identifier in both places.</p>
 </div></blockquote>
 <ol class="arabic simple" start="3">
-<li><p>New Color Localization appears under “Color” tab inside Campaign Editor:</p></li>
+<li>New Color Localization appears under “Color” tab inside Campaign Editor:</li>
 </ol>
 <blockquote>
 <div><img alt="../_images/editor_colors_tab.png" src="../_images/editor_colors_tab.png" />
@@ -221,13 +222,13 @@
 <p>Localizing Image asset can be handy if you want to AB test it. Here is how to do that:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>Navigate to HTML &amp; CSS editor of the View you want to add a color Localization on:</p></li>
+<li>Navigate to HTML &amp; CSS editor of the View you want to add a color Localization on:</li>
 </ol>
 <blockquote>
 <div><img alt="../_images/campaign_navigation_html_css_editor.png" src="../_images/campaign_navigation_html_css_editor.png" />
 </div></blockquote>
 <ol class="arabic simple" start="2">
-<li><p>Inside HTML area find an image you want to localize. An image can be either within CSS or within HTML area (<cite>&lt;img /&gt;</cite>, inline styles, etc.). If the image is set within CSS you need to extract it into HTML area using inline styles:</p></li>
+<li>Inside HTML area find an image you want to localize. An image can be either within CSS or within HTML area (<cite>&lt;img /&gt;</cite>, inline styles, etc.). If the image is set within CSS you need to extract it into HTML area using inline styles:</li>
 </ol>
 <blockquote>
 <div><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&lt;div class=&quot;container&quot; style=&quot;background-image: url(&#39;{{ &quot;share_page_background&quot; | localize: &quot;share-page-background.jpg&quot;, trait: &quot;asset&quot; }}&#39;);&quot;&gt;
@@ -238,7 +239,7 @@
 <p>In the example above <cite>share_page_background</cite> is a name of an Image Localization. <cite>share-page-background.jpg</cite> is a name of an Asset (Files tab within HTML &amp; CSS Editor).</p>
 </div></blockquote>
 <ol class="arabic simple" start="3">
-<li><p>Now we can see newly created Image Localization under “Images” tab:</p></li>
+<li>Now we can see newly created Image Localization under “Images” tab:</li>
 </ol>
 <blockquote>
 <div><img alt="../_images/editor_images_tab.png" src="../_images/editor_images_tab.png" />
@@ -256,7 +257,7 @@
 <p>In order to chieve this AB test we need to</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>Build two separate layouts using CSS cascades to style all nested children within a container block that holds all the content:</p></li>
+<li>Build two separate layouts using CSS cascades to style all nested children within a container block that holds all the content:</li>
 </ol>
 <blockquote>
 <div><div class="highlight-text notranslate"><div class="highlight"><pre><span></span>{% assign share_page_layout = &quot;share_page_layout&quot; | localize: &quot;Equal Emphasis&quot;, &quot;Email Emphasis&quot; %}
@@ -269,13 +270,13 @@
 Then we optimize the variable value to be set as an HTML <cite>class</cite> attribute (downcase, replace spaces with hyphens) and set it as a part of a <cite>class</cite> attribute.</p>
 </div></blockquote>
 <ol class="arabic simple" start="2">
-<li><p>Now inside Campaign Editor we can see newly created Configuration Localization:</p></li>
+<li>Now inside Campaign Editor we can see newly created Configuration Localization:</li>
 </ol>
 <blockquote>
 <div><img alt="../_images/editor_configuration_tab.png" src="../_images/editor_configuration_tab.png" />
 </div></blockquote>
 <ol class="arabic simple" start="3">
-<li><p>Let’s switch back to HTML &amp; CSS editor and start applying CSS styling to both layouts. Knowing their final classes inside HTML: <cite>class=”container is-equal-emphasis”</cite> and <cite>class=”container is-email-emphasis”</cite> we can easily style both layouts inside CSS area like so (SCSS is also allowed and is shown as an example for code simplicity):</p></li>
+<li>Let’s switch back to HTML &amp; CSS editor and start applying CSS styling to both layouts. Knowing their final classes inside HTML: <cite>class=”container is-equal-emphasis”</cite> and <cite>class=”container is-email-emphasis”</cite> we can easily style both layouts inside CSS area like so (SCSS is also allowed and is shown as an example for code simplicity):</li>
 </ol>
 <blockquote>
 <div><div class="highlight-scss notranslate"><div class="highlight"><pre><span></span><span class="nc">.container</span> <span class="p">{</span>
@@ -296,7 +297,7 @@ Then we optimize the variable value to be set as an HTML <cite>class</cite> attr
 <p>All other nested children can be styled following this pattern.</p>
 </div></blockquote>
 <ol class="arabic simple" start="4">
-<li><p>Once you’re done with styling it is very easy to set up an AB test, just go back to Campaign Editor and click “Add A/B test variant” link. Once a Campaign goes Live it will start rotating both variants following AB test distribution rules (50:50 by default).</p></li>
+<li>Once you’re done with styling it is very easy to set up an AB test, just go back to Campaign Editor and click “Add A/B test variant” link. Once a Campaign goes Live it will start rotating both variants following AB test distribution rules (50:50 by default).</li>
 </ol>
 </div></blockquote>
 <div class="hidden docutils container">
@@ -307,7 +308,6 @@ Then we optimize the variable value to be set as an HTML <cite>class</cite> attr
 </div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>

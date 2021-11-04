@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Advanced Usage &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/android_sdk/advanced.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="API" href="api.html" />
@@ -90,8 +91,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="android-sdk-advanced"></span><div class="section" id="advanced-usage">
-<h1>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="advanced-usage">
+<span id="android-sdk-advanced"></span><h1>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="error-handling">
 <span id="id1"></span><h2>Error Handling<a class="headerlink" href="#error-handling" title="Permalink to this headline">¶</a></h2>
 <p>Errors from <code class="docutils literal notranslate"><span class="pre">Talkable.showOffer</span></code> and <code class="docutils literal notranslate"><span class="pre">Talkable.loadOffer</span></code> are handled
@@ -110,13 +111,15 @@ and <code class="docutils literal notranslate"><span class="pre">error.getMessag
 <h2>Using multiple site slugs<a class="headerlink" href="#using-multiple-site-slugs" title="Permalink to this headline">¶</a></h2>
 <p>To use multiple site slugs in your application, follow these steps:</p>
 <ol class="arabic">
-<li><p>Add credentials for each site you are going to use inside your manifest file.
+<li><p class="first">Add credentials for each site you are going to use inside your manifest file.
 Format is the same as from corresponding
-<a class="reference internal" href="getting_started.html#setup-credentials"><span class="std std-ref">Getting Started</span></a> section.</p></li>
-<li><p>Add deep linking schemas handlers into the main activity entry for each site
+<a class="reference internal" href="getting_started.html#setup-credentials"><span class="std std-ref">Getting Started</span></a> section.</p>
+</li>
+<li><p class="first">Add deep linking schemas handlers into the main activity entry for each site
 you are going to use. The format is the same as the corresponding
-<a class="reference internal" href="getting_started.html#deep-linking-scheme"><span class="std std-ref">Getting Started</span></a> section.</p></li>
-<li><p>Set default site slug.</p>
+<a class="reference internal" href="getting_started.html#deep-linking-scheme"><span class="std std-ref">Getting Started</span></a> section.</p>
+</li>
+<li><p class="first">Set default site slug.</p>
 <p>This can be done by adding this information into the manifest file using
 <code class="docutils literal notranslate"><span class="pre">&lt;application&gt;</span></code> entry:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;application&gt;</span>
@@ -142,9 +145,9 @@ you are going to use. The format is the same as the corresponding
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="first admonition-title">Note</p>
 <p>You can set the site slug at any time after initialization in the following way:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Talkable</span><span class="p">.</span><span class="na">setSiteSlug</span><span class="p">(</span><span class="s">&quot;some-site-slug&quot;</span><span class="p">);</span>
+<div class="last highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Talkable</span><span class="p">.</span><span class="na">setSiteSlug</span><span class="p">(</span><span class="s">&quot;some-site-slug&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -161,7 +164,7 @@ your project with the Facebook SDK: <a class="reference external" rel="nofollow"
 <div class="section" id="overriding-default-behaviour">
 <h2>Overriding default behaviour<a class="headerlink" href="#overriding-default-behaviour" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
-<li><p>Create a new fragment in your app which extends <cite>TalkableOfferFragment</cite>
+<li><p class="first">Create a new fragment in your app which extends <cite>TalkableOfferFragment</cite>
 and override methods there. Example:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.talkable.sdk.TalkableOfferFragment</span><span class="p">;</span>
 
@@ -176,7 +179,7 @@ and override methods there. Example:</p>
 </pre></div>
 </div>
 </li>
-<li><p>Pass Class of an activity you want to run a fragment in and the overriden fragment to
+<li><p class="first">Pass Class of an activity you want to run a fragment in and the overriden fragment to
 <cite>Talkable.showOffer</cite> call:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Talkable</span><span class="p">.</span><span class="na">showOffer</span><span class="p">(</span><span class="n">activity</span><span class="p">,</span> <span class="n">affiliateMember</span><span class="p">,</span> <span class="n">OverridenTalkableOfferFragment</span><span class="p">.</span><span class="na">class</span><span class="p">,</span> <span class="k">new</span> <span class="n">TalkableErrorCallback</span><span class="o">&lt;</span><span class="n">TalkableOfferLoadException</span><span class="o">&gt;</span><span class="p">()</span> <span class="p">{</span>
     <span class="nd">@Override</span>
@@ -210,9 +213,9 @@ or otherwise control the way it’s displayed, you can obtain an instance of <co
 preloaded with Talkable offer content and can be added to your layout dynamically.</p>
 <p>To use <code class="docutils literal notranslate"><span class="pre">TalkableOfferFragment</span></code> directly, follow these steps:</p>
 <ol class="arabic simple">
-<li><p>Get an offer code using the <code class="docutils literal notranslate"><span class="pre">Talkable.loadOffer(origin,</span> <span class="pre">callback)</span></code> method</p></li>
-<li><p>Create a fragment instance by passing the offer code to the <code class="docutils literal notranslate"><span class="pre">TalkableOfferFragment.newInstance(shortCode)</span></code> method</p></li>
-<li><p>Use <a class="reference external" rel="nofollow" href="https://developer.android.com/guide/components/fragments#Transactions">Fragment Transactions</a> or another method of your choice to display the fragment.</p></li>
+<li>Get an offer code using the <code class="docutils literal notranslate"><span class="pre">Talkable.loadOffer(origin,</span> <span class="pre">callback)</span></code> method</li>
+<li>Create a fragment instance by passing the offer code to the <code class="docutils literal notranslate"><span class="pre">TalkableOfferFragment.newInstance(shortCode)</span></code> method</li>
+<li>Use <a class="reference external" rel="nofollow" href="https://developer.android.com/guide/components/fragments#Transactions">Fragment Transactions</a> or another method of your choice to display the fragment.</li>
 </ol>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">AffiliateMember</span> <span class="n">affiliateMember</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AffiliateMember</span><span class="p">();</span>
 <span class="p">...</span>
@@ -233,8 +236,8 @@ preloaded with Talkable offer content and can be added to your layout dynamicall
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Make sure to <a class="reference external" rel="nofollow" href="https://developer.android.com/guide/topics/resources/runtime-changes.html">handle configuration changes</a>, as <code class="docutils literal notranslate"><span class="pre">TalkableOfferFragment</span></code>
+<p class="first admonition-title">Note</p>
+<p class="last">Make sure to <a class="reference external" rel="nofollow" href="https://developer.android.com/guide/topics/resources/runtime-changes.html">handle configuration changes</a>, as <code class="docutils literal notranslate"><span class="pre">TalkableOfferFragment</span></code>
 is built on top of <code class="docutils literal notranslate"><span class="pre">WebView</span></code> and restoring its state is up to you. If you
 need to reinitialize a fragment, you don’t need to call <code class="docutils literal notranslate"><span class="pre">loadOffer</span></code> again.
 Simply store the <code class="docutils literal notranslate"><span class="pre">offerCode</span></code> and use it to create a new <code class="docutils literal notranslate"><span class="pre">TalkableOfferFragment</span></code>
@@ -249,9 +252,9 @@ implement a fully native referral program interface if the default solution
 Below are the methods necessary to integrate the Talkable referral loop into
 your Android application.</p>
 <ol class="arabic simple">
-<li><p>The first step is to get an <code class="docutils literal notranslate"><span class="pre">Offer</span></code> by creating an <code class="docutils literal notranslate"><span class="pre">Origin</span></code>: <a class="reference internal" href="api.html#android-api-origins"><span class="std std-ref">Create origin</span></a></p></li>
-<li><p>Then, share the obtained <code class="docutils literal notranslate"><span class="pre">Offer</span></code>: <a class="reference internal" href="api.html#android-api-sharing"><span class="std std-ref">Create offer share</span></a></p></li>
-<li><p>Check for rewards: <a class="reference internal" href="api.html#android-api-rewards"><span class="std std-ref">Retrieve rewards</span></a></p></li>
+<li>The first step is to get an <code class="docutils literal notranslate"><span class="pre">Offer</span></code> by creating an <code class="docutils literal notranslate"><span class="pre">Origin</span></code>: <a class="reference internal" href="api.html#android-api-origins"><span class="std std-ref">Create origin</span></a></li>
+<li>Then, share the obtained <code class="docutils literal notranslate"><span class="pre">Offer</span></code>: <a class="reference internal" href="api.html#android-api-sharing"><span class="std std-ref">Create offer share</span></a></li>
+<li>Check for rewards: <a class="reference internal" href="api.html#android-api-rewards"><span class="std std-ref">Retrieve rewards</span></a></li>
 </ol>
 <div class="hidden docutils container">
 <div class="toctree-wrapper compound">
@@ -261,7 +264,6 @@ your Android application.</p>
 </div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>

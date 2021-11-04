@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Integrating with a Tag Manager &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
+    <link rel="stylesheet" href="../../_static/talkable.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/integration/custom/integration_tag_manager.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Validating the Integration" href="validating_integration.html" />
@@ -86,14 +87,14 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="integration-custom-integration-tag-manager"></span><div class="section" id="integrating-with-a-tag-manager">
-<h1>Integrating with a Tag Manager<a class="headerlink" href="#integrating-with-a-tag-manager" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="integrating-with-a-tag-manager">
+<span id="integration-custom-integration-tag-manager"></span><h1>Integrating with a Tag Manager<a class="headerlink" href="#integrating-with-a-tag-manager" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><p><span class="underline">Initialization Script in a Tag Manager:</span> Place the
+<li><span class="underline">Initialization Script in a Tag Manager:</span> Place the
 <a class="reference internal" href="integration_components.html#integration-custom-integration-components-initialization-script"><span class="std std-ref">Initialization Script</span></a>
 in a tag that is
-visible in the head template on all pages.</p></li>
-<li><p><span class="underline">Post Purchase Integration in a Tag Manager:</span> Since the post
+visible in the head template on all pages.</li>
+<li><span class="underline">Post Purchase Integration in a Tag Manager:</span> Since the post
 purchase integration on the checkout confirmation page requires the
 Init script to work, you’re welcome to combine the <a class="reference internal" href="integration_components.html#integration-custom-integration-components-initialization-script"><span class="std std-ref">Initialization Script</span></a>
 + <a class="reference internal" href="integration_components.html#integration-custom-integration-components-post-purchase-script"><span class="std std-ref">Post Purchase Script</span></a>
@@ -101,18 +102,17 @@ script into a
 single tag for the checkout confirmation page. In fact this is
 recommended for Google Tag Manager, when combining the place the
 Initialization script on top/before the Post purchase script in the
-tag.</p></li>
-<li><p><span class="underline">Tag Manager Data Layer to Pass Variables:</span> You’ll need to
+tag.</li>
+<li><span class="underline">Tag Manager Data Layer to Pass Variables:</span> You’ll need to
 ensure a data layer object is set up to collect and pass the
-variables to Talkable inside your tag.</p></li>
-<li><p><span class="underline">Troubleshooting:</span> You can use <cite>window._talkableq</cite> for all
+variables to Talkable inside your tag.</li>
+<li><span class="underline">Troubleshooting:</span> You can use <cite>window._talkableq</cite> for all
 <cite>talkableq</cite> variable instances if you’re having trouble with variable
-interpolation and need to use a global namespace.</p></li>
+interpolation and need to use a global namespace.</li>
 </ul>
 </div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>

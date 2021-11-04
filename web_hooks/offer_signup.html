@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="Advocate Signup Webhook notifies your endpoint of an Advocate signup forms submission." name="description" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="Advocate Signup Webhook notifies your endpoint of an Advocate signup forms submission." name="description" />
 
     <title>Advocate Signup Webhook &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
+    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/web_hooks/offer_signup.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Friend Email Gating Webhook" href="claim_signup.html" />
@@ -93,10 +94,10 @@
 Signup forms submission.</p>
 <p>Use cases for the Advocate Signup Webhook include:</p>
 <ul class="simple">
-<li><p>Tracking when users select the checkbox to opt into your email newsletter</p></li>
-<li><p>Collection of data for Business Intelligence and analytics systems to track
-users who become Advocates</p></li>
-<li><p>Sending automated ‘Thank You’ emails after a user becomes an Advocate</p></li>
+<li>Tracking when users select the checkbox to opt into your email newsletter</li>
+<li>Collection of data for Business Intelligence and analytics systems to track
+users who become Advocates</li>
+<li>Sending automated ‘Thank You’ emails after a user becomes an Advocate</li>
 </ul>
 <h2>When does Talkable call the Advocate Signup Webhook?</h2><p>Talkable Signup Webhook is triggered any time an Advocate Signup form is
 submitted. The Advocate Signup form is the standard Name &amp; Email (with optional
@@ -105,47 +106,44 @@ and sharing an offer with Friends.</p>
 <p>Advocate Signup Form example:</p>
 <img alt="Advocate Signup Form," class="is-minimal" src="../_images/advocate_signup_form_webhook.png" />
 <h2>Payload parameters provided for Advocate Signup Webhook</h2><ul class="simple">
-<li><p><strong>offer</strong> — subhash of parameters describing the offer</p>
-<ul>
-<li><p><strong>email</strong> — <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>’s (referrer) email address</p></li>
-<li><p><strong>short_url_code</strong></p></li>
-<li><p><strong>ip_address</strong></p></li>
+<li><strong>offer</strong> — subhash of parameters describing the offer<ul>
+<li><strong>email</strong> — <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>’s (referrer) email address</li>
+<li><strong>short_url_code</strong></li>
+<li><strong>ip_address</strong></li>
 </ul>
 </li>
-<li><p><strong>campaign</strong> — subhash of parameters describing the campaign</p>
-<ul>
-<li><p><strong>id</strong> — unique campaign ID</p></li>
-<li><p><strong>cached_slug</strong> — unique SEO friendly ID</p></li>
-<li><p><strong>type</strong> — either <em>“StandaloneCampaign”</em> or <em>“DoubleSidedDealCampaign”</em></p></li>
-<li><p><strong>tag_names</strong> — array of campaign’s tags</p></li>
+<li><strong>campaign</strong> — subhash of parameters describing the campaign<ul>
+<li><strong>id</strong> — unique campaign ID</li>
+<li><strong>cached_slug</strong> — unique SEO friendly ID</li>
+<li><strong>type</strong> — either <em>“StandaloneCampaign”</em> or <em>“DoubleSidedDealCampaign”</em></li>
+<li><strong>tag_names</strong> — array of campaign’s tags</li>
 </ul>
 </li>
-<li><p><strong>email</strong> — affiliate member’s email address</p></li>
+<li><strong>email</strong> — affiliate member’s email address</li>
 </ul>
 <p>If the Signup form included first and last name fields or subscription checkbox,
 additional parameters will be present:</p>
 <ul class="simple">
-<li><p><strong>first_name</strong> — affiliate member’s first name</p></li>
-<li><p><strong>last_name</strong> — affiliate member’s last name</p></li>
-<li><p><strong>username</strong> — affiliate member’s username</p></li>
-<li><p><strong>sub_choice</strong> — subscription choice (optional, present only if the form
-included subscription checkbox)</p></li>
-<li><p><strong>subscribed_at</strong> — date affiliate member has subscribed (deprecated; use opted_in_at instead)</p></li>
-<li><p><strong>opted_in_at</strong> — date affiliate member has subscribed (optional)</p></li>
-<li><p><strong>unsubscribed_at</strong> — date affiliate member has unsubscribed (optional)</p></li>
-<li><p><strong>custom_properties</strong> — hash of affiliate member’s custom properties (optional)</p></li>
-<li><p><strong>referral_counts</strong> - subhash of <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>’s referral counts</p>
-<ul>
-<li><p><strong>total</strong> — created referrals count</p></li>
-<li><p><strong>approved</strong> — approved referrals count</p></li>
-<li><p><strong>pending</strong> — count of waiting for approval referrals</p></li>
+<li><strong>first_name</strong> — affiliate member’s first name</li>
+<li><strong>last_name</strong> — affiliate member’s last name</li>
+<li><strong>username</strong> — affiliate member’s username</li>
+<li><strong>sub_choice</strong> — subscription choice (optional, present only if the form
+included subscription checkbox)</li>
+<li><strong>subscribed_at</strong> — date affiliate member has subscribed (deprecated; use opted_in_at instead)</li>
+<li><strong>opted_in_at</strong> — date affiliate member has subscribed (optional)</li>
+<li><strong>unsubscribed_at</strong> — date affiliate member has unsubscribed (optional)</li>
+<li><strong>custom_properties</strong> — hash of affiliate member’s custom properties (optional)</li>
+<li><strong>referral_counts</strong> - subhash of <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>’s referral counts<ul>
+<li><strong>total</strong> — created referrals count</li>
+<li><strong>approved</strong> — approved referrals count</li>
+<li><strong>pending</strong> — count of waiting for approval referrals</li>
 </ul>
 </li>
 </ul>
 <h2>Sample payload</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;campaign&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;cached_slug&quot;</span><span class="o">:</span> <span class="mf">615437538</span><span class="p">,</span>
-    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">615437538</span><span class="p">,</span>
+    <span class="s2">&quot;cached_slug&quot;</span><span class="o">:</span> <span class="mi">615437538</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">615437538</span><span class="p">,</span>
     <span class="s2">&quot;new_customer&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
     <span class="s2">&quot;origin_max_age&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
     <span class="s2">&quot;origin_min_age&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
@@ -166,9 +164,9 @@ included subscription checkbox)</p></li>
   <span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
   <span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
   <span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;total&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
-    <span class="s2">&quot;approved&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
-    <span class="s2">&quot;pending&quot;</span><span class="o">:</span> <span class="mf">0</span>
+    <span class="s2">&quot;total&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;approved&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">&quot;pending&quot;</span><span class="o">:</span> <span class="mi">0</span>
   <span class="p">},</span>
   <span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span> <span class="kc">null</span>
@@ -185,7 +183,6 @@ included subscription checkbox)</p></li>
 </div>
 
 
-            <div class="clearer"></div>
           </div>
         </div>
       </div>
