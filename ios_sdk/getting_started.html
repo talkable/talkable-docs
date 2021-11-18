@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Getting Started &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/ios_sdk/getting_started.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Integration" href="integration.html" />
@@ -88,71 +88,71 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="getting-started">
-<span id="ios-sdk-getting-started"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+  <span class="target" id="ios-sdk-getting-started"></span><section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
 <p>The Getting Started guide shows you how to setup and launch Referral Campaign as quickly as possible with Talkable iOS SDK.</p>
 <blockquote>
 <div><div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Make sure your application meets the <a class="reference internal" href="#requirements">Requirements</a></p>
+<p class="admonition-title">Note</p>
+<p>Make sure your application meets the <a class="reference internal" href="#requirements">Requirements</a></p>
 </div>
 </div></blockquote>
-<div class="section" id="installation">
+<section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>Talkable SDK could be integrated using CocoaPods or as a static library.</p>
 <p>If you want to use CocoaPods way, here is <a class="reference external" rel="nofollow" href="https://cocoapods.org/pods/TalkableSDK">Talkable SDK pod’s page</a>.</p>
 <p>To integrate the SDK as a static library, please follow next intructions:</p>
 <ol class="arabic simple">
-<li>Download the latest version of <a class="reference external" rel="nofollow" href="https://talkable-downloads.s3.amazonaws.com/ios-sdk/talkable_ios_sdk.zip">Talkable SDK framework</a>.</li>
-<li>Drag and place the <cite>TalkableSDK.framework</cite> somewhere suitable into your Xcode project. Make sure to add the framework to the relevant targets.</li>
-<li>Add the following frameworks to your project:</li>
+<li><p>Download the latest version of <a class="reference external" rel="nofollow" href="https://talkable-downloads.s3.amazonaws.com/ios-sdk/talkable_ios_sdk.zip">Talkable SDK framework</a>.</p></li>
+<li><p>Drag and place the <cite>TalkableSDK.framework</cite> somewhere suitable into your Xcode project. Make sure to add the framework to the relevant targets.</p></li>
+<li><p>Add the following frameworks to your project:</p></li>
 </ol>
 <blockquote>
 <div><ul class="simple">
-<li><cite>Contacts.framework</cite></li>
-<li><cite>MessageUI.framework</cite></li>
-<li><cite>SafariServices.framework</cite></li>
-<li><cite>Security.framework</cite></li>
-<li><cite>Social.framework</cite></li>
-<li><cite>WebKit.framework</cite></li>
+<li><p><cite>Contacts.framework</cite></p></li>
+<li><p><cite>MessageUI.framework</cite></p></li>
+<li><p><cite>SafariServices.framework</cite></p></li>
+<li><p><cite>Security.framework</cite></p></li>
+<li><p><cite>Social.framework</cite></p></li>
+<li><p><cite>WebKit.framework</cite></p></li>
 </ul>
 <p>To do this, click on your application’s target, then click on Build Phases and expand the Link Binary With Libraries group.</p>
 </div></blockquote>
 <ol class="arabic simple" start="4">
-<li>Add the following import statement to any Objective-C header (.h) or implementation (.m) file in which you wish to use the Talkable SDK.</li>
+<li><p>Add the following import statement to any Objective-C header (.h) or implementation (.m) file in which you wish to use the Talkable SDK.</p></li>
 </ol>
 <blockquote>
 <div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="cp">#import &lt;TalkableSDK/Talkable.h&gt;</span>
 </pre></div>
 </div>
 </div></blockquote>
-</div>
-<div class="section" id="configuration">
+</section>
+<section id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li>Initialize Talkable in your <cite>application:didFinishLaunchingWithOptions:</cite> method, like so:</li>
+<li><p>Initialize Talkable in your <cite>application:didFinishLaunchingWithOptions:</cite> method, like so:</p></li>
 </ol>
 <blockquote>
-<div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">setApiKey</span><span class="p">:</span><span class="s">@&quot;YOUR_TALKABLE_PUBLIC_API_KEY&quot;</span> <span class="nl">andSiteSlug</span><span class="p">:</span><span class="s">@&quot;YOUR_SITE_SLUG&quot;</span><span class="p">];</span>
+<div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">setApiKey</span><span class="p">:</span><span class="s">@&quot;YOUR_TALKABLE_PUBLIC_API_KEY&quot;</span><span class="w"> </span><span class="nl">andSiteSlug</span><span class="p">:</span><span class="s">@&quot;YOUR_SITE_SLUG&quot;</span><span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p>You can locate your credentials inside Talkable site:</p>
-<ul class="last simple">
-<li>Visit <a class="reference external" rel="nofollow" href="https://admin.talkable.com/account/sites">https://admin.talkable.com/account/sites</a> to find your site slug</li>
-<li>Select site and go to <strong>Dashboard</strong> → <strong>Settings</strong> → <strong>Site Settings</strong>.
+<ul class="simple">
+<li><p>Visit <a class="reference external" rel="nofollow" href="https://admin.talkable.com/account/sites">https://admin.talkable.com/account/sites</a> to find your site slug</p></li>
+<li><p>Select site and go to <strong>Dashboard</strong> → <strong>Settings</strong> → <strong>Site Settings</strong>.
 Find <strong>API integration</strong> section and there you will see your API Keys.
-Use only the <em>public key</em> in your application submitted to the App Store.</li>
+Use only the <em>public key</em> in your application submitted to the App Store.</p></li>
 </ul>
 </div>
 </div></blockquote>
 <ol class="arabic simple" start="2">
-<li>Register Talkable URL scheme:</li>
+<li><p>Register Talkable URL scheme:</p></li>
 </ol>
 <blockquote>
 <div><ul>
-<li><p class="first">Defines <cite>tkbl-&lt;your-site-slug&gt;</cite> as URL Scheme in your Info.plist file:</p>
+<li><p>Defines <cite>tkbl-&lt;your-site-slug&gt;</cite> as URL Scheme in your Info.plist file:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>CFBundleURLTypes<span class="nt">&lt;/key&gt;</span>
 <span class="nt">&lt;array&gt;</span>
   <span class="nt">&lt;dict&gt;</span>
@@ -165,7 +165,7 @@ Use only the <em>public key</em> in your application submitted to the App Store.
 </pre></div>
 </div>
 </li>
-<li><p class="first">Add <cite>tkbl-&lt;your-site-slug&gt;</cite> scheme to the list of schemes that are queried within application. Also add <cite>fb-messenger</cite>, <cite>fbauth2</cite>, <cite>whatsapp</cite> schemes if you going to utilize these sharing channels:</p>
+<li><p>Add <cite>tkbl-&lt;your-site-slug&gt;</cite> scheme to the list of schemes that are queried within application. Also add <cite>fb-messenger</cite>, <cite>fbauth2</cite>, <cite>whatsapp</cite> schemes if you going to utilize these sharing channels:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>LSApplicationQueriesSchemes<span class="nt">&lt;/key&gt;</span>
 <span class="nt">&lt;array&gt;</span>
   <span class="nt">&lt;string&gt;</span>tkbl-your-site-slug<span class="nt">&lt;/string&gt;</span>
@@ -178,32 +178,33 @@ Use only the <em>public key</em> in your application submitted to the App Store.
 </li>
 </ul>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Please replace <cite>&lt;your-site-slug&gt;</cite> with your actual site slug, which you are
+<p class="admonition-title">Note</p>
+<p>Please replace <cite>&lt;your-site-slug&gt;</cite> with your actual site slug, which you are
 able to find on your site <strong>Dashboard</strong> at <a class="reference external" rel="nofollow" href="https://admin.talkable.com">https://admin.talkable.com</a></p>
 </div>
 </div></blockquote>
 <ol class="arabic simple" start="3">
-<li>Add following lines to <cite>application:handleOpenURL:</cite> or <cite>application:openURL:sourceApplication:annotation:</cite></li>
+<li><p>Add following lines to <cite>application:handleOpenURL:</cite> or <cite>application:openURL:sourceApplication:annotation:</cite></p></li>
 </ol>
 <blockquote>
-<div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span> <span class="n">manager</span><span class="p">]</span> <span class="nl">handleOpenURL</span><span class="p">:</span><span class="n">url</span><span class="p">];</span>
+<div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">handleOpenURL</span><span class="p">:</span><span class="n">url</span><span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>
 <p>Your environment is all set up! Now you need to <a class="reference internal" href="integration.html#ios-sdk-integration"><span class="std std-ref">integrate</span></a> the Talkable campaign piece.</p>
-</div>
-<div class="section" id="requirements">
+</section>
+<section id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
 <p>The SDK supports iOS 9.0 and later.</p>
 <div class="hidden docutils container">
 <div class="toctree-wrapper compound">
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>

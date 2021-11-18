@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="The approvals process helps automatically detect fake new user accounts. Cheaters won’t get through the system." name="description" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="The approvals process helps automatically detect fake new user accounts. Cheaters won’t get through the system." name="description" />
 
     <title>Referrals Approval &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/advanced_features/referrals_approval.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Segment With Product SKU" href="product_sku.html" />
@@ -99,28 +99,22 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="advanced-features-referrals-approval"></span><div class="section" id="referrals-approval">
+  <span class="target" id="advanced-features-referrals-approval"></span><section id="referrals-approval">
 <h1>Referrals Approval<a class="headerlink" href="#referrals-approval" title="Permalink to this headline">¶</a></h1>
 <p>Talkable referral engine determines if the friend is a valid person based on fraud settings configuration.
 The incentive engine then decides if the reward should be given based on incentive criteria. Here is a common example:</p>
 <ol class="arabic">
-<li><p class="first">The advocate shares a link with a friend</p>
-</li>
-<li><p class="first">The friend clicks on the referral link and claims their coupon</p>
-</li>
-<li><p class="first">The friend makes a referral purchase using the coupon they just claimed</p>
-</li>
-<li><p class="first">Talkable first checks whether the friend is valid and only then the incentive decides whether the reward should be paid out.
-At this stage Talkable validates whether the friend was a valid person and not a self-referral (per fraud settings configuration).</p>
-</li>
-<li><p class="first">If the referral is valid, Talkable approves it with a preset delay (ie. of 1-2 days)
+<li><p>The advocate shares a link with a friend</p></li>
+<li><p>The friend clicks on the referral link and claims their coupon</p></li>
+<li><p>The friend makes a referral purchase using the coupon they just claimed</p></li>
+<li><p>Talkable first checks whether the friend is valid and only then the incentive decides whether the reward should be paid out.
+At this stage Talkable validates whether the friend was a valid person and not a self-referral (per fraud settings configuration).</p></li>
+<li><p>If the referral is valid, Talkable approves it with a preset delay (ie. of 1-2 days)
 which is determined by the ”pending referrals auto-approval delay” field (under fraud settings).
-See recommendations below as to why it is best practice to set a delay.</p>
-</li>
-<li><p class="first">As soon as the referral gets approved, Talkable passes it to the incentive engine which in turn checks whether the reward should be issued per campaign rules setup.
-Rules like a minimum order subtotal amount or new/existing customer check may block the reward from being issued even if the referral is approved.</p>
-</li>
-<li><p class="first">If the incentive criteria are passed, the advocate gets a referral reward issued to them by email as a coupon or store credit, depending on your setup.</p>
+See recommendations below as to why it is best practice to set a delay.</p></li>
+<li><p>As soon as the referral gets approved, Talkable passes it to the incentive engine which in turn checks whether the reward should be issued per campaign rules setup.
+Rules like a minimum order subtotal amount or new/existing customer check may block the reward from being issued even if the referral is approved.</p></li>
+<li><p>If the incentive criteria are passed, the advocate gets a referral reward issued to them by email as a coupon or store credit, depending on your setup.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -129,11 +123,12 @@ Rules like a minimum order subtotal amount or new/existing customer check may bl
 <p>In a perfect world every advocate would receive their reward immediately after a legitimate referral purchase to shorten the feedback loop for advocating and to encourage a repurchase.</p>
 <p>However, if you have strong marketing offers on products that are inherently resellable and generous return policies you open yourself up to gaming by not monitoring your approvals policy.</p>
 <blockquote class="epigraph">
-<div><strong>Example:</strong> You sell a product online and offer a strong discount ($100) in your referral program for new users.
+<div><p><strong>Example:</strong> You sell a product online and offer a strong discount ($100) in your referral program for new users.
 The product you sell is a home good that is easily re-sellable online.
 You also offer a generous 30-day return policy. In this case, marketing fraudsters may generate fake new user accounts,
 make purchases using 1-time credit cards, collect the reward as an advocate, and then return the items,
-thereby getting “free” money by gaming your referral program.</div></blockquote>
+thereby getting “free” money by gaming your referral program.</p>
+</div></blockquote>
 <p>How can your referral management process help to automatically combat this system?</p>
 <p>In the above case, if you ensured that your return policy window was shorter
 then your referral approval window (i.e. if the referral is approved in 31 days,
@@ -143,15 +138,14 @@ that no one would be able to game your system.</p>
 at checkout, which requires an integration update. You may also be able
 to configure a returns API to automatically check for returns of your product
 before crediting a reward.</p>
-<div class="section" id="general-approval-policy-recommendations">
+<section id="general-approval-policy-recommendations">
 <h2>General Approval Policy Recommendations<a class="headerlink" href="#general-approval-policy-recommendations" title="Permalink to this headline">¶</a></h2>
 <p>The safest programs fall into either of these categories:</p>
 <ol class="arabic">
-<li><p class="first">Referrals are managed through the <a class="reference external" href="/api_v2/referrals.html">Referrals API</a> in a fully-automated fashion.
+<li><p>Referrals are managed through the <a class="reference external" href="/api_v2/referrals.html">Referrals API</a> in a fully-automated fashion.
 This way, whenever the return happens, the referral can be voided through the API.
-As a result, no advocate rewards will be issued from that referral.</p>
-</li>
-<li><p class="first">If the number of referrals is small enough to manage them manually,
+As a result, no advocate rewards will be issued from that referral.</p></li>
+<li><p>If the number of referrals is small enough to manage them manually,
 it is recommended to set the ”pending referrals auto-approval delay”
 to an optimal value which gives your team adequate time to resolve referrals manually.
 All referrals that weren’t resolved manually will be automatically approved by Talkable.
@@ -167,21 +161,18 @@ so that Talkable automatically approves pending referrals and voids flagged refe
 To mitigate possible marketing fraud while still maintaining an automatic approval process
 we suggest the following guidelines:</p>
 <ol class="arabic">
-<li><p class="first">Investigate your ”median return time”. You may have a 60 days return policy but find that 70% of returns are made in the first 10 days.
+<li><p>Investigate your ”median return time”. You may have a 60 days return policy but find that 70% of returns are made in the first 10 days.
 In this case, you can set the pending referrals auto-approval delay to be 10 days - instantly covering 70% of cases - and then manually monitor
 the aggregate data on returns after 10 days to see if there’s an uptick in returns.
 This generally results in better program performance with near-identical fraud attempts. Also, it’s easier to spot increases in fraud.
 For example, if you begin to see a lot of returns after the 10-day mark you’ll know to investigate further.
-You have created a situation where it’s now easier to identify fraudsters without affecting the vast majority of your customers.</p>
-</li>
-<li><p class="first">Use single-use coupon codes for rewards. Legally speaking coupon codes are easier to revoke, have an expiration date,
-and can have restrictions for minimum order values that will prevent users from attempting to defraud your program.</p>
-</li>
-<li><p class="first">Manually check in on your referral program on a monthly or quarterly basis, or if you see any suspicious increases in certain activities.
+You have created a situation where it’s now easier to identify fraudsters without affecting the vast majority of your customers.</p></li>
+<li><p>Use single-use coupon codes for rewards. Legally speaking coupon codes are easier to revoke, have an expiration date,
+and can have restrictions for minimum order values that will prevent users from attempting to defraud your program.</p></li>
+<li><p>Manually check in on your referral program on a monthly or quarterly basis, or if you see any suspicious increases in certain activities.
 Using the ”Flagged” property of our fraud detection system can allow you to view referrals that are suspicious and
-get a feel for what types of behavior may be occurring. Additionally, by tracking your data you can identify patterns in fraudulent behavior and take action.</p>
-</li>
-<li><p class="first">Update your program as necessary. Be wary of marketing offers that may be combined to get larger discounts on your site.
+get a feel for what types of behavior may be occurring. Additionally, by tracking your data you can identify patterns in fraudulent behavior and take action.</p></li>
+<li><p>Update your program as necessary. Be wary of marketing offers that may be combined to get larger discounts on your site.
 Do not be afraid to make changes in your approvals policy. If necessary, move to manual approvals of your program for a short period of time to diagnose any issues
 and then re-configure your approval process and fraud settings to address those issues.</p>
 <div class="line-block">
@@ -194,10 +185,11 @@ We expose a spectrum of options to meet your business needs.
 Where your business falls on the spectrum depends on your product market, the relative value of gaming your program for resale, and the resources you wish to allocate to ensure a fair system.</p>
 <p>If you have further questions feel free to <a class="reference external" href="https://www.talkable.com/contact">reach out to our team</a>.
 We have years of experience in referral program design and can help you weigh the costs and benefits.</p>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>

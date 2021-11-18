@@ -4,19 +4,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Talkable cartridge is a self-contained cartridge, which you can easily integrate into any Salesforce Commerce Cloud project." name="description" />
+<meta content="Learn how to manually set up loyalty Shopify integration." name="description" />
 
-    <title>Salesforce Commerce Cloud Integration &#8212; Talkable Documentation</title>
+    <title>Manual Shopify integration &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/talkable.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <link rel="canonical" href="https://docs.talkable.com/integration/ecommerce_platforms/demandware.html" />
+    <link rel="canonical" href="https://docs.talkable.com/integration/loyalty/manual_shopify_integration.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Shopify Integration" href="shopify.html" />
-    <link rel="prev" title="E-commerce Platforms" href="../ecommerce_platforms.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <link rel="next" title="E-commerce Platforms" href="../ecommerce_platforms.html" />
+    <link rel="prev" title="Auto-Enrollment" href="auto_enrollment.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
   <link href="../../_static/pygments-github.css" rel="stylesheet">
   <link href="../../_static/img/favicon.ico" rel="shortcut icon" />
   </head><body>
@@ -48,13 +48,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../custom_integration.html">Standard Integration</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../loyalty.html">Loyalty Integration (beta)</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../ecommerce_platforms.html">E-commerce Platforms</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Salesforce Commerce Cloud Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="shopify.html">Shopify Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="magento.html">Magento Integration</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../loyalty.html">Loyalty Integration (beta)</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="integration_components.html">Integration Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_app.html">Custom App for Loyalty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_enrollment.html">Auto-Enrollment</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Manual Shopify integration</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../ecommerce_platforms.html">E-commerce Platforms</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../email_marketing.html">Email Marketing</a></li>
@@ -80,22 +81,45 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="integration-ecommerce-platforms-demandware"></span><section id="salesforce-commerce-cloud-integration">
-<h1>Salesforce Commerce Cloud Integration<a class="headerlink" href="#salesforce-commerce-cloud-integration" title="Permalink to this headline">¶</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You must have Talkable account in order to get started</p>
+  <span class="target" id="integration-loyalty-manual-shopify-integration"></span><section id="manual-shopify-integration">
+<h1>Manual Shopify integration<a class="headerlink" href="#manual-shopify-integration" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic">
+<li><p>Pass Shopify authorization</p></li>
+<li><p>You will be redirected to your Shopify store, log in and click the Install button</p></li>
+<li><p>After successful installation you will be redirected back to Talkable</p></li>
+<li><p>Click “Integrate manually“</p></li>
+<li><p>Set up Referral Integration <a class="reference internal" href="../ecommerce_platforms/shopify.html#integration-ecommerce-platforms-shopify-manual-integration"><span class="std std-ref">manually</span></a></p></li>
+<li><p>Then navigate to:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Open <cite>Themes / Templates</cite></p></li>
+<li><p>Click “Add a new template“</p></li>
+<li><p>Create a new template for <cite>page</cite> called <cite>loyalty</cite></p></li>
+<li><p>Paste the following code inside layout:</p></li>
+</ul>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{% if shop.customer_accounts_enabled %}
+   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;talkable-loyalty&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+{% endif %}
+</pre></div>
 </div>
-<p>Talkable cartridge is a self-contained cartridge that can easily integrate
-into any Salesforce Commerce Cloud project. The cartridge can be configured in
-the Business Manager and contains all elements necessary to perform successful
-practice implementation of Talkable. After the cartridge is deployed, configured
-and integrated with the storefront templates, the customer will have full power
-of Talkable marketing programs applied to their site.</p>
-<p>Link to Talkable cartridge on the Salesforce Commerce Cloud:
-<br>
-<a class="reference external" rel="nofollow" href="https://www.salesforce.com/products/commerce-cloud/partner-marketplace/partners/talkable/">https://www.salesforce.com/products/commerce-cloud/partner-marketplace/partners/talkable/</a></p>
-<p>Link to download integration documentation: <a class="reference external" href="/_static/talkable-integration-guide.pdf">Integration Guide</a></p>
+<ul class="simple">
+<li><p>Click “Save”</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Then navigate to:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Open <cite>Online Store / Pages</cite></p></li>
+<li><p>Click “Add page“</p></li>
+<li><p>Add title <cite>loyalty</cite></p></li>
+<li><p>Select Theme template <cite>loyalty</cite></p></li>
+<li><p>Click “Save”</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<h2>Requirements</h2><p>User accounts. The website must support user accounts since the loyalty program is only available to logged in users.</p>
 </section>
 
 

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="With Klaviyo app clients can synchronize emails that Talkable collected." name="description" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="With Klaviyo app clients can synchronize emails that Talkable collected." name="description" />
 
     <title>Klaviyo &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/email_marketing/klaviyo.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Oracle Bronto" href="oracle_bronto.html" />
@@ -85,57 +85,58 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="email-marketing-klaviyo"></span><div class="section" id="klaviyo">
+  <span class="target" id="email-marketing-klaviyo"></span><section id="klaviyo">
 <h1>Klaviyo<a class="headerlink" href="#klaviyo" title="Permalink to this headline">¶</a></h1>
 <p>With ESP apps clients can synchronize emails that Talkable acquires with their ESP. Here are the conditions when Talkable acquires emails:</p>
 <ol class="arabic simple">
-<li>Advocate signs up and opts in for Talkable marketing emails:</li>
+<li><p>Advocate signs up and opts in for Talkable marketing emails:</p></li>
 </ol>
 <blockquote>
 <div><img alt="Subscribe" src="../_images/subscribe.png" />
 </div></blockquote>
 <ol class="arabic simple" start="2">
-<li>A friend passes email gating and opts in for Talkable marketing emails:</li>
+<li><p>A friend passes email gating and opts in for Talkable marketing emails:</p></li>
 </ol>
 <blockquote>
 <div><img alt="Signup" src="../_images/signup.png" />
 </div></blockquote>
 <p>Each ESP application allows custom attributes to be included with each request. The following interpolation variables are allowed:</p>
 <ol class="arabic simple">
-<li><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">person</span> <span class="pre">}}</span></code> - a data object for either advocate or friend whenever they sign up or pass email gating and opt-in for marketing emails.</li>
-<li><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">ip</span> <span class="pre">}}</span></code> – a data object from which IP address either a signup or email gating occurred.</li>
-<li><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">campaign</span> <span class="pre">}}</span></code> – a data object with details about the campaign within which the email was captured.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">person</span> <span class="pre">}}</span></code> - a data object for either advocate or friend whenever they sign up or pass email gating and opt-in for marketing emails.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">ip</span> <span class="pre">}}</span></code> – a data object from which IP address either a signup or email gating occurred.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">campaign</span> <span class="pre">}}</span></code> – a data object with details about the campaign within which the email was captured.</p></li>
 </ol>
 <img alt="Variables" src="../_images/variables.png" />
 <p>Each variable is described in the “Available variables” sidebar and can be expanded to see all nested properties.</p>
-<div class="section" id="how-to-add-a-new-app">
+<section id="how-to-add-a-new-app">
 <h2>How to add a new app?<a class="headerlink" href="#how-to-add-a-new-app" title="Permalink to this headline">¶</a></h2>
 <p>Please use the following guide to start using an app you need:</p>
 <ol class="arabic simple">
-<li>Navigate into the app store:</li>
+<li><p>Navigate into the app store:</p></li>
 </ol>
 <blockquote>
 <div><img alt="App store step 1" src="../_images/app_store_step_1.png" />
 <img alt="App store step 2" src="../_images/app_store_step_2.png" />
 </div></blockquote>
 <ol class="arabic simple" start="2">
-<li>Choose an app you need by clicking “Install”</li>
-<li>Fill in all necessary fields. You can use tips on the right that instruct how to find all necessary credentials.</li>
-<li>Complete installation and enable the app:</li>
+<li><p>Choose an app you need by clicking “Install”</p></li>
+<li><p>Fill in all necessary fields. You can use tips on the right that instruct how to find all necessary credentials.</p></li>
+<li><p>Complete installation and enable the app:</p></li>
 </ol>
 <blockquote>
 <div><img alt="klaviyo" src="../_images/klaviyo.png" />
 </div></blockquote>
 <ol class="arabic simple" start="5">
-<li>Test the app by pressing on the “Send sample payload” and then check if you are seeing a test request inside your ESP:</li>
+<li><p>Test the app by pressing on the “Send sample payload” and then check if you are seeing a test request inside your ESP:</p></li>
 </ol>
 <blockquote>
 <div><img alt="Send same payload" src="../_images/send_same_payload.png" />
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>

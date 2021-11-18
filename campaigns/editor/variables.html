@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="Variables show you dynamic data such as Campaign tag, Advocate info, etc." name="description" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Variables show you dynamic data such as Campaign tag, Advocate info, etc." name="description" />
 
     <title>Variables &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" href="../../_static/talkable.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/campaigns/editor/variables.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Files" href="files.html" />
@@ -92,7 +92,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="campaigns-editor-variables"></span><div class="section" id="variables">
+  <span class="target" id="campaigns-editor-variables"></span><section id="variables">
 <span id="editor-variables"></span><h1>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h1>
 <p>Variables are used to show dynamic data like Campaign tag, Advocate info, etc.
 <br>
@@ -105,161 +105,161 @@ navigation:</p>
 <p>Each Variable is represented with Name, Liquid notation, Value:</p>
 <img alt="Variables: variable" src="../../_images/vars-variable.png" />
 <ul class="simple">
-<li>Name describes meaning of the Variable</li>
-<li>Notation explains how to write Variable inside Template/Styles editor area</li>
-<li>Value shows what this particular Variable results with (Value may be
-different between preview and production scenarious)</li>
+<li><p>Name describes meaning of the Variable</p></li>
+<li><p>Notation explains how to write Variable inside Template/Styles editor area</p></li>
+<li><p>Value shows what this particular Variable results with (Value may be
+different between preview and production scenarious)</p></li>
 </ul>
 <p><br>
 <hr></p>
-<div class="section" id="advocate-info">
+<section id="advocate-info">
 <span id="editor-variables-advocate-info"></span><h2>{{ advocate_info }}<a class="headerlink" href="#advocate-info" title="Permalink to this headline">¶</a></h2>
 <p><strong>Available in</strong>: all Views <br>
 <strong>Type</strong>: <code class="docutils literal notranslate"><span class="pre">Object</span></code></p>
 <p>Personal data for <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>.</p>
 <div class="ptable docutils container">
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="15%" />
-<col width="19%" />
-<col width="65%" />
+<col style="width: 15%" />
+<col style="width: 19%" />
+<col style="width: 65%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Property</th>
-<th class="head">Value</th>
-<th class="head">Description</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Property</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Description</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>email</td>
-<td>“<a class="reference external" href="mailto:affiliate&#37;&#52;&#48;example&#46;com">affiliate<span>&#64;</span>example<span>&#46;</span>com</a>”</td>
-<td>Advocate email he is registered with</td>
+<tbody>
+<tr class="row-even"><td><p>email</p></td>
+<td><p>“<a class="reference external" href="mailto:affiliate&#37;&#52;&#48;example&#46;com">affiliate<span>&#64;</span>example<span>&#46;</span>com</a>”</p></td>
+<td><p>Advocate email he is registered with</p></td>
 </tr>
-<tr class="row-odd"><td>first_name</td>
-<td>“John”</td>
-<td>Advocate first name provided on Signup</td>
+<tr class="row-odd"><td><p>first_name</p></td>
+<td><p>“John”</p></td>
+<td><p>Advocate first name provided on Signup</p></td>
 </tr>
-<tr class="row-even"><td>last_name</td>
-<td>“Smith”</td>
-<td>Advocate last name provided on Signup</td>
+<tr class="row-even"><td><p>last_name</p></td>
+<td><p>“Smith”</p></td>
+<td><p>Advocate last name provided on Signup</p></td>
 </tr>
-<tr class="row-odd"><td>external_customer_id</td>
-<td>“1jsh17136”</td>
-<td>Advocate unique ID passed by Merchant to <a class="reference internal" href="../../integration/custom/integration_components.html#integration-custom-integration-components-initialization-script"><span class="std std-ref">Talkable Integration</span></a> as <code class="docutils literal notranslate"><span class="pre">customer_id</span></code></td>
+<tr class="row-odd"><td><p>external_customer_id</p></td>
+<td><p>“1jsh17136”</p></td>
+<td><p>Advocate unique ID passed by Merchant to <a class="reference internal" href="../../integration/custom/integration_components.html#integration-custom-integration-components-initialization-script"><span class="std std-ref">Talkable Integration</span></a> as <code class="docutils literal notranslate"><span class="pre">customer_id</span></code></p></td>
 </tr>
-<tr class="row-even"><td>sub_choice</td>
-<td>false | true</td>
-<td>Advocate custom parameter which can be used to pass additional
-data to Advocate Share Page</td>
+<tr class="row-even"><td><p>sub_choice</p></td>
+<td><p>false | true</p></td>
+<td><p>Advocate custom parameter which can be used to pass additional
+data to Advocate Share Page</p></td>
 </tr>
-<tr class="row-odd"><td>purchases_count</td>
-<td>0</td>
-<td>Advocate number of tracked store purchases</td>
+<tr class="row-odd"><td><p>purchases_count</p></td>
+<td><p>0</p></td>
+<td><p>Advocate number of tracked store purchases</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <p><br></p>
-</div>
-<div class="section" id="advocate-origin">
+</section>
+<section id="advocate-origin">
 <h2>{{ advocate_origin }}<a class="headerlink" href="#advocate-origin" title="Permalink to this headline">¶</a></h2>
 <p><strong>Available in</strong>: all Views <br>
 <strong>Type</strong>: <code class="docutils literal notranslate"><span class="pre">Object</span></code></p>
 <p><abbr title="Origin is the point where a referral loop begins (Standalone or Post Purchase campaign)">Origin</abbr> data for <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>.</p>
 <div class="ptable docutils container">
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="24%" />
-<col width="27%" />
-<col width="49%" />
+<col style="width: 24%" />
+<col style="width: 27%" />
+<col style="width: 49%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Property</th>
-<th class="head">Value</th>
-<th class="head">Description</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Property</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Description</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>id</td>
-<td>1234567890</td>
-<td>Advocate origin id</td>
+<tbody>
+<tr class="row-even"><td><p>id</p></td>
+<td><p>1234567890</p></td>
+<td><p>Advocate origin id</p></td>
 </tr>
-<tr class="row-odd"><td>new_customer</td>
-<td>false | true</td>
-<td>Advocate is a new customer or not</td>
+<tr class="row-odd"><td><p>new_customer</p></td>
+<td><p>false | true</p></td>
+<td><p>Advocate is a new customer or not</p></td>
 </tr>
-<tr class="row-even"><td>created_at</td>
-<td>“2016-07-27T00:00:00.000+03:00”</td>
-<td>Time when Advocate origin was created</td>
+<tr class="row-even"><td><p>created_at</p></td>
+<td><p>“2016-07-27T00:00:00.000+03:00”</p></td>
+<td><p>Time when Advocate origin was created</p></td>
 </tr>
-<tr class="row-odd"><td>event_category</td>
-<td>“purchase”</td>
-<td>Advocate origin event category</td>
+<tr class="row-odd"><td><p>event_category</p></td>
+<td><p>“purchase”</p></td>
+<td><p>Advocate origin event category</p></td>
 </tr>
-<tr class="row-even"><td>coupon_codes</td>
-<td>[“AD_DISCOUNT”]</td>
-<td>Coupon codes that are used in Advocate origin</td>
+<tr class="row-even"><td><p>coupon_codes</p></td>
+<td><p>[“AD_DISCOUNT”]</p></td>
+<td><p>Coupon codes that are used in Advocate origin</p></td>
 </tr>
-<tr class="row-odd"><td>ip.address</td>
-<td>“52.6.41.1”</td>
-<td>Advocate IP address</td>
+<tr class="row-odd"><td><p>ip.address</p></td>
+<td><p>“52.6.41.1”</p></td>
+<td><p>Advocate IP address</p></td>
 </tr>
-<tr class="row-even"><td>ip.qa</td>
-<td>false | true</td>
-<td>Shows if the IP address is listed as QA</td>
+<tr class="row-even"><td><p>ip.qa</p></td>
+<td><p>false | true</p></td>
+<td><p>Shows if the IP address is listed as QA</p></td>
 </tr>
-<tr class="row-odd"><td>ip.location.country</td>
-<td>“United States”</td>
-<td>Advocate geolocation country based on their IP address</td>
+<tr class="row-odd"><td><p>ip.location.country</p></td>
+<td><p>“United States”</p></td>
+<td><p>Advocate geolocation country based on their IP address</p></td>
 </tr>
-<tr class="row-even"><td>ip.location.city</td>
-<td>“San Jose”</td>
-<td>Advocate geolocation city based on their IP address</td>
+<tr class="row-even"><td><p>ip.location.city</p></td>
+<td><p>“San Jose”</p></td>
+<td><p>Advocate geolocation city based on their IP address</p></td>
 </tr>
-<tr class="row-odd"><td>ip.location.country_code</td>
-<td>“US”</td>
-<td>Advocate geolocation country code based on their IP address</td>
+<tr class="row-odd"><td><p>ip.location.country_code</p></td>
+<td><p>“US”</p></td>
+<td><p>Advocate geolocation country code based on their IP address</p></td>
 </tr>
-<tr class="row-even"><td>ip.location.subdivision_1_code</td>
-<td>“VA”</td>
-<td>Region-portion of the <a rel="nofollow" href="https://en.wikipedia.org/wiki/ISO_3166-2" target="_blank">ISO 3166-2</a> code for the 1st level region
-associated with the IP address</td>
+<tr class="row-even"><td><p>ip.location.subdivision_1_code</p></td>
+<td><p>“VA”</p></td>
+<td><p>Region-portion of the <a rel="nofollow" href="https://en.wikipedia.org/wiki/ISO_3166-2" target="_blank">ISO 3166-2</a> code for the 1st level region
+associated with the IP address</p></td>
 </tr>
-<tr class="row-odd"><td>ip.location.subdivision_1_code</td>
-<td>“”</td>
-<td>Region-portion of the <a rel="nofollow" href="https://en.wikipedia.org/wiki/ISO_3166-2" target="_blank">ISO 3166-2</a> code for the 2nd level region
-associated with the IP address</td>
+<tr class="row-odd"><td><p>ip.location.subdivision_1_code</p></td>
+<td><p>“”</p></td>
+<td><p>Region-portion of the <a rel="nofollow" href="https://en.wikipedia.org/wiki/ISO_3166-2" target="_blank">ISO 3166-2</a> code for the 2nd level region
+associated with the IP address</p></td>
 </tr>
-<tr class="row-even"><td>product.sku</td>
-<td>“AJ7292-002”</td>
-<td>Product SKU</td>
+<tr class="row-even"><td><p>product.sku</p></td>
+<td><p>“AJ7292-002”</p></td>
+<td><p>Product SKU</p></td>
 </tr>
-<tr class="row-odd"><td>product.title</td>
-<td>“Nike Air VaporMax 95”</td>
-<td>Product title</td>
+<tr class="row-odd"><td><p>product.title</p></td>
+<td><p>“Nike Air VaporMax 95”</p></td>
+<td><p>Product title</p></td>
 </tr>
-<tr class="row-even"><td>product.url</td>
-<td>“<a class="reference external" rel="nofollow" href="https://bit.ly/2IPp0rX">https://bit.ly/2IPp0rX</a>”</td>
-<td>Product URL</td>
+<tr class="row-even"><td><p>product.url</p></td>
+<td><p>“<a class="reference external" rel="nofollow" href="https://bit.ly/2IPp0rX">https://bit.ly/2IPp0rX</a>”</p></td>
+<td><p>Product URL</p></td>
 </tr>
-<tr class="row-odd"><td>product.image_url</td>
-<td>“<a class="reference external" rel="nofollow" href="https://bit.ly/2GuVAMQ">https://bit.ly/2GuVAMQ</a>”</td>
-<td>Product image URL</td>
+<tr class="row-odd"><td><p>product.image_url</p></td>
+<td><p>“<a class="reference external" rel="nofollow" href="https://bit.ly/2GuVAMQ">https://bit.ly/2GuVAMQ</a>”</p></td>
+<td><p>Product image URL</p></td>
 </tr>
-<tr class="row-even"><td>product.description</td>
-<td>“Cool sneakers”</td>
-<td>Product description</td>
+<tr class="row-even"><td><p>product.description</p></td>
+<td><p>“Cool sneakers”</p></td>
+<td><p>Product description</p></td>
 </tr>
-<tr class="row-odd"><td>product.custom_properties</td>
-<td>{“price”: “190”}</td>
-<td>Product custom properties</td>
+<tr class="row-odd"><td><p>product.custom_properties</p></td>
+<td><p>{“price”: “190”}</p></td>
+<td><p>Product custom properties</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <p><br></p>
-</div>
-<div class="section" id="coupon-code">
+</section>
+<section id="coupon-code">
 <h2>{{ coupon_code }}<a class="headerlink" href="#coupon-code" title="Permalink to this headline">¶</a></h2>
 <p><strong>Available in</strong>: Friend Claim Page, Advocate Redemption Email, Advocate Reward
 Paid Email <br>
@@ -269,21 +269,21 @@ giving out the Reward).</p>
 <p>When you want to use this Variable always keep in mind who you want to
 show it to because it has a scope:</p>
 <ul class="simple">
-<li>for Views which name starts with <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> it means Advocate Coupon Code</li>
-<li>for Views which name starts with <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> it means Friend Coupon Code</li>
+<li><p>for Views which name starts with <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> it means Advocate Coupon Code</p></li>
+<li><p>for Views which name starts with <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> it means Friend Coupon Code</p></li>
 </ul>
 <img alt="Variables: friend coupon code" src="../../_images/vars-friend-coupon-code.png" />
 <p><br></p>
 <p>Make sure Incentives are correct:</p>
 <ul class="simple">
-<li>If its <code class="docutils literal notranslate"><span class="pre">single-use</span></code> Coupon Code, make sure Coupon List exist and it has
-enough coupons and they are valid in terms of uniqueness and validity</li>
-<li>If its <code class="docutils literal notranslate"><span class="pre">multi-use</span></code> Coupon Code, make sure it has a correct value</li>
+<li><p>If its <code class="docutils literal notranslate"><span class="pre">single-use</span></code> Coupon Code, make sure Coupon List exist and it has
+enough coupons and they are valid in terms of uniqueness and validity</p></li>
+<li><p>If its <code class="docutils literal notranslate"><span class="pre">multi-use</span></code> Coupon Code, make sure it has a correct value</p></li>
 </ul>
 <img alt="Variables: coupon list" src="../../_images/vars-coupon-list.png" />
 <p><hr></p>
-</div>
-<div class="section" id="incentives">
+</section>
+<section id="incentives">
 <h2>{{ incentives }}<a class="headerlink" href="#incentives" title="Permalink to this headline">¶</a></h2>
 <p><strong>Available in</strong>: all Views <br>
 <strong>Type</strong>: <code class="docutils literal notranslate"><span class="pre">Object</span></code></p>
@@ -313,46 +313,47 @@ several Incentives which are also objects.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Give your friend 100% OFF!
 </pre></div>
 </div>
-<table border="1" class="colwidths-given docutils">
+<table class="colwidths-given docutils align-default">
 <colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="50%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Property</th>
-<th class="head">Value</th>
-<th class="head">Description</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Property</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Description</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>Liquid slug</td>
-<td>“referrer”</td>
-<td>Incentive identifier</td>
+<tbody>
+<tr class="row-even"><td><p>Liquid slug</p></td>
+<td><p>“referrer”</p></td>
+<td><p>Incentive identifier</p></td>
 </tr>
-<tr class="row-odd"><td>amount</td>
-<td>50.0</td>
-<td>Incentive amount (float)</td>
+<tr class="row-odd"><td><p>amount</p></td>
+<td><p>50.0</p></td>
+<td><p>Incentive amount (float)</p></td>
 </tr>
-<tr class="row-even"><td>description</td>
-<td>“$50”</td>
-<td>Formatted Incentive including currency and amount</td>
+<tr class="row-even"><td><p>description</p></td>
+<td><p>“$50”</p></td>
+<td><p>Formatted Incentive including currency and amount</p></td>
 </tr>
-<tr class="row-odd"><td>percentage</td>
-<td>true | false</td>
-<td>Type of Incentive amount: fixed or percentage</td>
+<tr class="row-odd"><td><p>percentage</p></td>
+<td><p>true | false</p></td>
+<td><p>Type of Incentive amount: fixed or percentage</p></td>
 </tr>
-<tr class="row-even"><td>required_actions</td>
-<td>0</td>
-<td>Number of required actions to trigger reward (i.e. 2 purchases
-needed to trigger reward)</td>
+<tr class="row-even"><td><p>required_actions</p></td>
+<td><p>0</p></td>
+<td><p>Number of required actions to trigger reward (i.e. 2 purchases
+needed to trigger reward)</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="This API allows you to access and check coupons." name="description" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="This API allows you to access and check coupons." name="description" />
 
     <title>Coupons &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/api_v2/coupons.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Metrics" href="metrics.html" />
@@ -95,7 +95,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="api-v2-coupons"></span><div class="section" id="coupons">
+  <span class="target" id="api-v2-coupons"></span><section id="coupons">
 <h1>Coupons<a class="headerlink" href="#coupons" title="Permalink to this headline">¶</a></h1>
 <p>This API allows you to access and check coupons. See examples below.</p>
 <p><br></p>
@@ -104,23 +104,23 @@
 </div>
 <p>Returns a coupon information.</p>
 <div class="ptable docutils container">
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="23%" />
-<col width="77%" />
+<col style="width: 23%" />
+<col style="width: 77%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Parameter</th>
-<th class="head">Description</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Description</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>site_slug</td>
-<td>Your Talkable Site ID. You can get this from your
-Talkable dashboard after you log in and create a site.</td>
+<tbody>
+<tr class="row-even"><td><p>site_slug</p></td>
+<td><p>Your Talkable Site ID. You can get this from your
+Talkable dashboard after you log in and create a site.</p></td>
 </tr>
-<tr class="row-odd"><td>code</td>
-<td>Coupon code</td>
+<tr class="row-odd"><td><p>code</p></td>
+<td><p>Coupon code</p></td>
 </tr>
 </tbody>
 </table>
@@ -131,33 +131,33 @@ Talkable dashboard after you log in and create a site.</td>
 </div>
 <p>Checks if given coupon code belongs to given person.</p>
 <div class="ptable docutils container">
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="23%" />
-<col width="77%" />
+<col style="width: 23%" />
+<col style="width: 77%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Parameter</th>
-<th class="head">Description</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Description</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>site_slug</td>
-<td>Your Talkable Site ID. You can get this from your
-Talkable dashboard after you log in and create a site.</td>
+<tbody>
+<tr class="row-even"><td><p>site_slug</p></td>
+<td><p>Your Talkable Site ID. You can get this from your
+Talkable dashboard after you log in and create a site.</p></td>
 </tr>
-<tr class="row-odd"><td>code</td>
-<td>Coupon code</td>
+<tr class="row-odd"><td><p>code</p></td>
+<td><p>Coupon code</p></td>
 </tr>
-<tr class="row-even"><td>email</td>
-<td>Person’s email</td>
+<tr class="row-even"><td><p>email</p></td>
+<td><p>Person’s email</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="section" id="example">
+<section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="find-a-coupon-by-code">
+<section id="find-a-coupon-by-code">
 <h3>Find a coupon by code<a class="headerlink" href="#find-a-coupon-by-code" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GET https://www.talkable.com/api/v2/coupons/COUPON_CODE?site_slug=my-store
 </pre></div>
@@ -168,7 +168,7 @@ Talkable dashboard after you log in and create a site.</td>
   <span class="s2">&quot;result&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;talkable_coupon&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="s2">&quot;coupon&quot;</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">233</span><span class="p">,</span>
+      <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">233</span><span class="p">,</span>
       <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;COUPON_CODE&quot;</span><span class="p">,</span>
       <span class="s2">&quot;single_use&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
       <span class="s2">&quot;used&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
@@ -180,7 +180,7 @@ Talkable dashboard after you log in and create a site.</td>
       <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2017-04-26T07:41:31.000-07:00&quot;</span><span class="p">,</span>
       <span class="s2">&quot;person&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;personal_claim_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://share.mystore.com/by/customer@example.com&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;events_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;events_count&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
         <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
         <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span>
         <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;customer@example.com&quot;</span><span class="p">,</span>
@@ -189,20 +189,20 @@ Talkable dashboard after you log in and create a site.</td>
         <span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span> <span class="p">{</span>
-          <span class="s2">&quot;total&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-          <span class="s2">&quot;approved&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-          <span class="s2">&quot;pending&quot;</span><span class="o">:</span> <span class="mi">0</span>
+          <span class="s2">&quot;total&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+          <span class="s2">&quot;approved&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+          <span class="s2">&quot;pending&quot;</span><span class="o">:</span> <span class="mf">0</span>
         <span class="p">}</span>
       <span class="p">},</span>
       <span class="s2">&quot;campaign&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;appearance&quot;</span><span class="o">:</span> <span class="s2">&quot;inline&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">196</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">196</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;Deal for friends&quot;</span><span class="p">,</span>
         <span class="s2">&quot;new_customer&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;origin_min_age&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;origin_max_age&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;tag_names&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;invite&quot;</span><span class="p">],</span>
-        <span class="s2">&quot;slug&quot;</span><span class="o">:</span> <span class="mi">196</span><span class="p">,</span>
+        <span class="s2">&quot;slug&quot;</span><span class="o">:</span> <span class="mf">196</span><span class="p">,</span>
         <span class="s2">&quot;is_active&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;Live&quot;</span>
       <span class="p">},</span>
@@ -237,8 +237,8 @@ Talkable dashboard after you log in and create a site.</td>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="check-if-a-coupon-belongs-to-a-person">
+</section>
+<section id="check-if-a-coupon-belongs-to-a-person">
 <h3>Check if a coupon belongs to a person<a class="headerlink" href="#check-if-a-coupon-belongs-to-a-person" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GET https://www.talkable.com/api/v2/coupons/COUPON_CODE/permission/user@example.com?site_slug=my-store
 </pre></div>
@@ -258,7 +258,7 @@ Talkable dashboard after you log in and create a site.</td>
       <span class="s2">&quot;coupon_used&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
     <span class="p">},</span>
     <span class="s2">&quot;coupon&quot;</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">233</span><span class="p">,</span>
+      <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">233</span><span class="p">,</span>
       <span class="s2">&quot;code&quot;</span><span class="o">:</span> <span class="s2">&quot;COUPON_CODE&quot;</span><span class="p">,</span>
       <span class="s2">&quot;single_use&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
       <span class="s2">&quot;used&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
@@ -270,7 +270,7 @@ Talkable dashboard after you log in and create a site.</td>
       <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2017-04-26T07:41:31.000-07:00&quot;</span><span class="p">,</span>
       <span class="s2">&quot;person&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;personal_claim_url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://share.mystore.com/by/customer@example.com&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;events_count&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;events_count&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
         <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
         <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span>
         <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;customer@example.com&quot;</span><span class="p">,</span>
@@ -279,20 +279,20 @@ Talkable dashboard after you log in and create a site.</td>
         <span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
         <span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span> <span class="p">{</span>
-          <span class="s2">&quot;total&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-          <span class="s2">&quot;approved&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-          <span class="s2">&quot;pending&quot;</span><span class="o">:</span> <span class="mi">0</span>
+          <span class="s2">&quot;total&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+          <span class="s2">&quot;approved&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+          <span class="s2">&quot;pending&quot;</span><span class="o">:</span> <span class="mf">0</span>
         <span class="p">}</span>
       <span class="p">},</span>
       <span class="s2">&quot;campaign&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;appearance&quot;</span><span class="o">:</span> <span class="s2">&quot;inline&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">196</span><span class="p">,</span>
+        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">196</span><span class="p">,</span>
         <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;Deal for friends&quot;</span><span class="p">,</span>
         <span class="s2">&quot;tag_names&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;invite&quot;</span><span class="p">],</span>
         <span class="s2">&quot;origin_min_age&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;origin_max_age&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
         <span class="s2">&quot;new_customer&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="s2">&quot;slug&quot;</span><span class="o">:</span> <span class="mi">196</span><span class="p">,</span>
+        <span class="s2">&quot;slug&quot;</span><span class="o">:</span> <span class="mf">196</span><span class="p">,</span>
         <span class="s2">&quot;is_active&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;Live&quot;</span>
       <span class="p">},</span>
@@ -332,11 +332,12 @@ Talkable dashboard after you log in and create a site.</td>
 <div class="toctree-wrapper compound">
 </div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>

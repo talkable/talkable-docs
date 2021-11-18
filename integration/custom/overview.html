@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="You can integrate Talkable referral marketing platform to e-commerce sites in a few quick steps." name="description" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="You can integrate Talkable referral marketing platform to e-commerce sites in a few quick steps." name="description" />
 
     <title>Integration High-Level Overview &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" href="../../_static/talkable.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/integration/custom/overview.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Integration Components" href="integration_components.html" />
@@ -82,27 +82,26 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="integration-custom-overview"></span><div class="section" id="integration-high-level-overview">
+  <span class="target" id="integration-custom-overview"></span><section id="integration-high-level-overview">
 <h1>Integration High-Level Overview<a class="headerlink" href="#integration-high-level-overview" title="Permalink to this headline">¶</a></h1>
 <p>Integrating Talkable referral marketing platform to e-commerce sites is done in
 a few quick steps by adding the below scripts to your site.</p>
 <blockquote>
 <div><div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p>All design and referral campaign setup is done inside the Talkable platform,
 then via ‘iframe’ referral campaign content is injected into the e-commerce
 site. The below scripts also handle the collection of specific necessary user
 data for Talkable to service the referral campaigns.</p>
-<p class="last">Site-specific integration scripts are found after logging in at
+<p>Site-specific integration scripts are found after logging in at
 <code class="docutils literal notranslate"><span class="pre">https://www.admin.talkable.com/sites/&lt;YOUR-TALKABLE-SITE-ID&gt;/integration/other</span></code></p>
 </div>
 </div></blockquote>
 <h2>Integration Steps</h2><ol class="arabic">
-<li><p class="first">Add the <a class="reference internal" href="integration_components.html#integration-custom-integration-components-initialization-script"><span class="std std-ref">Talkable Initialization Script</span></a>
+<li><p>Add the <a class="reference internal" href="integration_components.html#integration-custom-integration-components-initialization-script"><span class="std std-ref">Talkable Initialization Script</span></a>
 to your header or any template spanning every page. Surface variables for
-email and name if the user is logged in.</p>
-</li>
-<li><p class="first">Add the <a class="reference internal" href="integration_components.html#integration-custom-integration-components-post-purchase-script"><span class="std std-ref">Talkable Post Purchase Script</span></a>
+email and name if the user is logged in.</p></li>
+<li><p>Add the <a class="reference internal" href="integration_components.html#integration-custom-integration-components-post-purchase-script"><span class="std std-ref">Talkable Post Purchase Script</span></a>
 to your checkout confirmation page to pass purchase details to Talkable for
 all purchases.</p>
 <p>Surface purchase detail variables as described in more detail in
@@ -111,16 +110,16 @@ all purchases.</p>
 </ol>
 <blockquote>
 <div><div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p>If a business has both one-time purchases and subscription transactions, or
 the business has a strictly subscription or SaaS model we recommend integrating
 the ‘Post Purchase’ through Events. <a class="reference internal" href="../../advanced_features/events.html#advanced-features-events"><span class="std std-ref">Learn more</span></a>.</p>
-<p class="last">Post Purchase step is the only step which changes for subscription business
+<p>Post Purchase step is the only step which changes for subscription business
 model integration - other steps remain the same.</p>
 </div>
 </div></blockquote>
 <ol class="arabic" start="3">
-<li><p class="first">To host the Invite Standalone campaign, create a new HTML page with standard
+<li><p>To host the Invite Standalone campaign, create a new HTML page with standard
 header/footer. Best practice is to create this page on <code class="docutils literal notranslate"><span class="pre">www.your-site.com/share</span></code></p>
 <p>The Invite Standalone campaign will be your landing page to drive traffic to
 from marketing email and other onsite and offsite locations to refer friends.
@@ -130,7 +129,7 @@ Copy &amp; paste the Talkable container DIV element into the body as seen in
 </pre></div>
 </div>
 </li>
-<li><p class="first">To host the Advocate Dashboard Standalone campaign, create an additional new
+<li><p>To host the Advocate Dashboard Standalone campaign, create an additional new
 HTML page under your user accounts section behind login.</p>
 <p>This Advocate Dashboard Standalone page allows Advocates to view referral
 details for the friends they’ve shared with. Copy &amp; paste the Talkable container
@@ -141,9 +140,10 @@ DIV element into the body as seen in
 </div>
 </li>
 </ol>
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>

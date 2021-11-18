@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Integration with Third Party Deep Linking Services &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/android_sdk/custom_deep_linking.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Testing" href="testing.html" />
@@ -87,8 +87,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="integration-with-third-party-deep-linking-services">
-<span id="android-sdk-custom-deep-linking"></span><h1>Integration with Third Party Deep Linking Services<a class="headerlink" href="#integration-with-third-party-deep-linking-services" title="Permalink to this headline">¶</a></h1>
+  <span class="target" id="android-sdk-custom-deep-linking"></span><section id="integration-with-third-party-deep-linking-services">
+<h1>Integration with Third Party Deep Linking Services<a class="headerlink" href="#integration-with-third-party-deep-linking-services" title="Permalink to this headline">¶</a></h1>
 <p>Talkable can work with third party deep linking providers such as GetSocial,
 Branch.io, and Firebase. Talkable is able to use deep linking functionality to
 track app installations and reward your Advocates and Friends for installing your
@@ -99,32 +99,32 @@ device, this link will not only redirect them to the App Store to install the ap
 but also track that the app was installed using a referral link. Deep linking can
 also be used to send a Friend to a specific place in the app once it’s installed
 and opened for the first time, show them personalized messages, and more.</p>
-<div class="section" id="configure-your-talkable-campaign">
+<section id="configure-your-talkable-campaign">
 <h2>1. Configure your Talkable campaign<a class="headerlink" href="#configure-your-talkable-campaign" title="Permalink to this headline">¶</a></h2>
 <p>To use deep linking with Talkable campaigns, simply use your deep link URL as your Talkable Site URL.</p>
 <img alt="../_images/site_url.png" src="../_images/site_url.png" />
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p>If you have configured a custom Friend Destination URL for your campaign,
 make sure the following GET parameters are present in the final URL:
 <code class="docutils literal notranslate"><span class="pre">?tkbl_cvuuid={{</span> <span class="pre">visitor_uuid</span> <span class="pre">}}&amp;talkable_visitor_offer_id={{</span> <span class="pre">friend_offer.id</span> <span class="pre">}}</span></code>.</p>
-<p class="last">All major deep linking providers support passing additional GET parameters
+<p>All major deep linking providers support passing additional GET parameters
 with the deep link. This functionality is used to pass the Friend’s identifying
 information to the Talkable SDK in your iOS app. To use this functionality with
 Firebase, refer to this document: <a class="reference external" rel="nofollow" href="https://firebase.google.com/docs/dynamic-links/create-manually">Manually constructing a Dynamic Link URL</a>.</p>
 </div>
-</div>
-<div class="section" id="pass-deep-linking-params-to-the-talkable-sdk">
+</section>
+<section id="pass-deep-linking-params-to-the-talkable-sdk">
 <h2>2. Pass deep linking params to the Talkable SDK<a class="headerlink" href="#pass-deep-linking-params-to-the-talkable-sdk" title="Permalink to this headline">¶</a></h2>
 <p>Retrieve deep linking params as described in your deep linking provider’s
 documentation and pass these params to the Talkable SDK using the
 <code class="docutils literal notranslate"><span class="pre">TalkableDeepLinking.track()</span></code> method. This method accepts a single argument of
 following types:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">JSONObject</span></code> (Branch.io)</li>
-<li><code class="docutils literal notranslate"><span class="pre">Map&lt;String,</span> <span class="pre">String&gt;</span></code> (GetSocial)</li>
-<li><code class="docutils literal notranslate"><span class="pre">android.net.Uri</span></code> (Firebase)</li>
-<li><code class="docutils literal notranslate"><span class="pre">android.app.Activity</span></code> (native deep linking)</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">JSONObject</span></code> (Branch.io)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Map&lt;String,</span> <span class="pre">String&gt;</span></code> (GetSocial)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">android.net.Uri</span></code> (Firebase)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">android.app.Activity</span></code> (native deep linking)</p></li>
 </ul>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// For Branch.io</span>
 
@@ -137,8 +137,8 @@ following types:</p>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Most deep linking services provide additional parameters in the deep link
+<p class="admonition-title">Note</p>
+<p>Most deep linking services provide additional parameters in the deep link
 handler to indicate whether the app was installed on this device for the first
 time, reinstalled or simply launched. You can use these params to register
 installs only when desired conditions are met.</p>
@@ -182,10 +182,11 @@ installs only when desired conditions are met.</p>
 installation event in Talkable and complete the referral cycle.
 You can then use the <a class="reference internal" href="api.html#android-sdk-api"><span class="std std-ref">TalkableApi.retrieveRewards()</span></a>
 method to check for rewards.</p>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="It is possible to encrypt Advocate, Friend, and Loyalty member emails on back-end if you want to provide additional security." name="description" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="It is possible to encrypt Advocate, Friend, and Loyalty member emails on back-end if you want to provide additional security." name="description" />
 
     <title>Params Encryption &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/advanced_features/params_encryption.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Integrating Events" href="events.html" />
@@ -102,18 +102,18 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="advanced-features-params-encryption"></span><div class="section" id="params-encryption">
+  <span class="target" id="advanced-features-params-encryption"></span><section id="params-encryption">
 <h1>Params Encryption<a class="headerlink" href="#params-encryption" title="Permalink to this headline">¶</a></h1>
 <p>For additional security, it is possible to encrypt <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>, <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr>, and <abbr title="Person who participates in the Loyalty program">Loyalty member</abbr> email,
 as well as <a class="reference internal" href="passing_custom_data.html#advanced-features-passing-custom-data"><span class="std std-ref">Custom User Data</span></a> on back-end.
 This can be done by using 2048-bit key <a class="reference external" rel="nofollow" href="https://d2jjzw81hqbuqv.cloudfront.net/integration/talkable_public_key.pem">Talkable Public Key</a>.
 So, instead of sending params in plain text, you can send them encrypted.</p>
-<div class="section" id="passing-email-as-a-get-parameter-to-standalone-campaign">
+<section id="passing-email-as-a-get-parameter-to-standalone-campaign">
 <h2>Passing email as a GET parameter to Standalone Campaign<a class="headerlink" href="#passing-email-as-a-get-parameter-to-standalone-campaign" title="Permalink to this headline">¶</a></h2>
 <p>Also it’s possible to pass encrypted email as a GET parameter (e.g. for CTA links that
 point to standalone invite page). But to do that encrypted email should be <strong>URL-encoded</strong>.</p>
-</div>
-<div class="section" id="ruby-example">
+</section>
+<section id="ruby-example">
 <h2>Ruby Example<a class="headerlink" href="#ruby-example" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="nb">require</span> <span class="s1">&#39;openssl&#39;</span>
 <span class="nb">require</span> <span class="s1">&#39;base64&#39;</span>
@@ -133,18 +133,18 @@ point to standalone invite page). But to do that encrypted email should be <stro
 <span class="nb">puts</span> <span class="n">encode_param_for_talkable</span><span class="p">(</span><span class="s2">&quot;email_to_encrypt@example.com&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="java-example">
+</section>
+<section id="java-example">
 <h2>Java Example<a class="headerlink" href="#java-example" title="Permalink to this headline">¶</a></h2>
 <p>This example uses <a class="reference external" rel="nofollow" href="https://www.bouncycastle.org">Bouncy Castle library</a> and has been tested on:</p>
 <ul class="simple">
-<li>bcprov-jdk15on-156.jar (Provider)</li>
-<li>bcpkix-jdk15on-156.jar (PKIX/CMS/EAC/PKCS/OCSP/TSP/OPENSSL)</li>
+<li><p>bcprov-jdk15on-156.jar (Provider)</p></li>
+<li><p>bcpkix-jdk15on-156.jar (PKIX/CMS/EAC/PKCS/OCSP/TSP/OPENSSL)</p></li>
 </ul>
 <p>that can be downloaded from <a class="reference external" rel="nofollow" href="https://www.bouncycastle.org/latest_releases.html">Bouncy Castle Latest Releases</a>.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Please note that loading a Security Provider and a key into memory takes more time than encrypting.
+<p class="admonition-title">Note</p>
+<p>Please note that loading a Security Provider and a key into memory takes more time than encrypting.
 So it is recommended to store the key in memory instead of loading it each time to avoid performance overhead.</p>
 </div>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">javax.crypto.BadPaddingException</span><span class="p">;</span>
@@ -212,8 +212,8 @@ So it is recommended to store the key in memory instead of loading it each time 
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="front-end-part">
+</section>
+<section id="front-end-part">
 <h2>Front-end Part<a class="headerlink" href="#front-end-part" title="Permalink to this headline">¶</a></h2>
 <p>Please modify the front-end using this pseudo code example:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
@@ -228,10 +228,11 @@ So it is recommended to store the key in memory instead of loading it each time 
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>

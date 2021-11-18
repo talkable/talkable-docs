@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="Check Unsubscribe Webhook ensures that emails are not sent to unsubscribed users." name="description" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Check Unsubscribe Webhook ensures that emails are not sent to unsubscribed users." name="description" />
 
     <title>Check Unsubscribe Webhook &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/web_hooks/check_unsubscribe.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Event Webhook" href="event.html" />
@@ -88,7 +88,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="web-hooks-check-unsubscribe"></span><div class="section" id="check-unsubscribe-webhook">
+  <span class="target" id="web-hooks-check-unsubscribe"></span><section id="check-unsubscribe-webhook">
 <h1>Check Unsubscribe Webhook<a class="headerlink" href="#check-unsubscribe-webhook" title="Permalink to this headline">¶</a></h1>
 <p>Talkable Check Unsubscribe Webhook is used to ensure emails are not sent from
 Talkable to user email addresses who have unsubscribed from the client side.
@@ -98,57 +98,60 @@ from Talkable referral related emails at any time from those emails directly.</p
 otherwise valid customer email, aimed at checking if the email is also valid on
 merchant side.</p>
 <div class="admonition important">
-<p class="first admonition-title">Important</p>
+<p class="admonition-title">Important</p>
 <p>If this Check Unsubscribe Webhook is used, the response JSON returned by
 merchant must contain the following fields:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="s2">&quot;result&quot;</span><span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;unsubscribed&quot;</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}</span> <span class="p">}</span>
 </pre></div>
 </div>
-<p class="last">The ‘unsubscribed’ field should have a boolean value,
+<p>The ‘unsubscribed’ field should have a boolean value,
 representing unsubscribed status according to the merchant info.</p>
 </div>
 <h2>Payload parameters provided</h2><ul class="simple">
-<li><strong>campaign</strong> — subhash of parameters describing the campaign<ul>
-<li><strong>id</strong> — unique campaign ID</li>
-<li><strong>cached_slug</strong> — unique SEO friendly ID</li>
-<li><strong>type</strong> — either <em>“StandaloneCampaign”</em> or <em>“DoubleSidedDealCampaign”</em></li>
-<li><strong>tag_names</strong> — array of campaign’s tags</li>
+<li><p><strong>campaign</strong> — subhash of parameters describing the campaign</p>
+<ul>
+<li><p><strong>id</strong> — unique campaign ID</p></li>
+<li><p><strong>cached_slug</strong> — unique SEO friendly ID</p></li>
+<li><p><strong>type</strong> — either <em>“StandaloneCampaign”</em> or <em>“DoubleSidedDealCampaign”</em></p></li>
+<li><p><strong>tag_names</strong> — array of campaign’s tags</p></li>
 </ul>
 </li>
-<li><strong>recipient</strong> — subhash of parameters describing the recipient<ul>
-<li><strong>first_name</strong> — recipient’s first name</li>
-<li><strong>last_name</strong> — recipient’s last name</li>
-<li><strong>email</strong> — recipient’s email address</li>
-<li><strong>username</strong> — recipient’s username</li>
-<li><strong>unsubscribed_at</strong> — date recipient has unsubscribed</li>
-<li><strong>subscribed_at</strong> — date person has subscribed (deprecated; use opted_in_at instead)</li>
-<li><strong>opted_in_at</strong> — date recipient has subscribed</li>
-<li><strong>sub_choice</strong> — subscription choice</li>
-<li><strong>custom_properties</strong> — hash of recipient’s custom properties (optional)</li>
-<li><strong>referral_counts</strong> - subhash of <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>’s referral counts<ul>
-<li><strong>total</strong> — created referrals count</li>
-<li><strong>approved</strong> — approved referrals count</li>
-<li><strong>pending</strong> — count of waiting for approval referrals</li>
+<li><p><strong>recipient</strong> — subhash of parameters describing the recipient</p>
+<ul>
+<li><p><strong>first_name</strong> — recipient’s first name</p></li>
+<li><p><strong>last_name</strong> — recipient’s last name</p></li>
+<li><p><strong>email</strong> — recipient’s email address</p></li>
+<li><p><strong>username</strong> — recipient’s username</p></li>
+<li><p><strong>unsubscribed_at</strong> — date recipient has unsubscribed</p></li>
+<li><p><strong>subscribed_at</strong> — date person has subscribed (deprecated; use opted_in_at instead)</p></li>
+<li><p><strong>opted_in_at</strong> — date recipient has subscribed</p></li>
+<li><p><strong>sub_choice</strong> — subscription choice</p></li>
+<li><p><strong>custom_properties</strong> — hash of recipient’s custom properties (optional)</p></li>
+<li><p><strong>referral_counts</strong> - subhash of <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>’s referral counts</p>
+<ul>
+<li><p><strong>total</strong> — created referrals count</p></li>
+<li><p><strong>approved</strong> — approved referrals count</p></li>
+<li><p><strong>pending</strong> — count of waiting for approval referrals</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><strong>email_type</strong> — described view category</li>
+<li><p><strong>email_type</strong> — described view category</p></li>
 </ul>
 <h3>View categories</h3><p>View category can be one of the following:</p>
 <ul class="simple">
-<li>notifier_offers_email</li>
-<li>notifier_offers_share_via_email</li>
-<li>notifier_offers_share_via_email_reminder</li>
-<li>advocate_rewards_confirmation</li>
-<li>advocate_rewards_paid</li>
-<li>friend_rewards_paid</li>
+<li><p>notifier_offers_email</p></li>
+<li><p>notifier_offers_share_via_email</p></li>
+<li><p>notifier_offers_share_via_email_reminder</p></li>
+<li><p>advocate_rewards_confirmation</p></li>
+<li><p>advocate_rewards_paid</p></li>
+<li><p>friend_rewards_paid</p></li>
 </ul>
 <h2>Sample payload</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;campaign&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">509365458</span><span class="p">,</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">509365458</span><span class="p">,</span>
     <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;StandaloneCampaign&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;cached_slug&quot;</span><span class="o">:</span> <span class="mi">509365458</span><span class="p">,</span>
+    <span class="s2">&quot;cached_slug&quot;</span><span class="o">:</span> <span class="mf">509365458</span><span class="p">,</span>
     <span class="s2">&quot;tag_names&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">],</span>
     <span class="s2">&quot;origin_min_age&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
     <span class="s2">&quot;origin_max_age&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
@@ -164,9 +167,9 @@ representing unsubscribed status according to the merchant info.</p>
     <span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-09-27T22:55:40.610+03:00&quot;</span><span class="p">,</span>
     <span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">&quot;total&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-      <span class="s2">&quot;approved&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-      <span class="s2">&quot;pending&quot;</span><span class="o">:</span> <span class="mi">0</span>
+      <span class="s2">&quot;total&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+      <span class="s2">&quot;approved&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+      <span class="s2">&quot;pending&quot;</span><span class="o">:</span> <span class="mf">0</span>
     <span class="p">},</span>
     <span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
     <span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span> <span class="kc">null</span>
@@ -182,9 +185,10 @@ representing unsubscribed status according to the merchant info.</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>

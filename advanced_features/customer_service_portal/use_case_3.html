@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Use case #3: Who should get the reward? &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" href="../../_static/talkable.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/advanced_features/customer_service_portal/use_case_3.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Use case #4: Did my Friend get an email?" href="use_case_4.html" />
@@ -105,8 +105,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="use-case-3-br-who-should-get-the-reward">
-<span id="advanced-features-customer-service-portal-use-case-3"></span><h1>Use case #3: <br> Who should get the reward?<a class="headerlink" href="#use-case-3-br-who-should-get-the-reward" title="Permalink to this headline">¶</a></h1>
+  <span class="target" id="advanced-features-customer-service-portal-use-case-3"></span><section id="use-case-3-br-who-should-get-the-reward">
+<h1>Use case #3: <br> Who should get the reward?<a class="headerlink" href="#use-case-3-br-who-should-get-the-reward" title="Permalink to this headline">¶</a></h1>
 <p>Talkable does not issue a reward in all referral cases. There may be numerous reasons why a reward is not issued to
 an Advocate or Friend. The easiest way to find out the reward status is by visiting the Referrals tab:</p>
 <img alt="../../_images/referrals.jpg" src="../../_images/referrals.jpg" />
@@ -115,63 +115,63 @@ status explains why the reward was not given.</p>
 <img alt="../../_images/reason_reward.jpg" src="../../_images/reason_reward.jpg" />
 <p>Every reward has the following possible statuses:</p>
 <ul class="simple">
-<li><strong>Pending</strong>: the reward is awaiting referral approval. The referral can either be approved manually or automatically,
+<li><p><strong>Pending</strong>: the reward is awaiting referral approval. The referral can either be approved manually or automatically,
 depending on your configuration. If the referral status is Pending you may wait until the referral auto-approval
 happens. Otherwise please press “Void” or “Approve” button in the referral actions section, to either block or issue
-the reward.</li>
-<li><strong>Waiting for coupon</strong>: there are not enough coupons left to pay the reward. Click on the reward link → Incentive
-type → Remember the coupon list chosen → Manage coupon lists → Find the desired coupon list and press “Add coupons”.</li>
-<li><strong>Given</strong>: the reward was paid to the person but Talkable does not have information whether it was used or not.
-Most likely it was not yet used.</li>
-<li><strong>Voided</strong>: the reward was voided because the referral was voided by a user manually.</li>
-<li><strong>Blocked/No reward</strong>: the reward was blocked either because the associated referral was blocked according to
-Fraud Settings or because of other reasons: incentive criteria has blocked it, or the person was blocklisted.</li>
+the reward.</p></li>
+<li><p><strong>Waiting for coupon</strong>: there are not enough coupons left to pay the reward. Click on the reward link → Incentive
+type → Remember the coupon list chosen → Manage coupon lists → Find the desired coupon list and press “Add coupons”.</p></li>
+<li><p><strong>Given</strong>: the reward was paid to the person but Talkable does not have information whether it was used or not.
+Most likely it was not yet used.</p></li>
+<li><p><strong>Voided</strong>: the reward was voided because the referral was voided by a user manually.</p></li>
+<li><p><strong>Blocked/No reward</strong>: the reward was blocked either because the associated referral was blocked according to
+Fraud Settings or because of other reasons: incentive criteria has blocked it, or the person was blocklisted.</p></li>
 </ul>
 <img alt="../../_images/referral_incentive.jpg" src="../../_images/referral_incentive.jpg" />
 <p>(All incentive criteria are defined in Campaign Rules → Incentives. See reward criteria section.)</p>
 <p>Here are some common incentive criteria block reasons:</p>
 <ul class="simple">
-<li><strong>Friend didn’t meet minimum purchase requirement</strong>. On a screenshot above Friend’s referral purchase subtotal
+<li><p><strong>Friend didn’t meet minimum purchase requirement</strong>. On a screenshot above Friend’s referral purchase subtotal
 should be over $20. The incentive criteria will block Advocate’s reward in case Friend’s order subtotal will
-be less (post discount).</li>
-<li><strong>Friend’s offer was expired</strong>. Based on Campaign Rules setup, Friend’s offer may expire after a certain period
+be less (post discount).</p></li>
+<li><p><strong>Friend’s offer was expired</strong>. Based on Campaign Rules setup, Friend’s offer may expire after a certain period
 of time. Most likely the Friend received their coupon code by visiting a share link and then decided to save their
 discount for later. If Friend makes a purchase after their offer expires (using that coupon) the Advocate will not
-get a reward.</li>
-<li><strong>Friend is not a new customer</strong>. Friend was an existing customer (&gt; 1 purchase tracked) while making their referral
-purchase, however the incentive configuration only allows referring new customers.</li>
-<li><strong>Friend has already been referred</strong>. The Advocate has already referred this Friend before but the incentive
-configuration only allows referring the same Friend only once.</li>
+get a reward.</p></li>
+<li><p><strong>Friend is not a new customer</strong>. Friend was an existing customer (&gt; 1 purchase tracked) while making their referral
+purchase, however the incentive configuration only allows referring new customers.</p></li>
+<li><p><strong>Friend has already been referred</strong>. The Advocate has already referred this Friend before but the incentive
+configuration only allows referring the same Friend only once.</p></li>
 </ul>
 <p>Other reasons why a reward can be blocked (not incentive related):</p>
 <ul class="simple">
-<li><strong>Advocate has reached maximum rewards</strong>. This is because Talkable has set a threshold for the maximum number of
+<li><p><strong>Advocate has reached maximum rewards</strong>. This is because Talkable has set a threshold for the maximum number of
 rewards that an Advocate can receive. The Friend may be rewarded in this case (as in the example above),
-but not the Advocate.</li>
-<li>The associated referral was blocked/voided for self/cross referral.</li>
+but not the Advocate.</p></li>
+<li><p>The associated referral was blocked/voided for self/cross referral.</p></li>
 </ul>
-<div class="section" id="handling-customer-inquiries">
+<section id="handling-customer-inquiries">
 <h2>Handling customer inquiries<a class="headerlink" href="#handling-customer-inquiries" title="Permalink to this headline">¶</a></h2>
 <p>Here is how to detect self-referrals in case you’ve got an email/call from a customer:</p>
 <ol class="arabic simple">
-<li>Enter the customer’s email address in the Person Lookup.</li>
-<li>Review the “Referrals” tab and look for a “self-referral” alert:</li>
+<li><p>Enter the customer’s email address in the Person Lookup.</p></li>
+<li><p>Review the “Referrals” tab and look for a “self-referral” alert:</p></li>
 </ol>
 <img alt="../../_images/self_referral.jpg" src="../../_images/self_referral.jpg" />
 <p>3. Inspect the customer’s email address to see if it’s the same or similar to the Friends; you  can also inspect inside
 the referral details the IP address and cookie to see if they match:</p>
 <img alt="../../_images/fraud_settings.jpg" src="../../_images/fraud_settings.jpg" />
 <ol class="arabic simple" start="4">
-<li>If it’s not obvious why the customer was flagged for self-referral (meaning that none of these three items matched),
-then you should click “Details” to dive deeper.</li>
-<li>Inspect to see if any other “blocked reasons” appear. In the below case, we see that not only do the email addresses
+<li><p>If it’s not obvious why the customer was flagged for self-referral (meaning that none of these three items matched),
+then you should click “Details” to dive deeper.</p></li>
+<li><p>Inspect to see if any other “blocked reasons” appear. In the below case, we see that not only do the email addresses
 match, but there was also a matching cookie on the Friend purchase (meaning they used the same browsing session to both
 share as an Advocate and click on the share link as a Friend), and lastly, there’s a matching combination of IP address
-and user agent - meaning the Advocate and Friend were using the same device and IP address, in combination.</li>
+and user agent - meaning the Advocate and Friend were using the same device and IP address, in combination.</p></li>
 </ol>
 <img alt="../../_images/blocked_reasons.jpg" src="../../_images/blocked_reasons.jpg" />
-</div>
-<div class="section" id="cross-referrals">
+</section>
+<section id="cross-referrals">
 <h2>Cross referrals<a class="headerlink" href="#cross-referrals" title="Permalink to this headline">¶</a></h2>
 <p>The last use case is when an Advocate has not received his or her reward due to <strong>Cross Referral</strong>. Cross referral
 occurs when an Advocate shares with a Friend who purchases and that same Friend then shares with an Advocate
@@ -181,10 +181,11 @@ in an attempt to get both the Advocate and Friend rewards.</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>

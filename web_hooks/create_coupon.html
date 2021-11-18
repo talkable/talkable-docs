@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="Create Coupon Webhook enables automatic coupon creation. That means you are no longer need to upload coupon lists into the Talkable platform manually." name="description" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Create Coupon Webhook enables automatic coupon creation. That means you are no longer need to upload coupon lists into the Talkable platform manually." name="description" />
 
     <title>Create Coupon Webhook &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/web_hooks/create_coupon.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Referral Webhook" href="referral.html" />
@@ -88,7 +88,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="web-hooks-create-coupon"></span><div class="section" id="create-coupon-webhook">
+  <span class="target" id="web-hooks-create-coupon"></span><section id="create-coupon-webhook">
 <h1>Create Coupon Webhook<a class="headerlink" href="#create-coupon-webhook" title="Permalink to this headline">¶</a></h1>
 <p>Talkable Create Coupon Webhook enables automatic coupon creation, which
 eliminates the need to upload coupon lists into the Talkable platform manually.
@@ -113,26 +113,26 @@ backend. These coupon lists must be set up in the Talkable campaign editor befor
 utilizing the Create Coupon Webhook. Follow the below instructions to set up a
 coupon list for a campaign:</p>
 <ol class="arabic simple">
-<li>Navigate to <strong>Campaigns</strong> then select the campaign you would like to set up
-coupon list(s) for</li>
-<li>Proceed to <strong>Rules</strong> then scroll down to <strong>Incentives</strong> section where
-incentives for both Advocate and Friend can be configured</li>
+<li><p>Navigate to <strong>Campaigns</strong> then select the campaign you would like to set up
+coupon list(s) for</p></li>
+<li><p>Proceed to <strong>Rules</strong> then scroll down to <strong>Incentives</strong> section where
+incentives for both Advocate and Friend can be configured</p></li>
 </ol>
 <img alt="Edit Referral Incentives" class="is-minimal" src="../_images/advocate_referral_incentive.png" />
 <ol class="arabic simple" start="3">
-<li>Inside the Referral Incentive Editor choose the <strong>Coupon code type: Single-use</strong>
+<li><p>Inside the Referral Incentive Editor choose the <strong>Coupon code type: Single-use</strong>
 then select an existing Coupon list or create a new coupon list by clicking
-<strong>Manage Coupon Lists</strong>.</li>
-<li>Here you’ll be able to <strong>Create New</strong> and configure a Name, Expiration Date
-(optional), and Amount ($ or %)</li>
-<li>Now go back to <strong>Rules</strong> → <strong>Incentives</strong> → <strong>Edit</strong> and select the
+<strong>Manage Coupon Lists</strong>.</p></li>
+<li><p>Here you’ll be able to <strong>Create New</strong> and configure a Name, Expiration Date
+(optional), and Amount ($ or %)</p></li>
+<li><p>Now go back to <strong>Rules</strong> → <strong>Incentives</strong> → <strong>Edit</strong> and select the
 <strong>Reward Amount</strong> associated with the list created in step 4 and select the
-newly created list</li>
-<li>Optionally, select <strong>Advanced Settings</strong> for additional configuration parameters</li>
+newly created list</p></li>
+<li><p>Optionally, select <strong>Advanced Settings</strong> for additional configuration parameters</p></li>
 </ol>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Coupons created by the <strong>Create Coupon Webhook</strong> will be added to the coupon
+<p class="admonition-title">Note</p>
+<p>Coupons created by the <strong>Create Coupon Webhook</strong> will be added to the coupon
 list associated with the referral campaign. Multiple referral campaigns can
 use the same or unique coupon lists. <strong>Advocate</strong> and <strong>Friend</strong> referral
 incentives can also use the same or unique coupon lists.</p>
@@ -141,22 +141,22 @@ incentives can also use the same or unique coupon lists.</p>
 Create Coupon Webhook can now be set up.
 <a class="reference internal" href="../web_hooks.html#web-hooks"><span class="std std-ref">Learn more about General Webhook Set Up Steps</span></a></p>
 <h2>Payload parameters provided by Create Coupon Webhook</h2><ul class="simple">
-<li><strong>coupon_code</strong> — coupon code</li>
-<li><strong>discount_amount</strong> — discount amount</li>
-<li><strong>percentage_discount</strong> — when <code class="docutils literal notranslate"><span class="pre">true</span></code> percentage discount should be created,
-otherwise fixed discount</li>
-<li><strong>expires_at</strong> — coupon expiration date</li>
-<li><strong>usage_limit</strong> — number of usages for the coupon</li>
-<li><strong>coupon_list_id</strong> — ID of the coupon list that needs to be filled</li>
-<li><strong>coupon_list_name</strong> — name of the coupon list that needs to be filled</li>
+<li><p><strong>coupon_code</strong> — coupon code</p></li>
+<li><p><strong>discount_amount</strong> — discount amount</p></li>
+<li><p><strong>percentage_discount</strong> — when <code class="docutils literal notranslate"><span class="pre">true</span></code> percentage discount should be created,
+otherwise fixed discount</p></li>
+<li><p><strong>expires_at</strong> — coupon expiration date</p></li>
+<li><p><strong>usage_limit</strong> — number of usages for the coupon</p></li>
+<li><p><strong>coupon_list_id</strong> — ID of the coupon list that needs to be filled</p></li>
+<li><p><strong>coupon_list_name</strong> — name of the coupon list that needs to be filled</p></li>
 </ul>
 <h2>Sample payload</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span> <span class="s2">&quot;WHT58574&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;discount_amount&quot;</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+  <span class="s2">&quot;discount_amount&quot;</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span>
   <span class="s2">&quot;percentage_discount&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-  <span class="s2">&quot;usage_limit&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="s2">&quot;usage_limit&quot;</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
   <span class="s2">&quot;expires_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2014-04-14T06:17:14.309-07:00&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;coupon_list_id&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="s2">&quot;coupon_list_id&quot;</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
   <span class="s2">&quot;coupon_list_name&quot;</span><span class="o">:</span> <span class="s2">&quot;$10 off&quot;</span>
 <span class="p">}</span>
 </pre></div>
@@ -168,9 +168,10 @@ otherwise fixed discount</li>
 <div class="toctree-wrapper compound">
 </div>
 </div>
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
