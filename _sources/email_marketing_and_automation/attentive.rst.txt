@@ -35,4 +35,4 @@ Together, Talkable and Attentive drive personalized brand engagement and the **a
 
 **Contact us**
 
-Interested in setting this up? Contact your CSM or get in touch here "and have "here" link to email for support@talkable.com
+Interested in setting this up? Contact your CSM or get in touch `here <support@talkable.com>`_.
