@@ -2,12 +2,12 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: With these ESP apps Talkable synchronizes all people who opt in for Talkable email marketing during signup.
+   :description: With these tools, Talkable synchronizes all people who opt-in for Talkable marketing communication during signup. This way you will keep all your emails in one place in an automated way.
 
-Email Marketing
-###############
+Email Marketing & Automation
+############################
 
-With these ESP apps Talkable synchronizes all people who opt in for Talkable email marketing during signup. This way you will keep all your emails in one place in an automated way.
+With these tools, Talkable synchronizes all people who opt-in for Talkable marketing communication during signup. This way you will keep all your emails in one place in an automated way.
 
 Contents:
 
@@ -18,3 +18,4 @@ Contents:
    email_marketing/mailchimp
    email_marketing/sailthru
    email_marketing/hubspot
+   email_marketing/attentive
