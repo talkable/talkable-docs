@@ -1,4 +1,4 @@
-.. _email_marketing:
+.. email_marketing_and_automation:
 .. include:: /partials/common.rst
 
 .. meta::
@@ -13,9 +13,9 @@ Contents:
 
 .. toctree::
 
-   email_marketing/klaviyo
-   email_marketing/oracle_bronto
-   email_marketing/mailchimp
-   email_marketing/sailthru
-   email_marketing/hubspot
-   email_marketing/attentive
+   email_marketing_and_automation/klaviyo
+   email_marketing_and_automation/oracle_bronto
+   email_marketing_and_automation/mailchimp
+   email_marketing_and_automation/sailthru
+   email_marketing_and_automation/hubspot
+   email_marketing_and_automation/attentive

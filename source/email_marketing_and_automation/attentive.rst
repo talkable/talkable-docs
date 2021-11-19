@@ -1,4 +1,4 @@
-.. _email_marketing/attentive:
+.. _email_marketing_and_automation/attentive:
 .. include:: /partials/common.rst
 
 .. meta::
@@ -20,7 +20,7 @@ Together, Talkable and Attentive drive personalized brand engagement and the **a
 
 1. Capture phone numbers through Talkable to seamlessly grow your SMS subscriber list. The integration automatically passes these numbers to your Attentive messaging flow.
 
-  .. image:: /_static/img/email_marketing/signup2-2.png
+  .. image:: /_static/img/email_marketing_and_automation/signup2.png
       :alt: Signup
 
 2. Promote refer-a-friend to your SMS list to facilitate increased sharing. Mobile messages have a 99% open rate.
