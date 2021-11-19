@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="Find out how to auto-enroll loyalty members." name="description" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="Find out how to auto-enroll loyalty members." name="description" />
 
     <title>Auto-Enrollment &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" href="../../_static/talkable.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/integration/loyalty/auto_enrollment.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Manual Shopify integration" href="manual_shopify_integration.html" />
@@ -62,7 +61,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../ecommerce_platforms.html">E-commerce Platforms</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../email_marketing.html">Email Marketing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../email_marketing_and_automation.html">Email Marketing &amp; Automation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../payment_solutions.html">Payment Solutions</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../api_v2.html">API Reference</a></li>
@@ -90,8 +92,8 @@
 <p>Talkable allows to enroll users to loyalty without showing the loyalty dashboard page.</p>
 <p>There are a couple of ways to do that:</p>
 <ul class="simple">
-<li><a class="reference internal" href="#post-purchase-enrollment"><span class="std std-ref">Post-Purchase Enrollment</span></a></li>
-<li><a class="reference internal" href="#enrollment-via-js-integration"><span class="std std-ref">Enrollment via JS Integration</span></a></li>
+<li><p><a class="reference internal" href="#post-purchase-enrollment"><span class="std std-ref">Post-Purchase Enrollment</span></a></p></li>
+<li><p><a class="reference internal" href="#enrollment-via-js-integration"><span class="std std-ref">Enrollment via JS Integration</span></a></p></li>
 </ul>
 <div class="section" id="post-purchase-enrollment">
 <span id="id1"></span><h2>Post-Purchase Enrollment<a class="headerlink" href="#post-purchase-enrollment" title="Permalink to this headline">¶</a></h2>
@@ -104,16 +106,16 @@ A setting to enable this behavior can be found under <strong>Site settings</stro
 For example, this could be used for enrolling users during registration or login.</p>
 <p>Don’t forget to include a consent checkbox that would inform your user that they are about to join the loyalty program.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last"><cite>join_loyalty</cite> is available since integration version 4.5.9.</p>
+<p class="admonition-title">Note</p>
+<p><cite>join_loyalty</cite> is available since integration version 4.5.9.</p>
 </div>
 <div class="section" id="code-example-1">
 <h3>Code Example #1:<a class="headerlink" href="#code-example-1" title="Permalink to this headline">¶</a></h3>
 <p>Use <cite>authenticate_customer</cite> to store current user data.</p>
 <p>When you call <cite>join_loyalty</cite>, you can pass empty object since Talkable will have access to the data from <cite>authenticate_customer</cite>.</p>
 <div class="admonition tip">
-<p class="first admonition-title">Tip</p>
-<p class="last"><cite>authenticate_customer</cite> data can also be reused by other integration functions.</p>
+<p class="admonition-title">Tip</p>
+<p><cite>authenticate_customer</cite> data can also be reused by other integration functions.</p>
 </div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s2">&quot;authenticate_customer&quot;</span><span class="p">,</span> <span class="p">{</span>
   <span class="nx">email</span><span class="o">:</span> <span class="s2">&quot;loyalty@talkable.com&quot;</span><span class="p">,</span> <span class="c1">// required for `join_loyalty`</span>
@@ -129,8 +131,8 @@ For example, this could be used for enrolling users during registration or login
 <h3>Code Example #2:<a class="headerlink" href="#code-example-2" title="Permalink to this headline">¶</a></h3>
 <p>Pass loyalty member data directly to <cite>join_loyalty</cite>.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Arguments passed with <cite>join_loyalty</cite> override respective arguments from <cite>authenticate_customer</cite>.</p>
+<p class="admonition-title">Note</p>
+<p>Arguments passed with <cite>join_loyalty</cite> override respective arguments from <cite>authenticate_customer</cite>.</p>
 </div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s2">&quot;join_loyalty&quot;</span><span class="p">,</span> <span class="p">{</span>
   <span class="nx">email</span><span class="o">:</span> <span class="s2">&quot;loyalty@talkable.com&quot;</span><span class="p">,</span> <span class="c1">// required</span>
@@ -145,6 +147,7 @@ For example, this could be used for enrolling users during registration or login
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>

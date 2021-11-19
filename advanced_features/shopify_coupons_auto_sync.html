@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="Talkable supports coupon auto-sync for Shopify. This feature allows to avoid manual coupon uploads and/or Shopify Price Rule management." name="description" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="Talkable supports coupon auto-sync for Shopify. This feature allows to avoid manual coupon uploads and/or Shopify Price Rule management." name="description" />
 
     <title>Shopify coupon auto-sync &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/advanced_features/shopify_coupons_auto_sync.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Referral Tracking Methods" href="track_methods.html" />
@@ -77,7 +76,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../integration/ecommerce_platforms.html">E-commerce Platforms</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../email_marketing.html">Email Marketing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../email_marketing_and_automation.html">Email Marketing &amp; Automation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../payment_solutions.html">Payment Solutions</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../api_v2.html">API Reference</a></li>
@@ -108,10 +110,10 @@
 <p>Before using coupon auto-sync, you’ll need to install the Talkable Shopify app (Settings → Shopify Integration → Authorize).</p>
 <p>To enable coupon auto-sync in a coupon list, go to the coupon list edit/create page (All reports → Coupon lists) and check “Enable Coupon List Shopify Auto Sync”. If this checkbox is disabled (you are unable to check/uncheck), it means this site already uses the <a class="reference internal" href="../web_hooks/create_coupon.html#web-hooks-create-coupon"><span class="std std-ref">Coupon Webhook</span></a> and will be created automatically — no coupons can be directly uploaded to Shopify. Instead, coupons are delivered to Coupon Webhook URL, and should be handled from there. If you’d like to turn on/off Shopify auto-sync, you’ll need to first disable the Coupon Webhook.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p>Talkable uses a Shopify Price Rule ID (if present) to determine where to upload newly generated coupons. It is recommended to leave it blank when creating coupon lists. If blank, Talkable will create a Price Rule based on coupon list configuration and store its ID in the coupon list.
 When you try to create a coupon list with a 100% discount you have to provide a Price Rule ID manually. That was made for preventing mistakes in the PriceRule setup.</p>
-<p class="last">Please see <strong>Advanced features</strong> for more information about Shopify Price Rule ID.</p>
+<p>Please see <strong>Advanced features</strong> for more information about Shopify Price Rule ID.</p>
 </div>
 <div class="section" id="what-is-price-rule">
 <h3>What is Price Rule?<a class="headerlink" href="#what-is-price-rule" title="Permalink to this headline">¶</a></h3>
@@ -121,88 +123,88 @@ When you try to create a coupon list with a 100% discount you have to provide a 
 <h3>What attributes will the auto-generated Price Rule have?<a class="headerlink" href="#what-attributes-will-the-auto-generated-price-rule-have" title="Permalink to this headline">¶</a></h3>
 <p>Talkable applies the below coupon list settings onto Price Rule:</p>
 <div class="ptable docutils container">
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="22%" />
-<col width="37%" />
-<col width="40%" />
+<col style="width: 22%" />
+<col style="width: 37%" />
+<col style="width: 40%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Coupon list attribute</th>
-<th class="head">Price rule attribute (as in API)</th>
-<th class="head">Price rule attribute (as in interface)</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Coupon list attribute</p></th>
+<th class="head"><p>Price rule attribute (as in API)</p></th>
+<th class="head"><p>Price rule attribute (as in interface)</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><strong>Amount</strong></td>
-<td><cite>value</cite></td>
-<td>Value</td>
+<tbody>
+<tr class="row-even"><td><p><strong>Amount</strong></p></td>
+<td><p><cite>value</cite></p></td>
+<td><p>Value</p></td>
 </tr>
-<tr class="row-odd"><td><strong>Discount type</strong></td>
-<td><cite>value_type</cite></td>
-<td>Type</td>
+<tr class="row-odd"><td><p><strong>Discount type</strong></p></td>
+<td><p><cite>value_type</cite></p></td>
+<td><p>Type</p></td>
 </tr>
-<tr class="row-even"><td><strong>Expiration date</strong></td>
-<td><cite>ends_at</cite></td>
-<td>End date</td>
+<tr class="row-even"><td><p><strong>Expiration date</strong></p></td>
+<td><p><cite>ends_at</cite></p></td>
+<td><p>End date</p></td>
 </tr>
-<tr class="row-odd"><td><strong>Minimum subtotal</strong></td>
-<td><cite>prerequisite_subtotal_range</cite></td>
-<td>Minimum purchase amount</td>
+<tr class="row-odd"><td><p><strong>Minimum subtotal</strong></p></td>
+<td><p><cite>prerequisite_subtotal_range</cite></p></td>
+<td><p>Minimum purchase amount</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <p>Some other Price Rule attributes that we set when generating Price Rule:</p>
 <div class="ptable docutils container">
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="26%" />
-<col width="25%" />
-<col width="49%" />
+<col style="width: 26%" />
+<col style="width: 25%" />
+<col style="width: 49%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Price Rule attribute</th>
-<th class="head">Value</th>
-<th class="head">Attribute effect</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Price Rule attribute</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Attribute effect</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><cite>title</cite></td>
-<td>e.g. “Talkable
-single-use coupons $10”</td>
-<td>Describes Price Rule.</td>
+<tbody>
+<tr class="row-even"><td><p><cite>title</cite></p></td>
+<td><p>e.g. “Talkable
+single-use coupons $10”</p></td>
+<td><p>Describes Price Rule.</p></td>
 </tr>
-<tr class="row-odd"><td><cite>target_type</cite></td>
-<td><cite>line_item</cite></td>
-<td>The price rule applies to the cart’s line
-items.</td>
+<tr class="row-odd"><td><p><cite>target_type</cite></p></td>
+<td><p><cite>line_item</cite></p></td>
+<td><p>The price rule applies to the cart’s line
+items.</p></td>
 </tr>
-<tr class="row-even"><td><cite>target_selection</cite></td>
-<td><cite>all</cite></td>
-<td>The price rule applies the discount to all
-line items in the checkout.</td>
+<tr class="row-even"><td><p><cite>target_selection</cite></p></td>
+<td><p><cite>all</cite></p></td>
+<td><p>The price rule applies the discount to all
+line items in the checkout.</p></td>
 </tr>
-<tr class="row-odd"><td><cite>allocation_method</cite></td>
-<td><cite>across</cite></td>
-<td>The calculated discount amount will be
+<tr class="row-odd"><td><p><cite>allocation_method</cite></p></td>
+<td><p><cite>across</cite></p></td>
+<td><p>The calculated discount amount will be
 applied across the entitled items.
 For example, for a price rule that takes
 $15 off, the discount will be applied across
-all the entitled items.</td>
+all the entitled items.</p></td>
 </tr>
-<tr class="row-even"><td><cite>usage_limit</cite></td>
-<td><cite>1</cite></td>
-<td>Each discount code can be used exactly once.</td>
+<tr class="row-even"><td><p><cite>usage_limit</cite></p></td>
+<td><p><cite>1</cite></p></td>
+<td><p>Each discount code can be used exactly once.</p></td>
 </tr>
-<tr class="row-odd"><td><cite>customer_selection</cite></td>
-<td><cite>all</cite></td>
-<td>The price rule is valid for all customers.</td>
+<tr class="row-odd"><td><p><cite>customer_selection</cite></p></td>
+<td><p><cite>all</cite></p></td>
+<td><p>The price rule is valid for all customers.</p></td>
 </tr>
-<tr class="row-even"><td><cite>starts_at</cite></td>
-<td>Time of coupon list
-creation</td>
-<td>The date and time when the price rule starts.</td>
+<tr class="row-even"><td><p><cite>starts_at</cite></p></td>
+<td><p>Time of coupon list
+creation</p></td>
+<td><p>The date and time when the price rule starts.</p></td>
 </tr>
 </tbody>
 </table>
@@ -220,18 +222,18 @@ creation</td>
 <p>Talkable allows you to assign a custom Price Rule ID to a coupon list. This might be helpful if you want to deviate from our default Price Rule settings, e.g. restrict codes to a group of customers or group of products.</p>
 <p>It is recommended to create a new Price Rule in Shopify if there is a need to use a custom one, instead of editing the Price Rule generated by Talkable.</p>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
+<p class="admonition-title">Warning</p>
 <p>Talkable validates the Price Rule attached to a coupon list. There are certain Price Rule attributes that must match the coupon list configuration.
 These include:</p>
 <p><cite>value</cite> - must correspond to coupon list amount</p>
 <p><cite>value_type</cite> - must correspond to coupon list type</p>
 <p><cite>ends_at</cite> - must be greater than or equal to coupon list expiration (and absent if coupon list has no expiration)</p>
-<p class="last"><cite>prerequisite_subtotal_range</cite> - must match coupon list minimum subtotal</p>
+<p><cite>prerequisite_subtotal_range</cite> - must match coupon list minimum subtotal</p>
 </div>
 <p>If the Price Rule passes validation, it can be attached to a coupon list and will be used as a new destination for all the coupons created from that moment on.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">All previously generated coupons will retain the attributes of the Price Rule that was used at the point at which they were created (auto-synced).</p>
+<p class="admonition-title">Note</p>
+<p>All previously generated coupons will retain the attributes of the Price Rule that was used at the point at which they were created (auto-synced).</p>
 </div>
 </div>
 <div class="section" id="shopify-price-rule-changed-email-notification">
@@ -240,11 +242,11 @@ These include:</p>
 <p>Attributes that are checked in this job are the following:</p>
 <blockquote>
 <div><ul class="simple">
-<li><cite>usage_limit</cite> - must always be 1</li>
-<li><cite>value</cite> - must correspond to coupon list amount</li>
-<li><cite>value_type</cite> - must correspond to coupon list type</li>
-<li><cite>ends_at</cite> - must be greater than or equal to coupon list expiration (and absent if coupon list has no expiration)</li>
-<li><cite>prerequisite_subtotal_range</cite> - must match coupon list minimum subtotal</li>
+<li><p><cite>usage_limit</cite> - must always be 1</p></li>
+<li><p><cite>value</cite> - must correspond to coupon list amount</p></li>
+<li><p><cite>value_type</cite> - must correspond to coupon list type</p></li>
+<li><p><cite>ends_at</cite> - must be greater than or equal to coupon list expiration (and absent if coupon list has no expiration)</p></li>
+<li><p><cite>prerequisite_subtotal_range</cite> - must match coupon list minimum subtotal</p></li>
 </ul>
 </div></blockquote>
 <p>If any of these attributes differ from what they are expected to be and Talkable cannot fix that by updating a coupon list (see <strong>Coupon list sync</strong>), Talkable sends an email notification.</p>
@@ -257,15 +259,16 @@ These include:</p>
 <p><strong>expiration date</strong> - only if Price Rule end date is further in the future (or absent)</p>
 <p><strong>minimum subtotal</strong></p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
+<p class="admonition-title">Note</p>
 <p>If there are any other changes in the Price Rule that make it not suitable for a certain coupon list, we won’t sync the coupon list. In this case, a Shopify Price Rule Changed Email Notification will be delivered and action will be required to fix the issue.</p>
-<p class="last">This sync is performed daily. Do not expect an immediate change to be reflected  after a Price Rule update.</p>
+<p>This sync is performed daily. Do not expect an immediate change to be reflected  after a Price Rule update.</p>
 </div>
 </div>
 </div>
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>

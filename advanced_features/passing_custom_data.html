@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="The custom properties variable allows you to transfer any custom data to Talkable as a collection of key-value pairs." name="description" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="The custom properties variable allows you to transfer any custom data to Talkable as a collection of key-value pairs." name="description" />
 
     <title>Pass Custom User Data &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/advanced_features/passing_custom_data.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Referrals Approval" href="referrals_approval.html" />
@@ -75,7 +74,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../integration/ecommerce_platforms.html">E-commerce Platforms</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../email_marketing.html">Email Marketing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../email_marketing_and_automation.html">Email Marketing &amp; Automation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../payment_solutions.html">Payment Solutions</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../api_v2.html">API Reference</a></li>
@@ -134,10 +136,10 @@ across all Campaign Views.</p>
 <p><strong>Loyalty script</strong></p>
 <p>Add the <code class="docutils literal notranslate"><span class="pre">custom_properties</span></code> collection to the data passed in one of the following calls:</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">show_loyalty</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">show_loyalty_redeem_widget</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">join_loyalty</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">register_loyalty_action</span></code></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">show_loyalty</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">show_loyalty_redeem_widget</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">join_loyalty</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">register_loyalty_action</span></code></p></li>
 </ul>
 <p>If no <code class="docutils literal notranslate"><span class="pre">custom_properties</span></code> are passed explicitly, they will be taken from <code class="docutils literal notranslate"><span class="pre">authenticate_customer</span></code> params.</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">_talkable_data</span> <span class="o">=</span> <span class="p">{</span>
@@ -151,8 +153,8 @@ across all Campaign Views.</p>
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">The values you pass in the <code class="docutils literal notranslate"><span class="pre">custom_properties</span></code> have to be JSON Key-Value pairs themselves,
+<p class="admonition-title">Note</p>
+<p>The values you pass in the <code class="docutils literal notranslate"><span class="pre">custom_properties</span></code> have to be JSON Key-Value pairs themselves,
 meaning that complex nested data structures cannot be passed through.
 Property names (e.g. <code class="docutils literal notranslate"><span class="pre">eye_color</span></code>) can contain lowercase letters, numbers and <code class="docutils literal notranslate"><span class="pre">_</span></code> only and cannot begin with a number.</p>
 </div>
@@ -167,8 +169,8 @@ Property names (e.g. <code class="docutils literal notranslate"><span class="pre
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Any <code class="docutils literal notranslate"><span class="pre">custom_properties</span></code> data passed through is tied to the <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>, <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr>, or <abbr title="Person who participates in the Loyalty program">Loyalty member</abbr>.
+<p class="admonition-title">Note</p>
+<p>Any <code class="docutils literal notranslate"><span class="pre">custom_properties</span></code> data passed through is tied to the <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>, <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr>, or <abbr title="Person who participates in the Loyalty program">Loyalty member</abbr>.
 If Talkable receives a custom property that was previously defined for the user, the property gets overwritten with a new value.</p>
 </div>
 <div class="hidden docutils container">
@@ -178,6 +180,7 @@ If Talkable receives a custom property that was previously defined for the user,
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>

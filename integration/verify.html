@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="After installing Talkable, you should verify that the integration is working." name="description" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="After installing Talkable, you should verify that the integration is working." name="description" />
 
     <title>Verifying Integration &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/integration/verify.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="F.A.Q." href="custom/questions.html" />
@@ -44,26 +43,27 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../advanced_features.html">Features</a></li>
 </ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="custom_integration.html">Standard Integration</a></li>
+</ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="custom_integration.html">Standard Integration</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="custom/overview.html">Integration High-Level Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom/integration_components.html">Integration Components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom/validating_integration.html">Validating the Integration</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Verifying Integration</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#verifying-integration-in-js-spas">Verifying Integration in JS SPAs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="custom/questions.html">F.A.Q.</a></li>
-</ul>
-</li>
-</ul>
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="loyalty.html">Loyalty Integration (beta)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ecommerce_platforms.html">E-commerce Platforms</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ecommerce_platforms.html">E-commerce Platforms</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ecommerce_platforms/demandware.html">Salesforce Commerce Cloud Integration</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="ecommerce_platforms/shopify.html">Shopify Integration</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ecommerce_platforms/shopify.html#automatic-integration">Automatic integration</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="ecommerce_platforms/shopify.html#manual-integration">Manual integration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ecommerce_platforms/magento.html">Magento Integration</a></li>
+</ul>
+</li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../email_marketing.html">Email Marketing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../email_marketing_and_automation.html">Email Marketing &amp; Automation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../payment_solutions.html">Payment Solutions</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../api_v2.html">API Reference</a></li>
@@ -90,13 +90,13 @@
 <h1>Verifying Integration<a class="headerlink" href="#verifying-integration" title="Permalink to this headline">¶</a></h1>
 <p>After installing Talkable, you should verify that the integration is working:</p>
 <ol class="arabic">
-<li><p class="first">Open your homepage (assuming the Talkable init script is placed on every page,
+<li><p>Open your homepage (assuming the Talkable init script is placed on every page,
 otherwise visit the page where the initialization script was placed)
 with a secret URL parameter like so: <br> <cite>https://www.site.com/?tkbl_verify_integration=true</cite>.
 As a result you should see:</p>
 <img alt="../_images/integration_check_affiliate_member_success.png" src="../_images/integration_check_affiliate_member_success.png" />
 </li>
-<li><p class="first">Issue a test purchase. Order subtotal should be &gt; 0, <br>
+<li><p>Issue a test purchase. Order subtotal should be &gt; 0, <br>
 email should be <cite>integration&#64;talkable.com</cite>. Preferably include a coupon code so we
 can verify it gets passed as well. As a result you should see:</p>
 <img alt="../_images/integration_check_purchase_success.png" src="../_images/integration_check_purchase_success.png" />
@@ -131,6 +131,7 @@ popup please contact Talkable support: <a class="reference external" href="mailt
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>

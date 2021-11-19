@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="You can integrate Talkable Loyalty to e-commerce sites in a few quick steps." name="description" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="You can integrate Talkable Loyalty to e-commerce sites in a few quick steps." name="description" />
 
     <title>Loyalty Integration (beta) &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/integration/loyalty.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Integration Components" href="loyalty/integration_components.html" />
@@ -58,7 +57,10 @@
 <li class="toctree-l1"><a class="reference internal" href="ecommerce_platforms.html">E-commerce Platforms</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../email_marketing.html">Email Marketing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../email_marketing_and_automation.html">Email Marketing &amp; Automation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../payment_solutions.html">Payment Solutions</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../api_v2.html">API Reference</a></li>
@@ -86,19 +88,19 @@
 <p>Integrating Talkable Loyalty to e-commerce sites is done in
 a few quick steps by adding the below scripts to your site.</p>
 <h2>Integration</h2><ol class="arabic">
-<li><p class="first">Initialize Talkable integration library.</p>
+<li><p>Initialize Talkable integration library.</p>
 <p>Add the <a class="reference internal" href="loyalty/integration_components.html#integration-loyalty-integration-components-initialization-script"><span class="std std-ref">Talkable Initialization Script</span></a>
 to your header or any template spanning every page.</p>
 </li>
 </ol>
 <blockquote>
 <div><div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Skip this step if you already have Talkable integrated on your site</p>
+<p class="admonition-title">Note</p>
+<p>Skip this step if you already have Talkable integrated on your site</p>
 </div>
 </div></blockquote>
 <ol class="arabic" start="2">
-<li><p class="first">Add Loyalty Dashboard.</p>
+<li><p>Add Loyalty Dashboard.</p>
 <p>To host the Loyalty campaign, create a new HTML page with a standard
 header/footer. The best practice is to create this page on <code class="docutils literal notranslate"><span class="pre">www.your-site.com/loyalty</span></code></p>
 <p>Copy Talkable container DIV element &amp; paste it exactly where the Talkable iframe should be rendered, similarly to the referral standalone placement:</p>
@@ -106,41 +108,41 @@ header/footer. The best practice is to create this page on <code class="docutils
 </pre></div>
 </div>
 </li>
-<li><p class="first">Add Redeem Widget.</p>
+<li><p>Add Redeem Widget.</p>
 <p>Copy Talkable container DIV element &amp; paste it at the checkout
 exactly where the loyalty points redemption widget should render:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;talkable-loyalty&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <p>It is recommended to add it above the discount field. Examples:</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="Sample checkout" src="../_images/loyalty_checkout.png" />
 </div>
 </li>
-<li><p class="first">Define Loyalty points redemption batches.</p>
+<li><p>Define Loyalty points redemption batches.</p>
 <p>Each redemption batch determines progressive point redemption options based on the available points balance of the loyalty member.
 For example, 500 points would equal a discount coupon for $50 off, 1000 points would equal $100, and so on.</p>
 <p>For every redemption batch, please generate single-use coupons for
 a certain discount amount ($50 off, $100 off, etc.) and upload all coupon lists into Talkable loyalty coupon lists.</p>
 <p>It is recommended to upload 100,000 single-use coupons into every coupon list.</p>
-<div class="figure">
+<div class="figure align-default">
 <img alt="Redemption batches" src="../_images/redemption_batches.png" />
 </div>
 </li>
 </ol>
 <blockquote>
 <div><div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">All design and loyalty campaign setup is done inside the Talkable platform,
+<p class="admonition-title">Note</p>
+<p>All design and loyalty campaign setup is done inside the Talkable platform,
 then via iframe loyalty campaign content is injected into the site.</p>
 </div>
 </div></blockquote>
 <h2>Requirements</h2><ol class="arabic simple">
-<li>User accounts. The website must support user accounts since the loyalty program is only available to logged in users.</li>
-<li>Single-use coupons. Every loyalty member will have a choice of redemption batches to redeem points for a one-time discount.
-When pressing a redeem button Talkable deducts points and issues a single-use coupon in return.</li>
-<li>Ideally, only purchases without tax &amp; shipping costs should be passed to Talkable.
-This simplifies future refunds support as taxes and shipping costs are not refundable.</li>
+<li><p>User accounts. The website must support user accounts since the loyalty program is only available to logged in users.</p></li>
+<li><p>Single-use coupons. Every loyalty member will have a choice of redemption batches to redeem points for a one-time discount.
+When pressing a redeem button Talkable deducts points and issues a single-use coupon in return.</p></li>
+<li><p>Ideally, only purchases without tax &amp; shipping costs should be passed to Talkable.
+This simplifies future refunds support as taxes and shipping costs are not refundable.</p></li>
 </ol>
 <div class="hidden docutils container">
 <div class="toctree-wrapper compound">
@@ -191,6 +193,7 @@ This simplifies future refunds support as taxes and shipping costs are not refun
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>

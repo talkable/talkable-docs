@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta content="With Oracle Bronto app clients can synchronize emails that Talkable collected." name="description" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="With Hubspot app clients can synchronize emails that Talkable collected." name="description" />
 
-    <title>Oracle Bronto &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" href="../_static/talkable.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <link rel="canonical" href="https://docs.talkable.com/email_marketing/oracle_bronto.html" />
+    <title>Hubspot &#8212; Talkable Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="canonical" href="https://docs.talkable.com/email_marketing_and_automation/hubspot.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Mailchimp" href="mailchimp.html" />
-    <link rel="prev" title="Klaviyo" href="klaviyo.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <link rel="next" title="Attentive" href="attentive.html" />
+    <link rel="prev" title="Sailthru" href="sailthru.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
   <link href="../_static/pygments-github.css" rel="stylesheet">
   <link href="../_static/img/favicon.ico" rel="shortcut icon" />
   </head><body>
@@ -52,17 +51,21 @@
 <li class="toctree-l1"><a class="reference internal" href="../integration/ecommerce_platforms.html">E-commerce Platforms</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../email_marketing.html">Email Marketing</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../email_marketing_and_automation.html">Email Marketing &amp; Automation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="klaviyo.html">Klaviyo</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Oracle Bronto</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="oracle_bronto.html">Oracle Bronto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailchimp.html">Mailchimp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sailthru.html">Sailthru</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Hubspot</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#how-to-add-a-new-app">How to add a new app?</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="mailchimp.html">Mailchimp</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sailthru.html">Sailthru</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hubspot.html">Hubspot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="attentive.html">Attentive</a></li>
 </ul>
 </li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../payment_solutions.html">Payment Solutions</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../api_v2.html">API Reference</a></li>
@@ -85,26 +88,26 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="email-marketing-oracle-bronto"></span><div class="section" id="oracle-bronto">
-<h1>Oracle Bronto<a class="headerlink" href="#oracle-bronto" title="Permalink to this headline">¶</a></h1>
+  <span class="target" id="email-marketing-and-automation-hubspot"></span><div class="section" id="hubspot">
+<h1>Hubspot<a class="headerlink" href="#hubspot" title="Permalink to this headline">¶</a></h1>
 <p>With ESP apps clients can synchronize emails that Talkable acquires with their ESP. Here are the conditions when Talkable acquires emails:</p>
 <ol class="arabic simple">
-<li>Advocate signs up and opts in for Talkable marketing emails:</li>
+<li><p>Advocate signs up and opts in for Talkable marketing emails:</p></li>
 </ol>
 <blockquote>
 <div><img alt="Subscribe" src="../_images/subscribe.png" />
 </div></blockquote>
 <ol class="arabic simple" start="2">
-<li>A friend passes email gating and opts in for Talkable marketing emails:</li>
+<li><p>A friend passes email gating and opts in for Talkable marketing emails:</p></li>
 </ol>
 <blockquote>
 <div><img alt="Signup" src="../_images/signup.png" />
 </div></blockquote>
 <p>Each ESP application allows custom attributes to be included with each request. The following interpolation variables are allowed:</p>
 <ol class="arabic simple">
-<li><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">person</span> <span class="pre">}}</span></code> - a data object for either advocate or friend whenever they sign up or pass email gating and opt-in for marketing emails.</li>
-<li><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">ip</span> <span class="pre">}}</span></code> – a data object from which IP address either a signup or email gating occurred.</li>
-<li><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">campaign</span> <span class="pre">}}</span></code> – a data object with details about the campaign within which the email was captured.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">person</span> <span class="pre">}}</span></code> - a data object for either advocate or friend whenever they sign up or pass email gating and opt-in for marketing emails.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">ip</span> <span class="pre">}}</span></code> – a data object from which IP address either a signup or email gating occurred.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">campaign</span> <span class="pre">}}</span></code> – a data object with details about the campaign within which the email was captured.</p></li>
 </ol>
 <img alt="Variables" src="../_images/variables.png" />
 <p>Each variable is described in the “Available variables” sidebar and can be expanded to see all nested properties.</p>
@@ -112,22 +115,22 @@
 <h2>How to add a new app?<a class="headerlink" href="#how-to-add-a-new-app" title="Permalink to this headline">¶</a></h2>
 <p>Please use the following guide to start using an app you need:</p>
 <ol class="arabic simple">
-<li>Navigate into the app store:</li>
+<li><p>Navigate into the app store:</p></li>
 </ol>
 <blockquote>
 <div><img alt="App store step 1" src="../_images/app_store_step_1.png" />
 <img alt="App store step 2" src="../_images/app_store_step_2.png" />
 </div></blockquote>
 <ol class="arabic simple" start="2">
-<li>Choose an app you need by clicking “Install”</li>
-<li>Fill in all necessary fields. You can use tips on the right that instruct how to find all necessary credentials.</li>
-<li>Complete installation and enable the app:</li>
+<li><p>Choose an app you need by clicking “Install”</p></li>
+<li><p>Fill in all necessary fields. You can use tips on the right that instruct how to find all necessary credentials.</p></li>
+<li><p>Complete installation and enable the app:</p></li>
 </ol>
 <blockquote>
-<div><img alt="Oracle Bronto" src="../_images/oracle_bronto.jpg" />
+<div><img alt="hubspot" src="../_images/hubspot.jpg" />
 </div></blockquote>
 <ol class="arabic simple" start="5">
-<li>Test the app by pressing on the “Send sample payload” and then check if you are seeing a test request inside your ESP:</li>
+<li><p>Test the app by pressing on the “Send sample payload” and then check if you are seeing a test request inside your ESP:</p></li>
 </ol>
 <blockquote>
 <div><img alt="Send same payload" src="../_images/send_same_payload.png" />
@@ -136,6 +139,7 @@
 </div>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
