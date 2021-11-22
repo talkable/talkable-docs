@@ -30,7 +30,7 @@ Talkable integration with Recharge enables next use cases:
 
   Talkable will try to apply a coupon to the next charge of the customer’s subscription. This coupon will also be sent to the customer’s email in case they want to use it for Shopify instead.
 
-  **Version 2**  of the integration also allows for accrued discounts in case the customer refers to multiple friends.
+  **Version 2**  of the integration also allows for accrued discounts in case the customer refers multiple friends.
 
 5. If the Gleam widget is enabled, it can behave differently depending on the customer’s actions (if it’s set up according to a non-default flow):
 
