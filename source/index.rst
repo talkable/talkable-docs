@@ -38,17 +38,27 @@ This section comes with full documentation for Talkable integration into E-Comme
 
   <p>&nbsp;</p>
 
-Email Marketing
-===============
+Email Marketing & Automation
+============================
 
 With these apps Talkable synchronizes all people who opt in for Talkable email marketing during signup. This way you will keep all your emails in one place in an automated way.
 
-+--------------------+
-| .. toctree::       |
-|   :maxdepth: 2     |
-|                    |
-|   email_marketing  |
-+--------------------+
++-----------------------------------+
+| .. toctree::                      |
+|   :maxdepth: 2                    |
+|                                   |
+|   email_marketing_and_automation  |
++-----------------------------------+
+
+Payment Solutions
+=================
+
++----------------------+
+| .. toctree::         |
+|   :maxdepth: 2       |
+|                      |
+|   payment_solutions  |
++----------------------+
 
 Talkable Back-end Integration
 =============================
