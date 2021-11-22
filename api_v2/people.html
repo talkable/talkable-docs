@@ -3,8 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="This API allows you to access and update the list of people." name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="This API allows you to access and update the list of people." name="description" />
 
     <title>People &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -52,7 +51,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../integration/ecommerce_platforms.html">E-commerce Platforms</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../email_marketing.html">Email Marketing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../email_marketing_and_automation.html">Email Marketing &amp; Automation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../payment_solutions.html">Payment Solutions</a></li>
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../api_v2.html">API Reference</a><ul class="current">
@@ -95,7 +97,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="api-v2-people"></span><section id="people">
+  <span class="target" id="api-v2-people"></span><div class="section" id="people">
 <h1>People<a class="headerlink" href="#people" title="Permalink to this headline">¶</a></h1>
 <p>This API allows you to access and update persons. See examples below.</p>
 <p><br></p>
@@ -325,9 +327,9 @@ Talkable dashboard after you log in and create a site.</p></td>
 </tbody>
 </table>
 </div>
-<section id="example">
+<div class="section" id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<section id="find-a-person-by-email">
+<div class="section" id="find-a-person-by-email">
 <h3>Find a person by email<a class="headerlink" href="#find-a-person-by-email" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GET https://www.talkable.com/api/v2/people/customer@example.com?site_slug=my-store
 </pre></div>
@@ -371,8 +373,8 @@ Talkable dashboard after you log in and create a site.</p></td>
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="get-friends-referred-by-advocate">
+</div>
+<div class="section" id="get-friends-referred-by-advocate">
 <h3>Get Friends referred by Advocate<a class="headerlink" href="#get-friends-referred-by-advocate" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GET https://www.talkable.com/api/v2/people/customer@example.com/referrals_as_advocate?site_slug=my-store
 </pre></div>
@@ -507,8 +509,8 @@ Talkable dashboard after you log in and create a site.</p></td>
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="get-rewards-received-by-person">
+</div>
+<div class="section" id="get-rewards-received-by-person">
 <h3>Get rewards received by person<a class="headerlink" href="#get-rewards-received-by-person" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GET https://www.talkable.com/api/v2/people/customer@example.com/rewards?site_slug=my-store
 </pre></div>
@@ -557,8 +559,8 @@ Talkable dashboard after you log in and create a site.</p></td>
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="get-shares-made-by-person">
+</div>
+<div class="section" id="get-shares-made-by-person">
 <h3>Get shares made by person<a class="headerlink" href="#get-shares-made-by-person" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GET https://www.talkable.com/api/v2/people/customer@example.com/shares_by?site_slug=my-store
 </pre></div>
@@ -725,8 +727,8 @@ Talkable dashboard after you log in and create a site.</p></td>
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="update-persons-username">
+</div>
+<div class="section" id="update-persons-username">
 <h3>Update person’s username<a class="headerlink" href="#update-persons-username" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;site_slug&quot;</span><span class="o">:</span> <span class="s2">&quot;my-store&quot;</span><span class="p">,</span>
@@ -782,8 +784,8 @@ Talkable dashboard after you log in and create a site.</p></td>
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="unsubscribe-a-person-from-receiving-emails">
+</div>
+<div class="section" id="unsubscribe-a-person-from-receiving-emails">
 <h3>Unsubscribe a person from receiving emails<a class="headerlink" href="#unsubscribe-a-person-from-receiving-emails" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;site_slug&quot;</span><span class="o">:</span> <span class="s2">&quot;my-store&quot;</span>
@@ -836,8 +838,8 @@ Talkable dashboard after you log in and create a site.</p></td>
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="anonymize-a-person">
+</div>
+<div class="section" id="anonymize-a-person">
 <h3>Anonymize a person<a class="headerlink" href="#anonymize-a-person" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;site_slug&quot;</span><span class="o">:</span> <span class="s2">&quot;my-store&quot;</span>
@@ -890,8 +892,8 @@ Talkable dashboard after you log in and create a site.</p></td>
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="get-personal-information-about-a-person">
+</div>
+<div class="section" id="get-personal-information-about-a-person">
 <h3>Get personal information about a person<a class="headerlink" href="#get-personal-information-about-a-person" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>GET https://www.talkable.com/api/v2/people/customer@example.com/personal_data?site_slug=my-store
 </pre></div>
@@ -927,9 +929,9 @@ Talkable dashboard after you log in and create a site.</p></td>
 <div class="toctree-wrapper compound">
 </div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
             <div class="clearer"></div>

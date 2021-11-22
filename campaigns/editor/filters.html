@@ -3,8 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Standard Liquid filters that are available out of box." name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="Standard Liquid filters that are available out of box." name="description" />
 
     <title>Filters &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
@@ -69,7 +68,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../integration/ecommerce_platforms.html">E-commerce Platforms</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../email_marketing.html">Email Marketing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../email_marketing_and_automation.html">Email Marketing &amp; Automation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../payment_solutions.html">Payment Solutions</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../api_v2.html">API Reference</a></li>
@@ -92,10 +94,10 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="campaigns-editor-filters"></span><section id="filters">
+  <span class="target" id="campaigns-editor-filters"></span><div class="section" id="filters">
 <h1>Filters<a class="headerlink" href="#filters" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" rel="nofollow" href="https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters">Standard liquid filters</a> that are available out of box.</p>
-<section id="import-font">
+<div class="section" id="import-font">
 <h2>import_font<a class="headerlink" href="#import-font" title="Permalink to this headline">¶</a></h2>
 <p>Inserts the font declaration to the page.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>{{ &quot;My Font&quot; | import_font }}
@@ -111,8 +113,8 @@
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="asset-url">
+</div>
+<div class="section" id="asset-url">
 <h2>asset_url<a class="headerlink" href="#asset-url" title="Permalink to this headline">¶</a></h2>
 <p>Inserts link for an uploaded asset.</p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="s2">&quot;image.jpg&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">asset_url</span><span class="w"> </span><span class="p">}}</span>
@@ -120,8 +122,8 @@
 </div>
 <p>Example: <a class="reference external" rel="nofollow" href="http://d2jjzw81hqbuqv.cloudfront.net/static_assets/files/745/original/offer-background.jpg">http://d2jjzw81hqbuqv.cloudfront.net/static_assets/files/745/original/offer-background.jpg</a></p>
 <p><hr></p>
-</section>
-<section id="simple-format">
+</div>
+<div class="section" id="simple-format">
 <h2>simple_format<a class="headerlink" href="#simple-format" title="Permalink to this headline">¶</a></h2>
 <p>Formats plain text to have HTML formatting. E.g. replace <code class="docutils literal notranslate"><span class="pre">\n</span></code> with <code class="docutils literal notranslate"><span class="pre">&lt;br/&gt;</span></code>.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>{{ &quot;Hello [[advocate_info.email]]\nHere is your reward.&quot; | simple_format | interpolate }}
@@ -129,8 +131,8 @@
 </div>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">Hello</span> <span class="pre">John&lt;br/&gt;Here</span> <span class="pre">is</span> <span class="pre">your</span> <span class="pre">reward</span></code>.</p>
 <p><hr></p>
-</section>
-<section id="encode-query-argument">
+</div>
+<div class="section" id="encode-query-argument">
 <h2>encode_query_argument<a class="headerlink" href="#encode-query-argument" title="Permalink to this headline">¶</a></h2>
 <p>Encodes a string to be included in a URL.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>http://example.com/?utm_campaign={{ &quot;Campaign Name&quot; | encode_query_argument }}
@@ -139,8 +141,8 @@
 <p>Returns <code class="docutils literal notranslate"><span class="pre">Campaign%20Name</span></code>, so the URL will be
 <code class="docutils literal notranslate"><span class="pre">http://example.com/?utm_campaign=Campaign%20Name</span></code>.</p>
 <p><hr></p>
-</section>
-<section id="probability-by">
+</div>
+<div class="section" id="probability-by">
 <h2>probability_by<a class="headerlink" href="#probability-by" title="Permalink to this headline">¶</a></h2>
 <p>This filter returns <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> for a dataset based on the probability you request:</p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="mi">50</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">probability_by</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;param1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;param2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;param3&quot;</span><span class="w"> </span><span class="p">}}</span>
@@ -169,8 +171,8 @@ dataset.</p>
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="rand-by">
+</div>
+<div class="section" id="rand-by">
 <h2>rand_by<a class="headerlink" href="#rand-by" title="Permalink to this headline">¶</a></h2>
 <p>Produces a random value which is always the same for specific parameters passed.
 First parameter is a maximum random number.</p>
@@ -185,8 +187,8 @@ First parameter is a maximum random number.</p>
 </div>
 <p>Always returns the same number for a specific email, between 0 and 9.</p>
 <p><hr></p>
-</section>
-<section id="regexp-captures">
+</div>
+<div class="section" id="regexp-captures">
 <h2>regexp_captures<a class="headerlink" href="#regexp-captures" title="Permalink to this headline">¶</a></h2>
 <p>Parses input with a given regexp and returning
 <a class="reference external" rel="nofollow" href="https://www.regular-expressions.info/brackets.html">regular expression captures</a>
@@ -196,8 +198,8 @@ as an array.</p>
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="ab-test">
+</div>
+<div class="section" id="ab-test">
 <h2>ab_test<a class="headerlink" href="#ab-test" title="Permalink to this headline">¶</a></h2>
 <p>A/B testing static text:</p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="s2">&quot;ab_test_identifier&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">ab_test</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Label 1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Label 2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Label N&quot;</span><span class="w"> </span><span class="p">}}</span>
@@ -224,8 +226,8 @@ as an array.</p>
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="date-diff">
+</div>
+<div class="section" id="date-diff">
 <h2>date_diff<a class="headerlink" href="#date-diff" title="Permalink to this headline">¶</a></h2>
 <p>Return absolute difference between two dates in seconds.</p>
 <p>Date is compared to current time if no argument is passed.</p>
@@ -237,8 +239,8 @@ unless time zone is specified.</p>
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="date-greater-than">
+</div>
+<div class="section" id="date-greater-than">
 <h2>date_greater_than<a class="headerlink" href="#date-greater-than" title="Permalink to this headline">¶</a></h2>
 <p>Return boolean that indicates whether a date is more recent
 than another date.</p>
@@ -249,8 +251,8 @@ unless time zone is specified.</p>
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="date-greater-than-or-equal">
+</div>
+<div class="section" id="date-greater-than-or-equal">
 <h2>date_greater_than_or_equal<a class="headerlink" href="#date-greater-than-or-equal" title="Permalink to this headline">¶</a></h2>
 <p>Return boolean that indicates whether a date is the same as
 or more recent than another date.</p>
@@ -261,8 +263,8 @@ unless time zone is specified.</p>
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="add-time">
+</div>
+<div class="section" id="add-time">
 <h2>add_time<a class="headerlink" href="#add-time" title="Permalink to this headline">¶</a></h2>
 <p>Add a specified amount of time to a date and return the result.</p>
 <p>Time unit defaults to seconds.</p>
@@ -282,8 +284,8 @@ unless time zone is specified.</p>
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="format-date">
+</div>
+<div class="section" id="format-date">
 <span id="liquid-filter-format-date"></span><h2>format_date<a class="headerlink" href="#format-date" title="Permalink to this headline">¶</a></h2>
 <p>Format date for current localization.</p>
 <p>Default format: Apr 04, 2014</p>
@@ -297,8 +299,8 @@ unless time zone is specified.</p>
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="human-time-ago">
+</div>
+<div class="section" id="human-time-ago">
 <h2>human_time_ago<a class="headerlink" href="#human-time-ago" title="Permalink to this headline">¶</a></h2>
 <p>Transform given time to time ago in words.</p>
 <p>If given time is yesterday, returns <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">day</span></code>.</p>
@@ -309,8 +311,8 @@ unless time zone is specified.</p>
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="hours-from-time">
+</div>
+<div class="section" id="hours-from-time">
 <h2>hours_from_time<a class="headerlink" href="#hours-from-time" title="Permalink to this headline">¶</a></h2>
 <p>Alias <cite>hours_from_now</cite></p>
 <p>Calculate difference between two dates. By default calculates between specified time and current time.</p>
@@ -337,16 +339,16 @@ unless time zone is specified.</p>
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="interpolate">
+</div>
+<div class="section" id="interpolate">
 <h2>interpolate<a class="headerlink" href="#interpolate" title="Permalink to this headline">¶</a></h2>
 <p>Allows inline string interpolation using [[ ]] syntax.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>{{ &quot;Get [[incentives.click.amount | money]] Off&quot; | interpolate }}
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="md5">
+</div>
+<div class="section" id="md5">
 <h2>md5<a class="headerlink" href="#md5" title="Permalink to this headline">¶</a></h2>
 <p>Calculates the MD5 hash of the string.</p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="s2">&quot;foo&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">md5</span><span class="w"> </span><span class="p">}}</span>
@@ -354,8 +356,8 @@ unless time zone is specified.</p>
 </div>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">acbd18db4cc2f85cedef654fccc4a4d8</span></code>.</p>
 <p><hr></p>
-</section>
-<section id="money">
+</div>
+<div class="section" id="money">
 <h2>money<a class="headerlink" href="#money" title="Permalink to this headline">¶</a></h2>
 <p>Formats number using current currency.</p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="s2">&quot;50&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">money</span><span class="w"> </span><span class="p">}}</span>
@@ -417,8 +419,8 @@ unless time zone is specified.</p>
 </table>
 </div>
 <p><hr></p>
-</section>
-<section id="points">
+</div>
+<div class="section" id="points">
 <h2>points<a class="headerlink" href="#points" title="Permalink to this headline">¶</a></h2>
 <p>Formats number using conversion rate for loyalty from site settings.</p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="s2">&quot;50&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">points</span><span class="w"> </span><span class="p">}}</span>
@@ -466,8 +468,8 @@ unless time zone is specified.</p>
 </table>
 </div>
 <p><hr></p>
-</section>
-<section id="strip">
+</div>
+<div class="section" id="strip">
 <h2>strip<a class="headerlink" href="#strip" title="Permalink to this headline">¶</a></h2>
 <p>Removes leading and trailing blank symbols from the string.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>{{ &quot;    strip me &quot; | strip }}
@@ -475,8 +477,8 @@ unless time zone is specified.</p>
 </div>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">strip</span> <span class="pre">me</span></code>.</p>
 <p><hr></p>
-</section>
-<section id="squish">
+</div>
+<div class="section" id="squish">
 <h2>squish<a class="headerlink" href="#squish" title="Permalink to this headline">¶</a></h2>
 <p>Returns the string, first removing all whitespace on both ends of the string, and then changing remaining consecutive whitespace groups into one space each.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>{{ &quot;   foo   bar        baz &quot; | squish }}
@@ -484,8 +486,8 @@ unless time zone is specified.</p>
 </div>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">foo</span> <span class="pre">bar</span> <span class="pre">baz</span></code>.</p>
 <p><hr></p>
-</section>
-<section id="tweet-length">
+</div>
+<div class="section" id="tweet-length">
 <h2>tweet_length<a class="headerlink" href="#tweet-length" title="Permalink to this headline">¶</a></h2>
 <p>Calculates a tweet length for the string.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>{{ &quot;wow this is a tweet http://example.com&quot; | tweet_length }}
@@ -493,8 +495,8 @@ unless time zone is specified.</p>
 </div>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">43</span></code>.</p>
 <p><hr></p>
-</section>
-<section id="parse-json">
+</div>
+<div class="section" id="parse-json">
 <h2>parse_json<a class="headerlink" href="#parse-json" title="Permalink to this headline">¶</a></h2>
 <p>Parses the JSON string source into a Liquid data structure.</p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="na">var</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="na">&#39;{&quot;key&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;value&quot;</span>}&#39;<span class="w"> </span>|<span class="w"> </span>parse_json<span class="w"> </span><span class="p">%}</span>
@@ -503,8 +505,8 @@ unless time zone is specified.</p>
 </div>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
 <p><hr></p>
-</section>
-<section id="pluralize">
+</div>
+<div class="section" id="pluralize">
 <h2>pluralize<a class="headerlink" href="#pluralize" title="Permalink to this headline">¶</a></h2>
 <p>Returns the singular or plural form of a word based on the value of a number.
 Accepts singular (required) and plural (optional) forms.</p>
@@ -541,8 +543,8 @@ Accepts singular (required) and plural (optional) forms.</p>
 <p>As shown in the table, simple words can be pluralized without specifying plural form.
 However, more advanced cases require explicit plural form to work correctly.</p>
 <p><hr></p>
-</section>
-<section id="claim-url">
+</div>
+<div class="section" id="claim-url">
 <h2>claim_url<a class="headerlink" href="#claim-url" title="Permalink to this headline">¶</a></h2>
 <p>Returns channel-specific claim URL.</p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="s2">&quot;facebook&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">claim_url</span><span class="w"> </span><span class="p">}}</span>
@@ -551,16 +553,16 @@ However, more advanced cases require explicit plural form to work correctly.</p>
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="group-by">
+</div>
+<div class="section" id="group-by">
 <h2>group_by<a class="headerlink" href="#group-by" title="Permalink to this headline">¶</a></h2>
 <p>Group an array’s items by a given property.</p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="nv">incentives</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">group_by</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;amount&quot;</span><span class="w"> </span><span class="p">}}</span>
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="sort">
+</div>
+<div class="section" id="sort">
 <h2>sort<a class="headerlink" href="#sort" title="Permalink to this headline">¶</a></h2>
 <p>Sort an array. Optional arguments for hashes: 1. property name 2. nils order (first or last).</p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="nv">campaign_tags</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">sort</span><span class="w"> </span><span class="p">}}</span>
@@ -569,16 +571,16 @@ However, more advanced cases require explicit plural form to work correctly.</p>
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="where">
+</div>
+<div class="section" id="where">
 <h2>where<a class="headerlink" href="#where" title="Permalink to this headline">¶</a></h2>
 <p>Select all the objects in an array where the key has the given value.</p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="nv">incentives</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">where</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;amount&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="p">}}</span>
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="localize">
+</div>
+<div class="section" id="localize">
 <h2>localize<a class="headerlink" href="#localize" title="Permalink to this headline">¶</a></h2>
 <p>Returns a localized version of string from campaign localization.
 Has optional argument that specifies a default value if campaign has no defined localization yet.
@@ -607,8 +609,8 @@ option (see above for an example). Here is an example of how to use boolean loca
 </div>
 <p>For more information see <a class="reference internal" href="../localization.html#campaigns-localization"><span class="std std-ref">Localization</span></a> page.</p>
 <p><hr></p>
-</section>
-<section id="scale-color">
+</div>
+<div class="section" id="scale-color">
 <h2>scale_color<a class="headerlink" href="#scale-color" title="Permalink to this headline">¶</a></h2>
 <p>Returns a new adjusted color with scaled attributes.
 Available attributes: <cite>red</cite>, <cite>green</cite>, <cite>blue</cite>, <cite>saturation</cite>, <cite>lightness</cite>, <cite>alpha</cite></p>
@@ -617,8 +619,8 @@ Available attributes: <cite>red</cite>, <cite>green</cite>, <cite>blue</cite>, <
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="adjust-color">
+</div>
+<div class="section" id="adjust-color">
 <h2>adjust_color<a class="headerlink" href="#adjust-color" title="Permalink to this headline">¶</a></h2>
 <p>Returns a new adjusted color based on the following attributes:</p>
 <ul class="simple">
@@ -635,8 +637,8 @@ Available attributes: <cite>red</cite>, <cite>green</cite>, <cite>blue</cite>, <
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="leaderboard">
+</div>
+<div class="section" id="leaderboard">
 <h2>leaderboard<a class="headerlink" href="#leaderboard" title="Permalink to this headline">¶</a></h2>
 <p>Returns array of top advocates for Leaderboard campaigns.
 Parameter can be number from 1 to 100 or ‘advocate’.</p>
@@ -660,8 +662,8 @@ Parameter can be number from 1 to 100 or ‘advocate’.</p>
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="url2png">
+</div>
+<div class="section" id="url2png">
 <h2>url2png<a class="headerlink" href="#url2png" title="Permalink to this headline">¶</a></h2>
 <p>Captures a snapshot of a website URL you pass to it. In case you need to
 embed a snapshot of your website into Talkable campaign it is way better
@@ -686,8 +688,8 @@ website snapshot.</p>
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="barcode">
+</div>
+<div class="section" id="barcode">
 <h2>barcode<a class="headerlink" href="#barcode" title="Permalink to this headline">¶</a></h2>
 <p>Represents any <code class="docutils literal notranslate"><span class="pre">string</span></code> as an array of boolean values: <code class="docutils literal notranslate"><span class="pre">[true,</span> <span class="pre">false]</span></code> in order to convert it into a barcode.
 This filter strictly follows GS1-128 specification: <a class="reference external" rel="nofollow" href="https://en.wikipedia.org/wiki/GS1-128">https://en.wikipedia.org/wiki/GS1-128</a>.</p>
@@ -718,8 +720,8 @@ This filter strictly follows GS1-128 specification: <a class="reference external
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="barcode-image">
+</div>
+<div class="section" id="barcode-image">
 <h2>barcode_image<a class="headerlink" href="#barcode-image" title="Permalink to this headline">¶</a></h2>
 <p>Represents any <code class="docutils literal notranslate"><span class="pre">string</span></code> as barcode image in png.
 This filter strictly follows GS1-128 specification: <a class="reference external" rel="nofollow" href="https://en.wikipedia.org/wiki/GS1-128">https://en.wikipedia.org/wiki/GS1-128</a>.</p>
@@ -736,8 +738,8 @@ This filter strictly follows GS1-128 specification: <a class="reference external
 </div>
 <p>Returns a URL string.</p>
 <p><hr></p>
-</section>
-<section id="base64-encode">
+</div>
+<div class="section" id="base64-encode">
 <h2>base64_encode<a class="headerlink" href="#base64-encode" title="Permalink to this headline">¶</a></h2>
 <p>Converts given string into a base64 encoded string.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>{{ &quot;some string&quot; | base64_encode }}
@@ -745,8 +747,8 @@ This filter strictly follows GS1-128 specification: <a class="reference external
 </div>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">c29tZSBzdHJpbmc=</span></code></p>
 <p><hr></p>
-</section>
-<section id="base64-decode">
+</div>
+<div class="section" id="base64-decode">
 <h2>base64_decode<a class="headerlink" href="#base64-decode" title="Permalink to this headline">¶</a></h2>
 <p>Decodes given base64 encoded string.</p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="s2">&quot;c29tZSBzdHJpbmc=&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">base64_decode</span><span class="w"> </span><span class="p">}}</span>
@@ -754,8 +756,8 @@ This filter strictly follows GS1-128 specification: <a class="reference external
 </div>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">some</span> <span class="pre">string</span></code></p>
 <p><hr></p>
-</section>
-<section id="values">
+</div>
+<div class="section" id="values">
 <h2>values<a class="headerlink" href="#values" title="Permalink to this headline">¶</a></h2>
 <p>Takes a hash and returns the array of its values.</p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="na">incentive_configs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>incentives<span class="w"> </span>|<span class="w"> </span>values<span class="w"> </span><span class="p">%}</span>
@@ -763,11 +765,11 @@ This filter strictly follows GS1-128 specification: <a class="reference external
 </div>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">[{ad</span> <span class="pre">incentive</span> <span class="pre">config},</span> <span class="pre">{fr</span> <span class="pre">incentive</span> <span class="pre">config}]</span></code></p>
 <p><hr></p>
-</section>
-<section id="async-rendering">
+</div>
+<div class="section" id="async-rendering">
 <h2>async_rendering<a class="headerlink" href="#async-rendering" title="Permalink to this headline">¶</a></h2>
 <p>Stores Liquid partial that can be later rendered via <code class="docutils literal notranslate"><span class="pre">Talkable.loadLiquid</span></code> function.</p>
-<section id="example-1">
+<div class="section" id="example-1">
 <h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p>Liquid</p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="s2">&quot;async_advocate_info&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">async_rendering</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;template for rendering with data [[ advocate_info.email ]]&#39;</span><span class="w"> </span><span class="p">}}</span>
@@ -783,8 +785,8 @@ This filter strictly follows GS1-128 specification: <a class="reference external
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&quot;template for rendering with data advocate@example.com&quot;
 </pre></div>
 </div>
-</section>
-<section id="example-2">
+</div>
+<div class="section" id="example-2">
 <h3>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>Liquid</p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="s1">&#39;async_dashboard_data&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">async_rendering</span><span class="p">:</span><span class="w"> </span><span class="na">some_key</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[[ dashboard.possible_rewards | money: strip_insignificant_zeros: true ]]&quot;</span><span class="p">,</span><span class="w"> </span><span class="na">other_key</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;[[ friend_info.purchases_count ]]&quot;</span><span class="w"> </span><span class="p">}}</span>
@@ -800,8 +802,8 @@ This filter strictly follows GS1-128 specification: <a class="reference external
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&quot;$420&quot;
 </pre></div>
 </div>
-</section>
-<section id="example-3">
+</div>
+<div class="section" id="example-3">
 <h3>Example 3<a class="headerlink" href="#example-3" title="Permalink to this headline">¶</a></h3>
 <p>Liquid</p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{%</span><span class="w"> </span><span class="nt">capture</span><span class="w"> </span><span class="nv">some_liquid_block</span><span class="w"> </span><span class="p">%}</span>
@@ -822,8 +824,8 @@ Whatever Liquid you would like to have
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&quot;Whatever Liquid you would like to have&quot;
 </pre></div>
 </div>
-</section>
-<section id="example-4">
+</div>
+<div class="section" id="example-4">
 <h3>Example 4<a class="headerlink" href="#example-4" title="Permalink to this headline">¶</a></h3>
 <p>Use <code class="docutils literal notranslate"><span class="pre">json</span></code> Liquid filter to transform deeply nested object structure into a valid JSON.</p>
 <p>Liquid</p>
@@ -860,9 +862,9 @@ Whatever Liquid you would like to have
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-</section>
-<section id="events-collection">
+</div>
+</div>
+<div class="section" id="events-collection">
 <h2>events_collection<a class="headerlink" href="#events-collection" title="Permalink to this headline">¶</a></h2>
 <p>Collection of person’s events from the certain date (or for all time when <code class="docutils literal notranslate"><span class="pre">from_time</span></code> is not set).</p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="s2">&quot;purchase&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">events_collection</span><span class="p">:</span><span class="w"> </span><span class="na">from_time</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;10/14/2018&quot;</span><span class="w"> </span><span class="p">}}</span>
@@ -888,8 +890,8 @@ Whatever Liquid you would like to have
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="rybbon">
+</div>
+<div class="section" id="rybbon">
 <h2>rybbon<a class="headerlink" href="#rybbon" title="Permalink to this headline">¶</a></h2>
 <p>Takes a campaign key of a Rybbon Talkable campaign.
 Makes a claim request within the scope of the given campaign and returns a gift claim link.
@@ -903,8 +905,8 @@ Requires Rybbon app to be installed and enabled in order to work.</p>
 </pre></div>
 </div>
 <p><hr></p>
-</section>
-<section id="tremendous">
+</div>
+<div class="section" id="tremendous">
 <h2>tremendous<a class="headerlink" href="#tremendous" title="Permalink to this headline">¶</a></h2>
 <p>Takes a campaign key of a Tremendous campaign.
 Makes a claim request within the scope of the given campaign and returns a gift claim link.
@@ -914,8 +916,8 @@ Implies that there is only one funding source in the Tremendous account.</p>
 </pre></div>
 </div>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">https://www.tremendous.com/rewards/payout/reward123</span></code></p>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>

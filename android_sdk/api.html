@@ -3,8 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>API &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
@@ -51,7 +50,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../integration/ecommerce_platforms.html">E-commerce Platforms</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../email_marketing.html">Email Marketing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../email_marketing_and_automation.html">Email Marketing &amp; Automation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../payment_solutions.html">Payment Solutions</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../api_v2.html">API Reference</a></li>
@@ -90,11 +92,11 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="android-sdk-api"></span><section id="api">
+  <span class="target" id="android-sdk-api"></span><div class="section" id="api">
 <h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
 <p>Talkable features are also available via API. So there are helper methods in Talkable SDK.
 All methods are available in any place of your app (after <a class="reference internal" href="getting_started.html#main-activity-setup"><span class="std std-ref">initialization</span></a>).</p>
-<section id="create-visitor">
+<div class="section" id="create-visitor">
 <h2>Create visitor<a class="headerlink" href="#create-visitor" title="Permalink to this headline">¶</a></h2>
 <p>It’s the simplest method. You don’t need anything to create <cite>Visitor</cite>.
 But you can do anything you need with just create one.</p>
@@ -115,11 +117,11 @@ But you can do anything you need with just create one.</p>
 </pre></div>
 </div>
 </div></blockquote>
-</section>
-<section id="create-origin">
+</div>
+<div class="section" id="create-origin">
 <span id="android-api-origins"></span><h2>Create origin<a class="headerlink" href="#create-origin" title="Permalink to this headline">¶</a></h2>
 <p>You need to build <cite>Origin</cite> to create. There are three subclasses of this class. You need to build one of them.</p>
-<section id="hierarchy">
+<div class="section" id="hierarchy">
 <h3>Hierarchy<a class="headerlink" href="#hierarchy" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><ul class="simple">
@@ -139,8 +141,8 @@ But you can do anything you need with just create one.</p>
 </li>
 </ul>
 </div></blockquote>
-</section>
-<section id="building-origin">
+</div>
+<div class="section" id="building-origin">
 <h3>Building Origin<a class="headerlink" href="#building-origin" title="Permalink to this headline">¶</a></h3>
 <p>You need to build <cite>Origin</cite> using one of examples below:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Building customer, required for all types</span>
@@ -184,8 +186,8 @@ But you can do anything you need with just create one.</p>
 <span class="n">origin</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="n">item</span><span class="p">);</span> <span class="c1">// Optional</span>
 </pre></div>
 </div>
-</section>
-<section id="api-request">
+</div>
+<div class="section" id="api-request">
 <h3>API request<a class="headerlink" href="#api-request" title="Permalink to this headline">¶</a></h3>
 <p>You need built <cite>origin</cite> created in previous step to save in in Talkable.
 If you have, you need call method like in the example below:</p>
@@ -202,9 +204,9 @@ If you have, you need call method like in the example below:</p>
 <span class="p">});</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="retrieve-rewards">
+</div>
+</div>
+<div class="section" id="retrieve-rewards">
 <span id="android-api-rewards"></span><h2>Retrieve rewards<a class="headerlink" href="#retrieve-rewards" title="Permalink to this headline">¶</a></h2>
 <p>This methods is used for retrieving rewards for user. Example:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">TalkableApi</span><span class="p">.</span><span class="na">retrieveRewards</span><span class="p">(</span><span class="k">new</span> <span class="n">Callback1</span><span class="o">&lt;</span><span class="n">Reward</span><span class="o">[]&gt;</span><span class="p">()</span> <span class="p">{</span>
@@ -238,8 +240,8 @@ you need to pass this data to this method. Example:</p>
 <span class="p">});</span>
 </pre></div>
 </div>
-</section>
-<section id="retrieve-offer">
+</div>
+<div class="section" id="retrieve-offer">
 <h2>Retrieve offer<a class="headerlink" href="#retrieve-offer" title="Permalink to this headline">¶</a></h2>
 <p>This method is used to get offer details by it’s short code. Example:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">shortUrlCode</span> <span class="o">=</span> <span class="s">&quot;ABCXYZ&quot;</span><span class="p">;</span>
@@ -256,13 +258,13 @@ you need to pass this data to this method. Example:</p>
 <span class="p">});</span>
 </pre></div>
 </div>
-</section>
-<section id="create-offer-share">
+</div>
+<div class="section" id="create-offer-share">
 <span id="android-api-sharing"></span><h2>Create offer share<a class="headerlink" href="#create-offer-share" title="Permalink to this headline">¶</a></h2>
 <p>If you have your own sharing mechanism, you can create shares using an API.
 First, you need to create an Offer using the <a class="reference internal" href="#create-origin">registerOrigin</a>
 method.</p>
-<section id="email-share">
+<div class="section" id="email-share">
 <h3>Email Share<a class="headerlink" href="#email-share" title="Permalink to this headline">¶</a></h3>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">createEmailShare</span></code> method to share an offer via email.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">subject</span> <span class="o">=</span> <span class="s">&quot;Email Subject&quot;</span><span class="p">;</span> <span class="c1">// optional</span>
@@ -290,8 +292,8 @@ method.</p>
 contains data, described in <a class="reference internal" href="../api_v2/shares.html#email-sharing-response"><span class="std std-ref">Shares API</span></a> under
 the <code class="docutils literal notranslate"><span class="pre">result</span></code> key</p>
 </div>
-</section>
-<section id="social-share">
+</div>
+<div class="section" id="social-share">
 <h3>Social Share<a class="headerlink" href="#social-share" title="Permalink to this headline">¶</a></h3>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">createSocialShare</span></code> method to track a social share.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">SharingChannel</span> <span class="n">channel</span> <span class="o">=</span> <span class="n">SharingChannel</span><span class="p">.</span><span class="na">FACEBOOK</span><span class="p">;</span> <span class="c1">// required</span>
@@ -312,9 +314,9 @@ the <code class="docutils literal notranslate"><span class="pre">result</span></
 <div class="toctree-wrapper compound">
 </div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
             <div class="clearer"></div>
