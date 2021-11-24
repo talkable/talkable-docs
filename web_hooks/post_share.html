@@ -3,7 +3,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="Post Share Webhook provides notification of share events performed within a referral campaign workflow." name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Post Share Webhook provides notification of share events performed within a referral campaign workflow." name="description" />
 
     <title>Post Share Webhook &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -90,7 +91,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="web-hooks-post-share"></span><div class="section" id="post-share-webhook">
+  <span class="target" id="web-hooks-post-share"></span><section id="post-share-webhook">
 <h1>Post Share Webhook<a class="headerlink" href="#post-share-webhook" title="Permalink to this headline">¶</a></h1>
 <p>Talkable Post Share Webhook provides notification of a share event performed
 within a referral campaign workflow. Use cases for the Post Share Webhook include:</p>
@@ -151,6 +152,27 @@ customer</p></li>
 </li>
 </ul>
 </li>
+<li><p><strong>sharer_info</strong> — subhash of parameters describing the person sending the share</p>
+<ul class="simple">
+<li><p><strong>email</strong> — person’s email address</p></li>
+<li><p><strong>first_name</strong> — person’s first name</p></li>
+<li><p><strong>last_name</strong> — person’s last name</p></li>
+<li><p><strong>username</strong> — person’s username (optional)</p></li>
+<li><p><strong>sub_choice</strong> — subscription choice (optional, present only if the form
+included subscription checkbox)</p></li>
+<li><p><strong>subscribed_at</strong> — date person has subscribed (deprecated; use opted_in_at instead)</p></li>
+<li><p><strong>opted_in_at</strong> — date person has subscribed (optional)</p></li>
+<li><p><strong>unsubscribed_at</strong> — date person has unsubscribed (optional)</p></li>
+<li><p><strong>custom_properties</strong> — hash of person’s custom properties (optional)</p></li>
+<li><p><strong>referral_counts</strong> - subhash of <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>’s referral counts</p>
+<ul>
+<li><p><strong>total</strong> — created referrals count</p></li>
+<li><p><strong>approved</strong> — approved referrals count</p></li>
+<li><p><strong>pending</strong> — count of waiting for approval referrals</p></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><p><strong>share_link</strong> — link sent in share message (optional, present only for
 Facebook and Twitter shares)</p></li>
 <li><p><strong>origin</strong> — contains data about the event that issued an offer:</p>
@@ -191,6 +213,7 @@ Facebook and Twitter shares)</p></li>
 </div></blockquote>
 </li>
 </ul>
+<p>Note: origin email is the email at the time when the campaign is first shown to the visitor, please, use sharer info for the most up to date information</p>
 <h2>Sample payload</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;campaign&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">83587635</span><span class="p">,</span>
@@ -205,6 +228,23 @@ Facebook and Twitter shares)</p></li>
   <span class="s2">&quot;share_info&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;recipients&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;john@example.com&quot;</span><span class="p">]</span>
   <span class="p">},</span>
+  <span class="s2">&quot;sharer_info&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;sharer@example.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;username&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-09-27T22:55:13.860+03:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-09-27T22:55:13.860+03:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;total&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+      <span class="s2">&quot;approved&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+      <span class="s2">&quot;pending&quot;</span><span class="o">:</span> <span class="mf">0</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span> <span class="kc">null</span>
+  <span class="p">}</span>
   <span class="s2">&quot;origin&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">147886587</span><span class="p">,</span>
     <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Purchase&quot;</span><span class="p">,</span>
@@ -225,7 +265,7 @@ Facebook and Twitter shares)</p></li>
 <div class="toctree-wrapper compound">
 </div>
 </div>
-</div>
+</section>
 
 
             <div class="clearer"></div>
