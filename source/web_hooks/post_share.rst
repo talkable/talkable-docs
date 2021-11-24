@@ -61,11 +61,17 @@ triggered twice.
 
     * **recipients** — an array of email addresses
 
+* **sharer_info** — subhash of parameters describing the person sending the share
+
+  .. include:: /partials/person_fields.rst
+
 * **share_link** — link sent in share message (optional, present only for
   Facebook and Twitter shares)
 * **origin** — contains data about the event that issued an offer:
 
   .. include:: /partials/origin_fields.rst
+
+Note: origin email is the email at the time when the campaign is first shown to the visitor, please, use sharer info for the most up to date information
 
 .. raw:: html
 
@@ -87,6 +93,23 @@ triggered twice.
      "share_info": {
        "recipients": ["john@example.com"]
      },
+     "sharer_info": {
+       "first_name": "Bob",
+       "last_name": "Smith",
+       "email": "sharer@example.com",
+       "username": "username",
+       "unsubscribed_at": null,
+       "subscribed_at": "2018-09-27T22:55:13.860+03:00",
+       "opted_in_at": "2018-09-27T22:55:13.860+03:00",
+       "sub_choice": true,
+       "referral_counts": {
+         "total": 0,
+         "approved": 0,
+         "pending": 0
+       },
+       "is_loyalty_member": false,
+       "loyalty_member": null
+     }
      "origin": {
        "id": 147886587,
        "type": "Purchase",
