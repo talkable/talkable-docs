@@ -120,6 +120,7 @@ triggered twice.
        "type": "Purchase",
        "order_number": "450901776",
        "subtotal": 35.03,
+       "email": "sharer@example.com",
        "customer_id": "565659001",
        "ip_address": "127.0.0.1",
        "coupon_code": "WHT29123",
