@@ -181,7 +181,7 @@ Webhook Set Up Steps</span></a></p>
 <li><p><strong>username</strong> — person’s username (optional)</p></li>
 <li><p><strong>sub_choice</strong> — subscription choice (optional, present only if the form
 included subscription checkbox)</p></li>
-<li><p><strong>subscribed_at</strong> — date person has subscribed (deprecated; use opted_in_at instead)</p></li>
+<li><p><strong>subscribed_at</strong> — date person has subscribed (deprecated; use <code class="docutils literal notranslate"><span class="pre">opted_in_at</span></code> instead)</p></li>
 <li><p><strong>opted_in_at</strong> — date person has subscribed (optional)</p></li>
 <li><p><strong>unsubscribed_at</strong> — date person has unsubscribed (optional)</p></li>
 <li><p><strong>custom_properties</strong> — hash of person’s custom properties (optional)</p></li>
@@ -217,8 +217,9 @@ included subscription checkbox)</p></li>
 <blockquote>
 <div><ul class="simple">
 <li><p><strong>order_number</strong> - unique identifier of the Purchase</p></li>
-<li><p><strong>subtotal</strong> - order subtotal for the purchase</p></li>
-<li><p><strong>coupon_code</strong> - coupon code used with the purchase</p></li>
+<li><p><strong>subtotal</strong> - order subtotal for the Purchase</p></li>
+<li><p><strong>coupon_code</strong> - coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
+<li><p><strong>order_date</strong> - date of the Purchase</p></li>
 </ul>
 </div></blockquote>
 <p><em>For Event:</em></p>
@@ -227,7 +228,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>event_category</strong> - identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
 <li><p><strong>event_number</strong> - unique identifier of the Event within the associated <strong>event_category</strong></p></li>
 <li><p><strong>subtotal</strong> - optional monetary attribute of the Event</p></li>
-<li><p><strong>coupon_code</strong> - optional coupon code associated with the Event</p></li>
+<li><p><strong>coupon_code</strong> - coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 </ul>
 </div></blockquote>
 </li>
