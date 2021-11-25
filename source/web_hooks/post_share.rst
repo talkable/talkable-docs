@@ -122,7 +122,7 @@ triggered twice.
        "subtotal": 35.03,
        "email": "sharer@example.com",
        "customer_id": "565659001",
-       "order_date":"2019-04-11T07:28:31.258-07:00",
+       "order_date": "2019-04-11T07:28:31.258-07:00",
        "ip_address": "127.0.0.1",
        "coupon_code": "WHT29123",
        "traffic_source": "post-checkout"
