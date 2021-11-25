@@ -152,7 +152,7 @@ customer</p></li>
 </li>
 </ul>
 </li>
-<li><p><strong>sharer_info</strong> — subhash of parameters describing the person sending the share</p>
+<li><p><strong>sharer_info</strong> — subhash of parameters describing the person who shared the offer</p>
 <ul class="simple">
 <li><p><strong>email</strong> — person’s email address</p></li>
 <li><p><strong>first_name</strong> — person’s first name</p></li>
@@ -213,7 +213,13 @@ Facebook and Twitter shares)</p></li>
 </div></blockquote>
 </li>
 </ul>
-<p>Note: origin email is the email at the time when the campaign is first shown to the visitor, please, use sharer info for the most up to date information</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">origin.email</span></code> contains the email saved at the moment when the campaign is
+first shown to the Advocate. It could be <code class="docutils literal notranslate"><span class="pre">null</span></code>. For the most up-to-date
+information about the Advocate, use <code class="docutils literal notranslate"><span class="pre">sharer_info</span></code> property which is updated
+with the email address the Advocate has entered on the Advocate Signup Page.</p>
+</div>
 <h2>Sample payload</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;campaign&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">83587635</span><span class="p">,</span>
