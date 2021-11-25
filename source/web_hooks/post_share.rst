@@ -61,7 +61,7 @@ triggered twice.
 
     * **recipients** — an array of email addresses
 
-* **sharer_info** — subhash of parameters describing the person sending the share
+* **sharer_info** — subhash of parameters describing the person who shared the offer
 
   .. include:: /partials/person_fields.rst
 
@@ -71,7 +71,12 @@ triggered twice.
 
   .. include:: /partials/origin_fields.rst
 
-Note: origin email is the email at the time when the campaign is first shown to the visitor, please, use sharer info for the most up to date information
+.. note::
+
+   ``origin.email`` contains the email saved at the moment when the campaign is 
+   first shown to the Advocate. It could be ``null``. For the most up-to-date 
+   information about the Advocate, use ``sharer_info`` property which is updated
+   with the email address the Advocate has entered on the Advocate Signup Page.
 
 .. raw:: html
 
