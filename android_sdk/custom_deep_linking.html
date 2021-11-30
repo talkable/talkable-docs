@@ -3,7 +3,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Integration with Third Party Deep Linking Services &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
@@ -89,7 +90,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="android-sdk-custom-deep-linking"></span><div class="section" id="integration-with-third-party-deep-linking-services">
+  <span class="target" id="android-sdk-custom-deep-linking"></span><section id="integration-with-third-party-deep-linking-services">
 <h1>Integration with Third Party Deep Linking Services<a class="headerlink" href="#integration-with-third-party-deep-linking-services" title="Permalink to this headline">¶</a></h1>
 <p>Talkable can work with third party deep linking providers such as GetSocial,
 Branch.io, and Firebase. Talkable is able to use deep linking functionality to
@@ -101,7 +102,7 @@ device, this link will not only redirect them to the App Store to install the ap
 but also track that the app was installed using a referral link. Deep linking can
 also be used to send a Friend to a specific place in the app once it’s installed
 and opened for the first time, show them personalized messages, and more.</p>
-<div class="section" id="configure-your-talkable-campaign">
+<section id="configure-your-talkable-campaign">
 <h2>1. Configure your Talkable campaign<a class="headerlink" href="#configure-your-talkable-campaign" title="Permalink to this headline">¶</a></h2>
 <p>To use deep linking with Talkable campaigns, simply use your deep link URL as your Talkable Site URL.</p>
 <img alt="../_images/site_url.png" src="../_images/site_url.png" />
@@ -115,8 +116,8 @@ with the deep link. This functionality is used to pass the Friend’s identifyin
 information to the Talkable SDK in your iOS app. To use this functionality with
 Firebase, refer to this document: <a class="reference external" rel="nofollow" href="https://firebase.google.com/docs/dynamic-links/create-manually">Manually constructing a Dynamic Link URL</a>.</p>
 </div>
-</div>
-<div class="section" id="pass-deep-linking-params-to-the-talkable-sdk">
+</section>
+<section id="pass-deep-linking-params-to-the-talkable-sdk">
 <h2>2. Pass deep linking params to the Talkable SDK<a class="headerlink" href="#pass-deep-linking-params-to-the-talkable-sdk" title="Permalink to this headline">¶</a></h2>
 <p>Retrieve deep linking params as described in your deep linking provider’s
 documentation and pass these params to the Talkable SDK using the
@@ -184,8 +185,8 @@ installs only when desired conditions are met.</p>
 installation event in Talkable and complete the referral cycle.
 You can then use the <a class="reference internal" href="api.html#android-sdk-api"><span class="std std-ref">TalkableApi.retrieveRewards()</span></a>
 method to check for rewards.</p>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>

@@ -3,7 +3,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="Referral Webhook notifies your endpoint that your brand Advocate’s referral status has become “Approved”." name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Referral Webhook notifies your endpoint that your brand Advocate’s referral status has become “Approved”." name="description" />
 
     <title>Referral Webhook &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -90,7 +91,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="web-hooks-referral"></span><div class="section" id="referral-webhook">
+  <span class="target" id="web-hooks-referral"></span><section id="referral-webhook">
 <h1>Referral Webhook<a class="headerlink" href="#referral-webhook" title="Permalink to this headline">¶</a></h1>
 <p>The Talkable Referral Webhook notifies your endpoint that an <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> referral
 status has become “Approved” specifically for a <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> purchase
@@ -171,8 +172,9 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
 <blockquote>
 <div><ul class="simple">
 <li><p><strong>order_number</strong> - unique identifier of the Purchase</p></li>
-<li><p><strong>subtotal</strong> - order subtotal for the purchase</p></li>
-<li><p><strong>coupon_code</strong> - coupon code used with the purchase</p></li>
+<li><p><strong>subtotal</strong> - order subtotal for the Purchase</p></li>
+<li><p><strong>coupon_code</strong> - coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
+<li><p><strong>order_date</strong> - date of the Purchase</p></li>
 </ul>
 </div></blockquote>
 <p><em>For Event:</em></p>
@@ -181,7 +183,7 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
 <li><p><strong>event_category</strong> - identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
 <li><p><strong>event_number</strong> - unique identifier of the Event within the associated <strong>event_category</strong></p></li>
 <li><p><strong>subtotal</strong> - optional monetary attribute of the Event</p></li>
-<li><p><strong>coupon_code</strong> - optional coupon code associated with the Event</p></li>
+<li><p><strong>coupon_code</strong> - coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 </ul>
 </div></blockquote>
 </li>
@@ -199,7 +201,7 @@ person (except for rewards paid in loyalty points), where each hash contains par
 <li><p><strong>username</strong> — person’s username (optional)</p></li>
 <li><p><strong>sub_choice</strong> — subscription choice (optional, present only if the form
 included subscription checkbox)</p></li>
-<li><p><strong>subscribed_at</strong> — date person has subscribed (deprecated; use opted_in_at instead)</p></li>
+<li><p><strong>subscribed_at</strong> — date person has subscribed (deprecated; use <code class="docutils literal notranslate"><span class="pre">opted_in_at</span></code> instead)</p></li>
 <li><p><strong>opted_in_at</strong> — date person has subscribed (optional)</p></li>
 <li><p><strong>unsubscribed_at</strong> — date person has unsubscribed (optional)</p></li>
 <li><p><strong>custom_properties</strong> — hash of person’s custom properties (optional)</p></li>
@@ -238,8 +240,9 @@ included subscription checkbox)</p></li>
 <blockquote>
 <div><ul class="simple">
 <li><p><strong>order_number</strong> - unique identifier of the Purchase</p></li>
-<li><p><strong>subtotal</strong> - order subtotal for the purchase</p></li>
-<li><p><strong>coupon_code</strong> - coupon code used with the purchase</p></li>
+<li><p><strong>subtotal</strong> - order subtotal for the Purchase</p></li>
+<li><p><strong>coupon_code</strong> - coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
+<li><p><strong>order_date</strong> - date of the Purchase</p></li>
 </ul>
 </div></blockquote>
 <p><em>For Event:</em></p>
@@ -248,7 +251,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>event_category</strong> - identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
 <li><p><strong>event_number</strong> - unique identifier of the Event within the associated <strong>event_category</strong></p></li>
 <li><p><strong>subtotal</strong> - optional monetary attribute of the Event</p></li>
-<li><p><strong>coupon_code</strong> - optional coupon code associated with the Event</p></li>
+<li><p><strong>coupon_code</strong> - coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 </ul>
 </div></blockquote>
 </li>
@@ -268,7 +271,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>username</strong> — person’s username (optional)</p></li>
 <li><p><strong>sub_choice</strong> — subscription choice (optional, present only if the form
 included subscription checkbox)</p></li>
-<li><p><strong>subscribed_at</strong> — date person has subscribed (deprecated; use opted_in_at instead)</p></li>
+<li><p><strong>subscribed_at</strong> — date person has subscribed (deprecated; use <code class="docutils literal notranslate"><span class="pre">opted_in_at</span></code> instead)</p></li>
 <li><p><strong>opted_in_at</strong> — date person has subscribed (optional)</p></li>
 <li><p><strong>unsubscribed_at</strong> — date person has unsubscribed (optional)</p></li>
 <li><p><strong>custom_properties</strong> — hash of person’s custom properties (optional)</p></li>
@@ -307,8 +310,9 @@ included subscription checkbox)</p></li>
 <blockquote>
 <div><ul class="simple">
 <li><p><strong>order_number</strong> - unique identifier of the Purchase</p></li>
-<li><p><strong>subtotal</strong> - order subtotal for the purchase</p></li>
-<li><p><strong>coupon_code</strong> - coupon code used with the purchase</p></li>
+<li><p><strong>subtotal</strong> - order subtotal for the Purchase</p></li>
+<li><p><strong>coupon_code</strong> - coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
+<li><p><strong>order_date</strong> - date of the Purchase</p></li>
 </ul>
 </div></blockquote>
 <p><em>For Event:</em></p>
@@ -317,7 +321,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>event_category</strong> - identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
 <li><p><strong>event_number</strong> - unique identifier of the Event within the associated <strong>event_category</strong></p></li>
 <li><p><strong>subtotal</strong> - optional monetary attribute of the Event</p></li>
-<li><p><strong>coupon_code</strong> - optional coupon code associated with the Event</p></li>
+<li><p><strong>coupon_code</strong> - coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 </ul>
 </div></blockquote>
 </li>
@@ -341,7 +345,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>username</strong> — person’s username (optional)</p></li>
 <li><p><strong>sub_choice</strong> — subscription choice (optional, present only if the form
 included subscription checkbox)</p></li>
-<li><p><strong>subscribed_at</strong> — date person has subscribed (deprecated; use opted_in_at instead)</p></li>
+<li><p><strong>subscribed_at</strong> — date person has subscribed (deprecated; use <code class="docutils literal notranslate"><span class="pre">opted_in_at</span></code> instead)</p></li>
 <li><p><strong>opted_in_at</strong> — date person has subscribed (optional)</p></li>
 <li><p><strong>unsubscribed_at</strong> — date person has unsubscribed (optional)</p></li>
 <li><p><strong>custom_properties</strong> — hash of person’s custom properties (optional)</p></li>
@@ -380,8 +384,9 @@ included subscription checkbox)</p></li>
 <blockquote>
 <div><ul class="simple">
 <li><p><strong>order_number</strong> - unique identifier of the Purchase</p></li>
-<li><p><strong>subtotal</strong> - order subtotal for the purchase</p></li>
-<li><p><strong>coupon_code</strong> - coupon code used with the purchase</p></li>
+<li><p><strong>subtotal</strong> - order subtotal for the Purchase</p></li>
+<li><p><strong>coupon_code</strong> - coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
+<li><p><strong>order_date</strong> - date of the Purchase</p></li>
 </ul>
 </div></blockquote>
 <p><em>For Event:</em></p>
@@ -390,7 +395,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>event_category</strong> - identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
 <li><p><strong>event_number</strong> - unique identifier of the Event within the associated <strong>event_category</strong></p></li>
 <li><p><strong>subtotal</strong> - optional monetary attribute of the Event</p></li>
-<li><p><strong>coupon_code</strong> - optional coupon code associated with the Event</p></li>
+<li><p><strong>coupon_code</strong> - coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 </ul>
 </div></blockquote>
 </li>
@@ -409,7 +414,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>username</strong> — person’s username (optional)</p></li>
 <li><p><strong>sub_choice</strong> — subscription choice (optional, present only if the form
 included subscription checkbox)</p></li>
-<li><p><strong>subscribed_at</strong> — date person has subscribed (deprecated; use opted_in_at instead)</p></li>
+<li><p><strong>subscribed_at</strong> — date person has subscribed (deprecated; use <code class="docutils literal notranslate"><span class="pre">opted_in_at</span></code> instead)</p></li>
 <li><p><strong>opted_in_at</strong> — date person has subscribed (optional)</p></li>
 <li><p><strong>unsubscribed_at</strong> — date person has unsubscribed (optional)</p></li>
 <li><p><strong>custom_properties</strong> — hash of person’s custom properties (optional)</p></li>
@@ -448,8 +453,9 @@ included subscription checkbox)</p></li>
 <blockquote>
 <div><ul class="simple">
 <li><p><strong>order_number</strong> - unique identifier of the Purchase</p></li>
-<li><p><strong>subtotal</strong> - order subtotal for the purchase</p></li>
-<li><p><strong>coupon_code</strong> - coupon code used with the purchase</p></li>
+<li><p><strong>subtotal</strong> - order subtotal for the Purchase</p></li>
+<li><p><strong>coupon_code</strong> - coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
+<li><p><strong>order_date</strong> - date of the Purchase</p></li>
 </ul>
 </div></blockquote>
 <p><em>For Event:</em></p>
@@ -458,7 +464,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>event_category</strong> - identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
 <li><p><strong>event_number</strong> - unique identifier of the Event within the associated <strong>event_category</strong></p></li>
 <li><p><strong>subtotal</strong> - optional monetary attribute of the Event</p></li>
-<li><p><strong>coupon_code</strong> - optional coupon code associated with the Event</p></li>
+<li><p><strong>coupon_code</strong> - coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 </ul>
 </div></blockquote>
 </li>
@@ -670,7 +676,7 @@ merchant’s side. More information on the reward is specified in
 <div class="toctree-wrapper compound">
 </div>
 </div>
-</div>
+</section>
 
 
             <div class="clearer"></div>

@@ -3,7 +3,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="Find the components of what Talkable is composed." name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Find the components of what Talkable is composed." name="description" />
 
     <title>Integration Components &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
@@ -89,7 +90,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="integration-loyalty-integration-components"></span><div class="section" id="integration-components">
+  <span class="target" id="integration-loyalty-integration-components"></span><section id="integration-components">
 <h1>Integration Components<a class="headerlink" href="#integration-components" title="Permalink to this headline">¶</a></h1>
 <p>Talkable Loyalty is composed of the following components:</p>
 <ol class="arabic">
@@ -108,7 +109,7 @@ that spans every page. All other integration components are dependent on the Ini
 <li><p><a class="reference internal" href="#loyalty-actions"><span class="std std-ref">Loyalty Actions</span></a></p></li>
 </ol>
 <p><hr></p>
-<div class="section" id="initialization-script">
+<section id="initialization-script">
 <span id="integration-loyalty-integration-components-initialization-script"></span><h2>Initialization Script<a class="headerlink" href="#initialization-script" title="Permalink to this headline">¶</a></h2>
 <p>The Initialization script should be placed in the head template or some
 template that spans every page. Talkable JS library size is typically
@@ -128,22 +129,22 @@ script.</p>
 <span class="c">&lt;!-- End Talkable integration code --&gt;</span>
 </pre></div>
 </div>
-<div class="section" id="initialization-script-notes">
+<section id="initialization-script-notes">
 <h3>Initialization Script Notes<a class="headerlink" href="#initialization-script-notes" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic">
 <li><p><strong>Site ID.</strong> You can obtain your Site ID by logging into the Talkable
 platform where Site ID is displayed on your Dashboard and URL as seen
 here:</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="Site ID" src="../../_images/site_id.png" />
-</div>
+</figure>
 </li>
 <li><p><strong>Variables.</strong> Use your dynamic variables to pass user details.</p></li>
 </ol>
 <p><hr></p>
-</div>
-</div>
-<div class="section" id="loyalty-dashboard">
+</section>
+</section>
+<section id="loyalty-dashboard">
 <span id="id1"></span><h2>Loyalty Dashboard<a class="headerlink" href="#loyalty-dashboard" title="Permalink to this headline">¶</a></h2>
 <p>Create a new HTML page with URL
 path (<cite>www.your-site.com/loyalty</cite>), add the Talkable Container DIV in
@@ -156,7 +157,7 @@ the body of the page and show loyalty campaign with the JS API function:</p>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<div class="section" id="loyalty-dashboard-notes">
+<section id="loyalty-dashboard-notes">
 <h3>Loyalty Dashboard Notes<a class="headerlink" href="#loyalty-dashboard-notes" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
 <li><p>The <a class="reference internal" href="#initialization-script">Talkable Initialization Script</a> must be
@@ -173,9 +174,9 @@ which override respective values from <cite>authenticate_customer</cite>. Email 
 show loyalty dashboard.</p></li>
 </ol>
 <p><hr></p>
-</div>
-</div>
-<div class="section" id="loyalty-redeem-widget">
+</section>
+</section>
+<section id="loyalty-redeem-widget">
 <span id="id2"></span><h2>Loyalty Redeem Widget<a class="headerlink" href="#loyalty-redeem-widget" title="Permalink to this headline">¶</a></h2>
 <p>Add Talkable container DIV element at the checkout
 exactly where the loyalty points redemption widget should render, and call JS API function to render the widget:</p>
@@ -185,7 +186,7 @@ exactly where the loyalty points redemption widget should render, and call JS AP
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<div class="section" id="loyalty-redeem-widget-notes">
+<section id="loyalty-redeem-widget-notes">
 <h3>Loyalty Redeem Widget Notes<a class="headerlink" href="#loyalty-redeem-widget-notes" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
 <li><p><cite>show_loyalty_redeem_widget</cite> optionally accepts <cite>email</cite> and <cite>custom_properties</cite>. If none provided, values will be
@@ -193,9 +194,9 @@ taken from respective parameters of <cite>authenticate_customer</cite>. If email
 signup widget will be rendered instead.</p></li>
 </ol>
 <p><hr></p>
-</div>
-</div>
-<div class="section" id="loyalty-actions">
+</section>
+</section>
+<section id="loyalty-actions">
 <span id="id3"></span><h2>Loyalty Actions<a class="headerlink" href="#loyalty-actions" title="Permalink to this headline">¶</a></h2>
 <p>To register custom loyalty actions (e.g. completing surveys, adding reviews, uploading something on site),
 use the following code:</p>
@@ -207,16 +208,16 @@ use the following code:</p>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<div class="section" id="loyalty-actions-notes">
+<section id="loyalty-actions-notes">
 <h3>Loyalty Actions Notes<a class="headerlink" href="#loyalty-actions-notes" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
 <li><p><cite>register_loyalty_action</cite> optionally accepts <cite>email</cite> and <cite>custom_properties</cite>. If none provided, values will be
 taken from respective parameters of <cite>authenticate_customer</cite>. Email must be provided in either of the sources to
 register loyalty actions.</p></li>
 </ol>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
             <div class="clearer"></div>

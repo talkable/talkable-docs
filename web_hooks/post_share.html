@@ -3,7 +3,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="Post Share Webhook provides notification of share events performed within a referral campaign workflow." name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Post Share Webhook provides notification of share events performed within a referral campaign workflow." name="description" />
 
     <title>Post Share Webhook &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -90,7 +91,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="web-hooks-post-share"></span><div class="section" id="post-share-webhook">
+  <span class="target" id="web-hooks-post-share"></span><section id="post-share-webhook">
 <h1>Post Share Webhook<a class="headerlink" href="#post-share-webhook" title="Permalink to this headline">¶</a></h1>
 <p>Talkable Post Share Webhook provides notification of a share event performed
 within a referral campaign workflow. Use cases for the Post Share Webhook include:</p>
@@ -151,6 +152,27 @@ customer</p></li>
 </li>
 </ul>
 </li>
+<li><p><strong>sharer_info</strong> — subhash of parameters describing the person who shared the offer</p>
+<ul class="simple">
+<li><p><strong>email</strong> — person’s email address</p></li>
+<li><p><strong>first_name</strong> — person’s first name</p></li>
+<li><p><strong>last_name</strong> — person’s last name</p></li>
+<li><p><strong>username</strong> — person’s username (optional)</p></li>
+<li><p><strong>sub_choice</strong> — subscription choice (optional, present only if the form
+included subscription checkbox)</p></li>
+<li><p><strong>subscribed_at</strong> — date person has subscribed (deprecated; use <code class="docutils literal notranslate"><span class="pre">opted_in_at</span></code> instead)</p></li>
+<li><p><strong>opted_in_at</strong> — date person has subscribed (optional)</p></li>
+<li><p><strong>unsubscribed_at</strong> — date person has unsubscribed (optional)</p></li>
+<li><p><strong>custom_properties</strong> — hash of person’s custom properties (optional)</p></li>
+<li><p><strong>referral_counts</strong> - subhash of <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>’s referral counts</p>
+<ul>
+<li><p><strong>total</strong> — created referrals count</p></li>
+<li><p><strong>approved</strong> — approved referrals count</p></li>
+<li><p><strong>pending</strong> — count of waiting for approval referrals</p></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><p><strong>share_link</strong> — link sent in share message (optional, present only for
 Facebook and Twitter shares)</p></li>
 <li><p><strong>origin</strong> — contains data about the event that issued an offer:</p>
@@ -176,8 +198,9 @@ Facebook and Twitter shares)</p></li>
 <blockquote>
 <div><ul class="simple">
 <li><p><strong>order_number</strong> - unique identifier of the Purchase</p></li>
-<li><p><strong>subtotal</strong> - order subtotal for the purchase</p></li>
-<li><p><strong>coupon_code</strong> - coupon code used with the purchase</p></li>
+<li><p><strong>subtotal</strong> - order subtotal for the Purchase</p></li>
+<li><p><strong>coupon_code</strong> - coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
+<li><p><strong>order_date</strong> - date of the Purchase</p></li>
 </ul>
 </div></blockquote>
 <p><em>For Event:</em></p>
@@ -186,11 +209,18 @@ Facebook and Twitter shares)</p></li>
 <li><p><strong>event_category</strong> - identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
 <li><p><strong>event_number</strong> - unique identifier of the Event within the associated <strong>event_category</strong></p></li>
 <li><p><strong>subtotal</strong> - optional monetary attribute of the Event</p></li>
-<li><p><strong>coupon_code</strong> - optional coupon code associated with the Event</p></li>
+<li><p><strong>coupon_code</strong> - coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 </ul>
 </div></blockquote>
 </li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">origin.email</span></code> contains the email saved at the moment when the campaign is
+first shown to the Advocate. It could be <code class="docutils literal notranslate"><span class="pre">null</span></code>. For the most up-to-date
+information about the Advocate, use <code class="docutils literal notranslate"><span class="pre">sharer_info</span></code> property which is updated
+with the email address the Advocate has entered on the Advocate Signup Page.</p>
+</div>
 <h2>Sample payload</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;campaign&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">83587635</span><span class="p">,</span>
@@ -205,12 +235,31 @@ Facebook and Twitter shares)</p></li>
   <span class="s2">&quot;share_info&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;recipients&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;john@example.com&quot;</span><span class="p">]</span>
   <span class="p">},</span>
+  <span class="s2">&quot;sharer_info&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;sharer@example.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;username&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-09-27T22:55:13.860+03:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-09-27T22:55:13.860+03:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;total&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+      <span class="s2">&quot;approved&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+      <span class="s2">&quot;pending&quot;</span><span class="o">:</span> <span class="mf">0</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span> <span class="kc">null</span>
+  <span class="p">},</span>
   <span class="s2">&quot;origin&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">147886587</span><span class="p">,</span>
     <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Purchase&quot;</span><span class="p">,</span>
     <span class="s2">&quot;order_number&quot;</span><span class="o">:</span> <span class="s2">&quot;450901776&quot;</span><span class="p">,</span>
     <span class="s2">&quot;subtotal&quot;</span><span class="o">:</span> <span class="mf">35.03</span><span class="p">,</span>
+    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;sharer@example.com&quot;</span><span class="p">,</span>
     <span class="s2">&quot;customer_id&quot;</span><span class="o">:</span> <span class="s2">&quot;565659001&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;order_date&quot;</span><span class="o">:</span> <span class="s2">&quot;2019-04-11T07:28:31.258-07:00&quot;</span><span class="p">,</span>
     <span class="s2">&quot;ip_address&quot;</span><span class="o">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
     <span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span> <span class="s2">&quot;WHT29123&quot;</span><span class="p">,</span>
     <span class="s2">&quot;traffic_source&quot;</span><span class="o">:</span> <span class="s2">&quot;post-checkout&quot;</span>
@@ -218,14 +267,14 @@ Facebook and Twitter shares)</p></li>
 <span class="p">}</span>
 </pre></div>
 </div>
-<h2>cURL example</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl --data <span class="s1">&#39;key=&lt;key&gt;&amp;site=&lt;site&gt;&amp;type=post_share_web_hook&amp;payload={&quot;campaign&quot;:{&quot;id&quot;:83587635,&quot;type&quot;:&quot;StandaloneCampaign&quot;,&quot;cached_slug&quot;:83587635,&quot;tag_names&quot;:[&quot;default&quot;],&quot;origin_min_age&quot;:null,&quot;origin_max_age&quot;:null,&quot;new_customer&quot;:null},&quot;share_type&quot;:&quot;email&quot;,&quot;share_info&quot;:{&quot;recipients&quot;:[&quot;john@example.com&quot;]},&quot;origin&quot;:{&quot;id&quot;:654689661,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;426692385&quot;,&quot;subtotal&quot;:29.39,&quot;customer_id&quot;:&quot;162638070&quot;,&quot;order_date&quot;:&quot;2019-04-11T07:28:31.258-07:00&quot;,&quot;coupon_code&quot;:&quot;WHT79679&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;}}&#39;</span> &lt;url&gt;
+<h2>cURL example</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl --data <span class="s1">&#39;key=&lt;key&gt;&amp;site=&lt;site&gt;&amp;type=post_share_web_hook&amp;payload={&quot;campaign&quot;:{&quot;id&quot;:83587635,&quot;type&quot;:&quot;StandaloneCampaign&quot;,&quot;cached_slug&quot;:83587635,&quot;tag_names&quot;:[&quot;default&quot;],&quot;origin_min_age&quot;:null,&quot;origin_max_age&quot;:null,&quot;new_customer&quot;:null},&quot;share_type&quot;:&quot;email&quot;,&quot;share_info&quot;:{&quot;recipients&quot;:[&quot;john@example.com&quot;]},&quot;sharer_info&quot;:{&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;email&quot;:&quot;sharer@example.com&quot;,&quot;username&quot;:&quot;username&quot;,&quot;unsubscribed_at&quot;:null,&quot;subscribed_at&quot;:&quot;2018-09-27T22:55:13.860+03:00&quot;,&quot;opted_in_at&quot;:&quot;2018-09-27T22:55:13.860+03:00&quot;,&quot;sub_choice&quot;:true,&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0},&quot;is_loyalty_member&quot;:false,&quot;loyalty_member&quot;:null},&quot;origin&quot;:{&quot;id&quot;:147886587,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;450901776&quot;,&quot;subtotal&quot;:35.03,&quot;email&quot;:&quot;sharer@example.com&quot;,&quot;customer_id&quot;:&quot;565659001&quot;,&quot;order_date&quot;:&quot;2019-04-11T07:28:31.258-07:00&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT29123&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;}}&#39;</span> &lt;url&gt;
 </pre></div>
 </div>
 <div class="hidden docutils container">
 <div class="toctree-wrapper compound">
 </div>
 </div>
-</div>
+</section>
 
 
             <div class="clearer"></div>
