@@ -61,11 +61,22 @@ triggered twice.
 
     * **recipients** — an array of email addresses
 
+* **sharer_info** — subhash of parameters describing the person who shared the offer
+
+  .. include:: /partials/person_fields.rst
+
 * **share_link** — link sent in share message (optional, present only for
   Facebook and Twitter shares)
 * **origin** — contains data about the event that issued an offer:
 
   .. include:: /partials/origin_fields.rst
+
+.. note::
+
+   ``origin.email`` contains the email saved at the moment when the campaign is 
+   first shown to the Advocate. It could be ``null``. For the most up-to-date 
+   information about the Advocate, use ``sharer_info`` property which is updated
+   with the email address the Advocate has entered on the Advocate Signup Page.
 
 .. raw:: html
 
@@ -87,12 +98,31 @@ triggered twice.
      "share_info": {
        "recipients": ["john@example.com"]
      },
+     "sharer_info": {
+       "first_name": "Bob",
+       "last_name": "Smith",
+       "email": "sharer@example.com",
+       "username": "username",
+       "unsubscribed_at": null,
+       "subscribed_at": "2018-09-27T22:55:13.860+03:00",
+       "opted_in_at": "2018-09-27T22:55:13.860+03:00",
+       "sub_choice": true,
+       "referral_counts": {
+         "total": 0,
+         "approved": 0,
+         "pending": 0
+       },
+       "is_loyalty_member": false,
+       "loyalty_member": null
+     },
      "origin": {
        "id": 147886587,
        "type": "Purchase",
        "order_number": "450901776",
        "subtotal": 35.03,
+       "email": "sharer@example.com",
        "customer_id": "565659001",
+       "order_date": "2019-04-11T07:28:31.258-07:00",
        "ip_address": "127.0.0.1",
        "coupon_code": "WHT29123",
        "traffic_source": "post-checkout"
@@ -105,7 +135,7 @@ triggered twice.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&site=<site>&type=post_share_web_hook&payload={"campaign":{"id":83587635,"type":"StandaloneCampaign","cached_slug":83587635,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"share_type":"email","share_info":{"recipients":["john@example.com"]},"origin":{"id":654689661,"type":"Purchase","order_number":"426692385","subtotal":29.39,"customer_id":"162638070","order_date":"2019-04-11T07:28:31.258-07:00","coupon_code":"WHT79679","ip_address":"127.0.0.1","traffic_source":"post-checkout"}}' <url>
+   curl --data 'key=<key>&site=<site>&type=post_share_web_hook&payload={"campaign":{"id":83587635,"type":"StandaloneCampaign","cached_slug":83587635,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"share_type":"email","share_info":{"recipients":["john@example.com"]},"sharer_info":{"first_name":"Bob","last_name":"Smith","email":"sharer@example.com","username":"username","unsubscribed_at":null,"subscribed_at":"2018-09-27T22:55:13.860+03:00","opted_in_at":"2018-09-27T22:55:13.860+03:00","sub_choice":true,"referral_counts":{"total":0,"approved":0,"pending":0},"is_loyalty_member":false,"loyalty_member":null},"origin":{"id":147886587,"type":"Purchase","order_number":"450901776","subtotal":35.03,"email":"sharer@example.com","customer_id":"565659001","order_date":"2019-04-11T07:28:31.258-07:00","ip_address":"127.0.0.1","coupon_code":"WHT29123","traffic_source":"post-checkout"}}' <url>
 
 .. container:: hidden
 
