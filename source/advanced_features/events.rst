@@ -75,7 +75,7 @@ Available properties
 
 .. note::
 
-   All PII params supports data encryption, more information can be found on :ref:`Params Encryption <advanced_features/params_encryption>`.
+  All PII params support data encryption. Find more about :ref:`Params Encryption <advanced_features/params_encryption>`.
 
 Here is a list of available properties each event can include:
 
