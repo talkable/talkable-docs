@@ -73,6 +73,10 @@ in the Reports → Purchases section of your Talkable Dashboard. Here is an exam
 Available properties
 ~~~~~~~~~~~~~~~~~~~~
 
+.. note::
+
+   All PII params supports data encryption, more information can be found here :ref:`Params Encryption <advanced_features/params_encryption>`.
+
 Here is a list of available properties each event can include:
 
 .. container:: ptable
