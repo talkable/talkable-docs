@@ -155,7 +155,7 @@ Post Purchase Script Notes
 
 .. note::
 
-   All PII params supports data encryption, more information can be found here :ref:`Params Encryption <advanced_features/params_encryption>`.
+   All PII params support data encryption, more information can be found on :ref:`Params Encryption <advanced_features/params_encryption>`.
 
 .. _integration/custom/integration_components/advocate_landing_page:
 
