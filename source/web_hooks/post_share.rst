@@ -73,8 +73,8 @@ triggered twice.
 
 .. note::
 
-   ``origin.email`` contains the email saved at the moment when the campaign is 
-   first shown to the Advocate. It could be ``null``. For the most up-to-date 
+   ``origin.email`` contains the email saved at the moment when the campaign is
+   first shown to the Advocate. It could be ``null``. For the most up-to-date
    information about the Advocate, use ``sharer_info`` property which is updated
    with the email address the Advocate has entered on the Advocate Signup Page.
 
@@ -114,7 +114,7 @@ triggered twice.
        },
        "is_loyalty_member": false,
        "loyalty_member": null
-     }
+     },
      "origin": {
        "id": 147886587,
        "type": "Purchase",
@@ -122,6 +122,7 @@ triggered twice.
        "subtotal": 35.03,
        "email": "sharer@example.com",
        "customer_id": "565659001",
+       "order_date": "2019-04-11T07:28:31.258-07:00",
        "ip_address": "127.0.0.1",
        "coupon_code": "WHT29123",
        "traffic_source": "post-checkout"

@@ -14,12 +14,13 @@
 *For Purchase:*
 
  * **order_number** - unique identifier of the Purchase
- * **subtotal** - order subtotal for the purchase
- * **coupon_code** - coupon code used with the purchase
+ * **subtotal** - order subtotal for the Purchase
+ * **coupon_code** - coupon codes used with the Purchase (separated by ``,`` if multiple)
+ * **order_date** - date of the Purchase
 
 *For Event:*
 
  * **event_category** - identifier of an action that trigger the Event (e.g. ``app_installed``)
  * **event_number** - unique identifier of the Event within the associated **event_category**
  * **subtotal** - optional monetary attribute of the Event
- * **coupon_code** - optional coupon code associated with the Event
+ * **coupon_code** - coupon codes used with the Event (separated by ``,`` if multiple)

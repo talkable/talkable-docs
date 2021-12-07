@@ -4,7 +4,7 @@
 * **username** — person’s username (optional)
 * **sub_choice** — subscription choice (optional, present only if the form
   included subscription checkbox)
-* **subscribed_at** — date person has subscribed (deprecated; use opted_in_at instead)
+* **subscribed_at** — date person has subscribed (deprecated; use ``opted_in_at`` instead)
 * **opted_in_at** — date person has subscribed (optional)
 * **unsubscribed_at** — date person has unsubscribed (optional)
 * **custom_properties** — hash of person’s custom properties (optional)
