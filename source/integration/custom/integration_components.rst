@@ -17,6 +17,7 @@ Talkable is composed of the following components:
    **Data Capture.** The Initialization Script should pass variables for logged in users:
 
     - Email
+    - Phone Number
     - First Name
     - Last Name
 
@@ -71,6 +72,7 @@ script.
      window._talkableq.unshift(['init', { site_id: '<YOUR-TALKABLE-SITE-ID>' }]);
      window._talkableq.push(['authenticate_customer', {
        email: '', // Optional, pass when available. Example: 'customer@example.com'
+       phone_number: '', // Optional, pass when available. Example: '+12025551111'
        first_name: '', // Optional, pass when available. Example: 'John'
        last_name: '', // Optional, pass when available. Example: 'Smith'
        traffic_source: '' // Optional, the source of the traffic driven to the campaign. Example: 'facebook'

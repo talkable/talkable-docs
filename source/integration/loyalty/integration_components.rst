@@ -17,6 +17,7 @@ Talkable Loyalty is composed of the following components:
    **Data Capture.** The Initialization Script should pass variables for logged in users:
 
     - Email
+    - Phone Number
 
 2. :ref:`Loyalty Dashboard`
 
@@ -46,7 +47,8 @@ script.
      window._talkableq.unshift(['init', { site_id: '<YOUR-TALKABLE-SITE-ID>' }]);
 
      window._talkableq.push(['authenticate_customer', {
-       email: '' // required, loyalty program is only available to logged in users. Example: 'customer@example.com'
+       email: '', // required, loyalty program is only available to logged in users. Example: 'customer@example.com'
+       phone_number: '' // Optional, pass when available. Example: '+12025551111'
      }]);
    </script>
    <!-- End Talkable integration code -->
