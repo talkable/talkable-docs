@@ -222,7 +222,7 @@ So it is recommended to store the key in memory instead of loading it each time 
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
   <span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;authenticate_customer&#39;</span><span class="p">,</span> <span class="p">{</span>
     <span class="nx">email</span><span class="o">:</span> <span class="s1">&#39;&lt;%= to_json(TalkableEncryptionService.encrypt(current_user.email)) %&gt;&#39;</span><span class="p">,</span>
-    <span class="nx">phone_number</span><span class="o">:</span> <span class="s1">&#39;&lt;%= to_json(current_user.phone_number) %&gt;&#39;</span><span class="p">,</span>
+    <span class="nx">phone_number</span><span class="o">:</span> <span class="s1">&#39;&lt;%= to_json(TalkableEncryptionService.encrypt(current_user.phone_number)) %&gt;&#39;</span><span class="p">,</span>
     <span class="nx">first_name</span><span class="o">:</span> <span class="s1">&#39;&lt;%= to_json(current_user.first_name) %&gt;&#39;</span><span class="p">,</span>
     <span class="nx">last_name</span><span class="o">:</span> <span class="s1">&#39;&lt;%= to_json(current_user.last_name) %&gt;&#39;</span><span class="p">,</span>
     <span class="nx">person_custom_properties</span><span class="o">:</span> <span class="p">{</span>
