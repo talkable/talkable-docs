@@ -103,6 +103,7 @@ Updates an existing person or creates one if it does not exist.
                      * last_name
                      * username
                      * customer_id
+                     * phone_number
                      * person_custom_properties
 
    ================= ========================================================
@@ -184,6 +185,7 @@ Sample response:
          "first_name": "John",
          "last_name": "Smith",
          "email": "customer@example.com",
+         "phone_number": "+12025551111",
          "username": null,
          "subscribed_at": null,
          "unsubscribed_at": null,
@@ -609,6 +611,7 @@ Sample response:
          "first_name": "John",
          "last_name": "Smith",
          "email": "customer@example.com",
+         "phone_number": "+12025551111",
          "username": "lizard_king",
          "subscribed_at": null,
          "unsubscribed_at": null,
@@ -667,6 +670,7 @@ Sample response:
          "first_name": "John",
          "last_name": "Smith",
          "email": "customer@example.com",
+         "phone_number": "+12025551111",
          "username": null,
          "subscribed_at": null,
          "unsubscribed_at": "2014-11-18T05:49:54.000-07:00",
@@ -725,6 +729,7 @@ Sample response:
          "first_name": null,
          "last_name": null,
          "email": "b19b4a80-3bb2-48f2-831a-6e180b4c6a7e@anonymized.email",
+         "phone_number": null,
          "username": null,
          "subscribed_at": null,
          "unsubscribed_at": null,
@@ -771,6 +776,7 @@ Sample response:
          "created_at": "2018-04-30T02:14:35.000-07:00",
          "customer_id": null,
          "email": "customer@example.com",
+         "phone_number": "+12025551111",
          "first_name": null,
          "last_name": null,
          "opted_in_at": null,

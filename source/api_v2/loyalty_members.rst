@@ -34,7 +34,7 @@ Returns a loyalty member.
 
    PUT /loyalty/members/<email>
 
-Updates loyalty member data.
+Updates loyalty member's data.
 
 .. container:: ptable
 
@@ -44,9 +44,13 @@ Updates loyalty member data.
    site_slug         Your Talkable Site ID. You can get this from your
                      Talkable dashboard after you log in and create a site.
    email             Loyalty member’s email
-   data              JSON object with ``custom_properties`` JSON object.
+   data              JSON object with one or more of following properties:
 
-                     E.g. ``{"custom_properties": {"contest_participant": true}}``.
+                     - ``phone_number`` - String
+
+                     - ``custom_properties`` - JSON object
+
+                     E.g. ``{"phone_number": "+12025551111", "custom_properties": {"contest_participant": true}}``.
 
                      Note that all values in ``custom_properties`` object will be
                      stored as strings, e.g. ``false`` will become ``"f"``,
@@ -94,12 +98,13 @@ Sample response:
        "loyalty_member": {
          "custom_properties": {},
          "email": "customer@example.com",
+         "phone_number": "+12025551111",
          "points_balance": 1000
        }
      }
    }
 
-Update loyalty member's custom properties
+Update loyalty member's data
 .........................................
 
 .. code-block:: bash
@@ -107,7 +112,7 @@ Update loyalty member's custom properties
    curl -H "Content-Type: application/json" \
         -X PUT \
         -u i9uil7nQgDjucCiTJu: \
-        -d '{"site_slug":"my-store","data":{"custom_properties":{"contest_participant":true}}}' \
+        -d '{"site_slug":"my-store","data":{"phone_number":"+12025551111","custom_properties":{"contest_participant":true}}}' \
         https://www.talkable.com/api/v2/loyalty/members/customer@example.com
 
 Sample response:
@@ -122,6 +127,7 @@ Sample response:
            "contest_participant": "t"
          },
          "email": "customer@example.com",
+         "phone_number": "+12025551111",
          "points_balance": 1000
        }
      }
@@ -148,6 +154,7 @@ Sample response:
        "loyalty_member": {
          "custom_properties": {},
          "email": "customer@example.com",
+         "phone_number": "+12025551111",
          "points_balance": 1100
        }
      }
