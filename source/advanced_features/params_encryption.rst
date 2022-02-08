@@ -131,7 +131,7 @@ Please modify the front-end using this pseudo code example:
    <script>
      _talkableq.push(['authenticate_customer', {
        email: '<%= to_json(TalkableEncryptionService.encrypt(current_user.email)) %>',
-       phone_number: '<%= to_json(current_user.phone_number) %>',
+       phone_number: '<%= to_json(TalkableEncryptionService.encrypt(current_user.phone_number)) %>',
        first_name: '<%= to_json(current_user.first_name) %>',
        last_name: '<%= to_json(current_user.last_name) %>',
        person_custom_properties: {
