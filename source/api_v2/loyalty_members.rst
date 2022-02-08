@@ -105,7 +105,7 @@ Sample response:
    }
 
 Update loyalty member's data
-.........................................
+............................
 
 .. code-block:: bash
 
