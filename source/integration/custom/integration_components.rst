@@ -75,6 +75,7 @@ script.
        last_name: '', // Optional, pass when available. Example: 'Smith'
        traffic_source: '' // Optional, the source of the traffic driven to the campaign. Example: 'facebook'
      }]);
+     // Add this line if your integration version is less than version 5.0.0
      window._talkableq.push(['register_affiliate', {}]);
    </script>
    <!-- End Talkable integration code -->
