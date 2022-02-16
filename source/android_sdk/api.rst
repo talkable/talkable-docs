@@ -209,8 +209,7 @@ Use the ``createEmailShare`` method to share an offer via email.
 .. note::
 
    ``JsonElement result`` from ``onSuccess(JsonElement result, Reward reward)``
-   contains data, described in :ref:`Shares API <email-sharing-response>` under
-   the ``result`` key
+   contains data, described in |api_v2_share_via_email| under the ``result`` key
 
 Social Share
 ............
