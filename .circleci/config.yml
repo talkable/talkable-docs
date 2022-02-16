@@ -6,7 +6,10 @@ executors:
       - auth:
           username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_ACCESS_TOKEN
-        image: circleci/python:3.9
+        image: cimg/python:3.10
+
+orbs:
+  python: circleci/python@2.0.0
 
 jobs:
   build:
@@ -15,26 +18,12 @@ jobs:
     steps:
       - checkout
 
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "requirements.txt" }}
-            - v1-dependencies
-      - run:
-          name: Install dependencies
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install --upgrade pip
-            pip install -r requirements.txt
-      - save_cache:
-          key: v1-dependencies-{{ checksum "requirements.txt" }}
-          paths:
-            - ./venv
+      - python/install-packages:
+          app-dir: ~/project
 
       - run:
           name: Build documentation
-          command: venv/bin/sphinx-build -nW -b html -d build/doctrees source build/html
+          command: sphinx-build -nW -b html -d build/doctrees source build/html
 
 workflows:
   workflow:
