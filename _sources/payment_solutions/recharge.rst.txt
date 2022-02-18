@@ -7,7 +7,7 @@
 Recharge
 ========
 
-.. code-block:: text
+.. note::
 
    This is a custom integration that can be implemented with extra effort. If you wish to integrate this vendor, please
    contact your Customer Success Manager to apply it to your campaigns.
@@ -40,4 +40,3 @@ Talkable integration with Recharge enables next use cases:
 **Contact us**
 
 Interested in setting this up? Contact your CSM or get in touch `here <support@talkable.com>`_.
-
