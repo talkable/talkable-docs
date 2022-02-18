@@ -10,14 +10,45 @@ Introduction
 The Talkable API is built on HTTP. Our API is RESTful, returns JSON and responds
 with standard HTTP response codes to indicate errors.
 
-Base URL
---------
+Access the Talkable API
+-----------------------
 
-All API URLs referenced in this documentation start with the following base part:
+You can access documentation for the Talkable API and issue API calls from the Talkable API user interface.
 
-.. code-block:: text
+The Talkable API user interface is available here:
 
-   https://www.talkable.com/api/v2
+https://www.talkable.com/api-docs/
+
+Click **Authorize** to log in with the `API key <Authentication_>`_:
+
+.. image:: /_static/img/swagger/authorize1.png
+   :alt: Authorize step 1
+   :class: is-minimal
+
+Enter the `API key <Authentication_>`_ and click **Authorize** again:
+
+.. image:: /_static/img/swagger/authorize2.png
+   :alt: Authorize step 2
+   :class: is-minimal
+
+Click **Close**. The Authorize lock icon changes to locked:
+
+.. image:: /_static/img/swagger/authorize3.png
+   :alt: Authorize step 3
+   :class: is-minimal
+   :width: 156 px
+
+.. raw:: html
+
+   <h4>Actions</h4>
+
+For details about the API call, expand the API method for each call. To issue an
+API call from the Talkable API user interface, click **Try it out** for any
+method. Edit the Example Values in the request body and click **Execute**.
+
+.. image:: /_static/img/swagger/actions.png
+   :alt: Actions
+   :class: is-minimal
 
 Authentication
 --------------
@@ -31,8 +62,7 @@ You can manage your API key in the Account Settings.
    within JavaScript running within a browser. Once someone has your API key, they
    could create their own API calls.
 
-Authentication to the API is performed via `HTTP Basic Auth`_.
-Provide your API key as the basic auth username value. You do not need to provide a password.
+Authentication to the API is performed via Bearer authentication header.
 
 .. raw:: html
 
@@ -41,23 +71,13 @@ Provide your API key as the basic auth username value. You do not need to provid
 .. code-block:: bash
 
    curl 'https://www.talkable.com/api/v2/campaigns?site_slug=my-store' \
-     -u i9uil7nQgDjucCiTJu:
-
-``curl`` uses the ``-u`` flag to pass basic auth credentials.
-(Adding a colon after your API key prevents ``curl`` from asking for a password.)
-
-If you need to authenticate via bearer auth (e.g., for a cross-origin request), |br|
-use ``-H "Authorization: Bearer i9uil7nQgDjucCiTJu"`` |br|
-instead of ``-u i9uil7nQgDjucCiTJu:``.
+     -H 'accept: application/json' \
+     -H 'Authorization: Bearer i9uil7nQgDjucCiTJu'
 
 Response Format
 ---------------
 
 The API returns JSON-encoded objects (content-type: application/json).
-
-.. Responses vary according to the method used, but every successful response
-   envelope (except for very simple ones, which are just ``{"ok": true}``) includes
-   these common parts:
 
 Responses vary according to the method used, but every successful response
 envelope includes these common parts:
@@ -75,7 +95,7 @@ This format is supported by most programming languages out of the box:
 
 .. code-block:: text
 
-   2014-04-02T02:43:58.797-07:00
+   2022-02-16T02:43:58.797-07:00
 
 Errors
 ------
@@ -109,7 +129,3 @@ Talkable returns standard HTTP response codes.
    =================== ======================================================
 
 .. _HTTP Basic Auth: https://en.wikipedia.org/wiki/Basic_access_authentication
-
-.. container:: hidden
-
-   .. toctree::

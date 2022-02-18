@@ -53,6 +53,38 @@
 
    <a href="https://www.talkable.com/contact" target="_blank">contact us</a>
 
+.. |api_v2_campaigns| raw:: html
+
+   <a href="https://www.talkable.com/api-docs/#/Campaigns" target="_blank">Campaigns API</a>
+
+.. |api_v2_offer| raw:: html
+
+   <a href="https://www.talkable.com/api-docs/#/Advocate%20Offers/findAdvocateOffer" target="_blank">Offer</a>
+
+.. |api_v2_origin| raw:: html
+
+   <a href="https://www.talkable.com/api-docs/#/Origins/createOrigin" target="_blank">Origin</a>
+
+.. |api_v2_origins| raw:: html
+
+   <a href="https://www.talkable.com/api-docs/#/Origins/createOrigin" target="_blank">Origins API</a>
+
+.. |api_v2_referrals| raw:: html
+
+   <a href="https://www.talkable.com/api-docs/#/Referrals/updateReferralStatus" target="_blank">Referrals API</a>
+
+.. |api_v2_reward| raw:: html
+
+   <a href="https://www.talkable.com/api-docs/#/Rewards" target="_blank">Reward</a>
+
+.. |api_v2_share_via_email| raw:: html
+
+   <a href="https://www.talkable.com/api-docs/#/Shares/shareViaEmail" target="_blank">Shares API</a>
+
+.. |api_v2_share_via_social_channel| raw:: html
+
+   <a href="https://www.talkable.com/api-docs/#/Shares/shareViaSocialChannel" target="_blank">Shares API</a>
+
 .. |page_break| raw:: html
 
    <div class="page-break-after"></div>

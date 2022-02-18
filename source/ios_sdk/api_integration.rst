@@ -13,8 +13,8 @@ included WKWebView-based functionality. Below are the methods necessary to integ
 The Origin is a user event (e.g. a purchase or simply opening the app) that initiates the referral chain.
 Create an Origin to retrieve an Offer and display it to an :ref:`Advocate <campaigns>`.
 
-To create an Origin, make a request to :ref:`Origins <api_v2/origins>` endpoint using the ``createOrigin:withHandler:`` method.
-If the request is successful, the ``handler`` block will receive attributes of created Origin and :ref:`Offer <api_v2/offers>` entities.
+To create an Origin, make a request to |api_v2_origins| using the ``createOrigin:withHandler:`` method.
+If the request is successful, the ``handler`` block will receive attributes of created Origin and |api_v2_offer| entities.
 
 .. code-block:: objc
 
@@ -64,8 +64,8 @@ Social sharing
 ~~~~~~~~~~~~~~
 
 Use frameworks provided by social networks to share your offer. Upon a successful share,
-call the ``createSocialShare:channel:withHandler:`` method to register the share with Talkable and
-create a :ref:`Share <api_v2/shares>` record.
+call the ``createSocialShare:channel:withHandler:`` method to register the share with Talkable
+via |api_v2_share_via_social_channel|.
 
 .. code-block:: objc
 
@@ -169,9 +169,9 @@ Talkable will send the emails for you. You will need to provide an interface for
 3. Check for Reward
 -------------------
 
-If a Talkable campaign is configured to give a reward to the Advocate just for sharing, the API call to create a :ref:`Share <api_v2/shares>`
-will return a :ref:`Reward <api_v2/rewards>` you can display immediately. In most cases, however, the Advocate will receive a reward after
-a Friend responds to a shared link, e.g. makes a purchase.
+If a Talkable campaign is configured to give a reward to the |advocate| just for sharing, the call to |api_v2_share_via_email|
+will return a |api_v2_reward| you can display immediately. In most cases, however, the |advocate| will receive a reward after
+a |friend| responds to a shared link, e.g. makes a purchase.
 To check whether the current user has any outstanding rewards, use the ``retrieveRewardsWithHandler:`` method.
 
 .. code-block:: objc
