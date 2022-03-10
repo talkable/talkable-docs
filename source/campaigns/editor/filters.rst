@@ -71,6 +71,19 @@ Returns ``Campaign%20Name``, so the URL will be
 
 |hr|
 
+update\_query
+.............
+
+Updates query parameters in a URL.
+
+.. code-block:: liquid
+
+   {{ "http://example.com/?a=b&utm_source=foo" | update_query: utm_campaign: "Campaign Name", utm_source: "talkable" }}
+
+Returns ``http://example.com/?a=b&utm_campaign=Campaign%20Name&utm_source=talkable``.
+
+|hr|
+
 probability\_by
 ...............
 
