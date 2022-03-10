@@ -143,6 +143,15 @@
 <code class="docutils literal notranslate"><span class="pre">http://example.com/?utm_campaign=Campaign%20Name</span></code>.</p>
 <p><hr></p>
 </section>
+<section id="update-query">
+<h2>update_query<a class="headerlink" href="#update-query" title="Permalink to this headline">¶</a></h2>
+<p>Updates query parameters in a URL.</p>
+<div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="s2">&quot;http://example.com/?a=b&amp;utm_source=foo&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">update_query</span><span class="p">:</span><span class="w"> </span><span class="na">utm_campaign</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Campaign Name&quot;</span><span class="p">,</span><span class="w"> </span><span class="na">utm_source</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;talkable&quot;</span><span class="w"> </span><span class="p">}}</span>
+</pre></div>
+</div>
+<p>Returns <code class="docutils literal notranslate"><span class="pre">http://example.com/?a=b&amp;utm_campaign=Campaign%20Name&amp;utm_source=talkable</span></code>.</p>
+<p><hr></p>
+</section>
 <section id="probability-by">
 <h2>probability_by<a class="headerlink" href="#probability-by" title="Permalink to this headline">¶</a></h2>
 <p>This filter returns <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code> for a dataset based on the probability you request:</p>
