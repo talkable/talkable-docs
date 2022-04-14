@@ -155,6 +155,10 @@ Post Purchase Script Notes
 6. If you need to pass shopping cart line items, to see the alternate
    post purchase integration script :ref:`click here <advanced_features/product_items>`.
 
+.. note::
+
+   All PII params support data encryption. Find more about :ref:`Params Encryption <advanced_features/params_encryption>`.
+
 .. _integration/custom/integration_components/advocate_landing_page:
 
 Advocate Landing Page
