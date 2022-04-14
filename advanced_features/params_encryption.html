@@ -31,7 +31,7 @@
           </form>
       <div class="header-disclaimer">
         Visit
-        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+        <a rel="nofollow" href="https://www.talkable.com" target="_blank">www.talkable.com</a>
       </div>
     </div> <!-- /.header -->
   
@@ -109,7 +109,7 @@
 <h1>Params Encryption<a class="headerlink" href="#params-encryption" title="Permalink to this headline">¶</a></h1>
 <p>For additional security, it is possible to encrypt <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>, <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr>, and <abbr title="Person who participates in the Loyalty program">Loyalty member</abbr> email,
 as well as <a class="reference internal" href="passing_custom_data.html#advanced-features-passing-custom-data"><span class="std std-ref">Custom User Data</span></a> on back-end.
-This can be done by using 2048-bit key <a class="reference external" rel="nofollow" href="https://d2jjzw81hqbuqv.cloudfront.net/integration/talkable_public_key.pem">Talkable Public Key</a>.
+This can be done by using 2048-bit key <a class="reference external" href="https://d2jjzw81hqbuqv.cloudfront.net/integration/talkable_public_key.pem">Talkable Public Key</a>.
 So, instead of sending params in plain text, you can send them encrypted.</p>
 <section id="passing-email-as-a-get-parameter-to-standalone-campaign">
 <h2>Passing email as a GET parameter to Standalone Campaign<a class="headerlink" href="#passing-email-as-a-get-parameter-to-standalone-campaign" title="Permalink to this headline">¶</a></h2>
@@ -139,12 +139,12 @@ point to standalone invite page). But to do that encrypted email should be <stro
 </section>
 <section id="java-example">
 <h2>Java Example<a class="headerlink" href="#java-example" title="Permalink to this headline">¶</a></h2>
-<p>This example uses <a class="reference external" rel="nofollow" href="https://www.bouncycastle.org">Bouncy Castle library</a> and has been tested on:</p>
+<p>This example uses <a class="reference external" href="https://www.bouncycastle.org">Bouncy Castle library</a> and has been tested on:</p>
 <ul class="simple">
 <li><p>bcprov-jdk15on-156.jar (Provider)</p></li>
 <li><p>bcpkix-jdk15on-156.jar (PKIX/CMS/EAC/PKCS/OCSP/TSP/OPENSSL)</p></li>
 </ul>
-<p>that can be downloaded from <a class="reference external" rel="nofollow" href="https://www.bouncycastle.org/latest_releases.html">Bouncy Castle Latest Releases</a>.</p>
+<p>that can be downloaded from <a class="reference external" href="https://www.bouncycastle.org/latest_releases.html">Bouncy Castle Latest Releases</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Please note that loading a Security Provider and a key into memory takes more time than encrypting.
@@ -222,6 +222,7 @@ So it is recommended to store the key in memory instead of loading it each time 
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
   <span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;authenticate_customer&#39;</span><span class="p">,</span> <span class="p">{</span>
     <span class="nx">email</span><span class="o">:</span> <span class="s1">&#39;&lt;%= to_json(TalkableEncryptionService.encrypt(current_user.email)) %&gt;&#39;</span><span class="p">,</span>
+    <span class="nx">phone_number</span><span class="o">:</span> <span class="s1">&#39;&lt;%= to_json(TalkableEncryptionService.encrypt(current_user.phone_number)) %&gt;&#39;</span><span class="p">,</span>
     <span class="nx">first_name</span><span class="o">:</span> <span class="s1">&#39;&lt;%= to_json(current_user.first_name) %&gt;&#39;</span><span class="p">,</span>
     <span class="nx">last_name</span><span class="o">:</span> <span class="s1">&#39;&lt;%= to_json(current_user.last_name) %&gt;&#39;</span><span class="p">,</span>
     <span class="nx">person_custom_properties</span><span class="o">:</span> <span class="p">{</span>

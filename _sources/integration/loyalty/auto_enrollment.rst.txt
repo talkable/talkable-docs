@@ -50,6 +50,7 @@ When you call `join_loyalty`, you can pass empty object since Talkable will have
 
    window._talkableq.push(["authenticate_customer", {
      email: "loyalty@talkable.com", // required for `join_loyalty`
+     phone_number: '+12025551111',
      first_name: "John",
      last_name: "Smith",
      custom_properties: {}
@@ -68,6 +69,7 @@ Pass loyalty member data directly to `join_loyalty`.
 
    window._talkableq.push(["join_loyalty", {
      email: "loyalty@talkable.com", // required
+     phone_number: '+12025551111',
      first_name: "John",
      last_name: "Smith",
      custom_properties: {}

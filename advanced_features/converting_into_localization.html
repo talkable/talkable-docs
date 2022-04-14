@@ -31,7 +31,7 @@
           </form>
       <div class="header-disclaimer">
         Visit
-        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+        <a rel="nofollow" href="https://www.talkable.com" target="_blank">www.talkable.com</a>
       </div>
     </div> <!-- /.header -->
   
@@ -282,19 +282,19 @@ Then we optimize the variable value to be set as an HTML <cite>class</cite> attr
 <li><p>Let’s switch back to HTML &amp; CSS editor and start applying CSS styling to both layouts. Knowing their final classes inside HTML: <cite>class=”container is-equal-emphasis”</cite> and <cite>class=”container is-email-emphasis”</cite> we can easily style both layouts inside CSS area like so (SCSS is also allowed and is shown as an example for code simplicity):</p></li>
 </ol>
 <blockquote>
-<div><div class="highlight-scss notranslate"><div class="highlight"><pre><span></span><span class="nc">.container</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">&amp;</span><span class="nc">.is-equal-emphasis</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">48px</span><span class="o">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<div><div class="highlight-scss notranslate"><div class="highlight"><pre><span></span><span class="nc">.container</span> <span class="p">{</span>
+  <span class="k">&amp;</span><span class="nc">.is-equal-emphasis</span> <span class="p">{</span>
+    <span class="nt">h1</span> <span class="p">{</span>
+      <span class="nt">font-size</span><span class="nd">:</span> <span class="nt">48px</span><span class="o">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
 
-<span class="w">  </span><span class="k">&amp;</span><span class="nc">.is-email-emphasis</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nt">font-size</span><span class="nd">:</span><span class="w"> </span><span class="nt">32px</span><span class="o">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+  <span class="k">&amp;</span><span class="nc">.is-email-emphasis</span> <span class="p">{</span>
+    <span class="nt">h1</span> <span class="p">{</span>
+      <span class="nt">font-size</span><span class="nd">:</span> <span class="nt">32px</span><span class="o">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>All other nested children can be styled following this pattern.</p>

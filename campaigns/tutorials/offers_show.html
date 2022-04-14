@@ -31,7 +31,7 @@
           </form>
       <div class="header-disclaimer">
         Visit
-        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+        <a rel="nofollow" href="https://www.talkable.com" target="_blank">www.talkable.com</a>
       </div>
     </div> <!-- /.header -->
   
@@ -107,9 +107,9 @@ default sharer.php.
 Also make sure <strong>RR social sharing incentive</strong> is set.</p>
 <p>After that we need to setup Advocate Share Page with the following markup:</p>
 <p><strong>HTML:</strong></p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Prompt user to share --&gt;</span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- Prompt user to share --&gt;</span>
 <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;js-share-offer-via-facebook&quot;</span><span class="p">&gt;</span>Share on Facebook<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<span class="cm">&lt;!-- Insert coupon code after successful share --&gt;</span>
+<span class="c">&lt;!-- Insert coupon code after successful share --&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;js-coupon-code&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 </div>
@@ -126,12 +126,12 @@ Also make sure <strong>RR social sharing incentive</strong> is set.</p>
 <p>If you need to hide/show some information when shared and copy code on
 click here is more advanced setup:</p>
 <p><strong>HTML:</strong></p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Prompt user to share --&gt;</span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- Prompt user to share --&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;js-not-shared&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;js-share-offer-via-facebook&quot;</span><span class="p">&gt;</span>Share on Facebook<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 
-<span class="cm">&lt;!-- Show coupon code after successful share. Hidden by default. --&gt;</span>
+<span class="c">&lt;!-- Show coupon code after successful share. Hidden by default. --&gt;</span>
 <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;js-shared&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;display: none;&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;js-coupon-code&quot;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -175,7 +175,7 @@ click here is more advanced setup:</p>
 <p>CloudSponge integration is bound to specific domain. In order to use it with
 custom domain you’ll need to obtain separate <code class="docutils literal notranslate"><span class="pre">domain_key</span></code>.</p>
 <ol class="arabic simple">
-<li><p>Go to <a class="reference external" rel="nofollow" href="https://www.cloudsponge.com/">CloudSponge</a></p></li>
+<li><p>Go to <a class="reference external" href="https://www.cloudsponge.com/">CloudSponge</a></p></li>
 <li><p>Add new domain, use your custom domain as domain name</p></li>
 <li><p>Copy &amp; Paste new <code class="docutils literal notranslate"><span class="pre">domain_key</span></code> to your template</p></li>
 </ol>
