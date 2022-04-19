@@ -5,7 +5,7 @@
    :description: Loyalty Widget Placement is a Placement for Loyalty Campaigns.
 
 Loyalty Widget Placement
-===============
+========================
 
 Once you have your Loyalty Campaigns set up, you can use this placement to show your customers a widget that will allow them to convert their points into a coupon which they can use on the checkout page.
 

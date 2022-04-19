@@ -5,7 +5,7 @@
    :description: Loyalty Dashboard Placement is a Placement for Loyalty Campaigns.
 
 Loyalty Dashboard Placement
-===============
+===========================
 
 You can create Loyalty Campaigns and place them on a standalone page on your site. With the Loyalty Dashboard Placement your Campaign will show up on any particular page of your site.
 
