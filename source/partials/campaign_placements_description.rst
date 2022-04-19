@@ -42,6 +42,27 @@ after they have been rewarded within any other of your Talkable Campaigns.
 
 :ref:`Learn more about Gleam Placement <campaigns/campaign_placements/gleam>`
 
+.. raw:: html
+
+  <h2>Loyalty Dashboard</h2>
+
+Campaign will show up on the loyalty page on your site, for example: |br|
+`https://[your-site]/loyalty`.
+|br|
+Campaign will be embedded as an inline block usually between Header and Footer.
+
+:ref:`Learn more about Loyalty Dashboard Placement <campaigns/campaign_placements/loyalty_dashboard>`
+
+.. raw:: html
+
+  <h2>Loyalty Widget</h2>
+
+Campaign will show up on every page as a floating widget that allows your customers to convert their points into coupons.
+
+If a customer is not signed in, the widget promts them to join the loyalty program.
+
+:ref:`Learn more about Loyalty Widget Placement <campaigns/campaign_placements/loyalty_widget>`
+
 |hr|
 
 The list of all Campaign Placements is inside header Menu (top right corner) → Campaign Placements:
