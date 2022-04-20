@@ -17,3 +17,5 @@ Campaign Placements
     campaign_placements/post_purchase
     campaign_placements/floating_widget
     campaign_placements/gleam
+    campaign_placements/loyalty_dashboard
+    campaign_placements/loyalty_widget

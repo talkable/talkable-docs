@@ -13,7 +13,6 @@
         last_name:    '{{ customer.last_name }}'
       }]);
     {% endif %}
-    _talkableq.push(['register_affiliate', {}]);
   </script>
   <script src="https://YOUR-PER-CLIENT-INTEGRATION.js" type="text/javascript"></script>
   <!-- End Talkable integration code -->
