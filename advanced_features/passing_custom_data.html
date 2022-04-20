@@ -135,24 +135,7 @@ across all Campaign Views.</p>
 </pre></div>
 </div>
 <p><strong>Loyalty script</strong></p>
-<p>Add the <code class="docutils literal notranslate"><span class="pre">custom_properties</span></code> collection to the data passed in one of the following calls:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">show_loyalty</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">show_loyalty_redeem_widget</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">join_loyalty</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">register_loyalty_action</span></code></p></li>
-</ul>
-<p>If no <code class="docutils literal notranslate"><span class="pre">custom_properties</span></code> are passed explicitly, they will be taken from <code class="docutils literal notranslate"><span class="pre">authenticate_customer</span></code> params.</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">_talkable_data</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">email</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
-  <span class="nx">custom_properties</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">person_occupation</span><span class="o">:</span> <span class="s1">&#39;marketing&#39;</span><span class="p">,</span>
-    <span class="nx">eye_color</span><span class="o">:</span> <span class="s1">&#39;brown&#39;</span>
-  <span class="p">}</span>
-<span class="p">};</span>
-<span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;show_loyalty&#39;</span><span class="p">,</span> <span class="nx">_talkable_data</span><span class="p">]);</span>
-</pre></div>
-</div>
+<p>The properties you add to the initizlization script will be automatically passed to all loyalty calls.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The values you pass in the <code class="docutils literal notranslate"><span class="pre">custom_properties</span></code> have to be JSON Key-Value pairs themselves,
