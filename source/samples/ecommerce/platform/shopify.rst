@@ -23,7 +23,6 @@
         purchase: {
           order_number: checkout.order_id, // REQUIRED - Order number
           subtotal: checkout.total_price, // REQUIRED - Purchase Total price
-          net_subtotal: checkout.subtotal_price - checkout.total_tax, // REQUIRED - Purchase Subtotal excluding tax and shipping cost
           tax_amount: checkout.total_tax, // REQUIRED - Purchase tax amount
           discount_amount: checkout.discount ? checkout.discount.amount : null, // REQUIRED - Total Discount
           shipping_amount: checkout.shipping_rate ? checkout.shipping_rate.price : null, // REQUIRED - Total Shipping Cost
