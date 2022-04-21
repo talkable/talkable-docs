@@ -19,6 +19,6 @@ It is a good practice to show this widget when your customers are about to check
 Integration instructions
 ------------------------
 
-Loyalty Widget Placement doesn’t require any additional integration.
+Loyalty Widget Placement doesn’t require any additional integration since integration `5.0.0`.
 If you have already added Talkable to your main layout (completed General Integration
 for Custom platform, or installed Shopify, Magento, or Salesforce Commerce Cloud extensions), then you are all done.

@@ -19,6 +19,6 @@ It is a good practice is to use `https://[your-site]/…/loyalty` URL for this n
 Integration instructions
 ------------------------
 
-Loyalty Dashboard Placement doesn’t require any additional integration.
+Loyalty Dashboard Placement doesn’t require any additional integration since integration `5.0.0`.
 If you have already added Talkable to your main layout (completed General Integration
 for Custom platform, or installed Shopify, Magento, or Salesforce Commerce Cloud extensions), then you are all done.

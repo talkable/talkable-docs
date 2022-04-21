@@ -23,7 +23,7 @@ ignored in this case.
 
 **Exclusion**.
 It is possible to indicate on which specific pages the Campaigns attached to the Placement should not be shown.
-It allows you to show the Campaign on all pages of your site except few specified in "Hidden on" section.
+It allows you to show the Campaign on all pages of your site except few specified in "Hidden on" section. Also, you can use :ref:`regular expressions<advanced_features/reg_ex>` to select pages you wanna show Talkble campaigns on.
 
 |hr|
 
@@ -36,7 +36,7 @@ It allows you to show the Campaign on all pages of your site except few specifie
 Campaign will show up on the standalone page on your site, for example: |br|
 `https://[your-site]/share`.
 |br|
-Campaign will be embedded as an inline block usually between Header and Footer.
+Campaign will be rendered as an inline block in a corresponding Talkable DIV tag.
 
 :ref:`Learn more about Standalone Placement <campaigns/campaign_placements/standalone>`
 
@@ -79,7 +79,7 @@ after they have been rewarded within any other of your Talkable Campaigns.
 Campaign will show up on the loyalty page on your site, for example: |br|
 `https://[your-site]/loyalty`.
 |br|
-Campaign will be embedded as an inline block usually between Header and Footer.
+Campaign will be rendered as an inline block in a corresponding Talkable DIV tag.
 
 :ref:`Learn more about Loyalty Dashboard Placement <campaigns/campaign_placements/loyalty_dashboard>`
 

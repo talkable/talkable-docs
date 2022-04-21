@@ -81,11 +81,11 @@ Add the following Talkable Container DIV in the body of every page where you wan
 
    <div id="talkable-loyalty"></div>
 
-The `Talkable Initialization Script <Initialization Script_>`_ must be present in your head template in order for the Loyalty Dashboard to work. The placement of the DIV container/tag is important since it's going to determine where the campaign will be shown.
+The `Talkable Initialization Script <Initialization Script_>`_ must be present in your head template in order for the Loyalty Dashboard to work. The placement of the DIV tag is important since it's going to determine where the campaign will be shown.
 
 .. note::
-   The same DIV container/tag is used for both Loyalty Dashboard and Loyalty Redeem Widget.
-   You can find more info about where to place the DIV container/tag in :ref:`Loyalty Dashboard Placement <campaigns/campaign_placements/loyalty_dashboard>` and :ref:`Loyalty Widget Placement <campaigns/campaign_placements/loyalty_widget>`.
+   The same DIV tag is used for both Loyalty Dashboard and Loyalty Redeem Widget.
+   You can find more info about where to place the DIV tag in :ref:`Loyalty Dashboard Placement <campaigns/campaign_placements/loyalty_dashboard>` and :ref:`Loyalty Widget Placement <campaigns/campaign_placements/loyalty_widget>`.
 
 Loyalty Dashboard Notes
 -----------------------
