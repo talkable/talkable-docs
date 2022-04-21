@@ -18,12 +18,15 @@ Talkable Loyalty is composed of the following components:
 
     - Email
     - Phone Number
+    - First Name
+    - Last Name
+    - Custom Properties
 
-2. :ref:`Loyalty Dashboard`
+2. :ref:`Talkable Container DIV`
 
-3. :ref:`Loyalty Redeem Widget`
+   **DIV Location.** Talkable Container DIV script should be placed in the body of every page where you want to show a loyalty campaign. This DIV determines the place where the campaign is shown.
 
-4. :ref:`Loyalty Actions`
+3. :ref:`Loyalty Actions`
 
 |hr|
 
@@ -67,38 +70,32 @@ Initialization Script Notes
 
 |hr|
 
-.. _Loyalty Dashboard:
+.. _Talkable Container DIV:
 
-Loyalty Dashboard
-~~~~~~~~~~~~~~~~~
+Talkable Container DIV
+~~~~~~~~~~~~~~~~~~~~~~
 
-Add the following Talkable Container DIV in the body of every page that has `Talkable Initialization Script <Initialization Script_>`_ included:
+Add the following Talkable Container DIV in the body of every page where you want to show a loyalty campaign:
 
 .. code-block:: html
 
    <div id="talkable-loyalty"></div>
 
+The `Talkable Initialization Script <Initialization Script_>`_ must be present in your head template in order for the Loyalty Dashboard to work. The placement of the DIV is important since it's going to determine where the campaign will be shown.
+
+.. note::
+   The same DIV is used for both Loyalty Dashboard and Loyalty Redeem Widget.
+   You can find more info about where to place the DIV in :ref:`Loyalty Dashboard Placement <campaigns/campaign_placements/loyalty_dashboard>` and :ref:`Loyalty Widget Placement <campaigns/campaign_placements/loyalty_widget>`.
+
 Loyalty Dashboard Notes
 -----------------------
 
-1. The `Talkable Initialization Script <Initialization Script_>`_ must be
-   present in your head template in order for the Loyalty Dashboard to work.
+The dashboard can be added inline inside your user accounts menu, however the dashboard content width for proper display is 980px.
 
-2. The dashboard can be added inline inside your user accounts menu, however
-   the dashboard content width for proper display is 980px.
+Loyalty Widget Notes
+--------------------
 
-3. Allow your users to reach the Loyalty Dashboard by adding a link
-   from any place that makes sense considering your website configuration.
-   Most common uses are links in the user accounts section, or from the user accounts menu.
-
-|hr|
-
-.. _Loyalty Redeem Widget:
-
-Loyalty Redeem Widget
-~~~~~~~~~~~~~~~~~~~~~
-
-Same as `Loyalty Dashboard <Loyalty Dashboard_>`_.
+Add Talkable container DIV element at the checkout exactly where the loyalty points redemption widget should render.
 
 |hr|
 
