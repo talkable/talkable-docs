@@ -75,17 +75,17 @@ Initialization Script Notes
 Talkable Container DIV
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Add the following Talkable Container DIV in the body of every page where you want to show a loyalty campaign:
+Add the following Talkable Container DIV in the body of every page where you want a loyalty campaign to be shown:
 
 .. code-block:: html
 
    <div id="talkable-loyalty"></div>
 
-The `Talkable Initialization Script <Initialization Script_>`_ must be present in your head template in order for the Loyalty Dashboard to work. The placement of the DIV is important since it's going to determine where the campaign will be shown.
+The `Talkable Initialization Script <Initialization Script_>`_ must be present in your head template in order for the Loyalty Dashboard to work. The placement of the DIV container/tag is important since it's going to determine where the campaign will be shown.
 
 .. note::
-   The same DIV is used for both Loyalty Dashboard and Loyalty Redeem Widget.
-   You can find more info about where to place the DIV in :ref:`Loyalty Dashboard Placement <campaigns/campaign_placements/loyalty_dashboard>` and :ref:`Loyalty Widget Placement <campaigns/campaign_placements/loyalty_widget>`.
+   The same DIV container/tag is used for both Loyalty Dashboard and Loyalty Redeem Widget.
+   You can find more info about where to place the DIV container/tag in :ref:`Loyalty Dashboard Placement <campaigns/campaign_placements/loyalty_dashboard>` and :ref:`Loyalty Widget Placement <campaigns/campaign_placements/loyalty_widget>`.
 
 Loyalty Dashboard Notes
 -----------------------
@@ -95,7 +95,7 @@ The dashboard can be added inline inside your user accounts menu, however the da
 Loyalty Widget Notes
 --------------------
 
-Add Talkable container DIV element at the checkout exactly where the loyalty points redemption widget should render.
+Add Talkable Container DIV at the checkout exactly where the loyalty points redemption widget should rendered.
 
 |hr|
 
