@@ -24,7 +24,7 @@ Talkable Loyalty is composed of the following components:
 
 2. :ref:`Talkable Container DIV`
 
-   **DIV Location.** Talkable Container DIV script should be placed in the body of every page where you want to show a loyalty campaign. This DIV determines the place where the campaign is shown.
+   **DIV Location.** Talkable Container DIV should be placed in the body of every page where you want to show a loyalty campaign. This DIV tag determines the place where the campaign is shown.
 
 3. :ref:`Loyalty Actions`
 
@@ -81,7 +81,7 @@ Add the following Talkable Container DIV in the body of every page where you wan
 
    <div id="talkable-loyalty"></div>
 
-The `Talkable Initialization Script <Initialization Script_>`_ must be present in your head template in order for the Loyalty Dashboard to work. The placement of the DIV tag is important since it's going to determine where the campaign will be shown.
+The `Talkable Initialization Script <Initialization Script_>`_ must be present in your head template in order for the Loyalty Dashboard to work. The placement of the DIV tag is important since it's going to determine where the campaign will be rendered.
 
 .. note::
    The same DIV tag is used for both Loyalty Dashboard and Loyalty Redeem Widget.
