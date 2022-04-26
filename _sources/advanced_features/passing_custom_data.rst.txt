@@ -52,7 +52,7 @@ Add the ``custom_properties`` collection to the data passed in the ``register_pu
 
 **Loyalty script**
 
-The properties you add to the initizlization script will be automatically passed to all loyalty calls.
+The properties you add to the initialization script will be automatically passed to all loyalty calls.
 
 .. note::
 

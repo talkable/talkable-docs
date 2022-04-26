@@ -95,7 +95,7 @@ The dashboard can be added inline inside your user accounts menu, however the da
 Loyalty Widget Notes
 --------------------
 
-Add Talkable Container DIV at the checkout exactly where the loyalty points redemption widget should rendered.
+Add Talkable Container DIV at the checkout exactly where the loyalty points redemption widget should be rendered.
 
 |hr|
 
