@@ -1,18 +1,20 @@
-The list of all Campaign Placements is inside header Menu (top right corner) → Campaign Placements:
+Campaign Placements are the places (pages) on your site where the Campaigns are shown to your customers.
+
+The list of all Campaign Placements can be found by going to the All Site Settings page from the header Menu (top right corner) and choosing the Placements section:
 
 .. raw:: html
 
   <img src="../_static/img/campaign_placements/path.png" />
 
-Campaign Placements are the places (pages) on your site where the Campaigns are shown to your customers.
-
 **Managing Placements**.
 By default you already have all types of Placements created automatically.
 Campaigns that you create will attach to one of these Placements based on their types.
 If you want you can create a new Standalone Placement for your site matching another URL and attach another
-Standalone Campaigns there. **Note:** Placements are strictly tied to their Campaign types.
-You cannot attach Post Purchase Campaign to Standalone Placement because it expects Campaigns that are
-going to be embedded not being shown as a popup.
+Standalone Campaigns there.
+
+.. note::
+  Placements are strictly tied to their Campaign types.
+  You cannot attach Post Purchase Campaign to Standalone Placement because it expects Campaigns that are going to be embedded not being shown as a popup.
 
 **Priority**.
 The Placements in the list are ordered by priority. In order to show a Campaign Talkable matches
@@ -21,9 +23,10 @@ users initiate, for example: `https://[your-site]/share`. Whenever multiple Camp
 Talkable picks the first Placement that sits up top out of the suitable ones. Other Placements that sit below it are
 ignored in this case.
 
-**Exclusion**.
-It is possible to indicate on which specific pages the Campaigns attached to the Placement should not be shown.
-It allows you to show the Campaign on all pages of your site except few specified in "Hidden on" section. Also, you can use :ref:`regular expressions<advanced_features/reg_ex>` to select pages you want to not show Talkable campaigns on.
+**Visibility**.
+It is possible to indicate on which specific pages the Campaigns attached to the Placement should or should not be shown.
+It allows you to show the Campaign on all pages of your site except few specified in "Hidden on" section, for example.
+Also, you can use :ref:`regular expressions<advanced_features/reg_ex>` to select pages you want to not show Talkable campaigns on.
 
 |hr|
 
