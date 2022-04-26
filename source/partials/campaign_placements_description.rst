@@ -7,7 +7,7 @@ The list of all Campaign Placements is inside header Menu (top right corner) →
 Campaign Placements are the places (pages) on your site where the Campaigns are shown to your customers.
 
 **Managing Placements**.
-By default you already have all types of Placements created for you automatically.
+By default you already have all types of Placements created automatically.
 Campaigns that you create will attach to one of these Placements based on their types.
 If you want you can create a new Standalone Placement for your site matching another URL and attach another
 Standalone Campaigns there. **Note:** Placements are strictly tied to their Campaign types.
@@ -23,7 +23,7 @@ ignored in this case.
 
 **Exclusion**.
 It is possible to indicate on which specific pages the Campaigns attached to the Placement should not be shown.
-It allows you to show the Campaign on all pages of your site except few specified in "Hidden on" section. Also, you can use :ref:`regular expressions<advanced_features/reg_ex>` to select pages you wanna show Talkble campaigns on.
+It allows you to show the Campaign on all pages of your site except few specified in "Hidden on" section. Also, you can use :ref:`regular expressions<advanced_features/reg_ex>` to select pages you want to not show Talkable campaigns on.
 
 |hr|
 
@@ -89,7 +89,7 @@ Campaign will be rendered as an inline block in a corresponding Talkable DIV tag
 
 Campaign will show up on every page as a floating widget that allows your customers to convert their points into coupons.
 
-If a customer is not signed in, the widget promts them to join the loyalty program.
+If a customer is not signed in, the widget prompts them to join the loyalty program.
 
 :ref:`Learn more about Loyalty Widget Placement <campaigns/campaign_placements/loyalty_widget>`
 
