@@ -17,7 +17,7 @@ Standalone Campaigns there.
   You cannot attach Post Purchase Campaign to Standalone Placement because it expects Campaigns that are going to be embedded not being shown as a popup.
 
 **Priority**.
-The Placements in the list are ordered by priority. In order to show a Campaign Talkable matches
+The Placements in the list are ordered by priority. In order to show a Campaign, Talkable matches
 the URL of a Campaign Placement inclusion (marked as “Shown on”) and a URL that comes with each request that
 users initiate, for example: `https://[your-site]/share`. Whenever multiple Campaign Placements fit the requested URL
 Talkable picks the first Placement that sits up top out of the suitable ones. Other Placements that sit below it are
@@ -25,7 +25,7 @@ ignored in this case.
 
 **Visibility**.
 It is possible to indicate on which specific pages the Campaigns attached to the Placement should or should not be shown.
-It allows you to show the Campaign on all pages of your site except few specified in "Hidden on" section, for example.
+It allows you to show the Campaign on all pages of your site except few specified in the "Hidden on" section, for example.
 Also, you can use :ref:`regular expressions<advanced_features/reg_ex>` to select pages you want to not show Talkable campaigns on.
 
 |hr|
@@ -47,7 +47,7 @@ Campaign will be rendered as an inline block in a corresponding Talkable DIV tag
 
   <h3>Post Purchase</h3>
 
-Campaign will show up upon successful purchase made by the customer on your site.
+Campaign will show up on a successful purchase made by the customer on your site.
 Usually this is an order confirmation page after checkout.
 The campaign will look like a popup with an overlay and a close button.
 
@@ -105,7 +105,7 @@ If a customer is not signed in, the widget prompts them to join the loyalty prog
 
   <h2>Campaigns Rotating</h2>
 
-It worth mentioning that you can also attach multiple Campaigns into one Placement.
+It is worth mentioning that you can also attach multiple Campaigns into one Placement.
 In this case Talkable will always show only one Campaign based on a random rotation.
 This mechanism is useful if you want to compare which Campaign has higher referral conversion rate by changing
 Incentives or other referral pieces in the other Campaign.
