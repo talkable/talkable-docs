@@ -54,7 +54,7 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
      * **event_number** - unique identifier of the Event within the associated **event_category**
      * **customer_id** - unique external identifier of a customer who triggered the event
      * **subtotal** - optional monetary attribute of the Event
-     * **currency_iso_code** - currency ISO code of the Purchase
+     * **currency_iso_code** - currency ISO code of the Event
      * **coupon_code** - optional coupon code associated with the Event
      * **traffic_source** - traffic source of the Event
      * **ip_address** - IP address of the Event
