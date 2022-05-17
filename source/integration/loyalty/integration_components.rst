@@ -18,12 +18,15 @@ Talkable Loyalty is composed of the following components:
 
     - Email
     - Phone Number
+    - First Name
+    - Last Name
+    - Custom Properties
 
-2. :ref:`Loyalty Dashboard`
+2. :ref:`Talkable Container DIV`
 
-3. :ref:`Loyalty Redeem Widget`
+   **DIV Location.** Talkable Container DIV should be placed in the body of every page where you want to show a loyalty campaign. This DIV tag determines the place where the campaign is shown.
 
-4. :ref:`Loyalty Actions`
+3. :ref:`Loyalty Actions`
 
 |hr|
 
@@ -67,66 +70,32 @@ Initialization Script Notes
 
 |hr|
 
-.. _Loyalty Dashboard:
+.. _Talkable Container DIV:
 
-Loyalty Dashboard
-~~~~~~~~~~~~~~~~~
+Talkable Container DIV
+~~~~~~~~~~~~~~~~~~~~~~
 
-Create a new HTML page with URL
-path (`www.your-site.com/loyalty`), add the Talkable Container DIV in
-the body of the page and show loyalty campaign with the JS API function:
+Add the following Talkable Container DIV in the body of every page where you want a loyalty campaign to be shown:
 
 .. code-block:: html
 
    <div id="talkable-loyalty"></div>
-   <script>
-     window._talkableq.push(['show_loyalty', {
-       optin: true // optional, determines whether a customer agreed to participate in the loyalty program
-     }]);
-   </script>
+
+The `Talkable Initialization Script <Initialization Script_>`_ must be present in your head template in order for the Loyalty Dashboard to work. The placement of the DIV tag is important since it's going to determine where the campaign will be rendered.
+
+.. note::
+   The same DIV tag is used for both Loyalty Dashboard and Loyalty Redeem Widget.
+   You can find more info about where to place the DIV tag in :ref:`Loyalty Dashboard Placement <campaigns/campaign_placements/loyalty_dashboard>` and :ref:`Loyalty Widget Placement <campaigns/campaign_placements/loyalty_widget>`.
 
 Loyalty Dashboard Notes
 -----------------------
 
-1. The `Talkable Initialization Script <Initialization Script_>`_ must be
-   present in your head template in order for the Loyalty Dashboard to work.
+The dashboard can be added inline inside your user accounts menu, however the dashboard content width for proper display is 980px.
 
-2. Talkable will inject loyalty content where Talkable Container
-   resides in your DOM. Adding a new page is only a suggestion. The
-   dashboard can be added inline inside your user accounts menu, however
-   the dashboard content width for proper display is 980px.
+Loyalty Widget Notes
+--------------------
 
-3. Allow your users to reach the Loyalty Dashboard by adding a link
-   from any place that makes sense considering your website configuration.
-   Most common uses are links in the user accounts section, or from the user accounts menu.
-
-4. `show_loyalty` optionally accepts `email`, `first_name`, `last_name`, and `custom_properties`,
-   which override respective values from `authenticate_customer`. Email must be provided in either of the sources to
-   show loyalty dashboard.
-
-|hr|
-
-.. _Loyalty Redeem Widget:
-
-Loyalty Redeem Widget
-~~~~~~~~~~~~~~~~~~~~~
-
-Add Talkable container DIV element at the checkout
-exactly where the loyalty points redemption widget should render, and call JS API function to render the widget:
-
-.. code-block:: html
-
-   <div id="talkable-loyalty"></div>
-   <script>
-     window._talkableq.push(['show_loyalty_redeem_widget', {}]);
-   </script>
-
-Loyalty Redeem Widget Notes
----------------------------
-
-1. `show_loyalty_redeem_widget` optionally accepts `email` and `custom_properties`. If none provided, values will be
-   taken from respective parameters of `authenticate_customer`. If email is not available from either of the sources,
-   signup widget will be rendered instead.
+Add Talkable Container DIV at the checkout exactly where the loyalty points redemption widget should be rendered.
 
 |hr|
 
