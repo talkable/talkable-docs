@@ -53,7 +53,8 @@ When you call `join_loyalty`, you can pass empty object since Talkable will have
      phone_number: '+12025551111',
      first_name: "John",
      last_name: "Smith",
-     custom_properties: {}
+     custom_properties: {},
+     customer_id: "11111"
    }]);
    window._talkableq.push("join_loyalty", {})
 
@@ -72,5 +73,6 @@ Pass loyalty member data directly to `join_loyalty`.
      phone_number: '+12025551111',
      first_name: "John",
      last_name: "Smith",
-     custom_properties: {}
+     custom_properties: {},
+     customer_id: "11111"
    }]);
