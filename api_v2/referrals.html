@@ -31,7 +31,7 @@
           </form>
       <div class="header-disclaimer">
         Visit
-        <a rel="nofollow" href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
       </div>
     </div> <!-- /.header -->
   
@@ -86,26 +86,26 @@
             
   <span class="target" id="api-v2-referrals"></span><section id="referrals">
 <h1>Referrals<a class="headerlink" href="#referrals" title="Permalink to this headline">¶</a></h1>
-<p>The Talkable <a rel="nofollow" href="https://www.talkable.com/api-docs/#/Referrals/updateReferralStatus" target="_blank">Referrals API</a> allows referrals to be approved or voided.</p>
+<p>The Talkable <a href="https://www.talkable.com/api-docs/#/Referrals/updateReferralStatus" target="_blank">Referrals API</a> allows referrals to be approved or voided.</p>
 <h2>Example use cases for the Referrals API</h2><p><strong>Voiding referrals after a purchase is returned or canceled:</strong></p>
 <ul class="simple">
 <li><p>A company who wants to ensure an <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> does not receive referral Rewards
 if the <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> returns their purchase. To prevent the <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> from receiving
-their referral reward, this company would call the Talkable <a rel="nofollow" href="https://www.talkable.com/api-docs/#/Referrals/updateReferralStatus" target="_blank">Referrals API</a> with
+their referral reward, this company would call the Talkable <a href="https://www.talkable.com/api-docs/#/Referrals/updateReferralStatus" target="_blank">Referrals API</a> with
 <code class="docutils literal notranslate"><span class="pre">{&quot;status&quot;:</span> <span class="pre">&quot;voided&quot;}</span></code> after the <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> order is canceled.</p></li>
 </ul>
 <p><strong>Approving Referrals only after a specific CRM Event:</strong></p>
 <ul class="simple">
 <li><p>A company who wants to approve referral rewards only after the <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> order
 has reached a certain state (ie, ‘shipped’, or ‘no longer refundable’) can
-control this Referral Approval with the Talkable <a rel="nofollow" href="https://www.talkable.com/api-docs/#/Referrals/updateReferralStatus" target="_blank">Referrals API</a>. This company
-would call the Talkable <a rel="nofollow" href="https://www.talkable.com/api-docs/#/Referrals/updateReferralStatus" target="_blank">Referrals API</a> with <code class="docutils literal notranslate"><span class="pre">{&quot;status&quot;:</span> <span class="pre">&quot;approved&quot;}</span></code> after
+control this Referral Approval with the Talkable <a href="https://www.talkable.com/api-docs/#/Referrals/updateReferralStatus" target="_blank">Referrals API</a>. This company
+would call the Talkable <a href="https://www.talkable.com/api-docs/#/Referrals/updateReferralStatus" target="_blank">Referrals API</a> with <code class="docutils literal notranslate"><span class="pre">{&quot;status&quot;:</span> <span class="pre">&quot;approved&quot;}</span></code> after
 the <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> order reaches the desired state.</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>There is no need to filter the orders for which the Talkable <a rel="nofollow" href="https://www.talkable.com/api-docs/#/Referrals/updateReferralStatus" target="_blank">Referrals API</a> is
-called. Call Talkable’s <a rel="nofollow" href="https://www.talkable.com/api-docs/#/Referrals/updateReferralStatus" target="_blank">Referrals API</a> for all purchases, not just those
+<p>There is no need to filter the orders for which the Talkable <a href="https://www.talkable.com/api-docs/#/Referrals/updateReferralStatus" target="_blank">Referrals API</a> is
+called. Call Talkable’s <a href="https://www.talkable.com/api-docs/#/Referrals/updateReferralStatus" target="_blank">Referrals API</a> for all purchases, not just those
 associated with a referral purchase. Talkable will decide which order numbers
 are tied to referrals.</p>
 <p>Also: Inside ‘Fraud Settings’ exists two options for Referrals Approval
@@ -113,7 +113,7 @@ configuration. When ‘Automatic’ Referrals Approvals selected, eligible
 Referrals will be approved a fixed number of hours or days (per configuration)
 after the <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> Purchase and/or Conversion Event. When ‘Manual’ Referrals
 Approval is selected, referral rewards will only be paid out after either the
-Talkable <a rel="nofollow" href="https://www.talkable.com/api-docs/#/Referrals/updateReferralStatus" target="_blank">Referrals API</a> is called with <code class="docutils literal notranslate"><span class="pre">{&quot;status&quot;:</span> <span class="pre">&quot;approved&quot;}</span></code> or after an
+Talkable <a href="https://www.talkable.com/api-docs/#/Referrals/updateReferralStatus" target="_blank">Referrals API</a> is called with <code class="docutils literal notranslate"><span class="pre">{&quot;status&quot;:</span> <span class="pre">&quot;approved&quot;}</span></code> or after an
 Admin has approved the referral from inside the Talkable Customer Service
 Portal.</p>
 </div>

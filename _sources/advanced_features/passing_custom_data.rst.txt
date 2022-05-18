@@ -52,25 +52,7 @@ Add the ``custom_properties`` collection to the data passed in the ``register_pu
 
 **Loyalty script**
 
-Add the ``custom_properties`` collection to the data passed in one of the following calls:
-
-- ``show_loyalty``
-- ``show_loyalty_redeem_widget``
-- ``join_loyalty``
-- ``register_loyalty_action``
-
-If no ``custom_properties`` are passed explicitly, they will be taken from ``authenticate_customer`` params.
-
-.. code-block:: javascript
-
-  var _talkable_data = {
-    email: '',
-    custom_properties: {
-      person_occupation: 'marketing',
-      eye_color: 'brown'
-    }
-  };
-  _talkableq.push(['show_loyalty', _talkable_data]);
+The properties you add to the initialization script will be automatically passed to all loyalty calls.
 
 .. note::
 

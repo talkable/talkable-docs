@@ -31,7 +31,7 @@
           </form>
       <div class="header-disclaimer">
         Visit
-        <a rel="nofollow" href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
       </div>
     </div> <!-- /.header -->
   
@@ -46,6 +46,8 @@
 <li class="toctree-l3"><a class="reference internal" href="campaign_placements/post_purchase.html">Post Purchase Placement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="campaign_placements/floating_widget.html">Floating Widget Placement</a></li>
 <li class="toctree-l3"><a class="reference internal" href="campaign_placements/gleam.html">Gleam Placement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign_placements/loyalty_dashboard.html">Loyalty Dashboard Placement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="campaign_placements/loyalty_widget.html">Loyalty Widget Placement</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="views.html">Views</a></li>
@@ -96,45 +98,64 @@
             
   <span class="target" id="campaigns-campaign-placements"></span><section id="campaign-placements">
 <h1>Campaign Placements<a class="headerlink" href="#campaign-placements" title="Permalink to this headline">¶</a></h1>
-<p>Campaign Placements are the places (pages) on your site where the Campaigns are shown to your customers.
-There are four Placements types at Talkable.</p>
-<h2>Standalone</h2><p>Campaign will show up on the standalone page on your site, for example: <br>
-<cite>https://[your-site]/share</cite>.
-<br>
-Campaign will be embedded as an inline block usually between Header and Footer.</p>
-<p><a class="reference internal" href="campaign_placements/standalone.html#campaigns-campaign-placements-standalone"><span class="std std-ref">Learn more about Standalone Placement</span></a></p>
-<h2>Post Purchase</h2><p>Campaign will show up upon successful purchase made by the customer on your site.
-Usually this is an order confirmation page after checkout.
-The campaign will look like a popup with an overlay and a close button.</p>
-<p><a class="reference internal" href="campaign_placements/post_purchase.html#campaigns-campaign-placements-post-purchase"><span class="std std-ref">Learn more about Post Purchase Placement</span></a></p>
-<h2>Floating Widget</h2><p>Campaign will show up on every page as a floating button in a corner of the screen so customers are able to access
-Talkable campaigns from anywhere on your site.
-Clicking on a Floating Widget Campaign expands the full Campaign view that looks like a popup with an overlay
-and a close button.</p>
-<p><a class="reference internal" href="campaign_placements/floating_widget.html#campaigns-campaign-placements-floating-widget"><span class="std std-ref">Learn more about Floating Widget Placement</span></a></p>
-<h2>Gleam</h2><p>Campaign will show up on every page as a floating bar that shows your customers their coupon codes
-after they have been rewarded within any other of your Talkable Campaigns.</p>
-<p><a class="reference internal" href="campaign_placements/gleam.html#campaigns-campaign-placements-gleam"><span class="std std-ref">Learn more about Gleam Placement</span></a></p>
-<p><hr></p>
-<p>The list of all Campaign Placements is inside header Menu (top right corner) → Campaign Placements:</p>
+<p>Campaign Placements are the places (pages) on your site where the Campaigns are shown to your customers.</p>
+<p>The list of all Campaign Placements can be found by going to the All Site Settings page from the header Menu (top right corner) and choosing the Placements section:</p>
 <img src="../_static/img/campaign_placements/path.png" /><p><strong>Managing Placements</strong>.
-By default you already have all four types of Placements created for you automatically.
+By default you already have all types of Placements created automatically.
 Campaigns that you create will attach to one of these Placements based on their types.
-If you want you can create new Standalone Placement for your site matching another URL and attach another
-Standalone Campaigns there. <strong>Note:</strong> Placements are strictly tied to their Campaign types.
-You cannot attach Post Purchase Campaign to Standalone Placement because it expects Campaigns that are
-going to be embedded not being shown as a popup.</p>
+If you want you can create a new Standalone Placement for your site matching another URL and attach another
+Standalone Campaigns there.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Placements are strictly tied to their Campaign types.
+You cannot attach Post Purchase Campaign to Standalone Placement because it expects Campaigns that are going to be embedded not being shown as a popup.</p>
+</div>
 <p><strong>Priority</strong>.
-The Placements in the list are ordered by priority. In order to show a Campaign Talkable matches
+The Placements in the list are ordered by priority. In order to show a Campaign, Talkable matches
 the URL of a Campaign Placement inclusion (marked as “Shown on”) and a URL that comes with each request that
 users initiate, for example: <cite>https://[your-site]/share</cite>. Whenever multiple Campaign Placements fit the requested URL
 Talkable picks the first Placement that sits up top out of the suitable ones. Other Placements that sit below it are
 ignored in this case.</p>
-<p><strong>Exclusion</strong>.
-It is possible to indicate on which specific pages the Campaigns attached to the Placement should not be shown.
-It allows you to show the Campaign on all pages of your site except few specified in “Hidden on” section.</p>
-<p><strong>Campaigns Rotating</strong>.
-It worth mentioning that you can also attach multiple Campaigns into one Placement.
+<p><strong>Visibility</strong>.
+It is possible to indicate on which specific pages the Campaigns attached to the Placement should or should not be shown.
+It allows you to show the Campaign on all pages of your site except few specified in the “Hidden on” section, for example.
+Also, you can use <a class="reference internal" href="../advanced_features/reg_ex.html#advanced-features-reg-ex"><span class="std std-ref">regular expressions</span></a> to select pages you want to not show Talkable campaigns on.</p>
+<p><hr></p>
+<h2>Referral Placements</h2>
+
+<h3>Standalone</h3><p>Campaign will show up on the standalone page on your site, for example: <br>
+<cite>https://[your-site]/share</cite>.
+<br>
+Campaign will be rendered as an inline block in a corresponding Talkable DIV tag.</p>
+<p><a class="reference internal" href="campaign_placements/standalone.html#campaigns-campaign-placements-standalone"><span class="std std-ref">Learn more about Standalone Placement</span></a></p>
+<h3>Post Purchase</h3><p>Campaign will show up on a successful purchase made by the customer on your site.
+Usually this is an order confirmation page after checkout.
+The campaign will look like a popup with an overlay and a close button.</p>
+<p><a class="reference internal" href="campaign_placements/post_purchase.html#campaigns-campaign-placements-post-purchase"><span class="std std-ref">Learn more about Post Purchase Placement</span></a></p>
+<h3>Floating Widget</h3><p>Campaign will show up on every page as a floating button in a corner of the screen so customers are able to access
+Talkable campaigns from anywhere on your site.
+Clicking on a Floating Widget Campaign expands the full Campaign view that looks like a popup with an overlay
+and a close button.</p>
+<p><a class="reference internal" href="campaign_placements/floating_widget.html#campaigns-campaign-placements-floating-widget"><span class="std std-ref">Learn more about Floating Widget Placement</span></a></p>
+<h3>Gleam</h3><p>Campaign will show up on every page as a floating bar that shows your customers their coupon codes
+after they have been rewarded within any other of your Talkable Campaigns.</p>
+<p><a class="reference internal" href="campaign_placements/gleam.html#campaigns-campaign-placements-gleam"><span class="std std-ref">Learn more about Gleam Placement</span></a></p>
+<h2>Loyalty Placements</h2>
+
+<h3>Loyalty Dashboard</h3><p>Campaign will show up on the loyalty page on your site, for example: <br>
+<cite>https://[your-site]/loyalty</cite>.
+<br>
+Campaign will be rendered as an inline block in a corresponding Talkable DIV tag.</p>
+<p><a class="reference internal" href="campaign_placements/loyalty_dashboard.html#campaigns-campaign-placements-loyalty-dashboard"><span class="std std-ref">Learn more about Loyalty Dashboard Placement</span></a></p>
+<h3>Loyalty Widget</h3><p>Campaign will show up on every page as a floating widget that allows your customers to convert their points into coupons.</p>
+<p>If a customer is not signed in, the widget prompts them to join the loyalty program.</p>
+<p><a class="reference internal" href="campaign_placements/loyalty_widget.html#campaigns-campaign-placements-loyalty-widget"><span class="std std-ref">Learn more about Loyalty Widget Placement</span></a></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When both Loyalty Dashboard and Loyalty Widget are matched on the same URL, only Dashboard will be shown.</p>
+</div>
+<p><hr></p>
+<h2>Campaigns Rotating</h2><p>It is worth mentioning that you can also attach multiple Campaigns into one Placement.
 In this case Talkable will always show only one Campaign based on a random rotation.
 This mechanism is useful if you want to compare which Campaign has higher referral conversion rate by changing
 Incentives or other referral pieces in the other Campaign.</p>
@@ -163,6 +184,14 @@ Incentives or other referral pieces in the other Campaign.</p>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="campaign_placements/gleam.html">Gleam Placement</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="campaign_placements/gleam.html#integration-instructions">Integration instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="campaign_placements/loyalty_dashboard.html">Loyalty Dashboard Placement</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="campaign_placements/loyalty_dashboard.html#integration-instructions">Integration instructions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="campaign_placements/loyalty_widget.html">Loyalty Widget Placement</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="campaign_placements/loyalty_widget.html#integration-instructions">Integration instructions</a></li>
 </ul>
 </li>
 </ul>

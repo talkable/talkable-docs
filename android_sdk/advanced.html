@@ -30,7 +30,7 @@
           </form>
       <div class="header-disclaimer">
         Visit
-        <a rel="nofollow" href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
       </div>
     </div> <!-- /.header -->
   
@@ -160,7 +160,7 @@ Otherwise, an exception will be raised.</p>
 <section id="sharing-via-facebook">
 <h2>Sharing via Facebook<a class="headerlink" href="#sharing-via-facebook" title="Permalink to this headline">¶</a></h2>
 <p>By default sharing via Facebook is disabled. You can enable it by setting up
-your project with the Facebook SDK: <a class="reference external" href="https://developers.facebook.com/docs/android/getting-started">Android - Getting Started</a></p>
+your project with the Facebook SDK: <a class="reference external" rel="nofollow" href="https://developers.facebook.com/docs/android/getting-started">Android - Getting Started</a></p>
 </section>
 <section id="overriding-default-behaviour">
 <h2>Overriding default behaviour<a class="headerlink" href="#overriding-default-behaviour" title="Permalink to this headline">¶</a></h2>
@@ -210,13 +210,13 @@ and override methods there. Example:</p>
 <section id="using-talkableofferfragment-directly">
 <span id="using-fragment-directly"></span><h2>Using TalkableOfferFragment directly<a class="headerlink" href="#using-talkableofferfragment-directly" title="Permalink to this headline">¶</a></h2>
 <p>By default Talkable Android SDK displays Talkable offer as a fullscreen modal view. If you need to embed the Talkable offer into your layout
-or otherwise control the way it’s displayed, you can obtain an instance of <code class="docutils literal notranslate"><span class="pre">TalkableOfferFragment</span></code>, which is a <a class="reference external" href="https://developer.android.com/guide/fragments">Fragment</a> that comes
+or otherwise control the way it’s displayed, you can obtain an instance of <code class="docutils literal notranslate"><span class="pre">TalkableOfferFragment</span></code>, which is a <a class="reference external" rel="nofollow" href="https://developer.android.com/guide/fragments">Fragment</a> that comes
 preloaded with Talkable offer content and can be added to your layout dynamically.</p>
 <p>To use <code class="docutils literal notranslate"><span class="pre">TalkableOfferFragment</span></code> directly, follow these steps:</p>
 <ol class="arabic simple">
 <li><p>Get an offer code using the <code class="docutils literal notranslate"><span class="pre">Talkable.loadOffer(origin,</span> <span class="pre">callback)</span></code> method</p></li>
 <li><p>Create a fragment instance by passing the offer code to the <code class="docutils literal notranslate"><span class="pre">TalkableOfferFragment.newInstance(shortCode)</span></code> method</p></li>
-<li><p>Use <a class="reference external" href="https://developer.android.com/guide/fragments/transactions">Fragment Transactions</a> or another method of your choice to display the fragment.</p></li>
+<li><p>Use <a class="reference external" rel="nofollow" href="https://developer.android.com/guide/fragments/transactions">Fragment Transactions</a> or another method of your choice to display the fragment.</p></li>
 </ol>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">AffiliateMember</span> <span class="n">affiliateMember</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AffiliateMember</span><span class="p">();</span>
 <span class="p">...</span>
@@ -238,7 +238,7 @@ preloaded with Talkable offer content and can be added to your layout dynamicall
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Make sure to <a class="reference external" href="https://developer.android.com/guide/topics/resources/runtime-changes.html">handle configuration changes</a>, as <code class="docutils literal notranslate"><span class="pre">TalkableOfferFragment</span></code>
+<p>Make sure to <a class="reference external" rel="nofollow" href="https://developer.android.com/guide/topics/resources/runtime-changes.html">handle configuration changes</a>, as <code class="docutils literal notranslate"><span class="pre">TalkableOfferFragment</span></code>
 is built on top of <code class="docutils literal notranslate"><span class="pre">WebView</span></code> and restoring its state is up to you. If you
 need to reinitialize a fragment, you don’t need to call <code class="docutils literal notranslate"><span class="pre">loadOffer</span></code> again.
 Simply store the <code class="docutils literal notranslate"><span class="pre">offerCode</span></code> and use it to create a new <code class="docutils literal notranslate"><span class="pre">TalkableOfferFragment</span></code>

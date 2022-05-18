@@ -30,7 +30,7 @@
           </form>
       <div class="header-disclaimer">
         Visit
-        <a rel="nofollow" href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
       </div>
     </div> <!-- /.header -->
   
@@ -103,10 +103,10 @@
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>Talkable SDK could be integrated using CocoaPods or as a static library.</p>
-<p>If you want to use CocoaPods way, here is <a class="reference external" href="https://cocoapods.org/pods/TalkableSDK">Talkable SDK pod’s page</a>.</p>
+<p>If you want to use CocoaPods way, here is <a class="reference external" rel="nofollow" href="https://cocoapods.org/pods/TalkableSDK">Talkable SDK pod’s page</a>.</p>
 <p>To integrate the SDK as a static library, please follow next intructions:</p>
 <ol class="arabic simple">
-<li><p>Download the latest version of <a class="reference external" href="https://talkable-downloads.s3.amazonaws.com/ios-sdk/talkable_ios_sdk.zip">Talkable SDK framework</a>.</p></li>
+<li><p>Download the latest version of <a class="reference external" rel="nofollow" href="https://talkable-downloads.s3.amazonaws.com/ios-sdk/talkable_ios_sdk.zip">Talkable SDK framework</a>.</p></li>
 <li><p>Drag and place the <cite>TalkableSDK.framework</cite> somewhere suitable into your Xcode project. Make sure to add the framework to the relevant targets.</p></li>
 <li><p>Add the following frameworks to your project:</p></li>
 </ol>
@@ -136,14 +136,14 @@
 <li><p>Initialize Talkable in your <cite>application:didFinishLaunchingWithOptions:</cite> method, like so:</p></li>
 </ol>
 <blockquote>
-<div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">setApiKey</span><span class="p">:</span><span class="s">@&quot;YOUR_TALKABLE_PUBLIC_API_KEY&quot;</span><span class="w"> </span><span class="nl">andSiteSlug</span><span class="p">:</span><span class="s">@&quot;YOUR_SITE_SLUG&quot;</span><span class="p">];</span><span class="w"></span>
+<div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="n">setApiKey</span><span class="o">:</span><span class="s">@&quot;YOUR_TALKABLE_PUBLIC_API_KEY&quot;</span><span class="w"> </span><span class="n">andSiteSlug</span><span class="o">:</span><span class="s">@&quot;YOUR_SITE_SLUG&quot;</span><span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You can locate your credentials inside Talkable site:</p>
 <ul class="simple">
-<li><p>Visit <a class="reference external" href="https://admin.talkable.com/account/sites">https://admin.talkable.com/account/sites</a> to find your site slug</p></li>
+<li><p>Visit <a class="reference external" rel="nofollow" href="https://admin.talkable.com/account/sites">https://admin.talkable.com/account/sites</a> to find your site slug</p></li>
 <li><p>Select site and go to <strong>Dashboard</strong> → <strong>Settings</strong> → <strong>Site Settings</strong>.
 Find <strong>API integration</strong> section and there you will see your API Keys.
 Use only the <em>public key</em> in your application submitted to the App Store.</p></li>
@@ -183,14 +183,14 @@ Use only the <em>public key</em> in your application submitted to the App Store.
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Please replace <cite>&lt;your-site-slug&gt;</cite> with your actual site slug, which you are
-able to find on your site <strong>Dashboard</strong> at <a class="reference external" href="https://admin.talkable.com">https://admin.talkable.com</a></p>
+able to find on your site <strong>Dashboard</strong> at <a class="reference external" rel="nofollow" href="https://admin.talkable.com">https://admin.talkable.com</a></p>
 </div>
 </div></blockquote>
 <ol class="arabic simple" start="3">
 <li><p>Add following lines to <cite>application:handleOpenURL:</cite> or <cite>application:openURL:sourceApplication:annotation:</cite></p></li>
 </ol>
 <blockquote>
-<div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="nl">handleOpenURL</span><span class="p">:</span><span class="n">url</span><span class="p">];</span><span class="w"></span>
+<div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="n">handleOpenURL</span><span class="o">:</span><span class="n">url</span><span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>

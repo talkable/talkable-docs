@@ -31,7 +31,7 @@
           </form>
       <div class="header-disclaimer">
         Visit
-        <a rel="nofollow" href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
       </div>
     </div> <!-- /.header -->
   
@@ -51,8 +51,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../loyalty.html">Loyalty Integration (beta)</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Integration Components</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#initialization-script">Initialization Script</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#loyalty-dashboard">Loyalty Dashboard</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#loyalty-redeem-widget">Loyalty Redeem Widget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#talkable-container-div">Talkable Container DIV</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#loyalty-actions">Loyalty Actions</a></li>
 </ul>
 </li>
@@ -102,11 +101,15 @@ that spans every page. All other integration components are dependent on the Ini
 <div><ul class="simple">
 <li><p>Email</p></li>
 <li><p>Phone Number</p></li>
+<li><p>First Name</p></li>
+<li><p>Last Name</p></li>
+<li><p>Custom Properties</p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p><a class="reference internal" href="#loyalty-dashboard"><span class="std std-ref">Loyalty Dashboard</span></a></p></li>
-<li><p><a class="reference internal" href="#loyalty-redeem-widget"><span class="std std-ref">Loyalty Redeem Widget</span></a></p></li>
+<li><p><a class="reference internal" href="#talkable-container-div"><span class="std std-ref">Talkable Container DIV</span></a></p>
+<p><strong>DIV Location.</strong> Talkable Container DIV should be placed in the body of every page where you want to show a loyalty campaign. This DIV tag determines the place where the campaign is shown.</p>
+</li>
 <li><p><a class="reference internal" href="#loyalty-actions"><span class="std std-ref">Loyalty Actions</span></a></p></li>
 </ol>
 <p><hr></p>
@@ -117,7 +120,7 @@ template that spans every page. Talkable JS library size is typically
 around 20kB and causes no noticeable impact to your site’s loading time.
 All other integration components are dependent on the Initialization
 script.</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- Begin Talkable integration code --&gt;</span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Begin Talkable integration code --&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/&lt;YOUR-TALKABLE-SITE-ID&gt;.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
   <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span> <span class="o">||</span> <span class="p">[];</span>
@@ -128,7 +131,7 @@ script.</p>
     <span class="nx">phone_number</span><span class="o">:</span> <span class="s1">&#39;&#39;</span> <span class="c1">// Optional, pass when available. Example: &#39;+12025551111&#39;</span>
   <span class="p">}]);</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="c">&lt;!-- End Talkable integration code --&gt;</span>
+<span class="cm">&lt;!-- End Talkable integration code --&gt;</span>
 </pre></div>
 </div>
 <section id="initialization-script-notes">
@@ -146,60 +149,30 @@ here:</p>
 <p><hr></p>
 </section>
 </section>
-<section id="loyalty-dashboard">
-<span id="id1"></span><h2>Loyalty Dashboard<a class="headerlink" href="#loyalty-dashboard" title="Permalink to this headline">¶</a></h2>
-<p>Create a new HTML page with URL
-path (<cite>www.your-site.com/loyalty</cite>), add the Talkable Container DIV in
-the body of the page and show loyalty campaign with the JS API function:</p>
+<section id="talkable-container-div">
+<span id="id1"></span><h2>Talkable Container DIV<a class="headerlink" href="#talkable-container-div" title="Permalink to this headline">¶</a></h2>
+<p>Add the following Talkable Container DIV in the body of every page where you want a loyalty campaign to be shown:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;talkable-loyalty&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-  <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;show_loyalty&#39;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">optin</span><span class="o">:</span> <span class="kc">true</span> <span class="c1">// optional, determines whether a customer agreed to participate in the loyalty program</span>
-  <span class="p">}]);</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
+</div>
+<p>The <a class="reference internal" href="#initialization-script">Talkable Initialization Script</a> must be present in your head template in order for the Loyalty Dashboard to work. The placement of the DIV tag is important since it’s going to determine where the campaign will be rendered.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The same DIV tag is used for both Loyalty Dashboard and Loyalty Redeem Widget.
+You can find more info about where to place the DIV tag in <a class="reference internal" href="../../campaigns/campaign_placements/loyalty_dashboard.html#campaigns-campaign-placements-loyalty-dashboard"><span class="std std-ref">Loyalty Dashboard Placement</span></a> and <a class="reference internal" href="../../campaigns/campaign_placements/loyalty_widget.html#campaigns-campaign-placements-loyalty-widget"><span class="std std-ref">Loyalty Widget Placement</span></a>.</p>
 </div>
 <section id="loyalty-dashboard-notes">
 <h3>Loyalty Dashboard Notes<a class="headerlink" href="#loyalty-dashboard-notes" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic simple">
-<li><p>The <a class="reference internal" href="#initialization-script">Talkable Initialization Script</a> must be
-present in your head template in order for the Loyalty Dashboard to work.</p></li>
-<li><p>Talkable will inject loyalty content where Talkable Container
-resides in your DOM. Adding a new page is only a suggestion. The
-dashboard can be added inline inside your user accounts menu, however
-the dashboard content width for proper display is 980px.</p></li>
-<li><p>Allow your users to reach the Loyalty Dashboard by adding a link
-from any place that makes sense considering your website configuration.
-Most common uses are links in the user accounts section, or from the user accounts menu.</p></li>
-<li><p><cite>show_loyalty</cite> optionally accepts <cite>email</cite>, <cite>first_name</cite>, <cite>last_name</cite>, and <cite>custom_properties</cite>,
-which override respective values from <cite>authenticate_customer</cite>. Email must be provided in either of the sources to
-show loyalty dashboard.</p></li>
-</ol>
-<p><hr></p>
+<p>The dashboard can be added inline inside your user accounts menu, however the dashboard content width for proper display is 980px.</p>
 </section>
-</section>
-<section id="loyalty-redeem-widget">
-<span id="id2"></span><h2>Loyalty Redeem Widget<a class="headerlink" href="#loyalty-redeem-widget" title="Permalink to this headline">¶</a></h2>
-<p>Add Talkable container DIV element at the checkout
-exactly where the loyalty points redemption widget should render, and call JS API function to render the widget:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;talkable-loyalty&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-  <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;show_loyalty_redeem_widget&#39;</span><span class="p">,</span> <span class="p">{}]);</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-<section id="loyalty-redeem-widget-notes">
-<h3>Loyalty Redeem Widget Notes<a class="headerlink" href="#loyalty-redeem-widget-notes" title="Permalink to this headline">¶</a></h3>
-<ol class="arabic simple">
-<li><p><cite>show_loyalty_redeem_widget</cite> optionally accepts <cite>email</cite> and <cite>custom_properties</cite>. If none provided, values will be
-taken from respective parameters of <cite>authenticate_customer</cite>. If email is not available from either of the sources,
-signup widget will be rendered instead.</p></li>
-</ol>
+<section id="loyalty-widget-notes">
+<h3>Loyalty Widget Notes<a class="headerlink" href="#loyalty-widget-notes" title="Permalink to this headline">¶</a></h3>
+<p>Add Talkable Container DIV at the checkout exactly where the loyalty points redemption widget should be rendered.</p>
 <p><hr></p>
 </section>
 </section>
 <section id="loyalty-actions">
-<span id="id3"></span><h2>Loyalty Actions<a class="headerlink" href="#loyalty-actions" title="Permalink to this headline">¶</a></h2>
+<span id="id2"></span><h2>Loyalty Actions<a class="headerlink" href="#loyalty-actions" title="Permalink to this headline">¶</a></h2>
 <p>To register custom loyalty actions (e.g. completing surveys, adding reviews, uploading something on site),
 use the following code:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
