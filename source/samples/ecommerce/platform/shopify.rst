@@ -22,7 +22,10 @@
       var _talkable_data = {
         purchase: {
           order_number: checkout.order_id, // REQUIRED - Order number
-          subtotal: checkout.total_price, // REQUIRED - Purchase Subtotal
+          subtotal: checkout.total_price, // REQUIRED - Purchase Total price
+          tax_amount: checkout.total_tax, // REQUIRED - Purchase tax amount
+          discount_amount: checkout.discount ? checkout.discount.amount : null, // REQUIRED - Total Discount
+          shipping_amount: checkout.shipping_rate ? checkout.shipping_rate.price : null, // REQUIRED - Total Shipping Cost
           coupon_code: checkout.discount ? checkout.discount.code : null,
           items: _talkable_order_items
         },
