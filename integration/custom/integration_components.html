@@ -118,6 +118,7 @@ that spans every page. All other integration components are dependent on the Ini
 <li><p>Subtotal (pre-tax, post-discount amount)</p></li>
 <li><p>Coupon code(s) used at checkout (can accept an array of strings if you allow for multiple coupons to
 be applied at checkout)</p></li>
+<li><p>Currency ISO code. It is required for multi-currency sites.</p></li>
 <li><p>(optional) Shipping Address for additional fraud protection.</p></li>
 <li><p>(optional) Shopping cart line items. This is only necessary if segmenting based on cart contents.</p></li>
 </ul>
@@ -192,6 +193,7 @@ passed where division by zero or <cite>null</cite> value does not occur.</p>
       <span class="nx">order_number</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Required - Unique order number. Example: &#39;100011&#39;</span>
       <span class="nx">subtotal</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Required - Order subtotal (pre-tax, post-discount). Example: &#39;23.97&#39;</span>
       <span class="nx">coupon_code</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Coupon code that was used at checkout (pass multiple as an array). Example: &#39;SAVE20&#39;</span>
+      <span class="nx">currency_iso_code</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Required for multi-currency sites. Example: &#39;USD&#39;</span>
       <span class="nx">shipping_zip</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Used for fraud protection by address. Example: &#39;02222&#39;</span>
       <span class="nx">shipping_address</span><span class="o">:</span> <span class="s1">&#39;&#39;</span> <span class="c1">// Full address of the order, make sure to strictly follow a format: &#39;Apt #, Street address, City, State, ZIP, Country&#39;</span>
     <span class="p">},</span>

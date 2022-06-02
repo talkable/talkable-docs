@@ -123,6 +123,7 @@ or using the <a class="reference internal" href="../api_v2/origins.html#api-v2-o
 <li><p><strong>customer_id</strong> - unique external identifier of a customer who made the purchase</p></li>
 <li><p><strong>subtotal</strong> - order subtotal for the purchase</p></li>
 <li><p><strong>coupon_code</strong> - coupon code used with the purchase</p></li>
+<li><p><strong>currency_iso_code</strong> - currency ISO code of the Purchase</p></li>
 <li><p><strong>traffic_source</strong> - traffic source of the Purchase</p></li>
 <li><p><strong>ip_address</strong> - IP address of the Purchase</p></li>
 </ul>
@@ -135,6 +136,7 @@ or using the <a class="reference internal" href="../api_v2/origins.html#api-v2-o
 <li><p><strong>event_number</strong> - unique identifier of the Event within the associated <strong>event_category</strong></p></li>
 <li><p><strong>customer_id</strong> - unique external identifier of a customer who triggered the event</p></li>
 <li><p><strong>subtotal</strong> - optional monetary attribute of the Event</p></li>
+<li><p><strong>currency_iso_code</strong> - currency ISO code of the Event</p></li>
 <li><p><strong>coupon_code</strong> - optional coupon code associated with the Event</p></li>
 <li><p><strong>traffic_source</strong> - traffic source of the Event</p></li>
 <li><p><strong>ip_address</strong> - IP address of the Event</p></li>
@@ -176,6 +178,7 @@ included subscription checkbox)</p></li>
     <span class="s2">&quot;customer_id&quot;</span><span class="o">:</span> <span class="s2">&quot;865955119&quot;</span><span class="p">,</span>
     <span class="s2">&quot;order_date&quot;</span><span class="o">:</span> <span class="s2">&quot;2019-04-11T07:26:17.272-07:00&quot;</span><span class="p">,</span>
     <span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span> <span class="s2">&quot;WHT28499&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;currency_iso_code&quot;</span><span class="o">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
     <span class="s2">&quot;ip_address&quot;</span><span class="o">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
     <span class="s2">&quot;traffic_source&quot;</span><span class="o">:</span> <span class="s2">&quot;post-event&quot;</span>
   <span class="p">},</span>
@@ -199,7 +202,7 @@ included subscription checkbox)</p></li>
 <span class="p">}</span>
 </pre></div>
 </div>
-<h2>cURL example | Event</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl --data <span class="s1">&#39;key=&lt;key&gt;&amp;site=&lt;site&gt;&amp;type=event_web_hook&amp;payload={&quot;origin&quot;:{&quot;id&quot;:998181034,&quot;type&quot;:&quot;Event&quot;,&quot;event_number&quot;:&quot;352670218&quot;,&quot;event_category&quot;:&quot;webhook-test&quot;,&quot;subtotal&quot;:21.36,&quot;customer_id&quot;:&quot;472735863&quot;,&quot;order_date&quot;:&quot;2019-04-16T06:20:47.079-07:00&quot;,&quot;coupon_code&quot;:&quot;WHT65226&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;post-event&quot;},&quot;person&quot;:{&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;username&quot;:&quot;username&quot;,&quot;unsubscribed_at&quot;:null,&quot;subscribed_at&quot;:&quot;2019-04-16T06:19:47.079-07:00&quot;,&quot;opted_in_at&quot;:&quot;2019-04-16T06:19:47.079-07:00&quot;,&quot;sub_choice&quot;:true}}&#39;</span> &lt;url&gt;
+<h2>cURL example | Event</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl --data <span class="s1">&#39;key=&lt;key&gt;&amp;site=&lt;site&gt;&amp;type=event_web_hook&amp;payload={&quot;origin&quot;:{&quot;id&quot;:998181034,&quot;type&quot;:&quot;Event&quot;,&quot;event_number&quot;:&quot;352670218&quot;,&quot;event_category&quot;:&quot;webhook-test&quot;,&quot;subtotal&quot;:21.36,&quot;customer_id&quot;:&quot;472735863&quot;,&quot;order_date&quot;:&quot;2019-04-16T06:20:47.079-07:00&quot;,&quot;coupon_code&quot;:&quot;WHT65226&quot;,&quot;currency_iso_code&quot;:&quot;USD&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;post-event&quot;},&quot;person&quot;:{&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;username&quot;:&quot;username&quot;,&quot;unsubscribed_at&quot;:null,&quot;subscribed_at&quot;:&quot;2019-04-16T06:19:47.079-07:00&quot;,&quot;opted_in_at&quot;:&quot;2019-04-16T06:19:47.079-07:00&quot;,&quot;sub_choice&quot;:true}}&#39;</span> &lt;url&gt;
 </pre></div>
 </div>
 <h2>Sample payload | Purchase</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -211,6 +214,7 @@ included subscription checkbox)</p></li>
     <span class="s2">&quot;customer_id&quot;</span><span class="o">:</span> <span class="s2">&quot;162638070&quot;</span><span class="p">,</span>
     <span class="s2">&quot;order_date&quot;</span><span class="o">:</span> <span class="s2">&quot;2019-04-11T07:28:31.258-07:00&quot;</span><span class="p">,</span>
     <span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span> <span class="s2">&quot;WHT79679&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;currency_iso_code&quot;</span><span class="o">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
     <span class="s2">&quot;ip_address&quot;</span><span class="o">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
     <span class="s2">&quot;traffic_source&quot;</span><span class="o">:</span> <span class="s2">&quot;post-checkout&quot;</span>
   <span class="p">},</span>
@@ -234,7 +238,7 @@ included subscription checkbox)</p></li>
 <span class="p">}</span>
 </pre></div>
 </div>
-<h2>cURL example | Purchase</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl --data <span class="s1">&#39;key=&lt;key&gt;&amp;site=&lt;site&gt;&amp;type=event_web_hook&amp;payload={&quot;origin&quot;:{&quot;id&quot;:654689661,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;426692385&quot;,&quot;subtotal&quot;:29.39,&quot;customer_id&quot;:&quot;162638070&quot;,&quot;order_date&quot;:&quot;2019-04-11T07:28:31.258-07:00&quot;,&quot;coupon_code&quot;:&quot;WHT79679&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;},&quot;person&quot;:{&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;username&quot;:&quot;username&quot;,&quot;unsubscribed_at&quot;:null,&quot;subscribed_at&quot;:&quot;2019-04-11T07:27:31.258-07:00&quot;,&quot;opted_in_at&quot;:&quot;2019-04-11T07:27:31.258-07:00&quot;,&quot;sub_choice&quot;:true}}&#39;</span> &lt;url&gt;
+<h2>cURL example | Purchase</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl --data <span class="s1">&#39;key=&lt;key&gt;&amp;site=&lt;site&gt;&amp;type=event_web_hook&amp;payload={&quot;origin&quot;:{&quot;id&quot;:654689661,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;426692385&quot;,&quot;subtotal&quot;:29.39,&quot;customer_id&quot;:&quot;162638070&quot;,&quot;order_date&quot;:&quot;2019-04-11T07:28:31.258-07:00&quot;,&quot;coupon_code&quot;:&quot;WHT79679&quot;,&quot;currency_iso_code&quot;:&quot;USD&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;},&quot;person&quot;:{&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;username&quot;:&quot;username&quot;,&quot;unsubscribed_at&quot;:null,&quot;subscribed_at&quot;:&quot;2019-04-11T07:27:31.258-07:00&quot;,&quot;opted_in_at&quot;:&quot;2019-04-11T07:27:31.258-07:00&quot;,&quot;sub_choice&quot;:true}}&#39;</span> &lt;url&gt;
 </pre></div>
 </div>
 <div class="hidden docutils container">
