@@ -34,6 +34,7 @@ Talkable is composed of the following components:
    - Subtotal (pre-tax, post-discount amount)
    - Coupon code(s) used at checkout (can accept an array of strings if you allow for multiple coupons to
      be applied at checkout)
+   - Currency ISO code. It is required for multi-currency sites.
    - (optional) Shipping Address for additional fraud protection.
    - (optional) Shopping cart line items. This is only necessary if segmenting based on cart contents.
 
@@ -120,6 +121,7 @@ passed where division by zero or `null` value does not occur.
          order_number: '', // Required - Unique order number. Example: '100011'
          subtotal: '', // Required - Order subtotal (pre-tax, post-discount). Example: '23.97'
          coupon_code: '', // Coupon code that was used at checkout (pass multiple as an array). Example: 'SAVE20'
+         currency_iso_code: '', // Required for multi-currency sites. Example: 'USD'
          shipping_zip: '', // Used for fraud protection by address. Example: '02222'
          shipping_address: '' // Full address of the order, make sure to strictly follow a format: 'Apt #, Street address, City, State, ZIP, Country'
        },

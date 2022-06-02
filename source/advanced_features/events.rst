@@ -102,6 +102,9 @@ Here is a list of available properties each event can include:
                            this event. |br|
                            Example: ``'SAVE20'``. You can also pass multiple coupons as
                            an array: ``['SAVE20', 'SAVE5']`` if they were stacked.
+                         * **currency_iso_code** (optional) - Currency ISO code is required
+                           for multi-currency sites. |br|
+                           Example: ``'USD'``.
                          * **shipping_address** (optional) – Shipping address in case an event is
                            shippable. It is used in fraud prevention. |br|
                            Example:
