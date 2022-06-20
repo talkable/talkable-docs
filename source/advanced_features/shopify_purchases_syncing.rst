@@ -20,9 +20,9 @@ How it works?
 
 It works as a server-to-server integration between Shopify and Talkable using Shopify `orders/create` `webhook <https://shopify.dev/api/admin-rest/2022-04/resources/webhook>`_.
 
-When enabling Purchases Syncing, Talkable creates and subscribes to this `orders/create` webhook from the customer's Shopify site. When disabling the setting, the webhook and the subscription are deleted.
+When enabling Purchases Syncing, Talkable creates and subscribes to this `orders/create` webhook from the customer's Shopify store. When disabling the setting, the webhook and the subscription are deleted.
 
-Each time a purchase is placed on a customer's site, Shopify triggers the webhook and Talkable registers the purchase with attributes sent in the webhook’s payload.
+Each time a purchase is placed on a customer's store, Shopify triggers the webhook and Talkable registers the purchase with attributes sent in the webhook’s payload.
 
 Shopify Webhook payload and Talkable Purchase attributes mapping
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
