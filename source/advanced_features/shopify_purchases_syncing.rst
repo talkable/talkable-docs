@@ -49,8 +49,8 @@ Talkable uses next mapping when syncing purchases from Shopify Webhook payload:
   **Visitor**                 None (empty)
   =========================== =====================================================
 
-Working with JS purchase registering
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Post Purchase Campaign setup
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To render Talkable Post Purchase Campaign, there is still a need of registering purchases
 with Talkable Javascript integration (is managed automatically by Talkable).
