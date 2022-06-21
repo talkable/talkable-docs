@@ -1,13 +1,13 @@
 .. _advanced_features/shopify_purchases_syncing:
 
 .. meta::
-  :description: Purchases Syncing is a feature available for Shopify customers integrated with Talkable extension. It allows automatic purchases synchronization from Shopify instead of (or additionally to) passing purchases with Talkable Javascript integration.
+  :description: Purchases Syncing is a feature available for Shopify customers integrated with Talkable extension. It allows automatic purchases synchronization from Shopify instead of (or additionally to) passing purchases with Talkable JavaScript integration.
 
 Shopify Purchases Syncing
 =========================
 
 Purchases Syncing is a feature available for Shopify customers integrated with Talkable extension.
-It allows automatic purchases synchronization from Shopify instead of (or additionally to) passing purchases with Talkable Javascript integration from a browser.
+It allows automatic purchases synchronization from Shopify instead of (or additionally to) passing purchases with Talkable JavaScript integration from a browser.
 
 To access this setting, go to the Shopify Integration page (Settings → Shopify Integration).
 
@@ -53,11 +53,11 @@ Post Purchase Campaign setup
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To render Talkable Post Purchase Campaign, there is still a need of registering purchases
-with Talkable Javascript integration (is managed automatically by Talkable).
+with Talkable JavaScript integration (is managed automatically by Talkable).
 
-Javascript purchase registration has priority over Purchases Syncing and registers the purchase from Javascript integration first.
+JavaScript purchase registration has priority over Purchases Syncing and registers the purchase from JavaScript integration first.
 
-In this setup Purchases Syncing is just ensuring that attributes passed with Javascript integration are aligned with purchases data from Shopify
+In this setup Purchases Syncing is just ensuring that attributes passed with JavaScript integration are aligned with purchases data from Shopify
 and notifies Talkable Integrations team in case it is not.
 
 Here is detailed explanation of this logic:
@@ -67,4 +67,4 @@ Here is detailed explanation of this logic:
   - If there is no such Purchase, the one will be registered with attributes described in `Shopify Webhook payload and Talkable Purchase attributes mapping`
 
   - If such Purchase exists, Purchases Syncing compares **Email** and **Subtotal** with Shopify Webhook payload.
-    In case these attributes differ, Talkable Integrations team will be notified. Otherwise nothing happens, existing Purchase data is kept unmodified.
+    In case these attributes differ, Talkable Integrations team will is notified. Otherwise, nothing happens and the existing Purchase data is kept unmodified.
