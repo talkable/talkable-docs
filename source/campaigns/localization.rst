@@ -30,6 +30,6 @@ Campaign Localization is copied when campaign is copied, so you are able to use 
 3. Make a copy of the campaign
 4. Translate localization in a copy to different language.
 
-Campaigns with phone input have country detection which automaticaly detected based on user IP:
+Campaigns with phone input have country automatically detected based on user IP:
 
 .. image:: /_static/img/phone-input.png
