@@ -12,7 +12,7 @@ By default if no campaign tag was specified, SDK uses `ios-invite` and `ios-post
 
   .. code-block:: objc
 
-    #import <TalkableSDK/Talkable.h>
+    @import TalkableSDK;
     ...
     [[Talkable manager] registerOrigin:TKBLAffiliateMember params:@{TKBLCampaignTags: @"your-custom-tag"}];
     ...
@@ -92,7 +92,7 @@ Subscribe to notifications that Talkable SDK publish and be aware of everything 
 
   .. code-block:: objc
 
-    #import <TalkableSDK/Talkable.h>
+    @import TalkableSDK;
     ...
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(couponReceived:) name:TKBLDidReceiveCouponCode object:nil];
     ...
@@ -105,7 +105,7 @@ Subscribe to notifications that Talkable SDK publish and be aware of everything 
 
   .. code-block:: objc
 
-    #import <TalkableSDK/Talkable.h>
+    @import TalkableSDK;
     ...
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(rewardReceived:) name:TKBLDidReceiveReward object:nil];
     ...
@@ -118,7 +118,7 @@ Subscribe to notifications that Talkable SDK publish and be aware of everything 
 
   .. code-block:: objc
 
-    #import <TalkableSDK/Talkable.h>
+    @import TalkableSDK;
     ...
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(publishMessageNotification:) name:TKBLDidPublishMessageNotification object:nil];
     ...
@@ -142,7 +142,7 @@ See all debugging information in your console which can help you to understand w
 
   .. code-block:: objc
 
-    #import <TalkableSDK/Talkable.h>
+    @import TalkableSDK;
     ...
     [Talkable manager].debug = YES;
 
