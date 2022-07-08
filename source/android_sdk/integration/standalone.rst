@@ -32,7 +32,7 @@ with the following line of code:
 
 .. note::
 
-  Make sure you have at least one Live “SA” campaign with a specified `android-invite` tag or the tag you specified inside Talkable Site
+  Make sure you have at least one Live “SA” campaign inside Talkable Site with `android-invite` tag or the tag you specified
 
 Note that `customer` is empty, in this case user will see the
 :ref:`Advocate Signup Page <campaigns/views/affiliate_members_new>`, which is used to collect

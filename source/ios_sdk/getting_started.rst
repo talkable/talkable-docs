@@ -84,7 +84,7 @@ Step 2: Configuration
 
 2. Register URL scheme for Talkable:
 
-  - Defines `tkbl-<your-site-id>` as URL Scheme in your Info.plist file:
+  - Defines `tkbl-<your-site-slug>` as URL Scheme in your Info.plist file:
 
     .. code-block:: xml
 
@@ -112,7 +112,7 @@ Step 2: Configuration
 
   .. note::
 
-    Please replace `<your-site-slug>` with your actual Site ID, which can
+    Please replace `<your-site-slug>` with your actual site slug, which can
     be found on your site's **Dashboard** at https://admin.talkable.com
 
 3. Add following lines to `application:handleOpenURL:` or `application:openURL:sourceApplication:annotation:`

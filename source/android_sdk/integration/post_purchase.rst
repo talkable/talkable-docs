@@ -9,10 +9,10 @@ campaign — Post Purchase. It is used to convert your existing customers into A
 they make a purchase.  It has the same flow as a basic Standalone campaign except this is gated
 by a purchase and shown to a customer immediately after it.
 
-Post Purchase campaign usually looks like a pop up right after a user made a purchase.
-This campaign is initialized on the order confirmation page and captures order details parameters.
-You need to pass order data to Talkable that includes your customer’s email address,
-order number, subtotal, coupon code used at checkout to allow Talkable detect and close a referral loop.
+Post Purchase campaign usually looks like a pop up right after a user made a purchase. This
+campaign is initialized on the order confirmation page and captures order details parameters. You
+need to pass order data to Talkable that includes your customer’s email address, order number, subtotal, coupon
+codes used at checkout to allow Talkable detect and close a referral loop.
 
 Here is an example of a Purchase capturing, this action should be triggered on the order confirmation page:
 
