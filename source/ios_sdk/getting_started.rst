@@ -71,13 +71,15 @@ Step 2: Configuration
 
     @import TalkableSDK;
     ...
-    [[Talkable manager] setApiKey:@"YOUR_TALKABLE_PUBLIC_API_KEY" andSiteSlug:@"YOUR_SITE_ID"];
+    [[Talkable manager] setApiKey:@"YOUR_TALKABLE_PUBLIC_API_KEY" andSiteSlug:@"YOUR_SITE_SLUG"];
 
   .. note::
 
-    To locate your credentials at Talkable, go to your site's **Dashboard** → **Settings** → **Site Settings**.
-    Find **API integration** section and there you will see your API Keys.
-    Use only the *Public API Key* in your application submitted to the App Store.
+    You can locate your credentials inside Talkable site:
+    - Visit https://admin.talkable.com/account/sites to find your site slug
+    - Select site and go to **Dashboard** → **Settings** → **Site Settings**.
+      Find **API integration** section and there you will see your API Keys.
+      Use only the *Public API Key* in your application submitted to the App Store.
 
 2. Register URL scheme for Talkable:
 
@@ -90,18 +92,18 @@ Step 2: Configuration
         <dict>
           <key>CFBundleURLSchemes</key>
           <array>
-            <string>tkbl-<your-site-id></string>
+            <string>tkbl-<your-site-slug></string>
           </array>
         </dict>
       </array>
 
-  - Add `tkbl-<your-site-id>` scheme to the list of schemes that are queried within application. Also add `fb-messenger`, `fbauth2`, `whatsapp` schemes if you going to utilize these sharing channels:
+  - Add `tkbl-<your-site-slug>` scheme to the list of schemes that are queried within application. Also add `fb-messenger`, `fbauth2`, `whatsapp` schemes if you going to utilize these sharing channels:
 
     .. code-block:: xml
 
       <key>LSApplicationQueriesSchemes</key>
       <array>
-        <string>tkbl-<your-site-id></string>
+        <string>tkbl-<your-site-slug></string>
         <string>fb-messenger</string>
         <string>fbauth2</string>
         <string>whatsapp</string>
@@ -109,7 +111,7 @@ Step 2: Configuration
 
   .. note::
 
-    Please replace `<your-site-id>` with your actual Site ID, which can
+    Please replace `<your-site-slug>` with your actual Site ID, which can
     be found on your site's **Dashboard** at https://admin.talkable.com
 
 3. Add following lines to `application:handleOpenURL:` or `application:openURL:sourceApplication:annotation:`
