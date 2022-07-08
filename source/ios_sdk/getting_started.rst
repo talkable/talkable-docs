@@ -76,6 +76,7 @@ Step 2: Configuration
   .. note::
 
     You can locate your credentials inside Talkable site:
+
     - Visit https://admin.talkable.com/account/sites to find your site slug
     - Select site and go to **Dashboard** → **Settings** → **Site Settings**.
       Find **API integration** section and there you will see your API Keys.
