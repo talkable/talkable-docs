@@ -84,7 +84,7 @@ Step 2: Configuration
 
 2. Register URL scheme for Talkable:
 
-  - Defines `tkbl-<your-site-slug>` as URL Scheme in your Info.plist file:
+  - Defines `tkbl-YOUR-SITE-SLUG` as URL Scheme in your Info.plist file:
 
     .. code-block:: xml
 
@@ -93,18 +93,18 @@ Step 2: Configuration
         <dict>
           <key>CFBundleURLSchemes</key>
           <array>
-            <string>tkbl-<your-site-slug></string>
+            <string>tkbl-YOUR-SITE-SLUG</string>
           </array>
         </dict>
       </array>
 
-  - Add `tkbl-<your-site-slug>` scheme to the list of schemes that are queried within application. Also add `fb-messenger`, `fbauth2`, `whatsapp` schemes if you going to utilize these sharing channels:
+  - Add `tkbl-YOUR-SITE-SLUG` scheme to the list of schemes that are queried within application. Also add `fb-messenger`, `fbauth2`, `whatsapp` schemes if you going to utilize these sharing channels:
 
     .. code-block:: xml
 
       <key>LSApplicationQueriesSchemes</key>
       <array>
-        <string>tkbl-<your-site-slug></string>
+        <string>tkbl-YOUR-SITE-SLUG</string>
         <string>fb-messenger</string>
         <string>fbauth2</string>
         <string>whatsapp</string>
@@ -112,7 +112,7 @@ Step 2: Configuration
 
   .. note::
 
-    Please replace `<your-site-slug>` with your actual site slug, which can
+    Please replace `YOUR-SITE-SLUG` with your actual site slug, which can
     be found on your site's **Dashboard** at https://admin.talkable.com
 
 3. Add following lines to `application:handleOpenURL:` or `application:openURL:sourceApplication:annotation:`
