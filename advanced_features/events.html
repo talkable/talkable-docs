@@ -45,6 +45,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../advanced_features.html">Features</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="coupons.html">Automatic Coupon Creation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shopify_coupons_auto_sync.html">Shopify coupon auto-sync</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shopify_purchase_syncing.html">Shopify Purchase Syncing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="track_methods.html">Referral Tracking Methods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="personal_coupon_sharing.html">Advocate Personal Coupon Sharing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="converting_into_localization.html">Converting Into Localization</a></li>
@@ -196,6 +197,9 @@ Example: <code class="docutils literal notranslate"><span class="pre">'198.5'</s
 this event. <br>
 Example: <code class="docutils literal notranslate"><span class="pre">'SAVE20'</span></code>. You can also pass multiple coupons as
 an array: <code class="docutils literal notranslate"><span class="pre">['SAVE20',</span> <span class="pre">'SAVE5']</span></code> if they were stacked.</p></li>
+<li><p><strong>currency_iso_code</strong> (optional) - Currency ISO code is required
+for multi-currency sites. <br>
+Example: <code class="docutils literal notranslate"><span class="pre">'USD'</span></code>.</p></li>
 <li><p><strong>shipping_address</strong> (optional) – Shipping address in case an event is
 shippable. It is used in fraud prevention. <br>
 Example:

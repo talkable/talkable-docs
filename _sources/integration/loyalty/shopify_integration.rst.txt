@@ -1,11 +1,26 @@
-.. _integration/loyalty/manual_shopify_integration:
+.. _integration/loyalty/shopify_integration:
 .. include:: /partials/common.rst
 
 .. meta::
    :description: Learn how to manually set up loyalty Shopify integration.
 
-Manual Shopify integration
-==========================
+Shopify Integration
+===================
+
+.. _integration/loyalty/shopify/automatic_integration:
+
+Automatic integration
+---------------------
+
+After passing :ref:`Shopify authorization <integration/ecommerce_platforms/shopify/automatic_integration>`,
+Loyalty page will be located at `/pages/loyalty`.
+
+To turn Loyalty integration on/off, navigate to Talkable Shopify Integration page `https://admin.talkable.com/sites/<YOUR-TALKABLE-SITE-ID>/integration/shopify`
+
+.. _integration/loyalty/shopify/manual_integration:
+
+Manual integration
+------------------
 
 1. Pass Shopify authorization
 2. You will be redirected to your Shopify store, log in and click the Install button

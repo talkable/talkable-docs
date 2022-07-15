@@ -7,6 +7,8 @@
 Shopify Integration
 ===================
 
+.. _integration/ecommerce_platforms/shopify/automatic_integration:
+
 Automatic integration
 ---------------------
 
@@ -105,7 +107,7 @@ Manual integration
 
     * Settings
     * Checkout
-    * Scroll down to **Order Processing**
+    * Scroll down to **Order status page**
     * Paste the following code into **Additional scripts** field:
 
     .. include:: /samples/ecommerce/platform/shopify.rst

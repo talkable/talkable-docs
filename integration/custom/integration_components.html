@@ -118,6 +118,7 @@ that spans every page. All other integration components are dependent on the Ini
 <li><p>Subtotal (pre-tax, post-discount amount)</p></li>
 <li><p>Coupon code(s) used at checkout (can accept an array of strings if you allow for multiple coupons to
 be applied at checkout)</p></li>
+<li><p>Currency ISO code. It is required for multi-currency sites.</p></li>
 <li><p>(optional) Shipping Address for additional fraud protection.</p></li>
 <li><p>(optional) Shopping cart line items. This is only necessary if segmenting based on cart contents.</p></li>
 </ul>
@@ -141,7 +142,7 @@ template that spans every page. Talkable JS library size is typically
 around 20kB and causes no noticeable impact to your site’s loading time.
 All other integration components are dependent on the Initialization
 script.</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- Begin Talkable integration code --&gt;</span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Begin Talkable integration code --&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/&lt;YOUR-TALKABLE-SITE-ID&gt;.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
   <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span> <span class="o">||</span> <span class="p">[];</span>
@@ -154,7 +155,7 @@ script.</p>
     <span class="nx">traffic_source</span><span class="o">:</span> <span class="s1">&#39;&#39;</span> <span class="c1">// Optional, the source of the traffic driven to the campaign. Example: &#39;facebook&#39;</span>
   <span class="p">}]);</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="c">&lt;!-- End Talkable integration code --&gt;</span>
+<span class="cm">&lt;!-- End Talkable integration code --&gt;</span>
 </pre></div>
 </div>
 <section id="initialization-script-notes">
@@ -184,7 +185,7 @@ page or any page that immediately follows checkout. All parameters can
 be passed as strings. A Number can be passed for <cite>subtotal</cite>, however, if
 using any calculation, you’re responsible for ensuring that some number is
 passed where division by zero or <cite>null</cite> value does not occur.</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- Begin Talkable integration code --&gt;</span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Begin Talkable integration code --&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
   <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span> <span class="o">||</span> <span class="p">[];</span>
   <span class="kd">var</span> <span class="nx">_talkable_data</span> <span class="o">=</span> <span class="p">{</span>
@@ -192,6 +193,7 @@ passed where division by zero or <cite>null</cite> value does not occur.</p>
       <span class="nx">order_number</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Required - Unique order number. Example: &#39;100011&#39;</span>
       <span class="nx">subtotal</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Required - Order subtotal (pre-tax, post-discount). Example: &#39;23.97&#39;</span>
       <span class="nx">coupon_code</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Coupon code that was used at checkout (pass multiple as an array). Example: &#39;SAVE20&#39;</span>
+      <span class="nx">currency_iso_code</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Required for multi-currency sites. Example: &#39;USD&#39;</span>
       <span class="nx">shipping_zip</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Used for fraud protection by address. Example: &#39;02222&#39;</span>
       <span class="nx">shipping_address</span><span class="o">:</span> <span class="s1">&#39;&#39;</span> <span class="c1">// Full address of the order, make sure to strictly follow a format: &#39;Apt #, Street address, City, State, ZIP, Country&#39;</span>
     <span class="p">},</span>
@@ -202,7 +204,7 @@ passed where division by zero or <cite>null</cite> value does not occur.</p>
   <span class="p">};</span>
   <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;register_purchase&#39;</span><span class="p">,</span> <span class="nx">_talkable_data</span><span class="p">]);</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="c">&lt;!-- End Talkable integration code --&gt;</span>
+<span class="cm">&lt;!-- End Talkable integration code --&gt;</span>
 </pre></div>
 </div>
 <section id="post-purchase-script-notes">

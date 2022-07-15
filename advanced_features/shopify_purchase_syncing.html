@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Purchase Syncing is a feature available for Shopify customers integrated with Talkable extension. It allows automatic purchases synchronization from Shopify instead of (or additionally to) passing purchases with Talkable JavaScript integration." name="description" />
+
+    <title>Shopify Purchase Syncing &#8212; Talkable Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="canonical" href="https://docs.talkable.com/advanced_features/shopify_purchase_syncing.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Referral Tracking Methods" href="track_methods.html" />
+    <link rel="prev" title="Shopify coupon auto-sync" href="shopify_coupons_auto_sync.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+  <link href="../_static/pygments-github.css" rel="stylesheet">
+  <link href="../_static/img/favicon.ico" rel="shortcut icon" />
+  </head><body>
+  
+    <div class="header">
+      <a href="../index.html" class="header-logo">Talkable docs</a>
+          <form class="search-form" action="../search.html" method="get">
+            <input type="text" class="textfield search-form-field" name="q" placeholder="Search docs" />
+            <input type="submit" class="button search-form-button" value="Search" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+      <div class="header-disclaimer">
+        Visit
+        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+      </div>
+    </div> <!-- /.header -->
+  
+
+  <div class="content-container content clearfix">
+      <div class="nav">
+        <ul>
+<li class="toctree-l1"><a class="reference internal" href="../campaigns.html">Talkable Campaigns</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../advanced_features.html">Features</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="coupons.html">Automatic Coupon Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shopify_coupons_auto_sync.html">Shopify coupon auto-sync</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Shopify Purchase Syncing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-it-works">How it works?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shopify-webhook-payload-and-talkable-purchase-attributes-mapping">Shopify Webhook payload and Talkable Purchase attributes mapping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#post-purchase-campaign-setup">Post Purchase Campaign setup</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="track_methods.html">Referral Tracking Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal_coupon_sharing.html">Advocate Personal Coupon Sharing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="converting_into_localization.html">Converting Into Localization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="customer_service_portal.html">Customer Service Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="params_encryption.html">Params Encryption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html">Integrating Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_encryption.html">File Encryption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="product_items.html">Including Product Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passing_custom_data.html">Pass Custom User Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="referrals_approval.html">Referrals Approval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="product_sku.html">Segment With Product SKU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="traffic_source.html">Segment With Traffic Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subscribing_to_events.html">Subscribing To Iframe Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reg_ex.html">Setting up Campaign Placement criteria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="url_parameters.html">Using URL Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="white_labeling.html">White-labeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="single_sign_on.html">Single Sign-On (SSO)</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/custom_integration.html">Standard Integration</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/loyalty.html">Loyalty Integration (beta)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integration/ecommerce_platforms.html">E-commerce Platforms</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../email_marketing_and_automation.html">Email Marketing &amp; Automation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../payment_solutions.html">Payment Solutions</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api_v2.html">API Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../web_hooks.html">Webhooks</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ios_sdk.html">Talkable iOS SDK</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../android_sdk.html">Talkable Android SDK</a></li>
+</ul>
+
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <span class="target" id="advanced-features-shopify-purchase-syncing"></span><section id="shopify-purchase-syncing">
+<h1>Shopify Purchase Syncing<a class="headerlink" href="#shopify-purchase-syncing" title="Permalink to this headline">¶</a></h1>
+<p>Purchase Syncing is a feature available for Shopify customers integrated with Talkable extension.
+It allows automatic purchases synchronization from Shopify instead of (or additionally to) passing purchases with Talkable JavaScript integration from a browser.</p>
+<p>To access this setting, go to the Shopify Integration page (Settings → Shopify Integration).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Purchase Syncing currently is not supported for customers who pass to Talkable purchases with Purchase Order Number,
+different from Shopify Purchase ID (Talkable default Shopify integration behavior) as it will lead to double purchases registering.</p>
+</div>
+<section id="how-it-works">
+<h2>How it works?<a class="headerlink" href="#how-it-works" title="Permalink to this headline">¶</a></h2>
+<p>It works as a server-to-server integration between Shopify and Talkable using Shopify <cite>orders/create</cite> <a class="reference external" rel="nofollow" href="https://shopify.dev/api/admin-rest/2022-04/resources/webhook">webhook</a>.</p>
+<p>When enabling Purchase Syncing, Talkable creates and subscribes to this <cite>orders/create</cite> webhook from the customer’s Shopify store. When disabling the setting, the webhook and the subscription are deleted.</p>
+<p>Each time a purchase is placed on a customer’s store, Shopify triggers the webhook and Talkable registers the purchase with attributes sent in the webhook’s payload.</p>
+</section>
+<section id="shopify-webhook-payload-and-talkable-purchase-attributes-mapping">
+<h2>Shopify Webhook payload and Talkable Purchase attributes mapping<a class="headerlink" href="#shopify-webhook-payload-and-talkable-purchase-attributes-mapping" title="Permalink to this headline">¶</a></h2>
+<p>Talkable uses next mapping when syncing purchases from Shopify Webhook payload:</p>
+<div class="ptable docutils container">
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 66%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Talkable Purchase attribute</p></th>
+<th class="head"><p>Shopify Webhook payload (Shopify Purchase attribute)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Order Number</strong></p></td>
+<td><p><cite>payload.id</cite> (Shopify Purchase ID)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Email</strong></p></td>
+<td><p><cite>payload.email</cite></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Subtotal</strong></p></td>
+<td><p><cite>payload.total_price</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Taxes</strong></p></td>
+<td><p><cite>payload.total_tax</cite></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Discount Amount</strong></p></td>
+<td><p><cite>payload.total_discounts</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Shipping Cost</strong></p></td>
+<td><p><cite>payload.total_shipping_price_set</cite></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Items Purchased</strong></p></td>
+<td><p><cite>payload.line_items</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Coupon codes</strong></p></td>
+<td><p><cite>payload.discount_codes</cite></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>IP Address</strong></p></td>
+<td><p><cite>payload.browser_ip</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Shipping Address</strong></p></td>
+<td><p><cite>payload.shipping_address</cite> (joined by comma)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Shipping Zip</strong></p></td>
+<td><p><cite>payload.shipping_address.zip</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Traffic Source</strong></p></td>
+<td><p>“purchase-syncing” (constant value)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Visitor</strong></p></td>
+<td><p>None (empty)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="post-purchase-campaign-setup">
+<h2>Post Purchase Campaign setup<a class="headerlink" href="#post-purchase-campaign-setup" title="Permalink to this headline">¶</a></h2>
+<p>To render Talkable Post Purchase Campaign, there is still a need of registering purchases
+with Talkable JavaScript integration (is managed automatically by Talkable).</p>
+<p>JavaScript purchase registration has priority over Purchase Syncing and registers the purchase from JavaScript integration first.</p>
+<p>In this setup Purchase Syncing is just ensuring that attributes passed with JavaScript integration are aligned with purchases data from Shopify
+and notifies Talkable Integrations team in case it is not.</p>
+<p>Here is detailed explanation of this logic:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Purchase Syncing tries to find Purchase in Talkable by Order Number (Shopify Purchase ID).</p></li>
+<li><p>If there is no such Purchase, the one will be registered with attributes described in <cite>Shopify Webhook payload and Talkable Purchase attributes mapping</cite></p></li>
+<li><p>If such Purchase exists, Purchase Syncing compares <strong>Email</strong> and <strong>Subtotal</strong> with Shopify Webhook payload.
+In case these attributes differ, Talkable Integrations team will is notified. Otherwise, nothing happens and the existing Purchase data is kept unmodified.</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </div> <!-- /.content-container -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-63500208-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  </body>
+</html>

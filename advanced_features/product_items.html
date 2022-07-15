@@ -45,6 +45,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../advanced_features.html">Features</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="coupons.html">Automatic Coupon Creation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shopify_coupons_auto_sync.html">Shopify coupon auto-sync</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shopify_purchase_syncing.html">Shopify Purchase Syncing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="track_methods.html">Referral Tracking Methods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="personal_coupon_sharing.html">Advocate Personal Coupon Sharing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="converting_into_localization.html">Converting Into Localization</a></li>
@@ -105,7 +106,7 @@
 which will let your customers share specific items that they’ve purchased.
 Customer shares with products have higher click through and conversion rates.</p>
 <p>Below is an example with product items passed along with purchase data (notice FOR loop):</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- Begin Talkable integration code --&gt;</span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Begin Talkable integration code --&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
   <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span> <span class="o">||</span> <span class="p">[];</span>
   <span class="kd">var</span> <span class="nx">_talkable_purchase_items</span> <span class="o">=</span> <span class="p">[];</span>
@@ -126,6 +127,7 @@ Customer shares with products have higher click through and conversion rates.</p
       <span class="nx">order_number</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Required - Unique order number. Example: &#39;100011&#39;</span>
       <span class="nx">subtotal</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Required - Order subtotal (pre-tax, post-discount). Example: &#39;23.97&#39;</span>
       <span class="nx">coupon_code</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Coupon code that was used at checkout (pass multiple as an array). Example: &#39;SAVE20&#39;</span>
+      <span class="nx">currency_iso_code</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Required for multi-currency sites. Example: &#39;USD&#39;</span>
       <span class="nx">shipping_zip</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Used for fraud protection by address. Example: &#39;02222&#39;</span>
       <span class="nx">shipping_address</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Full address of the order, make sure to strictly follow a format: &#39;Apt #, Street address, City, State, ZIP, Country&#39;</span>
       <span class="nx">items</span><span class="o">:</span> <span class="nx">_talkable_purchase_items</span> <span class="c1">// Cart items declared in the example above</span>
@@ -138,7 +140,7 @@ Customer shares with products have higher click through and conversion rates.</p
 
   <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;register_purchase&#39;</span><span class="p">,</span> <span class="nx">_talkable_data</span><span class="p">]);</span> <span class="c1">// Pass data to Talkable and show Post Purchase campaign as a result</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="c">&lt;!-- End Talkable integration code --&gt;</span>
+<span class="cm">&lt;!-- End Talkable integration code --&gt;</span>
 </pre></div>
 </div>
 <div class="admonition note">

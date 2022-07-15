@@ -20,6 +20,9 @@ each with links to integration details.
    * - :ref:`Shopify Coupon auto-sync <advanced_features/shopify_coupons_auto_sync>`
      - Issue coupons automatically for your Shopify store
 
+   * - :ref:`Shopify Purchase Syncing <advanced_features/shopify_purchase_syncing>`
+     - Automatic purchases synchronization from your Shopify store
+
    * - :ref:`Referral Tracking Methods <advanced_features/track_methods>`
      - See how Talkable tracks referrals and what data is used in the tracking process
 
@@ -83,6 +86,7 @@ each with links to integration details.
 
     advanced_features/coupons
     advanced_features/shopify_coupons_auto_sync
+    advanced_features/shopify_purchase_syncing
     advanced_features/track_methods
     advanced_features/personal_coupon_sharing
     advanced_features/converting_into_localization

@@ -57,7 +57,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="custom_app.html">Custom App for Loyalty</a></li>
 <li class="toctree-l2"><a class="reference internal" href="auto_enrollment.html">Auto-Enrollment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="manual_shopify_integration.html">Manual Shopify integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shopify_integration.html">Shopify Integration</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../ecommerce_platforms.html">E-commerce Platforms</a></li>
@@ -120,7 +120,7 @@ template that spans every page. Talkable JS library size is typically
 around 20kB and causes no noticeable impact to your site’s loading time.
 All other integration components are dependent on the Initialization
 script.</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- Begin Talkable integration code --&gt;</span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Begin Talkable integration code --&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/&lt;YOUR-TALKABLE-SITE-ID&gt;.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
   <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span> <span class="o">||</span> <span class="p">[];</span>
@@ -131,7 +131,7 @@ script.</p>
     <span class="nx">phone_number</span><span class="o">:</span> <span class="s1">&#39;&#39;</span> <span class="c1">// Optional, pass when available. Example: &#39;+12025551111&#39;</span>
   <span class="p">}]);</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="c">&lt;!-- End Talkable integration code --&gt;</span>
+<span class="cm">&lt;!-- End Talkable integration code --&gt;</span>
 </pre></div>
 </div>
 <section id="initialization-script-notes">
@@ -167,7 +167,7 @@ You can find more info about where to place the DIV tag in <a class="reference i
 </section>
 <section id="loyalty-widget-notes">
 <h3>Loyalty Widget Notes<a class="headerlink" href="#loyalty-widget-notes" title="Permalink to this headline">¶</a></h3>
-<p>Add Talkable Container DIV at the checkout exactly where the loyalty points redemption widget should be rendered.</p>
+<p>Add Talkable Container DIV at the checkout exactly where the loyalty points redemption widget should rendered.</p>
 <p><hr></p>
 </section>
 </section>
