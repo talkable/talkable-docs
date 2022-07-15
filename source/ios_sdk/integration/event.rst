@@ -10,6 +10,8 @@ An Event has two required properties: event category and event number. Please re
 
 .. code-block:: objc
 
+  #import <TalkableSDK/Talkable.h>
+  // ...
   NSDictionary* params = @{
     TKBLCampaignTags: @"your-campaign-tag",
     TKBLEventKey: @{
@@ -29,6 +31,8 @@ Customer data can be added to the registered event. Custom properties passed wit
 
 .. code-block:: objc
 
+  #import <TalkableSDK/Talkable.h>
+  // ...
   NSDictionary* params = @{
     TKBLCampaignTags: @"your-campaign-tag",
     TKBLEventKey: @{

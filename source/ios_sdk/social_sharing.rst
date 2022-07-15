@@ -82,7 +82,7 @@ Example
                                        delegate:delegate];
    }
 
-   ...
+   // ...
 
    @implementation MyFBSDKDelegateClass
 

@@ -12,10 +12,9 @@ Once you’ve got a Standalone campaign set up inside Talkable you can integrate
 
 .. code-block:: objc
 
-  @import TalkableSDK;
-  ...
+  #import <TalkableSDK/Talkable.h>
+  // ...
   [[Talkable manager] registerOrigin:TKBLAffiliateMember params:nil];
-  ...
 
 .. note::
 
@@ -25,8 +24,8 @@ Note that `params` are empty, in this case user will see the :ref:`Advocate Sign
 
 .. code-block:: objc
 
-  @import TalkableSDK;
-  ...
+  #import <TalkableSDK/Talkable.h>
+  // ...
   NSDictionary* params = @{
     TKBLAffiliateMemberKey: @{
       TKBLAffiliateMemberEmailKey: @"advocate@example.com",
@@ -37,9 +36,7 @@ Note that `params` are empty, in this case user will see the :ref:`Advocate Sign
       }
     }
   };
-  ...
   [[Talkable manager] registerOrigin:TKBLAffiliateMember params:params];
-  ...
 
 .. container:: hidden
 

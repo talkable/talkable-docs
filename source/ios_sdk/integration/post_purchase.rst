@@ -12,8 +12,8 @@ Here is an example of a Purchase capturing, this action should be triggered on t
 
 .. code-block:: objc
 
-   @import TalkableSDK;
-   ...
+   #import <TalkableSDK/Talkable.h>
+   // ...
    NSDictionary* params = @{
      TKBLPurchaseKey: @{
        TKBLPurchaseOrderNumberKey: @"100130", // REQUIRED - Order number
@@ -32,7 +32,6 @@ Here is an example of a Purchase capturing, this action should be triggered on t
        ]
      }
    };
-   ...
    [[Talkable manager] registerOrigin:TKBLPurchase params:params];
 
 .. note::

@@ -33,7 +33,6 @@ If the request is successful, the ``handler`` block will receive attributes of c
       NSDictionary* claimLinks = [offerParams objectForKey:@"claim_links"];
   }];
 
-
 .. _ios_sdk/api_integration/sharing:
 
 2. Create a Share
@@ -87,7 +86,7 @@ via |api_v2_share_via_social_channel|.
                                 withContent:content
                                    delegate:delegate];
 
-   ...
+   //...
 
    @implementation MyFBSDKDelegateClass
 

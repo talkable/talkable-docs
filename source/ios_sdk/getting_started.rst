@@ -69,8 +69,8 @@ Step 2: Configuration
 
   .. code-block:: objc
 
-    @import TalkableSDK;
-    ...
+    #import <TalkableSDK/Talkable.h>
+    // ...
     [[Talkable manager] setApiKey:@"YOUR_TALKABLE_PUBLIC_API_KEY" andSiteSlug:@"YOUR_SITE_SLUG"];
 
   .. note::
@@ -119,8 +119,8 @@ Step 2: Configuration
 
   .. code-block:: objc
 
-    @import TalkableSDK;
-    ...
+    #import <TalkableSDK/Talkable.h>
+    // ...
     [[Talkable manager] handleOpenURL:url];
 
 Your environment is all set up! Now you can :ref:`integrate <ios_sdk/integration>` the Talkable campaign piece.

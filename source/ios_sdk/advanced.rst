@@ -12,10 +12,9 @@ By default if no campaign tag was specified, SDK uses `ios-invite` and `ios-post
 
   .. code-block:: objc
 
-    @import TalkableSDK;
-    ...
+    #import <TalkableSDK/Talkable.h>
+    // ...
     [[Talkable manager] registerOrigin:TKBLAffiliateMember params:@{TKBLCampaignTags: @"your-custom-tag"}];
-    ...
 
 .. _ios_sdk/advanced/delegate:
 
@@ -92,42 +91,39 @@ Subscribe to notifications that Talkable SDK publish and be aware of everything 
 
   .. code-block:: objc
 
-    @import TalkableSDK;
-    ...
+    #import <TalkableSDK/Talkable.h>
+    // ...
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(couponReceived:) name:TKBLDidReceiveCouponCode object:nil];
-    ...
+    // ...
     - (void)couponReceived:(NSNotification*)ntf {
       // Your logic here
     }
-    ...
 
 2. Receive the reward given to an Advocate:
 
   .. code-block:: objc
 
-    @import TalkableSDK;
-    ...
+    #import <TalkableSDK/Talkable.h>
+    // ...
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(rewardReceived:) name:TKBLDidReceiveReward object:nil];
-    ...
+    // ...
     - (void)rewardReceived:(NSNotification*)ntf {
       // Your logic here
     }
-    ...
 
 3. Catch every message from presented offer:
 
   .. code-block:: objc
 
-    @import TalkableSDK;
-    ...
+    #import <TalkableSDK/Talkable.h>
+    // ...
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(publishMessageNotification:) name:TKBLDidPublishMessageNotification object:nil];
-    ...
+    // ...
     - (void)publishMessageNotification:(NSNotification*)ntf {
       if ([[[ntf userInfo] objectForKey:TKBLMessageNameKey] isEqualToString:TKBLMessageOfferLoaded]) {
         // Your logic here
       }
     }
-    ...
 
   Available messages:
 
@@ -142,8 +138,8 @@ See all debugging information in your console which can help you to understand w
 
   .. code-block:: objc
 
-    @import TalkableSDK;
-    ...
+    #import <TalkableSDK/Talkable.h>
+    // ...
     [Talkable manager].debug = YES;
 
 .. container:: hidden
