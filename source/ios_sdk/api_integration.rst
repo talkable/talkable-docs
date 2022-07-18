@@ -86,7 +86,7 @@ via |api_v2_share_via_social_channel|.
                                 withContent:content
                                    delegate:delegate];
 
-   //...
+   // ...
 
    @implementation MyFBSDKDelegateClass
 
