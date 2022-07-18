@@ -113,7 +113,9 @@ Step 2: Configuration
   .. note::
 
     Please replace `YOUR-SITE-SLUG` with your actual site slug, which can
-    be found on your site's **Dashboard** at https://admin.talkable.com
+    be found on your site's **Dashboard** at https://admin.talkable.com.
+    Make sure to keep `tkbl-` prefix in the `<string>` value. For example,
+    if your site slug is `my-store`, the correct `<string>` value is `tkbl-my-store`.
 
 3. Add following lines to `application:handleOpenURL:` or `application:openURL:sourceApplication:annotation:`
 
