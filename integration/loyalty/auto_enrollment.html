@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 <meta content="Find out how to auto-enroll loyalty members." name="description" />
 
     <title>Auto-Enrollment &#8212; Talkable Documentation</title>
@@ -12,6 +12,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/integration/loyalty/auto_enrollment.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -89,7 +90,7 @@
           <div class="body" role="main">
             
   <span class="target" id="integration-loyalty-auto-enrollment"></span><section id="auto-enrollment">
-<h1>Auto-Enrollment<a class="headerlink" href="#auto-enrollment" title="Permalink to this headline">¶</a></h1>
+<h1>Auto-Enrollment<a class="headerlink" href="#auto-enrollment" title="Permalink to this heading">¶</a></h1>
 <p>Talkable allows to enroll users to loyalty without showing the loyalty dashboard page.</p>
 <p>There are a couple of ways to do that:</p>
 <ul class="simple">
@@ -97,12 +98,12 @@
 <li><p><a class="reference internal" href="#enrollment-via-js-integration"><span class="std std-ref">Enrollment via JS Integration</span></a></p></li>
 </ul>
 <section id="post-purchase-enrollment">
-<span id="id1"></span><h2>Post-Purchase Enrollment<a class="headerlink" href="#post-purchase-enrollment" title="Permalink to this headline">¶</a></h2>
+<span id="id1"></span><h2>Post-Purchase Enrollment<a class="headerlink" href="#post-purchase-enrollment" title="Permalink to this heading">¶</a></h2>
 <p>Enroll users to loyalty after they make a purchase.
 A setting to enable this behavior can be found under <strong>Site settings</strong> → <strong>Loyalty settings</strong> → <strong>General</strong> → <strong>Auto-enrollment</strong>.</p>
 </section>
 <section id="enrollment-via-js-integration">
-<span id="id2"></span><h2>Enrollment via JS Integration<a class="headerlink" href="#enrollment-via-js-integration" title="Permalink to this headline">¶</a></h2>
+<span id="id2"></span><h2>Enrollment via JS Integration<a class="headerlink" href="#enrollment-via-js-integration" title="Permalink to this heading">¶</a></h2>
 <p>Enroll users to loyalty without showing the campaign using <cite>join_loyalty</cite>.
 For example, this could be used for enrolling users during registration or login.</p>
 <p>Don’t forget to include a consent checkbox that would inform your user that they are about to join the loyalty program.</p>
@@ -111,40 +112,40 @@ For example, this could be used for enrolling users during registration or login
 <p><cite>join_loyalty</cite> is available since integration version 4.5.9.</p>
 </div>
 <section id="code-example-1">
-<h3>Code Example #1:<a class="headerlink" href="#code-example-1" title="Permalink to this headline">¶</a></h3>
+<h3>Code Example #1:<a class="headerlink" href="#code-example-1" title="Permalink to this heading">¶</a></h3>
 <p>Use <cite>authenticate_customer</cite> to store current user data.</p>
 <p>When you call <cite>join_loyalty</cite>, you can pass empty object since Talkable will have access to the data from <cite>authenticate_customer</cite>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><cite>authenticate_customer</cite> data can also be reused by other integration functions.</p>
 </div>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s2">&quot;authenticate_customer&quot;</span><span class="p">,</span> <span class="p">{</span>
-  <span class="nx">email</span><span class="o">:</span> <span class="s2">&quot;loyalty@talkable.com&quot;</span><span class="p">,</span> <span class="c1">// required for `join_loyalty`</span>
-  <span class="nx">phone_number</span><span class="o">:</span> <span class="s1">&#39;+12025551111&#39;</span><span class="p">,</span>
-  <span class="nx">first_name</span><span class="o">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
-  <span class="nx">last_name</span><span class="o">:</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span>
-  <span class="nx">custom_properties</span><span class="o">:</span> <span class="p">{},</span>
-  <span class="nx">customer_id</span><span class="o">:</span> <span class="s2">&quot;11111&quot;</span>
-<span class="p">}]);</span>
-<span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;join_loyalty&quot;</span><span class="p">,</span> <span class="p">{})</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s2">&quot;authenticate_customer&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;loyalty@talkable.com&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// required for `join_loyalty`</span><span class="w"></span>
+<span class="w">  </span><span class="nx">phone_number</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;+12025551111&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nx">first_name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;John&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nx">last_name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Smith&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nx">custom_properties</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nx">customer_id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;11111&quot;</span><span class="w"></span>
+<span class="p">}]);</span><span class="w"></span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;join_loyalty&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{})</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
 <section id="code-example-2">
-<h3>Code Example #2:<a class="headerlink" href="#code-example-2" title="Permalink to this headline">¶</a></h3>
+<h3>Code Example #2:<a class="headerlink" href="#code-example-2" title="Permalink to this heading">¶</a></h3>
 <p>Pass loyalty member data directly to <cite>join_loyalty</cite>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Arguments passed with <cite>join_loyalty</cite> override respective arguments from <cite>authenticate_customer</cite>.</p>
 </div>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s2">&quot;join_loyalty&quot;</span><span class="p">,</span> <span class="p">{</span>
-  <span class="nx">email</span><span class="o">:</span> <span class="s2">&quot;loyalty@talkable.com&quot;</span><span class="p">,</span> <span class="c1">// required</span>
-  <span class="nx">phone_number</span><span class="o">:</span> <span class="s1">&#39;+12025551111&#39;</span><span class="p">,</span>
-  <span class="nx">first_name</span><span class="o">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
-  <span class="nx">last_name</span><span class="o">:</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span>
-  <span class="nx">custom_properties</span><span class="o">:</span> <span class="p">{},</span>
-  <span class="nx">customer_id</span><span class="o">:</span> <span class="s2">&quot;11111&quot;</span>
-<span class="p">}]);</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s2">&quot;join_loyalty&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;loyalty@talkable.com&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// required</span><span class="w"></span>
+<span class="w">  </span><span class="nx">phone_number</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;+12025551111&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nx">first_name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;John&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nx">last_name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Smith&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nx">custom_properties</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">  </span><span class="nx">customer_id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;11111&quot;</span><span class="w"></span>
+<span class="p">}]);</span><span class="w"></span>
 </pre></div>
 </div>
 </section>

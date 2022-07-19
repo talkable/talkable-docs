@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Advanced Usage &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -11,6 +11,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/ios_sdk/advanced.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -93,22 +94,21 @@
           <div class="body" role="main">
             
   <span class="target" id="ios-sdk-advanced"></span><section id="advanced-usage">
-<h1>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Permalink to this headline">¶</a></h1>
+<h1>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Permalink to this heading">¶</a></h1>
 <section id="specify-a-custom-campaign-tag">
-<h2>Specify a custom campaign tag<a class="headerlink" href="#specify-a-custom-campaign-tag" title="Permalink to this headline">¶</a></h2>
+<h2>Specify a custom campaign tag<a class="headerlink" href="#specify-a-custom-campaign-tag" title="Permalink to this heading">¶</a></h2>
 <p>By default if no campaign tag was specified, SDK uses <cite>ios-invite</cite> and <cite>ios-post-purchase</cite> tags for <a class="reference internal" href="integration/standalone.html#ios-sdk-integration-standalone"><span class="std std-ref">Standalone</span></a> and
 <a class="reference internal" href="integration/post_purchase.html#ios-sdk-integration-post-purchase"><span class="std std-ref">Post Purchase</span></a> campaigns. But you can explicitly specify your own tag in this way:</p>
 <blockquote>
 <div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="cp">#import &lt;TalkableSDK/Talkable.h&gt;</span>
-<span class="p">...</span><span class="w"></span>
+<span class="c1">// ...</span>
 <span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="n">registerOrigin</span><span class="o">:</span><span class="n">TKBLAffiliateMember</span><span class="w"> </span><span class="n">params</span><span class="o">:</span><span class="l">@{</span><span class="n">TKBLCampaignTags</span><span class="o">:</span><span class="w"> </span><span class="s">@&quot;your-custom-tag&quot;</span><span class="l">}</span><span class="p">];</span><span class="w"></span>
-<span class="p">...</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>
 </section>
 <section id="implement-talkabledelegate">
-<span id="ios-sdk-advanced-delegate"></span><h2>Implement TalkableDelegate<a class="headerlink" href="#implement-talkabledelegate" title="Permalink to this headline">¶</a></h2>
+<span id="ios-sdk-advanced-delegate"></span><h2>Implement TalkableDelegate<a class="headerlink" href="#implement-talkabledelegate" title="Permalink to this heading">¶</a></h2>
 <ol class="arabic simple">
 <li><p>Assign your <cite>ViewController</cite> or other object as Talkable delegate by using the following code:</p></li>
 </ol>
@@ -181,20 +181,19 @@ corresponding sharing view.</p>
 </ol>
 </section>
 <section id="notifications">
-<span id="ios-sdk-advanced-notifications"></span><h2>Notifications<a class="headerlink" href="#notifications" title="Permalink to this headline">¶</a></h2>
+<span id="ios-sdk-advanced-notifications"></span><h2>Notifications<a class="headerlink" href="#notifications" title="Permalink to this heading">¶</a></h2>
 <p>Subscribe to notifications that Talkable SDK publish and be aware of everything that happens around your campaigns.</p>
 <ol class="arabic simple">
 <li><p>Receive the coupon given to your users:</p></li>
 </ol>
 <blockquote>
 <div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="cp">#import &lt;TalkableSDK/Talkable.h&gt;</span>
-<span class="p">...</span><span class="w"></span>
+<span class="c1">// ...</span>
 <span class="p">[[</span><span class="bp">NSNotificationCenter</span><span class="w"> </span><span class="n">defaultCenter</span><span class="p">]</span><span class="w"> </span><span class="n">addObserver</span><span class="o">:</span><span class="nb">self</span><span class="w"> </span><span class="n">selector</span><span class="o">:</span><span class="k">@selector</span><span class="p">(</span><span class="n">couponReceived</span><span class="o">:</span><span class="p">)</span><span class="w"> </span><span class="n">name</span><span class="o">:</span><span class="n">TKBLDidReceiveCouponCode</span><span class="w"> </span><span class="n">object</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span><span class="w"></span>
-<span class="p">...</span><span class="w"></span>
-<span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">couponReceived</span><span class="o">:</span><span class="p">(</span><span class="bp">NSNotification</span><span class="o">*</span><span class="p">)</span><span class="n">ntf</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="c1">// ...</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">couponReceived:</span><span class="p">(</span><span class="bp">NSNotification</span><span class="o">*</span><span class="p">)</span><span class="nv">ntf</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="c1">// Your logic here</span>
 <span class="p">}</span><span class="w"></span>
-<span class="p">...</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -203,13 +202,12 @@ corresponding sharing view.</p>
 </ol>
 <blockquote>
 <div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="cp">#import &lt;TalkableSDK/Talkable.h&gt;</span>
-<span class="p">...</span><span class="w"></span>
+<span class="c1">// ...</span>
 <span class="p">[[</span><span class="bp">NSNotificationCenter</span><span class="w"> </span><span class="n">defaultCenter</span><span class="p">]</span><span class="w"> </span><span class="n">addObserver</span><span class="o">:</span><span class="nb">self</span><span class="w"> </span><span class="n">selector</span><span class="o">:</span><span class="k">@selector</span><span class="p">(</span><span class="n">rewardReceived</span><span class="o">:</span><span class="p">)</span><span class="w"> </span><span class="n">name</span><span class="o">:</span><span class="n">TKBLDidReceiveReward</span><span class="w"> </span><span class="n">object</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span><span class="w"></span>
-<span class="p">...</span><span class="w"></span>
-<span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">rewardReceived</span><span class="o">:</span><span class="p">(</span><span class="bp">NSNotification</span><span class="o">*</span><span class="p">)</span><span class="n">ntf</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="c1">// ...</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">rewardReceived:</span><span class="p">(</span><span class="bp">NSNotification</span><span class="o">*</span><span class="p">)</span><span class="nv">ntf</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="c1">// Your logic here</span>
 <span class="p">}</span><span class="w"></span>
-<span class="p">...</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -218,15 +216,14 @@ corresponding sharing view.</p>
 </ol>
 <blockquote>
 <div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="cp">#import &lt;TalkableSDK/Talkable.h&gt;</span>
-<span class="p">...</span><span class="w"></span>
+<span class="c1">// ...</span>
 <span class="p">[[</span><span class="bp">NSNotificationCenter</span><span class="w"> </span><span class="n">defaultCenter</span><span class="p">]</span><span class="w"> </span><span class="n">addObserver</span><span class="o">:</span><span class="nb">self</span><span class="w"> </span><span class="n">selector</span><span class="o">:</span><span class="k">@selector</span><span class="p">(</span><span class="n">publishMessageNotification</span><span class="o">:</span><span class="p">)</span><span class="w"> </span><span class="n">name</span><span class="o">:</span><span class="n">TKBLDidPublishMessageNotification</span><span class="w"> </span><span class="n">object</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span><span class="w"></span>
-<span class="p">...</span><span class="w"></span>
-<span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">publishMessageNotification</span><span class="o">:</span><span class="p">(</span><span class="bp">NSNotification</span><span class="o">*</span><span class="p">)</span><span class="n">ntf</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="c1">// ...</span>
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">publishMessageNotification:</span><span class="p">(</span><span class="bp">NSNotification</span><span class="o">*</span><span class="p">)</span><span class="nv">ntf</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">([[[</span><span class="n">ntf</span><span class="w"> </span><span class="n">userInfo</span><span class="p">]</span><span class="w"> </span><span class="n">objectForKey</span><span class="o">:</span><span class="n">TKBLMessageNameKey</span><span class="p">]</span><span class="w"> </span><span class="n">isEqualToString</span><span class="o">:</span><span class="n">TKBLMessageOfferLoaded</span><span class="p">])</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="c1">// Your logic here</span>
 <span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
-<span class="p">...</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Available messages:</p>
@@ -238,11 +235,11 @@ corresponding sharing view.</p>
 </div></blockquote>
 </section>
 <section id="debugging">
-<h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h2>
+<h2>Debugging<a class="headerlink" href="#debugging" title="Permalink to this heading">¶</a></h2>
 <p>See all debugging information in your console which can help you to understand what is going wrong:</p>
 <blockquote>
 <div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="cp">#import &lt;TalkableSDK/Talkable.h&gt;</span>
-<span class="p">...</span><span class="w"></span>
+<span class="c1">// ...</span>
 <span class="p">[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">].</span><span class="n">debug</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">YES</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>

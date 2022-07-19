@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Post Purchase Campaign &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
@@ -11,6 +11,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/ios_sdk/integration/post_purchase.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -92,12 +93,12 @@
           <div class="body" role="main">
             
   <span class="target" id="ios-sdk-integration-post-purchase"></span><section id="post-purchase-campaign">
-<h1>Post Purchase Campaign<a class="headerlink" href="#post-purchase-campaign" title="Permalink to this headline">¶</a></h1>
+<h1>Post Purchase Campaign<a class="headerlink" href="#post-purchase-campaign" title="Permalink to this heading">¶</a></h1>
 <p>Now that we know what a Standalone campaign is, let’s take a look at one more type of Talkable campaign — Post Purchase. It is used to convert your existing customers into Advocates after they make a purchase.  It has the same flow as a basic Standalone campaign except this is gated by a purchase and shown to a customer immediately after.</p>
-<p>Post Purchase campaign usually looks like a pop up right after a user made a purchase. This campaign initializes on the order confirmation page and captures order details parameters. You need to pass order data that includes your customer’s email address, order id, subtotal, coupon code used at checkout in order to close a referral loop. This allows Talkable to detect and close the loop on a referral.</p>
+<p>Post Purchase campaign usually looks like a pop up right after a user made a purchase. This campaign is initialized on the order confirmation page and captures order with its details. You need to pass order data to Talkable that includes your customer’s email address, order number, subtotal, coupon code used at checkout to allow Talkable detect and close a referral loop.</p>
 <p>Here is an example of a Purchase capturing, this action should be triggered on the order confirmation page:</p>
 <div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="cp">#import &lt;TalkableSDK/Talkable.h&gt;</span>
-<span class="p">...</span><span class="w"></span>
+<span class="c1">// ...</span>
 <span class="bp">NSDictionary</span><span class="o">*</span><span class="w"> </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="l">@{</span><span class="w"></span>
 <span class="w">  </span><span class="nl">TKBLPurchaseKey</span><span class="p">:</span><span class="w"> </span><span class="l">@{</span><span class="w"></span>
 <span class="w">    </span><span class="nl">TKBLPurchaseOrderNumberKey</span><span class="p">:</span><span class="w"> </span><span class="s">@&quot;100130&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// REQUIRED - Order number</span>
@@ -116,13 +117,14 @@
 <span class="w">    </span><span class="l">]</span><span class="w"></span>
 <span class="w">  </span><span class="l">}</span><span class="w"></span>
 <span class="l">}</span><span class="p">;</span><span class="w"></span>
-<span class="p">...</span><span class="w"></span>
 <span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="n">registerOrigin</span><span class="o">:</span><span class="n">TKBLPurchase</span><span class="w"> </span><span class="n">params</span><span class="o">:</span><span class="n">params</span><span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If Post Purchase campaign does not show up when testing make sure you have it live with a default tag (<cite>ios-post-purchase</cite>) on the Campaigns listing.</p>
+<p>If Post Purchase campaign does not show up when testing, make sure you have it
+Live on the Campaigns listing with a default tag (<cite>ios-post-purchase</cite>) or with
+a tag you specified in the <cite>registerOrigin</cite> call.</p>
 </div>
 <div class="hidden docutils container">
 <div class="toctree-wrapper compound">
