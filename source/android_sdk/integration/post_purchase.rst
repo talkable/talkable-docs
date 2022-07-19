@@ -10,10 +10,9 @@ they make a purchase.  It has the same flow as a basic Standalone campaign excep
 by a purchase and shown to a customer immediately after it.
 
 Post Purchase campaign usually looks like a pop up right after a user made a purchase. This
-campaign initializes on the order confirmation page and captures order details parameters. You
-need to pass order data that includes your customer’s email address, order id, subtotal, coupon
-codes used at checkout in order to close a referral loop. This allows Talkable to detect and
-close the loop on a referral.
+campaign is initialized on the order confirmation page and captures order details parameters. You
+need to pass order data to Talkable that includes your customer’s email address, order number, subtotal, coupon
+codes used at checkout to allow Talkable detect and close a referral loop.
 
 Here is an example of a Purchase capturing, this action should be triggered on the order confirmation page:
 
@@ -56,8 +55,9 @@ Here is an example of a Purchase capturing, this action should be triggered on t
 
 .. note::
 
-   If Post Purchase campaign does not show up when testing make sure you have it live with
-   `android-post-purchase` tag on the Campaigns listing.
+   If Post Purchase campaign does not show up when testing make sure you have it Live
+   on the Campaigns listing with `android-post-purchase` tag or the tag you specified
+   in `setCampaignTag`.
 
 .. container:: hidden
 
