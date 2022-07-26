@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Check Unsubscribe Webhook ensures that emails are not sent to unsubscribed users." name="description" />
 
     <title>Check Unsubscribe Webhook &#8212; Talkable Documentation</title>
@@ -12,7 +12,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/web_hooks/check_unsubscribe.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -93,7 +92,7 @@
           <div class="body" role="main">
             
   <span class="target" id="web-hooks-check-unsubscribe"></span><section id="check-unsubscribe-webhook">
-<h1>Check Unsubscribe Webhook<a class="headerlink" href="#check-unsubscribe-webhook" title="Permalink to this heading">¶</a></h1>
+<h1>Check Unsubscribe Webhook<a class="headerlink" href="#check-unsubscribe-webhook" title="Permalink to this headline">¶</a></h1>
 <p>Talkable Check Unsubscribe Webhook is used to ensure emails are not sent from
 Talkable to user email addresses who have unsubscribed from the client side.
 This is an optional functionality. Note: users do have the ability to unsubscribe
@@ -105,7 +104,7 @@ merchant side.</p>
 <p class="admonition-title">Important</p>
 <p>If this Check Unsubscribe Webhook is used, the response JSON returned by
 merchant must contain the following fields:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;result&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;unsubscribed&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="s2">&quot;result&quot;</span><span class="o">:</span> <span class="p">{</span> <span class="s2">&quot;unsubscribed&quot;</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}</span> <span class="p">}</span>
 </pre></div>
 </div>
 <p>The ‘unsubscribed’ field should have a boolean value,
@@ -151,35 +150,35 @@ representing unsubscribed status according to the merchant info.</p>
 <li><p>advocate_rewards_paid</p></li>
 <li><p>friend_rewards_paid</p></li>
 </ul>
-<h2>Sample payload</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;campaign&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">509365458</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;StandaloneCampaign&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;cached_slug&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">509365458</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;tag_names&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;origin_min_age&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;origin_max_age&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;new_customer&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;recipient&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;first_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;last_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Smith&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;username&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;username&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2018-09-27T22:55:40.610+03:00&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2018-09-27T22:55:40.610+03:00&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="s2">&quot;total&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="s2">&quot;approved&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="s2">&quot;pending&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;email_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;notifier_offers_email&quot;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<h2>Sample payload</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;campaign&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">509365458</span><span class="p">,</span>
+    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;StandaloneCampaign&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;cached_slug&quot;</span><span class="o">:</span> <span class="mf">509365458</span><span class="p">,</span>
+    <span class="s2">&quot;tag_names&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;origin_min_age&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="s2">&quot;origin_max_age&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="s2">&quot;new_customer&quot;</span><span class="o">:</span> <span class="kc">null</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;recipient&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;username&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-09-27T22:55:40.610+03:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-09-27T22:55:40.610+03:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;total&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+      <span class="s2">&quot;approved&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+      <span class="s2">&quot;pending&quot;</span><span class="o">:</span> <span class="mf">0</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span> <span class="kc">null</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;email_type&quot;</span><span class="o">:</span> <span class="s2">&quot;notifier_offers_email&quot;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <h2>cURL example</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl --data <span class="s1">&#39;key=&lt;key&gt;&amp;site=&lt;site&gt;&amp;type=check_unsubscribe_web_hook&amp;payload={&quot;campaign&quot;:{&quot;id&quot;:509365458,&quot;type&quot;:&quot;StandaloneCampaign&quot;,&quot;cached_slug&quot;:509365458,&quot;tag_names&quot;:[&quot;default&quot;],&quot;origin_min_age&quot;:null,&quot;origin_max_age&quot;:null,&quot;new_customer&quot;:null},&quot;recipient&quot;:{&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;username&quot;:&quot;username&quot;,&quot;unsubscribed_at&quot;:null,&quot;subscribed_at&quot;:&quot;2018-09-27T22:55:40.610+03:00&quot;,&quot;opted_in_at&quot;:&quot;2018-09-27T22:55:40.610+03:00&quot;,&quot;sub_choice&quot;:true,&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0}},&quot;email_type&quot;:&quot;notifier_offers_email&quot;}&#39;</span> &lt;url&gt;

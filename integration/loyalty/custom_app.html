@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Learn how to use Custom app to receive data about loyalty events." name="description" />
 
     <title>Custom App for Loyalty &#8212; Talkable Documentation</title>
@@ -12,7 +12,6 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/integration/loyalty/custom_app.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -57,7 +56,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="auto_enrollment.html">Auto-Enrollment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="manual_shopify_integration.html">Manual Shopify integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shopify_integration.html">Shopify Integration</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../ecommerce_platforms.html">E-commerce Platforms</a></li>
@@ -90,7 +89,7 @@
           <div class="body" role="main">
             
   <span class="target" id="integration-loyalty-custom-app"></span><section id="custom-app-for-loyalty">
-<h1>Custom App for Loyalty<a class="headerlink" href="#custom-app-for-loyalty" title="Permalink to this heading">¶</a></h1>
+<h1>Custom App for Loyalty<a class="headerlink" href="#custom-app-for-loyalty" title="Permalink to this headline">¶</a></h1>
 <p>Talkable offers a Custom App that allows you to send Talkable data to an outside destination such as your site, ESP, or CDP.
 The Custom App supports several actions. In the context of loyalty, the following actions might be useful:</p>
 <ul class="simple">
@@ -101,7 +100,7 @@ The Custom App supports several actions. In the context of loyalty, the followin
 However, it is recommended to modify the payload that will be sent when the app is triggered.</p>
 <p>To set up a Custom App, go to <strong>All site settings</strong> → <strong>App store</strong> → <strong>Custom app</strong>.</p>
 <section id="sync-loyalty-actions">
-<h2>Sync loyalty actions<a class="headerlink" href="#sync-loyalty-actions" title="Permalink to this heading">¶</a></h2>
+<h2>Sync loyalty actions<a class="headerlink" href="#sync-loyalty-actions" title="Permalink to this headline">¶</a></h2>
 <p>This feature sends Talkable data to the configured endpoint URL in the following cases:</p>
 <ul class="simple">
 <li><p>when a loyalty member earns points according to loyalty action configurations (eg. by subscribing to your newsletter);</p></li>
@@ -109,7 +108,7 @@ However, it is recommended to modify the payload that will be sent when the app 
 <li><p>when a loyalty member exchanges (redeems) points for a coupon discount.</p></li>
 </ul>
 <section id="liquid-variables-hints">
-<h3>Liquid variables hints<a class="headerlink" href="#liquid-variables-hints" title="Permalink to this heading">¶</a></h3>
+<h3>Liquid variables hints<a class="headerlink" href="#liquid-variables-hints" title="Permalink to this headline">¶</a></h3>
 <p>To determine which loyalty action triggered the Custom App, use <cite>{{ action.identifier }}</cite> liquid variable in the payload.</p>
 <p><cite>{{ action.identifier }}</cite> can have the following values:</p>
 <ul>
@@ -135,10 +134,10 @@ However, it is recommended to modify the payload that will be sent when the app 
 </section>
 </section>
 <section id="sync-loyalty-tier-transitions">
-<h2>Sync loyalty tier transitions<a class="headerlink" href="#sync-loyalty-tier-transitions" title="Permalink to this heading">¶</a></h2>
+<h2>Sync loyalty tier transitions<a class="headerlink" href="#sync-loyalty-tier-transitions" title="Permalink to this headline">¶</a></h2>
 <p>This feature sends Talkable data to the configured endpoint URL once a loyalty member reaches a new tier.</p>
 <section id="id1">
-<h3>Liquid variables hints<a class="headerlink" href="#id1" title="Permalink to this heading">¶</a></h3>
+<h3>Liquid variables hints<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p><cite>{{ tier_transition.reason }}</cite> is either <em>“upgrade”</em> or <em>“downgrade”</em>, depending on the direction of the transition.</p>
 <p>To see the full list of available variables, click “Show available variables” on the Custom App action configuration page.</p>
 </section>

@@ -7,6 +7,8 @@
 Shopify Integration
 ===================
 
+.. _integration/ecommerce_platforms/shopify/automatic_integration:
+
 Automatic integration
 ---------------------
 
