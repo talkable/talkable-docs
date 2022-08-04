@@ -33,6 +33,22 @@ Each Variable is represented with Name, Liquid notation, Value:
   different between preview and production scenarious)
 
 |br|
+
+There are also variables marked as deprecated, those will be deleted in the future, so please do not use them.
+
+List of deprecated variables:
+
+* {{ advocate_offer.manual_signup }}
+* {{ campaign_setup.tiers[0].id }}
+* {{ campaign_setup.tiers[0].name }}
+* {{ campaign_setup.tiers[0].threshold }}
+* {{ campaign_setup.tiers[0].localized_range }}
+* {{ campaign_setup.tiers[0].multiplier }}
+* {{ campaign_setup.tiers[0].icon_url }}
+* {{ campaign_setup.tiers[0].active }}
+
+
+|br|
 |hr|
 
 .. _editor_variables_advocate_info:
