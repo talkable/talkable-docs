@@ -110,29 +110,29 @@ and add Talkable SDK as a module dependency to your main module</p>
 </div>
 </li>
 <li><p>Add Talkable SDK dependencies to <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>:</p>
-<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span> <span class="o">{</span>
-    <span class="o">...</span>
-    <span class="n">implementation</span> <span class="s1">&#39;com.squareup.okhttp3:okhttp:3.2.0&#39;</span>
-    <span class="n">implementation</span> <span class="s1">&#39;com.facebook.android:facebook-android-sdk:[4,5)&#39;</span>
-    <span class="n">implementation</span> <span class="s1">&#39;im.getsocial:getsocial-core:[6,7)@aar&#39;</span>
-    <span class="n">implementation</span> <span class="s1">&#39;com.android.installreferrer:installreferrer:1.0&#39;</span>
-    <span class="n">implementation</span> <span class="s1">&#39;com.google.code.gson:gson:2.8.0&#39;</span>
-    <span class="n">implementation</span> <span class="s1">&#39;com.android.support:support-v4:27.1.1&#39;</span>
-    <span class="n">implementation</span> <span class="n">project</span><span class="o">(</span><span class="s1">&#39;:talkable-sdk&#39;</span><span class="o">)</span>
-    <span class="o">...</span>
-<span class="o">}</span>
+<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
+<span class="w">    </span><span class="o">...</span><span class="w"></span>
+<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;com.squareup.okhttp3:okhttp:3.2.0&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;com.facebook.android:facebook-android-sdk:[4,5)&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;im.getsocial:getsocial-core:[6,7)@aar&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;com.android.installreferrer:installreferrer:1.0&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;com.google.code.gson:gson:2.8.0&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;com.android.support:support-v4:27.1.1&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="n">project</span><span class="o">(</span><span class="s1">&#39;:talkable-sdk&#39;</span><span class="o">)</span><span class="w"></span>
+<span class="w">    </span><span class="o">...</span><span class="w"></span>
+<span class="o">}</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
 <li><p>Add GetSocial Maven Repository to the list of project dependency
 repositories inside your top-level <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>:</p>
-<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">allprojects</span> <span class="o">{</span>
-    <span class="n">repositories</span> <span class="o">{</span>
-        <span class="o">...</span>
-        <span class="n">maven</span> <span class="o">{</span> <span class="n">url</span> <span class="s1">&#39;http://maven.getsocial.im/&#39;</span> <span class="o">}</span>
-        <span class="o">...</span>
-    <span class="o">}</span>
-<span class="o">}</span>
+<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">allprojects</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
+<span class="w">        </span><span class="o">...</span><span class="w"></span>
+<span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="s1">&#39;http://maven.getsocial.im/&#39;</span><span class="w"> </span><span class="o">}</span><span class="w"></span>
+<span class="w">        </span><span class="o">...</span><span class="w"></span>
+<span class="w">    </span><span class="o">}</span><span class="w"></span>
+<span class="o">}</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
@@ -247,15 +247,15 @@ to the activity that must be opened from the deep link:</p>
 <h2>SDK Initialization<a class="headerlink" href="#sdk-initialization" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p>Initialize Talkable in the <code class="docutils literal notranslate"><span class="pre">Application</span></code>:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.talkable.sdk.Talkable</span><span class="p">;</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.talkable.sdk.Talkable</span><span class="p">;</span><span class="w"></span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">App</span> <span class="kd">extends</span> <span class="n">Application</span> <span class="p">{</span>
-    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">();</span>
-        <span class="n">Talkable</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">App</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Application</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">Talkable</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -265,15 +265,15 @@ of the <code class="docutils literal notranslate"><span class="pre">&lt;applicat
 </div>
 </li>
 <li><p>Call the <code class="docutils literal notranslate"><span class="pre">Talkable.trackAppOpen</span></code> method inside your main activity:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.talkable.sdk.Talkable</span><span class="p">;</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.talkable.sdk.Talkable</span><span class="p">;</span><span class="w"></span>
 
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MainActivity</span> <span class="kd">extends</span> <span class="n">Activity</span> <span class="p">{</span>
-    <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">();</span>
-        <span class="n">Talkable</span><span class="p">.</span><span class="na">trackAppOpen</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MainActivity</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Activity</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">Talkable</span><span class="p">.</span><span class="na">trackAppOpen</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </li>

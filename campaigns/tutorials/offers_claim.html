@@ -125,40 +125,40 @@ field, submit button, and “signup for latest news” checkbox.</p>
 </pre></div>
 </div>
 <p><strong>JS:</strong></p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">$proceedLink</span>    <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-proceed-link&#39;</span><span class="p">),</span>
-      <span class="nx">$gatingEmail</span>    <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-gating-email&#39;</span><span class="p">),</span>
-      <span class="nx">$contentGating</span>  <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-hide&#39;</span><span class="p">),</span>
-      <span class="nx">$gatingUnlock</span>   <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-gating-unlock&#39;</span><span class="p">),</span>
-      <span class="nx">$contentHidden</span>  <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-show&#39;</span><span class="p">),</span>
-      <span class="nx">$couponCode</span>     <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-coupon-code&#39;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">$proceedLink</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-proceed-link&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="w">      </span><span class="nx">$gatingEmail</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-gating-email&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="w">      </span><span class="nx">$contentGating</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-hide&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="w">      </span><span class="nx">$gatingUnlock</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-gating-unlock&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="w">      </span><span class="nx">$contentHidden</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-show&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="w">      </span><span class="nx">$couponCode</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-coupon-code&#39;</span><span class="p">);</span><span class="w"></span>
 
-  <span class="nx">Talkable</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s1">&#39;email_gating_passed&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">$contentGating</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
-    <span class="nx">$contentHidden</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
-    <span class="nx">$couponCode</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">coupon_code</span><span class="p">);</span> <span class="c1">// Insert coupon code</span>
-  <span class="p">});</span>
+<span class="w">  </span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s1">&#39;email_gating_passed&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">$contentGating</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="nx">$contentHidden</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="nx">$couponCode</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">coupon_code</span><span class="p">);</span><span class="w"> </span><span class="c1">// Insert coupon code</span><span class="w"></span>
+<span class="w">  </span><span class="p">});</span><span class="w"></span>
 
-  <span class="kd">function</span> <span class="nx">unlockGating</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">email</span><span class="p">,</span> <span class="nx">emailValid</span><span class="p">,</span> <span class="nx">proxyParams</span><span class="p">,</span> <span class="nx">query</span><span class="p">;</span>
-    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">unlockGating</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">email</span><span class="p">,</span><span class="w"> </span><span class="nx">emailValid</span><span class="p">,</span><span class="w"> </span><span class="nx">proxyParams</span><span class="p">,</span><span class="w"> </span><span class="nx">query</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span><span class="w"></span>
 
-    <span class="nx">proxyParams</span> <span class="o">=</span> <span class="p">{};</span>
-    <span class="nx">email</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">trim</span><span class="p">(</span><span class="nx">$gatingEmail</span><span class="p">.</span><span class="nx">val</span><span class="p">());</span>
-    <span class="nx">emailValid</span> <span class="o">=</span> <span class="sr">/^[^@]+@([^@\.]+\.)+[^@\.]+$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">email</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">proxyParams</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="w">    </span><span class="nx">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">trim</span><span class="p">(</span><span class="nx">$gatingEmail</span><span class="p">.</span><span class="nx">val</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="nx">emailValid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sr">/^[^@]+@([^@\.]+\.)+[^@\.]+$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">email</span><span class="p">);</span><span class="w"></span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">email</span><span class="p">.</span><span class="nx">length</span> <span class="o">&amp;&amp;</span> <span class="nx">emailValid</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">query</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">param</span><span class="p">({</span><span class="nx">proxy_params</span><span class="o">:</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">proxyParams</span><span class="p">,</span> <span class="p">{</span><span class="nx">email</span><span class="o">:</span> <span class="nx">email</span><span class="p">})});</span>
-      <span class="nx">Talkable</span><span class="p">.</span><span class="nx">passEmailGating</span><span class="p">(</span><span class="nx">query</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Something isn’t right. Please try again&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">email</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">emailValid</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">param</span><span class="p">({</span><span class="nx">proxy_params</span><span class="o">:</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">proxyParams</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="nx">email</span><span class="p">})});</span><span class="w"></span>
+<span class="w">      </span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">passEmailGating</span><span class="p">(</span><span class="nx">query</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Something isn’t right. Please try again&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 
-  <span class="nx">$gatingUnlock</span><span class="p">.</span><span class="nx">submit</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">unlockGating</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
-  <span class="p">});</span>
-<span class="p">});</span>
+<span class="w">  </span><span class="nx">$gatingUnlock</span><span class="p">.</span><span class="nx">submit</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">unlockGating</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">});</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
 <p><strong>Advanced Setup</strong></p>
@@ -195,54 +195,54 @@ field, submit button, and “signup for latest news” checkbox.</p>
 </pre></div>
 </div>
 <p><strong>JS:</strong></p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">$proceedLink</span>    <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-proceed-link&#39;</span><span class="p">),</span>
-      <span class="nx">$gatingEmail</span>    <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-gating-email&#39;</span><span class="p">),</span>
-      <span class="nx">$contentGating</span>  <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-hide&#39;</span><span class="p">),</span>
-      <span class="nx">$gatingUnlock</span>   <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-gating-unlock&#39;</span><span class="p">),</span>
-      <span class="nx">$gatingCheckbox</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-gating-checkbox&#39;</span><span class="p">),</span>
-      <span class="nx">$contentHidden</span>  <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-show&#39;</span><span class="p">),</span>
-      <span class="nx">$notice</span>         <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-validation&#39;</span><span class="p">),</span>
-      <span class="nx">$couponCode</span>     <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-coupon-code&#39;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">$proceedLink</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-proceed-link&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="w">      </span><span class="nx">$gatingEmail</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-gating-email&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="w">      </span><span class="nx">$contentGating</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-hide&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="w">      </span><span class="nx">$gatingUnlock</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-gating-unlock&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="w">      </span><span class="nx">$gatingCheckbox</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-gating-checkbox&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="w">      </span><span class="nx">$contentHidden</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-show&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="w">      </span><span class="nx">$notice</span><span class="w">         </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-validation&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="w">      </span><span class="nx">$couponCode</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-coupon-code&#39;</span><span class="p">);</span><span class="w"></span>
 
-  <span class="kd">function</span> <span class="nx">displayNotice</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">$notice</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-    <span class="nx">$notice</span><span class="p">.</span><span class="nx">fadeIn</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span>
-    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nx">$notice</span><span class="p">.</span><span class="nx">fadeOut</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span>
-    <span class="p">},</span> <span class="mf">3000</span><span class="p">);</span>
-  <span class="p">}</span>
+<span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">displayNotice</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">$notice</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">$notice</span><span class="p">.</span><span class="nx">fadeIn</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">$notice</span><span class="p">.</span><span class="nx">fadeOut</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="mf">3000</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 
-  <span class="nx">Talkable</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s1">&#39;email_gating_passed&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">$contentGating</span><span class="p">.</span><span class="nx">slideUp</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span>
-    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nx">$contentHidden</span><span class="p">.</span><span class="nx">slideDown</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span>
-      <span class="nx">$couponCode</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">coupon_code</span><span class="p">);</span> <span class="c1">// Insert coupon code</span>
-      <span class="nx">bindClipToCopy</span><span class="p">(</span><span class="s1">&#39;.js-coupon-code&#39;</span><span class="p">);</span>
-    <span class="p">},</span> <span class="mf">300</span><span class="p">);</span>
-  <span class="p">});</span>
+<span class="w">  </span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s1">&#39;email_gating_passed&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">$contentGating</span><span class="p">.</span><span class="nx">slideUp</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">$contentHidden</span><span class="p">.</span><span class="nx">slideDown</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="nx">$couponCode</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">coupon_code</span><span class="p">);</span><span class="w"> </span><span class="c1">// Insert coupon code</span><span class="w"></span>
+<span class="w">      </span><span class="nx">bindClipToCopy</span><span class="p">(</span><span class="s1">&#39;.js-coupon-code&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="mf">300</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">});</span><span class="w"></span>
 
-  <span class="kd">function</span> <span class="nx">unlockGating</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">email</span><span class="p">,</span> <span class="nx">subChoice</span><span class="p">,</span> <span class="nx">emailValid</span><span class="p">,</span> <span class="nx">proxyParams</span><span class="p">,</span> <span class="nx">query</span><span class="p">;</span>
-    <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+<span class="w">  </span><span class="kd">function</span><span class="w"> </span><span class="nx">unlockGating</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">email</span><span class="p">,</span><span class="w"> </span><span class="nx">subChoice</span><span class="p">,</span><span class="w"> </span><span class="nx">emailValid</span><span class="p">,</span><span class="w"> </span><span class="nx">proxyParams</span><span class="p">,</span><span class="w"> </span><span class="nx">query</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span><span class="w"></span>
 
-    <span class="nx">proxyParams</span> <span class="o">=</span> <span class="p">{};</span>
-    <span class="nx">email</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">trim</span><span class="p">(</span><span class="nx">$gatingEmail</span><span class="p">.</span><span class="nx">val</span><span class="p">());</span>
-    <span class="nx">proxyParams</span><span class="p">.</span><span class="nx">sub_choice</span> <span class="o">=</span> <span class="nx">$gatingCheckbox</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="s1">&#39;:checked&#39;</span><span class="p">)</span> <span class="o">?</span> <span class="s1">&#39;yes&#39;</span> <span class="o">:</span> <span class="s1">&#39;no&#39;</span><span class="p">;</span>
-    <span class="nx">emailValid</span> <span class="o">=</span> <span class="sr">/^[^@]+@([^@\.]+\.)+[^@\.]+$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">email</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">proxyParams</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span><span class="w"></span>
+<span class="w">    </span><span class="nx">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">trim</span><span class="p">(</span><span class="nx">$gatingEmail</span><span class="p">.</span><span class="nx">val</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="nx">proxyParams</span><span class="p">.</span><span class="nx">sub_choice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$gatingCheckbox</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="s1">&#39;:checked&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;yes&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;no&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nx">emailValid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sr">/^[^@]+@([^@\.]+\.)+[^@\.]+$/</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">email</span><span class="p">);</span><span class="w"></span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">email</span><span class="p">.</span><span class="nx">length</span> <span class="o">&amp;&amp;</span> <span class="nx">emailValid</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">query</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">param</span><span class="p">({</span><span class="nx">proxy_params</span><span class="o">:</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">proxyParams</span><span class="p">,</span> <span class="p">{</span><span class="nx">email</span><span class="o">:</span> <span class="nx">email</span><span class="p">})});</span>
-      <span class="nx">Talkable</span><span class="p">.</span><span class="nx">passEmailGating</span><span class="p">(</span><span class="nx">query</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="nx">displayNotice</span><span class="p">(</span><span class="s2">&quot;Something isn&#39;t right. Please try again&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">email</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">emailValid</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">param</span><span class="p">({</span><span class="nx">proxy_params</span><span class="o">:</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span><span class="nx">proxyParams</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="nx">email</span><span class="p">})});</span><span class="w"></span>
+<span class="w">      </span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">passEmailGating</span><span class="p">(</span><span class="nx">query</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">displayNotice</span><span class="p">(</span><span class="s2">&quot;Something isn&#39;t right. Please try again&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 
-  <span class="nx">$gatingUnlock</span><span class="p">.</span><span class="nx">submit</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">unlockGating</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
-  <span class="p">});</span>
-<span class="p">});</span>
+<span class="w">  </span><span class="nx">$gatingUnlock</span><span class="p">.</span><span class="nx">submit</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">unlockGating</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">});</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
 <p><hr></p>
@@ -282,45 +282,45 @@ field, submit button, and “signup for latest news” checkbox.</p>
 </pre></div>
 </div>
 <p><strong>JS:</strong></p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">populateCouponCode</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">couponCode</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-promo-code&#39;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;data-clipboard-text&#39;</span><span class="p">,</span> <span class="nx">couponCode</span><span class="p">);</span>
-  <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-promo-code .code&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">couponCode</span><span class="p">);</span>
-  <span class="nx">bindClipToCopy</span><span class="p">(</span><span class="s1">&#39;.js-promo-code&#39;</span><span class="p">);</span>
-<span class="p">};</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">populateCouponCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">couponCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-promo-code&#39;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;data-clipboard-text&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">couponCode</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-promo-code .code&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">couponCode</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="nx">bindClipToCopy</span><span class="p">(</span><span class="s1">&#39;.js-promo-code&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
 
-<span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">notice</span>  <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-notice&#39;</span><span class="p">),</span>
-      <span class="nx">timer</span><span class="p">;</span>
+<span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">notice</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-notice&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="w">      </span><span class="nx">timer</span><span class="p">;</span><span class="w"></span>
 
-  <span class="nx">bindClipToCopy</span><span class="p">(</span><span class="s1">&#39;.js-promo-code&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">bindClipToCopy</span><span class="p">(</span><span class="s1">&#39;.js-promo-code&#39;</span><span class="p">);</span><span class="w"></span>
 
-  <span class="kd">var</span> <span class="nx">displayNotice</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">delay</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">timer</span><span class="p">);</span>
-    <span class="nx">notice</span>
-      <span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
-      <span class="p">.</span><span class="nx">fadeIn</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span>
-    <span class="nx">timer</span> <span class="o">=</span> <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-      <span class="nx">notice</span><span class="p">.</span><span class="nx">fadeOut</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span>
-    <span class="p">},</span> <span class="nx">delay</span> <span class="o">?</span> <span class="nx">delay</span> <span class="o">:</span> <span class="mf">5000</span><span class="p">);</span>
-  <span class="p">};</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">displayNotice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">delay</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">timer</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">notice</span><span class="w"></span>
+<span class="w">      </span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="p">.</span><span class="nx">fadeIn</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="nx">timer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">notice</span><span class="p">.</span><span class="nx">fadeOut</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="nx">delay</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">delay</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">5000</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">};</span><span class="w"></span>
 
-  <span class="nx">Talkable</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s1">&#39;like_gating_succeeded&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">Talkable</span><span class="p">.</span><span class="nx">passLikeGating</span><span class="p">();</span>
-  <span class="p">});</span>
+<span class="w">  </span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s1">&#39;like_gating_succeeded&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">passLikeGating</span><span class="p">();</span><span class="w"></span>
+<span class="w">  </span><span class="p">});</span><span class="w"></span>
 
-  <span class="nx">Talkable</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s1">&#39;like_gating_passed&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">coupon_code</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">populateCouponCode</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">coupon_code</span><span class="p">);</span>
-      <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-before&#39;</span><span class="p">).</span><span class="nx">slideUp</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span>
-      <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-after&#39;</span><span class="p">).</span><span class="nx">slideDown</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span>
-      <span class="p">},</span> <span class="mf">300</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;No coupon provided.&#39;</span><span class="p">);</span>
-      <span class="nx">displayNotice</span><span class="p">(</span><span class="s1">&#39;No coupon provided.&#39;</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">});</span>
-<span class="p">});</span>
+<span class="w">  </span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s1">&#39;like_gating_passed&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">coupon_code</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">populateCouponCode</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">coupon_code</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-before&#39;</span><span class="p">).</span><span class="nx">slideUp</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-after&#39;</span><span class="p">).</span><span class="nx">slideDown</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"> </span><span class="mf">300</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;No coupon provided.&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="nx">displayNotice</span><span class="p">(</span><span class="s1">&#39;No coupon provided.&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">});</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">js-after</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
