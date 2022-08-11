@@ -31,7 +31,7 @@
           </form>
       <div class="header-disclaimer">
         Visit
-        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+        <a rel="nofollow" href="https://www.talkable.com" target="_blank">www.talkable.com</a>
       </div>
     </div> <!-- /.header -->
   
@@ -100,7 +100,7 @@
 <p>Variables are used to show dynamic data like Campaign tag, Advocate info, etc.
 <br>
 All Variables are enclosed into <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">}}</span></code> which means
-<a class="reference external" rel="nofollow" href="https://shopify.dev/api/liquid#liquid-syntax">Liquid Output</a>.</p>
+<a class="reference external" href="https://shopify.dev/api/liquid#liquid-syntax">Liquid Output</a>.</p>
 <p>Each Campaign View has its own set of Variables located inside Editor
 navigation:</p>
 <img alt="Variables: menu item" src="../../_images/vars-menu-item.png" />
@@ -112,6 +112,19 @@ navigation:</p>
 <li><p>Notation explains how to write Variable inside Template/Styles editor area</p></li>
 <li><p>Value shows what this particular Variable results with (Value may be
 different between preview and production scenarious)</p></li>
+</ul>
+<p><br></p>
+<p>There are also variables marked as deprecated, those will be deleted in the future, so please do not use them.</p>
+<p>List of deprecated variables:</p>
+<ul class="simple">
+<li><p>{{ advocate_offer.manual_signup }}</p></li>
+<li><p>{{ campaign_setup.tiers[0].id }}</p></li>
+<li><p>{{ campaign_setup.tiers[0].name }}</p></li>
+<li><p>{{ campaign_setup.tiers[0].threshold }}</p></li>
+<li><p>{{ campaign_setup.tiers[0].localized_range }}</p></li>
+<li><p>{{ campaign_setup.tiers[0].multiplier }}</p></li>
+<li><p>{{ campaign_setup.tiers[0].icon_url }}</p></li>
+<li><p>{{ campaign_setup.tiers[0].active }}</p></li>
 </ul>
 <p><br>
 <hr></p>
@@ -242,11 +255,11 @@ associated with the IP address</p></td>
 <td><p>Product title</p></td>
 </tr>
 <tr class="row-even"><td><p>product.url</p></td>
-<td><p>“<a class="reference external" rel="nofollow" href="https://bit.ly/2IPp0rX">https://bit.ly/2IPp0rX</a>”</p></td>
+<td><p>“<a class="reference external" href="https://bit.ly/2IPp0rX">https://bit.ly/2IPp0rX</a>”</p></td>
 <td><p>Product URL</p></td>
 </tr>
 <tr class="row-odd"><td><p>product.image_url</p></td>
-<td><p>“<a class="reference external" rel="nofollow" href="https://bit.ly/2GuVAMQ">https://bit.ly/2GuVAMQ</a>”</p></td>
+<td><p>“<a class="reference external" href="https://bit.ly/2GuVAMQ">https://bit.ly/2GuVAMQ</a>”</p></td>
 <td><p>Product image URL</p></td>
 </tr>
 <tr class="row-even"><td><p>product.description</p></td>
@@ -294,18 +307,18 @@ enough coupons and they are valid in terms of uniqueness and validity</p></li>
 several Incentives which are also objects.</p>
 <p>Here is an example of <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">incentives</span> <span class="pre">}}</span></code> Variable with two incentives:
 <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> and <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr>:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nx">advocate</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">amount</span><span class="o">:</span> <span class="mf">10.0</span><span class="p">,</span>
-    <span class="nx">description</span><span class="o">:</span> <span class="s2">&quot;$10&quot;</span><span class="p">,</span>
-    <span class="nx">percentage</span><span class="o">:</span> <span class="kc">false</span>
-  <span class="p">},</span>
-  <span class="nx">friend</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">amount</span><span class="o">:</span> <span class="mf">100.0</span><span class="p">,</span>
-    <span class="nx">description</span><span class="o">:</span> <span class="s2">&quot;100%&quot;</span><span class="p">,</span>
-    <span class="nx">percentage</span><span class="o">:</span> <span class="kc">true</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">advocate</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">amount</span><span class="o">:</span><span class="w"> </span><span class="mf">10.0</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$10&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">percentage</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nx">friend</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">amount</span><span class="o">:</span><span class="w"> </span><span class="mf">100.0</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;100%&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nx">percentage</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>And here is an example of using <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">incentives</span> <span class="pre">}}</span></code> values:</p>

@@ -31,7 +31,7 @@
           </form>
       <div class="header-disclaimer">
         Visit
-        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+        <a rel="nofollow" href="https://www.talkable.com" target="_blank">www.talkable.com</a>
       </div>
     </div> <!-- /.header -->
   
@@ -153,15 +153,15 @@ otherwise fixed discount</p></li>
 <li><p><strong>coupon_list_id</strong> — ID of the coupon list that needs to be filled</p></li>
 <li><p><strong>coupon_list_name</strong> — name of the coupon list that needs to be filled</p></li>
 </ul>
-<h2>Sample payload</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span> <span class="s2">&quot;WHT58574&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;discount_amount&quot;</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span>
-  <span class="s2">&quot;percentage_discount&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-  <span class="s2">&quot;usage_limit&quot;</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
-  <span class="s2">&quot;expires_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2014-04-14T06:17:14.309-07:00&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;coupon_list_id&quot;</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
-  <span class="s2">&quot;coupon_list_name&quot;</span><span class="o">:</span> <span class="s2">&quot;$10 off&quot;</span>
-<span class="p">}</span>
+<h2>Sample payload</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;WHT58574&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;discount_amount&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;percentage_discount&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;usage_limit&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;expires_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2014-04-14T06:17:14.309-07:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;coupon_list_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;coupon_list_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$10 off&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <h2>cURL example</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl --data <span class="s1">&#39;key=&lt;key&gt;&amp;site=&lt;site&gt;&amp;type=create_coupon_web_hook&amp;payload={&quot;coupon_code&quot;:&quot;WHT58574&quot;,&quot;discount_amount&quot;:10,&quot;percentage_discount&quot;:false,&quot;usage_limit&quot;:1,&quot;expires_at&quot;:&quot;2014-04-14T06:17:14.309-07:00&quot;,&quot;coupon_list_id&quot;:1,&quot;coupon_list_name&quot;:&quot;$10 off&quot;}&#39;</span> &lt;url&gt;

@@ -31,7 +31,7 @@
           </form>
       <div class="header-disclaimer">
         Visit
-        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+        <a rel="nofollow" href="https://www.talkable.com" target="_blank">www.talkable.com</a>
       </div>
     </div> <!-- /.header -->
   
@@ -497,180 +497,180 @@ like <em>“Free T-shirt”</em> or <em>“One Month Free”</em>. This should b
 merchant’s side. More information on the reward is specified in
 <cite>incentive_description</cite>.</p></li>
 </ul>
-<h2>Sample payload</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;campaign&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">593427266</span><span class="p">,</span>
-    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;StandaloneCampaign&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;cached_slug&quot;</span><span class="o">:</span> <span class="mf">593427266</span><span class="p">,</span>
-    <span class="s2">&quot;tag_names&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">],</span>
-    <span class="s2">&quot;origin_min_age&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="s2">&quot;origin_max_age&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="s2">&quot;new_customer&quot;</span><span class="o">:</span> <span class="kc">null</span>
-    <span class="s2">&quot;joinable_category_names&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;affiliate_member&quot;</span><span class="p">],</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;offer&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;short_url_code&quot;</span><span class="o">:</span> <span class="s2">&quot;1a2PV&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;ip_address&quot;</span><span class="o">:</span> <span class="s2">&quot;127.0.0.1&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;referrer&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">715729561</span><span class="p">,</span>
-    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;person&quot;</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Crane&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;total&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
-        <span class="s2">&quot;approved&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
-        <span class="s2">&quot;pending&quot;</span><span class="o">:</span> <span class="mf">0</span>
-      <span class="p">},</span>
-      <span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span> <span class="kc">null</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="s2">&quot;5.00&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;incentive&quot;</span><span class="o">:</span> <span class="s2">&quot;rebate&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;incentive_description&quot;</span><span class="o">:</span> <span class="s2">&quot;$5.00 back&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;origin&quot;</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">159843498</span><span class="p">,</span>
-      <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;AffiliateMember&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;customer_id&quot;</span><span class="o">:</span> <span class="s2">&quot;64227025&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;ip_address&quot;</span><span class="o">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;traffic_source&quot;</span><span class="o">:</span> <span class="s2">&quot;unknown&quot;</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;referred&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">11192772</span><span class="p">,</span>
-    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;referred@example.com&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;person&quot;</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;referred@example.com&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-09-14T23:57:18.734+03:00&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-09-14T23:57:18.734+03:00&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;total&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
-        <span class="s2">&quot;approved&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
-        <span class="s2">&quot;pending&quot;</span><span class="o">:</span> <span class="mf">0</span>
-      <span class="p">},</span>
-      <span class="s2">&quot;custom_properties&quot;</span><span class="o">:</span> <span class="p">{},</span>
-      <span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-      <span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span> <span class="kc">null</span>
-    <span class="p">},</span>
-    <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="s2">&quot;0.00&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;incentive&quot;</span><span class="o">:</span> <span class="s2">&quot;other&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;incentive_description&quot;</span><span class="o">:</span> <span class="s2">&quot;First Month Free&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;reward_coupon_code&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="s2">&quot;origin&quot;</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">147886587</span><span class="p">,</span>
-      <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Purchase&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;order_number&quot;</span><span class="o">:</span> <span class="s2">&quot;450901776&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;subtotal&quot;</span><span class="o">:</span> <span class="mf">35.03</span><span class="p">,</span>
-      <span class="s2">&quot;customer_id&quot;</span><span class="o">:</span> <span class="s2">&quot;565659001&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;ip_address&quot;</span><span class="o">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span> <span class="s2">&quot;WHT29123&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;traffic_source&quot;</span><span class="o">:</span> <span class="s2">&quot;post-checkout&quot;</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;advocate_rewards&quot;</span><span class="o">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">715729561</span><span class="p">,</span>
-      <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;person&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Crane&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span> <span class="p">{</span>
-          <span class="s2">&quot;total&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
-          <span class="s2">&quot;approved&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
-          <span class="s2">&quot;pending&quot;</span><span class="o">:</span> <span class="mf">0</span>
-        <span class="p">},</span>
-        <span class="s2">&quot;custom_properties&quot;</span><span class="o">:</span> <span class="p">{},</span>
-        <span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span> <span class="kc">null</span>
-      <span class="p">},</span>
-      <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="s2">&quot;5.00&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;incentive&quot;</span><span class="o">:</span> <span class="s2">&quot;rebate&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;incentive_description&quot;</span><span class="o">:</span> <span class="s2">&quot;$5.00 back&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;reward_coupon_code&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="s2">&quot;origin&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">6400368</span><span class="p">,</span>
-        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Purchase&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;order_number&quot;</span><span class="o">:</span> <span class="s2">&quot;459179054&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;order_date&quot;</span><span class="o">:</span> <span class="s2">&quot;2021-04-23T19:08:17.000-08:00&quot;</span>
-        <span class="s2">&quot;subtotal&quot;</span><span class="o">:</span> <span class="mf">11.39</span><span class="p">,</span>
-        <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;referred@example.com&quot;</span>
-        <span class="s2">&quot;customer_id&quot;</span><span class="o">:</span> <span class="s2">&quot;376990942&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;ip_address&quot;</span><span class="o">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span> <span class="s2">&quot;WHT59688&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;traffic_source&quot;</span><span class="o">:</span> <span class="s2">&quot;post-checkout&quot;</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;friend_rewards&quot;</span><span class="o">:</span> <span class="p">[</span>
-    <span class="p">{</span>
-      <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">11192772</span><span class="p">,</span>
-      <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;referred@example.com&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;person&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;referred@example.com&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Alice&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-09-14T23:57:18.734+03:00&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2018-09-14T23:57:18.734+03:00&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span> <span class="p">{</span>
-          <span class="s2">&quot;total&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
-          <span class="s2">&quot;approved&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
-          <span class="s2">&quot;pending&quot;</span><span class="o">:</span> <span class="mf">0</span>
-        <span class="p">},</span>
-        <span class="s2">&quot;custom_properties&quot;</span><span class="o">:</span> <span class="p">{},</span>
-        <span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span> <span class="kc">null</span>
-      <span class="p">},</span>
-      <span class="s2">&quot;amount&quot;</span><span class="o">:</span> <span class="s2">&quot;0.00&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;incentive&quot;</span><span class="o">:</span> <span class="s2">&quot;other&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;incentive_description&quot;</span><span class="o">:</span> <span class="s2">&quot;First Month Free&quot;</span><span class="p">,</span>
-      <span class="s2">&quot;reward_coupon_code&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-      <span class="s2">&quot;origin&quot;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">147886587</span><span class="p">,</span>
-        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Purchase&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;order_number&quot;</span><span class="o">:</span> <span class="s2">&quot;450901776&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;subtotal&quot;</span><span class="o">:</span> <span class="mf">35.03</span><span class="p">,</span>
-        <span class="s2">&quot;customer_id&quot;</span><span class="o">:</span> <span class="s2">&quot;565659001&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;ip_address&quot;</span><span class="o">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span> <span class="s2">&quot;WHT29123&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;traffic_source&quot;</span><span class="o">:</span> <span class="s2">&quot;post-checkout&quot;</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">],</span>
-  <span class="s2">&quot;referred_origin&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mf">6400368</span><span class="p">,</span>
-    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Purchase&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;order_number&quot;</span><span class="o">:</span> <span class="s2">&quot;459179054&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;order_date&quot;</span><span class="o">:</span> <span class="s2">&quot;2021-04-23T19:08:17.000-08:00&quot;</span>
-    <span class="s2">&quot;subtotal&quot;</span><span class="o">:</span> <span class="mf">11.39</span><span class="p">,</span>
-    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;referred@example.com&quot;</span>
-    <span class="s2">&quot;customer_id&quot;</span><span class="o">:</span> <span class="s2">&quot;376990942&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;ip_address&quot;</span><span class="o">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span> <span class="s2">&quot;WHT59688&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;traffic_source&quot;</span><span class="o">:</span> <span class="s2">&quot;post-checkout&quot;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<h2>Sample payload</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;campaign&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">593427266</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;StandaloneCampaign&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;cached_slug&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">593427266</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;tag_names&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;origin_min_age&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;origin_max_age&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;new_customer&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;joinable_category_names&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;affiliate_member&quot;</span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;offer&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;short_url_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1a2PV&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;ip_address&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;referrer&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">715729561</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;person&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;first_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;last_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Crane&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;total&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;approved&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;pending&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;amount&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;5.00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;incentive&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;rebate&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;incentive_description&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$5.00 back&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;origin&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">159843498</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;AffiliateMember&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;customer_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;64227025&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;ip_address&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;traffic_source&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;unknown&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;referred&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">11192772</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referred@example.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;person&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referred@example.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;first_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;last_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Smith&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;username&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2018-09-14T23:57:18.734+03:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2018-09-14T23:57:18.734+03:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;total&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;approved&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;pending&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;custom_properties&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;amount&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;0.00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;incentive&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;other&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;incentive_description&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;First Month Free&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;reward_coupon_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;origin&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">147886587</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Purchase&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;order_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;450901776&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;subtotal&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">35.03</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;customer_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;565659001&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;ip_address&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;WHT29123&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;traffic_source&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;post-checkout&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;advocate_rewards&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">715729561</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;person&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;first_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;last_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Crane&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;username&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="s2">&quot;total&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="s2">&quot;approved&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="s2">&quot;pending&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;custom_properties&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;amount&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;5.00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;incentive&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;rebate&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;incentive_description&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$5.00 back&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;reward_coupon_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;origin&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">6400368</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Purchase&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;order_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;459179054&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;order_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2021-04-23T19:08:17.000-08:00&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;subtotal&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">11.39</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referred@example.com&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;customer_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;376990942&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;ip_address&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;WHT59688&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;traffic_source&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;post-checkout&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;friend_rewards&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">11192772</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referred@example.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;person&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referred@example.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;first_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;last_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Smith&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;username&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2018-09-14T23:57:18.734+03:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2018-09-14T23:57:18.734+03:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="s2">&quot;total&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="s2">&quot;approved&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="s2">&quot;pending&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;custom_properties&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;amount&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;0.00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;incentive&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;other&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;incentive_description&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;First Month Free&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;reward_coupon_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;origin&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">147886587</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Purchase&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;order_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;450901776&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;subtotal&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">35.03</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;customer_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;565659001&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;ip_address&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;WHT29123&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;traffic_source&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;post-checkout&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;referred_origin&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">6400368</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Purchase&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;order_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;459179054&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;order_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2021-04-23T19:08:17.000-08:00&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;subtotal&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">11.39</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referred@example.com&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;customer_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;376990942&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;ip_address&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;WHT59688&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;traffic_source&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;post-checkout&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <h2>cURL example</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl --data <span class="s1">&#39;key=&lt;key&gt;&amp;site=&lt;site&gt;&amp;type=referral_web_hook&amp;payload={&quot;campaign&quot;:{&quot;id&quot;:593427266,&quot;type&quot;:&quot;StandaloneCampaign&quot;,&quot;cached_slug&quot;:593427266,&quot;tag_names&quot;:[&quot;default&quot;],&quot;origin_min_age&quot;:null,&quot;origin_max_age&quot;:null,&quot;new_customer&quot;:null},&quot;offer&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;short_url_code&quot;:&quot;1a2PV&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;},&quot;referrer&quot;:{&quot;id&quot;:715729561,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;person&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Crane&quot;,&quot;sub_choice&quot;:false,&quot;subscribed_at&quot;:null,&quot;opted_in_at&quot;:null,&quot;unsubscribed_at&quot;:null,&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0}},&quot;amount&quot;:&quot;5.00&quot;,&quot;incentive&quot;:&quot;rebate&quot;,&quot;incentive_description&quot;:&quot;$5.00 back&quot;,&quot;origin&quot;:{&quot;id&quot;:159843498,&quot;type&quot;:&quot;AffiliateMember&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;customer_id&quot;:&quot;64227025&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;unknown&quot;}},&quot;referred&quot;:{&quot;id&quot;:11192772,&quot;email&quot;:&quot;referred@example.com&quot;,&quot;person&quot;:{&quot;email&quot;:&quot;referred@example.com&quot;,&quot;first_name&quot;:&quot;Alice&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;sub_choice&quot;:true,&quot;subscribed_at&quot;:&quot;2018-09-14T23:57:18.734+03:00&quot;,&quot;opted_in_at&quot;:&quot;2018-09-14T23:57:18.734+03:00&quot;,&quot;unsubscribed_at&quot;:null,&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0}},&quot;amount&quot;:&quot;0.00&quot;,&quot;incentive&quot;:&quot;other&quot;,&quot;incentive_description&quot;:&quot;First Month Free&quot;,&quot;origin&quot;:{&quot;id&quot;:147886587,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;450901776&quot;,&quot;subtotal&quot;:35.03,&quot;customer_id&quot;:&quot;565659001&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT29123&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;}},&quot;advocate_rewards&quot;:[{&quot;id&quot;:715729561,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;person&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Crane&quot;,&quot;gender&quot;:null,&quot;sub_choice&quot;:false,&quot;subscribed_at&quot;:null,&quot;opted_in_at&quot;:null,&quot;unsubscribed_at&quot;:null,&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0}},&quot;amount&quot;:&quot;5.00&quot;,&quot;incentive&quot;:&quot;rebate&quot;,&quot;incentive_description&quot;:&quot;$5.00 back&quot;,&quot;origin&quot;:{&quot;id&quot;:159843498,&quot;type&quot;:&quot;AffiliateMember&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;customer_id&quot;:&quot;64227025&quot;,&quot;ip_address&quot;: &quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;unknown&quot;}}],&quot;friend_rewards&quot;:[{&quot;id&quot;:11192772,&quot;email&quot;:&quot;referred@example.com&quot;,&quot;person&quot;:{&quot;email&quot;:&quot;referred@example.com&quot;,&quot;first_name&quot;:&quot;Alice&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;sub_choice&quot;:true,&quot;subscribed_at&quot;:&quot;2018-09-14T23:57:18.734+03:00&quot;,&quot;opted_in_at&quot;:&quot;2018-09-14T23:57:18.734+03:00&quot;,&quot;unsubscribed_at&quot;:null,&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0}},&quot;amount&quot;:&quot;0.00&quot;,&quot;incentive&quot;:&quot;other&quot;,&quot;incentive_description&quot;:&quot;First Month Free&quot;,&quot;origin&quot;:{&quot;id&quot;:147886587,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;450901776&quot;,&quot;subtotal&quot;:35.03,&quot;customer_id&quot;:&quot;565659001&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT29123&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;}}],&quot;referred_origin&quot;:{&quot;id&quot;:6400368,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;459179054&quot;,&quot;subtotal&quot;:11.39,&quot;customer_id&quot;:&quot;376990942&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT59688&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;}}&#39;</span> &lt;url&gt;
