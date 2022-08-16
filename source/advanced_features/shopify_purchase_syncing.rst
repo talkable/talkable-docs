@@ -1,19 +1,29 @@
 .. _advanced_features/shopify_purchase_syncing:
 
 .. meta::
-  :description: Purchase Syncing is a feature available for Shopify customers integrated with Talkable extension. It allows automatic purchases synchronization from Shopify instead of (or additionally to) passing purchases with Talkable JavaScript integration.
+  :description: Purchase Syncing is a feature available for Shopify customers integrated with Talkable extension. It allows automatic purchases synchronization from Shopify instead of (or additionally to) passing purchases with Talkable JavaScript integration or Talkable backend integration.
 
 Shopify Purchase Syncing
 =========================
 
 Purchase Syncing is a feature available for Shopify customers integrated with Talkable extension.
-It allows automatic purchases synchronization from Shopify instead of (or additionally to) passing purchases with Talkable JavaScript integration from a browser.
+It allows automatic purchases synchronization from Shopify instead of (or additionally to) passing purchases with Talkable JavaScript integration from a browser or Talkable backend integration.
 
 To access this setting, go to the Shopify Integration page (Settings → Shopify Integration).
+
+.. figure:: /_static/img/shopify_purchase_syncing.png
+   :alt: shopify_purchase_syncing
 
 .. warning::
   Purchase Syncing currently is not supported for customers who pass to Talkable purchases with Purchase Order Number,
   different from Shopify Purchase ID (Talkable default Shopify integration behavior) as it will lead to double purchases registering.
+
+Talkable backend integration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Talkable backend integration allows you to directly sync your Shopify purchases with the Talkable API, allowing you to track different types of Order Number Identifier.
+
+You can choose your purchase ID in the integration section (Settings → Shopify Integration → Order Number Identifier).
 
 How it works?
 ~~~~~~~~~~~~~
