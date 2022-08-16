@@ -3,8 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="In addition to regular referral campaigns, Talkable also supports custom events that can be split into multiple categories." name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="In addition to regular referral campaigns, Talkable also supports custom events that can be split into multiple categories." name="description" />
 
     <title>Integrating Events &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -103,7 +102,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="advanced-features-events"></span><section id="integrating-events">
+  <span class="target" id="advanced-features-events"></span><div class="section" id="integrating-events">
 <h1>Integrating Events<a class="headerlink" href="#integrating-events" title="Permalink to this headline">¶</a></h1>
 <p>In addition to running a referral campaign around regular
 <a class="reference internal" href="../integration/custom/integration_components.html#integration-custom-integration-components-post-purchase-script"><span class="std std-ref">purchases</span></a>,
@@ -120,35 +119,35 @@ whether the event was associated with a referral or not. With both “subscripti
 to report on and reward these events as desired. See some examples below.</p>
 <p>Subscription payments should be registered under the “subscription” event category. All such events
 can be found in the Reports → Events section of your Talkable Dashboard. Here is an example:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
-<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;register_event&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">event</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nx">event_category</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;subscription&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nx">event_number</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;ev1938579813&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nx">subtotal</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;89&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nx">coupon_code</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;SAVE20&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="nx">customer</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;customer1@example.com&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">}]);</span><span class="w"></span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;register_event&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">event</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">event_category</span><span class="o">:</span> <span class="s1">&#39;subscription&#39;</span><span class="p">,</span>
+      <span class="nx">event_number</span><span class="o">:</span> <span class="s1">&#39;ev1938579813&#39;</span><span class="p">,</span>
+      <span class="nx">subtotal</span><span class="o">:</span> <span class="s1">&#39;89&#39;</span><span class="p">,</span>
+      <span class="nx">coupon_code</span><span class="o">:</span> <span class="s1">&#39;SAVE20&#39;</span>
+    <span class="p">},</span>
+    <span class="nx">customer</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">email</span><span class="o">:</span> <span class="s1">&#39;customer1@example.com&#39;</span>
+    <span class="p">}</span>
+  <span class="p">}]);</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <p>One-time purchases should go under the “purchase” event category. You can find all purchases
 in the Reports → Purchases section of your Talkable Dashboard. Here is an example:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
-<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;register_event&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">event</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nx">event_category</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;purchase&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nx">event_number</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;ev1938579814&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nx">subtotal</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;34.5&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="nx">coupon_code</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="nx">customer</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;customer2@example.com&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">}]);</span><span class="w"></span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;register_event&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">event</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">event_category</span><span class="o">:</span> <span class="s1">&#39;purchase&#39;</span><span class="p">,</span>
+      <span class="nx">event_number</span><span class="o">:</span> <span class="s1">&#39;ev1938579814&#39;</span><span class="p">,</span>
+      <span class="nx">subtotal</span><span class="o">:</span> <span class="s1">&#39;34.5&#39;</span><span class="p">,</span>
+      <span class="nx">coupon_code</span><span class="o">:</span> <span class="kc">null</span>
+    <span class="p">},</span>
+    <span class="nx">customer</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">email</span><span class="o">:</span> <span class="s1">&#39;customer2@example.com&#39;</span>
+    <span class="p">}</span>
+  <span class="p">}]);</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </div>
@@ -159,7 +158,7 @@ data integrity. If recurring transactions occur on the backend, follow the
 <br>
 <a class="reference internal" href="../api_v2/origins.html#api-v2-origins"><span class="std std-ref">Origin API</span></a> (see “Create an event” section).</p>
 </div>
-<section id="available-properties">
+<div class="section" id="available-properties">
 <span id="advanced-features-events-available-properties"></span><h2>Available properties<a class="headerlink" href="#available-properties" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -255,8 +254,8 @@ Object value should always be a string.</p>
 </tbody>
 </table>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>

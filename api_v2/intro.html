@@ -3,8 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="The Talkable API is built on HTTP. Our API is RESTful, returns JSON, and responds with standard HTTP response codes to indicate errors." name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="The Talkable API is built on HTTP. Our API is RESTful, returns JSON, and responds with standard HTTP response codes to indicate errors." name="description" />
 
     <title>Introduction &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -91,11 +90,11 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="api-v2-intro"></span><section id="introduction">
+  <span class="target" id="api-v2-intro"></span><div class="section" id="introduction">
 <h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
 <p>The Talkable API is built on HTTP. Our API is RESTful, returns JSON and responds
 with standard HTTP response codes to indicate errors.</p>
-<section id="access-the-talkable-api">
+<div class="section" id="access-the-talkable-api">
 <h2>Access the Talkable API<a class="headerlink" href="#access-the-talkable-api" title="Permalink to this headline">¶</a></h2>
 <p>You can access documentation for the Talkable API and issue API calls from the Talkable API user interface.</p>
 <p>The Talkable API user interface is available here:</p>
@@ -110,8 +109,8 @@ with standard HTTP response codes to indicate errors.</p>
 API call from the Talkable API user interface, click <strong>Try it out</strong> for any
 method. Edit the Example Values in the request body and click <strong>Execute</strong>.</p>
 <img alt="Actions" class="is-minimal" src="../_images/actions.png" />
-</section>
-<section id="authentication">
+</div>
+<div class="section" id="authentication">
 <h2>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline">¶</a></h2>
 <p>You authenticate to the Talkable API by providing your API Key in the request.
 You can manage your API key in the Account Settings.</p>
@@ -128,17 +127,17 @@ could create their own API calls.</p>
   -H <span class="s1">&#39;Authorization: Bearer i9uil7nQgDjucCiTJu&#39;</span>
 </pre></div>
 </div>
-</section>
-<section id="response-format">
+</div>
+<div class="section" id="response-format">
 <h2>Response Format<a class="headerlink" href="#response-format" title="Permalink to this headline">¶</a></h2>
 <p>The API returns JSON-encoded objects (content-type: application/json).</p>
 <p>Responses vary according to the method used, but every successful response
 envelope includes these common parts:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;ok&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;result&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">...}</span><span class="w"></span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;ok&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="o">:</span> <span class="p">...}</span>
 </pre></div>
 </div>
-</section>
-<section id="date-format">
+</div>
+<div class="section" id="date-format">
 <h2>Date Format<a class="headerlink" href="#date-format" title="Permalink to this headline">¶</a></h2>
 <p>Talkable returns JSON for all API calls. JSON does not have a built-in date type,
 dates are passed as strings encoded according to <a rel="nofollow" href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a>.
@@ -146,12 +145,12 @@ This format is supported by most programming languages out of the box:</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>2022-02-16T02:43:58.797-07:00
 </pre></div>
 </div>
-</section>
-<section id="errors">
+</div>
+<div class="section" id="errors">
 <h2>Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h2>
 <p>The following represents a common JSON error response resulting from a failed
 Talkable API call:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;ok&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;error_message&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Message describing the error&quot;</span><span class="p">}</span><span class="w"></span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;ok&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="s2">&quot;error_message&quot;</span><span class="o">:</span> <span class="s2">&quot;Message describing the error&quot;</span><span class="p">}</span>
 </pre></div>
 </div>
 <p>Most error messages that Talkable API will return are not meant to be shown to
@@ -193,8 +192,8 @@ or delete cannot be performed due to validation errors.
 </tbody>
 </table>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>

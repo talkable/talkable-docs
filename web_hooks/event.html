@@ -3,8 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Event Webhook lets you know when a purchase was made." name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="Event Webhook lets you know when a purchase was made." name="description" />
 
     <title>Event Webhook &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -91,7 +90,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="web-hooks-event"></span><section id="event-webhook">
+  <span class="target" id="web-hooks-event"></span><div class="section" id="event-webhook">
 <h1>Event Webhook<a class="headerlink" href="#event-webhook" title="Permalink to this headline">¶</a></h1>
 <p>The Talkable Event Webhook notifies your endpoint that an <a class="reference internal" href="../advanced_features/events.html#advanced-features-events"><span class="std std-ref">Event</span></a>
 or a <a class="reference internal" href="../integration/custom/integration_components.html#integration-custom-integration-components-post-purchase-script"><span class="std std-ref">Purchase</span></a> has been
@@ -168,74 +167,74 @@ included subscription checkbox)</p></li>
 </div></blockquote>
 </li>
 </ul>
-<h2>Sample payload | Event</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;origin&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">289738874</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Event&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;event_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;953205549&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;event_category&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;webhook-test&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;subtotal&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">91.52</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;customer_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;865955119&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;order_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2019-04-11T07:26:17.272-07:00&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;WHT28499&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;currency_iso_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;USD&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;ip_address&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;traffic_source&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;post-event&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;person&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;first_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;last_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Smith&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;username&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;username&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2019-04-11T07:25:17.272-07:00&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2019-04-11T07:25:17.272-07:00&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="s2">&quot;total&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="s2">&quot;approved&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="s2">&quot;pending&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<h2>Sample payload | Event</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;origin&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">289738874</span><span class="p">,</span>
+    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Event&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;event_number&quot;</span><span class="o">:</span> <span class="s2">&quot;953205549&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;event_category&quot;</span><span class="o">:</span> <span class="s2">&quot;webhook-test&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;subtotal&quot;</span><span class="o">:</span> <span class="mf">91.52</span><span class="p">,</span>
+    <span class="s2">&quot;customer_id&quot;</span><span class="o">:</span> <span class="s2">&quot;865955119&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;order_date&quot;</span><span class="o">:</span> <span class="s2">&quot;2019-04-11T07:26:17.272-07:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span> <span class="s2">&quot;WHT28499&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;currency_iso_code&quot;</span><span class="o">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ip_address&quot;</span><span class="o">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;traffic_source&quot;</span><span class="o">:</span> <span class="s2">&quot;post-event&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;person&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;username&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2019-04-11T07:25:17.272-07:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2019-04-11T07:25:17.272-07:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;total&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">&quot;approved&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">&quot;pending&quot;</span><span class="o">:</span> <span class="mi">0</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span> <span class="kc">null</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <h2>cURL example | Event</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl --data <span class="s1">&#39;key=&lt;key&gt;&amp;site=&lt;site&gt;&amp;type=event_web_hook&amp;payload={&quot;origin&quot;:{&quot;id&quot;:998181034,&quot;type&quot;:&quot;Event&quot;,&quot;event_number&quot;:&quot;352670218&quot;,&quot;event_category&quot;:&quot;webhook-test&quot;,&quot;subtotal&quot;:21.36,&quot;customer_id&quot;:&quot;472735863&quot;,&quot;order_date&quot;:&quot;2019-04-16T06:20:47.079-07:00&quot;,&quot;coupon_code&quot;:&quot;WHT65226&quot;,&quot;currency_iso_code&quot;:&quot;USD&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;post-event&quot;},&quot;person&quot;:{&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;username&quot;:&quot;username&quot;,&quot;unsubscribed_at&quot;:null,&quot;subscribed_at&quot;:&quot;2019-04-16T06:19:47.079-07:00&quot;,&quot;opted_in_at&quot;:&quot;2019-04-16T06:19:47.079-07:00&quot;,&quot;sub_choice&quot;:true}}&#39;</span> &lt;url&gt;
 </pre></div>
 </div>
-<h2>Sample payload | Purchase</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;origin&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">654689661</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Purchase&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;order_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;426692385&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;subtotal&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">29.39</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;customer_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;162638070&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;order_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2019-04-11T07:28:31.258-07:00&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;WHT79679&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;currency_iso_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;USD&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;ip_address&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;traffic_source&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;post-checkout&quot;</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;person&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;first_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;last_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Smith&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;username&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;username&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2019-04-11T07:27:31.258-07:00&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2019-04-11T07:27:31.258-07:00&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="s2">&quot;total&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="s2">&quot;approved&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="s2">&quot;pending&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<h2>Sample payload | Purchase</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;origin&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="mi">654689661</span><span class="p">,</span>
+    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;Purchase&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;order_number&quot;</span><span class="o">:</span> <span class="s2">&quot;426692385&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;subtotal&quot;</span><span class="o">:</span> <span class="mf">29.39</span><span class="p">,</span>
+    <span class="s2">&quot;customer_id&quot;</span><span class="o">:</span> <span class="s2">&quot;162638070&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;order_date&quot;</span><span class="o">:</span> <span class="s2">&quot;2019-04-11T07:28:31.258-07:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span> <span class="s2">&quot;WHT79679&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;currency_iso_code&quot;</span><span class="o">:</span> <span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ip_address&quot;</span><span class="o">:</span> <span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;traffic_source&quot;</span><span class="o">:</span> <span class="s2">&quot;post-checkout&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;person&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="s2">&quot;username&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+    <span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2019-04-11T07:27:31.258-07:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2019-04-11T07:27:31.258-07:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;total&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">&quot;approved&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="s2">&quot;pending&quot;</span><span class="o">:</span> <span class="mi">0</span>
+    <span class="p">},</span>
+    <span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span> <span class="kc">null</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <h2>cURL example | Purchase</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl --data <span class="s1">&#39;key=&lt;key&gt;&amp;site=&lt;site&gt;&amp;type=event_web_hook&amp;payload={&quot;origin&quot;:{&quot;id&quot;:654689661,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;426692385&quot;,&quot;subtotal&quot;:29.39,&quot;customer_id&quot;:&quot;162638070&quot;,&quot;order_date&quot;:&quot;2019-04-11T07:28:31.258-07:00&quot;,&quot;coupon_code&quot;:&quot;WHT79679&quot;,&quot;currency_iso_code&quot;:&quot;USD&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;},&quot;person&quot;:{&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;username&quot;:&quot;username&quot;,&quot;unsubscribed_at&quot;:null,&quot;subscribed_at&quot;:&quot;2019-04-11T07:27:31.258-07:00&quot;,&quot;opted_in_at&quot;:&quot;2019-04-11T07:27:31.258-07:00&quot;,&quot;sub_choice&quot;:true}}&#39;</span> &lt;url&gt;
@@ -245,7 +244,7 @@ included subscription checkbox)</p></li>
 <div class="toctree-wrapper compound">
 </div>
 </div>
-</section>
+</div>
 
 
             <div class="clearer"></div>

@@ -3,8 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Find the components of what Talkable is composed." name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="Find the components of what Talkable is composed." name="description" />
 
     <title>Integration Components &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
@@ -89,7 +88,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="integration-loyalty-integration-components"></span><section id="integration-components">
+  <span class="target" id="integration-loyalty-integration-components"></span><div class="section" id="integration-components">
 <h1>Integration Components<a class="headerlink" href="#integration-components" title="Permalink to this headline">¶</a></h1>
 <p>Talkable Loyalty is composed of the following components:</p>
 <ol class="arabic">
@@ -113,43 +112,43 @@ that spans every page. All other integration components are dependent on the Ini
 <li><p><a class="reference internal" href="#loyalty-actions"><span class="std std-ref">Loyalty Actions</span></a></p></li>
 </ol>
 <p><hr></p>
-<section id="initialization-script">
+<div class="section" id="initialization-script">
 <span id="integration-loyalty-integration-components-initialization-script"></span><h2>Initialization Script<a class="headerlink" href="#initialization-script" title="Permalink to this headline">¶</a></h2>
 <p>The Initialization script should be placed in the head template or some
 template that spans every page. Talkable JS library size is typically
 around 20kB and causes no noticeable impact to your site’s loading time.
 All other integration components are dependent on the Initialization
 script.</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Begin Talkable integration code --&gt;</span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- Begin Talkable integration code --&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/&lt;YOUR-TALKABLE-SITE-ID&gt;.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
-<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">[];</span><span class="w"></span>
-<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">unshift</span><span class="p">([</span><span class="s1">&#39;init&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">site_id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;YOUR-TALKABLE-SITE-ID&gt;&#39;</span><span class="w"> </span><span class="p">}]);</span><span class="w"></span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span> <span class="o">||</span> <span class="p">[];</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">unshift</span><span class="p">([</span><span class="s1">&#39;init&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">site_id</span><span class="o">:</span> <span class="s1">&#39;&lt;YOUR-TALKABLE-SITE-ID&gt;&#39;</span> <span class="p">}]);</span>
 
-<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;authenticate_customer&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// required, loyalty program is only available to logged in users. Example: &#39;customer@example.com&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nx">phone_number</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="c1">// Optional, pass when available. Example: &#39;+12025551111&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}]);</span><span class="w"></span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;authenticate_customer&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">email</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// required, loyalty program is only available to logged in users. Example: &#39;customer@example.com&#39;</span>
+    <span class="nx">phone_number</span><span class="o">:</span> <span class="s1">&#39;&#39;</span> <span class="c1">// Optional, pass when available. Example: &#39;+12025551111&#39;</span>
+  <span class="p">}]);</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="cm">&lt;!-- End Talkable integration code --&gt;</span>
+<span class="c">&lt;!-- End Talkable integration code --&gt;</span>
 </pre></div>
 </div>
-<section id="initialization-script-notes">
+<div class="section" id="initialization-script-notes">
 <h3>Initialization Script Notes<a class="headerlink" href="#initialization-script-notes" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic">
 <li><p><strong>Site ID.</strong> You can obtain your Site ID by logging into the Talkable
 platform where Site ID is displayed on your Dashboard and URL as seen
 here:</p>
-<figure class="align-default">
+<div class="figure align-default">
 <img alt="Site ID" src="../../_images/site_id.png" />
-</figure>
+</div>
 </li>
 <li><p><strong>Variables.</strong> Use your dynamic variables to pass user details.</p></li>
 </ol>
 <p><hr></p>
-</section>
-</section>
-<section id="talkable-container-div">
+</div>
+</div>
+<div class="section" id="talkable-container-div">
 <span id="id1"></span><h2>Talkable Container DIV<a class="headerlink" href="#talkable-container-div" title="Permalink to this headline">¶</a></h2>
 <p>Add the following Talkable Container DIV in the body of every page where you want a loyalty campaign to be shown:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;talkable-loyalty&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -161,38 +160,38 @@ here:</p>
 <p>The same DIV tag is used for both Loyalty Dashboard and Loyalty Redeem Widget.
 You can find more info about where to place the DIV tag in <a class="reference internal" href="../../campaigns/campaign_placements/loyalty_dashboard.html#campaigns-campaign-placements-loyalty-dashboard"><span class="std std-ref">Loyalty Dashboard Placement</span></a> and <a class="reference internal" href="../../campaigns/campaign_placements/loyalty_widget.html#campaigns-campaign-placements-loyalty-widget"><span class="std std-ref">Loyalty Widget Placement</span></a>.</p>
 </div>
-<section id="loyalty-dashboard-notes">
+<div class="section" id="loyalty-dashboard-notes">
 <h3>Loyalty Dashboard Notes<a class="headerlink" href="#loyalty-dashboard-notes" title="Permalink to this headline">¶</a></h3>
 <p>The dashboard can be added inline inside your user accounts menu, however the dashboard content width for proper display is 980px.</p>
-</section>
-<section id="loyalty-widget-notes">
+</div>
+<div class="section" id="loyalty-widget-notes">
 <h3>Loyalty Widget Notes<a class="headerlink" href="#loyalty-widget-notes" title="Permalink to this headline">¶</a></h3>
 <p>Add Talkable Container DIV at the checkout exactly where the loyalty points redemption widget should rendered.</p>
 <p><hr></p>
-</section>
-</section>
-<section id="loyalty-actions">
+</div>
+</div>
+<div class="section" id="loyalty-actions">
 <span id="id2"></span><h2>Loyalty Actions<a class="headerlink" href="#loyalty-actions" title="Permalink to this headline">¶</a></h2>
 <p>To register custom loyalty actions (e.g. completing surveys, adding reviews, uploading something on site),
 use the following code:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
-<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;register_loyalty_action&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">rule_identifier</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// required, can be found in Campaign Rules -&gt; Loyalty action configurations -&gt; &quot;identifier&quot; field</span><span class="w"></span>
-<span class="w">    </span><span class="nx">traffic_source</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="c1">// optional</span><span class="w"></span>
-<span class="w">  </span><span class="p">}]);</span><span class="w"></span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;register_loyalty_action&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">rule_identifier</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// required, can be found in Campaign Rules -&gt; Loyalty action configurations -&gt; &quot;identifier&quot; field</span>
+    <span class="nx">traffic_source</span><span class="o">:</span> <span class="s1">&#39;&#39;</span> <span class="c1">// optional</span>
+  <span class="p">}]);</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<section id="loyalty-actions-notes">
+<div class="section" id="loyalty-actions-notes">
 <h3>Loyalty Actions Notes<a class="headerlink" href="#loyalty-actions-notes" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
 <li><p><cite>register_loyalty_action</cite> optionally accepts <cite>email</cite> and <cite>custom_properties</cite>. If none provided, values will be
 taken from respective parameters of <cite>authenticate_customer</cite>. Email must be provided in either of the sources to
 register loyalty actions.</p></li>
 </ol>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
             <div class="clearer"></div>
