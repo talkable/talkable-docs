@@ -10,6 +10,7 @@
 * **customer_id** - unique external identifier of a customer who triggered the origin event
 * **traffic_source** — traffic source of the origin event
 * **ip_address** - IP address of the origin event
+* **currency_iso_code** - currency code of the origin event
 
 *For Purchase:*
 
