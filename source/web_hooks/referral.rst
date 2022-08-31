@@ -141,6 +141,7 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
        "amount": "5.00",
        "incentive": "rebate",
        "incentive_description": "$5.00 back",
+       "reward_coupon_code": null,
        "origin": {
          "id": 159843498,
          "type": "AffiliateMember",
@@ -232,6 +233,7 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
          "email": "referred@example.com",
          "person": {
            "email": "referred@example.com",
+           "phone_number": null,
            "first_name": "Alice",
            "last_name": "Smith",
            "username": null,
@@ -256,7 +258,10 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
            "id": 147886587,
            "type": "Purchase",
            "order_number": "450901776",
+           "order_date": "2021-04-23T19:08:17.000-08:00"
            "subtotal": 35.03,
+           "currency_iso_code": "USD",
+           "email": "referred@example.com"
            "customer_id": "565659001",
            "ip_address": "127.0.0.1",
            "coupon_code": "WHT29123",
@@ -270,11 +275,15 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
        "order_number": "459179054",
        "order_date": "2021-04-23T19:08:17.000-08:00"
        "subtotal": 11.39,
+       "currency_iso_code": "USD",
        "email": "referred@example.com"
        "customer_id": "376990942",
        "ip_address": "127.0.0.1",
        "coupon_code": "WHT59688",
        "traffic_source": "post-checkout"
+     },
+     "share": {
+       "channel": "other"
      }
    }
 
