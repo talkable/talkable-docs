@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="Talkable JS integration script embeds Talkable campaign as an iframe." name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<meta content="Talkable JS integration script embeds Talkable campaign as an iframe." name="description" />
 
     <title>Subscribing To Iframe Events &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -11,6 +12,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/advanced_features/subscribing_to_events.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -102,8 +104,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="advanced-features-subscribing-to-events"></span><div class="section" id="subscribing-to-iframe-events">
-<h1>Subscribing To Iframe Events<a class="headerlink" href="#subscribing-to-iframe-events" title="Permalink to this headline">¶</a></h1>
+  <span class="target" id="advanced-features-subscribing-to-events"></span><section id="subscribing-to-iframe-events">
+<h1>Subscribing To Iframe Events<a class="headerlink" href="#subscribing-to-iframe-events" title="Permalink to this heading">¶</a></h1>
 <p>Talkable integration embeds a referral campaign as an iframe with <cite>src</cite> attribute starting with <cite>www.talkable.com</cite> domain (or custom domain if the <a class="reference internal" href="white_labeling.html#advanced-features-white-labeling"><span class="std std-ref">white-labeling</span></a> is setup).</p>
 <p>In order to subscribe to an iframe Event you need to know <cite>name</cite> HTML attribute of the Talkable iframe and the Event name.
 Iframe ‘name’ attribute may change depending on the <a class="reference internal" href="../campaigns/views.html#campaigns-views"><span class="std std-ref">campaign view</span></a> opened. Thus, to use the right iframe name, open the campaign view you want to capture events from and copy the iframe name from the HTML of the page.</p>
@@ -115,9 +117,9 @@ Iframe ‘name’ attribute may change depending on the <a class="reference inte
 </pre></div>
 </div>
 <p>Knowing the container <cite>name</cite> attribute of the iframe is <cite>talkable-offer-iframe</cite> the subscription JS will be:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">talkable</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s2">&quot;offer_loaded&quot;</span><span class="p">,</span> <span class="s2">&quot;talkable-offer-iframe&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">iframe</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Talkable campaign iframe is loaded!&quot;</span><span class="p">);</span>
-<span class="p">});</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">talkable</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s2">&quot;offer_loaded&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;talkable-offer-iframe&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">iframe</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Talkable campaign iframe is loaded!&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Notice two arguments passed in the callback:</p>
@@ -127,8 +129,8 @@ Iframe ‘name’ attribute may change depending on the <a class="reference inte
 <li><p><cite>iframe</cite> object — iframe’s <a class="reference external" rel="nofollow" href="https://www.w3schools.com/jsref/dom_obj_frame.asp">HTML DOM reference</a></p></li>
 </ol>
 </div></blockquote>
-<div class="section" id="iframe-events-list">
-<h2>Iframe Events List<a class="headerlink" href="#iframe-events-list" title="Permalink to this headline">¶</a></h2>
+<section id="iframe-events-list">
+<h2>Iframe Events List<a class="headerlink" href="#iframe-events-list" title="Permalink to this heading">¶</a></h2>
 <p>Talkable campaigns are equipped with the following set of events:</p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -147,8 +149,8 @@ You can read more <a class="reference internal" href="../campaigns/designer.html
 <div class="toctree-wrapper compound">
 </div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>

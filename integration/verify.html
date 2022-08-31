@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="After installing Talkable, you should verify that the integration is working." name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<meta content="After installing Talkable, you should verify that the integration is working." name="description" />
 
     <title>Verifying Integration &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -11,6 +12,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/integration/verify.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -86,8 +88,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="integration-verify"></span><div class="section" id="verifying-integration">
-<h1>Verifying Integration<a class="headerlink" href="#verifying-integration" title="Permalink to this headline">¶</a></h1>
+  <span class="target" id="integration-verify"></span><section id="verifying-integration">
+<h1>Verifying Integration<a class="headerlink" href="#verifying-integration" title="Permalink to this heading">¶</a></h1>
 <p>After installing Talkable, you should verify that the integration is working:</p>
 <ol class="arabic">
 <li><p>Open your homepage (assuming the Talkable init script is placed on every page,
@@ -104,16 +106,16 @@ can verify it gets passed as well. As a result you should see:</p>
 All purchases with <cite>integration&#64;talkable.com</cite> email will not be recorded inside Talkable.</p>
 </li>
 </ol>
-<div class="section" id="verifying-integration-in-js-spas">
-<h2>Verifying Integration in JS SPAs<a class="headerlink" href="#verifying-integration-in-js-spas" title="Permalink to this headline">¶</a></h2>
+<section id="verifying-integration-in-js-spas">
+<h2>Verifying Integration in JS SPAs<a class="headerlink" href="#verifying-integration-in-js-spas" title="Permalink to this heading">¶</a></h2>
 <p>In case you are unable to pass <strong>?tkbl_verify_integration=true</strong>
 URL parameter you can alternatively turn Talkable into “Verification mode” by setting: <br>
 <cite>talkable.config.verify_integration = true;</cite></p>
 <p>All requests will now be coming with “Verification” flag turned on.</p>
 <p><strong>Note:</strong> do not use it in production, this mode is for debugging purpose only.</p>
-</div>
-<div class="section" id="troubleshooting">
-<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this heading">¶</a></h2>
 <p>In case you are not seeing the verification popup please make sure the
 <a class="reference internal" href="custom/integration_components.html#integration-custom-integration-components-initialization-script"><span class="std std-ref">init script</span></a> (non-platform integration only)
 is installed on the page. You may do so by making right click <br>
@@ -127,8 +129,8 @@ up for “create.html”. Make sure you see something like:</p>
 <img alt="../_images/chrome_network_tab.png" src="../_images/chrome_network_tab.png" />
 <p>If the request is coming through but you are still not seeing the verification
 popup please contact Talkable support: <a class="reference external" href="mailto:support&#37;&#52;&#48;talkable&#46;com">support<span>&#64;</span>talkable<span>&#46;</span>com</a>.</p>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>

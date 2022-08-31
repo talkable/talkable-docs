@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta content="This flow helps to integrate with Talkable via API for a default store or service." name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<meta content="This flow helps to integrate with Talkable via API for a default store or service." name="description" />
 
     <title>Referral Program via API &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -11,6 +12,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/api_v2/flow.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -89,8 +91,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="api-v2-flow"></span><div class="section" id="referral-program-via-api">
-<h1>Referral Program via API<a class="headerlink" href="#referral-program-via-api" title="Permalink to this headline">¶</a></h1>
+  <span class="target" id="api-v2-flow"></span><section id="referral-program-via-api">
+<h1>Referral Program via API<a class="headerlink" href="#referral-program-via-api" title="Permalink to this heading">¶</a></h1>
 <p>This flow helps to integrate with Talkable via API for a default Store or Service.
 It shows how you can do the following actions via API:</p>
 <ul class="simple">
@@ -100,12 +102,12 @@ It shows how you can do the following actions via API:</p>
 <li><p>Let Talkable know about Purchase or Event to let it trigger the referral</p></li>
 </ul>
 <p>Each of these steps can be done individually or all together to achieve API integration</p>
-<div class="section" id="initial-origin">
-<h2>Initial Origin<a class="headerlink" href="#initial-origin" title="Permalink to this headline">¶</a></h2>
+<section id="initial-origin">
+<h2>Initial Origin<a class="headerlink" href="#initial-origin" title="Permalink to this heading">¶</a></h2>
 <p>Invite <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> to referral program at some point by creating an <a href="https://www.talkable.com/api-docs/#/Origins/createOrigin" target="_blank">Origin</a> and obtaining <a href="https://www.talkable.com/api-docs/#/Advocate%20Offers/findAdvocateOffer" target="_blank">Offer</a> to share.</p>
-</div>
-<div class="section" id="displaying-and-sharing-the-offer">
-<h2>Displaying and Sharing the Offer<a class="headerlink" href="#displaying-and-sharing-the-offer" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="displaying-and-sharing-the-offer">
+<h2>Displaying and Sharing the Offer<a class="headerlink" href="#displaying-and-sharing-the-offer" title="Permalink to this heading">¶</a></h2>
 <p>Display options for <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> to share with their <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr>s.</p>
 <p><strong>For Social Share</strong></p>
 <ul class="simple">
@@ -116,9 +118,9 @@ It shows how you can do the following actions via API:</p>
 <ul class="simple">
 <li><p>Ask <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> for recipients (and additional information) and make request to <a href="https://www.talkable.com/api-docs/#/Shares/shareViaEmail" target="_blank">Shares API</a></p></li>
 </ul>
-</div>
-<div class="section" id="claiming-an-offer">
-<h2>Claiming an Offer<a class="headerlink" href="#claiming-an-offer" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="claiming-an-offer">
+<h2>Claiming an Offer<a class="headerlink" href="#claiming-an-offer" title="Permalink to this heading">¶</a></h2>
 <p>In order for <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> to get referred, they go to the Claim (or Landing) page by following the share URL.</p>
 <p>This is the last step before <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> proceeds to your site or app.</p>
 <ul class="simple">
@@ -128,13 +130,13 @@ It shows how you can do the following actions via API:</p>
 <p><strong>Important:</strong></p>
 <p>You need to pass the visitor <cite>uuid</cite> variable to your site via the destination URL GET parameter and store it somewhere in order to later pass it with <a href="https://www.talkable.com/api-docs/#/Origins/createOrigin" target="_blank">Origin</a></p>
 <p>Example destination URL: <cite>http://merchant.com?tkbl_cvuuid={{visitor_uuid}}&amp;utm_source=talkable&amp;…</cite></p>
-</div>
-<div class="section" id="submit-origin-data-to-talkable-to-generate-the-referral">
-<h2>Submit Origin data to Talkable to generate the Referral<a class="headerlink" href="#submit-origin-data-to-talkable-to-generate-the-referral" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="submit-origin-data-to-talkable-to-generate-the-referral">
+<h2>Submit Origin data to Talkable to generate the Referral<a class="headerlink" href="#submit-origin-data-to-talkable-to-generate-the-referral" title="Permalink to this heading">¶</a></h2>
 <p>Once any user makes an action that implies a possible close of a referral chain, send an <a href="https://www.talkable.com/api-docs/#/Origins/createOrigin" target="_blank">Origin</a>. Please include <cite>uuid</cite> in this request if possible.</p>
 <p>For example, if <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> makes a purchase on your site or installs your app — <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> needs to be rewarded, and this is achieved with creating <a class="reference internal" href="origins.html#api-v2-origins"><span class="std std-ref">Purchase or Event</span></a> which gets linked to previously created <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> offer.</p>
-</div>
-</div>
+</section>
+</section>
 
 
             <div class="clearer"></div>

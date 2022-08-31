@@ -76,14 +76,18 @@ Create Coupon Webhook can now be set up.
 
    <h2>Payload parameters provided by Create Coupon Webhook</h2>
 
+* **coupon_auto_sync_enabled** — :ref:`Shopify Coupon auto-sync <advanced_features/shopify_coupons_auto_sync>` status.
+  Note that the webhook takes precedence over Shopify Coupon auto-sync
 * **coupon_code** — coupon code
+* **coupon_list_id** — ID of the coupon list that needs to be filled
+* **coupon_list_name** — name of the coupon list that needs to be filled
+* **email** — email of the advocate.
+  This field is only relevant for :ref:`personal coupons <advanced_features/personal_coupon_sharing>`
 * **discount_amount** — discount amount
 * **percentage_discount** — when ``true`` percentage discount should be created,
   otherwise fixed discount
 * **expires_at** — coupon expiration date
 * **usage_limit** — number of usages for the coupon
-* **coupon_list_id** — ID of the coupon list that needs to be filled
-* **coupon_list_name** — name of the coupon list that needs to be filled
 
 .. raw:: html
 
@@ -92,13 +96,15 @@ Create Coupon Webhook can now be set up.
 .. code-block:: javascript
 
    {
+     "coupon_auto_sync_enabled": false,
      "coupon_code": "WHT58574",
-     "discount_amount": 10,
+     "coupon_list_id": 1,
+     "coupon_list_name": "$10 off",
+     "discount_amount": "10.0",
+     "email": null,
+     "expires_at": "2014-04-14T06:17:14.309-07:00",
      "percentage_discount": false,
      "usage_limit": 1,
-     "expires_at": "2014-04-14T06:17:14.309-07:00",
-     "coupon_list_id": 1,
-     "coupon_list_name": "$10 off"
    }
 
 .. raw:: html
@@ -107,7 +113,7 @@ Create Coupon Webhook can now be set up.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&site=<site>&type=create_coupon_web_hook&payload={"coupon_code":"WHT58574","discount_amount":10,"percentage_discount":false,"usage_limit":1,"expires_at":"2014-04-14T06:17:14.309-07:00","coupon_list_id":1,"coupon_list_name":"$10 off"}' <url>
+   curl --data 'key=<key>&site=<site>&type=create_coupon_web_hook&payload={"coupon_auto_sync_enabled":false,"coupon_code":"WHT58574","coupon_list_id":1,"coupon_list_name":"$10 off","discount_amount":"10.0","email":null,"expires_at":"2014-04-14T06:17:14.309-07:00","percentage_discount":false,"usage_limit":1}' <url>
 
 .. container:: hidden
 
