@@ -109,16 +109,16 @@ Gating form is submitted. This is the form a Friend completes after receiving
 a share from an Advocate, and before receiving their discount code.</p>
 <p>Friend Email Gating form example:</p>
 <img alt="Friend Email Gating Form" class="is-minimal" src="../_images/friend_email_gating_form.png" />
-<h2>Payload parameters provided</h2><ul>
+<h2>Payload parameters provided</h2><ul class="simple">
 <li><p><strong>offer</strong> — subhash of parameters describing the offer</p>
-<ul class="simple">
+<ul>
 <li><p><strong>email</strong> — <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>’s (referrer) email address</p></li>
 <li><p><strong>short_url_code</strong></p></li>
 <li><p><strong>ip_address</strong></p></li>
 </ul>
 </li>
 <li><p><strong>campaign</strong> — subhash of parameters describing the campaign</p>
-<ul class="simple">
+<ul>
 <li><p><strong>id</strong> — unique campaign ID</p></li>
 <li><p><strong>cached_slug</strong> — same as <em>id</em>, SEO friendly</p></li>
 <li><p><strong>type</strong> — either <em>“StandaloneCampaign”</em> or <em>“DoubleSidedDealCampaign”</em></p></li>
@@ -127,15 +127,6 @@ a share from an Advocate, and before receiving their discount code.</p>
 <li><p><strong>origin_max_age</strong> — seconds passed since the first site visit during which the Advocate can see the campaign</p></li>
 <li><p><strong>joinable_category_names</strong> — categories of origins that trigger the campaign</p></li>
 <li><p><strong>tag_names</strong> — array of campaign’s tags</p></li>
-</ul>
-<ul class="simple">
-<li><p><strong>origin_min_age</strong> — The timeframe from first site visit when an offer is
-available to Advocate</p></li>
-<li><p><strong>origin_max_age</strong> — The timeframe from first site visit when an offer is
-available to Advocate</p></li>
-<li><p><strong>new_customer</strong> — either <cite>null</cite> - there is no criteria, <cite>true</cite> - only new
-customers could join into campaign and see advocate offer, or <cite>false</cite> -
-the same but for existing customers</p></li>
 </ul>
 </li>
 <li><p><strong>email</strong> — friend’s email address</p></li>
@@ -148,7 +139,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>opted_in_at</strong> — date friend has subscribed (optional)</p></li>
 <li><p><strong>unsubscribed_at</strong> — date friend has unsubscribed (optional)</p></li>
 <li><p><strong>referral_counts</strong> - subhash of <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>’s referral counts</p>
-<ul class="simple">
+<ul>
 <li><p><strong>total</strong> — created referrals count</p></li>
 <li><p><strong>approved</strong> — approved referrals count</p></li>
 <li><p><strong>pending</strong> — count of waiting for approval referrals</p></li>

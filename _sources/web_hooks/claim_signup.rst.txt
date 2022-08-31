@@ -43,13 +43,6 @@ Friend Email Gating form example:
 * **campaign** — subhash of parameters describing the campaign
 
   .. include:: /partials/campaign_fields.rst
-  * **origin_min_age** — The timeframe from first site visit when an offer is
-    available to Advocate
-  * **origin_max_age** — The timeframe from first site visit when an offer is
-    available to Advocate
-  * **new_customer** — either `null` - there is no criteria, `true` - only new
-    customers could join into campaign and see advocate offer, or `false` -
-    the same but for existing customers
 
 * **email** — friend’s email address
 * **first_name** — friend’s first name
