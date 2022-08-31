@@ -38,12 +38,6 @@ triggered twice.
 * **campaign** — subhash of parameters describing the campaign
 
   .. include:: /partials/campaign_fields.rst
-  * **origin_min_age** — timeframe from first site visit when an offer is
-    available to Advocate
-  * **origin_max_age** — timeframe from first site visit when an offer is
-    available to Advocate
-  * **new_customer** — “yes/no” whether offer requires Advocate to be a new
-    customer
 
 * **share_type** — *"email"*, *"facebook"*, *"twitter"*, *"facebook_message"*,
   *"facebook_sponsored"*, *"whatsapp"*, *"sms"*, *"linkedin"*, *"other"*
