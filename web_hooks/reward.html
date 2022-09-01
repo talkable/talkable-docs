@@ -252,6 +252,7 @@ included subscription checkbox)</p></li>
 to non monetary description if <strong>incentive_type</strong> is other)</p></li>
 <li><p><strong>amount</strong> — amount of money to reward (null when <strong>incentive_type</strong> is
 discount_coupon or other)</p></li>
+<li><p><strong>coupon_code</strong> — deprecated in favor of <strong>coupon</strong></p></li>
 <li><p><strong>coupon</strong> — reward coupon details (null when <strong>incentive_type</strong>
 is rebate or other)</p>
 <ul>
@@ -267,7 +268,8 @@ as opposed to a fixed value</p></li>
 <li><p><strong>usages</strong> — number of times the coupon has been used
 (null if the coupon is multi-use)</p></li>
 <li><p><strong>used</strong> — true if the coupon has been used</p></li>
-<li><p><strong>valid_until</strong> — expiration time of the coupon</p></li>
+<li><p><strong>expires_at</strong> — expiration time of the coupon (deprecated)</p></li>
+<li><p><strong>valid_until</strong> — expiration time of the coupon in the site time zone</p></li>
 </ul>
 </li>
 </ul>
