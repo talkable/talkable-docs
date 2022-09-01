@@ -114,6 +114,7 @@ Webhook Set Up Steps <web_hooks>`
     to non monetary description if **incentive_type** is other)
   * **amount** — amount of money to reward (null when **incentive_type** is
     discount_coupon or other)
+  * **coupon_code** — deprecated in favor of **coupon**
 
   * **coupon** — reward coupon details (null when **incentive_type**
     is rebate or other)
@@ -130,7 +131,8 @@ Webhook Set Up Steps <web_hooks>`
     * **usages** — number of times the coupon has been used
       (null if the coupon is multi-use)
     * **used** — true if the coupon has been used
-    * **valid_until** — expiration time of the coupon
+    * **expires_at** — expiration time of the coupon (deprecated)
+    * **valid_until** — expiration time of the coupon in the site time zone
 
 * **advocate_origin** - subhash of data related to the advocate event
 
