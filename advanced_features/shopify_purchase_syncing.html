@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Purchase Syncing is a feature available for Shopify customers integrated with Talkable extension. It allows automatic purchases synchronization from Shopify instead of (or additionally to) passing purchases with Talkable JavaScript integration." name="description" />
 
     <title>Shopify Purchase Syncing &#8212; Talkable Documentation</title>
@@ -12,6 +12,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/advanced_features/shopify_purchase_syncing.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -31,7 +32,7 @@
           </form>
       <div class="header-disclaimer">
         Visit
-        <a rel="nofollow" href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
       </div>
     </div> <!-- /.header -->
   
@@ -105,8 +106,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="advanced-features-shopify-purchase-syncing"></span><section id="shopify-purchase-syncing">
-<h1>Shopify Purchase Syncing<a class="headerlink" href="#shopify-purchase-syncing" title="Permalink to this headline">¶</a></h1>
+  <section id="shopify-purchase-syncing">
+<span id="advanced-features-shopify-purchase-syncing"></span><h1>Shopify Purchase Syncing<a class="headerlink" href="#shopify-purchase-syncing" title="Permalink to this heading">¶</a></h1>
 <p>Purchase Syncing is a feature available for Shopify customers integrated with Talkable extension.
 It allows automatic purchases synchronization from Shopify instead of (or additionally to) passing purchases with Talkable JavaScript integration from a browser.</p>
 <p>To access this setting, go to the Shopify Integration page (Settings → Shopify Integration).</p>
@@ -116,20 +117,16 @@ It allows automatic purchases synchronization from Shopify instead of (or additi
 different from Shopify Purchase ID (Talkable default Shopify integration behavior) as it will lead to double purchases registering.</p>
 </div>
 <section id="how-it-works">
-<h2>How it works?<a class="headerlink" href="#how-it-works" title="Permalink to this headline">¶</a></h2>
-<p>It works as a server-to-server integration between Shopify and Talkable using Shopify <cite>orders/create</cite> <a class="reference external" href="https://shopify.dev/api/admin-rest/2022-04/resources/webhook">webhook</a>.</p>
+<h2>How it works?<a class="headerlink" href="#how-it-works" title="Permalink to this heading">¶</a></h2>
+<p>It works as a server-to-server integration between Shopify and Talkable using Shopify <cite>orders/create</cite> <a class="reference external" rel="nofollow" href="https://shopify.dev/api/admin-rest/2022-04/resources/webhook">webhook</a>.</p>
 <p>When enabling Purchase Syncing, Talkable creates and subscribes to this <cite>orders/create</cite> webhook from the customer’s Shopify store. When disabling the setting, the webhook and the subscription are deleted.</p>
 <p>Each time a purchase is placed on a customer’s store, Shopify triggers the webhook and Talkable registers the purchase with attributes sent in the webhook’s payload.</p>
 </section>
 <section id="shopify-webhook-payload-and-talkable-purchase-attributes-mapping">
-<h2>Shopify Webhook payload and Talkable Purchase attributes mapping<a class="headerlink" href="#shopify-webhook-payload-and-talkable-purchase-attributes-mapping" title="Permalink to this headline">¶</a></h2>
+<h2>Shopify Webhook payload and Talkable Purchase attributes mapping<a class="headerlink" href="#shopify-webhook-payload-and-talkable-purchase-attributes-mapping" title="Permalink to this heading">¶</a></h2>
 <p>Talkable uses next mapping when syncing purchases from Shopify Webhook payload:</p>
 <div class="ptable docutils container">
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 34%" />
-<col style="width: 66%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Talkable Purchase attribute</p></th>
 <th class="head"><p>Shopify Webhook payload (Shopify Purchase attribute)</p></th>
@@ -180,7 +177,7 @@ different from Shopify Purchase ID (Talkable default Shopify integration behavio
 </div>
 </section>
 <section id="post-purchase-campaign-setup">
-<h2>Post Purchase Campaign setup<a class="headerlink" href="#post-purchase-campaign-setup" title="Permalink to this headline">¶</a></h2>
+<h2>Post Purchase Campaign setup<a class="headerlink" href="#post-purchase-campaign-setup" title="Permalink to this heading">¶</a></h2>
 <p>To render Talkable Post Purchase Campaign, there is still a need of registering purchases
 with Talkable JavaScript integration (is managed automatically by Talkable).</p>
 <p>JavaScript purchase registration has priority over Purchase Syncing and registers the purchase from JavaScript integration first.</p>

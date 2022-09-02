@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Webhooks are triggered by events on Talkable’s site." name="description" />
 
     <title>Webhooks &#8212; Talkable Documentation</title>
@@ -12,6 +12,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/web_hooks.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -31,7 +32,7 @@
           </form>
       <div class="header-disclaimer">
         Visit
-        <a rel="nofollow" href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
       </div>
     </div> <!-- /.header -->
   
@@ -90,14 +91,14 @@
           <div class="body" role="main">
             
   <span class="target" id="web-hooks"></span><section id="webhooks">
-<h1>Webhooks<a class="headerlink" href="#webhooks" title="Permalink to this headline">¶</a></h1>
+<h1>Webhooks<a class="headerlink" href="#webhooks" title="Permalink to this heading">¶</a></h1>
 <p>Webhooks are “user-defined HTTP callbacks” triggered by events on Talkable’s
 site. Subscribing to Talkable Webhooks allows you to receive notifications about
 various events from Talkable, for example, when a Reward should be given, or
 when a Friend or Advocate opts in to an email newsletter subscription.</p>
 <p>After subscribing to a Webhook, your app can execute code immediately after
 specific events occur in Talkable.</p>
-<p><a class="reference external" href="https://en.wikipedia.org/wiki/Webhook">https://en.wikipedia.org/wiki/Webhook</a></p>
+<p><a class="reference external" rel="nofollow" href="https://en.wikipedia.org/wiki/Webhook">https://en.wikipedia.org/wiki/Webhook</a></p>
 <p>Each Webhook in Talkable is defined with an HTTP URL to deliver Webhook data
 (aka payload). This URL should be defined and implemented on the client’s site.</p>
 <h2>Available Webhooks</h2><p>Below is a user experience flow showing when Talkable Webhooks are called.
@@ -127,7 +128,7 @@ by Webhook type.</p>
 <h2>Testing</h2><p>Testing webhooks can be accomplished with the help of Webhook Tester, an external
 service that tests your post-receive messages.</p>
 <ol class="arabic simple">
-<li><p>Visit <a class="reference external" href="https://webhook.site/">Webhook Tester</a> and click <strong>Copy</strong> to copy the URL you are given.</p></li>
+<li><p>Visit <a class="reference external" rel="nofollow" href="https://webhook.site/">Webhook Tester</a> and click <strong>Copy</strong> to copy the URL you are given.</p></li>
 <li><p>Open your site on Webhooks set up page.</p></li>
 <li><p>Click <strong>New</strong>.</p></li>
 <li><p>Select webhook type.</p></li>
@@ -146,7 +147,7 @@ a PHP parameter decode example:</p>
 <h2>Parsing Timestamps</h2><p><strong>Timestamp data type</strong> is not a part of JSON standard. Timestamps
 are passed as strings in <a rel="nofollow" href="https://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a> compatible format. To function properly, ensure
 your date parser is compatible to this standard. Java users go here: <br>
-<a class="reference external" href="https://stackoverflow.com/questions/2201925/converting-iso-8601-compliant-string-to-java-util-date">https://stackoverflow.com/questions/2201925/converting-iso-8601-compliant-string-to-java-util-date</a></p>
+<a class="reference external" rel="nofollow" href="https://stackoverflow.com/questions/2201925/converting-iso-8601-compliant-string-to-java-util-date">https://stackoverflow.com/questions/2201925/converting-iso-8601-compliant-string-to-java-util-date</a></p>
 <h2>Response Codes</h2><p>Talkable considers a Webhook as “delivered successfully” when a site
 server returns a <strong>2xx response status</strong>. Otherwise Talkable will continually
 retry to deliver a Webhook after a set interval of time.</p>

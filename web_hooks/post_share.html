@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Post Share Webhook provides notification of share events performed within a referral campaign workflow." name="description" />
 
     <title>Post Share Webhook &#8212; Talkable Documentation</title>
@@ -12,6 +12,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/web_hooks/post_share.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -31,7 +32,7 @@
           </form>
       <div class="header-disclaimer">
         Visit
-        <a rel="nofollow" href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
       </div>
     </div> <!-- /.header -->
   
@@ -92,7 +93,7 @@
           <div class="body" role="main">
             
   <span class="target" id="web-hooks-post-share"></span><section id="post-share-webhook">
-<h1>Post Share Webhook<a class="headerlink" href="#post-share-webhook" title="Permalink to this headline">¶</a></h1>
+<h1>Post Share Webhook<a class="headerlink" href="#post-share-webhook" title="Permalink to this heading">¶</a></h1>
 <p>Talkable Post Share Webhook provides notification of a share event performed
 within a referral campaign workflow. Use cases for the Post Share Webhook include:</p>
 <blockquote>
@@ -120,15 +121,13 @@ triggered twice.</p>
 <li><p><strong>campaign</strong> — subhash of parameters describing the campaign</p>
 <ul class="simple">
 <li><p><strong>id</strong> — unique campaign ID</p></li>
-<li><p><strong>cached_slug</strong> — unique SEO friendly ID</p></li>
+<li><p><strong>cached_slug</strong> — same as <em>id</em>, SEO friendly</p></li>
 <li><p><strong>type</strong> — either <em>“StandaloneCampaign”</em> or <em>“DoubleSidedDealCampaign”</em></p></li>
+<li><p><strong>new_customer</strong> — whether the Advocate has to be a new customer to see the campaign</p></li>
+<li><p><strong>origin_min_age</strong> — seconds passed since the first site visit before the Advocate can see the campaign</p></li>
+<li><p><strong>origin_max_age</strong> — seconds passed since the first site visit during which the Advocate can see the campaign</p></li>
+<li><p><strong>joinable_category_names</strong> — categories of origins that trigger the campaign</p></li>
 <li><p><strong>tag_names</strong> — array of campaign’s tags</p></li>
-<li><p><strong>origin_min_age</strong> — timeframe from first site visit when an offer is
-available to Advocate</p></li>
-<li><p><strong>origin_max_age</strong> — timeframe from first site visit when an offer is
-available to Advocate</p></li>
-<li><p><strong>new_customer</strong> — “yes/no” whether offer requires Advocate to be a new
-customer</p></li>
 </ul>
 </li>
 <li><p><strong>share_type</strong> — <em>“email”</em>, <em>“facebook”</em>, <em>“twitter”</em>, <em>“facebook_message”</em>,
@@ -165,6 +164,8 @@ included subscription checkbox)</p></li>
 <li><p><strong>opted_in_at</strong> — date person has subscribed (optional)</p></li>
 <li><p><strong>unsubscribed_at</strong> — date person has unsubscribed (optional)</p></li>
 <li><p><strong>custom_properties</strong> — hash of person’s custom properties (optional)</p></li>
+<li><p><strong>is_loyalty_member</strong> — whether the person participates in loyalty program</p></li>
+<li><p><strong>loyalty_member</strong> — details of the person as a loyalty program participant (optional)</p></li>
 <li><p><strong>referral_counts</strong> - subhash of <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>’s referral counts</p>
 <ul>
 <li><p><strong>total</strong> — created referrals count</p></li>
@@ -194,6 +195,7 @@ Facebook and Twitter shares)</p></li>
 <li><p><strong>customer_id</strong> - unique external identifier of a customer who triggered the origin event</p></li>
 <li><p><strong>traffic_source</strong> — traffic source of the origin event</p></li>
 <li><p><strong>ip_address</strong> - IP address of the origin event</p></li>
+<li><p><strong>currency_iso_code</strong> - currency code of the origin event</p></li>
 </ul>
 <p><em>For Purchase:</em></p>
 <blockquote>

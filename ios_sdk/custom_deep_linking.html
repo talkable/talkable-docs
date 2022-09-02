@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Integration with Third Party Deep Linking Services &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -11,6 +11,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/ios_sdk/custom_deep_linking.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -30,7 +31,7 @@
           </form>
       <div class="header-disclaimer">
         Visit
-        <a rel="nofollow" href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
       </div>
     </div> <!-- /.header -->
   
@@ -91,11 +92,11 @@
           <div class="body" role="main">
             
   <span class="target" id="ios-sdk-custom-deep-linking"></span><section id="integration-with-third-party-deep-linking-services">
-<h1>Integration with Third Party Deep Linking Services<a class="headerlink" href="#integration-with-third-party-deep-linking-services" title="Permalink to this headline">¶</a></h1>
+<h1>Integration with Third Party Deep Linking Services<a class="headerlink" href="#integration-with-third-party-deep-linking-services" title="Permalink to this heading">¶</a></h1>
 <p>Talkable can work with third party deep linking providers such as GetSocial, Branch.io, and Firebase. Talkable is able to use deep linking functionality to track app installations and reward your Advocates and Friends for installing your mobile app on their phones.</p>
 <p>Deep linking services provide a special referral link that can be given to Advocates to be shared with their Friends. Once opened on a Friend’s mobile device, this link will not only redirect them to the App Store to install the app, but also track that the app was installed using a referral link. Deep linking can also be used to send a Friend to a specific place in the app once it’s installed and opened for the first time, show them personalized messages, and more.</p>
 <section id="configure-your-talkable-campaign">
-<h2>1. Configure your Talkable campaign<a class="headerlink" href="#configure-your-talkable-campaign" title="Permalink to this headline">¶</a></h2>
+<h2>1. Configure your Talkable campaign<a class="headerlink" href="#configure-your-talkable-campaign" title="Permalink to this heading">¶</a></h2>
 <p>To use deep linking with Talkable campaigns, simply use your deep link URL as your Talkable Site URL.</p>
 <img alt="../_images/site_url.png" src="../_images/site_url.png" />
 <div class="admonition note">
@@ -104,11 +105,11 @@
 are present in the final URL: <code class="docutils literal notranslate"><span class="pre">?tkbl_cvuuid={{</span> <span class="pre">visitor_uuid</span> <span class="pre">}}&amp;talkable_visitor_offer_id={{</span> <span class="pre">friend_offer.id</span> <span class="pre">}}</span></code>.</p>
 <p>All major deep linking providers support passing additional GET parameters with the deep link.
 This functionality is used to pass the Friend’s identifying information to the Talkable SDK in your iOS app.
-To use this functionality with Firebase, refer to this document: <a class="reference external" href="https://firebase.google.com/docs/dynamic-links/create-manually">Manually constructing a Dynamic Link URL</a>.</p>
+To use this functionality with Firebase, refer to this document: <a class="reference external" rel="nofollow" href="https://firebase.google.com/docs/dynamic-links/create-manually">Manually constructing a Dynamic Link URL</a>.</p>
 </div>
 </section>
 <section id="pass-deep-linking-params-to-the-talkable-sdk">
-<h2>2. Pass deep linking params to the Talkable SDK<a class="headerlink" href="#pass-deep-linking-params-to-the-talkable-sdk" title="Permalink to this headline">¶</a></h2>
+<h2>2. Pass deep linking params to the Talkable SDK<a class="headerlink" href="#pass-deep-linking-params-to-the-talkable-sdk" title="Permalink to this heading">¶</a></h2>
 <p>Retrieve deep linking params as described in your deep linking provider’s documentation
 and pass these params to the Talkable SDK using <code class="docutils literal notranslate"><span class="pre">handleOpenURL:</span></code> or <code class="docutils literal notranslate"><span class="pre">handleURLParams:</span></code> method.</p>
 <p>Use <code class="docutils literal notranslate"><span class="pre">handleURLParams:</span></code> method if you have a <code class="docutils literal notranslate"><span class="pre">NSDictionary</span></code> with params passed to the deep link handler block (Branch.io, GetSocial).</p>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Friend Email Gating Webhook notifies your endpoint that Friend email gating form was submitted." name="description" />
 
     <title>Friend Email Gating Webhook &#8212; Talkable Documentation</title>
@@ -12,6 +12,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/web_hooks/claim_signup.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -31,7 +32,7 @@
           </form>
       <div class="header-disclaimer">
         Visit
-        <a rel="nofollow" href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
       </div>
     </div> <!-- /.header -->
   
@@ -92,7 +93,7 @@
           <div class="body" role="main">
             
   <span class="target" id="web-hooks-claim-signup"></span><section id="friend-email-gating-webhook">
-<h1>Friend Email Gating Webhook<a class="headerlink" href="#friend-email-gating-webhook" title="Permalink to this headline">¶</a></h1>
+<h1>Friend Email Gating Webhook<a class="headerlink" href="#friend-email-gating-webhook" title="Permalink to this heading">¶</a></h1>
 <p>The Talkable Friend Email Gating Webhook notifies your endpoint that a Friend
 Email Gating form was submitted (on Friend Claim Page).</p>
 <p>Use cases for the Friend Email Gating Webhook include:</p>
@@ -119,16 +120,13 @@ a share from an Advocate, and before receiving their discount code.</p>
 <li><p><strong>campaign</strong> — subhash of parameters describing the campaign</p>
 <ul>
 <li><p><strong>id</strong> — unique campaign ID</p></li>
-<li><p><strong>cached_slug</strong> — unique SEO friendly ID</p></li>
+<li><p><strong>cached_slug</strong> — same as <em>id</em>, SEO friendly</p></li>
 <li><p><strong>type</strong> — either <em>“StandaloneCampaign”</em> or <em>“DoubleSidedDealCampaign”</em></p></li>
+<li><p><strong>new_customer</strong> — whether the Advocate has to be a new customer to see the campaign</p></li>
+<li><p><strong>origin_min_age</strong> — seconds passed since the first site visit before the Advocate can see the campaign</p></li>
+<li><p><strong>origin_max_age</strong> — seconds passed since the first site visit during which the Advocate can see the campaign</p></li>
+<li><p><strong>joinable_category_names</strong> — categories of origins that trigger the campaign</p></li>
 <li><p><strong>tag_names</strong> — array of campaign’s tags</p></li>
-<li><p><strong>origin_min_age</strong> — The timeframe from first site visit when an offer is
-available to Advocate</p></li>
-<li><p><strong>origin_max_age</strong> — The timeframe from first site visit when an offer is
-available to Advocate</p></li>
-<li><p><strong>new_customer</strong> — either <cite>null</cite> - there is no criteria, <cite>true</cite> - only new
-customers could join into campaign and see advocate offer, or <cite>false</cite> -
-the same but for existing customers</p></li>
 </ul>
 </li>
 <li><p><strong>email</strong> — friend’s email address</p></li>

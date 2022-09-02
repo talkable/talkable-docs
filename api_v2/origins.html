@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="The Talkable Origins API allows the registration of “off-site” or “backend” purchases, or CRM events. That means they can be used in the referral flow." name="description" />
 
     <title>Origins &#8212; Talkable Documentation</title>
@@ -12,6 +12,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/api_v2/origins.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -31,7 +32,7 @@
           </form>
       <div class="header-disclaimer">
         Visit
-        <a rel="nofollow" href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
       </div>
     </div> <!-- /.header -->
   
@@ -85,8 +86,8 @@
           <div class="body" role="main">
             
   <span class="target" id="api-v2-origins"></span><section id="origins">
-<h1>Origins<a class="headerlink" href="#origins" title="Permalink to this headline">¶</a></h1>
-<p>The Talkable <a rel="nofollow" href="https://www.talkable.com/api-docs/#/Origins/createOrigin" target="_blank">Origins API</a> allows the registration of ‘off-site’ or ‘backend’
+<h1>Origins<a class="headerlink" href="#origins" title="Permalink to this heading">¶</a></h1>
+<p>The Talkable <a href="https://www.talkable.com/api-docs/#/Origins/createOrigin" target="_blank">Origins API</a> allows the registration of ‘off-site’ or ‘backend’
 purchases or CRM events so they can be used in the referral flow. This
 functionality is generally utilized by businesses using subscription billing,
 off-site transactions, or other off-site events.</p>
@@ -95,7 +96,7 @@ off-site transactions, or other off-site events.</p>
 <p>The <a class="reference internal" href="../integration/custom/overview.html#integration-custom-overview"><span class="std std-ref">standard front-end</span></a> Talkable
 integration will capture all one-time purchases happening on the client
 e-commerce site, but will not on its own capture purchases or CRM events
-happening on the backend. To do this, the <a rel="nofollow" href="https://www.talkable.com/api-docs/#/Origins/createOrigin" target="_blank">Origins API</a> must be utilized to
+happening on the backend. To do this, the <a href="https://www.talkable.com/api-docs/#/Origins/createOrigin" target="_blank">Origins API</a> must be utilized to
 feed ‘off-site’ or ‘backend’ purchases or CRM events to Talkable.</p>
 </div>
 <h2>Example use cases for the Origins API</h2><p><strong>Subscription:</strong></p>
@@ -110,7 +111,7 @@ billing cycles.</p>
 integration captures the initial ‘on-site’ payment.</p></li>
 <li><p>For Talkable to reward the <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> after the third billing cycle of the
 <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> subscription, the Company must pass the subsequent subscription
-data to Talkable’s <a rel="nofollow" href="https://www.talkable.com/api-docs/#/Origins/createOrigin" target="_blank">Origins API</a> using <code class="docutils literal notranslate"><span class="pre">&quot;type&quot;:</span> <span class="pre">&quot;Event&quot;</span></code>.</p></li>
+data to Talkable’s <a href="https://www.talkable.com/api-docs/#/Origins/createOrigin" target="_blank">Origins API</a> using <code class="docutils literal notranslate"><span class="pre">&quot;type&quot;:</span> <span class="pre">&quot;Event&quot;</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -125,7 +126,7 @@ attended an in-person appointment.</p>
 integration captures an initial ‘on-site’ signup event if there is one.</p></li>
 <li><p>For Talkable to reward the <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> after the in-person <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> store
 purchase, or appointment attendance, the Company must pass the in-store
-purchase, or appointment attendance data to Talkable’s <a rel="nofollow" href="https://www.talkable.com/api-docs/#/Origins/createOrigin" target="_blank">Origins API</a> with
+purchase, or appointment attendance data to Talkable’s <a href="https://www.talkable.com/api-docs/#/Origins/createOrigin" target="_blank">Origins API</a> with
 either <code class="docutils literal notranslate"><span class="pre">&quot;type&quot;:</span> <span class="pre">&quot;Purchase&quot;</span></code> for a purchase or <code class="docutils literal notranslate"><span class="pre">&quot;type&quot;:</span> <span class="pre">&quot;Event&quot;</span></code> for an
 appointment attendance.</p></li>
 </ul>
@@ -142,7 +143,7 @@ application is approved.</p>
 integration captures the initial ‘on-site’ application sign-up event.</p></li>
 <li><p>In order for Talkable to reward the <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> after the <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr>
 application approval, the Company must pass the approval data to Talkable’s
-<a rel="nofollow" href="https://www.talkable.com/api-docs/#/Origins/createOrigin" target="_blank">Origins API</a> using <code class="docutils literal notranslate"><span class="pre">&quot;type&quot;:</span> <span class="pre">&quot;Event&quot;</span></code>.</p></li>
+<a href="https://www.talkable.com/api-docs/#/Origins/createOrigin" target="_blank">Origins API</a> using <code class="docutils literal notranslate"><span class="pre">&quot;type&quot;:</span> <span class="pre">&quot;Event&quot;</span></code>.</p></li>
 </ul>
 </li>
 </ul>
