@@ -216,6 +216,7 @@ Reward reason can be of 5 following general types.
        "type": "StandaloneCampaign",
        "cached_slug": 500548529,
        "tag_names": ["default"],
+       "joinable_category_names": ["affiliate_member"],
        "origin_min_age": null,
        "origin_max_age": null,
        "new_customer": null

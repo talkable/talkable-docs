@@ -76,6 +76,7 @@ Friend Email Gating form example:
        "type": "StandaloneCampaign",
        "cached_slug": 465427859,
        "tag_names": ["default"],
+       "joinable_category_names": ["affiliate_member"],
        "origin_min_age": null,
        "origin_max_age": null,
        "new_customer": null

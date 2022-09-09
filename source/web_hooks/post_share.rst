@@ -84,6 +84,7 @@ triggered twice.
        "type": "StandaloneCampaign",
        "cached_slug": 83587635,
        "tag_names": ["default"],
+       "joinable_category_names": ["affiliate_member"],
        "origin_min_age": null,
        "origin_max_age": null,
        "new_customer": null

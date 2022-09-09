@@ -74,6 +74,7 @@ additional parameters will be present:
      "campaign": {
        "cached_slug": 615437538,
        "id": 615437538,
+       "joinable_category_names": ["affiliate_member"],
        "new_customer": null,
        "origin_max_age": null,
        "origin_min_age": null,
