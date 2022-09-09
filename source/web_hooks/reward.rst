@@ -98,6 +98,7 @@ Webhook Set Up Steps <web_hooks>`
 * **person** — subhash of parameters describing the person that got reward (note: might be **null**)
 
   .. include:: /partials/person_fields.rst
+  .. |person| replace:: person
 
 * **origin** — subhash of data related to the event that issued an offer
 
@@ -145,7 +146,7 @@ Webhook Set Up Steps <web_hooks>`
 
    *For Affiliate Member:*
 
-  * **email** — email address of the referrer (Advocate) person
+  * **email** — email address of the referrer (|advocate|) person
 
    *For Purchase:*
 

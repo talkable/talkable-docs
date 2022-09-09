@@ -31,6 +31,7 @@ Talkable sent email.
 * **person** — subhash of parameters describing the person
 
   .. include:: /partials/person_fields.rst
+  .. |person| replace:: person
 
 .. raw:: html
 

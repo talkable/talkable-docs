@@ -58,6 +58,7 @@ triggered twice.
 * **sharer_info** — subhash of parameters describing the person who shared the offer
 
   .. include:: /partials/person_fields.rst
+  .. |person| replace:: sharer
 
 * **share_link** — link sent in share message (optional, present only for
   Facebook and Twitter shares)

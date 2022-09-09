@@ -44,20 +44,10 @@ Friend Email Gating form example:
 
   .. include:: /partials/campaign_fields.rst
 
-* **email** — friend’s email address
-* **first_name** — friend’s first name
-* **last_name** — friend’s last name
-* **ip_address** — friend’s IP address
-* **sub_choice** — subscription choice (optional, present only if the form
-  included subscription checkbox)
-* **subscribed_at** — date friend has subscribed (deprecated; use opted_in_at instead)
-* **opted_in_at** — date friend has subscribed (optional)
-* **unsubscribed_at** — date friend has unsubscribed (optional)
-* **referral_counts** - subhash of |advocate|'s referral counts
+.. include:: /partials/person_fields.rst
+.. |person| replace:: friend
 
-  * **total** — created referrals count
-  * **approved** — approved referrals count
-  * **pending** — count of waiting for approval referrals
+* **ip_address** — friend’s IP address
 
 .. raw:: html
 

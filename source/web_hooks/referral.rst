@@ -97,6 +97,8 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
 
 .. include:: /partials/incentive_types.rst
 
+.. |person| replace:: person
+
 .. raw:: html
 
    <h2>Sample payload</h2>

@@ -42,20 +42,8 @@ merchant side.
 
 * **recipient** — subhash of parameters describing the recipient
 
-  * **first_name** — recipient’s first name
-  * **last_name** — recipient’s last name
-  * **email** — recipient’s email address
-  * **username** — recipient’s username
-  * **unsubscribed_at** — date recipient has unsubscribed
-  * **subscribed_at** — date person has subscribed (deprecated; use opted_in_at instead)
-  * **opted_in_at** — date recipient has subscribed
-  * **sub_choice** — subscription choice
-  * **custom_properties** — hash of recipient’s custom properties (optional)
-  * **referral_counts** - subhash of |advocate|'s referral counts
-
-    * **total** — created referrals count
-    * **approved** — approved referrals count
-    * **pending** — count of waiting for approval referrals
+  .. include:: /partials/person_fields.rst
+  .. |person| replace:: recipient
 
 * **email_type** — described view category
 
