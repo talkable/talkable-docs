@@ -67,7 +67,7 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
   * **short_url_code** – unique offer ID
   * **ip_address**
 
-* **referred_origin** - subhash with referred origin made by friend that created a referral
+* **referred_origin** — subhash with referred origin made by friend that created a referral
 
   .. include:: /partials/origin_fields.rst
 

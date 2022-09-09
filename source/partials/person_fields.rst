@@ -11,7 +11,7 @@
 * **custom_properties** — hash of |person|’s custom properties (optional)
 * **is_loyalty_member** — whether the |person| participates in loyalty program
 * **loyalty_member** — details of the |person| as a loyalty program participant (optional)
-* **referral_counts** - referral counts of |person| as |advocate|
+* **referral_counts** — referral counts of |person| as |advocate|
 
   * **total** — created referrals count
   * **approved** — approved referrals count

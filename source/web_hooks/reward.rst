@@ -135,7 +135,7 @@ Webhook Set Up Steps <web_hooks>`
     * **expires_at** — expiration time of the coupon (deprecated)
     * **valid_until** — expiration time of the coupon in the site time zone
 
-* **advocate_origin** - subhash of data related to the advocate event
+* **advocate_origin** — subhash of data related to the advocate event
 
   * **type**
 
@@ -150,14 +150,14 @@ Webhook Set Up Steps <web_hooks>`
 
    *For Purchase:*
 
-  * **order_number** - unique identifier of advocate’s order
-  * **subtotal** - advocate’s order subtotal
-  * **email** - advocate’s email address
-  * **customer_id** - unique identifier of advocate
-  * **ip_address** - advocate’s order IP address
+  * **order_number** — unique identifier of advocate’s order
+  * **subtotal** — advocate’s order subtotal
+  * **email** — advocate’s email address
+  * **customer_id** — unique identifier of advocate
+  * **ip_address** — advocate’s order IP address
   * **traffic_source** — advocate’s order traffic source
 
-* **friend_origin** - subhash of data related to the friend event
+* **friend_origin** — subhash of data related to the friend event
 
   * **type**
 
@@ -165,11 +165,11 @@ Webhook Set Up Steps <web_hooks>`
     * *"Event"* for custom campaign
 
   * **id** — unique identifier of the friend’s origin
-  * **order_number** - unique identifier of friend’s order
-  * **subtotal** - friend’s order subtotal
-  * **email** - friend’s email address
-  * **customer_id** - unique identifier of friend
-  * **ip_address** - friend’s order IP address
+  * **order_number** — unique identifier of friend’s order
+  * **subtotal** — friend’s order subtotal
+  * **email** — friend’s email address
+  * **customer_id** — unique identifier of friend
+  * **ip_address** — friend’s order IP address
   * **traffic_source** — friend’s order traffic source
 
 .. raw:: html
