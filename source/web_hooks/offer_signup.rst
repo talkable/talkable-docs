@@ -44,25 +44,8 @@ Advocate Signup Form example:
 
   .. include:: /partials/campaign_fields.rst
 
-* **email** — affiliate member’s email address
-
-If the Signup form included first and last name fields or subscription checkbox,
-additional parameters will be present:
-
-* **first_name** — affiliate member’s first name
-* **last_name** — affiliate member’s last name
-* **username** — affiliate member’s username
-* **sub_choice** — subscription choice (optional, present only if the form
-  included subscription checkbox)
-* **subscribed_at** — date affiliate member has subscribed (deprecated; use opted_in_at instead)
-* **opted_in_at** — date affiliate member has subscribed (optional)
-* **unsubscribed_at** — date affiliate member has unsubscribed (optional)
-* **custom_properties** — hash of affiliate member’s custom properties (optional)
-* **referral_counts** - subhash of |advocate|'s referral counts
-
-  * **total** — created referrals count
-  * **approved** — approved referrals count
-  * **pending** — count of waiting for approval referrals
+.. include:: /partials/person_fields.rst
+.. |person| replace:: affiliate member
 
 .. raw:: html
 
@@ -74,6 +57,7 @@ additional parameters will be present:
      "campaign": {
        "cached_slug": 615437538,
        "id": 615437538,
+       "joinable_category_names": ["affiliate_member"],
        "new_customer": null,
        "origin_max_age": null,
        "origin_min_age": null,
@@ -90,9 +74,11 @@ additional parameters will be present:
        "ip_address": "127.0.0.1"
      },
      "opted_in_at": null,
+     "phone_number": "+12025551111",
      "sub_choice": false,
      "subscribed_at": null,
      "unsubscribed_at": null,
+     "custom_properties": {},
      "referral_counts": {
        "total": 0,
        "approved": 0,

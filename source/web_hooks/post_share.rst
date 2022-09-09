@@ -58,6 +58,7 @@ triggered twice.
 * **sharer_info** — subhash of parameters describing the person who shared the offer
 
   .. include:: /partials/person_fields.rst
+  .. |person| replace:: sharer
 
 * **share_link** — link sent in share message (optional, present only for
   Facebook and Twitter shares)
@@ -84,6 +85,7 @@ triggered twice.
        "type": "StandaloneCampaign",
        "cached_slug": 83587635,
        "tag_names": ["default"],
+       "joinable_category_names": ["affiliate_member"],
        "origin_min_age": null,
        "origin_max_age": null,
        "new_customer": null
@@ -96,11 +98,13 @@ triggered twice.
        "first_name": "Bob",
        "last_name": "Smith",
        "email": "sharer@example.com",
+       "phone_number": null,
        "username": "username",
        "unsubscribed_at": null,
        "subscribed_at": "2018-09-27T22:55:13.860+03:00",
        "opted_in_at": "2018-09-27T22:55:13.860+03:00",
        "sub_choice": true,
+       "custom_properties": {},
        "referral_counts": {
          "total": 0,
          "approved": 0,
@@ -114,6 +118,7 @@ triggered twice.
        "type": "Purchase",
        "order_number": "450901776",
        "subtotal": 35.03,
+       "currency_iso_code": "USD",
        "email": "sharer@example.com",
        "customer_id": "565659001",
        "order_date": "2019-04-11T07:28:31.258-07:00",

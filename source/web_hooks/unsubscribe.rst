@@ -31,6 +31,7 @@ Talkable sent email.
 * **person** — subhash of parameters describing the person
 
   .. include:: /partials/person_fields.rst
+  .. |person| replace:: person
 
 .. raw:: html
 
@@ -43,6 +44,7 @@ Talkable sent email.
        "first_name": "Bob",
        "last_name": "Smith",
        "email": "referrer@example.com",
+       "phone_number": "+12025551111",
        "username": "username",
        "unsubscribed_at": null,
        "subscribed_at": "2018-09-27T22:55:13.860+03:00",
@@ -53,6 +55,7 @@ Talkable sent email.
          "approved": 0,
          "pending": 0
        },
+       "custom_properties": {},
        "is_loyalty_member": false,
        "loyalty_member": null
      }

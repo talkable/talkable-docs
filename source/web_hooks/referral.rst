@@ -67,7 +67,7 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
   * **short_url_code** – unique offer ID
   * **ip_address**
 
-* **referred_origin** - subhash with referred origin made by friend that created a referral
+* **referred_origin** — subhash with referred origin made by friend that created a referral
 
   .. include:: /partials/origin_fields.rst
 
@@ -97,6 +97,8 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
 
 .. include:: /partials/incentive_types.rst
 
+.. |person| replace:: person
+
 .. raw:: html
 
    <h2>Sample payload</h2>
@@ -124,6 +126,7 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
        "email": "referrer@example.com",
        "person": {
          "email": "referrer@example.com",
+         "phone_number": "+12025551111",
          "first_name": "Bob",
          "last_name": "Crane",
          "sub_choice": false,
@@ -134,6 +137,9 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
            "total": 0,
            "approved": 0,
            "pending": 0
+         },
+         "custom_properties": {
+           "coffee_roast": "dark"
          },
          "is_loyalty_member": false,
          "loyalty_member": null
@@ -156,6 +162,7 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
        "email": "referred@example.com",
        "person": {
          "email": "referred@example.com",
+         "phone_number": null,
          "first_name": "Alice",
          "last_name": "Smith",
          "username": null,
@@ -181,6 +188,7 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
          "type": "Purchase",
          "order_number": "450901776",
          "subtotal": 35.03,
+         "currency_iso_code": "USD",
          "customer_id": "565659001",
          "ip_address": "127.0.0.1",
          "coupon_code": "WHT29123",
@@ -193,6 +201,7 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
          "email": "referrer@example.com",
          "person": {
            "email": "referrer@example.com",
+           "phone_number": "+12025551111",
            "first_name": "Bob",
            "last_name": "Crane",
            "username": null,
@@ -205,7 +214,9 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
              "approved": 0,
              "pending": 0
            },
-           "custom_properties": {},
+           "custom_properties": {
+             "coffee_roast": "dark"
+           },
            "is_loyalty_member": false,
            "loyalty_member": null
          },
@@ -219,6 +230,7 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
            "order_number": "459179054",
            "order_date": "2021-04-23T19:08:17.000-08:00"
            "subtotal": 11.39,
+           "currency_iso_code": "USD",
            "email": "referred@example.com"
            "customer_id": "376990942",
            "ip_address": "127.0.0.1",

@@ -98,6 +98,7 @@ Webhook Set Up Steps <web_hooks>`
 * **person** — subhash of parameters describing the person that got reward (note: might be **null**)
 
   .. include:: /partials/person_fields.rst
+  .. |person| replace:: person
 
 * **origin** — subhash of data related to the event that issued an offer
 
@@ -134,7 +135,7 @@ Webhook Set Up Steps <web_hooks>`
     * **expires_at** — expiration time of the coupon (deprecated)
     * **valid_until** — expiration time of the coupon in the site time zone
 
-* **advocate_origin** - subhash of data related to the advocate event
+* **advocate_origin** — subhash of data related to the advocate event
 
   * **type**
 
@@ -145,18 +146,18 @@ Webhook Set Up Steps <web_hooks>`
 
    *For Affiliate Member:*
 
-  * **email** — email address of the referrer (Advocate) person
+  * **email** — email address of the referrer (|advocate|) person
 
    *For Purchase:*
 
-  * **order_number** - unique identifier of advocate’s order
-  * **subtotal** - advocate’s order subtotal
-  * **email** - advocate’s email address
-  * **customer_id** - unique identifier of advocate
-  * **ip_address** - advocate’s order IP address
+  * **order_number** — unique identifier of advocate’s order
+  * **subtotal** — advocate’s order subtotal
+  * **email** — advocate’s email address
+  * **customer_id** — unique identifier of advocate
+  * **ip_address** — advocate’s order IP address
   * **traffic_source** — advocate’s order traffic source
 
-* **friend_origin** - subhash of data related to the friend event
+* **friend_origin** — subhash of data related to the friend event
 
   * **type**
 
@@ -164,11 +165,11 @@ Webhook Set Up Steps <web_hooks>`
     * *"Event"* for custom campaign
 
   * **id** — unique identifier of the friend’s origin
-  * **order_number** - unique identifier of friend’s order
-  * **subtotal** - friend’s order subtotal
-  * **email** - friend’s email address
-  * **customer_id** - unique identifier of friend
-  * **ip_address** - friend’s order IP address
+  * **order_number** — unique identifier of friend’s order
+  * **subtotal** — friend’s order subtotal
+  * **email** — friend’s email address
+  * **customer_id** — unique identifier of friend
+  * **ip_address** — friend’s order IP address
   * **traffic_source** — friend’s order traffic source
 
 .. raw:: html
@@ -194,7 +195,22 @@ Reward reason can be of 5 following general types.
 .. code-block:: javascript
 
    {
-     "person": null,
+     "person": {
+       "email": "referrer@example.com",
+       "phone_number": "+12025551111",
+       "first_name": "Bob",
+       "last_name": "Smith",
+       "username": nil,
+       "unsubscribed_at": nil,
+       "opted_in_at": nil,
+       "sub_choice": false,
+       "subscribed_at": nil,
+       "custom_properties": {},
+       "referral_counts": {"total": 0, "approved": 0, "pending": 0},
+       "is_loyalty_member": false,
+       "loyalty_member": nil
+       "gender": nil,
+     },
      "origin": {
        "id": 186742865,
        "type": "AffiliateMember",
@@ -216,6 +232,7 @@ Reward reason can be of 5 following general types.
        "type": "StandaloneCampaign",
        "cached_slug": 500548529,
        "tag_names": ["default"],
+       "joinable_category_names": ["affiliate_member"],
        "origin_min_age": null,
        "origin_max_age": null,
        "new_customer": null
@@ -408,6 +425,7 @@ Reward reason can be of 5 following general types.
        "first_name": "Bob",
        "last_name": "Smith",
        "email": "referrer@example.com",
+       "phone_number": "+12025551111",
        "username": "username",
        "unsubscribed_at": null,
        "subscribed_at": "2018-08-27T21:42:23.060+03:00",
@@ -418,6 +436,7 @@ Reward reason can be of 5 following general types.
          "approved": 0,
          "pending": 0
        },
+       "custom_properties": {},
        "is_loyalty_member": false,
        "loyalty_member": null
      },
@@ -426,6 +445,7 @@ Reward reason can be of 5 following general types.
        "type": "Purchase",
        "order_number": "288015920",
        "subtotal": "6.31",
+       "currency_iso_code": "USD",
        "customer_id": "230652117",
        "ip_address": "127.0.0.1",
        "coupon_code": "WHT25279",
@@ -436,6 +456,7 @@ Reward reason can be of 5 following general types.
        "type": "Purchase",
        "order_number": "288015920",
        "subtotal": "6.31",
+       "currency_iso_code": "USD",
        "customer_id": "230652117",
        "ip_address": "127.0.0.1",
        "coupon_code": "WHT25279",
@@ -446,6 +467,7 @@ Reward reason can be of 5 following general types.
        "type": "Purchase",
        "order_number": "4190583",
        "subtotal": "73.41",
+       "currency_iso_code": "USD",
        "email": "referred@example.com",
        "customer_id": "323518374",
        "ip_address": "127.0.0.1",
@@ -499,6 +521,7 @@ Reward reason can be of 5 following general types.
        "first_name": "Matt",
        "last_name": "Smith",
        "email": "friend@example.com",
+       "phone_number": null,
        "username": "username",
        "unsubscribed_at": null,
        "subscribed_at": "2018-08-27T21:45:29.519+03:00",
@@ -509,6 +532,7 @@ Reward reason can be of 5 following general types.
          "approved": 0,
          "pending": 0
        },
+       "custom_properties": {},
        "is_loyalty_member": false,
        "loyalty_member": null
      },
@@ -517,6 +541,7 @@ Reward reason can be of 5 following general types.
        "type": "Purchase",
        "order_number": "416466456",
        "subtotal": "48.39",
+       "currency_iso_code": "USD",
        "email": "referred@example.com",
        "customer_id": "401088820",
        "ip_address": "127.0.0.1",
@@ -528,6 +553,7 @@ Reward reason can be of 5 following general types.
        "type": "Purchase",
        "order_number": "529868349",
        "subtotal": "25.76",
+       "currency_iso_code": "USD",
        "customer_id": "937735146",
        "ip_address": "127.0.0.1",
        "coupon_code": "WHT15105",
@@ -538,6 +564,7 @@ Reward reason can be of 5 following general types.
        "type": "Purchase",
        "order_number": "416466456",
        "subtotal": "48.39",
+       "currency_iso_code": "USD",
        "email": "referred@example.com",
        "customer_id": "401088820",
        "ip_address": "127.0.0.1",
