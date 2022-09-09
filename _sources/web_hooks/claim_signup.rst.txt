@@ -44,20 +44,10 @@ Friend Email Gating form example:
 
   .. include:: /partials/campaign_fields.rst
 
-* **email** — friend’s email address
-* **first_name** — friend’s first name
-* **last_name** — friend’s last name
-* **ip_address** — friend’s IP address
-* **sub_choice** — subscription choice (optional, present only if the form
-  included subscription checkbox)
-* **subscribed_at** — date friend has subscribed (deprecated; use opted_in_at instead)
-* **opted_in_at** — date friend has subscribed (optional)
-* **unsubscribed_at** — date friend has unsubscribed (optional)
-* **referral_counts** - subhash of |advocate|'s referral counts
+.. include:: /partials/person_fields.rst
+.. |person| replace:: friend
 
-  * **total** — created referrals count
-  * **approved** — approved referrals count
-  * **pending** — count of waiting for approval referrals
+* **ip_address** — friend’s IP address
 
 .. raw:: html
 
@@ -76,11 +66,13 @@ Friend Email Gating form example:
        "type": "StandaloneCampaign",
        "cached_slug": 465427859,
        "tag_names": ["default"],
+       "joinable_category_names": ["affiliate_member"],
        "origin_min_age": null,
        "origin_max_age": null,
        "new_customer": null
      },
      "email": "john@example.com",
+     "phone_number": null,
      "first_name": null,
      "last_name": null,
      "ip_address": "127.0.0.1",
@@ -88,6 +80,9 @@ Friend Email Gating form example:
      "subscribed_at": "2018-09-27T22:54:28.345+03:00",
      "opted_in_at": "2018-09-27T22:54:28.345+03:00",
      "unsubscribed_at": null,
+     "custom_properties": {
+       "preferred_style": "oversize"
+     },
      "referral_counts": {
        "total": 0,
        "approved": 0,

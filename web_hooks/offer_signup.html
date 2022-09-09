@@ -129,21 +129,22 @@ and sharing an offer with Friends.</p>
 <li><p><strong>tag_names</strong> — array of campaign’s tags</p></li>
 </ul>
 </li>
-<li><p><strong>email</strong> — affiliate member’s email address</p></li>
 </ul>
-<p>If the Signup form included first and last name fields or subscription checkbox,
-additional parameters will be present:</p>
 <ul class="simple">
+<li><p><strong>email</strong> — affiliate member’s email address</p></li>
+<li><p><strong>phone_number</strong> — affiliate member’s phone number (optional)</p></li>
 <li><p><strong>first_name</strong> — affiliate member’s first name</p></li>
 <li><p><strong>last_name</strong> — affiliate member’s last name</p></li>
-<li><p><strong>username</strong> — affiliate member’s username</p></li>
+<li><p><strong>username</strong> — affiliate member’s username (optional)</p></li>
 <li><p><strong>sub_choice</strong> — subscription choice (optional, present only if the form
 included subscription checkbox)</p></li>
-<li><p><strong>subscribed_at</strong> — date affiliate member has subscribed (deprecated; use opted_in_at instead)</p></li>
+<li><p><strong>subscribed_at</strong> — date affiliate member has subscribed (deprecated; use <code class="docutils literal notranslate"><span class="pre">opted_in_at</span></code> instead)</p></li>
 <li><p><strong>opted_in_at</strong> — date affiliate member has subscribed (optional)</p></li>
 <li><p><strong>unsubscribed_at</strong> — date affiliate member has unsubscribed (optional)</p></li>
 <li><p><strong>custom_properties</strong> — hash of affiliate member’s custom properties (optional)</p></li>
-<li><p><strong>referral_counts</strong> - subhash of <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>’s referral counts</p>
+<li><p><strong>is_loyalty_member</strong> — whether the affiliate member participates in loyalty program</p></li>
+<li><p><strong>loyalty_member</strong> — details of the affiliate member as a loyalty program participant (optional)</p></li>
+<li><p><strong>referral_counts</strong> — referral counts of affiliate member as <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr></p>
 <ul>
 <li><p><strong>total</strong> — created referrals count</p></li>
 <li><p><strong>approved</strong> — approved referrals count</p></li>
@@ -155,6 +156,7 @@ included subscription checkbox)</p></li>
 <span class="w">  </span><span class="s2">&quot;campaign&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;cached_slug&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">615437538</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">615437538</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;joinable_category_names&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;affiliate_member&quot;</span><span class="p">],</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;new_customer&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;origin_max_age&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;origin_min_age&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
@@ -171,9 +173,11 @@ included subscription checkbox)</p></li>
 <span class="w">    </span><span class="s2">&quot;ip_address&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="w"></span>
 <span class="w">  </span><span class="p">},</span><span class="w"></span>
 <span class="w">  </span><span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;phone_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;+12025551111&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;custom_properties&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
 <span class="w">  </span><span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;total&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;approved&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>

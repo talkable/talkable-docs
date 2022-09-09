@@ -38,30 +38,31 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
 
   *For Purchase:*
 
-     * **email** - email address associated with the Purchase
-     * **order_number** - unique identifier of the Purchase
-     * **customer_id** - unique external identifier of a customer who made the purchase
-     * **subtotal** - order subtotal for the purchase
-     * **coupon_code** - coupon code used with the purchase
-     * **currency_iso_code** - currency ISO code of the Purchase
-     * **traffic_source** - traffic source of the Purchase
-     * **ip_address** - IP address of the Purchase
+     * **email** — email address associated with the Purchase
+     * **order_number** — unique identifier of the Purchase
+     * **customer_id** — unique external identifier of a customer who made the purchase
+     * **subtotal** — order subtotal for the purchase
+     * **coupon_code** — coupon code used with the purchase
+     * **currency_iso_code** — currency ISO code of the Purchase
+     * **traffic_source** — traffic source of the Purchase
+     * **ip_address** — IP address of the Purchase
 
   *For Event:*
 
-     * **email** - email address associated with the Event
-     * **event_category** - identifier of an action that trigger the Event (e.g. ``app_installed``)
-     * **event_number** - unique identifier of the Event within the associated **event_category**
-     * **customer_id** - unique external identifier of a customer who triggered the event
-     * **subtotal** - optional monetary attribute of the Event
-     * **currency_iso_code** - currency ISO code of the Event
-     * **coupon_code** - optional coupon code associated with the Event
-     * **traffic_source** - traffic source of the Event
-     * **ip_address** - IP address of the Event
+     * **email** — email address associated with the Event
+     * **event_category** — identifier of an action that trigger the Event (e.g. ``app_installed``)
+     * **event_number** — unique identifier of the Event within the associated **event_category**
+     * **customer_id** — unique external identifier of a customer who triggered the event
+     * **subtotal** — optional monetary attribute of the Event
+     * **currency_iso_code** — currency ISO code of the Event
+     * **coupon_code** — optional coupon code associated with the Event
+     * **traffic_source** — traffic source of the Event
+     * **ip_address** — IP address of the Event
 
-* **person** - subhash of data describing the person who triggered the event
+* **person** — subhash of data describing the person who triggered the event
 
     .. include:: /partials/person_fields.rst
+    .. |person| replace:: person
 
 .. raw:: html
 
@@ -87,11 +88,13 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
        "first_name": "Bob",
        "last_name": "Smith",
        "email": "referrer@example.com",
+       "phone_number": null,
        "username": "username",
        "unsubscribed_at": null,
        "subscribed_at": "2019-04-11T07:25:17.272-07:00",
        "opted_in_at": "2019-04-11T07:25:17.272-07:00",
        "sub_choice": true,
+       "custom_properties": {},
        "referral_counts": {
          "total": 0,
          "approved": 0,
@@ -133,11 +136,13 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
        "first_name": "Bob",
        "last_name": "Smith",
        "email": "referrer@example.com",
+       "phone_number": "+12025551111",
        "username": "username",
        "unsubscribed_at": null,
        "subscribed_at": "2019-04-11T07:27:31.258-07:00",
        "opted_in_at": "2019-04-11T07:27:31.258-07:00",
        "sub_choice": true,
+       "custom_properties": {},
        "referral_counts": {
          "total": 0,
          "approved": 0,

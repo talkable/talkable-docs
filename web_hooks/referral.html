@@ -154,7 +154,7 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
 <li><p><strong>ip_address</strong></p></li>
 </ul>
 </li>
-<li><p><strong>referred_origin</strong> - subhash with referred origin made by friend that created a referral</p>
+<li><p><strong>referred_origin</strong> — subhash with referred origin made by friend that created a referral</p>
 <ul class="simple">
 <li><p><strong>type</strong></p>
 <ul>
@@ -169,27 +169,27 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
 </li>
 <li><p><strong>id</strong> — unique identifier of the origin event</p></li>
 <li><p><strong>email</strong> — email address of the <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> person</p></li>
-<li><p><strong>customer_id</strong> - unique external identifier of a customer who triggered the origin event</p></li>
+<li><p><strong>customer_id</strong> — unique external identifier of a customer who triggered the origin event</p></li>
 <li><p><strong>traffic_source</strong> — traffic source of the origin event</p></li>
-<li><p><strong>ip_address</strong> - IP address of the origin event</p></li>
-<li><p><strong>currency_iso_code</strong> - currency code of the origin event</p></li>
+<li><p><strong>ip_address</strong> — IP address of the origin event</p></li>
+<li><p><strong>currency_iso_code</strong> — currency code of the origin event</p></li>
 </ul>
 <p><em>For Purchase:</em></p>
 <blockquote>
 <div><ul class="simple">
-<li><p><strong>order_number</strong> - unique identifier of the Purchase</p></li>
-<li><p><strong>subtotal</strong> - order subtotal for the Purchase</p></li>
-<li><p><strong>coupon_code</strong> - coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
-<li><p><strong>order_date</strong> - date of the Purchase</p></li>
+<li><p><strong>order_number</strong> — unique identifier of the Purchase</p></li>
+<li><p><strong>subtotal</strong> — order subtotal for the Purchase</p></li>
+<li><p><strong>coupon_code</strong> — coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
+<li><p><strong>order_date</strong> — date of the Purchase</p></li>
 </ul>
 </div></blockquote>
 <p><em>For Event:</em></p>
 <blockquote>
 <div><ul class="simple">
-<li><p><strong>event_category</strong> - identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
-<li><p><strong>event_number</strong> - unique identifier of the Event within the associated <strong>event_category</strong></p></li>
-<li><p><strong>subtotal</strong> - optional monetary attribute of the Event</p></li>
-<li><p><strong>coupon_code</strong> - coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
+<li><p><strong>event_category</strong> — identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
+<li><p><strong>event_number</strong> — unique identifier of the Event within the associated <strong>event_category</strong></p></li>
+<li><p><strong>subtotal</strong> — optional monetary attribute of the Event</p></li>
+<li><p><strong>coupon_code</strong> — coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 </ul>
 </div></blockquote>
 </li>
@@ -202,7 +202,7 @@ person (except for rewards paid in loyalty points), where each hash contains par
 <li><p><strong>person</strong> — parameters describing the person that got reward</p>
 <ul class="simple">
 <li><p><strong>email</strong> — person’s email address</p></li>
-<li><p><strong>phone_number</strong> — person’s phone number</p></li>
+<li><p><strong>phone_number</strong> — person’s phone number (optional)</p></li>
 <li><p><strong>first_name</strong> — person’s first name</p></li>
 <li><p><strong>last_name</strong> — person’s last name</p></li>
 <li><p><strong>username</strong> — person’s username (optional)</p></li>
@@ -214,7 +214,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>custom_properties</strong> — hash of person’s custom properties (optional)</p></li>
 <li><p><strong>is_loyalty_member</strong> — whether the person participates in loyalty program</p></li>
 <li><p><strong>loyalty_member</strong> — details of the person as a loyalty program participant (optional)</p></li>
-<li><p><strong>referral_counts</strong> - subhash of <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>’s referral counts</p>
+<li><p><strong>referral_counts</strong> — referral counts of person as <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr></p>
 <ul>
 <li><p><strong>total</strong> — created referrals count</p></li>
 <li><p><strong>approved</strong> — approved referrals count</p></li>
@@ -241,27 +241,27 @@ included subscription checkbox)</p></li>
 </li>
 <li><p><strong>id</strong> — unique identifier of the origin event</p></li>
 <li><p><strong>email</strong> — email address of the <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> person</p></li>
-<li><p><strong>customer_id</strong> - unique external identifier of a customer who triggered the origin event</p></li>
+<li><p><strong>customer_id</strong> — unique external identifier of a customer who triggered the origin event</p></li>
 <li><p><strong>traffic_source</strong> — traffic source of the origin event</p></li>
-<li><p><strong>ip_address</strong> - IP address of the origin event</p></li>
-<li><p><strong>currency_iso_code</strong> - currency code of the origin event</p></li>
+<li><p><strong>ip_address</strong> — IP address of the origin event</p></li>
+<li><p><strong>currency_iso_code</strong> — currency code of the origin event</p></li>
 </ul>
 <p><em>For Purchase:</em></p>
 <blockquote>
 <div><ul class="simple">
-<li><p><strong>order_number</strong> - unique identifier of the Purchase</p></li>
-<li><p><strong>subtotal</strong> - order subtotal for the Purchase</p></li>
-<li><p><strong>coupon_code</strong> - coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
-<li><p><strong>order_date</strong> - date of the Purchase</p></li>
+<li><p><strong>order_number</strong> — unique identifier of the Purchase</p></li>
+<li><p><strong>subtotal</strong> — order subtotal for the Purchase</p></li>
+<li><p><strong>coupon_code</strong> — coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
+<li><p><strong>order_date</strong> — date of the Purchase</p></li>
 </ul>
 </div></blockquote>
 <p><em>For Event:</em></p>
 <blockquote>
 <div><ul class="simple">
-<li><p><strong>event_category</strong> - identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
-<li><p><strong>event_number</strong> - unique identifier of the Event within the associated <strong>event_category</strong></p></li>
-<li><p><strong>subtotal</strong> - optional monetary attribute of the Event</p></li>
-<li><p><strong>coupon_code</strong> - coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
+<li><p><strong>event_category</strong> — identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
+<li><p><strong>event_number</strong> — unique identifier of the Event within the associated <strong>event_category</strong></p></li>
+<li><p><strong>subtotal</strong> — optional monetary attribute of the Event</p></li>
+<li><p><strong>coupon_code</strong> — coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 </ul>
 </div></blockquote>
 </li>
@@ -276,7 +276,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>person</strong> — parameters describing the person that got reward</p>
 <ul class="simple">
 <li><p><strong>email</strong> — person’s email address</p></li>
-<li><p><strong>phone_number</strong> — person’s phone number</p></li>
+<li><p><strong>phone_number</strong> — person’s phone number (optional)</p></li>
 <li><p><strong>first_name</strong> — person’s first name</p></li>
 <li><p><strong>last_name</strong> — person’s last name</p></li>
 <li><p><strong>username</strong> — person’s username (optional)</p></li>
@@ -288,7 +288,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>custom_properties</strong> — hash of person’s custom properties (optional)</p></li>
 <li><p><strong>is_loyalty_member</strong> — whether the person participates in loyalty program</p></li>
 <li><p><strong>loyalty_member</strong> — details of the person as a loyalty program participant (optional)</p></li>
-<li><p><strong>referral_counts</strong> - subhash of <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>’s referral counts</p>
+<li><p><strong>referral_counts</strong> — referral counts of person as <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr></p>
 <ul>
 <li><p><strong>total</strong> — created referrals count</p></li>
 <li><p><strong>approved</strong> — approved referrals count</p></li>
@@ -315,27 +315,27 @@ included subscription checkbox)</p></li>
 </li>
 <li><p><strong>id</strong> — unique identifier of the origin event</p></li>
 <li><p><strong>email</strong> — email address of the <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> person</p></li>
-<li><p><strong>customer_id</strong> - unique external identifier of a customer who triggered the origin event</p></li>
+<li><p><strong>customer_id</strong> — unique external identifier of a customer who triggered the origin event</p></li>
 <li><p><strong>traffic_source</strong> — traffic source of the origin event</p></li>
-<li><p><strong>ip_address</strong> - IP address of the origin event</p></li>
-<li><p><strong>currency_iso_code</strong> - currency code of the origin event</p></li>
+<li><p><strong>ip_address</strong> — IP address of the origin event</p></li>
+<li><p><strong>currency_iso_code</strong> — currency code of the origin event</p></li>
 </ul>
 <p><em>For Purchase:</em></p>
 <blockquote>
 <div><ul class="simple">
-<li><p><strong>order_number</strong> - unique identifier of the Purchase</p></li>
-<li><p><strong>subtotal</strong> - order subtotal for the Purchase</p></li>
-<li><p><strong>coupon_code</strong> - coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
-<li><p><strong>order_date</strong> - date of the Purchase</p></li>
+<li><p><strong>order_number</strong> — unique identifier of the Purchase</p></li>
+<li><p><strong>subtotal</strong> — order subtotal for the Purchase</p></li>
+<li><p><strong>coupon_code</strong> — coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
+<li><p><strong>order_date</strong> — date of the Purchase</p></li>
 </ul>
 </div></blockquote>
 <p><em>For Event:</em></p>
 <blockquote>
 <div><ul class="simple">
-<li><p><strong>event_category</strong> - identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
-<li><p><strong>event_number</strong> - unique identifier of the Event within the associated <strong>event_category</strong></p></li>
-<li><p><strong>subtotal</strong> - optional monetary attribute of the Event</p></li>
-<li><p><strong>coupon_code</strong> - coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
+<li><p><strong>event_category</strong> — identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
+<li><p><strong>event_number</strong> — unique identifier of the Event within the associated <strong>event_category</strong></p></li>
+<li><p><strong>subtotal</strong> — optional monetary attribute of the Event</p></li>
+<li><p><strong>coupon_code</strong> — coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 </ul>
 </div></blockquote>
 </li>
@@ -354,7 +354,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>person</strong> — parameters describing the person that got reward</p>
 <ul class="simple">
 <li><p><strong>email</strong> — person’s email address</p></li>
-<li><p><strong>phone_number</strong> — person’s phone number</p></li>
+<li><p><strong>phone_number</strong> — person’s phone number (optional)</p></li>
 <li><p><strong>first_name</strong> — person’s first name</p></li>
 <li><p><strong>last_name</strong> — person’s last name</p></li>
 <li><p><strong>username</strong> — person’s username (optional)</p></li>
@@ -366,7 +366,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>custom_properties</strong> — hash of person’s custom properties (optional)</p></li>
 <li><p><strong>is_loyalty_member</strong> — whether the person participates in loyalty program</p></li>
 <li><p><strong>loyalty_member</strong> — details of the person as a loyalty program participant (optional)</p></li>
-<li><p><strong>referral_counts</strong> - subhash of <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>’s referral counts</p>
+<li><p><strong>referral_counts</strong> — referral counts of person as <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr></p>
 <ul>
 <li><p><strong>total</strong> — created referrals count</p></li>
 <li><p><strong>approved</strong> — approved referrals count</p></li>
@@ -393,27 +393,27 @@ included subscription checkbox)</p></li>
 </li>
 <li><p><strong>id</strong> — unique identifier of the origin event</p></li>
 <li><p><strong>email</strong> — email address of the <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> person</p></li>
-<li><p><strong>customer_id</strong> - unique external identifier of a customer who triggered the origin event</p></li>
+<li><p><strong>customer_id</strong> — unique external identifier of a customer who triggered the origin event</p></li>
 <li><p><strong>traffic_source</strong> — traffic source of the origin event</p></li>
-<li><p><strong>ip_address</strong> - IP address of the origin event</p></li>
-<li><p><strong>currency_iso_code</strong> - currency code of the origin event</p></li>
+<li><p><strong>ip_address</strong> — IP address of the origin event</p></li>
+<li><p><strong>currency_iso_code</strong> — currency code of the origin event</p></li>
 </ul>
 <p><em>For Purchase:</em></p>
 <blockquote>
 <div><ul class="simple">
-<li><p><strong>order_number</strong> - unique identifier of the Purchase</p></li>
-<li><p><strong>subtotal</strong> - order subtotal for the Purchase</p></li>
-<li><p><strong>coupon_code</strong> - coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
-<li><p><strong>order_date</strong> - date of the Purchase</p></li>
+<li><p><strong>order_number</strong> — unique identifier of the Purchase</p></li>
+<li><p><strong>subtotal</strong> — order subtotal for the Purchase</p></li>
+<li><p><strong>coupon_code</strong> — coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
+<li><p><strong>order_date</strong> — date of the Purchase</p></li>
 </ul>
 </div></blockquote>
 <p><em>For Event:</em></p>
 <blockquote>
 <div><ul class="simple">
-<li><p><strong>event_category</strong> - identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
-<li><p><strong>event_number</strong> - unique identifier of the Event within the associated <strong>event_category</strong></p></li>
-<li><p><strong>subtotal</strong> - optional monetary attribute of the Event</p></li>
-<li><p><strong>coupon_code</strong> - coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
+<li><p><strong>event_category</strong> — identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
+<li><p><strong>event_number</strong> — unique identifier of the Event within the associated <strong>event_category</strong></p></li>
+<li><p><strong>subtotal</strong> — optional monetary attribute of the Event</p></li>
+<li><p><strong>coupon_code</strong> — coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 </ul>
 </div></blockquote>
 </li>
@@ -427,7 +427,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>person</strong> — parameters describing the person that got reward</p>
 <ul class="simple">
 <li><p><strong>email</strong> — person’s email address</p></li>
-<li><p><strong>phone_number</strong> — person’s phone number</p></li>
+<li><p><strong>phone_number</strong> — person’s phone number (optional)</p></li>
 <li><p><strong>first_name</strong> — person’s first name</p></li>
 <li><p><strong>last_name</strong> — person’s last name</p></li>
 <li><p><strong>username</strong> — person’s username (optional)</p></li>
@@ -439,7 +439,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>custom_properties</strong> — hash of person’s custom properties (optional)</p></li>
 <li><p><strong>is_loyalty_member</strong> — whether the person participates in loyalty program</p></li>
 <li><p><strong>loyalty_member</strong> — details of the person as a loyalty program participant (optional)</p></li>
-<li><p><strong>referral_counts</strong> - subhash of <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>’s referral counts</p>
+<li><p><strong>referral_counts</strong> — referral counts of person as <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr></p>
 <ul>
 <li><p><strong>total</strong> — created referrals count</p></li>
 <li><p><strong>approved</strong> — approved referrals count</p></li>
@@ -466,27 +466,27 @@ included subscription checkbox)</p></li>
 </li>
 <li><p><strong>id</strong> — unique identifier of the origin event</p></li>
 <li><p><strong>email</strong> — email address of the <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> person</p></li>
-<li><p><strong>customer_id</strong> - unique external identifier of a customer who triggered the origin event</p></li>
+<li><p><strong>customer_id</strong> — unique external identifier of a customer who triggered the origin event</p></li>
 <li><p><strong>traffic_source</strong> — traffic source of the origin event</p></li>
-<li><p><strong>ip_address</strong> - IP address of the origin event</p></li>
-<li><p><strong>currency_iso_code</strong> - currency code of the origin event</p></li>
+<li><p><strong>ip_address</strong> — IP address of the origin event</p></li>
+<li><p><strong>currency_iso_code</strong> — currency code of the origin event</p></li>
 </ul>
 <p><em>For Purchase:</em></p>
 <blockquote>
 <div><ul class="simple">
-<li><p><strong>order_number</strong> - unique identifier of the Purchase</p></li>
-<li><p><strong>subtotal</strong> - order subtotal for the Purchase</p></li>
-<li><p><strong>coupon_code</strong> - coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
-<li><p><strong>order_date</strong> - date of the Purchase</p></li>
+<li><p><strong>order_number</strong> — unique identifier of the Purchase</p></li>
+<li><p><strong>subtotal</strong> — order subtotal for the Purchase</p></li>
+<li><p><strong>coupon_code</strong> — coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
+<li><p><strong>order_date</strong> — date of the Purchase</p></li>
 </ul>
 </div></blockquote>
 <p><em>For Event:</em></p>
 <blockquote>
 <div><ul class="simple">
-<li><p><strong>event_category</strong> - identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
-<li><p><strong>event_number</strong> - unique identifier of the Event within the associated <strong>event_category</strong></p></li>
-<li><p><strong>subtotal</strong> - optional monetary attribute of the Event</p></li>
-<li><p><strong>coupon_code</strong> - coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
+<li><p><strong>event_category</strong> — identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
+<li><p><strong>event_number</strong> — unique identifier of the Event within the associated <strong>event_category</strong></p></li>
+<li><p><strong>subtotal</strong> — optional monetary attribute of the Event</p></li>
+<li><p><strong>coupon_code</strong> — coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 </ul>
 </div></blockquote>
 </li>
@@ -536,6 +536,7 @@ merchant’s side. More information on the reward is specified in
 <span class="w">    </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;person&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;phone_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;+12025551111&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;first_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;last_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Crane&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
@@ -546,6 +547,9 @@ merchant’s side. More information on the reward is specified in
 <span class="w">        </span><span class="s2">&quot;total&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="s2">&quot;approved&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="s2">&quot;pending&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;custom_properties&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;coffee_roast&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;dark&quot;</span><span class="w"></span>
 <span class="w">      </span><span class="p">},</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
@@ -568,6 +572,7 @@ merchant’s side. More information on the reward is specified in
 <span class="w">    </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referred@example.com&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;person&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referred@example.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;phone_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;first_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;last_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Smith&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;username&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
@@ -593,6 +598,7 @@ merchant’s side. More information on the reward is specified in
 <span class="w">      </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Purchase&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;order_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;450901776&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;subtotal&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">35.03</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;currency_iso_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;USD&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;customer_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;565659001&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;ip_address&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;WHT29123&quot;</span><span class="p">,</span><span class="w"></span>
@@ -605,6 +611,7 @@ merchant’s side. More information on the reward is specified in
 <span class="w">      </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;person&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;phone_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;+12025551111&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="s2">&quot;first_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="s2">&quot;last_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Crane&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="s2">&quot;username&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
@@ -617,7 +624,9 @@ merchant’s side. More information on the reward is specified in
 <span class="w">          </span><span class="s2">&quot;approved&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
 <span class="w">          </span><span class="s2">&quot;pending&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"></span>
 <span class="w">        </span><span class="p">},</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;custom_properties&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;custom_properties&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="s2">&quot;coffee_roast&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;dark&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
 <span class="w">        </span><span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
 <span class="w">      </span><span class="p">},</span><span class="w"></span>
@@ -631,6 +640,7 @@ merchant’s side. More information on the reward is specified in
 <span class="w">        </span><span class="s2">&quot;order_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;459179054&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="s2">&quot;order_date&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2021-04-23T19:08:17.000-08:00&quot;</span><span class="w"></span>
 <span class="w">        </span><span class="s2">&quot;subtotal&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">11.39</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;currency_iso_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;USD&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referred@example.com&quot;</span><span class="w"></span>
 <span class="w">        </span><span class="s2">&quot;customer_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;376990942&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">        </span><span class="s2">&quot;ip_address&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"></span>
