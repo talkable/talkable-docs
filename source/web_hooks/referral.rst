@@ -188,6 +188,7 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
          "type": "Purchase",
          "order_number": "450901776",
          "subtotal": 35.03,
+         "currency_iso_code": "USD",
          "customer_id": "565659001",
          "ip_address": "127.0.0.1",
          "coupon_code": "WHT29123",
@@ -229,6 +230,7 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
            "order_number": "459179054",
            "order_date": "2021-04-23T19:08:17.000-08:00"
            "subtotal": 11.39,
+           "currency_iso_code": "USD",
            "email": "referred@example.com"
            "customer_id": "376990942",
            "ip_address": "127.0.0.1",

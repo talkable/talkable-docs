@@ -118,6 +118,7 @@ triggered twice.
        "type": "Purchase",
        "order_number": "450901776",
        "subtotal": 35.03,
+       "currency_iso_code": "USD",
        "email": "sharer@example.com",
        "customer_id": "565659001",
        "order_date": "2019-04-11T07:28:31.258-07:00",
