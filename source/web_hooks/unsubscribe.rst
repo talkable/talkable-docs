@@ -55,6 +55,7 @@ Talkable sent email.
          "approved": 0,
          "pending": 0
        },
+       "custom_properties": {},
        "is_loyalty_member": false,
        "loyalty_member": null
      }

@@ -436,6 +436,7 @@ Reward reason can be of 5 following general types.
          "approved": 0,
          "pending": 0
        },
+       "custom_properties": {},
        "is_loyalty_member": false,
        "loyalty_member": null
      },
@@ -528,6 +529,7 @@ Reward reason can be of 5 following general types.
          "approved": 0,
          "pending": 0
        },
+       "custom_properties": {},
        "is_loyalty_member": false,
        "loyalty_member": null
      },

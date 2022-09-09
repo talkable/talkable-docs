@@ -78,6 +78,7 @@ Advocate Signup Form example:
      "sub_choice": false,
      "subscribed_at": null,
      "unsubscribed_at": null,
+     "custom_properties": {},
      "referral_counts": {
        "total": 0,
        "approved": 0,
