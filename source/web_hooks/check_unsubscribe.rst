@@ -81,6 +81,7 @@ View category can be one of the following:
        "first_name": "Bob",
        "last_name": "Smith",
        "email": "referrer@example.com",
+       "phone_number": "+12025551111",
        "username": "username",
        "unsubscribed_at": null,
        "subscribed_at": "2018-09-27T22:55:40.610+03:00",

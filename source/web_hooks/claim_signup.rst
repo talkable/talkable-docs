@@ -72,6 +72,7 @@ Friend Email Gating form example:
        "new_customer": null
      },
      "email": "john@example.com",
+     "phone_number": null,
      "first_name": null,
      "last_name": null,
      "ip_address": "127.0.0.1",

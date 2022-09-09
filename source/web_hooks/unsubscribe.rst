@@ -44,6 +44,7 @@ Talkable sent email.
        "first_name": "Bob",
        "last_name": "Smith",
        "email": "referrer@example.com",
+       "phone_number": "+12025551111",
        "username": "username",
        "unsubscribed_at": null,
        "subscribed_at": "2018-09-27T22:55:13.860+03:00",

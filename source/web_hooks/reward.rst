@@ -195,7 +195,22 @@ Reward reason can be of 5 following general types.
 .. code-block:: javascript
 
    {
-     "person": null,
+     "person": {
+       "email": "referrer@example.com",
+       "phone_number": "+12025551111",
+       "first_name": "Bob",
+       "last_name": "Smith",
+       "username": nil,
+       "unsubscribed_at": nil,
+       "opted_in_at": nil,
+       "sub_choice": false,
+       "subscribed_at": nil,
+       "custom_properties": {},
+       "referral_counts": {"total": 0, "approved": 0, "pending": 0},
+       "is_loyalty_member": false,
+       "loyalty_member": nil
+       "gender": nil,
+     },
      "origin": {
        "id": 186742865,
        "type": "AffiliateMember",
@@ -410,6 +425,7 @@ Reward reason can be of 5 following general types.
        "first_name": "Bob",
        "last_name": "Smith",
        "email": "referrer@example.com",
+       "phone_number": "+12025551111",
        "username": "username",
        "unsubscribed_at": null,
        "subscribed_at": "2018-08-27T21:42:23.060+03:00",
@@ -501,6 +517,7 @@ Reward reason can be of 5 following general types.
        "first_name": "Matt",
        "last_name": "Smith",
        "email": "friend@example.com",
+       "phone_number": null,
        "username": "username",
        "unsubscribed_at": null,
        "subscribed_at": "2018-08-27T21:45:29.519+03:00",

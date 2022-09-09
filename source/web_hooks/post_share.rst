@@ -98,6 +98,7 @@ triggered twice.
        "first_name": "Bob",
        "last_name": "Smith",
        "email": "sharer@example.com",
+       "phone_number": null,
        "username": "username",
        "unsubscribed_at": null,
        "subscribed_at": "2018-09-27T22:55:13.860+03:00",

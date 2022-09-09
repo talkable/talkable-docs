@@ -126,6 +126,7 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
        "email": "referrer@example.com",
        "person": {
          "email": "referrer@example.com",
+         "phone_number": "+12025551111",
          "first_name": "Bob",
          "last_name": "Crane",
          "sub_choice": false,
@@ -158,6 +159,7 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
        "email": "referred@example.com",
        "person": {
          "email": "referred@example.com",
+         "phone_number": null,
          "first_name": "Alice",
          "last_name": "Smith",
          "username": null,
@@ -195,6 +197,7 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
          "email": "referrer@example.com",
          "person": {
            "email": "referrer@example.com",
+           "phone_number": "+12025551111",
            "first_name": "Bob",
            "last_name": "Crane",
            "username": null,

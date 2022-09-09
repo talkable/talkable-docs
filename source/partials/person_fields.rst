@@ -1,5 +1,5 @@
 * **email** — |person|’s email address
-* **phone_number** — |person|’s phone number
+* **phone_number** — |person|’s phone number (optional)
 * **first_name** — |person|’s first name
 * **last_name** — |person|’s last name
 * **username** — |person|’s username (optional)
