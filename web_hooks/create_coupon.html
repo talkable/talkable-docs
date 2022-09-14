@@ -167,11 +167,16 @@ otherwise fixed discount</p></li>
 <span class="w">  </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="s2">&quot;expires_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2014-04-14T06:17:14.309-07:00&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">  </span><span class="s2">&quot;percentage_discount&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;usage_limit&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;usage_limit&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<h2>cURL example</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl --data <span class="s1">&#39;key=&lt;key&gt;&amp;site=&lt;site&gt;&amp;type=create_coupon_web_hook&amp;payload={&quot;coupon_auto_sync_enabled&quot;:false,&quot;coupon_code&quot;:&quot;WHT58574&quot;,&quot;coupon_list_id&quot;:1,&quot;coupon_list_name&quot;:&quot;$10 off&quot;,&quot;discount_amount&quot;:&quot;10.0&quot;,&quot;email&quot;:null,&quot;expires_at&quot;:&quot;2014-04-14T06:17:14.309-07:00&quot;,&quot;percentage_discount&quot;:false,&quot;usage_limit&quot;:1}&#39;</span> &lt;url&gt;
+<h2>cURL example</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl &lt;url&gt; <span class="se">\</span>
+     -d <span class="s2">&quot;key=&lt;key&gt;&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;site=&lt;site&gt;&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;type=create_coupon_web_hook&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;extras={}&quot;</span> <span class="se">\</span>
+     -d <span class="s1">&#39;payload={&quot;coupon_auto_sync_enabled&quot;:false,&quot;coupon_code&quot;:&quot;WHT58574&quot;,&quot;coupon_list_id&quot;:1,&quot;coupon_list_name&quot;:&quot;$10 off&quot;,&quot;discount_amount&quot;:&quot;10.0&quot;,&quot;email&quot;:null,&quot;expires_at&quot;:&quot;2014-04-14T06:17:14.309-07:00&quot;,&quot;percentage_discount&quot;:false,&quot;usage_limit&quot;:1}&#39;</span>
 </pre></div>
 </div>
 <div class="hidden docutils container">

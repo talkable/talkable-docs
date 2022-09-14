@@ -189,7 +189,8 @@ Webhook Set Up Steps</span></a></p>
 included subscription checkbox)</p></li>
 <li><p><strong>subscribed_at</strong> — date person has subscribed (deprecated; use <code class="docutils literal notranslate"><span class="pre">opted_in_at</span></code> instead)</p></li>
 <li><p><strong>opted_in_at</strong> — date person has subscribed (optional)</p></li>
-<li><p><strong>unsubscribed_at</strong> — date person has unsubscribed (optional)</p></li>
+<li><p><strong>phone_opted_in_at</strong> — date person has subscribed with email (optional)</p></li>
+<li><p><strong>unsubscribed_at</strong> — date person has unsubscribed with phone number (optional)</p></li>
 <li><p><strong>custom_properties</strong> — hash of person’s custom properties (optional)</p></li>
 <li><p><strong>is_loyalty_member</strong> — whether the person participates in loyalty program</p></li>
 <li><p><strong>loyalty_member</strong> — details of the person as a loyalty program participant (optional)</p></li>
@@ -216,17 +217,17 @@ included subscription checkbox)</p></li>
 </ul>
 </li>
 <li><p><strong>id</strong> — unique identifier of the origin event</p></li>
-<li><p><strong>email</strong> — email address of the <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> person</p></li>
+<li><p><strong>email</strong> — email address of the person</p></li>
 <li><p><strong>customer_id</strong> — unique external identifier of a customer who triggered the origin event</p></li>
 <li><p><strong>traffic_source</strong> — traffic source of the origin event</p></li>
 <li><p><strong>ip_address</strong> — IP address of the origin event</p></li>
-<li><p><strong>currency_iso_code</strong> — currency code of the origin event</p></li>
 </ul>
 <p><em>For Purchase:</em></p>
 <blockquote>
 <div><ul class="simple">
 <li><p><strong>order_number</strong> — unique identifier of the Purchase</p></li>
 <li><p><strong>subtotal</strong> — order subtotal for the Purchase</p></li>
+<li><p><strong>currency_iso_code</strong> — currency code of the Purchase</p></li>
 <li><p><strong>coupon_code</strong> — coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 <li><p><strong>order_date</strong> — date of the Purchase</p></li>
 </ul>
@@ -237,6 +238,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>event_category</strong> — identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
 <li><p><strong>event_number</strong> — unique identifier of the Event within the associated <strong>event_category</strong></p></li>
 <li><p><strong>subtotal</strong> — optional monetary attribute of the Event</p></li>
+<li><p><strong>currency_iso_code</strong> — currency code of the Event, defaults to site currency</p></li>
 <li><p><strong>coupon_code</strong> — coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 </ul>
 </div></blockquote>
@@ -274,50 +276,85 @@ as opposed to a fixed value</p></li>
 </li>
 </ul>
 </li>
-<li><p><strong>advocate_origin</strong> — subhash of data related to the advocate event</p>
+<li><p><strong>advocate_origin</strong> — subhash of data related to the <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> origin</p>
 <ul class="simple">
 <li><p><strong>type</strong></p>
 <ul>
-<li><p><em>“Purchase”</em> for post-purchase campaign</p></li>
-<li><p><em>“AffiliateMember”</em> for standalone campaign</p></li>
+<li><p><em>“Purchase”</em> for post-purchase placement</p></li>
+<li><p><em>“AffiliateMember”</em> for standalone, floating widget, or gleam placements</p></li>
+<li><dl class="simple">
+<dt><em>“Event”</em> for post-event placement (such as a signup page which triggers a</dt><dd><p>referral campaign)</p>
+</dd>
+</dl>
+</li>
 </ul>
 </li>
-<li><p><strong>id</strong> — unique identifier of the advocate’s origin event</p></li>
+<li><p><strong>id</strong> — unique identifier of the origin event</p></li>
+<li><p><strong>email</strong> — email address of the person</p></li>
+<li><p><strong>customer_id</strong> — unique external identifier of a customer who triggered the origin event</p></li>
+<li><p><strong>traffic_source</strong> — traffic source of the origin event</p></li>
+<li><p><strong>ip_address</strong> — IP address of the origin event</p></li>
 </ul>
+<p><em>For Purchase:</em></p>
 <blockquote>
-<div><p><em>For Affiliate Member:</em></p>
-</div></blockquote>
-<ul class="simple">
-<li><p><strong>email</strong> — email address of the referrer (<abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>) person</p></li>
+<div><ul class="simple">
+<li><p><strong>order_number</strong> — unique identifier of the Purchase</p></li>
+<li><p><strong>subtotal</strong> — order subtotal for the Purchase</p></li>
+<li><p><strong>currency_iso_code</strong> — currency code of the Purchase</p></li>
+<li><p><strong>coupon_code</strong> — coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
+<li><p><strong>order_date</strong> — date of the Purchase</p></li>
 </ul>
+</div></blockquote>
+<p><em>For Event:</em></p>
 <blockquote>
-<div><p><em>For Purchase:</em></p>
-</div></blockquote>
-<ul class="simple">
-<li><p><strong>order_number</strong> — unique identifier of advocate’s order</p></li>
-<li><p><strong>subtotal</strong> — advocate’s order subtotal</p></li>
-<li><p><strong>email</strong> — advocate’s email address</p></li>
-<li><p><strong>customer_id</strong> — unique identifier of advocate</p></li>
-<li><p><strong>ip_address</strong> — advocate’s order IP address</p></li>
-<li><p><strong>traffic_source</strong> — advocate’s order traffic source</p></li>
+<div><ul class="simple">
+<li><p><strong>event_category</strong> — identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
+<li><p><strong>event_number</strong> — unique identifier of the Event within the associated <strong>event_category</strong></p></li>
+<li><p><strong>subtotal</strong> — optional monetary attribute of the Event</p></li>
+<li><p><strong>currency_iso_code</strong> — currency code of the Event, defaults to site currency</p></li>
+<li><p><strong>coupon_code</strong> — coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 </ul>
+</div></blockquote>
 </li>
-<li><p><strong>friend_origin</strong> — subhash of data related to the friend event</p>
+<li><p><strong>friend_origin</strong> — subhash of data related to the <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> origin</p>
 <ul class="simple">
 <li><p><strong>type</strong></p>
 <ul>
-<li><p><em>“Purchase”</em> for post-purchase campaign</p></li>
-<li><p><em>“Event”</em> for custom campaign</p></li>
+<li><p><em>“Purchase”</em> for post-purchase placement</p></li>
+<li><p><em>“AffiliateMember”</em> for standalone, floating widget, or gleam placements</p></li>
+<li><dl class="simple">
+<dt><em>“Event”</em> for post-event placement (such as a signup page which triggers a</dt><dd><p>referral campaign)</p>
+</dd>
+</dl>
+</li>
 </ul>
 </li>
-<li><p><strong>id</strong> — unique identifier of the friend’s origin</p></li>
-<li><p><strong>order_number</strong> — unique identifier of friend’s order</p></li>
-<li><p><strong>subtotal</strong> — friend’s order subtotal</p></li>
-<li><p><strong>email</strong> — friend’s email address</p></li>
-<li><p><strong>customer_id</strong> — unique identifier of friend</p></li>
-<li><p><strong>ip_address</strong> — friend’s order IP address</p></li>
-<li><p><strong>traffic_source</strong> — friend’s order traffic source</p></li>
+<li><p><strong>id</strong> — unique identifier of the origin event</p></li>
+<li><p><strong>email</strong> — email address of the person</p></li>
+<li><p><strong>customer_id</strong> — unique external identifier of a customer who triggered the origin event</p></li>
+<li><p><strong>traffic_source</strong> — traffic source of the origin event</p></li>
+<li><p><strong>ip_address</strong> — IP address of the origin event</p></li>
 </ul>
+<p><em>For Purchase:</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>order_number</strong> — unique identifier of the Purchase</p></li>
+<li><p><strong>subtotal</strong> — order subtotal for the Purchase</p></li>
+<li><p><strong>currency_iso_code</strong> — currency code of the Purchase</p></li>
+<li><p><strong>coupon_code</strong> — coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
+<li><p><strong>order_date</strong> — date of the Purchase</p></li>
+</ul>
+</div></blockquote>
+<p><em>For Event:</em></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>event_category</strong> — identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
+<li><p><strong>event_number</strong> — unique identifier of the Event within the associated <strong>event_category</strong></p></li>
+<li><p><strong>subtotal</strong> — optional monetary attribute of the Event</p></li>
+<li><p><strong>currency_iso_code</strong> — currency code of the Event, defaults to site currency</p></li>
+<li><p><strong>coupon_code</strong> — coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
+</ul>
+</div></blockquote>
 </li>
 </ul>
 <h2>Reasons</h2><p>Reward reason can be of 5 following general types.</p>
@@ -356,23 +393,25 @@ automatically.</p>
 <span class="w">    </span><span class="s2">&quot;phone_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;+12025551111&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;first_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;last_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Smith&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;username&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">nil</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">nil</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">nil</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;username&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;phone_opted_in_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">nil</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;custom_properties&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="s2">&quot;total&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;approved&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;pending&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">},</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">nil</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;gender&quot;</span><span class="o">:</span><span class="w"> </span><span class="nx">nil</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;gender&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
 <span class="w">  </span><span class="p">},</span><span class="w"></span>
 <span class="w">  </span><span class="s2">&quot;origin&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">186742865</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;AffiliateMember&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;customer_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;910930418&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;ip_address&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;ip_address&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;traffic_source&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;unknown&quot;</span><span class="w"></span>
 <span class="w">  </span><span class="p">},</span><span class="w"></span>
 <span class="w">  </span><span class="s2">&quot;advocate_origin&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">186742865</span><span class="p">,</span><span class="w"></span>
@@ -395,7 +434,8 @@ automatically.</p>
 <span class="w">  </span><span class="p">},</span><span class="w"></span>
 <span class="w">  </span><span class="s2">&quot;offer&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;short_url_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1a2PV&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;short_url_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;1a2PV&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;ip_address&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="w"></span>
 <span class="w">  </span><span class="p">},</span><span class="w"></span>
 <span class="w">  </span><span class="s2">&quot;reward&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">8261257</span><span class="p">,</span><span class="w"></span>
@@ -424,7 +464,12 @@ automatically.</p>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<h2>cURL example | Reason = signup</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl --data <span class="s1">&#39;key=&lt;key&gt;&amp;site=&lt;site&gt;&amp;type=reward_web_hook&amp;payload={&quot;person&quot;:null,&quot;origin&quot;:{&quot;id&quot;:186742865,&quot;type&quot;:&quot;AffiliateMember&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;customer_id&quot;:&quot;910930418&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;unknown&quot;},&quot;advocate_origin&quot;:{&quot;id&quot;:186742865,&quot;type&quot;:&quot;AffiliateMember&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;customer_id&quot;:&quot;910930418&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;unknown&quot;},&quot;friend_origin&quot;:null,&quot;campaign&quot;:{&quot;id&quot;:500548529,&quot;type&quot;:&quot;StandaloneCampaign&quot;,&quot;cached_slug&quot;:500548529,&quot;tag_names&quot;:[&quot;default&quot;],&quot;origin_min_age&quot;:null,&quot;origin_max_age&quot;:null,&quot;new_customer&quot;:null},&quot;offer&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;short_url_code&quot;:&quot;1a2PV&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;},&quot;reward&quot;:{&quot;id&quot;:8261257,&quot;reason&quot;:&quot;signup&quot;,&quot;incentive_type&quot;:&quot;discount_coupon&quot;,&quot;incentive_identifier&quot;:&quot;signup&quot;,&quot;incentive_description&quot;:&quot;signup coupon \&quot;SAMPLE-COUPON-CODE\&quot; for $10.00 off&quot;,&quot;incentive_custom_description&quot;:null,&quot;amount&quot;:&quot;10.0&quot;,&quot;coupon&quot;:{&quot;code&quot;:&quot;SAMPLE-COUPON-CODE&quot;,&quot;active&quot;:true,&quot;valid_until&quot;:null,&quot;single_use&quot;:false,&quot;used&quot;:false,&quot;usages&quot;:null,&quot;amount&quot;:10.0,&quot;percentage_discount&quot;:null,&quot;description&quot;:&quot;$10&quot;,&quot;id&quot;:60477154,&quot;expires_at&quot;:null},&quot;coupon_code&quot;:&quot;SAMPLE-COUPON-CODE&quot;,&quot;status&quot;:&quot;Paid&quot;}}&#39;</span> &lt;url&gt;
+<h2>cURL example | Reason = signup</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl &lt;url&gt; <span class="se">\</span>
+     -d <span class="s2">&quot;key=&lt;key&gt;&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;site=&lt;site&gt;&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;type=reward_web_hook&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;extras={}&quot;</span> <span class="se">\</span>
+     -d <span class="s1">&#39;payload={&quot;person&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;phone_number&quot;:&quot;+12025551111&quot;,&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;username&quot;:null,&quot;unsubscribed_at&quot;:null,&quot;opted_in_at&quot;:null,&quot;phone_opted_in_at&quot;:null,&quot;sub_choice&quot;:false,&quot;subscribed_at&quot;:null,&quot;custom_properties&quot;:{},&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0},&quot;is_loyalty_member&quot;:false,&quot;loyalty_member&quot;:null,&quot;gender&quot;:null},&quot;origin&quot;:{&quot;id&quot;:186742865,&quot;type&quot;:&quot;AffiliateMember&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;customer_id&quot;:&quot;910930418&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;unknown&quot;},&quot;advocate_origin&quot;:{&quot;id&quot;:186742865,&quot;type&quot;:&quot;AffiliateMember&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;customer_id&quot;:&quot;910930418&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;unknown&quot;},&quot;friend_origin&quot;:null,&quot;campaign&quot;:{&quot;id&quot;:500548529,&quot;type&quot;:&quot;StandaloneCampaign&quot;,&quot;cached_slug&quot;:500548529,&quot;tag_names&quot;:[&quot;default&quot;],&quot;joinable_category_names&quot;:[&quot;affiliate_member&quot;],&quot;origin_min_age&quot;:null,&quot;origin_max_age&quot;:null,&quot;new_customer&quot;:null},&quot;offer&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;short_url_code&quot;:&quot;1a2PV&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;},&quot;reward&quot;:{&quot;id&quot;:8261257,&quot;reason&quot;:&quot;signup&quot;,&quot;incentive_type&quot;:&quot;discount_coupon&quot;,&quot;incentive_identifier&quot;:&quot;signup&quot;,&quot;incentive_description&quot;:&quot;signup coupon \&quot;SAMPLE-COUPON-CODE\&quot; for $10.00 off&quot;,&quot;incentive_custom_description&quot;:null,&quot;amount&quot;:&quot;10.0&quot;,&quot;coupon&quot;:{&quot;code&quot;:&quot;SAMPLE-COUPON-CODE&quot;,&quot;active&quot;:true,&quot;valid_until&quot;:null,&quot;single_use&quot;:false,&quot;used&quot;:false,&quot;usages&quot;:null,&quot;amount&quot;:10.0,&quot;percentage_discount&quot;:null,&quot;description&quot;:&quot;$10&quot;,&quot;id&quot;:60477154,&quot;expires_at&quot;:null},&quot;coupon_code&quot;:&quot;SAMPLE-COUPON-CODE&quot;,&quot;status&quot;:&quot;Paid&quot;}}&#39;</span>
 </pre></div>
 </div>
 <h2>Sample payload | Reason = shared</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
@@ -451,6 +496,7 @@ automatically.</p>
 <span class="w">    </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;StandaloneCampaign&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;cached_slug&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">500548529</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;tag_names&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;joinable_category_names&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;affiliate_member&quot;</span><span class="p">],</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;origin_min_age&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;origin_max_age&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;new_customer&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
@@ -487,7 +533,12 @@ automatically.</p>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<h2>cURL example | Reason = shared</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl --data <span class="s1">&#39;key=&lt;key&gt;&amp;site=&lt;site&gt;&amp;type=reward_web_hook&amp;payload={&quot;person&quot;:null,&quot;origin&quot;:{&quot;id&quot;:186742865,&quot;type&quot;:&quot;AffiliateMember&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;customer_id&quot;:&quot;910930418&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;unknown&quot;},&quot;advocate_origin&quot;:{&quot;id&quot;:186742865,&quot;type&quot;:&quot;AffiliateMember&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;customer_id&quot;:&quot;910930418&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;unknown&quot;},&quot;friend_origin&quot;:null,&quot;campaign&quot;:{&quot;id&quot;:500548529,&quot;type&quot;:&quot;StandaloneCampaign&quot;,&quot;cached_slug&quot;:500548529,&quot;tag_names&quot;:[&quot;default&quot;],&quot;origin_min_age&quot;:null,&quot;origin_max_age&quot;:null,&quot;new_customer&quot;:null},&quot;offer&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;short_url_code&quot;:&quot;1a2PV&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;},&quot;reward&quot;:{&quot;id&quot;:8260964,&quot;reason&quot;:&quot;shared&quot;,&quot;incentive_type&quot;:&quot;discount_coupon&quot;,&quot;incentive_identifier&quot;:&quot;sharing&quot;,&quot;incentive_description&quot;:&quot;shared coupon \&quot;SAMPLE-COUPON-CODE\&quot; for $10.00 off&quot;,&quot;incentive_custom_description&quot;:null,&quot;amount&quot;:&quot;10.0&quot;,&quot;coupon&quot;:{&quot;code&quot;:&quot;SAMPLE-COUPON-CODE&quot;,&quot;active&quot;:true,&quot;valid_until&quot;:null,&quot;single_use&quot;:false,&quot;used&quot;:false,&quot;usages&quot;:null,&quot;amount&quot;:10.0,&quot;percentage_discount&quot;:null,&quot;description&quot;:&quot;$10&quot;,&quot;id&quot;:60477154,&quot;expires_at&quot;:null},&quot;coupon_code&quot;:&quot;SAMPLE-COUPON-CODE&quot;,&quot;status&quot;:&quot;Paid&quot;}}&#39;</span> &lt;url&gt;
+<h2>cURL example | Reason = shared</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl &lt;url&gt; <span class="se">\</span>
+     -d <span class="s2">&quot;key=&lt;key&gt;&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;site=&lt;site&gt;&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;type=reward_web_hook&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;extras={}&quot;</span> <span class="se">\</span>
+     -d <span class="s1">&#39;payload={&quot;person&quot;:null,&quot;origin&quot;:{&quot;id&quot;:186742865,&quot;type&quot;:&quot;AffiliateMember&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;customer_id&quot;:&quot;910930418&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;unknown&quot;},&quot;advocate_origin&quot;:{&quot;id&quot;:186742865,&quot;type&quot;:&quot;AffiliateMember&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;customer_id&quot;:&quot;910930418&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;unknown&quot;},&quot;friend_origin&quot;:null,&quot;campaign&quot;:{&quot;id&quot;:500548529,&quot;type&quot;:&quot;StandaloneCampaign&quot;,&quot;cached_slug&quot;:500548529,&quot;tag_names&quot;:[&quot;default&quot;],&quot;joinable_category_names&quot;:[&quot;affiliate_member&quot;],&quot;origin_min_age&quot;:null,&quot;origin_max_age&quot;:null,&quot;new_customer&quot;:null},&quot;offer&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;short_url_code&quot;:&quot;1a2PV&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;},&quot;reward&quot;:{&quot;id&quot;:8260964,&quot;reason&quot;:&quot;shared&quot;,&quot;incentive_type&quot;:&quot;discount_coupon&quot;,&quot;incentive_identifier&quot;:&quot;sharing&quot;,&quot;incentive_description&quot;:&quot;shared coupon \&quot;SAMPLE-COUPON-CODE\&quot; for $10.00 off&quot;,&quot;incentive_custom_description&quot;:null,&quot;amount&quot;:&quot;10.0&quot;,&quot;coupon&quot;:{&quot;code&quot;:&quot;SAMPLE-COUPON-CODE&quot;,&quot;active&quot;:true,&quot;valid_until&quot;:null,&quot;single_use&quot;:false,&quot;used&quot;:false,&quot;usages&quot;:null,&quot;amount&quot;:10.0,&quot;percentage_discount&quot;:null,&quot;description&quot;:&quot;$10&quot;,&quot;id&quot;:60477154,&quot;expires_at&quot;:null},&quot;coupon_code&quot;:&quot;SAMPLE-COUPON-CODE&quot;,&quot;status&quot;:&quot;Paid&quot;}}&#39;</span>
 </pre></div>
 </div>
 <h2>Sample payload | Reason = click</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
@@ -507,6 +558,7 @@ automatically.</p>
 <span class="w">    </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;StandaloneCampaign&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;cached_slug&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">312538309</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;tag_names&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;joinable_category_names&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;affiliate_member&quot;</span><span class="p">],</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;origin_min_age&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;origin_max_age&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;new_customer&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
@@ -543,7 +595,12 @@ automatically.</p>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<h2>cURL example | Reason = click</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl --data <span class="s1">&#39;key=&lt;key&gt;&amp;site=&lt;site&gt;&amp;type=reward_web_hook&amp;payload={&quot;person&quot;:null,&quot;origin&quot;:null,&quot;advocate_origin&quot;:{&quot;id&quot;:395950177,&quot;type&quot;:&quot;AffiliateMember&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;customer_id&quot;:&quot;180484020&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;unknown&quot;},&quot;friend_origin&quot;:null,&quot;campaign&quot;:{&quot;id&quot;:312538309,&quot;type&quot;:&quot;StandaloneCampaign&quot;,&quot;cached_slug&quot;:312538309,&quot;tag_names&quot;:[&quot;default&quot;],&quot;origin_min_age&quot;:null,&quot;origin_max_age&quot;:null,&quot;new_customer&quot;:null},&quot;offer&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;short_url_code&quot;:&quot;1a2PV&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;},&quot;reward&quot;:{&quot;id&quot;:8261304,&quot;reason&quot;:&quot;click&quot;,&quot;incentive_type&quot;:&quot;discount_coupon&quot;,&quot;incentive_identifier&quot;:&quot;click&quot;,&quot;incentive_description&quot;:&quot;shared coupon \&quot;SAMPLE-COUPON-CODE\&quot; for $10 off&quot;,&quot;incentive_custom_description&quot;:null,&quot;amount&quot;:&quot;10.0&quot;,&quot;coupon&quot;:{&quot;code&quot;:&quot;SAMPLE-COUPON-CODE&quot;,&quot;active&quot;:true,&quot;valid_until&quot;:null,&quot;single_use&quot;:false,&quot;used&quot;:false,&quot;usages&quot;:null,&quot;amount&quot;:10.0,&quot;percentage_discount&quot;:null,&quot;description&quot;:&quot;$10&quot;,&quot;id&quot;:60477154,&quot;expires_at&quot;:null},&quot;coupon_code&quot;:&quot;SAMPLE-COUPON-CODE&quot;,&quot;status&quot;:&quot;Paid&quot;}}&#39;</span> &lt;url&gt;
+<h2>cURL example | Reason = click</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl &lt;url&gt; <span class="se">\</span>
+     -d <span class="s2">&quot;key=&lt;key&gt;&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;site=&lt;site&gt;&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;type=reward_web_hook&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;extras={}&quot;</span> <span class="se">\</span>
+     -d <span class="s1">&#39;payload={&quot;person&quot;:null,&quot;origin&quot;:null,&quot;advocate_origin&quot;:{&quot;id&quot;:395950177,&quot;type&quot;:&quot;AffiliateMember&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;customer_id&quot;:&quot;180484020&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;unknown&quot;},&quot;friend_origin&quot;:null,&quot;campaign&quot;:{&quot;id&quot;:312538309,&quot;type&quot;:&quot;StandaloneCampaign&quot;,&quot;cached_slug&quot;:312538309,&quot;tag_names&quot;:[&quot;default&quot;],&quot;joinable_category_names&quot;:[&quot;affiliate_member&quot;],&quot;origin_min_age&quot;:null,&quot;origin_max_age&quot;:null,&quot;new_customer&quot;:null},&quot;offer&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;short_url_code&quot;:&quot;1a2PV&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;},&quot;reward&quot;:{&quot;id&quot;:8261304,&quot;reason&quot;:&quot;click&quot;,&quot;incentive_type&quot;:&quot;discount_coupon&quot;,&quot;incentive_identifier&quot;:&quot;click&quot;,&quot;incentive_description&quot;:&quot;shared coupon \&quot;SAMPLE-COUPON-CODE\&quot; for $10 off&quot;,&quot;incentive_custom_description&quot;:null,&quot;amount&quot;:&quot;10.0&quot;,&quot;coupon&quot;:{&quot;code&quot;:&quot;SAMPLE-COUPON-CODE&quot;,&quot;active&quot;:true,&quot;valid_until&quot;:null,&quot;single_use&quot;:false,&quot;used&quot;:false,&quot;usages&quot;:null,&quot;amount&quot;:10.0,&quot;percentage_discount&quot;:null,&quot;description&quot;:&quot;$10&quot;,&quot;id&quot;:60477154,&quot;expires_at&quot;:null},&quot;coupon_code&quot;:&quot;SAMPLE-COUPON-CODE&quot;,&quot;status&quot;:&quot;Paid&quot;}}&#39;</span>
 </pre></div>
 </div>
 <h2>Sample payload | Reason = referrer</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
@@ -556,6 +613,7 @@ automatically.</p>
 <span class="w">    </span><span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2018-08-27T21:42:23.060+03:00&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2018-08-27T21:42:23.060+03:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;phone_opted_in_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2018-08-27T21:42:23.060+03:00&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;total&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
@@ -572,6 +630,7 @@ automatically.</p>
 <span class="w">    </span><span class="s2">&quot;order_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;288015920&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;subtotal&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;6.31&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;currency_iso_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;USD&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;customer_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;230652117&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;ip_address&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;WHT25279&quot;</span><span class="p">,</span><span class="w"></span>
@@ -583,6 +642,7 @@ automatically.</p>
 <span class="w">    </span><span class="s2">&quot;order_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;288015920&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;subtotal&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;6.31&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;currency_iso_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;USD&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;customer_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;230652117&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;ip_address&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;WHT25279&quot;</span><span class="p">,</span><span class="w"></span>
@@ -605,6 +665,7 @@ automatically.</p>
 <span class="w">    </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;StandaloneCampaign&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;cached_slug&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">484002505</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;tag_names&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;joinable_category_names&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;purchase&quot;</span><span class="p">],</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;origin_min_age&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;origin_max_age&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;new_customer&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
@@ -629,19 +690,25 @@ automatically.</p>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<h2>cURL example | Reason = referrer</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl --data <span class="s1">&#39;key=&lt;key&gt;&amp;site=&lt;site&gt;&amp;type=reward_web_hook&amp;payload={&quot;person&quot;:{&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;username&quot;:&quot;username&quot;,&quot;unsubscribed_at&quot;:null,&quot;subscribed_at&quot;:&quot;2018-08-27T21:42:23.060+03:00&quot;,&quot;opted_in_at&quot;:&quot;2018-08-27T21:42:23.060+03:00&quot;,&quot;sub_choice&quot;:true,&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0}},&quot;origin&quot;:{&quot;id&quot;:280695079,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;288015920&quot;,&quot;subtotal&quot;:&quot;6.31&quot;,&quot;customer_id&quot;:&quot;230652117&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT25279&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;},&quot;advocate_origin&quot;:{&quot;id&quot;:280695079,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;288015920&quot;,&quot;subtotal&quot;:&quot;6.31&quot;,&quot;customer_id&quot;:&quot;230652117&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT25279&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;},&quot;friend_origin&quot;:{&quot;id&quot;:264084636,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;4190583&quot;,&quot;subtotal&quot;:&quot;73.41&quot;,&quot;email&quot;:&quot;referred@example.com&quot;,&quot;customer_id&quot;:&quot;323518374&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT40052&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;},&quot;campaign&quot;:{&quot;id&quot;:484002505,&quot;type&quot;:&quot;StandaloneCampaign&quot;,&quot;cached_slug&quot;:484002505,&quot;tag_names&quot;:[&quot;default&quot;],&quot;origin_min_age&quot;:null,&quot;origin_max_age&quot;:null,&quot;new_customer&quot;:null},&quot;offer&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;short_url_code&quot;:&quot;1a2PV&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;},&quot;reward&quot;:{&quot;id&quot;:8261305,&quot;reason&quot;:&quot;referrer&quot;,&quot;incentive_type&quot;:&quot;rebate&quot;,&quot;incentive_identifier&quot;:&quot;referrer&quot;,&quot;incentive_description&quot;:&quot;$10.00 back&quot;,&quot;incentive_custom_description&quot;:null,&quot;amount&quot;:&quot;10.0&quot;,&quot;coupon&quot;:{},&quot;coupon_code&quot;:null,&quot;status&quot;:&quot;Paid&quot;}}&#39;</span> &lt;url&gt;
+<h2>cURL example | Reason = referrer</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl &lt;url&gt; <span class="se">\</span>
+     -d <span class="s2">&quot;key=&lt;key&gt;&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;site=&lt;site&gt;&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;type=reward_web_hook&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;extras={}&quot;</span> <span class="se">\</span>
+     -d <span class="s1">&#39;payload={&quot;person&quot;:{&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;phone_number&quot;:&quot;+12025551111&quot;,&quot;username&quot;:&quot;username&quot;,&quot;unsubscribed_at&quot;:null,&quot;subscribed_at&quot;:&quot;2018-08-27T21:42:23.060+03:00&quot;,&quot;opted_in_at&quot;:&quot;2018-08-27T21:42:23.060+03:00&quot;,&quot;phone_opted_in_at&quot;:&quot;2018-08-27T21:42:23.060+03:00&quot;,&quot;sub_choice&quot;:true,&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0},&quot;custom_properties&quot;:{},&quot;is_loyalty_member&quot;:false,&quot;loyalty_member&quot;:null},&quot;origin&quot;:{&quot;id&quot;:280695079,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;288015920&quot;,&quot;subtotal&quot;:&quot;6.31&quot;,&quot;currency_iso_code&quot;:&quot;USD&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;customer_id&quot;:&quot;230652117&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT25279&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;},&quot;advocate_origin&quot;:{&quot;id&quot;:280695079,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;288015920&quot;,&quot;subtotal&quot;:&quot;6.31&quot;,&quot;currency_iso_code&quot;:&quot;USD&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;customer_id&quot;:&quot;230652117&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT25279&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;},&quot;friend_origin&quot;:{&quot;id&quot;:264084636,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;4190583&quot;,&quot;subtotal&quot;:&quot;73.41&quot;,&quot;currency_iso_code&quot;:&quot;USD&quot;,&quot;email&quot;:&quot;referred@example.com&quot;,&quot;customer_id&quot;:&quot;323518374&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT40052&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;},&quot;campaign&quot;:{&quot;id&quot;:484002505,&quot;type&quot;:&quot;StandaloneCampaign&quot;,&quot;cached_slug&quot;:484002505,&quot;tag_names&quot;:[&quot;default&quot;],&quot;joinable_category_names&quot;:[&quot;purchase&quot;],&quot;origin_min_age&quot;:null,&quot;origin_max_age&quot;:null,&quot;new_customer&quot;:null},&quot;offer&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;short_url_code&quot;:&quot;1a2PV&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;},&quot;reward&quot;:{&quot;id&quot;:8261305,&quot;reason&quot;:&quot;referrer&quot;,&quot;incentive_type&quot;:&quot;rebate&quot;,&quot;incentive_identifier&quot;:&quot;referrer&quot;,&quot;incentive_description&quot;:&quot;$10.00 back&quot;,&quot;incentive_custom_description&quot;:null,&quot;amount&quot;:&quot;10.0&quot;,&quot;coupon&quot;:{},&quot;coupon_code&quot;:null,&quot;status&quot;:&quot;Paid&quot;}}&#39;</span>
 </pre></div>
 </div>
 <h2>Sample payload | Reason = referred</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="s2">&quot;person&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;first_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Matt&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;last_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Smith&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;friend@example.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referred@example.com&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;phone_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;username&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;username&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2018-08-27T21:45:29.519+03:00&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2018-08-27T21:45:29.519+03:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;phone_opted_in_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;total&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
@@ -670,6 +737,7 @@ automatically.</p>
 <span class="w">    </span><span class="s2">&quot;order_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;529868349&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;subtotal&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;25.76&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;currency_iso_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;USD&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;customer_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;937735146&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;ip_address&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;WHT15105&quot;</span><span class="p">,</span><span class="w"></span>
@@ -692,6 +760,7 @@ automatically.</p>
 <span class="w">    </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;StandaloneCampaign&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;cached_slug&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">944706822</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;tag_names&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;joinable_category_names&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;purchase&quot;</span><span class="p">],</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;origin_min_age&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;origin_max_age&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;new_customer&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
@@ -716,7 +785,12 @@ automatically.</p>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<h2>cURL example | Reason = referred</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl --data <span class="s1">&#39;key=&lt;key&gt;&amp;site=&lt;site&gt;&amp;type=reward_web_hook&amp;payload={&quot;person&quot;:{&quot;first_name&quot;:&quot;Matt&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;email&quot;:&quot;friend@example.com&quot;,&quot;username&quot;:&quot;username&quot;,&quot;unsubscribed_at&quot;:null,&quot;subscribed_at&quot;:&quot;2018-08-27T21:45:29.519+03:00&quot;,&quot;opted_in_at&quot;:&quot;2018-08-27T21:45:29.519+03:00&quot;,&quot;sub_choice&quot;:true,&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0}},&quot;origin&quot;:{&quot;id&quot;:818629076,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;416466456&quot;,&quot;subtotal&quot;:&quot;48.39&quot;,&quot;email&quot;:&quot;referred@example.com&quot;,&quot;customer_id&quot;:&quot;401088820&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT862&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;},&quot;advocate_origin&quot;:{&quot;id&quot;:77856467,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;529868349&quot;,&quot;subtotal&quot;:&quot;25.76&quot;,&quot;customer_id&quot;:&quot;937735146&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT15105&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;},&quot;friend_origin&quot;:{&quot;id&quot;:818629076,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;416466456&quot;,&quot;subtotal&quot;:&quot;48.39&quot;,&quot;email&quot;:&quot;referred@example.com&quot;,&quot;customer_id&quot;:&quot;401088820&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT862&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;},&quot;campaign&quot;:{&quot;id&quot;:944706822,&quot;type&quot;:&quot;StandaloneCampaign&quot;,&quot;cached_slug&quot;:944706822,&quot;tag_names&quot;:[&quot;default&quot;],&quot;origin_min_age&quot;:null,&quot;origin_max_age&quot;:null,&quot;new_customer&quot;:null},&quot;offer&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;short_url_code&quot;:&quot;1a2PV&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;},&quot;reward&quot;:{&quot;id&quot;:8261300,&quot;reason&quot;:&quot;referred&quot;,&quot;incentive_type&quot;:&quot;rebate&quot;,&quot;incentive_identifier&quot;:&quot;referred&quot;,&quot;incentive_description&quot;:&quot;$10.00 back&quot;,&quot;incentive_custom_description&quot;:null,&quot;amount&quot;:&quot;10.0&quot;,&quot;coupon&quot;:{},&quot;coupon_code&quot;:null,&quot;status&quot;:&quot;Paid&quot;}}&#39;</span> &lt;url&gt;
+<h2>cURL example | Reason = referred</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl &lt;url&gt; <span class="se">\</span>
+     -d <span class="s2">&quot;key=&lt;key&gt;&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;site=&lt;site&gt;&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;type=reward_web_hook&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;extras={}&quot;</span> <span class="se">\</span>
+     -d <span class="s1">&#39;payload={&quot;person&quot;:{&quot;first_name&quot;:&quot;Matt&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;email&quot;:&quot;referred@example.com&quot;,&quot;phone_number&quot;:null,&quot;username&quot;:&quot;username&quot;,&quot;unsubscribed_at&quot;:null,&quot;subscribed_at&quot;:&quot;2018-08-27T21:45:29.519+03:00&quot;,&quot;opted_in_at&quot;:&quot;2018-08-27T21:45:29.519+03:00&quot;,&quot;phone_opted_in_at&quot;:null,&quot;sub_choice&quot;:true,&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0},&quot;custom_properties&quot;:{},&quot;is_loyalty_member&quot;:false,&quot;loyalty_member&quot;:null},&quot;origin&quot;:{&quot;id&quot;:818629076,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;416466456&quot;,&quot;subtotal&quot;:&quot;48.39&quot;,&quot;currency_iso_code&quot;:&quot;USD&quot;,&quot;email&quot;:&quot;referred@example.com&quot;,&quot;customer_id&quot;:&quot;401088820&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT862&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;},&quot;advocate_origin&quot;:{&quot;id&quot;:77856467,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;529868349&quot;,&quot;subtotal&quot;:&quot;25.76&quot;,&quot;currency_iso_code&quot;:&quot;USD&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;customer_id&quot;:&quot;937735146&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT15105&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;},&quot;friend_origin&quot;:{&quot;id&quot;:818629076,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;416466456&quot;,&quot;subtotal&quot;:&quot;48.39&quot;,&quot;currency_iso_code&quot;:&quot;USD&quot;,&quot;email&quot;:&quot;referred@example.com&quot;,&quot;customer_id&quot;:&quot;401088820&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT862&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;},&quot;campaign&quot;:{&quot;id&quot;:944706822,&quot;type&quot;:&quot;StandaloneCampaign&quot;,&quot;cached_slug&quot;:944706822,&quot;tag_names&quot;:[&quot;default&quot;],&quot;joinable_category_names&quot;:[&quot;purchase&quot;],&quot;origin_min_age&quot;:null,&quot;origin_max_age&quot;:null,&quot;new_customer&quot;:null},&quot;offer&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;short_url_code&quot;:&quot;1a2PV&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;},&quot;reward&quot;:{&quot;id&quot;:8261300,&quot;reason&quot;:&quot;referred&quot;,&quot;incentive_type&quot;:&quot;rebate&quot;,&quot;incentive_identifier&quot;:&quot;referred&quot;,&quot;incentive_description&quot;:&quot;$10.00 back&quot;,&quot;incentive_custom_description&quot;:null,&quot;amount&quot;:&quot;10.0&quot;,&quot;coupon&quot;:{},&quot;coupon_code&quot;:null,&quot;status&quot;:&quot;Paid&quot;}}&#39;</span>
 </pre></div>
 </div>
 <div class="hidden docutils container">
