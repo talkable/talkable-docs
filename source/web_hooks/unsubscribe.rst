@@ -49,6 +49,7 @@ Talkable sent email.
        "unsubscribed_at": null,
        "subscribed_at": "2018-09-27T22:55:13.860+03:00",
        "opted_in_at": "2018-09-27T22:55:13.860+03:00",
+       "phone_opted_in_at": "2018-09-27T22:55:13.860+03:00",
        "sub_choice": true,
        "referral_counts": {
          "total": 0,

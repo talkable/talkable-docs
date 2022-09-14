@@ -79,6 +79,7 @@ Friend Email Gating form example:
      "sub_choice": true,
      "subscribed_at": "2018-09-27T22:54:28.345+03:00",
      "opted_in_at": "2018-09-27T22:54:28.345+03:00",
+     "phone_opted_in_at": null,
      "unsubscribed_at": null,
      "custom_properties": {
        "preferred_style": "oversize"

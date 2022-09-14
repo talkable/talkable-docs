@@ -74,6 +74,7 @@ Advocate Signup Form example:
        "ip_address": "127.0.0.1"
      },
      "opted_in_at": null,
+     "phone_opted_in_at": null,
      "phone_number": "+12025551111",
      "sub_choice": false,
      "subscribed_at": null,

@@ -103,6 +103,7 @@ triggered twice.
        "unsubscribed_at": null,
        "subscribed_at": "2018-09-27T22:55:13.860+03:00",
        "opted_in_at": "2018-09-27T22:55:13.860+03:00",
+       "phone_opted_in_at": null,
        "sub_choice": true,
        "custom_properties": {},
        "referral_counts": {

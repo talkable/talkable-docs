@@ -93,6 +93,7 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
        "unsubscribed_at": null,
        "subscribed_at": "2019-04-11T07:25:17.272-07:00",
        "opted_in_at": "2019-04-11T07:25:17.272-07:00",
+       "phone_opted_in_at": null,
        "sub_choice": true,
        "custom_properties": {},
        "referral_counts": {
@@ -141,6 +142,7 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
        "unsubscribed_at": null,
        "subscribed_at": "2019-04-11T07:27:31.258-07:00",
        "opted_in_at": "2019-04-11T07:27:31.258-07:00",
+       "phone_opted_in_at": "2019-04-11T07:27:31.258-07:00",
        "sub_choice": true,
        "custom_properties": {},
        "referral_counts": {

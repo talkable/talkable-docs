@@ -200,16 +200,17 @@ Reward reason can be of 5 following general types.
        "phone_number": "+12025551111",
        "first_name": "Bob",
        "last_name": "Smith",
-       "username": nil,
-       "unsubscribed_at": nil,
-       "opted_in_at": nil,
+       "username": null,
+       "unsubscribed_at": null,
+       "opted_in_at": null,
+       "phone_opted_in_at": null,
        "sub_choice": false,
-       "subscribed_at": nil,
+       "subscribed_at": null,
        "custom_properties": {},
        "referral_counts": {"total": 0, "approved": 0, "pending": 0},
        "is_loyalty_member": false,
-       "loyalty_member": nil
-       "gender": nil,
+       "loyalty_member": null
+       "gender": null,
      },
      "origin": {
        "id": 186742865,
@@ -430,6 +431,7 @@ Reward reason can be of 5 following general types.
        "unsubscribed_at": null,
        "subscribed_at": "2018-08-27T21:42:23.060+03:00",
        "opted_in_at": "2018-08-27T21:42:23.060+03:00",
+       "phone_opted_in_at": "2018-08-27T21:42:23.060+03:00",
        "sub_choice": true,
        "referral_counts": {
          "total": 0,
@@ -526,6 +528,7 @@ Reward reason can be of 5 following general types.
        "unsubscribed_at": null,
        "subscribed_at": "2018-08-27T21:45:29.519+03:00",
        "opted_in_at": "2018-08-27T21:45:29.519+03:00",
+       "phone_opted_in_at": null,
        "sub_choice": true,
        "referral_counts": {
          "total": 0,

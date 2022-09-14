@@ -132,6 +132,7 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
          "sub_choice": false,
          "subscribed_at": null,
          "opted_in_at": null,
+         "phone_opted_in_at": null,
          "unsubscribed_at": null,
          "referral_counts": {
            "total": 0,
@@ -169,6 +170,7 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
          "sub_choice": true,
          "subscribed_at": "2018-09-14T23:57:18.734+03:00",
          "opted_in_at": "2018-09-14T23:57:18.734+03:00",
+         "phone_opted_in_at": "2018-09-14T23:57:18.734+03:00",
          "unsubscribed_at": null,
          "referral_counts": {
            "total": 0,
@@ -208,6 +210,7 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
            "sub_choice": false,
            "subscribed_at": null,
            "opted_in_at": null,
+           "phone_opted_in_at": null,
            "unsubscribed_at": null,
            "referral_counts": {
              "total": 0,
@@ -252,6 +255,7 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
            "sub_choice": true,
            "subscribed_at": "2018-09-14T23:57:18.734+03:00",
            "opted_in_at": "2018-09-14T23:57:18.734+03:00",
+           "phone_opted_in_at": null,
            "unsubscribed_at": null,
            "referral_counts": {
              "total": 0,
