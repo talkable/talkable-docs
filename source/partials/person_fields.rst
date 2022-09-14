@@ -7,7 +7,8 @@
   included subscription checkbox)
 * **subscribed_at** — date |person| has subscribed (deprecated; use ``opted_in_at`` instead)
 * **opted_in_at** — date |person| has subscribed (optional)
-* **unsubscribed_at** — date |person| has unsubscribed (optional)
+* **phone_opted_in_at** — date |person| has subscribed with email (optional)
+* **unsubscribed_at** — date |person| has unsubscribed with phone number (optional)
 * **custom_properties** — hash of |person|’s custom properties (optional)
 * **is_loyalty_member** — whether the |person| participates in loyalty program
 * **loyalty_member** — details of the |person| as a loyalty program participant (optional)
