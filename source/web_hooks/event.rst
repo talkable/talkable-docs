@@ -74,6 +74,7 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
      "origin": {
        "id": 289738874,
        "type": "Event",
+       "email": "referrer@example.com",
        "event_number": "953205549",
        "event_category": "webhook-test",
        "subtotal": 91.52,
@@ -124,6 +125,7 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
      "origin": {
        "id": 654689661,
        "type": "Purchase",
+       "email": "referrer@example.com",
        "order_number": "426692385",
        "subtotal": 29.39,
        "customer_id": "162638070",
