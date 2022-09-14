@@ -6,16 +6,16 @@
       referral campaign)
 
 * **id** — unique identifier of the origin event
-* **email** — email address of the |advocate| person
+* **email** — email address of the person
 * **customer_id** — unique external identifier of a customer who triggered the origin event
 * **traffic_source** — traffic source of the origin event
 * **ip_address** — IP address of the origin event
-* **currency_iso_code** — currency code of the origin event
 
 *For Purchase:*
 
  * **order_number** — unique identifier of the Purchase
  * **subtotal** — order subtotal for the Purchase
+ * **currency_iso_code** — currency code of the Purchase
  * **coupon_code** — coupon codes used with the Purchase (separated by ``,`` if multiple)
  * **order_date** — date of the Purchase
 
@@ -24,4 +24,5 @@
  * **event_category** — identifier of an action that trigger the Event (e.g. ``app_installed``)
  * **event_number** — unique identifier of the Event within the associated **event_category**
  * **subtotal** — optional monetary attribute of the Event
+ * **currency_iso_code** — currency code of the Event, defaults to site currency
  * **coupon_code** — coupon codes used with the Event (separated by ``,`` if multiple)
