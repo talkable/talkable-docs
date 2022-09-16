@@ -112,7 +112,8 @@ triggered twice.
          "pending": 0
        },
        "is_loyalty_member": false,
-       "loyalty_member": null
+       "loyalty_member": null,
+       "gender": null
      },
      "origin": {
        "id": 147886587,
@@ -140,7 +141,7 @@ triggered twice.
         -d "site=<site>" \
         -d "type=post_share_web_hook" \
         -d "extras={}" \
-        -d 'payload={"campaign":{"id":83587635,"type":"StandaloneCampaign","cached_slug":83587635,"tag_names":["default"],"joinable_category_names":["affiliate_member"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"share_type":"email","share_info":{"recipients":["john@example.com"]},"sharer_info":{"first_name":"Bob","last_name":"Smith","email":"sharer@example.com","phone_number":null,"username":"username","unsubscribed_at":null,"subscribed_at":"2018-09-27T22:55:13.860+03:00","opted_in_at":"2018-09-27T22:55:13.860+03:00","phone_opted_in_at":null,"sub_choice":true,"custom_properties":{},"referral_counts":{"total":0,"approved":0,"pending":0},"is_loyalty_member":false,"loyalty_member":null},"origin":{"id":147886587,"type":"Purchase","order_number":"450901776","subtotal":35.03,"currency_iso_code":"USD","email":"sharer@example.com","customer_id":"565659001","order_date":"2019-04-11T07:28:31.258-07:00","ip_address":"127.0.0.1","coupon_code":"WHT29123","traffic_source":"post-checkout"}}'
+        -d 'payload={"campaign":{"id":83587635,"type":"StandaloneCampaign","cached_slug":83587635,"tag_names":["default"],"joinable_category_names":["affiliate_member"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"share_type":"email","share_info":{"recipients":["john@example.com"]},"sharer_info":{"first_name":"Bob","last_name":"Smith","email":"sharer@example.com","phone_number":null,"username":"username","unsubscribed_at":null,"subscribed_at":"2018-09-27T22:55:13.860+03:00","opted_in_at":"2018-09-27T22:55:13.860+03:00","phone_opted_in_at":null,"sub_choice":true,"custom_properties":{},"referral_counts":{"total":0,"approved":0,"pending":0},"is_loyalty_member":false,"loyalty_member":null,"gender":null},"origin":{"id":147886587,"type":"Purchase","order_number":"450901776","subtotal":35.03,"currency_iso_code":"USD","email":"sharer@example.com","customer_id":"565659001","order_date":"2019-04-11T07:28:31.258-07:00","ip_address":"127.0.0.1","coupon_code":"WHT29123","traffic_source":"post-checkout"}}'
 
 .. container:: hidden
 

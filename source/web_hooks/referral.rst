@@ -144,7 +144,8 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
            "coffee_roast": "dark"
          },
          "is_loyalty_member": false,
-         "loyalty_member": null
+         "loyalty_member": null,
+         "gender": null
        },
        "amount": "5.00",
        "incentive": "rebate",
@@ -180,7 +181,8 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
          },
          "custom_properties": {},
          "is_loyalty_member": false,
-         "loyalty_member": null
+         "loyalty_member": null,
+         "gender": null
        },
        "amount": "0.00",
        "incentive": "other",
@@ -224,7 +226,8 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
              "coffee_roast": "dark"
            },
            "is_loyalty_member": false,
-           "loyalty_member": null
+           "loyalty_member": null,
+           "gender": null
          },
          "amount": "5.00",
          "incentive": "rebate",
@@ -267,7 +270,8 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
            },
            "custom_properties": {},
            "is_loyalty_member": false,
-           "loyalty_member": null
+           "loyalty_member": null,
+           "gender": null
          },
          "amount": "0.00",
          "incentive": "other",
@@ -317,7 +321,7 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
         -d "site=<site>" \
         -d "type=referral_web_hook" \
         -d "extras={}" \
-        -d 'payload={"campaign":{"id":593427266,"type":"StandaloneCampaign","cached_slug":593427266,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null,"joinable_category_names":["affiliate_member"]},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV","ip_address":"127.0.0.1"},"referrer":{"id":715729561,"email":"referrer@example.com","person":{"email":"referrer@example.com","phone_number":"+12025551111","first_name":"Bob","last_name":"Crane","username":null,"sub_choice":false,"subscribed_at":null,"opted_in_at":null,"phone_opted_in_at":null,"unsubscribed_at":null,"referral_counts":{"total":0,"approved":0,"pending":0},"custom_properties":{"coffee_roast":"dark"},"is_loyalty_member":false,"loyalty_member":null},"amount":"5.00","incentive":"rebate","incentive_description":"$5.00 back","reward_coupon_code":null,"origin":{"id":159843498,"type":"AffiliateMember","email":"referrer@example.com","customer_id":"64227025","ip_address":"127.0.0.1","traffic_source":"unknown"}},"referred":{"id":11192772,"email":"referred@example.com","person":{"email":"referred@example.com","phone_number":null,"first_name":"Alice","last_name":"Smith","username":null,"sub_choice":true,"subscribed_at":"2018-09-14T23:57:18.734+03:00","opted_in_at":"2018-09-14T23:57:18.734+03:00","phone_opted_in_at":"2018-09-14T23:57:18.734+03:00","unsubscribed_at":null,"referral_counts":{"total":0,"approved":0,"pending":0},"custom_properties":{},"is_loyalty_member":false,"loyalty_member":null},"amount":"0.00","incentive":"other","incentive_description":"First Month Free","reward_coupon_code":null,"origin":{"id":147886587,"type":"Purchase","order_number":"450901776","order_date":"2021-04-23T19:08:17.000-08:00","subtotal":35.03,"currency_iso_code":"USD","email":"referred@example.com","customer_id":"565659001","ip_address":"127.0.0.1","coupon_code":"WHT29123","traffic_source":"post-checkout"}},"advocate_rewards":[{"id":715729561,"email":"referrer@example.com","person":{"email":"referrer@example.com","phone_number":"+12025551111","first_name":"Bob","last_name":"Crane","username":null,"sub_choice":false,"subscribed_at":null,"opted_in_at":null,"phone_opted_in_at":null,"unsubscribed_at":null,"referral_counts":{"total":0,"approved":0,"pending":0},"custom_properties":{"coffee_roast":"dark"},"is_loyalty_member":false,"loyalty_member":null},"amount":"5.00","incentive":"rebate","incentive_description":"$5.00 back","reward_coupon_code":null,"origin":{"id":6400368,"type":"Purchase","order_number":"459179054","order_date":"2021-04-23T19:08:17.000-08:00","subtotal":11.39,"currency_iso_code":"USD","email":"referrer@example.com","customer_id":"376990942","ip_address":"127.0.0.1","coupon_code":"WHT59688","traffic_source":"post-checkout"}}],"friend_rewards":[{"id":11192772,"email":"referred@example.com","person":{"email":"referred@example.com","phone_number":null,"first_name":"Alice","last_name":"Smith","username":null,"sub_choice":true,"subscribed_at":"2018-09-14T23:57:18.734+03:00","opted_in_at":"2018-09-14T23:57:18.734+03:00","phone_opted_in_at":null,"unsubscribed_at":null,"referral_counts":{"total":0,"approved":0,"pending":0},"custom_properties":{},"is_loyalty_member":false,"loyalty_member":null},"amount":"0.00","incentive":"other","incentive_description":"First Month Free","reward_coupon_code":null,"origin":{"id":147886587,"type":"Purchase","order_number":"450901776","order_date":"2021-04-23T19:08:17.000-08:00","subtotal":35.03,"currency_iso_code":"USD","email":"referred@example.com","customer_id":"565659001","ip_address":"127.0.0.1","coupon_code":"WHT29123","traffic_source":"post-checkout"}}],"referred_origin":{"id":6400368,"type":"Purchase","order_number":"459179054","order_date":"2021-04-23T19:08:17.000-08:00","subtotal":11.39,"currency_iso_code":"USD","email":"referred@example.com","customer_id":"376990942","ip_address":"127.0.0.1","coupon_code":"WHT59688","traffic_source":"post-checkout"},"share":{"channel":"other"}}'
+        -d 'payload={"campaign":{"id":593427266,"type":"StandaloneCampaign","cached_slug":593427266,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null,"joinable_category_names":["affiliate_member"]},"offer":{"email":"referrer@example.com","short_url_code":"1a2PV","ip_address":"127.0.0.1"},"referrer":{"id":715729561,"email":"referrer@example.com","person":{"email":"referrer@example.com","phone_number":"+12025551111","first_name":"Bob","last_name":"Crane","username":null,"sub_choice":false,"subscribed_at":null,"opted_in_at":null,"phone_opted_in_at":null,"unsubscribed_at":null,"referral_counts":{"total":0,"approved":0,"pending":0},"custom_properties":{"coffee_roast":"dark"},"is_loyalty_member":false,"loyalty_member":null,"gender":null},"amount":"5.00","incentive":"rebate","incentive_description":"$5.00 back","reward_coupon_code":null,"origin":{"id":159843498,"type":"AffiliateMember","email":"referrer@example.com","customer_id":"64227025","ip_address":"127.0.0.1","traffic_source":"unknown"}},"referred":{"id":11192772,"email":"referred@example.com","person":{"email":"referred@example.com","phone_number":null,"first_name":"Alice","last_name":"Smith","username":null,"sub_choice":true,"subscribed_at":"2018-09-14T23:57:18.734+03:00","opted_in_at":"2018-09-14T23:57:18.734+03:00","phone_opted_in_at":"2018-09-14T23:57:18.734+03:00","unsubscribed_at":null,"referral_counts":{"total":0,"approved":0,"pending":0},"custom_properties":{},"is_loyalty_member":false,"loyalty_member":null,"gender":null},"amount":"0.00","incentive":"other","incentive_description":"First Month Free","reward_coupon_code":null,"origin":{"id":147886587,"type":"Purchase","order_number":"450901776","order_date":"2021-04-23T19:08:17.000-08:00","subtotal":35.03,"currency_iso_code":"USD","email":"referred@example.com","customer_id":"565659001","ip_address":"127.0.0.1","coupon_code":"WHT29123","traffic_source":"post-checkout"}},"advocate_rewards":[{"id":715729561,"email":"referrer@example.com","person":{"email":"referrer@example.com","phone_number":"+12025551111","first_name":"Bob","last_name":"Crane","username":null,"sub_choice":false,"subscribed_at":null,"opted_in_at":null,"phone_opted_in_at":null,"unsubscribed_at":null,"referral_counts":{"total":0,"approved":0,"pending":0},"custom_properties":{"coffee_roast":"dark"},"is_loyalty_member":false,"loyalty_member":null,"gender":null},"amount":"5.00","incentive":"rebate","incentive_description":"$5.00 back","reward_coupon_code":null,"origin":{"id":6400368,"type":"Purchase","order_number":"459179054","order_date":"2021-04-23T19:08:17.000-08:00","subtotal":11.39,"currency_iso_code":"USD","email":"referrer@example.com","customer_id":"376990942","ip_address":"127.0.0.1","coupon_code":"WHT59688","traffic_source":"post-checkout"}}],"friend_rewards":[{"id":11192772,"email":"referred@example.com","person":{"email":"referred@example.com","phone_number":null,"first_name":"Alice","last_name":"Smith","username":null,"sub_choice":true,"subscribed_at":"2018-09-14T23:57:18.734+03:00","opted_in_at":"2018-09-14T23:57:18.734+03:00","phone_opted_in_at":null,"unsubscribed_at":null,"referral_counts":{"total":0,"approved":0,"pending":0},"custom_properties":{},"is_loyalty_member":false,"loyalty_member":null,"gender":null},"amount":"0.00","incentive":"other","incentive_description":"First Month Free","reward_coupon_code":null,"origin":{"id":147886587,"type":"Purchase","order_number":"450901776","order_date":"2021-04-23T19:08:17.000-08:00","subtotal":35.03,"currency_iso_code":"USD","email":"referred@example.com","customer_id":"565659001","ip_address":"127.0.0.1","coupon_code":"WHT29123","traffic_source":"post-checkout"}}],"referred_origin":{"id":6400368,"type":"Purchase","order_number":"459179054","order_date":"2021-04-23T19:08:17.000-08:00","subtotal":11.39,"currency_iso_code":"USD","email":"referred@example.com","customer_id":"376990942","ip_address":"127.0.0.1","coupon_code":"WHT59688","traffic_source":"post-checkout"},"share":{"channel":"other"}}'
 
 .. container:: hidden
 
