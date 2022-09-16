@@ -58,7 +58,8 @@ Talkable sent email.
        },
        "custom_properties": {},
        "is_loyalty_member": false,
-       "loyalty_member": null
+       "loyalty_member": null,
+       "gender": null
      }
    }
 
@@ -73,7 +74,7 @@ Talkable sent email.
         -d "site=<site>" \
         -d "type=unsubscribe_web_hook" \
         -d "extras={}" \
-        -d 'payload={"person":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","phone_number":"+12025551111","username":"username","unsubscribed_at":null,"subscribed_at":"2018-09-27T22:55:13.860+03:00","opted_in_at":"2018-09-27T22:55:13.860+03:00","phone_opted_in_at":"2018-09-27T22:55:13.860+03:00","sub_choice":true,"referral_counts":{"total":0,"approved":0,"pending":0},"custom_properties":{},"is_loyalty_member":false,"loyalty_member":null}}'
+        -d 'payload={"person":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","phone_number":"+12025551111","username":"username","unsubscribed_at":null,"subscribed_at":"2018-09-27T22:55:13.860+03:00","opted_in_at":"2018-09-27T22:55:13.860+03:00","phone_opted_in_at":"2018-09-27T22:55:13.860+03:00","sub_choice":true,"referral_counts":{"total":0,"approved":0,"pending":0},"custom_properties":{},"is_loyalty_member":false,"loyalty_member":null,"gender":null}}'
 
 .. container:: hidden
 

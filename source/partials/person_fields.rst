@@ -18,3 +18,4 @@
   * **approved** — approved referrals count
   * **pending** — count of waiting for approval referrals
 
+* **gender** [deprecated]
