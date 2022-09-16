@@ -1,7 +1,7 @@
 * **email** — |person|’s email address
 * **phone_number** — |person|’s phone number (optional)
-* **first_name** — |person|’s first name
-* **last_name** — |person|’s last name
+* **first_name** — |person|’s first name (optional)
+* **last_name** — |person|’s last name (optional)
 * **username** — |person|’s username (optional)
 * **sub_choice** — subscription choice (optional, present only if the form
   included subscription checkbox)
