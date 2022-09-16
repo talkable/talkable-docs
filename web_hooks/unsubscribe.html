@@ -110,8 +110,8 @@ Talkable sent email.</p>
 <ul>
 <li><p><strong>email</strong> — person’s email address</p></li>
 <li><p><strong>phone_number</strong> — person’s phone number (optional)</p></li>
-<li><p><strong>first_name</strong> — person’s first name</p></li>
-<li><p><strong>last_name</strong> — person’s last name</p></li>
+<li><p><strong>first_name</strong> — person’s first name (optional)</p></li>
+<li><p><strong>last_name</strong> — person’s last name (optional)</p></li>
 <li><p><strong>username</strong> — person’s username (optional)</p></li>
 <li><p><strong>sub_choice</strong> — subscription choice (optional, present only if the form
 included subscription checkbox)</p></li>
@@ -129,6 +129,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>pending</strong> — count of waiting for approval referrals</p></li>
 </ul>
 </li>
+<li><p><strong>gender</strong> [deprecated]</p></li>
 </ul>
 </li>
 </ul>
@@ -151,7 +152,8 @@ included subscription checkbox)</p></li>
 <span class="w">    </span><span class="p">},</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;custom_properties&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;gender&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
 <span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
@@ -161,7 +163,7 @@ included subscription checkbox)</p></li>
      -d <span class="s2">&quot;site=&lt;site&gt;&quot;</span> <span class="se">\</span>
      -d <span class="s2">&quot;type=unsubscribe_web_hook&quot;</span> <span class="se">\</span>
      -d <span class="s2">&quot;extras={}&quot;</span> <span class="se">\</span>
-     -d <span class="s1">&#39;payload={&quot;person&quot;:{&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;phone_number&quot;:&quot;+12025551111&quot;,&quot;username&quot;:&quot;username&quot;,&quot;unsubscribed_at&quot;:null,&quot;subscribed_at&quot;:&quot;2018-09-27T22:55:13.860+03:00&quot;,&quot;opted_in_at&quot;:&quot;2018-09-27T22:55:13.860+03:00&quot;,&quot;phone_opted_in_at&quot;:&quot;2018-09-27T22:55:13.860+03:00&quot;,&quot;sub_choice&quot;:true,&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0},&quot;custom_properties&quot;:{},&quot;is_loyalty_member&quot;:false,&quot;loyalty_member&quot;:null}}&#39;</span>
+     -d <span class="s1">&#39;payload={&quot;person&quot;:{&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;phone_number&quot;:&quot;+12025551111&quot;,&quot;username&quot;:&quot;username&quot;,&quot;unsubscribed_at&quot;:null,&quot;subscribed_at&quot;:&quot;2018-09-27T22:55:13.860+03:00&quot;,&quot;opted_in_at&quot;:&quot;2018-09-27T22:55:13.860+03:00&quot;,&quot;phone_opted_in_at&quot;:&quot;2018-09-27T22:55:13.860+03:00&quot;,&quot;sub_choice&quot;:true,&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0},&quot;custom_properties&quot;:{},&quot;is_loyalty_member&quot;:false,&quot;loyalty_member&quot;:null,&quot;gender&quot;:null}}&#39;</span>
 </pre></div>
 </div>
 <div class="hidden docutils container">

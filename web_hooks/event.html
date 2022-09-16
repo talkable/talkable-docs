@@ -149,8 +149,8 @@ or using the <a class="reference internal" href="../api_v2/origins.html#api-v2-o
 <div><ul class="simple">
 <li><p><strong>email</strong> — person’s email address</p></li>
 <li><p><strong>phone_number</strong> — person’s phone number (optional)</p></li>
-<li><p><strong>first_name</strong> — person’s first name</p></li>
-<li><p><strong>last_name</strong> — person’s last name</p></li>
+<li><p><strong>first_name</strong> — person’s first name (optional)</p></li>
+<li><p><strong>last_name</strong> — person’s last name (optional)</p></li>
 <li><p><strong>username</strong> — person’s username (optional)</p></li>
 <li><p><strong>sub_choice</strong> — subscription choice (optional, present only if the form
 included subscription checkbox)</p></li>
@@ -168,6 +168,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>pending</strong> — count of waiting for approval referrals</p></li>
 </ul>
 </li>
+<li><p><strong>gender</strong> [deprecated]</p></li>
 </ul>
 </div></blockquote>
 </li>
@@ -205,7 +206,8 @@ included subscription checkbox)</p></li>
 <span class="w">      </span><span class="s2">&quot;pending&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"></span>
 <span class="w">    </span><span class="p">},</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;gender&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
 <span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
@@ -215,7 +217,7 @@ included subscription checkbox)</p></li>
      -d <span class="s2">&quot;site=&lt;site&gt;&quot;</span> <span class="se">\</span>
      -d <span class="s2">&quot;type=event_web_hook&quot;</span> <span class="se">\</span>
      -d <span class="s2">&quot;extras={}&quot;</span> <span class="se">\</span>
-     -d <span class="s1">&#39;payload={&quot;origin&quot;:{&quot;id&quot;:289738874,&quot;type&quot;:&quot;Event&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;event_number&quot;:&quot;953205549&quot;,&quot;event_category&quot;:&quot;webhook-test&quot;,&quot;subtotal&quot;:91.52,&quot;customer_id&quot;:&quot;865955119&quot;,&quot;order_date&quot;:&quot;2019-04-11T07:26:17.272-07:00&quot;,&quot;coupon_code&quot;:&quot;WHT28499&quot;,&quot;currency_iso_code&quot;:&quot;USD&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;post-event&quot;},&quot;person&quot;:{&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;phone_number&quot;:null,&quot;username&quot;:&quot;username&quot;,&quot;unsubscribed_at&quot;:null,&quot;subscribed_at&quot;:&quot;2019-04-11T07:25:17.272-07:00&quot;,&quot;opted_in_at&quot;:&quot;2019-04-11T07:25:17.272-07:00&quot;,&quot;phone_opted_in_at&quot;:null,&quot;sub_choice&quot;:true,&quot;custom_properties&quot;:{},&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0},&quot;is_loyalty_member&quot;:false,&quot;loyalty_member&quot;:null}}&#39;</span>
+     -d <span class="s1">&#39;payload={&quot;origin&quot;:{&quot;id&quot;:289738874,&quot;type&quot;:&quot;Event&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;event_number&quot;:&quot;953205549&quot;,&quot;event_category&quot;:&quot;webhook-test&quot;,&quot;subtotal&quot;:91.52,&quot;customer_id&quot;:&quot;865955119&quot;,&quot;order_date&quot;:&quot;2019-04-11T07:26:17.272-07:00&quot;,&quot;coupon_code&quot;:&quot;WHT28499&quot;,&quot;currency_iso_code&quot;:&quot;USD&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;post-event&quot;},&quot;person&quot;:{&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;phone_number&quot;:null,&quot;username&quot;:&quot;username&quot;,&quot;unsubscribed_at&quot;:null,&quot;subscribed_at&quot;:&quot;2019-04-11T07:25:17.272-07:00&quot;,&quot;opted_in_at&quot;:&quot;2019-04-11T07:25:17.272-07:00&quot;,&quot;phone_opted_in_at&quot;:null,&quot;sub_choice&quot;:true,&quot;custom_properties&quot;:{},&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0},&quot;is_loyalty_member&quot;:false,&quot;loyalty_member&quot;:null,&quot;gender&quot;:null}}&#39;</span>
 </pre></div>
 </div>
 <h2>Sample payload | Purchase</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>

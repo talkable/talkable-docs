@@ -178,7 +178,7 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
 <div><ul class="simple">
 <li><p><strong>order_number</strong> — unique identifier of the Purchase</p></li>
 <li><p><strong>subtotal</strong> — order subtotal for the Purchase</p></li>
-<li><p><strong>currency_iso_code</strong> — currency code of the Purchase</p></li>
+<li><p><strong>currency_iso_code</strong> — currency code of the Purchase, defaults to the Site’s currency</p></li>
 <li><p><strong>coupon_code</strong> — coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 <li><p><strong>order_date</strong> — date of the Purchase</p></li>
 </ul>
@@ -189,7 +189,7 @@ To receive notification of both Advocate and Friend rewards use the Rewards Webh
 <li><p><strong>event_category</strong> — identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
 <li><p><strong>event_number</strong> — unique identifier of the Event within the associated <strong>event_category</strong></p></li>
 <li><p><strong>subtotal</strong> — optional monetary attribute of the Event</p></li>
-<li><p><strong>currency_iso_code</strong> — currency code of the Event, defaults to site currency</p></li>
+<li><p><strong>currency_iso_code</strong> — currency code of the Event, defaults to the Site’s currency</p></li>
 <li><p><strong>coupon_code</strong> — coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 </ul>
 </div></blockquote>
@@ -204,8 +204,8 @@ person (except for rewards paid in loyalty points), where each hash contains par
 <ul class="simple">
 <li><p><strong>email</strong> — person’s email address</p></li>
 <li><p><strong>phone_number</strong> — person’s phone number (optional)</p></li>
-<li><p><strong>first_name</strong> — person’s first name</p></li>
-<li><p><strong>last_name</strong> — person’s last name</p></li>
+<li><p><strong>first_name</strong> — person’s first name (optional)</p></li>
+<li><p><strong>last_name</strong> — person’s last name (optional)</p></li>
 <li><p><strong>username</strong> — person’s username (optional)</p></li>
 <li><p><strong>sub_choice</strong> — subscription choice (optional, present only if the form
 included subscription checkbox)</p></li>
@@ -223,6 +223,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>pending</strong> — count of waiting for approval referrals</p></li>
 </ul>
 </li>
+<li><p><strong>gender</strong> [deprecated]</p></li>
 </ul>
 </li>
 <li><p><strong>incentive</strong> — type of incentive reward (<cite>rebate</cite>, <cite>discount_coupon</cite>, <cite>other</cite>)</p></li>
@@ -252,7 +253,7 @@ included subscription checkbox)</p></li>
 <div><ul class="simple">
 <li><p><strong>order_number</strong> — unique identifier of the Purchase</p></li>
 <li><p><strong>subtotal</strong> — order subtotal for the Purchase</p></li>
-<li><p><strong>currency_iso_code</strong> — currency code of the Purchase</p></li>
+<li><p><strong>currency_iso_code</strong> — currency code of the Purchase, defaults to the Site’s currency</p></li>
 <li><p><strong>coupon_code</strong> — coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 <li><p><strong>order_date</strong> — date of the Purchase</p></li>
 </ul>
@@ -263,7 +264,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>event_category</strong> — identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
 <li><p><strong>event_number</strong> — unique identifier of the Event within the associated <strong>event_category</strong></p></li>
 <li><p><strong>subtotal</strong> — optional monetary attribute of the Event</p></li>
-<li><p><strong>currency_iso_code</strong> — currency code of the Event, defaults to site currency</p></li>
+<li><p><strong>currency_iso_code</strong> — currency code of the Event, defaults to the Site’s currency</p></li>
 <li><p><strong>coupon_code</strong> — coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 </ul>
 </div></blockquote>
@@ -280,8 +281,8 @@ included subscription checkbox)</p></li>
 <ul class="simple">
 <li><p><strong>email</strong> — person’s email address</p></li>
 <li><p><strong>phone_number</strong> — person’s phone number (optional)</p></li>
-<li><p><strong>first_name</strong> — person’s first name</p></li>
-<li><p><strong>last_name</strong> — person’s last name</p></li>
+<li><p><strong>first_name</strong> — person’s first name (optional)</p></li>
+<li><p><strong>last_name</strong> — person’s last name (optional)</p></li>
 <li><p><strong>username</strong> — person’s username (optional)</p></li>
 <li><p><strong>sub_choice</strong> — subscription choice (optional, present only if the form
 included subscription checkbox)</p></li>
@@ -299,6 +300,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>pending</strong> — count of waiting for approval referrals</p></li>
 </ul>
 </li>
+<li><p><strong>gender</strong> [deprecated]</p></li>
 </ul>
 </li>
 <li><p><strong>incentive</strong> — type of incentive reward (<cite>rebate</cite>, <cite>discount_coupon</cite>, <cite>other</cite>)</p></li>
@@ -328,7 +330,7 @@ included subscription checkbox)</p></li>
 <div><ul class="simple">
 <li><p><strong>order_number</strong> — unique identifier of the Purchase</p></li>
 <li><p><strong>subtotal</strong> — order subtotal for the Purchase</p></li>
-<li><p><strong>currency_iso_code</strong> — currency code of the Purchase</p></li>
+<li><p><strong>currency_iso_code</strong> — currency code of the Purchase, defaults to the Site’s currency</p></li>
 <li><p><strong>coupon_code</strong> — coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 <li><p><strong>order_date</strong> — date of the Purchase</p></li>
 </ul>
@@ -339,7 +341,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>event_category</strong> — identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
 <li><p><strong>event_number</strong> — unique identifier of the Event within the associated <strong>event_category</strong></p></li>
 <li><p><strong>subtotal</strong> — optional monetary attribute of the Event</p></li>
-<li><p><strong>currency_iso_code</strong> — currency code of the Event, defaults to site currency</p></li>
+<li><p><strong>currency_iso_code</strong> — currency code of the Event, defaults to the Site’s currency</p></li>
 <li><p><strong>coupon_code</strong> — coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 </ul>
 </div></blockquote>
@@ -360,8 +362,8 @@ included subscription checkbox)</p></li>
 <ul class="simple">
 <li><p><strong>email</strong> — person’s email address</p></li>
 <li><p><strong>phone_number</strong> — person’s phone number (optional)</p></li>
-<li><p><strong>first_name</strong> — person’s first name</p></li>
-<li><p><strong>last_name</strong> — person’s last name</p></li>
+<li><p><strong>first_name</strong> — person’s first name (optional)</p></li>
+<li><p><strong>last_name</strong> — person’s last name (optional)</p></li>
 <li><p><strong>username</strong> — person’s username (optional)</p></li>
 <li><p><strong>sub_choice</strong> — subscription choice (optional, present only if the form
 included subscription checkbox)</p></li>
@@ -379,6 +381,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>pending</strong> — count of waiting for approval referrals</p></li>
 </ul>
 </li>
+<li><p><strong>gender</strong> [deprecated]</p></li>
 </ul>
 </li>
 <li><p><strong>incentive</strong> — type of incentive reward (<cite>rebate</cite>, <cite>discount_coupon</cite>, <cite>other</cite>)</p></li>
@@ -408,7 +411,7 @@ included subscription checkbox)</p></li>
 <div><ul class="simple">
 <li><p><strong>order_number</strong> — unique identifier of the Purchase</p></li>
 <li><p><strong>subtotal</strong> — order subtotal for the Purchase</p></li>
-<li><p><strong>currency_iso_code</strong> — currency code of the Purchase</p></li>
+<li><p><strong>currency_iso_code</strong> — currency code of the Purchase, defaults to the Site’s currency</p></li>
 <li><p><strong>coupon_code</strong> — coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 <li><p><strong>order_date</strong> — date of the Purchase</p></li>
 </ul>
@@ -419,7 +422,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>event_category</strong> — identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
 <li><p><strong>event_number</strong> — unique identifier of the Event within the associated <strong>event_category</strong></p></li>
 <li><p><strong>subtotal</strong> — optional monetary attribute of the Event</p></li>
-<li><p><strong>currency_iso_code</strong> — currency code of the Event, defaults to site currency</p></li>
+<li><p><strong>currency_iso_code</strong> — currency code of the Event, defaults to the Site’s currency</p></li>
 <li><p><strong>coupon_code</strong> — coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 </ul>
 </div></blockquote>
@@ -435,8 +438,8 @@ included subscription checkbox)</p></li>
 <ul class="simple">
 <li><p><strong>email</strong> — person’s email address</p></li>
 <li><p><strong>phone_number</strong> — person’s phone number (optional)</p></li>
-<li><p><strong>first_name</strong> — person’s first name</p></li>
-<li><p><strong>last_name</strong> — person’s last name</p></li>
+<li><p><strong>first_name</strong> — person’s first name (optional)</p></li>
+<li><p><strong>last_name</strong> — person’s last name (optional)</p></li>
 <li><p><strong>username</strong> — person’s username (optional)</p></li>
 <li><p><strong>sub_choice</strong> — subscription choice (optional, present only if the form
 included subscription checkbox)</p></li>
@@ -454,6 +457,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>pending</strong> — count of waiting for approval referrals</p></li>
 </ul>
 </li>
+<li><p><strong>gender</strong> [deprecated]</p></li>
 </ul>
 </li>
 <li><p><strong>incentive</strong> — type of incentive reward (<cite>rebate</cite>, <cite>discount_coupon</cite>, <cite>other</cite>)</p></li>
@@ -483,7 +487,7 @@ included subscription checkbox)</p></li>
 <div><ul class="simple">
 <li><p><strong>order_number</strong> — unique identifier of the Purchase</p></li>
 <li><p><strong>subtotal</strong> — order subtotal for the Purchase</p></li>
-<li><p><strong>currency_iso_code</strong> — currency code of the Purchase</p></li>
+<li><p><strong>currency_iso_code</strong> — currency code of the Purchase, defaults to the Site’s currency</p></li>
 <li><p><strong>coupon_code</strong> — coupon codes used with the Purchase (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 <li><p><strong>order_date</strong> — date of the Purchase</p></li>
 </ul>
@@ -494,7 +498,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>event_category</strong> — identifier of an action that trigger the Event (e.g. <code class="docutils literal notranslate"><span class="pre">app_installed</span></code>)</p></li>
 <li><p><strong>event_number</strong> — unique identifier of the Event within the associated <strong>event_category</strong></p></li>
 <li><p><strong>subtotal</strong> — optional monetary attribute of the Event</p></li>
-<li><p><strong>currency_iso_code</strong> — currency code of the Event, defaults to site currency</p></li>
+<li><p><strong>currency_iso_code</strong> — currency code of the Event, defaults to the Site’s currency</p></li>
 <li><p><strong>coupon_code</strong> — coupon codes used with the Event (separated by <code class="docutils literal notranslate"><span class="pre">,</span></code> if multiple)</p></li>
 </ul>
 </div></blockquote>
@@ -563,7 +567,8 @@ merchant’s side. More information on the reward is specified in
 <span class="w">        </span><span class="s2">&quot;coffee_roast&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;dark&quot;</span><span class="w"></span>
 <span class="w">      </span><span class="p">},</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;gender&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
 <span class="w">    </span><span class="p">},</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;amount&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;5.00&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;incentive&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;rebate&quot;</span><span class="p">,</span><span class="w"></span>
@@ -599,7 +604,8 @@ merchant’s side. More information on the reward is specified in
 <span class="w">      </span><span class="p">},</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;custom_properties&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">      </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="s2">&quot;gender&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
 <span class="w">    </span><span class="p">},</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;amount&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;0.00&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;incentive&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;other&quot;</span><span class="p">,</span><span class="w"></span>
@@ -643,7 +649,8 @@ merchant’s side. More information on the reward is specified in
 <span class="w">          </span><span class="s2">&quot;coffee_roast&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;dark&quot;</span><span class="w"></span>
 <span class="w">        </span><span class="p">},</span><span class="w"></span>
 <span class="w">        </span><span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;gender&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
 <span class="w">      </span><span class="p">},</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;amount&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;5.00&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;incentive&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;rebate&quot;</span><span class="p">,</span><span class="w"></span>
@@ -686,7 +693,8 @@ merchant’s side. More information on the reward is specified in
 <span class="w">        </span><span class="p">},</span><span class="w"></span>
 <span class="w">        </span><span class="s2">&quot;custom_properties&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
 <span class="w">        </span><span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="s2">&quot;gender&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
 <span class="w">      </span><span class="p">},</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;amount&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;0.00&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;incentive&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;other&quot;</span><span class="p">,</span><span class="w"></span>
@@ -731,7 +739,7 @@ merchant’s side. More information on the reward is specified in
      -d <span class="s2">&quot;site=&lt;site&gt;&quot;</span> <span class="se">\</span>
      -d <span class="s2">&quot;type=referral_web_hook&quot;</span> <span class="se">\</span>
      -d <span class="s2">&quot;extras={}&quot;</span> <span class="se">\</span>
-     -d <span class="s1">&#39;payload={&quot;campaign&quot;:{&quot;id&quot;:593427266,&quot;type&quot;:&quot;StandaloneCampaign&quot;,&quot;cached_slug&quot;:593427266,&quot;tag_names&quot;:[&quot;default&quot;],&quot;origin_min_age&quot;:null,&quot;origin_max_age&quot;:null,&quot;new_customer&quot;:null,&quot;joinable_category_names&quot;:[&quot;affiliate_member&quot;]},&quot;offer&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;short_url_code&quot;:&quot;1a2PV&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;},&quot;referrer&quot;:{&quot;id&quot;:715729561,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;person&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;phone_number&quot;:&quot;+12025551111&quot;,&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Crane&quot;,&quot;username&quot;:null,&quot;sub_choice&quot;:false,&quot;subscribed_at&quot;:null,&quot;opted_in_at&quot;:null,&quot;phone_opted_in_at&quot;:null,&quot;unsubscribed_at&quot;:null,&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0},&quot;custom_properties&quot;:{&quot;coffee_roast&quot;:&quot;dark&quot;},&quot;is_loyalty_member&quot;:false,&quot;loyalty_member&quot;:null},&quot;amount&quot;:&quot;5.00&quot;,&quot;incentive&quot;:&quot;rebate&quot;,&quot;incentive_description&quot;:&quot;$5.00 back&quot;,&quot;reward_coupon_code&quot;:null,&quot;origin&quot;:{&quot;id&quot;:159843498,&quot;type&quot;:&quot;AffiliateMember&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;customer_id&quot;:&quot;64227025&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;unknown&quot;}},&quot;referred&quot;:{&quot;id&quot;:11192772,&quot;email&quot;:&quot;referred@example.com&quot;,&quot;person&quot;:{&quot;email&quot;:&quot;referred@example.com&quot;,&quot;phone_number&quot;:null,&quot;first_name&quot;:&quot;Alice&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;username&quot;:null,&quot;sub_choice&quot;:true,&quot;subscribed_at&quot;:&quot;2018-09-14T23:57:18.734+03:00&quot;,&quot;opted_in_at&quot;:&quot;2018-09-14T23:57:18.734+03:00&quot;,&quot;phone_opted_in_at&quot;:&quot;2018-09-14T23:57:18.734+03:00&quot;,&quot;unsubscribed_at&quot;:null,&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0},&quot;custom_properties&quot;:{},&quot;is_loyalty_member&quot;:false,&quot;loyalty_member&quot;:null},&quot;amount&quot;:&quot;0.00&quot;,&quot;incentive&quot;:&quot;other&quot;,&quot;incentive_description&quot;:&quot;First Month Free&quot;,&quot;reward_coupon_code&quot;:null,&quot;origin&quot;:{&quot;id&quot;:147886587,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;450901776&quot;,&quot;order_date&quot;:&quot;2021-04-23T19:08:17.000-08:00&quot;,&quot;subtotal&quot;:35.03,&quot;currency_iso_code&quot;:&quot;USD&quot;,&quot;email&quot;:&quot;referred@example.com&quot;,&quot;customer_id&quot;:&quot;565659001&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT29123&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;}},&quot;advocate_rewards&quot;:[{&quot;id&quot;:715729561,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;person&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;phone_number&quot;:&quot;+12025551111&quot;,&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Crane&quot;,&quot;username&quot;:null,&quot;sub_choice&quot;:false,&quot;subscribed_at&quot;:null,&quot;opted_in_at&quot;:null,&quot;phone_opted_in_at&quot;:null,&quot;unsubscribed_at&quot;:null,&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0},&quot;custom_properties&quot;:{&quot;coffee_roast&quot;:&quot;dark&quot;},&quot;is_loyalty_member&quot;:false,&quot;loyalty_member&quot;:null},&quot;amount&quot;:&quot;5.00&quot;,&quot;incentive&quot;:&quot;rebate&quot;,&quot;incentive_description&quot;:&quot;$5.00 back&quot;,&quot;reward_coupon_code&quot;:null,&quot;origin&quot;:{&quot;id&quot;:6400368,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;459179054&quot;,&quot;order_date&quot;:&quot;2021-04-23T19:08:17.000-08:00&quot;,&quot;subtotal&quot;:11.39,&quot;currency_iso_code&quot;:&quot;USD&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;customer_id&quot;:&quot;376990942&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT59688&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;}}],&quot;friend_rewards&quot;:[{&quot;id&quot;:11192772,&quot;email&quot;:&quot;referred@example.com&quot;,&quot;person&quot;:{&quot;email&quot;:&quot;referred@example.com&quot;,&quot;phone_number&quot;:null,&quot;first_name&quot;:&quot;Alice&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;username&quot;:null,&quot;sub_choice&quot;:true,&quot;subscribed_at&quot;:&quot;2018-09-14T23:57:18.734+03:00&quot;,&quot;opted_in_at&quot;:&quot;2018-09-14T23:57:18.734+03:00&quot;,&quot;phone_opted_in_at&quot;:null,&quot;unsubscribed_at&quot;:null,&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0},&quot;custom_properties&quot;:{},&quot;is_loyalty_member&quot;:false,&quot;loyalty_member&quot;:null},&quot;amount&quot;:&quot;0.00&quot;,&quot;incentive&quot;:&quot;other&quot;,&quot;incentive_description&quot;:&quot;First Month Free&quot;,&quot;reward_coupon_code&quot;:null,&quot;origin&quot;:{&quot;id&quot;:147886587,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;450901776&quot;,&quot;order_date&quot;:&quot;2021-04-23T19:08:17.000-08:00&quot;,&quot;subtotal&quot;:35.03,&quot;currency_iso_code&quot;:&quot;USD&quot;,&quot;email&quot;:&quot;referred@example.com&quot;,&quot;customer_id&quot;:&quot;565659001&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT29123&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;}}],&quot;referred_origin&quot;:{&quot;id&quot;:6400368,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;459179054&quot;,&quot;order_date&quot;:&quot;2021-04-23T19:08:17.000-08:00&quot;,&quot;subtotal&quot;:11.39,&quot;currency_iso_code&quot;:&quot;USD&quot;,&quot;email&quot;:&quot;referred@example.com&quot;,&quot;customer_id&quot;:&quot;376990942&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT59688&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;},&quot;share&quot;:{&quot;channel&quot;:&quot;other&quot;}}&#39;</span>
+     -d <span class="s1">&#39;payload={&quot;campaign&quot;:{&quot;id&quot;:593427266,&quot;type&quot;:&quot;StandaloneCampaign&quot;,&quot;cached_slug&quot;:593427266,&quot;tag_names&quot;:[&quot;default&quot;],&quot;origin_min_age&quot;:null,&quot;origin_max_age&quot;:null,&quot;new_customer&quot;:null,&quot;joinable_category_names&quot;:[&quot;affiliate_member&quot;]},&quot;offer&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;short_url_code&quot;:&quot;1a2PV&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;},&quot;referrer&quot;:{&quot;id&quot;:715729561,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;person&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;phone_number&quot;:&quot;+12025551111&quot;,&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Crane&quot;,&quot;username&quot;:null,&quot;sub_choice&quot;:false,&quot;subscribed_at&quot;:null,&quot;opted_in_at&quot;:null,&quot;phone_opted_in_at&quot;:null,&quot;unsubscribed_at&quot;:null,&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0},&quot;custom_properties&quot;:{&quot;coffee_roast&quot;:&quot;dark&quot;},&quot;is_loyalty_member&quot;:false,&quot;loyalty_member&quot;:null,&quot;gender&quot;:null},&quot;amount&quot;:&quot;5.00&quot;,&quot;incentive&quot;:&quot;rebate&quot;,&quot;incentive_description&quot;:&quot;$5.00 back&quot;,&quot;reward_coupon_code&quot;:null,&quot;origin&quot;:{&quot;id&quot;:159843498,&quot;type&quot;:&quot;AffiliateMember&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;customer_id&quot;:&quot;64227025&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;traffic_source&quot;:&quot;unknown&quot;}},&quot;referred&quot;:{&quot;id&quot;:11192772,&quot;email&quot;:&quot;referred@example.com&quot;,&quot;person&quot;:{&quot;email&quot;:&quot;referred@example.com&quot;,&quot;phone_number&quot;:null,&quot;first_name&quot;:&quot;Alice&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;username&quot;:null,&quot;sub_choice&quot;:true,&quot;subscribed_at&quot;:&quot;2018-09-14T23:57:18.734+03:00&quot;,&quot;opted_in_at&quot;:&quot;2018-09-14T23:57:18.734+03:00&quot;,&quot;phone_opted_in_at&quot;:&quot;2018-09-14T23:57:18.734+03:00&quot;,&quot;unsubscribed_at&quot;:null,&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0},&quot;custom_properties&quot;:{},&quot;is_loyalty_member&quot;:false,&quot;loyalty_member&quot;:null,&quot;gender&quot;:null},&quot;amount&quot;:&quot;0.00&quot;,&quot;incentive&quot;:&quot;other&quot;,&quot;incentive_description&quot;:&quot;First Month Free&quot;,&quot;reward_coupon_code&quot;:null,&quot;origin&quot;:{&quot;id&quot;:147886587,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;450901776&quot;,&quot;order_date&quot;:&quot;2021-04-23T19:08:17.000-08:00&quot;,&quot;subtotal&quot;:35.03,&quot;currency_iso_code&quot;:&quot;USD&quot;,&quot;email&quot;:&quot;referred@example.com&quot;,&quot;customer_id&quot;:&quot;565659001&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT29123&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;}},&quot;advocate_rewards&quot;:[{&quot;id&quot;:715729561,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;person&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;phone_number&quot;:&quot;+12025551111&quot;,&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Crane&quot;,&quot;username&quot;:null,&quot;sub_choice&quot;:false,&quot;subscribed_at&quot;:null,&quot;opted_in_at&quot;:null,&quot;phone_opted_in_at&quot;:null,&quot;unsubscribed_at&quot;:null,&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0},&quot;custom_properties&quot;:{&quot;coffee_roast&quot;:&quot;dark&quot;},&quot;is_loyalty_member&quot;:false,&quot;loyalty_member&quot;:null,&quot;gender&quot;:null},&quot;amount&quot;:&quot;5.00&quot;,&quot;incentive&quot;:&quot;rebate&quot;,&quot;incentive_description&quot;:&quot;$5.00 back&quot;,&quot;reward_coupon_code&quot;:null,&quot;origin&quot;:{&quot;id&quot;:6400368,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;459179054&quot;,&quot;order_date&quot;:&quot;2021-04-23T19:08:17.000-08:00&quot;,&quot;subtotal&quot;:11.39,&quot;currency_iso_code&quot;:&quot;USD&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;customer_id&quot;:&quot;376990942&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT59688&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;}}],&quot;friend_rewards&quot;:[{&quot;id&quot;:11192772,&quot;email&quot;:&quot;referred@example.com&quot;,&quot;person&quot;:{&quot;email&quot;:&quot;referred@example.com&quot;,&quot;phone_number&quot;:null,&quot;first_name&quot;:&quot;Alice&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;username&quot;:null,&quot;sub_choice&quot;:true,&quot;subscribed_at&quot;:&quot;2018-09-14T23:57:18.734+03:00&quot;,&quot;opted_in_at&quot;:&quot;2018-09-14T23:57:18.734+03:00&quot;,&quot;phone_opted_in_at&quot;:null,&quot;unsubscribed_at&quot;:null,&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0},&quot;custom_properties&quot;:{},&quot;is_loyalty_member&quot;:false,&quot;loyalty_member&quot;:null,&quot;gender&quot;:null},&quot;amount&quot;:&quot;0.00&quot;,&quot;incentive&quot;:&quot;other&quot;,&quot;incentive_description&quot;:&quot;First Month Free&quot;,&quot;reward_coupon_code&quot;:null,&quot;origin&quot;:{&quot;id&quot;:147886587,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;450901776&quot;,&quot;order_date&quot;:&quot;2021-04-23T19:08:17.000-08:00&quot;,&quot;subtotal&quot;:35.03,&quot;currency_iso_code&quot;:&quot;USD&quot;,&quot;email&quot;:&quot;referred@example.com&quot;,&quot;customer_id&quot;:&quot;565659001&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT29123&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;}}],&quot;referred_origin&quot;:{&quot;id&quot;:6400368,&quot;type&quot;:&quot;Purchase&quot;,&quot;order_number&quot;:&quot;459179054&quot;,&quot;order_date&quot;:&quot;2021-04-23T19:08:17.000-08:00&quot;,&quot;subtotal&quot;:11.39,&quot;currency_iso_code&quot;:&quot;USD&quot;,&quot;email&quot;:&quot;referred@example.com&quot;,&quot;customer_id&quot;:&quot;376990942&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;coupon_code&quot;:&quot;WHT59688&quot;,&quot;traffic_source&quot;:&quot;post-checkout&quot;},&quot;share&quot;:{&quot;channel&quot;:&quot;other&quot;}}&#39;</span>
 </pre></div>
 </div>
 <div class="hidden docutils container">

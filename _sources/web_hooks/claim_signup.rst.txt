@@ -91,7 +91,8 @@ Friend Email Gating form example:
        "pending": 0
      },
      "is_loyalty_member": false,
-     "loyalty_member": null
+     "loyalty_member": null,
+     "gender": null
    }
 
 .. raw:: html
@@ -105,7 +106,7 @@ Friend Email Gating form example:
         -d "site=<site>" \
         -d "type=claim_signup_web_hook" \
         -d "extras={}" \
-        -d 'payload={"offer":{"email":"referrer@example.com","short_url_code":"1a2PV","ip_address":"127.0.0.1"},"campaign":{"id":465427859,"type":"StandaloneCampaign","cached_slug":465427859,"tag_names":["default"],"joinable_category_names":["affiliate_member"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"email":"john@example.com","phone_number":null,"first_name":null,"last_name":null,"username":null,"ip_address":"127.0.0.1","sub_choice":true,"subscribed_at":"2018-09-27T22:54:28.345+03:00","opted_in_at":"2018-09-27T22:54:28.345+03:00","phone_opted_in_at":null,"unsubscribed_at":null,"custom_properties":{"preferred_style":"oversize"},"referral_counts":{"total":0,"approved":0,"pending":0},"is_loyalty_member":false,"loyalty_member":null}'
+        -d 'payload={"offer":{"email":"referrer@example.com","short_url_code":"1a2PV","ip_address":"127.0.0.1"},"campaign":{"id":465427859,"type":"StandaloneCampaign","cached_slug":465427859,"tag_names":["default"],"joinable_category_names":["affiliate_member"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"email":"john@example.com","phone_number":null,"first_name":null,"last_name":null,"username":null,"ip_address":"127.0.0.1","sub_choice":true,"subscribed_at":"2018-09-27T22:54:28.345+03:00","opted_in_at":"2018-09-27T22:54:28.345+03:00","phone_opted_in_at":null,"unsubscribed_at":null,"custom_properties":{"preferred_style":"oversize"},"referral_counts":{"total":0,"approved":0,"pending":0},"is_loyalty_member":false,"loyalty_member":null,"gender":null}'
 
 .. container:: hidden
 

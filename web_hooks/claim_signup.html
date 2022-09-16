@@ -133,8 +133,8 @@ a share from an Advocate, and before receiving their discount code.</p>
 <ul class="simple">
 <li><p><strong>email</strong> — friend’s email address</p></li>
 <li><p><strong>phone_number</strong> — friend’s phone number (optional)</p></li>
-<li><p><strong>first_name</strong> — friend’s first name</p></li>
-<li><p><strong>last_name</strong> — friend’s last name</p></li>
+<li><p><strong>first_name</strong> — friend’s first name (optional)</p></li>
+<li><p><strong>last_name</strong> — friend’s last name (optional)</p></li>
 <li><p><strong>username</strong> — friend’s username (optional)</p></li>
 <li><p><strong>sub_choice</strong> — subscription choice (optional, present only if the form
 included subscription checkbox)</p></li>
@@ -152,6 +152,7 @@ included subscription checkbox)</p></li>
 <li><p><strong>pending</strong> — count of waiting for approval referrals</p></li>
 </ul>
 </li>
+<li><p><strong>gender</strong> [deprecated]</p></li>
 </ul>
 <ul class="simple">
 <li><p><strong>ip_address</strong> — friend’s IP address</p></li>
@@ -192,7 +193,8 @@ included subscription checkbox)</p></li>
 <span class="w">    </span><span class="s2">&quot;pending&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"></span>
 <span class="w">  </span><span class="p">},</span><span class="w"></span>
 <span class="w">  </span><span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="s2">&quot;gender&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
@@ -201,7 +203,7 @@ included subscription checkbox)</p></li>
      -d <span class="s2">&quot;site=&lt;site&gt;&quot;</span> <span class="se">\</span>
      -d <span class="s2">&quot;type=claim_signup_web_hook&quot;</span> <span class="se">\</span>
      -d <span class="s2">&quot;extras={}&quot;</span> <span class="se">\</span>
-     -d <span class="s1">&#39;payload={&quot;offer&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;short_url_code&quot;:&quot;1a2PV&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;},&quot;campaign&quot;:{&quot;id&quot;:465427859,&quot;type&quot;:&quot;StandaloneCampaign&quot;,&quot;cached_slug&quot;:465427859,&quot;tag_names&quot;:[&quot;default&quot;],&quot;joinable_category_names&quot;:[&quot;affiliate_member&quot;],&quot;origin_min_age&quot;:null,&quot;origin_max_age&quot;:null,&quot;new_customer&quot;:null},&quot;email&quot;:&quot;john@example.com&quot;,&quot;phone_number&quot;:null,&quot;first_name&quot;:null,&quot;last_name&quot;:null,&quot;username&quot;:null,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;sub_choice&quot;:true,&quot;subscribed_at&quot;:&quot;2018-09-27T22:54:28.345+03:00&quot;,&quot;opted_in_at&quot;:&quot;2018-09-27T22:54:28.345+03:00&quot;,&quot;phone_opted_in_at&quot;:null,&quot;unsubscribed_at&quot;:null,&quot;custom_properties&quot;:{&quot;preferred_style&quot;:&quot;oversize&quot;},&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0},&quot;is_loyalty_member&quot;:false,&quot;loyalty_member&quot;:null}&#39;</span>
+     -d <span class="s1">&#39;payload={&quot;offer&quot;:{&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;short_url_code&quot;:&quot;1a2PV&quot;,&quot;ip_address&quot;:&quot;127.0.0.1&quot;},&quot;campaign&quot;:{&quot;id&quot;:465427859,&quot;type&quot;:&quot;StandaloneCampaign&quot;,&quot;cached_slug&quot;:465427859,&quot;tag_names&quot;:[&quot;default&quot;],&quot;joinable_category_names&quot;:[&quot;affiliate_member&quot;],&quot;origin_min_age&quot;:null,&quot;origin_max_age&quot;:null,&quot;new_customer&quot;:null},&quot;email&quot;:&quot;john@example.com&quot;,&quot;phone_number&quot;:null,&quot;first_name&quot;:null,&quot;last_name&quot;:null,&quot;username&quot;:null,&quot;ip_address&quot;:&quot;127.0.0.1&quot;,&quot;sub_choice&quot;:true,&quot;subscribed_at&quot;:&quot;2018-09-27T22:54:28.345+03:00&quot;,&quot;opted_in_at&quot;:&quot;2018-09-27T22:54:28.345+03:00&quot;,&quot;phone_opted_in_at&quot;:null,&quot;unsubscribed_at&quot;:null,&quot;custom_properties&quot;:{&quot;preferred_style&quot;:&quot;oversize&quot;},&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0},&quot;is_loyalty_member&quot;:false,&quot;loyalty_member&quot;:null,&quot;gender&quot;:null}&#39;</span>
 </pre></div>
 </div>
 <div class="hidden docutils container">
