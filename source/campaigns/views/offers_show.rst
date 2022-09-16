@@ -2,12 +2,25 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Advocate Share Page shows the value proposition to Advocate and Friend — they both will receive an exclusive discount.
+   :description: Advocate Signup/Share Page - Combination of Signup and Share forms. Shows the value proposition to Advocate and Friend — they both will receive an exclusive discount.
 
-.. _advocate_share_page_view:
+.. _advocate_signup_share_page_view:
 
-Advocate Share Page
--------------------
+Advocate Signup/Share Page
+--------------------------
+
+Combining the Signup and Share page brings a more smooth experience to our customers.
+
+First we show Advocate Signup form (only for Standalone Campaign), in case we don't know advocate yet and Email gating for advocate is enabled(by default - yes):
+On this page Advocate signs up by entering their email address and phone number(optional).
+
+.. image:: /_static/img/basics/advocate-signup-view.png
+   :alt: Advocate Signup form
+
+After signup, without reloading page, Advocate Share form is shown:
+
+.. image:: /_static/img/basics/advocate-share-form.png
+   :alt: Advocate Share form
 
 Here |advocate| shares an offer with their |friend|\s. Explain the value proposition
 to |advocate| and |friend|, that both will receive an exclusive discount.
@@ -18,38 +31,21 @@ Available sharing methods:
 - Social sharing (Facebook, Twitter, LinkedIn)
 - Link sharing (direct link to the Friend Claim Page)
 
-|br|
-|br|
-
-.. image:: /_static/img/basics/advocate-offer-page.png
-   :alt: Advocate Share Page
-
-|br|
-
 .. raw:: html
 
    <h4>Email sharing example:</h4>
 
-.. code-block:: html
-
-   <form action="#" class="js-share-via-email-form">
-     <input type="text" value="" name="email_recipient_list" />
-     <input type="text" value="" name="email_subject" />
-     <textarea name="share_message"></textarea>
-     <input type="checkbox" checked="checked" name="share_email_reminder" value="true" />
-     <input type="submit" value="Send email" />
-   </form>
-
-..
-
-Note ``share_email_reminder`` checkbox — this is :ref:`friend_share_email_reminder_view`
-trigger.
-
 |br|
+
+.. image:: /_static/img/basics/advocate-share-via-email.png
+   :alt: Advocate Share via Email Form
+
+Note ``Send my friend a reminder e-mail in 3 days`` checkbox — this is :ref:`friend_share_email_reminder_view`
+trigger.
 
 .. raw:: html
 
-   <h4>Facebook sharing example:</h4>
+   <h4>Facebook sharing example(simplified):</h4>
 
 .. code-block:: html
 
@@ -57,11 +53,9 @@ trigger.
      Share on Facebook
    </a>
 
-|br|
-
 .. raw:: html
 
-   <h4>Twitter sharing example:</h4>
+   <h4>Twitter sharing example(simplified):</h4>
 
 .. code-block:: html
 
@@ -69,11 +63,9 @@ trigger.
      Share on Twitter
    </a>
 
-|br|
-
 .. raw:: html
 
-   <h4>Share by link example:</h4>
+   <h4>Share by link example(simplified):</h4>
 
 .. code-block:: html
 

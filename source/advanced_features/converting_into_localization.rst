@@ -64,9 +64,9 @@ Moving Subject Line Into Localization
 
 It is highly unlikely that your campaign is not equipped with Subject line as a Localization, by default all newly created campaigns at Talkable already have it. In case your campaign does not please keep reading this section.
 
-Subject line is unique because its default value is set on the Advocate Share Page along with other email sharing fields (email body, reminder checkbox value), not Friend Share email as it might sounded logical. Here is the plan:
+Subject line is unique because its default value is set on the Advocate Signup/Share Page along with other email sharing fields (email body, reminder checkbox value), not Friend Share email as it might sounded logical. Here is the plan:
 
-  1. Create Subject Line as a Localization on the Advocate Share Page, provide its default value, it will be used inside `value` attribute of the "subject" form field:
+  1. Create Subject Line as a Localization on the Advocate Signup/Share Page, provide its default value, it will be used inside `value` attribute of the "subject" form field:
 
     .. image:: /_static/img/advanced_features/subject_line_setup_inside_share_page.png
 
@@ -74,7 +74,7 @@ Subject line is unique because its default value is set on the Advocate Share Pa
 
       <input name="email_subject" type="text" class="textfield" value="{{ 'friend_share_email_subject' | localize: 'Your friend [[ advocate_info.first_name ]] [[ advocate_info.last_name ]] gave you [[ friend_incentive.description ]]' | replace: '   ', ' ' | replace: '  ', ' ' }}" />
 
-    This code creates new Localization named "Friend share email subject" that you are able to change on the Advocate Share Page.
+    This code creates new Localization named "Friend share email subject" that you are able to change on the Advocate Signup/Share Page.
 
   2. Navigate to Friend Share email → Extra fields to see Email Subject field:
 

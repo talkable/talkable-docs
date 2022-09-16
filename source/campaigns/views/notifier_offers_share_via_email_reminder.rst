@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Sometimes you need only one email to remind a Friend about your offer — just check on the checkbox on the Advocate Share Page.
+   :description: Sometimes you need only one email to remind a Friend about your offer — just check on the checkbox on the Advocate Signup/Share Page.
 
 .. _friend_share_email_reminder_view:
 
@@ -10,7 +10,7 @@ Friend Share Email Reminder
 ---------------------------
 
 Email is triggered only if Friend Share Email Reminder checkbox was checked
-on the :ref:`advocate_share_page_view` when sharing. |br|
+on the :ref:`advocate_signup_share_page_view` when sharing. |br|
 By default reminder email sends out in 72 hours after sharing if |friend| didn’t
 use their Offer (i.e. didn’t make a store purchase using coupon code).
 
@@ -36,4 +36,3 @@ By default the email is sent in 72 hours after the offer is shared.
   - If |friend| offer is active
   - Recipient (|friend|) was not referred by this offer yet
   - Current offer is the last one shared with the recipient (if were delayed few reminders Talkable sends the last one)
-

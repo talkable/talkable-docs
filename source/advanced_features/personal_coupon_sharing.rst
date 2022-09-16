@@ -65,7 +65,7 @@ Talkable customer:
 
 Multiple campaigns can be attached to a single Personal coupon list.
 It is recommended that all campaigns are attached to the same Personal coupon list,
-this way each Advocate will see the same personal coupon on the Advocate share page.
+this way each Advocate will see the same personal coupon on the Advocate Signup/Share page.
 If multiple campaigns are attached to different personal coupon lists Advocates
 will be seeing different personal coupons.
 

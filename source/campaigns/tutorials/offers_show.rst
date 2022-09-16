@@ -4,7 +4,7 @@
 .. meta::
    :description: Instant reward campaign lets you reward your brand Advocate immediately — right after a referral link to a Friend was sent.
 
-Advocate Share Page
+Advocate Signup/Share Page
 -------------------
 
 .. _tutorials_instant_reward:
@@ -21,7 +21,7 @@ To make instant reward work you need to use FB App share instead of a
 default sharer.php.
 Also make sure **RR social sharing incentive** is set.
 
-After that we need to setup Advocate Share Page with the following markup:
+After that we need to setup Advocate Signup/Share Page with the following markup:
 
 .. include:: /samples/liquid/offers_show/instant_reward_basic.rst
 

@@ -70,7 +70,7 @@ triggered twice.
    ``origin.email`` contains the email saved at the moment when the campaign is
    first shown to the Advocate. It could be ``null``. For the most up-to-date
    information about the Advocate, use ``sharer_info`` property which is updated
-   with the email address the Advocate has entered on the Advocate Signup Page.
+   with the email address the Advocate has entered on the Advocate Signup/Share Page.
 
 .. raw:: html
 
