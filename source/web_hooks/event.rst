@@ -38,30 +38,31 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
 
   *For Purchase:*
 
-     * **email** - email address associated with the Purchase
-     * **order_number** - unique identifier of the Purchase
-     * **customer_id** - unique external identifier of a customer who made the purchase
-     * **subtotal** - order subtotal for the purchase
-     * **coupon_code** - coupon code used with the purchase
-     * **currency_iso_code** - currency ISO code of the Purchase
-     * **traffic_source** - traffic source of the Purchase
-     * **ip_address** - IP address of the Purchase
+     * **email** — email address associated with the Purchase
+     * **order_number** — unique identifier of the Purchase
+     * **customer_id** — unique external identifier of a customer who made the purchase
+     * **subtotal** — order subtotal for the purchase
+     * **coupon_code** — coupon code used with the purchase
+     * **currency_iso_code** — currency ISO code of the Purchase
+     * **traffic_source** — traffic source of the Purchase
+     * **ip_address** — IP address of the Purchase
 
   *For Event:*
 
-     * **email** - email address associated with the Event
-     * **event_category** - identifier of an action that trigger the Event (e.g. ``app_installed``)
-     * **event_number** - unique identifier of the Event within the associated **event_category**
-     * **customer_id** - unique external identifier of a customer who triggered the event
-     * **subtotal** - optional monetary attribute of the Event
-     * **currency_iso_code** - currency ISO code of the Event
-     * **coupon_code** - optional coupon code associated with the Event
-     * **traffic_source** - traffic source of the Event
-     * **ip_address** - IP address of the Event
+     * **email** — email address associated with the Event
+     * **event_category** — identifier of an action that trigger the Event (e.g. ``app_installed``)
+     * **event_number** — unique identifier of the Event within the associated **event_category**
+     * **customer_id** — unique external identifier of a customer who triggered the event
+     * **subtotal** — optional monetary attribute of the Event
+     * **currency_iso_code** — currency ISO code of the Event
+     * **coupon_code** — optional coupon code associated with the Event
+     * **traffic_source** — traffic source of the Event
+     * **ip_address** — IP address of the Event
 
-* **person** - subhash of data describing the person who triggered the event
+* **person** — subhash of data describing the person who triggered the event
 
     .. include:: /partials/person_fields.rst
+    .. |person| replace:: person
 
 .. raw:: html
 
@@ -73,6 +74,7 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
      "origin": {
        "id": 289738874,
        "type": "Event",
+       "email": "referrer@example.com",
        "event_number": "953205549",
        "event_category": "webhook-test",
        "subtotal": 91.52,
@@ -87,18 +89,22 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
        "first_name": "Bob",
        "last_name": "Smith",
        "email": "referrer@example.com",
+       "phone_number": null,
        "username": "username",
        "unsubscribed_at": null,
        "subscribed_at": "2019-04-11T07:25:17.272-07:00",
        "opted_in_at": "2019-04-11T07:25:17.272-07:00",
+       "phone_opted_in_at": null,
        "sub_choice": true,
+       "custom_properties": {},
        "referral_counts": {
          "total": 0,
          "approved": 0,
          "pending": 0
        },
        "is_loyalty_member": false,
-       "loyalty_member": null
+       "loyalty_member": null,
+       "gender": null
      }
    }
 
@@ -108,7 +114,12 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&site=<site>&type=event_web_hook&payload={"origin":{"id":998181034,"type":"Event","event_number":"352670218","event_category":"webhook-test","subtotal":21.36,"customer_id":"472735863","order_date":"2019-04-16T06:20:47.079-07:00","coupon_code":"WHT65226","currency_iso_code":"USD","ip_address":"127.0.0.1","traffic_source":"post-event"},"person":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","username":"username","unsubscribed_at":null,"subscribed_at":"2019-04-16T06:19:47.079-07:00","opted_in_at":"2019-04-16T06:19:47.079-07:00","sub_choice":true}}' <url>
+   curl <url> \
+        -d "key=<key>" \
+        -d "site=<site>" \
+        -d "type=event_web_hook" \
+        -d "extras={}" \
+        -d 'payload={"origin":{"id":289738874,"type":"Event","email":"referrer@example.com","event_number":"953205549","event_category":"webhook-test","subtotal":91.52,"customer_id":"865955119","order_date":"2019-04-11T07:26:17.272-07:00","coupon_code":"WHT28499","currency_iso_code":"USD","ip_address":"127.0.0.1","traffic_source":"post-event"},"person":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","phone_number":null,"username":"username","unsubscribed_at":null,"subscribed_at":"2019-04-11T07:25:17.272-07:00","opted_in_at":"2019-04-11T07:25:17.272-07:00","phone_opted_in_at":null,"sub_choice":true,"custom_properties":{},"referral_counts":{"total":0,"approved":0,"pending":0},"is_loyalty_member":false,"loyalty_member":null,"gender":null}}'
 
 .. raw:: html
 
@@ -120,6 +131,7 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
      "origin": {
        "id": 654689661,
        "type": "Purchase",
+       "email": "referrer@example.com",
        "order_number": "426692385",
        "subtotal": 29.39,
        "customer_id": "162638070",
@@ -133,11 +145,14 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
        "first_name": "Bob",
        "last_name": "Smith",
        "email": "referrer@example.com",
+       "phone_number": "+12025551111",
        "username": "username",
        "unsubscribed_at": null,
        "subscribed_at": "2019-04-11T07:27:31.258-07:00",
        "opted_in_at": "2019-04-11T07:27:31.258-07:00",
+       "phone_opted_in_at": "2019-04-11T07:27:31.258-07:00",
        "sub_choice": true,
+       "custom_properties": {},
        "referral_counts": {
          "total": 0,
          "approved": 0,
@@ -154,7 +169,12 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&site=<site>&type=event_web_hook&payload={"origin":{"id":654689661,"type":"Purchase","order_number":"426692385","subtotal":29.39,"customer_id":"162638070","order_date":"2019-04-11T07:28:31.258-07:00","coupon_code":"WHT79679","currency_iso_code":"USD","ip_address":"127.0.0.1","traffic_source":"post-checkout"},"person":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","username":"username","unsubscribed_at":null,"subscribed_at":"2019-04-11T07:27:31.258-07:00","opted_in_at":"2019-04-11T07:27:31.258-07:00","sub_choice":true}}' <url>
+   curl <url> \
+        -d "key=<key>" \
+        -d "site=<site>" \
+        -d "type=event_web_hook" \
+        -d "extras={}" \
+        -d 'payload={"origin":{"id":654689661,"type":"Purchase","email":"referrer@example.com","order_number":"426692385","subtotal":29.39,"customer_id":"162638070","order_date":"2019-04-11T07:28:31.258-07:00","coupon_code":"WHT79679","currency_iso_code":"USD","ip_address":"127.0.0.1","traffic_source":"post-checkout"},"person":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","phone_number":"+12025551111","username":"username","unsubscribed_at":null,"subscribed_at":"2019-04-11T07:27:31.258-07:00","opted_in_at":"2019-04-11T07:27:31.258-07:00","phone_opted_in_at":"2019-04-11T07:27:31.258-07:00","sub_choice":true,"custom_properties":{},"referral_counts":{"total":0,"approved":0,"pending":0},"is_loyalty_member":false,"loyalty_member":null}}'
 
 .. container:: hidden
 

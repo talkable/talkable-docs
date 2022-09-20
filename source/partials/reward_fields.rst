@@ -4,6 +4,8 @@
 * **person** — parameters describing the person that got reward
 
   .. include:: /partials/person_fields.rst
+  .. Dear developer, please don't forget to add a substitution block for |person|
+  .. in the documentation file, where this partial is included
 
 * **incentive** — type of incentive reward (`rebate`, `discount_coupon`, `other`)
 * **incentive_description** — verbal reward explanation

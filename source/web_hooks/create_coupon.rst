@@ -104,7 +104,7 @@ Create Coupon Webhook can now be set up.
      "email": null,
      "expires_at": "2014-04-14T06:17:14.309-07:00",
      "percentage_discount": false,
-     "usage_limit": 1,
+     "usage_limit": 1
    }
 
 .. raw:: html
@@ -113,7 +113,12 @@ Create Coupon Webhook can now be set up.
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&site=<site>&type=create_coupon_web_hook&payload={"coupon_auto_sync_enabled":false,"coupon_code":"WHT58574","coupon_list_id":1,"coupon_list_name":"$10 off","discount_amount":"10.0","email":null,"expires_at":"2014-04-14T06:17:14.309-07:00","percentage_discount":false,"usage_limit":1}' <url>
+   curl <url> \
+        -d "key=<key>" \
+        -d "site=<site>" \
+        -d "type=create_coupon_web_hook" \
+        -d "extras={}" \
+        -d 'payload={"coupon_auto_sync_enabled":false,"coupon_code":"WHT58574","coupon_list_id":1,"coupon_list_name":"$10 off","discount_amount":"10.0","email":null,"expires_at":"2014-04-14T06:17:14.309-07:00","percentage_discount":false,"usage_limit":1}'
 
 .. container:: hidden
 
