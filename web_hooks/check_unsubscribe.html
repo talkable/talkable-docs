@@ -126,22 +126,28 @@ representing unsubscribed status according to the merchant info.</p>
 </li>
 <li><p><strong>recipient</strong> — subhash of parameters describing the recipient</p>
 <ul>
-<li><p><strong>first_name</strong> — recipient’s first name</p></li>
-<li><p><strong>last_name</strong> — recipient’s last name</p></li>
 <li><p><strong>email</strong> — recipient’s email address</p></li>
-<li><p><strong>username</strong> — recipient’s username</p></li>
-<li><p><strong>unsubscribed_at</strong> — date recipient has unsubscribed</p></li>
-<li><p><strong>subscribed_at</strong> — date person has subscribed (deprecated; use opted_in_at instead)</p></li>
-<li><p><strong>opted_in_at</strong> — date recipient has subscribed</p></li>
-<li><p><strong>sub_choice</strong> — subscription choice</p></li>
+<li><p><strong>phone_number</strong> — recipient’s phone number (optional)</p></li>
+<li><p><strong>first_name</strong> — recipient’s first name (optional)</p></li>
+<li><p><strong>last_name</strong> — recipient’s last name (optional)</p></li>
+<li><p><strong>username</strong> — recipient’s username (optional)</p></li>
+<li><p><strong>sub_choice</strong> — subscription choice (optional, present only if the form
+included subscription checkbox)</p></li>
+<li><p><strong>subscribed_at</strong> — date recipient has subscribed (deprecated; use <code class="docutils literal notranslate"><span class="pre">opted_in_at</span></code> instead)</p></li>
+<li><p><strong>opted_in_at</strong> — date recipient has subscribed (optional)</p></li>
+<li><p><strong>phone_opted_in_at</strong> — date recipient has subscribed with email (optional)</p></li>
+<li><p><strong>unsubscribed_at</strong> — date recipient has unsubscribed with phone number (optional)</p></li>
 <li><p><strong>custom_properties</strong> — hash of recipient’s custom properties (optional)</p></li>
-<li><p><strong>referral_counts</strong> - subhash of <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>’s referral counts</p>
+<li><p><strong>is_loyalty_member</strong> — whether the recipient participates in loyalty program</p></li>
+<li><p><strong>loyalty_member</strong> — details of the recipient as a loyalty program participant (optional)</p></li>
+<li><p><strong>referral_counts</strong> — referral counts of recipient as <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr></p>
 <ul>
 <li><p><strong>total</strong> — created referrals count</p></li>
 <li><p><strong>approved</strong> — approved referrals count</p></li>
 <li><p><strong>pending</strong> — count of waiting for approval referrals</p></li>
 </ul>
 </li>
+<li><p><strong>gender</strong> [deprecated]</p></li>
 </ul>
 </li>
 <li><p><strong>email_type</strong> — described view category</p></li>
@@ -161,6 +167,7 @@ representing unsubscribed status according to the merchant info.</p>
 <span class="w">    </span><span class="s2">&quot;type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;StandaloneCampaign&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;cached_slug&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">509365458</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;tag_names&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;default&quot;</span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;joinable_category_names&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;affiliate_member&quot;</span><span class="p">],</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;origin_min_age&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;origin_max_age&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;new_customer&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
@@ -169,24 +176,33 @@ representing unsubscribed status according to the merchant info.</p>
 <span class="w">    </span><span class="s2">&quot;first_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bob&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;last_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Smith&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;referrer@example.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;phone_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;+12025551111&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;username&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;username&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;unsubscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;subscribed_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2018-09-27T22:55:40.610+03:00&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2018-09-27T22:55:40.610+03:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;phone_opted_in_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2018-09-27T22:55:40.610+03:00&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;custom_properties&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;referral_counts&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;total&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;approved&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
 <span class="w">      </span><span class="s2">&quot;pending&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"></span>
 <span class="w">    </span><span class="p">},</span><span class="w"></span>
 <span class="w">    </span><span class="s2">&quot;is_loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;loyalty_member&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;gender&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
 <span class="w">  </span><span class="p">},</span><span class="w"></span>
 <span class="w">  </span><span class="s2">&quot;email_type&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;notifier_offers_email&quot;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<h2>cURL example</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl --data <span class="s1">&#39;key=&lt;key&gt;&amp;site=&lt;site&gt;&amp;type=check_unsubscribe_web_hook&amp;payload={&quot;campaign&quot;:{&quot;id&quot;:509365458,&quot;type&quot;:&quot;StandaloneCampaign&quot;,&quot;cached_slug&quot;:509365458,&quot;tag_names&quot;:[&quot;default&quot;],&quot;origin_min_age&quot;:null,&quot;origin_max_age&quot;:null,&quot;new_customer&quot;:null},&quot;recipient&quot;:{&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;username&quot;:&quot;username&quot;,&quot;unsubscribed_at&quot;:null,&quot;subscribed_at&quot;:&quot;2018-09-27T22:55:40.610+03:00&quot;,&quot;opted_in_at&quot;:&quot;2018-09-27T22:55:40.610+03:00&quot;,&quot;sub_choice&quot;:true,&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0}},&quot;email_type&quot;:&quot;notifier_offers_email&quot;}&#39;</span> &lt;url&gt;
+<h2>cURL example</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl &lt;url&gt; <span class="se">\</span>
+     -d <span class="s2">&quot;key=&lt;key&gt;&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;site=&lt;site&gt;&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;type=check_unsubscribe_web_hook&quot;</span> <span class="se">\</span>
+     -d <span class="s2">&quot;extras={}&quot;</span> <span class="se">\</span>
+     -d <span class="s1">&#39;payload={&quot;campaign&quot;:{&quot;id&quot;:509365458,&quot;type&quot;:&quot;StandaloneCampaign&quot;,&quot;cached_slug&quot;:509365458,&quot;tag_names&quot;:[&quot;default&quot;],&quot;joinable_category_names&quot;:[&quot;affiliate_member&quot;],&quot;origin_min_age&quot;:null,&quot;origin_max_age&quot;:null,&quot;new_customer&quot;:null},&quot;recipient&quot;:{&quot;first_name&quot;:&quot;Bob&quot;,&quot;last_name&quot;:&quot;Smith&quot;,&quot;email&quot;:&quot;referrer@example.com&quot;,&quot;phone_number&quot;:&quot;+12025551111&quot;,&quot;username&quot;:&quot;username&quot;,&quot;unsubscribed_at&quot;:null,&quot;subscribed_at&quot;:&quot;2018-09-27T22:55:40.610+03:00&quot;,&quot;opted_in_at&quot;:&quot;2018-09-27T22:55:40.610+03:00&quot;,&quot;phone_opted_in_at&quot;:&quot;2018-09-27T22:55:40.610+03:00&quot;,&quot;sub_choice&quot;:true,&quot;custom_properties&quot;:{},&quot;referral_counts&quot;:{&quot;total&quot;:0,&quot;approved&quot;:0,&quot;pending&quot;:0},&quot;is_loyalty_member&quot;:false,&quot;loyalty_member&quot;:null,&quot;gender&quot;:null},&quot;email_type&quot;:&quot;notifier_offers_email&quot;}&#39;</span>
 </pre></div>
 </div>
 <div class="hidden docutils container">

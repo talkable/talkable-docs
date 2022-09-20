@@ -42,20 +42,8 @@ merchant side.
 
 * **recipient** — subhash of parameters describing the recipient
 
-  * **first_name** — recipient’s first name
-  * **last_name** — recipient’s last name
-  * **email** — recipient’s email address
-  * **username** — recipient’s username
-  * **unsubscribed_at** — date recipient has unsubscribed
-  * **subscribed_at** — date person has subscribed (deprecated; use opted_in_at instead)
-  * **opted_in_at** — date recipient has subscribed
-  * **sub_choice** — subscription choice
-  * **custom_properties** — hash of recipient’s custom properties (optional)
-  * **referral_counts** - subhash of |advocate|'s referral counts
-
-    * **total** — created referrals count
-    * **approved** — approved referrals count
-    * **pending** — count of waiting for approval referrals
+  .. include:: /partials/person_fields.rst
+  .. |person| replace:: recipient
 
 * **email_type** — described view category
 
@@ -84,6 +72,7 @@ View category can be one of the following:
        "type": "StandaloneCampaign",
        "cached_slug": 509365458,
        "tag_names": ["default"],
+       "joinable_category_names": ["affiliate_member"],
        "origin_min_age": null,
        "origin_max_age": null,
        "new_customer": null
@@ -92,18 +81,22 @@ View category can be one of the following:
        "first_name": "Bob",
        "last_name": "Smith",
        "email": "referrer@example.com",
+       "phone_number": "+12025551111",
        "username": "username",
        "unsubscribed_at": null,
        "subscribed_at": "2018-09-27T22:55:40.610+03:00",
        "opted_in_at": "2018-09-27T22:55:40.610+03:00",
+       "phone_opted_in_at": "2018-09-27T22:55:40.610+03:00",
        "sub_choice": true,
+       "custom_properties": {},
        "referral_counts": {
          "total": 0,
          "approved": 0,
          "pending": 0
        },
        "is_loyalty_member": false,
-       "loyalty_member": null
+       "loyalty_member": null,
+       "gender": null
      },
      "email_type": "notifier_offers_email"
    }
@@ -114,7 +107,12 @@ View category can be one of the following:
 
 .. code-block:: bash
 
-   curl --data 'key=<key>&site=<site>&type=check_unsubscribe_web_hook&payload={"campaign":{"id":509365458,"type":"StandaloneCampaign","cached_slug":509365458,"tag_names":["default"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"recipient":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","username":"username","unsubscribed_at":null,"subscribed_at":"2018-09-27T22:55:40.610+03:00","opted_in_at":"2018-09-27T22:55:40.610+03:00","sub_choice":true,"referral_counts":{"total":0,"approved":0,"pending":0}},"email_type":"notifier_offers_email"}' <url>
+   curl <url> \
+        -d "key=<key>" \
+        -d "site=<site>" \
+        -d "type=check_unsubscribe_web_hook" \
+        -d "extras={}" \
+        -d 'payload={"campaign":{"id":509365458,"type":"StandaloneCampaign","cached_slug":509365458,"tag_names":["default"],"joinable_category_names":["affiliate_member"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"recipient":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","phone_number":"+12025551111","username":"username","unsubscribed_at":null,"subscribed_at":"2018-09-27T22:55:40.610+03:00","opted_in_at":"2018-09-27T22:55:40.610+03:00","phone_opted_in_at":"2018-09-27T22:55:40.610+03:00","sub_choice":true,"custom_properties":{},"referral_counts":{"total":0,"approved":0,"pending":0},"is_loyalty_member":false,"loyalty_member":null,"gender":null},"email_type":"notifier_offers_email"}'
 
 .. container:: hidden
 
