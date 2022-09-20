@@ -29,7 +29,7 @@ Talkable referral campaign.
 
 Possible events which will trigger the Reward Webhook are:
 
-* Advocate Signup form submitted (Reason = **signup**)
+* Advocate Signup Form submitted (Reason = **signup**)
 * Advocate shares an offer with Friend(s) (Reason = **shared**)
 * Friend passes email gating form (Reason = **click**)
 
@@ -177,7 +177,7 @@ Webhook Set Up Steps <web_hooks>`
 
 Reward reason can be of 5 following general types.
 
-* **signup** — Advocate reward for sign-up (Advocate Signup form submitted)
+* **signup** — Advocate reward for sign-up (Advocate Signup Form submitted)
 * **shared** — Advocate reward for sharing an offer with Friend(s)
 * **click** — Friend reward for visiting claim page (and optionally passing gating)
 * **referrer** — Advocate reward for eligible referral purchase by Friend

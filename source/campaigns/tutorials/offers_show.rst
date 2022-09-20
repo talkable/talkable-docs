@@ -5,7 +5,7 @@
    :description: Instant reward campaign lets you reward your brand Advocate immediately — right after a referral link to a Friend was sent.
 
 Advocate Signup/Share Page
--------------------
+--------------------------
 
 .. _tutorials_instant_reward:
 

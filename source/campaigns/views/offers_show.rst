@@ -9,13 +9,13 @@
 Advocate Signup/Share Page
 --------------------------
 
-Combining the Signup and Share page brings a more smooth experience to our customers.
+Combining the Signup and Share page brings a smoother experience to our customers.
 
-First we show Advocate Signup form (only for Standalone Campaign), in case we don't know advocate yet and Email gating for advocate is enabled(by default - yes):
+First we show Advocate Signup Form. Signup is skipped when we know the advocate or Email gating for advocate is disabled (by default - enabled).
 On this page Advocate signs up by entering their email address and phone number(optional).
 
-.. image:: /_static/img/basics/advocate-signup-view.png
-   :alt: Advocate Signup form
+.. image:: /_static/img/basics/advocate-signup-form.png
+   :alt: Advocate Signup Form
 
 After signup, without reloading page, Advocate Share form is shown:
 
@@ -45,7 +45,7 @@ trigger.
 
 .. raw:: html
 
-   <h4>Facebook sharing example(simplified):</h4>
+   <h4>Facebook sharing example (simplified):</h4>
 
 .. code-block:: html
 
@@ -55,7 +55,7 @@ trigger.
 
 .. raw:: html
 
-   <h4>Twitter sharing example(simplified):</h4>
+   <h4>Twitter sharing example (simplified):</h4>
 
 .. code-block:: html
 
@@ -65,7 +65,7 @@ trigger.
 
 .. raw:: html
 
-   <h4>Share by link example(simplified):</h4>
+   <h4>Share by link example (simplified):</h4>
 
 .. code-block:: html
 
