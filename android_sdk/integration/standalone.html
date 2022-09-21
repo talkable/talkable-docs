@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Standalone Campaign &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
@@ -11,7 +11,6 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/android_sdk/integration/standalone.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -93,7 +92,7 @@
           <div class="body" role="main">
             
   <span class="target" id="android-sdk-integration-standalone"></span><section id="standalone-campaign">
-<h1>Standalone Campaign<a class="headerlink" href="#standalone-campaign" title="Permalink to this heading">¶</a></h1>
+<h1>Standalone Campaign<a class="headerlink" href="#standalone-campaign" title="Permalink to this headline">¶</a></h1>
 <p>Let’s take a look at how the Standalone campaign integration looks. The main purpose
 of this type of campaign is to drive your users to invite their friends (to become Advocates)
 without being gated by a purchase beforehand.</p>
@@ -121,10 +120,10 @@ with the following line of code:</p>
 <p>Make sure you have at least one Live “SA” campaign inside Talkable Site with <cite>android-invite</cite> tag or the tag you specified</p>
 </div>
 <p>Note that <cite>customer</cite> is empty, in this case user will see the
-<a class="reference internal" href="../../campaigns/views/affiliate_members_new.html#campaigns-views-affiliate-members-new"><span class="std std-ref">Advocate Signup Page</span></a>, which is used to collect
+<a class="reference internal" href="../../campaigns/views/offers_show.html#campaigns-views-offers-show"><span class="std std-ref">Advocate Signup Form</span></a>, which is used to collect
 the user’s email address. Your application may already know/have access to the user’s email,
-if so, you should pass this parameter which will automatically skip the Signup Page in the
-flow and show the <a class="reference internal" href="../../campaigns/views/offers_show.html#campaigns-views-offers-show"><span class="std std-ref">Advocate Share Page</span></a>.</p>
+if so, you should pass this parameter which will automatically skip the Signup Form in the
+flow and show the <a class="reference internal" href="../../campaigns/views/offers_show.html#campaigns-views-offers-show"><span class="std std-ref">Advocate Share Form</span></a>.</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.talkable.sdk.Talkable</span><span class="p">;</span><span class="w"></span>
 <span class="p">...</span><span class="w"></span>
 

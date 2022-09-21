@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Advanced Usage &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -11,7 +11,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/android_sdk/advanced.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -96,9 +95,9 @@
           <div class="body" role="main">
             
   <span class="target" id="android-sdk-advanced"></span><section id="advanced-usage">
-<h1>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Permalink to this heading">¶</a></h1>
+<h1>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Permalink to this headline">¶</a></h1>
 <section id="error-handling">
-<span id="id1"></span><h2>Error Handling<a class="headerlink" href="#error-handling" title="Permalink to this heading">¶</a></h2>
+<span id="id1"></span><h2>Error Handling<a class="headerlink" href="#error-handling" title="Permalink to this headline">¶</a></h2>
 <p>Errors from <code class="docutils literal notranslate"><span class="pre">Talkable.showOffer</span></code> and <code class="docutils literal notranslate"><span class="pre">Talkable.loadOffer</span></code> are handled
 inside <code class="docutils literal notranslate"><span class="pre">onError</span></code> callback, which provides an instance of <code class="docutils literal notranslate"><span class="pre">TalkableOfferLoadException</span></code> class.
 You can get error type and error message with <code class="docutils literal notranslate"><span class="pre">error.getErrorCode()</span></code>
@@ -112,7 +111,7 @@ and <code class="docutils literal notranslate"><span class="pre">error.getMessag
 </div></blockquote>
 </section>
 <section id="using-multiple-site-slugs">
-<h2>Using multiple site slugs<a class="headerlink" href="#using-multiple-site-slugs" title="Permalink to this heading">¶</a></h2>
+<h2>Using multiple site slugs<a class="headerlink" href="#using-multiple-site-slugs" title="Permalink to this headline">¶</a></h2>
 <p>To use multiple site slugs in your application, follow these steps:</p>
 <ol class="arabic">
 <li><p>Add credentials for each site you are going to use inside your manifest file.
@@ -159,12 +158,12 @@ Otherwise, an exception will be raised.</p>
 </ol>
 </section>
 <section id="sharing-via-facebook">
-<h2>Sharing via Facebook<a class="headerlink" href="#sharing-via-facebook" title="Permalink to this heading">¶</a></h2>
+<h2>Sharing via Facebook<a class="headerlink" href="#sharing-via-facebook" title="Permalink to this headline">¶</a></h2>
 <p>By default sharing via Facebook is disabled. You can enable it by setting up
 your project with the Facebook SDK: <a class="reference external" rel="nofollow" href="https://developers.facebook.com/docs/android/getting-started">Android - Getting Started</a></p>
 </section>
 <section id="overriding-default-behaviour">
-<h2>Overriding default behaviour<a class="headerlink" href="#overriding-default-behaviour" title="Permalink to this heading">¶</a></h2>
+<h2>Overriding default behaviour<a class="headerlink" href="#overriding-default-behaviour" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p>Create a new fragment in your app which extends <cite>TalkableOfferFragment</cite>
 and override methods there. Example:</p>
@@ -209,7 +208,7 @@ and override methods there. Example:</p>
 </div>
 </section>
 <section id="using-talkableofferfragment-directly">
-<span id="using-fragment-directly"></span><h2>Using TalkableOfferFragment directly<a class="headerlink" href="#using-talkableofferfragment-directly" title="Permalink to this heading">¶</a></h2>
+<span id="using-fragment-directly"></span><h2>Using TalkableOfferFragment directly<a class="headerlink" href="#using-talkableofferfragment-directly" title="Permalink to this headline">¶</a></h2>
 <p>By default Talkable Android SDK displays Talkable offer as a fullscreen modal view. If you need to embed the Talkable offer into your layout
 or otherwise control the way it’s displayed, you can obtain an instance of <code class="docutils literal notranslate"><span class="pre">TalkableOfferFragment</span></code>, which is a <a class="reference external" rel="nofollow" href="https://developer.android.com/guide/fragments">Fragment</a> that comes
 preloaded with Talkable offer content and can be added to your layout dynamically.</p>
@@ -247,7 +246,7 @@ instance.</p>
 </div>
 </section>
 <section id="native-integration-via-api">
-<h2>Native integration via API<a class="headerlink" href="#native-integration-via-api" title="Permalink to this heading">¶</a></h2>
+<h2>Native integration via API<a class="headerlink" href="#native-integration-via-api" title="Permalink to this headline">¶</a></h2>
 <p>Talkable provides an <a class="reference internal" href="api.html#android-sdk-api"><span class="std std-ref">API</span></a> that can be utilized to
 implement a fully native referral program interface if the default solution
 (based on <code class="docutils literal notranslate"><span class="pre">WebView</span></code>) doesn’t work for you.

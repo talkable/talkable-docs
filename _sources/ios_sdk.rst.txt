@@ -9,7 +9,7 @@ Talkable iOS SDK
 
 Talkable has an iOS framework enabling you to use Talkable in iOS Apps. Once integrated you can use the following Talkable capabilities:
 
-- Display Advocate Share Page (the page itself is built inside Talkable)
+- Display Advocate Signup/Share Page (the page itself is built inside Talkable)
 - Share Offer via:
 
   - Email

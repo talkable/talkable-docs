@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Post Share Webhook provides notification of share events performed within a referral campaign workflow." name="description" />
 
     <title>Post Share Webhook &#8212; Talkable Documentation</title>
@@ -12,7 +12,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/web_hooks/post_share.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -93,7 +92,7 @@
           <div class="body" role="main">
             
   <span class="target" id="web-hooks-post-share"></span><section id="post-share-webhook">
-<h1>Post Share Webhook<a class="headerlink" href="#post-share-webhook" title="Permalink to this heading">¶</a></h1>
+<h1>Post Share Webhook<a class="headerlink" href="#post-share-webhook" title="Permalink to this headline">¶</a></h1>
 <p>Talkable Post Share Webhook provides notification of a share event performed
 within a referral campaign workflow. Use cases for the Post Share Webhook include:</p>
 <blockquote>
@@ -186,7 +185,7 @@ Facebook and Twitter shares)</p></li>
 <li><p><em>“Purchase”</em> for post-purchase placement</p></li>
 <li><p><em>“AffiliateMember”</em> for standalone, floating widget, or gleam placements</p></li>
 <li><dl class="simple">
-<dt><em>“Event”</em> for post-event placement (such as a signup page which triggers a</dt><dd><p>referral campaign)</p>
+<dt><em>“Event”</em> for post-event placement (such as a signup/share page which triggers a</dt><dd><p>referral campaign)</p>
 </dd>
 </dl>
 </li>
@@ -225,7 +224,7 @@ Facebook and Twitter shares)</p></li>
 <p><code class="docutils literal notranslate"><span class="pre">origin.email</span></code> contains the email saved at the moment when the campaign is
 first shown to the Advocate. It could be <code class="docutils literal notranslate"><span class="pre">null</span></code>. For the most up-to-date
 information about the Advocate, use <code class="docutils literal notranslate"><span class="pre">sharer_info</span></code> property which is updated
-with the email address the Advocate has entered on the Advocate Signup Page.</p>
+with the email address the Advocate has entered on the Advocate Signup/Share Page.</p>
 </div>
 <h2>Sample payload</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="s2">&quot;campaign&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>

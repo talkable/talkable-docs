@@ -72,7 +72,7 @@ Personal data for |advocate|.
    external_customer_id "1jsh17136"               Advocate unique ID passed by Merchant to :ref:`Talkable Integration
                                                   <integration/custom/integration_components/initialization_script>` as ``customer_id``
    sub_choice           false | true              Advocate custom parameter which can be used to pass additional
-                                                  data to Advocate Share Page
+                                                  data to Advocate Signup/Share Page
    purchases_count      0                         Advocate number of tracked store purchases
    ==================== ========================= ==================================================================
 

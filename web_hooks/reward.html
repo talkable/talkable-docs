@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Reward Webhook notifies your endpoint that a reward is ready to be given, or it has been already given." name="description" />
 
     <title>Reward Webhook &#8212; Talkable Documentation</title>
@@ -12,7 +12,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/web_hooks/reward.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -93,7 +92,7 @@
           <div class="body" role="main">
             
   <span class="target" id="web-hooks-reward"></span><section id="reward-webhook">
-<h1>Reward Webhook<a class="headerlink" href="#reward-webhook" title="Permalink to this heading">¶</a></h1>
+<h1>Reward Webhook<a class="headerlink" href="#reward-webhook" title="Permalink to this headline">¶</a></h1>
 <p>The Talkable Reward Webhook notifies your endpoint that a reward is ready to be,
 or has been given. A reward can be for either an Advocate or for a Friend.
 Talkable Reward Webhook notifications allow your application to know when to
@@ -110,7 +109,7 @@ given to either an Advocate or a Friend according to the logic set-up in a
 Talkable referral campaign.</p>
 <p>Possible events which will trigger the Reward Webhook are:</p>
 <ul>
-<li><p>Advocate Signup form submitted (Reason = <strong>signup</strong>)</p></li>
+<li><p>Advocate Signup Form submitted (Reason = <strong>signup</strong>)</p></li>
 <li><p>Advocate shares an offer with Friend(s) (Reason = <strong>shared</strong>)</p></li>
 <li><p>Friend passes email gating form (Reason = <strong>click</strong>)</p>
 <div class="admonition note">
@@ -211,7 +210,7 @@ included subscription checkbox)</p></li>
 <li><p><em>“Purchase”</em> for post-purchase placement</p></li>
 <li><p><em>“AffiliateMember”</em> for standalone, floating widget, or gleam placements</p></li>
 <li><dl class="simple">
-<dt><em>“Event”</em> for post-event placement (such as a signup page which triggers a</dt><dd><p>referral campaign)</p>
+<dt><em>“Event”</em> for post-event placement (such as a signup/share page which triggers a</dt><dd><p>referral campaign)</p>
 </dd>
 </dl>
 </li>
@@ -284,7 +283,7 @@ as opposed to a fixed value</p></li>
 <li><p><em>“Purchase”</em> for post-purchase placement</p></li>
 <li><p><em>“AffiliateMember”</em> for standalone, floating widget, or gleam placements</p></li>
 <li><dl class="simple">
-<dt><em>“Event”</em> for post-event placement (such as a signup page which triggers a</dt><dd><p>referral campaign)</p>
+<dt><em>“Event”</em> for post-event placement (such as a signup/share page which triggers a</dt><dd><p>referral campaign)</p>
 </dd>
 </dl>
 </li>
@@ -324,7 +323,7 @@ as opposed to a fixed value</p></li>
 <li><p><em>“Purchase”</em> for post-purchase placement</p></li>
 <li><p><em>“AffiliateMember”</em> for standalone, floating widget, or gleam placements</p></li>
 <li><dl class="simple">
-<dt><em>“Event”</em> for post-event placement (such as a signup page which triggers a</dt><dd><p>referral campaign)</p>
+<dt><em>“Event”</em> for post-event placement (such as a signup/share page which triggers a</dt><dd><p>referral campaign)</p>
 </dd>
 </dl>
 </li>
@@ -360,7 +359,7 @@ as opposed to a fixed value</p></li>
 </ul>
 <h2>Reasons</h2><p>Reward reason can be of 5 following general types.</p>
 <ul class="simple">
-<li><p><strong>signup</strong> — Advocate reward for sign-up (Advocate Signup form submitted)</p></li>
+<li><p><strong>signup</strong> — Advocate reward for sign-up (Advocate Signup Form submitted)</p></li>
 <li><p><strong>shared</strong> — Advocate reward for sharing an offer with Friend(s)</p></li>
 <li><p><strong>click</strong> — Friend reward for visiting claim page (and optionally passing gating)</p></li>
 <li><p><strong>referrer</strong> — Advocate reward for eligible referral purchase by Friend</p></li>

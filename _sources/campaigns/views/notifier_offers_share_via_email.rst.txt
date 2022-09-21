@@ -10,7 +10,7 @@ Friend Share Email
 ------------------
 
 Email is triggered by an |advocate| to their |friend|\s from the
-:ref:`advocate_share_page_view`. |br|
+:ref:`advocate_signup_share_page_view`. |br|
 The main purpose of this email is to invite a |friend| by showing a personal
 Share Message from |advocate| along with a unique Friend Claim Page link. Some
 information about offer itself is recommended.
@@ -36,4 +36,3 @@ By default is sent immediately after the offer is shared, but can be delayed by 
 1. Main email sending criteria (unable to change):
 
   - Only one email for recipient with the same offer (if |advocate| shares twice with one |friend| Talkable sends only one share email)
-
