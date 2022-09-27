@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Deep Linking &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -11,6 +11,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/android_sdk/deep_linking.html" />
     <link rel="search" title="Search" href="../search.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
@@ -76,7 +77,7 @@
           <div class="body" role="main">
             
   <section id="deep-linking">
-<h1>Deep Linking<a class="headerlink" href="#deep-linking" title="Permalink to this headline">¶</a></h1>
+<h1>Deep Linking<a class="headerlink" href="#deep-linking" title="Permalink to this heading">¶</a></h1>
 <p>Talkable uses <a class="reference external" rel="nofollow" href="https://www.getsocial.im">GetSocial.im</a> technology to provide installation attribution and
 deep linking functionality with its Android SDK. This guide describes how to
 configure your Talkable campaign for deep linking and add support for it to
@@ -89,7 +90,7 @@ with the document. Make sure to replace corresponding placeholders
 in examples with the providen values.</p>
 </div>
 <section id="application-attributes">
-<h2>Application Attributes<a class="headerlink" href="#application-attributes" title="Permalink to this headline">¶</a></h2>
+<h2>Application Attributes<a class="headerlink" href="#application-attributes" title="Permalink to this heading">¶</a></h2>
 <p>To enable the deep linking, you should provide us with <em>Package name</em> and
 <em>Signing-certificate fingerprints</em>.</p>
 <p><em>Package name</em> is the <code class="docutils literal notranslate"><span class="pre">applicationId</span></code> in your app-level <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code> file.</p>
@@ -99,7 +100,7 @@ you use to sign the app. This tutorial tells you how to do this:
 <a class="reference external" rel="nofollow" href="https://docs.getsocial.im/knowledge-base/android-signing-key-sha256/">Finding SHA256 fingerprint for Android signing keys</a></p>
 </section>
 <section id="configure-sdk-and-dependencies">
-<h2>Configure SDK and Dependencies<a class="headerlink" href="#configure-sdk-and-dependencies" title="Permalink to this headline">¶</a></h2>
+<h2>Configure SDK and Dependencies<a class="headerlink" href="#configure-sdk-and-dependencies" title="Permalink to this heading">¶</a></h2>
 <p>Talkable SDK is distributed as an Android Library in <code class="docutils literal notranslate"><span class="pre">aar</span></code> format.</p>
 <ol class="arabic">
 <li><p>Add <code class="docutils literal notranslate"><span class="pre">talkable-sdk.aar</span></code> as a module dependency in Android studio.</p>
@@ -139,7 +140,7 @@ repositories inside your top-level <code class="docutils literal notranslate"><s
 </ol>
 </section>
 <section id="configure-manifest">
-<h2>Configure Manifest<a class="headerlink" href="#configure-manifest" title="Permalink to this headline">¶</a></h2>
+<h2>Configure Manifest<a class="headerlink" href="#configure-manifest" title="Permalink to this heading">¶</a></h2>
 <p>Open your <code class="docutils literal notranslate"><span class="pre">AndroidManifest.xml</span></code> file and configure it by following next steps:</p>
 <ol class="arabic">
 <li><p>Specify Talkable credentials as a meta-data inside the <code class="docutils literal notranslate"><span class="pre">&lt;application&gt;</span></code> tag
@@ -244,7 +245,7 @@ to the activity that must be opened from the deep link:</p>
 </ol>
 </section>
 <section id="sdk-initialization">
-<h2>SDK Initialization<a class="headerlink" href="#sdk-initialization" title="Permalink to this headline">¶</a></h2>
+<h2>SDK Initialization<a class="headerlink" href="#sdk-initialization" title="Permalink to this heading">¶</a></h2>
 <ol class="arabic">
 <li><p>Initialize Talkable in the <code class="docutils literal notranslate"><span class="pre">Application</span></code>:</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.talkable.sdk.Talkable</span><span class="p">;</span><span class="w"></span>
@@ -280,7 +281,7 @@ of the <code class="docutils literal notranslate"><span class="pre">&lt;applicat
 </ol>
 </section>
 <section id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">¶</a></h2>
 <p>The SDK supports Android 4.1 and later.</p>
 <div class="hidden docutils container">
 <div class="toctree-wrapper compound">

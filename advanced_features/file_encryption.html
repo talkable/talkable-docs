@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="This is a public key encryption program that has become the most popular standard for email encryption." name="description" />
 
     <title>File Encryption &#8212; Talkable Documentation</title>
@@ -12,6 +12,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/advanced_features/file_encryption.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -106,7 +107,7 @@
           <div class="body" role="main">
             
   <span class="target" id="advanced-features-file-encryption"></span><section id="file-encryption">
-<h1>File Encryption<a class="headerlink" href="#file-encryption" title="Permalink to this headline">¶</a></h1>
+<h1>File Encryption<a class="headerlink" href="#file-encryption" title="Permalink to this heading">¶</a></h1>
 <p>For encrypting sensitive data when sending it through the Internet, you can use
 PGP encryption. It is a public key encryption program that has become the most
 popular standard for email encryption. PGP uses a private key that must be kept
@@ -118,7 +119,7 @@ yet, first follow the instructions under “Set Up GPG Keys” in this tutorial:
 Also, you can find a brief list of software that has PGP capability
 <a class="reference external" rel="nofollow" href="https://www.openpgp.org/software/">here</a>.</p>
 <section id="how-to-import-the-talkable-public-key">
-<h2>How To Import the Talkable Public Key<a class="headerlink" href="#how-to-import-the-talkable-public-key" title="Permalink to this headline">¶</a></h2>
+<h2>How To Import the Talkable Public Key<a class="headerlink" href="#how-to-import-the-talkable-public-key" title="Permalink to this heading">¶</a></h2>
 <p>Before encrypting or decrypting you should import the Talkable public key.
 Here is a command to do it:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl https://d2jjzw81hqbuqv.cloudfront.net/integration/talkable_public_key.asc <span class="p">|</span> gpg --import
@@ -131,7 +132,7 @@ the next command is successful:</p>
 </div>
 </section>
 <section id="encrypting">
-<h2>Encrypting<a class="headerlink" href="#encrypting" title="Permalink to this headline">¶</a></h2>
+<h2>Encrypting<a class="headerlink" href="#encrypting" title="Permalink to this heading">¶</a></h2>
 <p>To encrypt data, you can use the following syntax:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gpg --encrypt --sign --armor -r dev@talkable.com name_of_file
 </pre></div>
@@ -148,7 +149,7 @@ you want to be able to read the encrypted message.</p>
 </div>
 </section>
 <section id="decrypting">
-<h2>Decrypting<a class="headerlink" href="#decrypting" title="Permalink to this headline">¶</a></h2>
+<h2>Decrypting<a class="headerlink" href="#decrypting" title="Permalink to this heading">¶</a></h2>
 <p>To decrypt a file simply call GPG on it:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gpg file_name.asc
 </pre></div>

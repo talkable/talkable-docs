@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Find out how to auto-enroll loyalty members." name="description" />
 
     <title>Auto-Enrollment &#8212; Talkable Documentation</title>
@@ -12,6 +12,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/integration/loyalty/auto_enrollment.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -89,7 +90,7 @@
           <div class="body" role="main">
             
   <span class="target" id="integration-loyalty-auto-enrollment"></span><section id="auto-enrollment">
-<h1>Auto-Enrollment<a class="headerlink" href="#auto-enrollment" title="Permalink to this headline">¶</a></h1>
+<h1>Auto-Enrollment<a class="headerlink" href="#auto-enrollment" title="Permalink to this heading">¶</a></h1>
 <p>Talkable allows to enroll users to loyalty without showing the loyalty dashboard page.</p>
 <p>There are a couple of ways to do that:</p>
 <ul class="simple">
@@ -97,12 +98,12 @@
 <li><p><a class="reference internal" href="#enrollment-via-js-integration"><span class="std std-ref">Enrollment via JS Integration</span></a></p></li>
 </ul>
 <section id="post-purchase-enrollment">
-<span id="id1"></span><h2>Post-Purchase Enrollment<a class="headerlink" href="#post-purchase-enrollment" title="Permalink to this headline">¶</a></h2>
+<span id="id1"></span><h2>Post-Purchase Enrollment<a class="headerlink" href="#post-purchase-enrollment" title="Permalink to this heading">¶</a></h2>
 <p>Enroll users to loyalty after they make a purchase.
 A setting to enable this behavior can be found under <strong>Site settings</strong> → <strong>Loyalty settings</strong> → <strong>General</strong> → <strong>Auto-enrollment</strong>.</p>
 </section>
 <section id="enrollment-via-js-integration">
-<span id="id2"></span><h2>Enrollment via JS Integration<a class="headerlink" href="#enrollment-via-js-integration" title="Permalink to this headline">¶</a></h2>
+<span id="id2"></span><h2>Enrollment via JS Integration<a class="headerlink" href="#enrollment-via-js-integration" title="Permalink to this heading">¶</a></h2>
 <p>Enroll users to loyalty without showing the campaign using <cite>join_loyalty</cite>.
 For example, this could be used for enrolling users during registration or login.</p>
 <p>Don’t forget to include a consent checkbox that would inform your user that they are about to join the loyalty program.</p>
@@ -111,7 +112,7 @@ For example, this could be used for enrolling users during registration or login
 <p><cite>join_loyalty</cite> is available since integration version 4.5.9.</p>
 </div>
 <section id="code-example-1">
-<h3>Code Example #1:<a class="headerlink" href="#code-example-1" title="Permalink to this headline">¶</a></h3>
+<h3>Code Example #1:<a class="headerlink" href="#code-example-1" title="Permalink to this heading">¶</a></h3>
 <p>Use <cite>authenticate_customer</cite> to store current user data.</p>
 <p>When you call <cite>join_loyalty</cite>, you can pass empty object since Talkable will have access to the data from <cite>authenticate_customer</cite>.</p>
 <div class="admonition tip">
@@ -131,7 +132,7 @@ For example, this could be used for enrolling users during registration or login
 </div>
 </section>
 <section id="code-example-2">
-<h3>Code Example #2:<a class="headerlink" href="#code-example-2" title="Permalink to this headline">¶</a></h3>
+<h3>Code Example #2:<a class="headerlink" href="#code-example-2" title="Permalink to this heading">¶</a></h3>
 <p>Pass loyalty member data directly to <cite>join_loyalty</cite>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
