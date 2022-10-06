@@ -131,6 +131,25 @@ Subscribe to notifications that Talkable SDK publish and be aware of everything 
   - TKBLMessageOfferClose
   - TKBLMessageCouponIssued
 
+Contacts Import
+---------------
+
+It is possible to import contacts from a device with the SDK, so they will be accessible at the Share page with JavaScript.
+The button at the Share page for contacts importing should have `class="js-import-contacts"` property.
+
+Also, contacts usage description is required on iOS 10+ devices. It should be described under the `NSContactsUsageDescription` key
+in the `Info.plist` file of your app. This message will be shown when asking for contacts permissions.
+
+  .. code-block:: xml
+
+    <key>NSContactsUsageDescription</key>
+    <string>Share the offer with your Friends from contacts</string>
+
+  .. note::
+
+    Talkable SDK asks for the contacts permissions dynamically only when "contacts import" functionality is implemented
+    in the campaign and Advocate presses the corresponding button at the Share page for the first time.
+
 Debugging
 ---------
 
