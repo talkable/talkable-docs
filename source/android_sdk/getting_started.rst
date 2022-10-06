@@ -40,7 +40,7 @@ Installation
       <application>
           ...
           <meta-data
-              android:name="tkbl-api-key-{{YOUR_SITE_SLUG}}"
+              android:name="tkbl-api-key-{{YOUR_SITE_ID}}"
               android:value="{{YOUR_TALKABLE_PUBLIC_API_KEY}}" />
           ...
       </application>
@@ -49,10 +49,9 @@ Installation
 
       You can locate your credentials inside Talkable site:
 
-      - Visit https://admin.talkable.com/account/sites to find your site slug
       - Select site and go to **Dashboard** → **Settings** → **Site Settings**.
-        Find **API integration** section and there you will see your API Keys.
-        Use only the *public key* in your application.
+        Find **API integration** section and there you will see your API Keys and Site ID (also known as Site slug).
+        Use only the *Public API Key* in your production application.
 
 .. _deep_linking_scheme:
 
@@ -69,7 +68,7 @@ Installation
               <category android:name="android.intent.category.DEFAULT" />
               <category android:name="android.intent.category.BROWSABLE" />
 
-              <data android:scheme="tkbl-{{YOUR_SITE_SLUG}}" />
+              <data android:scheme="tkbl-{{YOUR_SITE_ID}}" />
           </intent-filter>
       </activity>
 
@@ -112,7 +111,7 @@ Installation
       }
 
 Here is an example of ``AndroidManifest.xml`` file (with ``"demo-site"`` site
-slug) you should setup after steps above:
+ID) you should setup after steps above:
 
   .. code-block:: xml
 
