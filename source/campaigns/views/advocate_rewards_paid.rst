@@ -36,3 +36,5 @@ Frequently used Variables:
 
 By default is sent immediately after the reward status turns into `Paid`, but can be delayed by configuration. This View is available only for **Advocate Incentive** where |advocate| is rewarded after |friend| buys using their coupon code.
 
+When the coupon list for Sharing or Signup incentive is empty at the moment of reward issuing, **Reward Paid Email** won't be sent.
+We will try to reward the Advocate and send the email in the background for 60 days (with an increasing duration between retries) in case when coupon list is refiled.
