@@ -29,7 +29,7 @@ Installing from Xcode:
 
     https://github.com/talkable/ios-sdk.git
 
-3. Set the **Dependency Rule** to be `Up to Next Major Version` and specify `1.4.13` as the lower bound (default option).
+3. Set the **Dependency Rule** to be `Up to Next Major Version` and specify `1.4.14` as the lower bound (default option).
 4. Select **Add Package** and choose `TakableSDK` package.
 
 Alternatively, you can add Talkable SDK directly to a `Package.swift` manifest:
@@ -37,7 +37,7 @@ Alternatively, you can add Talkable SDK directly to a `Package.swift` manifest:
   .. code-block:: swift
 
       dependencies: [
-          .package(url: "https://github.com/talkable/ios-sdk.git", .upToNextMajor(from: "1.4.13"))
+          .package(url: "https://github.com/talkable/ios-sdk.git", .upToNextMajor(from: "1.4.14"))
       ]
 
 CocoaPods
@@ -47,7 +47,7 @@ To integrate Talkable SDK into your Xcode project using CocoaPods, specify it in
 
   .. code-block:: ruby
 
-    pod 'TalkableSDK', '~> 1.4.13'
+    pod 'TalkableSDK', '~> 1.4.14'
 
 Binary Framework
 ````````````````
@@ -71,20 +71,19 @@ Step 2: Configuration
 
     #import <TalkableSDK/Talkable.h>
     // ...
-    [[Talkable manager] setApiKey:@"YOUR_TALKABLE_PUBLIC_API_KEY" andSiteSlug:@"YOUR_SITE_SLUG"];
+    [[Talkable manager] setApiKey:@"YOUR_TALKABLE_PUBLIC_API_KEY" andSiteId:@"YOUR_SITE_ID"];
 
   .. note::
 
     You can locate your credentials inside Talkable site:
 
-    - Visit https://admin.talkable.com/account/sites to find your site slug
     - Select site and go to **Dashboard** → **Settings** → **Site Settings**.
-      Find **API integration** section and there you will see your API Keys.
+      Find **API integration** section and there you will see your API Keys and Site ID.
       Use only the *Public API Key* in your application submitted to the App Store.
 
 2. Register URL scheme for Talkable:
 
-  - Defines `tkbl-YOUR-SITE-SLUG` as URL Scheme in your Info.plist file:
+  - Defines `tkbl-YOUR-SITE-ID` as URL Scheme in your Info.plist file:
 
     .. code-block:: xml
 
@@ -93,18 +92,19 @@ Step 2: Configuration
         <dict>
           <key>CFBundleURLSchemes</key>
           <array>
-            <string>tkbl-YOUR-SITE-SLUG</string>
+            <string>tkbl-YOUR-SITE-ID</string>
           </array>
         </dict>
       </array>
 
-  - Add `tkbl-YOUR-SITE-SLUG` scheme to the list of schemes that are queried within application. Also add `fb-messenger`, `fbauth2`, `whatsapp` schemes if you going to utilize these sharing channels:
+  - Add `tkbl-YOUR-SITE-ID` scheme to the list of schemes that are queried within application.
+    Also add `fb-messenger`, `fbauth2`, `whatsapp` schemes if you are going to utilize these sharing channels:
 
     .. code-block:: xml
 
       <key>LSApplicationQueriesSchemes</key>
       <array>
-        <string>tkbl-YOUR-SITE-SLUG</string>
+        <string>tkbl-YOUR-SITE-ID</string>
         <string>fb-messenger</string>
         <string>fbauth2</string>
         <string>whatsapp</string>
@@ -112,12 +112,11 @@ Step 2: Configuration
 
   .. note::
 
-    Please replace `YOUR-SITE-SLUG` with your actual site slug, which can
-    be found on your site's **Dashboard** at https://admin.talkable.com.
+    Please replace `YOUR-SITE-ID` with your actual Site ID.
     Make sure to keep `tkbl-` prefix in the `<string>` value. For example,
-    if your site slug is `my-store`, the correct `<string>` value is `tkbl-my-store`.
+    if your site ID is `my-store`, the correct `<string>` value is `tkbl-my-store`.
 
-3. Add following lines to `application:handleOpenURL:` or `application:openURL:sourceApplication:annotation:`
+3. Add following lines to `application:openURL:options:`
 
   .. code-block:: objc
 

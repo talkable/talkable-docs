@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Advanced Usage &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -11,7 +11,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/android_sdk/advanced.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -96,9 +95,9 @@
           <div class="body" role="main">
             
   <span class="target" id="android-sdk-advanced"></span><section id="advanced-usage">
-<h1>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Permalink to this heading">¶</a></h1>
+<h1>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Permalink to this headline">¶</a></h1>
 <section id="error-handling">
-<span id="id1"></span><h2>Error Handling<a class="headerlink" href="#error-handling" title="Permalink to this heading">¶</a></h2>
+<span id="id1"></span><h2>Error Handling<a class="headerlink" href="#error-handling" title="Permalink to this headline">¶</a></h2>
 <p>Errors from <code class="docutils literal notranslate"><span class="pre">Talkable.showOffer</span></code> and <code class="docutils literal notranslate"><span class="pre">Talkable.loadOffer</span></code> are handled
 inside <code class="docutils literal notranslate"><span class="pre">onError</span></code> callback, which provides an instance of <code class="docutils literal notranslate"><span class="pre">TalkableOfferLoadException</span></code> class.
 You can get error type and error message with <code class="docutils literal notranslate"><span class="pre">error.getErrorCode()</span></code>
@@ -112,7 +111,7 @@ and <code class="docutils literal notranslate"><span class="pre">error.getMessag
 </div></blockquote>
 </section>
 <section id="using-multiple-site-slugs">
-<h2>Using multiple site slugs<a class="headerlink" href="#using-multiple-site-slugs" title="Permalink to this heading">¶</a></h2>
+<h2>Using multiple site slugs<a class="headerlink" href="#using-multiple-site-slugs" title="Permalink to this headline">¶</a></h2>
 <p>To use multiple site slugs in your application, follow these steps:</p>
 <ol class="arabic">
 <li><p>Add credentials for each site you are going to use inside your manifest file.
@@ -134,22 +133,22 @@ you are going to use. The format is the same as the corresponding
 </pre></div>
 </div>
 <p>or by passing it through <code class="docutils literal notranslate"><span class="pre">Talkable.initialize</span></code> in the <code class="docutils literal notranslate"><span class="pre">Application</span></code>:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.talkable.sdk.Talkable</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">android.app.Application</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.talkable.sdk.Talkable</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">android.app.Application</span><span class="p">;</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">App</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Application</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">();</span><span class="w"></span>
-<span class="w">        </span><span class="n">Talkable</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;your-default-site-slug&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">App</span> <span class="kd">extends</span> <span class="n">Application</span> <span class="p">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">();</span>
+        <span class="n">Talkable</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s">&quot;your-default-site-slug&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You can set the site slug at any time after initialization in the following way:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Talkable</span><span class="p">.</span><span class="na">setSiteSlug</span><span class="p">(</span><span class="s">&quot;some-site-slug&quot;</span><span class="p">);</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Talkable</span><span class="p">.</span><span class="na">setSiteSlug</span><span class="p">(</span><span class="s">&quot;some-site-slug&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -159,57 +158,57 @@ Otherwise, an exception will be raised.</p>
 </ol>
 </section>
 <section id="sharing-via-facebook">
-<h2>Sharing via Facebook<a class="headerlink" href="#sharing-via-facebook" title="Permalink to this heading">¶</a></h2>
+<h2>Sharing via Facebook<a class="headerlink" href="#sharing-via-facebook" title="Permalink to this headline">¶</a></h2>
 <p>By default sharing via Facebook is disabled. You can enable it by setting up
 your project with the Facebook SDK: <a class="reference external" rel="nofollow" href="https://developers.facebook.com/docs/android/getting-started">Android - Getting Started</a></p>
 </section>
 <section id="overriding-default-behaviour">
-<h2>Overriding default behaviour<a class="headerlink" href="#overriding-default-behaviour" title="Permalink to this heading">¶</a></h2>
+<h2>Overriding default behaviour<a class="headerlink" href="#overriding-default-behaviour" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p>Create a new fragment in your app which extends <cite>TalkableOfferFragment</cite>
 and override methods there. Example:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.talkable.sdk.TalkableOfferFragment</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.talkable.sdk.TalkableOfferFragment</span><span class="p">;</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">OverriddenTalkableOfferFragment</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">TalkableOfferFragment</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">copyToClipboard</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">string</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="kd">super</span><span class="p">.</span><span class="na">copyToClipboard</span><span class="p">(</span><span class="n">string</span><span class="p">);</span><span class="w"></span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">OverriddenTalkableOfferFragment</span> <span class="kd">extends</span> <span class="n">TalkableOfferFragment</span> <span class="p">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">copyToClipboard</span><span class="p">(</span><span class="n">String</span> <span class="n">string</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">copyToClipboard</span><span class="p">(</span><span class="n">string</span><span class="p">);</span>
 
-<span class="w">        </span><span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="n">getActivity</span><span class="p">(),</span><span class="w"> </span><span class="s">&quot;Text copied!&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_LONG</span><span class="p">).</span><span class="na">show</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+        <span class="n">Toast</span><span class="p">.</span><span class="na">makeText</span><span class="p">(</span><span class="n">getActivity</span><span class="p">(),</span> <span class="s">&quot;Text copied!&quot;</span><span class="p">,</span> <span class="n">Toast</span><span class="p">.</span><span class="na">LENGTH_LONG</span><span class="p">).</span><span class="na">show</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </li>
 <li><p>Pass Class of an activity you want to run a fragment in and the overriden fragment to
 <cite>Talkable.showOffer</cite> call:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Talkable</span><span class="p">.</span><span class="na">showOffer</span><span class="p">(</span><span class="n">activity</span><span class="p">,</span><span class="w"> </span><span class="n">affiliateMember</span><span class="p">,</span><span class="w"> </span><span class="n">OverridenTalkableOfferFragment</span><span class="p">.</span><span class="na">class</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TalkableErrorCallback</span><span class="o">&lt;</span><span class="n">TalkableOfferLoadException</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onError</span><span class="p">(</span><span class="n">TalkableOfferLoadException</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="c1">// Error handling. Note that it runs on non UI thread</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">});</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Talkable</span><span class="p">.</span><span class="na">showOffer</span><span class="p">(</span><span class="n">activity</span><span class="p">,</span> <span class="n">affiliateMember</span><span class="p">,</span> <span class="n">OverridenTalkableOfferFragment</span><span class="p">.</span><span class="na">class</span><span class="p">,</span> <span class="k">new</span> <span class="n">TalkableErrorCallback</span><span class="o">&lt;</span><span class="n">TalkableOfferLoadException</span><span class="o">&gt;</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onError</span><span class="p">(</span><span class="n">TalkableOfferLoadException</span> <span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Error handling. Note that it runs on non UI thread</span>
+    <span class="p">}</span>
+<span class="p">});</span>
 </pre></div>
 </div>
 </li>
 </ol>
 <p id="fragment-listener">If you want to implement custom offer closing handling you should implement
 <code class="docutils literal notranslate"><span class="pre">TalkableOfferFragmentListener</span></code> interface from <code class="docutils literal notranslate"><span class="pre">TalkableOfferFragment</span></code> inside your Activity.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.talkable.sdk.TalkableOfferFragment.TalkableOfferFragmentListener</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.talkable.sdk.TalkableOfferFragment.TalkableOfferFragmentListener</span><span class="p">;</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyActivity</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">TalkableOfferFragmentListener</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="p">...</span><span class="w"></span>
-<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onOfferClosed</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">finish</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">...</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyActivity</span> <span class="kd">implements</span> <span class="n">TalkableOfferFragmentListener</span> <span class="p">{</span>
+    <span class="p">...</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onOfferClosed</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">finish</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="p">...</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </section>
 <section id="using-talkableofferfragment-directly">
-<span id="using-fragment-directly"></span><h2>Using TalkableOfferFragment directly<a class="headerlink" href="#using-talkableofferfragment-directly" title="Permalink to this heading">¶</a></h2>
+<span id="using-fragment-directly"></span><h2>Using TalkableOfferFragment directly<a class="headerlink" href="#using-talkableofferfragment-directly" title="Permalink to this headline">¶</a></h2>
 <p>By default Talkable Android SDK displays Talkable offer as a fullscreen modal view. If you need to embed the Talkable offer into your layout
 or otherwise control the way it’s displayed, you can obtain an instance of <code class="docutils literal notranslate"><span class="pre">TalkableOfferFragment</span></code>, which is a <a class="reference external" rel="nofollow" href="https://developer.android.com/guide/fragments">Fragment</a> that comes
 preloaded with Talkable offer content and can be added to your layout dynamically.</p>
@@ -219,22 +218,22 @@ preloaded with Talkable offer content and can be added to your layout dynamicall
 <li><p>Create a fragment instance by passing the offer code to the <code class="docutils literal notranslate"><span class="pre">TalkableOfferFragment.newInstance(shortCode)</span></code> method</p></li>
 <li><p>Use <a class="reference external" rel="nofollow" href="https://developer.android.com/guide/fragments/transactions">Fragment Transactions</a> or another method of your choice to display the fragment.</p></li>
 </ol>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">AffiliateMember</span><span class="w"> </span><span class="n">affiliateMember</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AffiliateMember</span><span class="p">();</span><span class="w"></span>
-<span class="p">...</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">AffiliateMember</span> <span class="n">affiliateMember</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AffiliateMember</span><span class="p">();</span>
+<span class="p">...</span>
 
-<span class="n">Talkable</span><span class="p">.</span><span class="na">loadOffer</span><span class="p">(</span><span class="n">affiliateMember</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TalkableCallback</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">TalkableOfferLoadException</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// Note that it runs on non UI thread</span><span class="w"></span>
-<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onSuccess</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">offerCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">TalkableOfferFragment</span><span class="w"> </span><span class="n">fragment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TalkableOfferFragment</span><span class="p">.</span><span class="na">newInstance</span><span class="p">(</span><span class="n">offerCode</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">myMethodToDisplayTalkableOfferFragment</span><span class="p">(</span><span class="n">fragment</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="n">Talkable</span><span class="p">.</span><span class="na">loadOffer</span><span class="p">(</span><span class="n">affiliateMember</span><span class="p">,</span> <span class="k">new</span> <span class="n">TalkableCallback</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">TalkableOfferLoadException</span><span class="o">&gt;</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Note that it runs on non UI thread</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onSuccess</span><span class="p">(</span><span class="n">String</span> <span class="n">offerCode</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">TalkableOfferFragment</span> <span class="n">fragment</span> <span class="o">=</span> <span class="n">TalkableOfferFragment</span><span class="p">.</span><span class="na">newInstance</span><span class="p">(</span><span class="n">offerCode</span><span class="p">);</span>
+        <span class="n">myMethodToDisplayTalkableOfferFragment</span><span class="p">(</span><span class="n">fragment</span><span class="p">);</span>
+    <span class="p">}</span>
 
-<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onError</span><span class="p">(</span><span class="n">TalkableOfferLoadException</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="c1">// Error handling</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w"> </span><span class="p">);</span><span class="w"></span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onError</span><span class="p">(</span><span class="n">TalkableOfferLoadException</span> <span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Error handling</span>
+    <span class="p">}</span>
+ <span class="p">);</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -247,7 +246,7 @@ instance.</p>
 </div>
 </section>
 <section id="native-integration-via-api">
-<h2>Native integration via API<a class="headerlink" href="#native-integration-via-api" title="Permalink to this heading">¶</a></h2>
+<h2>Native integration via API<a class="headerlink" href="#native-integration-via-api" title="Permalink to this headline">¶</a></h2>
 <p>Talkable provides an <a class="reference internal" href="api.html#android-sdk-api"><span class="std std-ref">API</span></a> that can be utilized to
 implement a fully native referral program interface if the default solution
 (based on <code class="docutils literal notranslate"><span class="pre">WebView</span></code>) doesn’t work for you.

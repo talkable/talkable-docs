@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Create Coupon Webhook enables automatic coupon creation. That means you are no longer need to upload coupon lists into the Talkable platform manually." name="description" />
 
     <title>Create Coupon Webhook &#8212; Talkable Documentation</title>
@@ -12,7 +12,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/web_hooks/create_coupon.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -93,7 +92,7 @@
           <div class="body" role="main">
             
   <span class="target" id="web-hooks-create-coupon"></span><section id="create-coupon-webhook">
-<h1>Create Coupon Webhook<a class="headerlink" href="#create-coupon-webhook" title="Permalink to this heading">¶</a></h1>
+<h1>Create Coupon Webhook<a class="headerlink" href="#create-coupon-webhook" title="Permalink to this headline">¶</a></h1>
 <p>Talkable Create Coupon Webhook enables automatic coupon creation, which
 eliminates the need to upload coupon lists into the Talkable platform manually.
 Talkable creates unique coupon codes then passes those codes via the Create
@@ -158,17 +157,17 @@ otherwise fixed discount</p></li>
 <li><p><strong>expires_at</strong> — coupon expiration date</p></li>
 <li><p><strong>usage_limit</strong> — number of usages for the coupon</p></li>
 </ul>
-<h2>Sample payload</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;coupon_auto_sync_enabled&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;WHT58574&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;coupon_list_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;coupon_list_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$10 off&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;discount_amount&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;10.0&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;expires_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2014-04-14T06:17:14.309-07:00&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;percentage_discount&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;usage_limit&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<h2>Sample payload</h2><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;coupon_auto_sync_enabled&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="s2">&quot;coupon_code&quot;</span><span class="o">:</span> <span class="s2">&quot;WHT58574&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;coupon_list_id&quot;</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
+  <span class="s2">&quot;coupon_list_name&quot;</span><span class="o">:</span> <span class="s2">&quot;$10 off&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;discount_amount&quot;</span><span class="o">:</span> <span class="s2">&quot;10.0&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="s2">&quot;expires_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2014-04-14T06:17:14.309-07:00&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;percentage_discount&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="s2">&quot;usage_limit&quot;</span><span class="o">:</span> <span class="mf">1</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <h2>cURL example</h2><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl &lt;url&gt; <span class="se">\</span>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Testing &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -11,7 +11,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/android_sdk/testing.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -90,7 +89,7 @@
           <div class="body" role="main">
             
   <span class="target" id="android-sdk-testing"></span><section id="testing">
-<h1>Testing<a class="headerlink" href="#testing" title="Permalink to this heading">¶</a></h1>
+<h1>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h1>
 <p>By default, Talkable SDK assigns a permanent ID to each device and uses it to prevent multiple registrations
 from a single phone. This helps prevent fraud but can make it challenging to test the referral cycle on
 real devices, requiring the developer to either flush all their Talkable campaign data, or use a new campaign
@@ -99,20 +98,20 @@ in debug mode.</p>
 <p>The full form of <cite>Talkable.initialize</cite> method allows you to enable the debug mode. In debug mode Talkable SDK
 will assign a new ID to the device every time it’s initialized, allowing you to be registered as a new visitor each time
 the app is launched.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">initialSiteSlug</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// pass null to use the siteSlug specified in your manifest</span><span class="w"></span>
-<span class="kt">boolean</span><span class="w"> </span><span class="n">debug</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">initialSiteSlug</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span> <span class="c1">// pass null to use the siteSlug specified in your manifest</span>
+<span class="kt">boolean</span> <span class="n">debug</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
 
-<span class="n">Talkable</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">initialSiteSlug</span><span class="p">,</span><span class="w"> </span><span class="n">debug</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span><span class="w"></span>
+<span class="n">Talkable</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">initialSiteSlug</span><span class="p">,</span> <span class="n">debug</span><span class="p">,</span> <span class="kc">null</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>You can use the last param to pass a custom device ID, allowing you to switch between user identities manually. This way
 you can use a single device to pose as an Advocate or Friend and easily replicate various scenarios. The custom device ID
 will be applied only if debug is set to <cite>true</cite>.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">initialSiteSlug</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
-<span class="kt">boolean</span><span class="w"> </span><span class="n">debug</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
-<span class="n">String</span><span class="w"> </span><span class="n">customDeviceId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;qa-advocate-007&quot;</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span> <span class="n">initialSiteSlug</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="kt">boolean</span> <span class="n">debug</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">customDeviceId</span> <span class="o">=</span> <span class="s">&quot;qa-advocate-007&quot;</span><span class="p">;</span>
 
-<span class="n">Talkable</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">initialSiteSlug</span><span class="p">,</span><span class="w"> </span><span class="n">debug</span><span class="p">,</span><span class="w"> </span><span class="n">customDeviceId</span><span class="p">);</span><span class="w"></span>
+<span class="n">Talkable</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="n">initialSiteSlug</span><span class="p">,</span> <span class="n">debug</span><span class="p">,</span> <span class="n">customDeviceId</span><span class="p">);</span>
 </pre></div>
 </div>
 <div class="admonition warning">

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="It is possible to encrypt Advocate, Friend, and Loyalty member emails on back-end if you want to provide additional security." name="description" />
 
     <title>Params Encryption &#8212; Talkable Documentation</title>
@@ -12,7 +12,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/advanced_features/params_encryption.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -108,18 +107,18 @@
           <div class="body" role="main">
             
   <span class="target" id="advanced-features-params-encryption"></span><section id="params-encryption">
-<h1>Params Encryption<a class="headerlink" href="#params-encryption" title="Permalink to this heading">¶</a></h1>
+<h1>Params Encryption<a class="headerlink" href="#params-encryption" title="Permalink to this headline">¶</a></h1>
 <p>For additional security, it is possible to encrypt <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>, <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr>, and <abbr title="Person who participates in the Loyalty program">Loyalty member</abbr> email,
 as well as <a class="reference internal" href="passing_custom_data.html#advanced-features-passing-custom-data"><span class="std std-ref">Custom User Data</span></a> on back-end.
 This can be done by using 2048-bit key <a class="reference external" rel="nofollow" href="https://d2jjzw81hqbuqv.cloudfront.net/integration/talkable_public_key.pem">Talkable Public Key</a>.
 So, instead of sending params in plain text, you can send them encrypted.</p>
 <section id="passing-email-as-a-get-parameter-to-standalone-campaign">
-<h2>Passing email as a GET parameter to Standalone Campaign<a class="headerlink" href="#passing-email-as-a-get-parameter-to-standalone-campaign" title="Permalink to this heading">¶</a></h2>
+<h2>Passing email as a GET parameter to Standalone Campaign<a class="headerlink" href="#passing-email-as-a-get-parameter-to-standalone-campaign" title="Permalink to this headline">¶</a></h2>
 <p>Also it’s possible to pass encrypted email as a GET parameter (e.g. for CTA links that
 point to standalone invite page). But to do that encrypted email should be <strong>URL-encoded</strong>.</p>
 </section>
 <section id="ruby-example">
-<h2>Ruby Example<a class="headerlink" href="#ruby-example" title="Permalink to this heading">¶</a></h2>
+<h2>Ruby Example<a class="headerlink" href="#ruby-example" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="nb">require</span> <span class="s1">&#39;openssl&#39;</span>
 <span class="nb">require</span> <span class="s1">&#39;base64&#39;</span>
 
@@ -140,7 +139,7 @@ point to standalone invite page). But to do that encrypted email should be <stro
 </div>
 </section>
 <section id="java-example">
-<h2>Java Example<a class="headerlink" href="#java-example" title="Permalink to this heading">¶</a></h2>
+<h2>Java Example<a class="headerlink" href="#java-example" title="Permalink to this headline">¶</a></h2>
 <p>This example uses <a class="reference external" rel="nofollow" href="https://www.bouncycastle.org">Bouncy Castle library</a> and has been tested on:</p>
 <ul class="simple">
 <li><p>bcprov-jdk15on-156.jar (Provider)</p></li>
@@ -152,85 +151,85 @@ point to standalone invite page). But to do that encrypted email should be <stro
 <p>Please note that loading a Security Provider and a key into memory takes more time than encrypting.
 So it is recommended to store the key in memory instead of loading it each time to avoid performance overhead.</p>
 </div>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">javax.crypto.BadPaddingException</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">javax.crypto.Cipher</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">javax.crypto.IllegalBlockSizeException</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileReader</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.security.*</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Base64</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">javax.crypto.BadPaddingException</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.crypto.Cipher</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.crypto.IllegalBlockSizeException</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.io.FileReader</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.security.*</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Base64</span><span class="p">;</span>
 
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.bouncycastle.asn1.x509.SubjectPublicKeyInfo</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.bouncycastle.jce.provider.BouncyCastleProvider</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.bouncycastle.openssl.PEMParser</span><span class="p">;</span><span class="w"></span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">org.bouncycastle.openssl.jcajce.JcaPEMKeyConverter</span><span class="p">;</span><span class="w"></span>
+<span class="kn">import</span> <span class="nn">org.bouncycastle.asn1.x509.SubjectPublicKeyInfo</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.bouncycastle.jce.provider.BouncyCastleProvider</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.bouncycastle.openssl.PEMParser</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.bouncycastle.openssl.jcajce.JcaPEMKeyConverter</span><span class="p">;</span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EncryptionDemo</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ParamEncryptor</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="n">Cipher</span><span class="w"> </span><span class="n">cipher</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="n">Key</span><span class="w"> </span><span class="n">publicKey</span><span class="p">;</span><span class="w"></span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">EncryptionDemo</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="kd">class</span> <span class="nc">ParamEncryptor</span> <span class="p">{</span>
+        <span class="kd">private</span> <span class="n">Cipher</span> <span class="n">cipher</span><span class="p">;</span>
+        <span class="kd">private</span> <span class="n">Key</span> <span class="n">publicKey</span><span class="p">;</span>
 
-<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">initPublicKey</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">PEMParser</span><span class="w"> </span><span class="n">pemParser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PEMParser</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="s">&quot;talkable_public_key.pem&quot;</span><span class="p">));</span><span class="w"></span>
-<span class="w">            </span><span class="n">JcaPEMKeyConverter</span><span class="w"> </span><span class="n">converter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">JcaPEMKeyConverter</span><span class="p">().</span><span class="na">setProvider</span><span class="p">(</span><span class="s">&quot;BC&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="n">SubjectPublicKeyInfo</span><span class="w"> </span><span class="n">publicKeyInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">SubjectPublicKeyInfo</span><span class="p">)</span><span class="w"> </span><span class="n">pemParser</span><span class="p">.</span><span class="na">readObject</span><span class="p">();</span><span class="w"></span>
-<span class="w">            </span><span class="n">publicKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">converter</span><span class="p">.</span><span class="na">getPublicKey</span><span class="p">(</span><span class="n">publicKeyInfo</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
+        <span class="kd">private</span> <span class="kt">void</span> <span class="nf">initPublicKey</span><span class="p">()</span> <span class="kd">throws</span> <span class="n">IOException</span> <span class="p">{</span>
+            <span class="n">PEMParser</span> <span class="n">pemParser</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PEMParser</span><span class="p">(</span><span class="k">new</span> <span class="n">FileReader</span><span class="p">(</span><span class="s">&quot;talkable_public_key.pem&quot;</span><span class="p">));</span>
+            <span class="n">JcaPEMKeyConverter</span> <span class="n">converter</span> <span class="o">=</span> <span class="k">new</span> <span class="n">JcaPEMKeyConverter</span><span class="p">().</span><span class="na">setProvider</span><span class="p">(</span><span class="s">&quot;BC&quot;</span><span class="p">);</span>
+            <span class="n">SubjectPublicKeyInfo</span> <span class="n">publicKeyInfo</span> <span class="o">=</span> <span class="p">(</span><span class="n">SubjectPublicKeyInfo</span><span class="p">)</span> <span class="n">pemParser</span><span class="p">.</span><span class="na">readObject</span><span class="p">();</span>
+            <span class="n">publicKey</span> <span class="o">=</span> <span class="n">converter</span><span class="p">.</span><span class="na">getPublicKey</span><span class="p">(</span><span class="n">publicKeyInfo</span><span class="p">);</span>
+        <span class="p">}</span>
 
-<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">initCipher</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">GeneralSecurityException</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">cipher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cipher</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="s">&quot;RSA/ECB/PKCS1Padding&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;BC&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="n">cipher</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="n">Cipher</span><span class="p">.</span><span class="na">ENCRYPT_MODE</span><span class="p">,</span><span class="w"> </span><span class="n">publicKey</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
+        <span class="kd">private</span> <span class="kt">void</span> <span class="nf">initCipher</span><span class="p">()</span> <span class="kd">throws</span> <span class="n">GeneralSecurityException</span> <span class="p">{</span>
+            <span class="n">cipher</span> <span class="o">=</span> <span class="n">Cipher</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="s">&quot;RSA/ECB/PKCS1Padding&quot;</span><span class="p">,</span> <span class="s">&quot;BC&quot;</span><span class="p">);</span>
+            <span class="n">cipher</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="n">Cipher</span><span class="p">.</span><span class="na">ENCRYPT_MODE</span><span class="p">,</span> <span class="n">publicKey</span><span class="p">);</span>
+        <span class="p">}</span>
 
-<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="nf">ParamEncryptor</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="p">,</span><span class="w"> </span><span class="n">GeneralSecurityException</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">initPublicKey</span><span class="p">();</span><span class="w"></span>
-<span class="w">            </span><span class="n">initCipher</span><span class="p">();</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
+        <span class="kd">public</span> <span class="nf">ParamEncryptor</span><span class="p">()</span> <span class="kd">throws</span> <span class="n">IOException</span><span class="p">,</span> <span class="n">GeneralSecurityException</span> <span class="p">{</span>
+            <span class="n">initPublicKey</span><span class="p">();</span>
+            <span class="n">initCipher</span><span class="p">();</span>
+        <span class="p">}</span>
 
-<span class="w">        </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">encryptParam</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">param</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">BadPaddingException</span><span class="p">,</span><span class="w"> </span><span class="n">IllegalBlockSizeException</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="kt">byte</span><span class="o">[]</span><span class="w"> </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">param</span><span class="p">.</span><span class="na">getBytes</span><span class="p">();</span><span class="w"></span>
-<span class="w">            </span><span class="kt">byte</span><span class="o">[]</span><span class="w"> </span><span class="n">cipherText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cipher</span><span class="p">.</span><span class="na">doFinal</span><span class="p">(</span><span class="n">input</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="kt">byte</span><span class="o">[]</span><span class="w"> </span><span class="n">encodedBytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Base64</span><span class="p">.</span><span class="na">getEncoder</span><span class="p">().</span><span class="na">encode</span><span class="p">(</span><span class="n">cipherText</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">encodedBytes</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+        <span class="kd">public</span> <span class="n">String</span> <span class="nf">encryptParam</span><span class="p">(</span><span class="n">String</span> <span class="n">param</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">BadPaddingException</span><span class="p">,</span> <span class="n">IllegalBlockSizeException</span> <span class="p">{</span>
+            <span class="kt">byte</span><span class="o">[]</span> <span class="n">input</span> <span class="o">=</span> <span class="n">param</span><span class="p">.</span><span class="na">getBytes</span><span class="p">();</span>
+            <span class="kt">byte</span><span class="o">[]</span> <span class="n">cipherText</span> <span class="o">=</span> <span class="n">cipher</span><span class="p">.</span><span class="na">doFinal</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
+            <span class="kt">byte</span><span class="o">[]</span> <span class="n">encodedBytes</span> <span class="o">=</span> <span class="n">Base64</span><span class="p">.</span><span class="na">getEncoder</span><span class="p">().</span><span class="na">encode</span><span class="p">(</span><span class="n">cipherText</span><span class="p">);</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="n">String</span><span class="p">(</span><span class="n">encodedBytes</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 
-<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="n">ParamEncryptor</span><span class="w"> </span><span class="n">paramEncryptor</span><span class="p">;</span><span class="w"></span>
+    <span class="kd">static</span> <span class="n">ParamEncryptor</span> <span class="n">paramEncryptor</span><span class="p">;</span>
 
-<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">Security</span><span class="p">.</span><span class="na">addProvider</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">BouncyCastleProvider</span><span class="p">());</span><span class="w"></span>
-<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">paramEncryptor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ParamEncryptor</span><span class="p">();</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">GeneralSecurityException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+    <span class="kd">static</span> <span class="p">{</span>
+        <span class="n">Security</span><span class="p">.</span><span class="na">addProvider</span><span class="p">(</span><span class="k">new</span> <span class="n">BouncyCastleProvider</span><span class="p">());</span>
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">paramEncryptor</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ParamEncryptor</span><span class="p">();</span>
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="o">|</span> <span class="n">GeneralSecurityException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">encryptParam</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">param</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">BadPaddingException</span><span class="p">,</span><span class="w"> </span><span class="n">IllegalBlockSizeException</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">paramEncryptor</span><span class="p">.</span><span class="na">encryptParam</span><span class="p">(</span><span class="n">param</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">encryptParam</span><span class="p">(</span><span class="n">String</span> <span class="n">param</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">BadPaddingException</span><span class="p">,</span> <span class="n">IllegalBlockSizeException</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">paramEncryptor</span><span class="p">.</span><span class="na">encryptParam</span><span class="p">(</span><span class="n">param</span><span class="p">);</span>
+    <span class="p">}</span>
 
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;encrypted_email@example.com&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">encryptParam</span><span class="p">(</span><span class="n">email</span><span class="p">));</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="p">{</span>
+        <span class="n">String</span> <span class="n">email</span> <span class="o">=</span> <span class="s">&quot;encrypted_email@example.com&quot;</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">encryptParam</span><span class="p">(</span><span class="n">email</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </section>
 <section id="front-end-part">
-<h2>Front-end Part<a class="headerlink" href="#front-end-part" title="Permalink to this heading">¶</a></h2>
+<h2>Front-end Part<a class="headerlink" href="#front-end-part" title="Permalink to this headline">¶</a></h2>
 <p>Please modify the front-end using this pseudo code example:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
-<span class="w">  </span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;authenticate_customer&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;%= to_json(TalkableEncryptionService.encrypt(current_user.email)) %&gt;&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">phone_number</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;%= to_json(TalkableEncryptionService.encrypt(current_user.phone_number)) %&gt;&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">first_name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;%= to_json(current_user.first_name) %&gt;&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">last_name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;%= to_json(current_user.last_name) %&gt;&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">person_custom_properties</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nx">secret</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;%= to_json(TalkableEncryptionService.encrypt(current_user.secret)) %&gt;&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">}]);</span><span class="w"></span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+  <span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;authenticate_customer&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">email</span><span class="o">:</span> <span class="s1">&#39;&lt;%= to_json(TalkableEncryptionService.encrypt(current_user.email)) %&gt;&#39;</span><span class="p">,</span>
+    <span class="nx">phone_number</span><span class="o">:</span> <span class="s1">&#39;&lt;%= to_json(TalkableEncryptionService.encrypt(current_user.phone_number)) %&gt;&#39;</span><span class="p">,</span>
+    <span class="nx">first_name</span><span class="o">:</span> <span class="s1">&#39;&lt;%= to_json(current_user.first_name) %&gt;&#39;</span><span class="p">,</span>
+    <span class="nx">last_name</span><span class="o">:</span> <span class="s1">&#39;&lt;%= to_json(current_user.last_name) %&gt;&#39;</span><span class="p">,</span>
+    <span class="nx">person_custom_properties</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">secret</span><span class="o">:</span> <span class="s1">&#39;&lt;%= to_json(TalkableEncryptionService.encrypt(current_user.secret)) %&gt;&#39;</span>
+    <span class="p">}</span>
+  <span class="p">}]);</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </div>
