@@ -10,7 +10,7 @@ Talkable Android SDK
 Talkable has an Android framework enabling you to use Talkable in Andoid Apps. Once integrated you
 can use the following Talkable capabilities:
 
-- Display Advocate Share Page (the page itself is built inside Talkable)
+- Display Advocate Signup/Share Page (the page itself is built inside Talkable)
 - Share Offer via:
 
   - Email
@@ -32,4 +32,3 @@ Contents:
    android_sdk/custom_deep_linking
    android_sdk/testing
    android_sdk/upgrade
-

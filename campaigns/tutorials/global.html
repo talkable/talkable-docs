@@ -15,7 +15,7 @@
     <script src="../../_static/doctools.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/campaigns/tutorials/global.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Advocate Share Page" href="offers_show.html" />
+    <link rel="next" title="Advocate Signup/Share Page" href="offers_show.html" />
     <link rel="prev" title="Tutorials" href="../tutorials.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
   <link href="../../_static/pygments-github.css" rel="stylesheet">
   <link href="../../_static/img/favicon.ico" rel="shortcut icon" />
@@ -45,7 +45,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../views.html">Views</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Global</a></li>
-<li class="toctree-l3"><a class="reference internal" href="offers_show.html">Advocate Share Page</a></li>
+<li class="toctree-l3"><a class="reference internal" href="offers_show.html">Advocate Signup/Share Page</a></li>
 <li class="toctree-l3"><a class="reference internal" href="offers_claim.html">Friend Claim Page</a></li>
 <li class="toctree-l3"><a class="reference internal" href="incentive_criteria.html">Incentive Criteria</a></li>
 </ul>
@@ -113,17 +113,17 @@
 </pre></div>
 </div>
 <p><strong>JS:</strong></p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 
-  <span class="nx">Talkable</span><span class="p">.</span><span class="nx">bindClickToCopy</span><span class="p">(</span><span class="s1">&#39;.js-click-to-copy&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">bindClickToCopy</span><span class="p">(</span><span class="s1">&#39;.js-click-to-copy&#39;</span><span class="p">);</span><span class="w"></span>
 
-  <span class="kd">var</span> <span class="nx">switchBlocks</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-before, .js-after&#39;</span><span class="p">).</span><span class="nx">toggleClass</span><span class="p">(</span><span class="s2">&quot;hidden&quot;</span><span class="p">);</span>
-    <span class="c1">// Re-init ZeroClipboard instance to refresh tooltip position</span>
-    <span class="nx">Talkable</span><span class="p">.</span><span class="nx">bindClickToCopy</span><span class="p">(</span><span class="s1">&#39;.js-click-to-copy&#39;</span><span class="p">);</span>
-  <span class="p">};</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">switchBlocks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-before, .js-after&#39;</span><span class="p">).</span><span class="nx">toggleClass</span><span class="p">(</span><span class="s2">&quot;hidden&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Re-init ZeroClipboard instance to refresh tooltip position</span><span class="w"></span>
+<span class="w">    </span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">bindClickToCopy</span><span class="p">(</span><span class="s1">&#39;.js-click-to-copy&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">};</span><span class="w"></span>
 
-<span class="p">});</span>
+<span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
 <p><strong>CSS:</strong></p>

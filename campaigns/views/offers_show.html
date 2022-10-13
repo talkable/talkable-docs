@@ -4,9 +4,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-<meta content="Advocate Share Page shows the value proposition to Advocate and Friend — they both will receive an exclusive discount." name="description" />
+<meta content="Advocate Signup/Share Page - Combination of Signup and Share forms. Shows the value proposition to Advocate and Friend — they both will receive an exclusive discount." name="description" />
 
-    <title>Advocate Share Page &#8212; Talkable Documentation</title>
+    <title>Advocate Signup/Share Page &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/talkable.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
@@ -16,7 +16,7 @@
     <link rel="canonical" href="https://docs.talkable.com/campaigns/views/offers_show.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Advocate Offer Email" href="notifier_offers_email.html" />
-    <link rel="prev" title="Advocate Signup Page" href="affiliate_members_new.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <link rel="prev" title="Views" href="../views.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
   <link href="../../_static/pygments-github.css" rel="stylesheet">
   <link href="../../_static/img/favicon.ico" rel="shortcut icon" />
   </head><body>
@@ -43,8 +43,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../campaign_types.html">Campaign Types</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../campaign_placements.html">Campaign Placements</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../views.html">Views</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="affiliate_members_new.html">Advocate Signup Page</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Advocate Share Page</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Advocate Signup/Share Page</a></li>
 <li class="toctree-l3"><a class="reference internal" href="notifier_offers_email.html">Advocate Offer Email</a></li>
 <li class="toctree-l3"><a class="reference internal" href="notifier_offers_share_via_email.html">Friend Share Email</a></li>
 <li class="toctree-l3"><a class="reference internal" href="notifier_offers_share_via_email_reminder.html">Friend Share Email Reminder</a></li>
@@ -99,8 +98,14 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="campaigns-views-offers-show"></span><section id="advocate-share-page">
-<span id="advocate-share-page-view"></span><h1>Advocate Share Page<a class="headerlink" href="#advocate-share-page" title="Permalink to this headline">¶</a></h1>
+  <span class="target" id="campaigns-views-offers-show"></span><section id="advocate-signup-share-page">
+<span id="advocate-signup-share-page-view"></span><h1>Advocate Signup/Share Page<a class="headerlink" href="#advocate-signup-share-page" title="Permalink to this headline">¶</a></h1>
+<p>Combining the Signup and Share page brings a smoother experience to our customers.</p>
+<p>First we show Advocate Signup Form. Signup is skipped when we know the advocate or Email gating for advocate is disabled (by default - enabled).
+On this page Advocate signs up by entering their email address and phone number(optional).</p>
+<img alt="Advocate Signup Form" src="../../_images/advocate-signup-form.png" />
+<p>After signup, without reloading page, Advocate Share form is shown:</p>
+<img alt="Advocate Share form" src="../../_images/advocate-share-form.png" />
 <p>Here <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> shares an offer with their <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr>s. Explain the value proposition
 to <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> and <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr>, that both will receive an exclusive discount.</p>
 <p>Available sharing methods:</p>
@@ -109,35 +114,21 @@ to <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>
 <li><p>Social sharing (Facebook, Twitter, LinkedIn)</p></li>
 <li><p>Link sharing (direct link to the Friend Claim Page)</p></li>
 </ul>
-<p><br>
-<br></p>
-<img alt="Advocate Share Page" src="../../_images/advocate-offer-page.png" />
-<p><br></p>
-<h4>Email sharing example:</h4><div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;js-share-via-email-form&quot;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;email_recipient_list&quot;</span> <span class="p">/&gt;</span>
-  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;email_subject&quot;</span> <span class="p">/&gt;</span>
-  <span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;share_message&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">checked</span><span class="o">=</span><span class="s">&quot;checked&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;share_email_reminder&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;true&quot;</span> <span class="p">/&gt;</span>
-  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Send email&quot;</span> <span class="p">/&gt;</span>
-<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-<p>Note <code class="docutils literal notranslate"><span class="pre">share_email_reminder</span></code> checkbox — this is <a class="reference internal" href="notifier_offers_share_via_email_reminder.html#friend-share-email-reminder-view"><span class="std std-ref">Friend Share Email Reminder</span></a>
+<h4>Email sharing example:</h4><p><br></p>
+<img alt="Advocate Share via Email Form" src="../../_images/advocate-share-via-email.png" />
+<p>Note <code class="docutils literal notranslate"><span class="pre">Send</span> <span class="pre">my</span> <span class="pre">friend</span> <span class="pre">a</span> <span class="pre">reminder</span> <span class="pre">e-mail</span> <span class="pre">in</span> <span class="pre">3</span> <span class="pre">days</span></code> checkbox — this is <a class="reference internal" href="notifier_offers_share_via_email_reminder.html#friend-share-email-reminder-view"><span class="std std-ref">Friend Share Email Reminder</span></a>
 trigger.</p>
-<p><br></p>
-<h4>Facebook sharing example:</h4><div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;js-share-offer-via-facebook&quot;</span><span class="p">&gt;</span>
+<h4>Facebook sharing example (simplified):</h4><div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;js-share-offer-via-facebook&quot;</span><span class="p">&gt;</span>
   Share on Facebook
 <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<p><br></p>
-<h4>Twitter sharing example:</h4><div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ twitter_share_link }}&quot;</span><span class="p">&gt;</span>
+<h4>Twitter sharing example (simplified):</h4><div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ twitter_share_link }}&quot;</span><span class="p">&gt;</span>
   Share on Twitter
 <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<p><br></p>
-<h4>Share by link example:</h4><div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-clipboard-text</span><span class="o">=</span><span class="s">&quot;{{ short_url }}&quot;</span>
+<h4>Share by link example (simplified):</h4><div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">data-clipboard-text</span><span class="o">=</span><span class="s">&quot;{{ short_url }}&quot;</span>
      <span class="na">data-copied-label</span><span class="o">=</span><span class="s">&quot;Copied!&quot;</span>
      <span class="na">data-placement</span><span class="o">=</span><span class="s">&quot;top&quot;</span>
      <span class="na">title</span><span class="o">=</span><span class="s">&quot;Click to Copy&quot;</span>

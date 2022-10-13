@@ -158,17 +158,17 @@
 <section id="moving-subject-line-into-localization">
 <h2>Moving Subject Line Into Localization<a class="headerlink" href="#moving-subject-line-into-localization" title="Permalink to this headline">¶</a></h2>
 <p>It is highly unlikely that your campaign is not equipped with Subject line as a Localization, by default all newly created campaigns at Talkable already have it. In case your campaign does not please keep reading this section.</p>
-<p>Subject line is unique because its default value is set on the Advocate Share Page along with other email sharing fields (email body, reminder checkbox value), not Friend Share email as it might sounded logical. Here is the plan:</p>
+<p>Subject line is unique because its default value is set on the Advocate Signup/Share Page along with other email sharing fields (email body, reminder checkbox value), not Friend Share email as it might sounded logical. Here is the plan:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>Create Subject Line as a Localization on the Advocate Share Page, provide its default value, it will be used inside <cite>value</cite> attribute of the “subject” form field:</p></li>
+<li><p>Create Subject Line as a Localization on the Advocate Signup/Share Page, provide its default value, it will be used inside <cite>value</cite> attribute of the “subject” form field:</p></li>
 </ol>
 <blockquote>
 <div><img alt="../_images/subject_line_setup_inside_share_page.png" src="../_images/subject_line_setup_inside_share_page.png" />
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">input</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;email_subject&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;textfield&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;{{ &#39;friend_share_email_subject&#39; | localize: &#39;Your friend [[ advocate_info.first_name ]] [[ advocate_info.last_name ]] gave you [[ friend_incentive.description ]]&#39; | replace: &#39;   &#39;, &#39; &#39; | replace: &#39;  &#39;, &#39; &#39; }}&quot;</span> <span class="p">/&gt;</span>
 </pre></div>
 </div>
-<p>This code creates new Localization named “Friend share email subject” that you are able to change on the Advocate Share Page.</p>
+<p>This code creates new Localization named “Friend share email subject” that you are able to change on the Advocate Signup/Share Page.</p>
 </div></blockquote>
 <ol class="arabic simple" start="2">
 <li><p>Navigate to Friend Share email → Extra fields to see Email Subject field:</p></li>
