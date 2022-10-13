@@ -47,7 +47,6 @@ After pre-validation Talkable campaign level validation kicks in:
 
 .. toctree::
 
-   views/affiliate_members_new
    views/offers_show
    views/notifier_offers_email
    views/notifier_offers_share_via_email

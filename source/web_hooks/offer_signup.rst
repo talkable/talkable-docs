@@ -21,8 +21,8 @@ Use cases for the Advocate Signup Webhook include:
 
    <h2>When does Talkable call the Advocate Signup Webhook?</h2>
 
-Talkable Signup Webhook is triggered any time an Advocate Signup form is
-submitted. The Advocate Signup form is the standard Name & Email (with optional
+Talkable Signup Webhook is triggered any time an Advocate Signup Form is
+submitted. The Advocate Signup Form is the standard Name & Email (with optional
 email subscription checkbox) fields a user submits before becoming an Advocate
 and sharing an offer with Friends.
 

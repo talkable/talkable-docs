@@ -35,10 +35,10 @@ with the following line of code:
   Make sure you have at least one Live “SA” campaign inside Talkable Site with `android-invite` tag or the tag you specified
 
 Note that `customer` is empty, in this case user will see the
-:ref:`Advocate Signup Page <campaigns/views/affiliate_members_new>`, which is used to collect
+:ref:`Advocate Signup Form <campaigns/views/offers_show>`, which is used to collect
 the user’s email address. Your application may already know/have access to the user’s email,
-if so, you should pass this parameter which will automatically skip the Signup Page in the
-flow and show the :ref:`Advocate Share Page <campaigns/views/offers_show>`.
+if so, you should pass this parameter which will automatically skip the Signup Form in the
+flow and show the :ref:`Advocate Share Form <campaigns/views/offers_show>`.
 
 .. code-block:: java
 
