@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="Here’s how you can integrate Talkable Shopify app with your store." name="description" />
 
     <title>Shopify Integration &#8212; Talkable Documentation</title>
@@ -12,9 +12,7 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/integration/ecommerce_platforms/shopify.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Magento Integration" href="magento.html" />
@@ -90,9 +88,9 @@
           <div class="body" role="main">
             
   <span class="target" id="integration-ecommerce-platforms-shopify"></span><section id="shopify-integration">
-<h1>Shopify Integration<a class="headerlink" href="#shopify-integration" title="Permalink to this heading">¶</a></h1>
+<h1>Shopify Integration<a class="headerlink" href="#shopify-integration" title="Permalink to this headline">¶</a></h1>
 <section id="automatic-integration">
-<span id="integration-ecommerce-platforms-shopify-automatic-integration"></span><h2>Automatic integration<a class="headerlink" href="#automatic-integration" title="Permalink to this heading">¶</a></h2>
+<span id="integration-ecommerce-platforms-shopify-automatic-integration"></span><h2>Automatic integration<a class="headerlink" href="#automatic-integration" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -126,7 +124,7 @@ You can edit these links in Administrative panel of your store.</p>
 </div></blockquote>
 </section>
 <section id="manual-integration">
-<span id="integration-ecommerce-platforms-shopify-manual-integration"></span><h2>Manual integration<a class="headerlink" href="#manual-integration" title="Permalink to this heading">¶</a></h2>
+<span id="integration-ecommerce-platforms-shopify-manual-integration"></span><h2>Manual integration<a class="headerlink" href="#manual-integration" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p>Provide a valid Shopify store URL and choose “Shopify” as your platform during registration process</p></li>
 <li><p>On the Welcome screen click “I’m a Developer”</p></li>
@@ -247,6 +245,7 @@ integration library which is displayed on the integration page. Example:
 <span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">_talkable_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">      </span><span class="nx">purchase</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="nx">order_number</span><span class="o">:</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">order_id</span><span class="p">,</span><span class="w"> </span><span class="c1">// REQUIRED - Order number</span><span class="w"></span>
+<span class="w">        </span><span class="nx">currency_iso_code</span><span class="o">:</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">currency</span><span class="p">,</span><span class="w"> </span><span class="c1">// Optional - Purchase Currency. REQUIRED for Multi-Currency Sites</span><span class="w"></span>
 <span class="w">        </span><span class="nx">subtotal</span><span class="o">:</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">total_price</span><span class="p">,</span><span class="w"> </span><span class="c1">// REQUIRED - Purchase Total price</span><span class="w"></span>
 <span class="w">        </span><span class="nx">tax_amount</span><span class="o">:</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">total_tax</span><span class="p">,</span><span class="w"> </span><span class="c1">// REQUIRED - Purchase tax amount</span><span class="w"></span>
 <span class="w">        </span><span class="nx">discount_amount</span><span class="o">:</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">discount</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">discount</span><span class="p">.</span><span class="nx">amount</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="c1">// REQUIRED - Total Discount</span><span class="w"></span>
