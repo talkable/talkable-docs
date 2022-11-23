@@ -99,6 +99,14 @@ If a customer is not signed in, the widget prompts them to join the loyalty prog
 .. note::
   When both Loyalty Dashboard and Loyalty Widget are matched on the same URL, only Dashboard will be shown.
 
+.. raw:: html
+
+  <h3>Claim by Name</h3>
+
+By default, campaign will be shown only on /checkout page. This type of campaign allows customers to fill in advocate username and get a reward.
+
+:ref:`Learn more about Claim by Name Placement <campaigns/campaign_placements/claim_by_name>`
+
 |hr|
 
 .. raw:: html
