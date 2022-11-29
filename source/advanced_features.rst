@@ -56,6 +56,9 @@ each with links to integration details.
    * - :ref:`Pass custom user data <advanced_features/passing_custom_data>`
      - Pass additional data to Talkable to operate with it inside campaigns
 
+   * - :ref:`Phone number gating <advanced_features/phone_number_gating>`
+     - Collect customers' phone numbers and sync with ESPs.
+
    * - :ref:`Referrals Approval <advanced_features/referrals_approval>`
      - Learn about Talkable Fraud settings, why they are important
        and how to find a right Fraud Profile that works best for your site.
@@ -96,6 +99,7 @@ each with links to integration details.
     advanced_features/file_encryption
     advanced_features/product_items
     advanced_features/passing_custom_data
+    advanced_features/phone_number_gating
     advanced_features/referrals_approval
     advanced_features/product_sku
     advanced_features/traffic_source
