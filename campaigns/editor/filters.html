@@ -786,9 +786,9 @@ This filter strictly follows GS1-128 specification: <a class="reference external
 </pre></div>
 </div>
 <p>JavaScript API call</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">loadLiquid</span><span class="p">(</span><span class="s2">&quot;async_advocate_info&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">rendered_template</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">rendered_template</span><span class="p">);</span><span class="w"></span>
-<span class="p">});</span><span class="w"></span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">loadLiquid</span><span class="p">(</span><span class="s2">&quot;async_advocate_info&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">rendered_template</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">rendered_template</span><span class="p">);</span>
+<span class="p">});</span>
 </pre></div>
 </div>
 <p>Rendered Liquid</p>
@@ -803,9 +803,9 @@ This filter strictly follows GS1-128 specification: <a class="reference external
 </pre></div>
 </div>
 <p>JavaScript API call</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">loadLiquid</span><span class="p">(</span><span class="s2">&quot;async_dashboard_data&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">rendered_data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">rendered_data</span><span class="p">.</span><span class="nx">some_key</span><span class="p">);</span><span class="w"></span>
-<span class="p">});</span><span class="w"></span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">loadLiquid</span><span class="p">(</span><span class="s2">&quot;async_dashboard_data&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">rendered_data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">rendered_data</span><span class="p">.</span><span class="nx">some_key</span><span class="p">);</span>
+<span class="p">});</span>
 </pre></div>
 </div>
 <p>Rendered Liquid</p>
@@ -825,9 +825,9 @@ Whatever Liquid you would like to have
 </pre></div>
 </div>
 <p>JavaScript API call</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">loadLiquid</span><span class="p">(</span><span class="s2">&quot;async_liquid_reference&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">rendered_template</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">rendered_template</span><span class="p">);</span><span class="w"></span>
-<span class="p">});</span><span class="w"></span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">loadLiquid</span><span class="p">(</span><span class="s2">&quot;async_liquid_reference&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">rendered_template</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">rendered_template</span><span class="p">);</span>
+<span class="p">});</span>
 </pre></div>
 </div>
 <p>Rendered Liquid</p>
@@ -843,32 +843,32 @@ Whatever Liquid you would like to have
 </pre></div>
 </div>
 <p>JavaScript API call</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">loadLiquid</span><span class="p">(</span><span class="s2">&quot;async_advocate_info&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">rendered_template</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">rendered_template</span><span class="p">));</span><span class="w"></span>
-<span class="p">});</span><span class="w"></span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">loadLiquid</span><span class="p">(</span><span class="s2">&quot;async_advocate_info&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">rendered_template</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">rendered_template</span><span class="p">));</span>
+<span class="p">});</span>
 </pre></div>
 </div>
 <p>Rendered Liquid</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;first_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;last_name&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;advocate@example.com&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;username&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;external_customer_id&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;purchases_sum&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;purchases_count&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;events_count&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;events_count_by_category&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;friend_signup&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;purchase&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;referrals_count&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;referred_by&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;custom_properties&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
-<span class="w">  </span><span class="s2">&quot;unsubscribed&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;first_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="s2">&quot;last_name&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;advocate@example.com&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;username&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="s2">&quot;external_customer_id&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="s2">&quot;opted_in_at&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="s2">&quot;sub_choice&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="s2">&quot;purchases_sum&quot;</span><span class="o">:</span> <span class="mf">0.0</span><span class="p">,</span>
+  <span class="s2">&quot;purchases_count&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+  <span class="s2">&quot;events_count&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+  <span class="s2">&quot;events_count_by_category&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;friend_signup&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+    <span class="s2">&quot;purchase&quot;</span><span class="o">:</span> <span class="mf">0</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;referrals_count&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+  <span class="s2">&quot;referred_by&quot;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
+  <span class="s2">&quot;custom_properties&quot;</span><span class="o">:</span> <span class="p">{},</span>
+  <span class="s2">&quot;unsubscribed&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p><hr></p>
@@ -881,22 +881,22 @@ Whatever Liquid you would like to have
 </pre></div>
 </div>
 <p>Returns</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="w"></span>
-<span class="w">  </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;coupon_codes&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;OFF5&quot;</span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;created_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2019-05-22T15:53:41-07:00&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ad@site.com&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;order_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">98237519</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;subtotal&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">100.0</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;coupon_codes&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;OFF5&quot;</span><span class="p">],</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;created_at&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;2019-05-22T15:53:41-07:00&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ad@site.com&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;order_number&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">98237520</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;subtotal&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">200.0</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">]</span><span class="w"></span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;coupon_codes&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;OFF5&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2019-05-22T15:53:41-07:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;ad@site.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;order_number&quot;</span><span class="o">:</span> <span class="mf">98237519</span><span class="p">,</span>
+    <span class="s2">&quot;subtotal&quot;</span><span class="o">:</span> <span class="mf">100.0</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;coupon_codes&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;OFF5&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;created_at&quot;</span><span class="o">:</span> <span class="s2">&quot;2019-05-22T15:53:41-07:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;email&quot;</span><span class="o">:</span> <span class="s2">&quot;ad@site.com&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;order_number&quot;</span><span class="o">:</span> <span class="mf">98237520</span><span class="p">,</span>
+    <span class="s2">&quot;subtotal&quot;</span><span class="o">:</span> <span class="mf">200.0</span>
+  <span class="p">}</span>
+<span class="p">]</span>
 </pre></div>
 </div>
 <p><hr></p>

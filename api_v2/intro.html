@@ -134,7 +134,7 @@ could create their own API calls.</p>
 <p>The API returns JSON-encoded objects (content-type: application/json).</p>
 <p>Responses vary according to the method used, but every successful response
 envelope includes these common parts:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;ok&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;result&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">...}</span><span class="w"></span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;ok&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="s2">&quot;result&quot;</span><span class="o">:</span> <span class="p">...}</span>
 </pre></div>
 </div>
 </section>
@@ -151,7 +151,7 @@ This format is supported by most programming languages out of the box:</p>
 <h2>Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h2>
 <p>The following represents a common JSON error response resulting from a failed
 Talkable API call:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;ok&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;error_message&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Message describing the error&quot;</span><span class="p">}</span><span class="w"></span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;ok&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="s2">&quot;error_message&quot;</span><span class="o">:</span> <span class="s2">&quot;Message describing the error&quot;</span><span class="p">}</span>
 </pre></div>
 </div>
 <p>Most error messages that Talkable API will return are not meant to be shown to

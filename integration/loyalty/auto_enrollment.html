@@ -118,15 +118,15 @@ For example, this could be used for enrolling users during registration or login
 <p class="admonition-title">Tip</p>
 <p><cite>authenticate_customer</cite> data can also be reused by other integration functions.</p>
 </div>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s2">&quot;authenticate_customer&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;loyalty@talkable.com&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// required for `join_loyalty`</span><span class="w"></span>
-<span class="w">  </span><span class="nx">phone_number</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;+12025551111&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nx">first_name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;John&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nx">last_name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Smith&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nx">custom_properties</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
-<span class="w">  </span><span class="nx">customer_id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;11111&quot;</span><span class="w"></span>
-<span class="p">}]);</span><span class="w"></span>
-<span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;join_loyalty&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{})</span><span class="w"></span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s2">&quot;authenticate_customer&quot;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">email</span><span class="o">:</span> <span class="s2">&quot;loyalty@talkable.com&quot;</span><span class="p">,</span> <span class="c1">// required for `join_loyalty`</span>
+  <span class="nx">phone_number</span><span class="o">:</span> <span class="s1">&#39;+12025551111&#39;</span><span class="p">,</span>
+  <span class="nx">first_name</span><span class="o">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
+  <span class="nx">last_name</span><span class="o">:</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span>
+  <span class="nx">custom_properties</span><span class="o">:</span> <span class="p">{},</span>
+  <span class="nx">customer_id</span><span class="o">:</span> <span class="s2">&quot;11111&quot;</span>
+<span class="p">}]);</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;join_loyalty&quot;</span><span class="p">,</span> <span class="p">{})</span>
 </pre></div>
 </div>
 </section>
@@ -137,14 +137,14 @@ For example, this could be used for enrolling users during registration or login
 <p class="admonition-title">Note</p>
 <p>Arguments passed with <cite>join_loyalty</cite> override respective arguments from <cite>authenticate_customer</cite>.</p>
 </div>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s2">&quot;join_loyalty&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;loyalty@talkable.com&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// required</span><span class="w"></span>
-<span class="w">  </span><span class="nx">phone_number</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;+12025551111&#39;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nx">first_name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;John&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nx">last_name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Smith&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">  </span><span class="nx">custom_properties</span><span class="o">:</span><span class="w"> </span><span class="p">{},</span><span class="w"></span>
-<span class="w">  </span><span class="nx">customer_id</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;11111&quot;</span><span class="w"></span>
-<span class="p">}]);</span><span class="w"></span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s2">&quot;join_loyalty&quot;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">email</span><span class="o">:</span> <span class="s2">&quot;loyalty@talkable.com&quot;</span><span class="p">,</span> <span class="c1">// required</span>
+  <span class="nx">phone_number</span><span class="o">:</span> <span class="s1">&#39;+12025551111&#39;</span><span class="p">,</span>
+  <span class="nx">first_name</span><span class="o">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span>
+  <span class="nx">last_name</span><span class="o">:</span> <span class="s2">&quot;Smith&quot;</span><span class="p">,</span>
+  <span class="nx">custom_properties</span><span class="o">:</span> <span class="p">{},</span>
+  <span class="nx">customer_id</span><span class="o">:</span> <span class="s2">&quot;11111&quot;</span>
+<span class="p">}]);</span>
 </pre></div>
 </div>
 </section>

@@ -100,19 +100,19 @@ without being gated by a purchase beforehand.</p>
 the “Invite friends” button inside app navigation.</p>
 <p>Once you’ve got a Standalone campaign set up inside Talkable you can integrate the campaign
 with the following line of code:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.talkable.sdk.Talkable</span><span class="p">;</span><span class="w"></span>
-<span class="p">...</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.talkable.sdk.Talkable</span><span class="p">;</span>
+<span class="p">...</span>
 
-<span class="n">Activity</span><span class="w"> </span><span class="n">activity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">;</span><span class="w"></span>
-<span class="n">AffiliateMember</span><span class="w"> </span><span class="n">affiliateMember</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AffiliateMember</span><span class="p">();</span><span class="w"></span>
-<span class="n">Talkable</span><span class="p">.</span><span class="na">showOffer</span><span class="p">(</span><span class="n">activity</span><span class="p">,</span><span class="w"> </span><span class="n">affiliateMember</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TalkableErrorCallback</span><span class="o">&lt;</span><span class="n">TalkableOfferLoadException</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onError</span><span class="p">(</span><span class="n">TalkableOfferLoadException</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="c1">// Error handling. Note that it runs on non UI thread</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">});</span><span class="w"></span>
+<span class="n">Activity</span> <span class="n">activity</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+<span class="n">AffiliateMember</span> <span class="n">affiliateMember</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AffiliateMember</span><span class="p">();</span>
+<span class="n">Talkable</span><span class="p">.</span><span class="na">showOffer</span><span class="p">(</span><span class="n">activity</span><span class="p">,</span> <span class="n">affiliateMember</span><span class="p">,</span> <span class="k">new</span> <span class="n">TalkableErrorCallback</span><span class="o">&lt;</span><span class="n">TalkableOfferLoadException</span><span class="o">&gt;</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onError</span><span class="p">(</span><span class="n">TalkableOfferLoadException</span> <span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Error handling. Note that it runs on non UI thread</span>
+    <span class="p">}</span>
+<span class="p">});</span>
 
-<span class="p">...</span><span class="w"></span>
+<span class="p">...</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -124,29 +124,29 @@ with the following line of code:</p>
 the user’s email address. Your application may already know/have access to the user’s email,
 if so, you should pass this parameter which will automatically skip the Signup Form in the
 flow and show the <a class="reference internal" href="../../campaigns/views/offers_show.html#campaigns-views-offers-show"><span class="std std-ref">Advocate Share Form</span></a>.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.talkable.sdk.Talkable</span><span class="p">;</span><span class="w"></span>
-<span class="p">...</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.talkable.sdk.Talkable</span><span class="p">;</span>
+<span class="p">...</span>
 
-<span class="n">String</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;advocate@example.com&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Required</span><span class="w"></span>
-<span class="n">String</span><span class="w"> </span><span class="n">idInYourApp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;a8db7683-0f7f-407e-8d12-af2d501035c8&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Use unique identifier from your system, optional</span><span class="w"></span>
-<span class="n">String</span><span class="w"> </span><span class="n">firstName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Optional</span><span class="w"></span>
-<span class="n">String</span><span class="w"> </span><span class="n">lastName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Smith&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Optional</span><span class="w"></span>
-<span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">customProperties</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span><span class="w"></span>
-<span class="n">customProperties</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;property_key&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;property_value&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">Customer</span><span class="w"> </span><span class="n">customer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Customer</span><span class="p">(</span><span class="n">idInYourApp</span><span class="p">,</span><span class="w"> </span><span class="n">firstName</span><span class="p">,</span><span class="w"> </span><span class="n">lastName</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">,</span><span class="w"> </span><span class="n">customProperties</span><span class="p">);</span><span class="w"></span>
+<span class="n">String</span> <span class="n">email</span> <span class="o">=</span> <span class="s">&quot;advocate@example.com&quot;</span><span class="p">;</span> <span class="c1">// Required</span>
+<span class="n">String</span> <span class="n">idInYourApp</span> <span class="o">=</span> <span class="s">&quot;a8db7683-0f7f-407e-8d12-af2d501035c8&quot;</span><span class="p">;</span> <span class="c1">// Use unique identifier from your system, optional</span>
+<span class="n">String</span> <span class="n">firstName</span> <span class="o">=</span> <span class="s">&quot;John&quot;</span><span class="p">;</span> <span class="c1">// Optional</span>
+<span class="n">String</span> <span class="n">lastName</span> <span class="o">=</span> <span class="s">&quot;Smith&quot;</span><span class="p">;</span> <span class="c1">// Optional</span>
+<span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span> <span class="n">customProperties</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<span class="n">customProperties</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;property_key&quot;</span><span class="p">,</span> <span class="s">&quot;property_value&quot;</span><span class="p">);</span>
+<span class="n">Customer</span> <span class="n">customer</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Customer</span><span class="p">(</span><span class="n">idInYourApp</span><span class="p">,</span> <span class="n">firstName</span><span class="p">,</span> <span class="n">lastName</span><span class="p">,</span> <span class="n">email</span><span class="p">,</span> <span class="n">customProperties</span><span class="p">);</span>
 
-<span class="n">AffiliateMember</span><span class="w"> </span><span class="n">affiliateMember</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AffiliateMember</span><span class="p">(</span><span class="n">customer</span><span class="p">);</span><span class="w"></span>
-<span class="n">String</span><span class="w"> </span><span class="n">campaignTag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;android-invite&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="n">affiliateMember</span><span class="p">.</span><span class="na">setCampaignTag</span><span class="p">(</span><span class="n">campaignTag</span><span class="p">);</span><span class="w"></span>
+<span class="n">AffiliateMember</span> <span class="n">affiliateMember</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AffiliateMember</span><span class="p">(</span><span class="n">customer</span><span class="p">);</span>
+<span class="n">String</span> <span class="n">campaignTag</span> <span class="o">=</span> <span class="s">&quot;android-invite&quot;</span><span class="p">;</span>
+<span class="n">affiliateMember</span><span class="p">.</span><span class="na">setCampaignTag</span><span class="p">(</span><span class="n">campaignTag</span><span class="p">);</span>
 
-<span class="n">Activity</span><span class="w"> </span><span class="n">activity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">;</span><span class="w"></span>
-<span class="n">Talkable</span><span class="p">.</span><span class="na">showOffer</span><span class="p">(</span><span class="n">activity</span><span class="p">,</span><span class="w"> </span><span class="n">affiliateMember</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">TalkableErrorCallback</span><span class="o">&lt;</span><span class="n">TalkableOfferLoadException</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onError</span><span class="p">(</span><span class="n">TalkableOfferLoadException</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="c1">// Error handling. Note that it runs on non UI thread</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">});</span><span class="w"></span>
-<span class="p">...</span><span class="w"></span>
+<span class="n">Activity</span> <span class="n">activity</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
+<span class="n">Talkable</span><span class="p">.</span><span class="na">showOffer</span><span class="p">(</span><span class="n">activity</span><span class="p">,</span> <span class="n">affiliateMember</span><span class="p">,</span> <span class="k">new</span> <span class="n">TalkableErrorCallback</span><span class="o">&lt;</span><span class="n">TalkableOfferLoadException</span><span class="o">&gt;</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onError</span><span class="p">(</span><span class="n">TalkableOfferLoadException</span> <span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Error handling. Note that it runs on non UI thread</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+<span class="p">...</span>
 </pre></div>
 </div>
 <div class="hidden docutils container">
