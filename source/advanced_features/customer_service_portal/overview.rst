@@ -20,7 +20,7 @@ The Customer Service Portal provides a simple search box that will allow you to 
 - **Phone number**: the phone number of the user. The search value should include a country code.
   If no county code is given, Talkable will try applying the USA and Canada codes and search with the resulting number.
 - **Order number**: the order number of a purchase.
-- **Coupon code**: the single-use coupon code issued as a reward to a referral program user
+- **Coupon code**: the single-use coupon code issued as a reward to a referral program user.
 - **Personal coupon code**: the :ref:`personal coupon code <advanced_features/personal_coupon_sharing>`, shared by an Advocate
 
 The search query might produce multiple results. In such case, every matched user will be listed,

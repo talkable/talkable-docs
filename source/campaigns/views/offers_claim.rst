@@ -46,5 +46,4 @@ Frequently used Variables:
 Related tutorials for this View:
 
 - :ref:`tutorials_email_gating`
-- :ref:`tutorials_like_gating`
 - :ref:`tutorials_zeroclipboard`

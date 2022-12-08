@@ -27,7 +27,7 @@ Here is a list of possible error codes from ``TalkableOfferLoadException`` with 
 Using multiple site slugs
 -------------------------
 
-To use multiple site slugs in your application, follow these steps:
+To use multiple site slugs (also known as IDs) in your application, follow these steps:
 
 1. Add credentials for each site you are going to use inside your manifest file.
    Format is the same as from corresponding
