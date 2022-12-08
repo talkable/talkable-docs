@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Find the components of what Talkable is composed." name="description" />
 
     <title>Integration Components &#8212; Talkable Documentation</title>
@@ -12,7 +12,9 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/integration/custom/integration_components.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Alternate Post Purchase Script for cart line item passing" href="alternate_post_purchase.html" />
@@ -92,7 +94,7 @@
           <div class="body" role="main">
             
   <span class="target" id="integration-custom-integration-components"></span><section id="integration-components">
-<h1>Integration Components<a class="headerlink" href="#integration-components" title="Permalink to this headline">¶</a></h1>
+<h1>Integration Components<a class="headerlink" href="#integration-components" title="Permalink to this heading">¶</a></h1>
 <p>Talkable is composed of the following components:</p>
 <ol class="arabic">
 <li><p><a class="reference internal" href="#integration-custom-integration-components-initialization-script"><span class="std std-ref">Initialization Script</span></a></p>
@@ -136,7 +138,7 @@ Add the Talkable Container DIV in the body. This tells Talkable where to inject 
 </ol>
 <p><hr></p>
 <section id="initialization-script">
-<span id="integration-custom-integration-components-initialization-script"></span><h2>Initialization Script<a class="headerlink" href="#initialization-script" title="Permalink to this headline">¶</a></h2>
+<span id="integration-custom-integration-components-initialization-script"></span><h2>Initialization Script<a class="headerlink" href="#initialization-script" title="Permalink to this heading">¶</a></h2>
 <p>The Initialization script should be placed in the head template or some
 template that spans every page. Talkable JS library size is typically
 around 20kB and causes no noticeable impact to your site’s loading time.
@@ -144,22 +146,22 @@ All other integration components are dependent on the Initialization
 script.</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Begin Talkable integration code --&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/&lt;YOUR-TALKABLE-SITE-ID&gt;.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-  <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span> <span class="o">||</span> <span class="p">[];</span>
-  <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">unshift</span><span class="p">([</span><span class="s1">&#39;init&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">site_id</span><span class="o">:</span> <span class="s1">&#39;&lt;YOUR-TALKABLE-SITE-ID&gt;&#39;</span> <span class="p">}]);</span>
-  <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;authenticate_customer&#39;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">email</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Optional, pass when available. Example: &#39;customer@example.com&#39;</span>
-    <span class="nx">phone_number</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Optional, pass when available. Example: &#39;+12025551111&#39;</span>
-    <span class="nx">first_name</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Optional, pass when available. Example: &#39;John&#39;</span>
-    <span class="nx">last_name</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Optional, pass when available. Example: &#39;Smith&#39;</span>
-    <span class="nx">traffic_source</span><span class="o">:</span> <span class="s1">&#39;&#39;</span> <span class="c1">// Optional, the source of the traffic driven to the campaign. Example: &#39;facebook&#39;</span>
-  <span class="p">}]);</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">[];</span><span class="w"></span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">unshift</span><span class="p">([</span><span class="s1">&#39;init&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">site_id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;YOUR-TALKABLE-SITE-ID&gt;&#39;</span><span class="w"> </span><span class="p">}]);</span><span class="w"></span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;authenticate_customer&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Optional, pass when available. Example: &#39;customer@example.com&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="nx">phone_number</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Optional, pass when available. Example: &#39;+12025551111&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="nx">first_name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Optional, pass when available. Example: &#39;John&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="nx">last_name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Optional, pass when available. Example: &#39;Smith&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="nx">traffic_source</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="c1">// Optional, the source of the traffic driven to the campaign. Example: &#39;facebook&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}]);</span><span class="w"></span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="cm">&lt;!-- End Talkable integration code --&gt;</span>
 </pre></div>
 </div>
 <section id="initialization-script-notes">
-<h3>Initialization Script Notes<a class="headerlink" href="#initialization-script-notes" title="Permalink to this headline">¶</a></h3>
+<h3>Initialization Script Notes<a class="headerlink" href="#initialization-script-notes" title="Permalink to this heading">¶</a></h3>
 <ol class="arabic">
 <li><p><strong>Site ID.</strong> You can obtain your Site ID by logging into the Talkable
 platform where Site ID is displayed on your Dashboard and URL as seen
@@ -179,36 +181,36 @@ the parameters, or pass empty strings.</p></li>
 </section>
 </section>
 <section id="post-purchase-script">
-<span id="integration-custom-integration-components-post-purchase-script"></span><h2>Post Purchase Script<a class="headerlink" href="#post-purchase-script" title="Permalink to this headline">¶</a></h2>
+<span id="integration-custom-integration-components-post-purchase-script"></span><h2>Post Purchase Script<a class="headerlink" href="#post-purchase-script" title="Permalink to this heading">¶</a></h2>
 <p>The post purchase script should be placed on your checkout confirmation
 page or any page that immediately follows checkout. All parameters can
 be passed as strings. A Number can be passed for <cite>subtotal</cite>, however, if
 using any calculation, you’re responsible for ensuring that some number is
 passed where division by zero or <cite>null</cite> value does not occur.</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Begin Talkable integration code --&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-  <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span> <span class="o">||</span> <span class="p">[];</span>
-  <span class="kd">var</span> <span class="nx">_talkable_data</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="nx">purchase</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">order_number</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Required - Unique order number. Example: &#39;100011&#39;</span>
-      <span class="nx">subtotal</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Required - Order subtotal (pre-tax, post-discount). Example: &#39;23.97&#39;</span>
-      <span class="nx">coupon_code</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Coupon code that was used at checkout (pass multiple as an array). Example: &#39;SAVE20&#39;</span>
-      <span class="nx">currency_iso_code</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Required for multi-currency sites. Example: &#39;USD&#39;</span>
-      <span class="nx">shipping_zip</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Used for fraud protection by address. Example: &#39;02222&#39;</span>
-      <span class="nx">shipping_address</span><span class="o">:</span> <span class="s1">&#39;&#39;</span> <span class="c1">// Full address of the order, make sure to strictly follow a format: &#39;Apt #, Street address, City, State, ZIP, Country&#39;</span>
-    <span class="p">},</span>
-    <span class="nx">customer</span><span class="o">:</span> <span class="p">{</span>
-      <span class="nx">email</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// Required - Email of the customer who issued a purchase. Example: &#39;customer@example.com&#39;</span>
-      <span class="nx">traffic_source</span><span class="o">:</span> <span class="s1">&#39;&#39;</span> <span class="c1">// The source of the traffic driven to the campaign. Example: &#39;facebook&#39;</span>
-    <span class="p">}</span>
-  <span class="p">};</span>
-  <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;register_purchase&#39;</span><span class="p">,</span> <span class="nx">_talkable_data</span><span class="p">]);</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">[];</span><span class="w"></span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">_talkable_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">purchase</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">order_number</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Required - Unique order number. Example: &#39;100011&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="nx">subtotal</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Required - Order subtotal (pre-tax, post-discount). Example: &#39;23.97&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="nx">coupon_code</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Coupon code that was used at checkout (pass multiple as an array). Example: &#39;SAVE20&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="nx">currency_iso_code</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Required for multi-currency sites. Example: &#39;USD&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="nx">shipping_zip</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Used for fraud protection by address. Example: &#39;02222&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="nx">shipping_address</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="c1">// Full address of the order, make sure to strictly follow a format: &#39;Apt #, Street address, City, State, ZIP, Country&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nx">customer</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Required - Email of the customer who issued a purchase. Example: &#39;customer@example.com&#39;</span><span class="w"></span>
+<span class="w">      </span><span class="nx">traffic_source</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="c1">// The source of the traffic driven to the campaign. Example: &#39;facebook&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">};</span><span class="w"></span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;register_purchase&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">_talkable_data</span><span class="p">]);</span><span class="w"></span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="cm">&lt;!-- End Talkable integration code --&gt;</span>
 </pre></div>
 </div>
 <section id="post-purchase-script-notes">
-<h3>Post Purchase Script Notes<a class="headerlink" href="#post-purchase-script-notes" title="Permalink to this headline">¶</a></h3>
+<h3>Post Purchase Script Notes<a class="headerlink" href="#post-purchase-script-notes" title="Permalink to this heading">¶</a></h3>
 <ol class="arabic simple">
 <li><p>Mandatory parameters must be passed or the purchase will not be
 passed to Talkable. Mandatory parameters are: <cite>email</cite>, <cite>order_number</cite>,
@@ -231,14 +233,14 @@ post purchase integration script <a class="reference internal" href="../../advan
 </section>
 </section>
 <section id="advocate-landing-page">
-<span id="integration-custom-integration-components-advocate-landing-page"></span><h2>Advocate Landing Page<a class="headerlink" href="#advocate-landing-page" title="Permalink to this headline">¶</a></h2>
+<span id="integration-custom-integration-components-advocate-landing-page"></span><h2>Advocate Landing Page<a class="headerlink" href="#advocate-landing-page" title="Permalink to this heading">¶</a></h2>
 <p>Create a new HTML page with URL path (<cite>www.your-site.com/share</cite>) and add the Talkable Container DIV
 in the body of the page between your standard site header and footer:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;talkable-offer&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <section id="advocate-landing-page-notes">
-<h3>Advocate Landing Page Notes<a class="headerlink" href="#advocate-landing-page-notes" title="Permalink to this headline">¶</a></h3>
+<h3>Advocate Landing Page Notes<a class="headerlink" href="#advocate-landing-page-notes" title="Permalink to this heading">¶</a></h3>
 <ol class="arabic">
 <li><p>The Talkable Initialization script must be present in your head
 template in order for the advocate landing page to work</p></li>
@@ -258,7 +260,7 @@ you intend to use via
 </section>
 </section>
 <section id="referral-dashboard">
-<span id="integration-custom-integration-components-referral-dashboard"></span><h2>Referral Dashboard<a class="headerlink" href="#referral-dashboard" title="Permalink to this headline">¶</a></h2>
+<span id="integration-custom-integration-components-referral-dashboard"></span><h2>Referral Dashboard<a class="headerlink" href="#referral-dashboard" title="Permalink to this heading">¶</a></h2>
 <p>Similar to the Advocate Landing Page, create a new HTML page with URL
 path (<cite>www.your-site.com/referrals</cite>) and add the Talkable Container DIV in
 the body of the page:</p>
@@ -266,7 +268,7 @@ the body of the page:</p>
 </pre></div>
 </div>
 <section id="referral-dashboard-notes">
-<h3>Referral Dashboard Notes<a class="headerlink" href="#referral-dashboard-notes" title="Permalink to this headline">¶</a></h3>
+<h3>Referral Dashboard Notes<a class="headerlink" href="#referral-dashboard-notes" title="Permalink to this heading">¶</a></h3>
 <ol class="arabic simple">
 <li><p>The <a class="reference internal" href="#integration-custom-integration-components-initialization-script"><span class="std std-ref">Talkable Initialization Script</span></a> must be present in your head
 template in order for the referral dashboard to work</p></li>

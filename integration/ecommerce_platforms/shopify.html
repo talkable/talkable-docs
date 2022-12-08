@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="Here’s how you can integrate Talkable Shopify app with your store." name="description" />
 
     <title>Shopify Integration &#8212; Talkable Documentation</title>
@@ -12,7 +12,9 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/integration/ecommerce_platforms/shopify.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Magento Integration" href="magento.html" />
@@ -88,9 +90,9 @@
           <div class="body" role="main">
             
   <span class="target" id="integration-ecommerce-platforms-shopify"></span><section id="shopify-integration">
-<h1>Shopify Integration<a class="headerlink" href="#shopify-integration" title="Permalink to this headline">¶</a></h1>
+<h1>Shopify Integration<a class="headerlink" href="#shopify-integration" title="Permalink to this heading">¶</a></h1>
 <section id="automatic-integration">
-<span id="integration-ecommerce-platforms-shopify-automatic-integration"></span><h2>Automatic integration<a class="headerlink" href="#automatic-integration" title="Permalink to this headline">¶</a></h2>
+<span id="integration-ecommerce-platforms-shopify-automatic-integration"></span><h2>Automatic integration<a class="headerlink" href="#automatic-integration" title="Permalink to this heading">¶</a></h2>
 <blockquote>
 <div><div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -124,7 +126,7 @@ You can edit these links in Administrative panel of your store.</p>
 </div></blockquote>
 </section>
 <section id="manual-integration">
-<span id="integration-ecommerce-platforms-shopify-manual-integration"></span><h2>Manual integration<a class="headerlink" href="#manual-integration" title="Permalink to this headline">¶</a></h2>
+<span id="integration-ecommerce-platforms-shopify-manual-integration"></span><h2>Manual integration<a class="headerlink" href="#manual-integration" title="Permalink to this heading">¶</a></h2>
 <ol class="arabic">
 <li><p>Provide a valid Shopify store URL and choose “Shopify” as your platform during registration process</p></li>
 <li><p>On the Welcome screen click “I’m a Developer”</p></li>
@@ -142,18 +144,18 @@ You can edit these links in Administrative panel of your store.</p>
 <li><p>Before closing <cite>&lt;/head&gt;</cite> paste the following code:</p></li>
 </ul>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Begin Talkable integration code --&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
-  <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;init&#39;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">site_id</span><span class="o">:</span> <span class="s1">&#39;&lt;YOUR-TALKABLE-SITE-ID&gt;&#39;</span> <span class="c1">// REQUIRED - Replace with your Talkable Site ID</span>
-  <span class="p">}]];</span>
-  <span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="nx">customer</span> <span class="o">%</span><span class="p">}</span>
-    <span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;authenticate_customer&#39;</span><span class="p">,</span> <span class="p">{</span>
-      <span class="nx">email</span><span class="o">:</span>        <span class="s1">&#39;{{ customer.email }}&#39;</span><span class="p">,</span>
-      <span class="nx">phone_number</span><span class="o">:</span> <span class="s1">&#39;{{ customer.phone }}&#39;</span><span class="p">,</span>
-      <span class="nx">first_name</span><span class="o">:</span>   <span class="s1">&#39;{{ customer.first_name }}&#39;</span><span class="p">,</span>
-      <span class="nx">last_name</span><span class="o">:</span>    <span class="s1">&#39;{{ customer.last_name }}&#39;</span>
-    <span class="p">}]);</span>
-  <span class="p">{</span><span class="o">%</span> <span class="nx">endif</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="s1">&#39;init&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">site_id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;YOUR-TALKABLE-SITE-ID&gt;&#39;</span><span class="w"> </span><span class="c1">// REQUIRED - Replace with your Talkable Site ID</span><span class="w"></span>
+<span class="w">  </span><span class="p">}]];</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="o">%</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">customer</span><span class="w"> </span><span class="o">%</span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;authenticate_customer&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">email</span><span class="o">:</span><span class="w">        </span><span class="s1">&#39;{{ customer.email }}&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nx">phone_number</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;{{ customer.phone }}&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nx">first_name</span><span class="o">:</span><span class="w">   </span><span class="s1">&#39;{{ customer.first_name }}&#39;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nx">last_name</span><span class="o">:</span><span class="w">    </span><span class="s1">&#39;{{ customer.last_name }}&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}]);</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="o">%</span><span class="w"> </span><span class="nx">endif</span><span class="w"> </span><span class="o">%</span><span class="p">}</span><span class="w"></span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://YOUR-PER-CLIENT-INTEGRATION.js&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="cm">&lt;!-- End Talkable integration code --&gt;</span>
@@ -224,64 +226,64 @@ integration library which is displayed on the integration page. Example:
 <li><p>Paste the following code into <strong>Additional scripts</strong> field:</p></li>
 </ul>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Begin Talkable integration code --&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
-  <span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">&#39;init&#39;</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">site_id</span><span class="o">:</span> <span class="s1">&#39;&lt;YOUR-TALKABLE-SITE-ID&gt;&#39;</span> <span class="c1">// REQUIRED - Replace with your Talkable Site ID</span>
-  <span class="p">}]];</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span><span class="w"></span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="s1">&#39;init&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">site_id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;YOUR-TALKABLE-SITE-ID&gt;&#39;</span><span class="w"> </span><span class="c1">// REQUIRED - Replace with your Talkable Site ID</span><span class="w"></span>
+<span class="w">  </span><span class="p">}]];</span><span class="w"></span>
 
-  <span class="k">if</span> <span class="p">(</span><span class="nx">Shopify</span> <span class="o">&amp;&amp;</span> <span class="nx">Shopify</span><span class="p">.</span><span class="nx">checkout</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">checkout</span> <span class="o">=</span> <span class="nx">Shopify</span><span class="p">.</span><span class="nx">checkout</span>
-    <span class="kd">var</span> <span class="nx">_talkable_order_items</span> <span class="o">=</span> <span class="p">[];</span>
-    <span class="k">for</span> <span class="p">(</span><span class="nx">idx</span> <span class="ow">in</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">line_items</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">line</span> <span class="o">=</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">line_items</span><span class="p">[</span><span class="nx">idx</span><span class="p">];</span>
-      <span class="nx">_talkable_order_items</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
-        <span class="nx">product_id</span><span class="o">:</span> <span class="nx">line</span><span class="p">.</span><span class="nx">sku</span> <span class="o">||</span> <span class="nx">line</span><span class="p">.</span><span class="nx">product_id</span><span class="p">,</span> <span class="c1">// REQUIRED - First Item Product ID</span>
-        <span class="nx">price</span><span class="o">:</span> <span class="nx">line</span><span class="p">.</span><span class="nx">price</span><span class="p">,</span> <span class="c1">// REQUIRED - First Item Unit Price</span>
-        <span class="nx">quantity</span><span class="o">:</span> <span class="nx">line</span><span class="p">.</span><span class="nx">quantity</span><span class="p">,</span> <span class="c1">// REQUIRED - First Item Quantity</span>
-        <span class="nx">title</span><span class="o">:</span> <span class="nx">line</span><span class="p">.</span><span class="nx">title</span><span class="p">,</span> <span class="c1">// Optional - Name of product</span>
-      <span class="p">});</span>
-    <span class="p">}</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">Shopify</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">Shopify</span><span class="p">.</span><span class="nx">checkout</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">checkout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Shopify</span><span class="p">.</span><span class="nx">checkout</span><span class="w"></span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">_talkable_order_items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span><span class="w"></span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="nx">idx</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">line_items</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">line_items</span><span class="p">[</span><span class="nx">idx</span><span class="p">];</span><span class="w"></span>
+<span class="w">      </span><span class="nx">_talkable_order_items</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span><span class="w"></span>
+<span class="w">        </span><span class="nx">product_id</span><span class="o">:</span><span class="w"> </span><span class="nx">line</span><span class="p">.</span><span class="nx">sku</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">line</span><span class="p">.</span><span class="nx">product_id</span><span class="p">,</span><span class="w"> </span><span class="c1">// REQUIRED - First Item Product ID</span><span class="w"></span>
+<span class="w">        </span><span class="nx">price</span><span class="o">:</span><span class="w"> </span><span class="nx">line</span><span class="p">.</span><span class="nx">price</span><span class="p">,</span><span class="w"> </span><span class="c1">// REQUIRED - First Item Unit Price</span><span class="w"></span>
+<span class="w">        </span><span class="nx">quantity</span><span class="o">:</span><span class="w"> </span><span class="nx">line</span><span class="p">.</span><span class="nx">quantity</span><span class="p">,</span><span class="w"> </span><span class="c1">// REQUIRED - First Item Quantity</span><span class="w"></span>
+<span class="w">        </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="nx">line</span><span class="p">.</span><span class="nx">title</span><span class="p">,</span><span class="w"> </span><span class="c1">// Optional - Name of product</span><span class="w"></span>
+<span class="w">      </span><span class="p">});</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="kd">var</span> <span class="nx">_talkable_data</span> <span class="o">=</span> <span class="p">{</span>
-      <span class="nx">purchase</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">order_number</span><span class="o">:</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">order_id</span><span class="p">,</span> <span class="c1">// REQUIRED - Order number</span>
-        <span class="nx">currency_iso_code</span><span class="o">:</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">currency</span><span class="p">,</span> <span class="c1">// Optional - Purchase Currency. REQUIRED for Multi-Currency Sites</span>
-        <span class="nx">subtotal</span><span class="o">:</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">total_price</span><span class="p">,</span> <span class="c1">// REQUIRED - Purchase Total price</span>
-        <span class="nx">tax_amount</span><span class="o">:</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">total_tax</span><span class="p">,</span> <span class="c1">// REQUIRED - Purchase tax amount</span>
-        <span class="nx">discount_amount</span><span class="o">:</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">discount</span> <span class="o">?</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">discount</span><span class="p">.</span><span class="nx">amount</span> <span class="o">:</span> <span class="kc">null</span><span class="p">,</span> <span class="c1">// REQUIRED - Total Discount</span>
-        <span class="nx">shipping_amount</span><span class="o">:</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">shipping_rate</span> <span class="o">?</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">shipping_rate</span><span class="p">.</span><span class="nx">price</span> <span class="o">:</span> <span class="kc">null</span><span class="p">,</span> <span class="c1">// REQUIRED - Total Shipping Cost</span>
-        <span class="nx">coupon_code</span><span class="o">:</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">discount</span> <span class="o">?</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">discount</span><span class="p">.</span><span class="nx">code</span> <span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-        <span class="nx">items</span><span class="o">:</span> <span class="nx">_talkable_order_items</span>
-      <span class="p">},</span>
-      <span class="nx">customer</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">email</span><span class="o">:</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">email</span><span class="p">,</span> <span class="c1">// REQUIRED - Customer Email Address</span>
-        <span class="nx">first_name</span><span class="o">:</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">billing_address</span> <span class="o">?</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">billing_address</span><span class="p">.</span><span class="nx">first_name</span> <span class="o">:</span> <span class="kc">null</span><span class="p">,</span> <span class="c1">// Optional - Customer first name</span>
-        <span class="nx">last_name</span><span class="o">:</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">billing_address</span> <span class="o">?</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">billing_address</span><span class="p">.</span><span class="nx">last_name</span> <span class="o">:</span> <span class="kc">null</span> <span class="c1">// Optional - Customer last name</span>
-      <span class="p">}</span>
-    <span class="p">};</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">_talkable_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">purchase</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">order_number</span><span class="o">:</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">order_id</span><span class="p">,</span><span class="w"> </span><span class="c1">// REQUIRED - Order number</span><span class="w"></span>
+<span class="w">        </span><span class="nx">currency_iso_code</span><span class="o">:</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">currency</span><span class="p">,</span><span class="w"> </span><span class="c1">// Optional - Purchase Currency. REQUIRED for Multi-Currency Sites</span><span class="w"></span>
+<span class="w">        </span><span class="nx">subtotal</span><span class="o">:</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">total_price</span><span class="p">,</span><span class="w"> </span><span class="c1">// REQUIRED - Purchase Total price</span><span class="w"></span>
+<span class="w">        </span><span class="nx">tax_amount</span><span class="o">:</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">total_tax</span><span class="p">,</span><span class="w"> </span><span class="c1">// REQUIRED - Purchase tax amount</span><span class="w"></span>
+<span class="w">        </span><span class="nx">discount_amount</span><span class="o">:</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">discount</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">discount</span><span class="p">.</span><span class="nx">amount</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="c1">// REQUIRED - Total Discount</span><span class="w"></span>
+<span class="w">        </span><span class="nx">shipping_amount</span><span class="o">:</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">shipping_rate</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">shipping_rate</span><span class="p">.</span><span class="nx">price</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="c1">// REQUIRED - Total Shipping Cost</span><span class="w"></span>
+<span class="w">        </span><span class="nx">coupon_code</span><span class="o">:</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">discount</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">discount</span><span class="p">.</span><span class="nx">code</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nx">items</span><span class="o">:</span><span class="w"> </span><span class="nx">_talkable_order_items</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="nx">customer</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">email</span><span class="p">,</span><span class="w"> </span><span class="c1">// REQUIRED - Customer Email Address</span><span class="w"></span>
+<span class="w">        </span><span class="nx">first_name</span><span class="o">:</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">billing_address</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">billing_address</span><span class="p">.</span><span class="nx">first_name</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="c1">// Optional - Customer first name</span><span class="w"></span>
+<span class="w">        </span><span class="nx">last_name</span><span class="o">:</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">billing_address</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">billing_address</span><span class="p">.</span><span class="nx">last_name</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="c1">// Optional - Customer last name</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">};</span><span class="w"></span>
 
-    <span class="k">if</span> <span class="p">(</span><span class="nx">checkout</span><span class="p">.</span><span class="nx">shipping_address</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">shipping_address</span> <span class="o">=</span> <span class="nx">checkout</span><span class="p">.</span><span class="nx">shipping_address</span><span class="p">;</span>
-      <span class="nx">shipping_fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;address1&#39;</span><span class="p">,</span> <span class="s1">&#39;address2&#39;</span><span class="p">,</span> <span class="s1">&#39;city&#39;</span><span class="p">,</span> <span class="s1">&#39;province&#39;</span><span class="p">,</span> <span class="s1">&#39;zip&#39;</span><span class="p">,</span> <span class="s1">&#39;country&#39;</span><span class="p">];</span>
-      <span class="nx">address</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">checkout</span><span class="p">.</span><span class="nx">shipping_address</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">shipping_address</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">checkout</span><span class="p">.</span><span class="nx">shipping_address</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="nx">shipping_fields</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;address1&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;address2&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;city&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;province&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;zip&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;country&#39;</span><span class="p">];</span><span class="w"></span>
+<span class="w">      </span><span class="nx">address</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span><span class="w"></span>
 
-      <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">idx</span> <span class="ow">in</span> <span class="nx">shipping_fields</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">address_key</span> <span class="o">=</span> <span class="nx">shipping_fields</span><span class="p">[</span><span class="nx">idx</span><span class="p">];</span>
-        <span class="k">if</span> <span class="p">(</span><span class="nx">shipping_address</span><span class="p">[</span><span class="nx">address_key</span><span class="p">])</span> <span class="p">{</span>
-          <span class="nx">address</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">shipping_address</span><span class="p">[</span><span class="nx">address_key</span><span class="p">]);</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">var</span><span class="w"> </span><span class="nx">idx</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">shipping_fields</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">address_key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">shipping_fields</span><span class="p">[</span><span class="nx">idx</span><span class="p">];</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">shipping_address</span><span class="p">[</span><span class="nx">address_key</span><span class="p">])</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nx">address</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">shipping_address</span><span class="p">[</span><span class="nx">address_key</span><span class="p">]);</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
 
-      <span class="k">if</span> <span class="p">(</span><span class="nx">shipping_address</span><span class="p">.</span><span class="nx">zip</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">_talkable_data</span><span class="p">.</span><span class="nx">purchase</span><span class="p">.</span><span class="nx">shipping_zip</span> <span class="o">=</span> <span class="nx">shipping_address</span><span class="p">.</span><span class="nx">zip</span><span class="p">;</span>
-      <span class="p">}</span>
-      <span class="k">if</span> <span class="p">(</span><span class="nx">address</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">_talkable_data</span><span class="p">.</span><span class="nx">purchase</span><span class="p">.</span><span class="nx">shipping_address</span> <span class="o">=</span> <span class="nx">address</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="p">);</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">shipping_address</span><span class="p">.</span><span class="nx">zip</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">_talkable_data</span><span class="p">.</span><span class="nx">purchase</span><span class="p">.</span><span class="nx">shipping_zip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">shipping_address</span><span class="p">.</span><span class="nx">zip</span><span class="p">;</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">address</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">_talkable_data</span><span class="p">.</span><span class="nx">purchase</span><span class="p">.</span><span class="nx">shipping_address</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">address</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;, &#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-    <span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;register_purchase&#39;</span><span class="p">,</span> <span class="nx">_talkable_data</span><span class="p">]);</span>
-  <span class="p">}</span>
+<span class="w">    </span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;register_purchase&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">_talkable_data</span><span class="p">]);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;YOUR-PER-CLIENT-INTEGRATION&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="cm">&lt;!-- End Talkable integration code --&gt;</span>
