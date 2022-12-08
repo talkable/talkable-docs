@@ -25,8 +25,8 @@ Inside the campaign, you can change the default setting for the consent checkbox
 AppStore
 --------
 
-You can configure AppStore apps to sync your opt-ins with your phone number.
-Currently, phone number sync supports next apps:
+You can configure AppStore apps to send opt-ins with a customer phone number.
+Currently, a phone number can be used for the next apps:
 
 * :ref:`Attentive <email_marketing_and_automation/attentive>`
 * :ref:`Bronto <email_marketing_and_automation/oracle_bronto>`
