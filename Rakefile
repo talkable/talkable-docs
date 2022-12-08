@@ -24,7 +24,7 @@ task :environment do
   required = File.read('requirements.txt').match(regexp).to_s
   installed = `#{SPHINX_BUILD} --version`.match(regexp).to_s rescue ''
   if !required.empty? && !installed.empty? && Gem::Version.new(required) > Gem::Version.new(installed)
-    abort "\nYou are running an outdated version of Sphinx #{installed}. Required version is #{required}. Run `pip install -r requirements.txt` to upgrade Sphinx."
+    abort "\nYou are running an outdated version of Sphinx #{installed}. Required version is #{required}. Run `pip3 install -r requirements.txt` to upgrade Sphinx."
   end
 end
 
@@ -35,6 +35,15 @@ end
 
 task :build => :environment do
   sh "#{SPHINX_BUILD} #{SPHINX_OPTS}"
+
+  Rake::FileList["#{BUILD_DIR}/html/**/*.html"].each do |filename|
+    File.open(filename, "r+") do |file|
+      old_content = file.read
+      new_content = old_content.gsub(%r{<a(.+)href="(https?://(?!(?:www\.)?talkable\.com).*?)"}, '<a\1rel="nofollow" href="\2"')
+      file.tap(&:rewind).write(new_content) if old_content != new_content
+    end
+  end
+
   puts "\nBuild finished. The HTML pages are in #{File.expand_path("#{BUILD_DIR}/html")}."
 end
 
@@ -47,11 +56,11 @@ task :preview => [:clean, :build]
 
 desc 'Run the server on localhost:5000 and open a browser'
 task :server => :preview do
-  sh '(sleep 2 && open "http://localhost:5000")&'
+  sh '(sleep 2 && open "http://localhost:5001")&'
   sh 'bundle exec foreman start'
 end
 
-desc 'Commit and deploy changes to http://docs.talkable.com'
+desc 'Commit and deploy changes to https://docs.talkable.com'
 task :deploy => :'deploy:production'
 
 namespace :deploy do
@@ -70,7 +79,7 @@ namespace :deploy do
     sh 'git add -A'
     sh "git commit -m \"Generated gh-pages for `git log #{source_branch} -1 --pretty=short --abbrev-commit`\" && #{push_command} ; git checkout #{source_branch}"
 
-    puts "\nDeployment finished. Check updated docs at http://#{domain}"
+    puts "\nDeployment finished. Check updated docs at https://#{domain}"
   end
 
   task :production do
@@ -83,7 +92,7 @@ namespace :deploy do
     )
   end
 
-  desc 'Commit and deploy changes to http://void-docs.talkable.com'
+  desc 'Commit and deploy changes to https://void-docs.talkable.com'
   task :staging do
     deploy(
       domain: 'void-docs.talkable.com',
