@@ -13,6 +13,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/ios_sdk/getting_started.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Integration" href="integration.html" />
@@ -118,13 +119,13 @@
 </div>
 </div></blockquote>
 <ol class="arabic simple" start="3">
-<li><p>Set the <strong>Dependency Rule</strong> to be <cite>Up to Next Major Version</cite> and specify <cite>1.4.13</cite> as the lower bound (default option).</p></li>
+<li><p>Set the <strong>Dependency Rule</strong> to be <cite>Up to Next Major Version</cite> and specify <cite>1.4.14</cite> as the lower bound (default option).</p></li>
 <li><p>Select <strong>Add Package</strong> and choose <cite>TakableSDK</cite> package.</p></li>
 </ol>
 <p>Alternatively, you can add Talkable SDK directly to a <cite>Package.swift</cite> manifest:</p>
 <blockquote>
 <div><div class="highlight-swift notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span><span class="p">:</span> <span class="p">[</span>
-    <span class="p">.</span><span class="n">package</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="s">&quot;https://github.com/talkable/ios-sdk.git&quot;</span><span class="p">,</span> <span class="p">.</span><span class="n">upToNextMajor</span><span class="p">(</span><span class="n">from</span><span class="p">:</span> <span class="s">&quot;1.4.13&quot;</span><span class="p">))</span>
+    <span class="p">.</span><span class="n">package</span><span class="p">(</span><span class="n">url</span><span class="p">:</span> <span class="s">&quot;https://github.com/talkable/ios-sdk.git&quot;</span><span class="p">,</span> <span class="p">.</span><span class="n">upToNextMajor</span><span class="p">(</span><span class="n">from</span><span class="p">:</span> <span class="s">&quot;1.4.14&quot;</span><span class="p">))</span>
 <span class="p">]</span>
 </pre></div>
 </div>
@@ -132,9 +133,9 @@
 </section>
 <section id="cocoapods">
 <h3>CocoaPods<a class="headerlink" href="#cocoapods" title="Permalink to this heading">¶</a></h3>
-<p>To integrate Talkable SDK into your Xcode project using CocoaPods, specify it in your <a class="reference external" rel="nofollow" href="https://guides.cocoapods.org/using/the-podfile.html">Podfile</a>:</p>
+<p>To integrate Talkable SDK into your Xcode project using CocoaPods, specify it in your <a class="reference external" href="https://guides.cocoapods.org/using/the-podfile.html">Podfile</a>:</p>
 <blockquote>
-<div><div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">pod</span> <span class="s1">&#39;TalkableSDK&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 1.4.13&#39;</span>
+<div><div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">pod</span> <span class="s1">&#39;TalkableSDK&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 1.4.14&#39;</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -143,7 +144,7 @@
 <h3>Binary Framework<a class="headerlink" href="#binary-framework" title="Permalink to this heading">¶</a></h3>
 <p>To integrate the SDK manually as a Binary Framework, please follow next intructions:</p>
 <ol class="arabic simple">
-<li><p>Download the latest version of <a class="reference external" rel="nofollow" href="https://talkable-downloads.s3.amazonaws.com/ios-sdk/talkable_ios_sdk.zip">Talkable SDK</a>.</p></li>
+<li><p>Download the latest version of <a class="reference external" href="https://talkable-downloads.s3.amazonaws.com/ios-sdk/talkable_ios_sdk.zip">Talkable SDK</a>.</p></li>
 <li><p>Navigate to your project settings by clicking on it in the project navigator.</p></li>
 <li><p>Make sure that your target is selected and <strong>General</strong> tab is open.</p></li>
 <li><p>Go to <strong>Frameworks, Libraries, and Embedded Content</strong> section and add the SDK by clicking <strong>“+”</strong> button → <strong>Add Other…</strong> → <strong>Add Files…</strong> and locate the downloaded SDK.</p></li>
@@ -161,16 +162,15 @@ It should already be included by default after following the steps above, howeve
 <blockquote>
 <div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="cp">#import &lt;TalkableSDK/Talkable.h&gt;</span>
 <span class="c1">// ...</span>
-<span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="n">setApiKey</span><span class="o">:</span><span class="s">@&quot;YOUR_TALKABLE_PUBLIC_API_KEY&quot;</span><span class="w"> </span><span class="n">andSiteSlug</span><span class="o">:</span><span class="s">@&quot;YOUR_SITE_SLUG&quot;</span><span class="p">];</span><span class="w"></span>
+<span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="n">setApiKey</span><span class="o">:</span><span class="s">@&quot;YOUR_TALKABLE_PUBLIC_API_KEY&quot;</span><span class="w"> </span><span class="n">andSiteId</span><span class="o">:</span><span class="s">@&quot;YOUR_SITE_ID&quot;</span><span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>You can locate your credentials inside Talkable site:</p>
 <ul class="simple">
-<li><p>Visit <a class="reference external" rel="nofollow" href="https://admin.talkable.com/account/sites">https://admin.talkable.com/account/sites</a> to find your site slug</p></li>
 <li><p>Select site and go to <strong>Dashboard</strong> → <strong>Settings</strong> → <strong>Site Settings</strong>.
-Find <strong>API integration</strong> section and there you will see your API Keys.
+Find <strong>API integration</strong> section and there you will see your API Keys and Site ID.
 Use only the <em>Public API Key</em> in your application submitted to the App Store.</p></li>
 </ul>
 </div>
@@ -180,23 +180,24 @@ Use only the <em>Public API Key</em> in your application submitted to the App St
 </ol>
 <blockquote>
 <div><ul>
-<li><p>Defines <cite>tkbl-YOUR-SITE-SLUG</cite> as URL Scheme in your Info.plist file:</p>
+<li><p>Defines <cite>tkbl-YOUR-SITE-ID</cite> as URL Scheme in your Info.plist file:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>CFBundleURLTypes<span class="nt">&lt;/key&gt;</span>
 <span class="nt">&lt;array&gt;</span>
   <span class="nt">&lt;dict&gt;</span>
     <span class="nt">&lt;key&gt;</span>CFBundleURLSchemes<span class="nt">&lt;/key&gt;</span>
     <span class="nt">&lt;array&gt;</span>
-      <span class="nt">&lt;string&gt;</span>tkbl-YOUR-SITE-SLUG<span class="nt">&lt;/string&gt;</span>
+      <span class="nt">&lt;string&gt;</span>tkbl-YOUR-SITE-ID<span class="nt">&lt;/string&gt;</span>
     <span class="nt">&lt;/array&gt;</span>
   <span class="nt">&lt;/dict&gt;</span>
 <span class="nt">&lt;/array&gt;</span>
 </pre></div>
 </div>
 </li>
-<li><p>Add <cite>tkbl-YOUR-SITE-SLUG</cite> scheme to the list of schemes that are queried within application. Also add <cite>fb-messenger</cite>, <cite>fbauth2</cite>, <cite>whatsapp</cite> schemes if you going to utilize these sharing channels:</p>
+<li><p>Add <cite>tkbl-YOUR-SITE-ID</cite> scheme to the list of schemes that are queried within application.
+Also add <cite>fb-messenger</cite>, <cite>fbauth2</cite>, <cite>whatsapp</cite> schemes if you are going to utilize these sharing channels:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>LSApplicationQueriesSchemes<span class="nt">&lt;/key&gt;</span>
 <span class="nt">&lt;array&gt;</span>
-  <span class="nt">&lt;string&gt;</span>tkbl-YOUR-SITE-SLUG<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>tkbl-YOUR-SITE-ID<span class="nt">&lt;/string&gt;</span>
   <span class="nt">&lt;string&gt;</span>fb-messenger<span class="nt">&lt;/string&gt;</span>
   <span class="nt">&lt;string&gt;</span>fbauth2<span class="nt">&lt;/string&gt;</span>
   <span class="nt">&lt;string&gt;</span>whatsapp<span class="nt">&lt;/string&gt;</span>
@@ -207,14 +208,13 @@ Use only the <em>Public API Key</em> in your application submitted to the App St
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Please replace <cite>YOUR-SITE-SLUG</cite> with your actual site slug, which can
-be found on your site’s <strong>Dashboard</strong> at <a class="reference external" rel="nofollow" href="https://admin.talkable.com">https://admin.talkable.com</a>.
+<p>Please replace <cite>YOUR-SITE-ID</cite> with your actual Site ID.
 Make sure to keep <cite>tkbl-</cite> prefix in the <cite>&lt;string&gt;</cite> value. For example,
-if your site slug is <cite>my-store</cite>, the correct <cite>&lt;string&gt;</cite> value is <cite>tkbl-my-store</cite>.</p>
+if your site ID is <cite>my-store</cite>, the correct <cite>&lt;string&gt;</cite> value is <cite>tkbl-my-store</cite>.</p>
 </div>
 </div></blockquote>
 <ol class="arabic simple" start="3">
-<li><p>Add following lines to <cite>application:handleOpenURL:</cite> or <cite>application:openURL:sourceApplication:annotation:</cite></p></li>
+<li><p>Add following lines to <cite>application:openURL:options:</cite></p></li>
 </ol>
 <blockquote>
 <div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="cp">#import &lt;TalkableSDK/Talkable.h&gt;</span>

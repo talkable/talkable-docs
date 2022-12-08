@@ -14,6 +14,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/advanced_features/shopify_purchase_syncing.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Referral Tracking Methods" href="track_methods.html" />
@@ -127,7 +128,7 @@ different from Shopify Purchase ID (Talkable default Shopify integration behavio
 </section>
 <section id="how-it-works">
 <h2>How it works?<a class="headerlink" href="#how-it-works" title="Permalink to this heading">¶</a></h2>
-<p>It works as a server-to-server integration between Shopify and Talkable using Shopify <cite>orders/create</cite> <a class="reference external" rel="nofollow" href="https://shopify.dev/api/admin-rest/2022-04/resources/webhook">webhook</a>.</p>
+<p>It works as a server-to-server integration between Shopify and Talkable using Shopify <cite>orders/create</cite> <a class="reference external" href="https://shopify.dev/api/admin-rest/2022-04/resources/webhook">webhook</a>.</p>
 <p>When enabling Purchase Syncing, Talkable creates and subscribes to this <cite>orders/create</cite> webhook from the customer’s Shopify store. When disabling the setting, the webhook and the subscription are deleted.</p>
 <p>Each time a purchase is placed on a customer’s store, Shopify triggers the webhook and Talkable registers the purchase with attributes sent in the webhook’s payload.</p>
 </section>

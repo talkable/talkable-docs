@@ -14,6 +14,7 @@
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/campaigns/tutorials/offers_claim.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Incentive Criteria" href="incentive_criteria.html" />
@@ -244,89 +245,6 @@ field, submit button, and “signup for latest news” checkbox.</p>
 <span class="w">    </span><span class="nx">unlockGating</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span><span class="w"></span>
 <span class="w">  </span><span class="p">});</span><span class="w"></span>
 <span class="p">});</span><span class="w"></span>
-</pre></div>
-</div>
-<p><hr></p>
-</section>
-<section id="like-gating">
-<span id="tutorials-like-gating"></span><h2>Like Gating<a class="headerlink" href="#like-gating" title="Permalink to this heading">¶</a></h2>
-<img alt="" src="../../_images/image21.png" />
-<p><strong>Basic Setup</strong></p>
-<p><strong>HTML:</strong></p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
-  {% if gated_like == blank %}
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;content&quot;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;js-before&quot;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;like-button fb_like&quot;</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;fb-root&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">fb:like</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ short_url }}&quot;</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;like&quot;</span> <span class="na">layout</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">show_faces</span><span class="o">=</span><span class="s">&quot;false&quot;</span> <span class="na">share</span><span class="o">=</span><span class="s">&quot;false&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">fb:like</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;js-after&quot;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">data-clipboard-text</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Click to Copy&quot;</span> <span class="na">data-copied-label</span><span class="o">=</span><span class="s">&quot;Copied!&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;promo-code js-promo-code&quot;</span><span class="p">&gt;</span>
-          <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;code&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ proceed_to_merchant_path }}&quot;</span><span class="p">&gt;</span>Shop with this code<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  {% else %}
-    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;content&quot;</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">data-clipboard-text</span><span class="o">=</span><span class="s">&quot;{{ coupon_code }}&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;Click to Copy&quot;</span> <span class="na">data-copied-label</span><span class="o">=</span><span class="s">&quot;Copied!&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;promo-code js-promo-code&quot;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;code&quot;</span><span class="p">&gt;</span>{{ coupon_code }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-      <span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
-      <span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ proceed_to_merchant_path }}&quot;</span><span class="p">&gt;</span>Shop with this code<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  {% endif %}
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;js-notice&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-<p><strong>JS:</strong></p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">populateCouponCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">couponCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-promo-code&#39;</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;data-clipboard-text&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">couponCode</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-promo-code .code&#39;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">couponCode</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="nx">bindClipToCopy</span><span class="p">(</span><span class="s1">&#39;.js-promo-code&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="p">};</span><span class="w"></span>
-
-<span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">notice</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-notice&#39;</span><span class="p">),</span><span class="w"></span>
-<span class="w">      </span><span class="nx">timer</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">  </span><span class="nx">bindClipToCopy</span><span class="p">(</span><span class="s1">&#39;.js-promo-code&#39;</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">displayNotice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">delay</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">clearTimeout</span><span class="p">(</span><span class="nx">timer</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="nx">notice</span><span class="w"></span>
-<span class="w">      </span><span class="p">.</span><span class="nx">html</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="p">.</span><span class="nx">fadeIn</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="nx">timer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nx">notice</span><span class="p">.</span><span class="nx">fadeOut</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="nx">delay</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">delay</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">5000</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">};</span><span class="w"></span>
-
-<span class="w">  </span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s1">&#39;like_gating_succeeded&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">passLikeGating</span><span class="p">();</span><span class="w"></span>
-<span class="w">  </span><span class="p">});</span><span class="w"></span>
-
-<span class="w">  </span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s1">&#39;like_gating_passed&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">coupon_code</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nx">populateCouponCode</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">coupon_code</span><span class="p">);</span><span class="w"></span>
-<span class="w">      </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-before&#39;</span><span class="p">).</span><span class="nx">slideUp</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span><span class="w"></span>
-<span class="w">      </span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-after&#39;</span><span class="p">).</span><span class="nx">slideDown</span><span class="p">(</span><span class="mf">300</span><span class="p">);</span><span class="w"></span>
-<span class="w">      </span><span class="p">},</span><span class="w"> </span><span class="mf">300</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;No coupon provided.&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="w">      </span><span class="nx">displayNotice</span><span class="p">(</span><span class="s1">&#39;No coupon provided.&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">  </span><span class="p">});</span><span class="w"></span>
-<span class="p">});</span><span class="w"></span>
-</pre></div>
-</div>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">js-after</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </section>

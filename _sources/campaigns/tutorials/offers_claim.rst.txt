@@ -32,17 +32,3 @@ First of all, turn on email gating in Restricted settings:
 3. Email validation messages
 
 .. include:: /samples/liquid/offers_claim/email_gating_advanced.rst
-
-|hr|
-
-.. _tutorials_like_gating:
-
-Like Gating
-...........
-
-.. image:: /_static/img/liquid/gating/image2.png
-   :alt:
-
-**Basic Setup**
-
-.. include:: /samples/liquid/offers_claim/like_gating_basic.rst

@@ -13,6 +13,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/android_sdk/getting_started.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Integration" href="integration.html" />
@@ -123,7 +124,7 @@ as quickly as possible with Talkable Android SDK.</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;application&gt;</span>
     ...
     <span class="nt">&lt;meta-data</span>
-        <span class="na">android:name=</span><span class="s">&quot;tkbl-api-key-{{YOUR_SITE_SLUG}}&quot;</span>
+        <span class="na">android:name=</span><span class="s">&quot;tkbl-api-key-{{YOUR_SITE_ID}}&quot;</span>
         <span class="na">android:value=</span><span class="s">&quot;{{YOUR_TALKABLE_PUBLIC_API_KEY}}&quot;</span> <span class="nt">/&gt;</span>
     ...
 <span class="nt">&lt;/application&gt;</span>
@@ -133,10 +134,9 @@ as quickly as possible with Talkable Android SDK.</p>
 <p class="admonition-title">Note</p>
 <p>You can locate your credentials inside Talkable site:</p>
 <ul class="simple">
-<li><p>Visit <a class="reference external" rel="nofollow" href="https://admin.talkable.com/account/sites">https://admin.talkable.com/account/sites</a> to find your site slug</p></li>
 <li><p>Select site and go to <strong>Dashboard</strong> → <strong>Settings</strong> → <strong>Site Settings</strong>.
-Find <strong>API integration</strong> section and there you will see your API Keys.
-Use only the <em>public key</em> in your application.</p></li>
+Find <strong>API integration</strong> section and there you will see your API Keys and Site ID (also known as Site slug).
+Use only the <em>Public API Key</em> in your production application.</p></li>
 </ul>
 </div>
 </li>
@@ -152,7 +152,7 @@ want to handle deep links from Talkable.</p>
         <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.DEFAULT&quot;</span> <span class="nt">/&gt;</span>
         <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.BROWSABLE&quot;</span> <span class="nt">/&gt;</span>
 
-        <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;tkbl-{{YOUR_SITE_SLUG}}&quot;</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;tkbl-{{YOUR_SITE_ID}}&quot;</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/intent-filter&gt;</span>
 <span class="nt">&lt;/activity&gt;</span>
 </pre></div>
@@ -196,7 +196,7 @@ the <code class="docutils literal notranslate"><span class="pre">&lt;application
 </li>
 </ol>
 <p>Here is an example of <code class="docutils literal notranslate"><span class="pre">AndroidManifest.xml</span></code> file (with <code class="docutils literal notranslate"><span class="pre">&quot;demo-site&quot;</span></code> site
-slug) you should setup after steps above:</p>
+ID) you should setup after steps above:</p>
 <blockquote>
 <div><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span>
 <span class="nt">&lt;manifest</span> <span class="na">xmlns:android=</span><span class="s">&quot;http://schemas.android.com/apk/res/android&quot;</span>

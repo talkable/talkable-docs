@@ -16,10 +16,10 @@ the app is launched.
 
 .. code-block:: java
 
-   String initialSiteSlug = null; // pass null to use the siteSlug specified in your manifest
+   String initialSiteId = null; // pass null to use the Site ID specified in your manifest
    boolean debug = true;
 
-   Talkable.initialize(this, initialSiteSlug, debug, null);
+   Talkable.initialize(this, initialSiteId, debug, null);
 
 You can use the last param to pass a custom device ID, allowing you to switch between user identities manually. This way
 you can use a single device to pose as an Advocate or Friend and easily replicate various scenarios. The custom device ID
@@ -27,11 +27,11 @@ will be applied only if debug is set to `true`.
 
 .. code-block:: java
 
-   String initialSiteSlug = null;
+   String initialSiteId = null;
    boolean debug = true;
    String customDeviceId = "qa-advocate-007";
 
-   Talkable.initialize(this, initialSiteSlug, debug, customDeviceId);
+   Talkable.initialize(this, initialSiteId, debug, customDeviceId);
 
 .. warning::
 

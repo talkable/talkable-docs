@@ -13,6 +13,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/ios_sdk/advanced.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Integration with Third Party Deep Linking Services" href="custom_deep_linking.html" />
@@ -73,6 +74,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#specify-a-custom-campaign-tag">Specify a custom campaign tag</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#implement-talkabledelegate">Implement TalkableDelegate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#notifications">Notifications</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contacts-import">Contacts Import</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#debugging">Debugging</a></li>
 </ul>
 </li>
@@ -232,6 +234,24 @@ corresponding sharing view.</p>
 <li><p>TKBLMessageOfferClose</p></li>
 <li><p>TKBLMessageCouponIssued</p></li>
 </ul>
+</div></blockquote>
+</section>
+<section id="contacts-import">
+<h2>Contacts Import<a class="headerlink" href="#contacts-import" title="Permalink to this heading">¶</a></h2>
+<p>It is possible to import contacts from a device with the SDK, so they will be accessible at the Share page with JavaScript.
+The button at the Share page for contacts importing should have <cite>class=”js-import-contacts”</cite> property.</p>
+<p>Also, contacts usage description is required on iOS 10+ devices. It should be described under the <cite>NSContactsUsageDescription</cite> key
+in the <cite>Info.plist</cite> file of your app. This message will be shown when asking for contacts permissions.</p>
+<blockquote>
+<div><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>NSContactsUsageDescription<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>Share the offer with your Friends from contacts<span class="nt">&lt;/string&gt;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Talkable SDK asks for the contacts permissions dynamically only when “contacts import” functionality is implemented
+in the campaign and Advocate presses the corresponding button at the Share page for the first time.</p>
+</div>
 </div></blockquote>
 </section>
 <section id="debugging">

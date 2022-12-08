@@ -13,6 +13,7 @@
     <script src="../_static/underscore.js"></script>
     <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/android_sdk/testing.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Upgrade" href="upgrade.html" />
@@ -99,20 +100,20 @@ in debug mode.</p>
 <p>The full form of <cite>Talkable.initialize</cite> method allows you to enable the debug mode. In debug mode Talkable SDK
 will assign a new ID to the device every time it’s initialized, allowing you to be registered as a new visitor each time
 the app is launched.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">initialSiteSlug</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// pass null to use the siteSlug specified in your manifest</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">initialSiteId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"> </span><span class="c1">// pass null to use the Site ID specified in your manifest</span><span class="w"></span>
 <span class="kt">boolean</span><span class="w"> </span><span class="n">debug</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
 
-<span class="n">Talkable</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">initialSiteSlug</span><span class="p">,</span><span class="w"> </span><span class="n">debug</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span><span class="w"></span>
+<span class="n">Talkable</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">initialSiteId</span><span class="p">,</span><span class="w"> </span><span class="n">debug</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <p>You can use the last param to pass a custom device ID, allowing you to switch between user identities manually. This way
 you can use a single device to pose as an Advocate or Friend and easily replicate various scenarios. The custom device ID
 will be applied only if debug is set to <cite>true</cite>.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">initialSiteSlug</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">initialSiteId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w"></span>
 <span class="kt">boolean</span><span class="w"> </span><span class="n">debug</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"></span>
 <span class="n">String</span><span class="w"> </span><span class="n">customDeviceId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;qa-advocate-007&quot;</span><span class="p">;</span><span class="w"></span>
 
-<span class="n">Talkable</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">initialSiteSlug</span><span class="p">,</span><span class="w"> </span><span class="n">debug</span><span class="p">,</span><span class="w"> </span><span class="n">customDeviceId</span><span class="p">);</span><span class="w"></span>
+<span class="n">Talkable</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">initialSiteId</span><span class="p">,</span><span class="w"> </span><span class="n">debug</span><span class="p">,</span><span class="w"> </span><span class="n">customDeviceId</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition warning">
