@@ -7,7 +7,7 @@
 Phone number gating
 ===================
 
-Phone number feature you can collect customers' phone numbers inside your campaigns and use them for promotions.
+Phone number feature allows you to collect customers' phone numbers inside your campaigns and use them for promotions.
 
 You can set the phone number as a required field for customers to join the campaign or get a reward.
 Setting can be found inside ``Campaign → Rules → Extra section`` for both Advocate and Friend.
