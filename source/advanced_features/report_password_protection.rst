@@ -5,7 +5,7 @@
    :description: To protect sensitive information, all exported reports are password protected by default.
 
 Report Password Protection
-===============
+====================================
 
 To protect sensitive information, all exported reports are password protected by default,
 but you can disable this in your site settings.
