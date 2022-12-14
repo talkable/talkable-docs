@@ -23,7 +23,7 @@ Inside the campaign, you can change the default setting for the consent checkbox
 .. image:: /_static/img/advanced_features/phone_number_campaign_settings.jpg
 
 Synchronization with ESPs
---------
+-------------------------
 
 You can configure App store apps to send opt-ins with a customer’s phone number.
 Currently, a phone number can be used for the next apps:
