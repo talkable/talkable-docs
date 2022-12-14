@@ -25,7 +25,7 @@ Inside the campaign, you can change the default setting for the consent checkbox
 AppStore
 --------
 
-You can configure AppStore apps to send opt-ins with a customer’s phone number.
+You can configure App store apps to send opt-ins with a customer’s phone number.
 Currently, a phone number can be used for the next apps:
 
 * :ref:`Attentive <email_marketing_and_automation/attentive>`
