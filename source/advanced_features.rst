@@ -44,6 +44,9 @@ each with links to integration details.
    * - :ref:`File encryption <advanced_features/file_encryption>`
      - For additional security, it is possible to encrypt files.
 
+   * - :ref:`Report password protection <advanced_features/report_password_protection>`
+     - For additional security, reports have password protection by default.
+
    * - :ref:`Including Product Items <advanced_features/product_items>`
      - Let your customers share specific items that they’ve purchased
        and pass product details along with purchase data
@@ -94,6 +97,7 @@ each with links to integration details.
     advanced_features/params_encryption
     advanced_features/events
     advanced_features/file_encryption
+    advanced_features/report_password_protection
     advanced_features/product_items
     advanced_features/passing_custom_data
     advanced_features/referrals_approval
