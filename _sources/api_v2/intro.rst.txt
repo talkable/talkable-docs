@@ -138,9 +138,8 @@ Talkable doesn’t limit requests for any clients for API or other endpoints.
 The only “limit” that currently exists in Talkable is throttling. Our throttling
 mechanism is implemented in next way: we calculate number of resources each client
 consumes for all requests it made to Talkable (not only API, but all requests from
-all integrations like JS, SDK etc) and if a customer (site) consumes more than 30%
-of our overall resources at the moment (it is a variable number), we start to
-throttle requests from this customer by responding with **429 HTTP responce code**.
+all integrations like JS, SDK etc) and if a customer (site) consumption of the resources increases unexpectedly,
+we start to throttle requests from this customer by responding with **429 HTTP responce code**.
 
 .. note::
     In a case when request was throttled and server responded with **429 HTTP responce code**,
