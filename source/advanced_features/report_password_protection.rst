@@ -18,6 +18,7 @@ ZIP file and a password to unzip it.
 
 .. image:: /_static/img/password_protected_report_email.png
    :alt: Password Protected Report
+
 To disable password protection in reports, you can turn off this option in the site settings:
 
 .. image:: /_static/img/password_protected_toggle.png
