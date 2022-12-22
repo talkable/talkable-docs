@@ -125,7 +125,28 @@ Talkable returns standard HTTP response codes.
    422                 Unprocessable Entity - The requested create, update,
                        or delete cannot be performed due to validation errors.
                        |br| See the response body for more details.
+   429                 Too Many Requests
    500, 502, 503, 504  Server Errors - Something is wrong on Talkable’s end
    =================== ======================================================
 
 .. _HTTP Basic Auth: https://en.wikipedia.org/wiki/Basic_access_authentication
+
+Request Throttling
+------------------
+
+Talkable limits the rate of requests to ensure that services are reliable and
+responsive for customers. Our throttling mechanism is implemented in the next
+way: we calculate number of resources each client consumes for all requests made
+to Talkable (not only API requests, but rather all requests from all
+integrations e.g. JavaScript integration library, Mobile SDK etc.), and if the
+customer (site) consumption of the resources increases unexpectedly, we start to
+throttle requests for this customer by responding with HTTP status code ``429``.
+Rate limits are not published because the computation logic is evolving
+continuously to maximize reliability and performance for customers.
+
+.. note::
+   In case the request was throttled and the server responded with HTTP status
+   code ``429``, we recommend to retry the request. Consecutive calls might
+   return ``429`` until the load on the server goes down. Your application 
+   should implement a retry logic with incremental backoff in the realm of 
+   seconds and up to minutes.
