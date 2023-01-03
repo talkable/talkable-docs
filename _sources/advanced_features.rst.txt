@@ -15,7 +15,7 @@ each with links to integration details.
    :widths: 35 65
 
    * - :ref:`Automatic Coupon Creation <advanced_features/coupons>`
-     - Issue single and multi-use coupons automatically for your campaigns
+     - Issue single and multi-use coupons for your campaigns
 
    * - :ref:`Shopify Coupon auto-sync <advanced_features/shopify_coupons_auto_sync>`
      - Issue coupons automatically for your Shopify store
