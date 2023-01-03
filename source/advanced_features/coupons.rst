@@ -29,7 +29,7 @@ In this case each, customer will receive unique coupon code from the pool availa
 There are several steps that need to be taken for this scenario:
 
 1. Create a coupon list at ``All reports → Coupon Lists`` page
-2. Generate a list of coupons on the merchant site using mass coupon generation tool. Check the `Best Practice`_ section before generating coupons.
+2. Generate a list of coupons on the merchant site using mass coupon generation tool. Check the `Requirements`_ section before generating coupons.
 3. Upload generated coupons to coupon list
 4. Use a coupon list in the Incentive with "Coupon Code" reward type
 
@@ -44,8 +44,8 @@ Read :ref:`Create Coupon Webhook Documentation <web_hooks/create_coupon>` for im
 
    .. toctree::
 
-Best Practice
--------------
+Requirements
+------------
 
 Coupons should be unique and 3 to 255 characters long.
 All coupons would be converted to uppercase, consider that during code generation, ``fr_coupon`` and ``FR_COUPON`` would be equal.
@@ -66,6 +66,6 @@ We do not want people confusing 8 with B, 1 with I, 0 with O, L with 1, etc.
 
    # Generates a random string from a set of easily readable characters
    def generate_activation_code(size = 6)
-     charset = %w{ 2 3 4 6 7 9 A C D E F G H J K M N P Q R T V W X Y Z}
-     (0...size).map { charset.to_a[rand(charset.size)] }.join
+     charset = ["2", "3", "4", "6", "7", "9", "A", "C", "D", "E", "F", "G", "H", "J", "K", "M", "N", "P", "Q", "R", "T", "V", "W", "X", "Y", "Z"]
+     (0...size).map { charset[rand(charset.size)] }.join
    end
