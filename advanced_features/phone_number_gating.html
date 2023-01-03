@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<meta content="Phone number feature allows you to collect customers' phone numbers inside your campaigns and use them for promotions." name="description" />
+
+    <title>Phone number gating &#8212; Talkable Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="canonical" href="https://docs.talkable.com/advanced_features/phone_number_gating.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Referrals Approval" href="referrals_approval.html" />
+    <link rel="prev" title="Pass Custom User Data" href="passing_custom_data.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+  <link href="../_static/pygments-github.css" rel="stylesheet">
+  <link href="../_static/img/favicon.ico" rel="shortcut icon" />
+  </head><body>
+  
+    <div class="header">
+      <a href="../index.html" class="header-logo">Talkable docs</a>
+          <form class="search-form" action="../search.html" method="get">
+            <input type="text" class="textfield search-form-field" name="q" placeholder="Search docs" />
+            <input type="submit" class="button search-form-button" value="Search" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+      <div class="header-disclaimer">
+        Visit
+        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+      </div>
+    </div> <!-- /.header -->
+  
+
+  <div class="content-container content clearfix">
+      <div class="nav">
+        <ul>
+<li class="toctree-l1"><a class="reference internal" href="../campaigns.html">Talkable Campaigns</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../advanced_features.html">Features</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="coupons.html">Automatic Coupon Creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shopify_coupons_auto_sync.html">Shopify coupon auto-sync</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shopify_purchase_syncing.html">Shopify Purchase Syncing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="track_methods.html">Referral Tracking Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal_coupon_sharing.html">Advocate Personal Coupon Sharing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="converting_into_localization.html">Converting Into Localization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="customer_service_portal.html">Customer Service Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="params_encryption.html">Params Encryption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html">Integrating Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_encryption.html">File Encryption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="report_password_protection.html">Report Password Protection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="product_items.html">Including Product Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passing_custom_data.html">Pass Custom User Data</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Phone number gating</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#synchronization-with-esps">Synchronization with ESPs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="referrals_approval.html">Referrals Approval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="product_sku.html">Segment With Product SKU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="traffic_source.html">Segment With Traffic Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subscribing_to_events.html">Subscribing To Iframe Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reg_ex.html">Setting up Campaign Placement criteria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="url_parameters.html">Using URL Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="white_labeling.html">White-labeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="single_sign_on.html">Single Sign-On (SSO)</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/custom_integration.html">Standard Integration</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/loyalty.html">Loyalty Integration (beta)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integration/ecommerce_platforms.html">E-commerce Platforms</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../email_marketing_and_automation.html">Email Marketing &amp; Automation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../payment_solutions.html">Payment Solutions</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api_v2.html">API Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../web_hooks.html">Webhooks</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ios_sdk.html">Talkable iOS SDK</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../android_sdk.html">Talkable Android SDK</a></li>
+</ul>
+
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <span class="target" id="advanced-features-phone-number-gating"></span><section id="phone-number-gating">
+<h1>Phone number gating<a class="headerlink" href="#phone-number-gating" title="Permalink to this heading">¶</a></h1>
+<p>Phone number feature allows you to collect customers’ phone numbers inside your campaigns and use them for promotions.</p>
+<p>You can set the phone number as a required field for customers to join the campaign or get a reward.
+Setting can be found inside <code class="docutils literal notranslate"><span class="pre">Campaign</span> <span class="pre">→</span> <span class="pre">Rules</span> <span class="pre">→</span> <span class="pre">Extra</span> <span class="pre">section</span></code> for both Advocate and Friend.</p>
+<img alt="../_images/phone_number_gating_for_advocate.png" src="../_images/phone_number_gating_for_advocate.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently, phone number gating can be enabled only with enabled email gating.</p>
+</div>
+<p>Inside the campaign, you can change the default setting for the consent checkbox.</p>
+<img alt="../_images/phone_number_campaign_settings.jpg" src="../_images/phone_number_campaign_settings.jpg" />
+<section id="synchronization-with-esps">
+<h2>Synchronization with ESPs<a class="headerlink" href="#synchronization-with-esps" title="Permalink to this heading">¶</a></h2>
+<p>You can configure App store apps to send opt-ins with a customer’s phone number.
+Currently, a phone number can be used for the next apps:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../email_marketing_and_automation/attentive.html#email-marketing-and-automation-attentive"><span class="std std-ref">Attentive</span></a></p></li>
+<li><p><a class="reference internal" href="../email_marketing_and_automation/oracle_bronto.html#email-marketing-and-automation-oracle-bronto"><span class="std std-ref">Bronto</span></a></p></li>
+<li><p><a class="reference internal" href="../email_marketing_and_automation/klaviyo.html#email-marketing-and-automation-klaviyo"><span class="std std-ref">Klaviyo</span></a></p></li>
+<li><p><a class="reference internal" href="../email_marketing_and_automation/hubspot.html#email-marketing-and-automation-hubspot"><span class="std std-ref">HubSpot</span></a></p></li>
+</ul>
+<p>Sample configuration</p>
+<img alt="../_images/phone_number_sync_appstore.png" src="../_images/phone_number_sync_appstore.png" />
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </div> <!-- /.content-container -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-63500208-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  </body>
+</html>

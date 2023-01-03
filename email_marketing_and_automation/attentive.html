@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 <meta content="With Attentive app clients can synchronize mobile numbers that Talkable collected." name="description" />
 
     <title>Attentive &#8212; Talkable Documentation</title>
@@ -60,7 +60,11 @@
 <li class="toctree-l2"><a class="reference internal" href="mailchimp.html">Mailchimp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sailthru.html">Sailthru</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hubspot.html">Hubspot</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Attentive</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Attentive</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#app-store">App Store</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-add-a-new-app">How to add a new app?</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -116,8 +120,69 @@ please contact your Customer Success Manager to apply it to your campaigns.
 <blockquote>
 <div><p>For example, send advocates their referral reward via text to increase redemptions and repeat shoppers.</p>
 </div></blockquote>
+<section id="app-store">
+<h2>App Store<a class="headerlink" href="#app-store" title="Permalink to this heading">¶</a></h2>
+<p>Integration with Attentive is done in Talkable with the corresponding App store application.</p>
+<p>It supports next data to be synchronized from Talkable to Attentive:</p>
+<ul class="simple">
+<li><p>Email and phone opt ins</p></li>
+<li><p>Reward coupons</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For phone and phone opt-in synchronization, corresponding attributes should be configured in a Talkable campaign: <a class="reference internal" href="../advanced_features/phone_number_gating.html#advanced-features-phone-number-gating"><span class="std std-ref">Phone number gating</span></a></p>
+</div>
+<p>Here are the conditions when Talkable acquires phone numbers:</p>
+<ol class="arabic simple">
+<li><p>Advocate signs up, provides phone number and opts in for Talkable marketing text messages:</p></li>
+</ol>
+<blockquote>
+<div><img alt="Subscribe" src="../_images/phone_gating_ad.png" />
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Friend passes phone gating and opts in for Talkable marketing text messages:</p></li>
+</ol>
+<blockquote>
+<div><img alt="Signup" src="../_images/phone_gating_fr.png" />
+</div></blockquote>
+<p>Each ESP application allows custom attributes to be included with each request. The following interpolation variables are allowed:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">person</span> <span class="pre">}}</span></code> - a data object for either Advocate or Friend whenever they sign up or pass phone gating and opt-in for marketing text messages.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">ip</span> <span class="pre">}}</span></code> – a data object from which IP address either a signup or phone gating occurred.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">campaign</span> <span class="pre">}}</span></code> – a data object with details about the campaign within which the phone was captured.</p></li>
+</ol>
+<img alt="Variables" src="../_images/attentive_variables.png" />
+<p>Each variable is described in the “Available variables” sidebar and can be expanded to see all nested properties.</p>
+</section>
+<section id="how-to-add-a-new-app">
+<h2>How to add a new app?<a class="headerlink" href="#how-to-add-a-new-app" title="Permalink to this heading">¶</a></h2>
+<p>Please use the following guide to start using an app you need:</p>
+<ol class="arabic simple">
+<li><p>Navigate into the App store:</p></li>
+</ol>
+<blockquote>
+<div><img alt="App store navigation" src="../_images/app_store_navigation.png" />
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Choose an app you need by clicking “Install”</p></li>
+</ol>
+<p>3. Fill in all necessary fields. You can use tips on the right that
+instruct how to find all necessary credentials.</p>
+<ol class="arabic simple" start="4">
+<li><p>Complete installation and enable the app:</p></li>
+</ol>
+<blockquote>
+<div><img alt="Attentive" src="../_images/attentive_activate.png" />
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>Test the app by pressing on the “Send sample payload” and then check if you are seeing a test request inside your ESP:</p></li>
+</ol>
+<blockquote>
+<div><img alt="Send same payload" src="../_images/attentive_send_sample.png" />
+</div></blockquote>
 <p><strong>Contact us</strong></p>
 <p>Interested in setting this up? Contact your CSM or get in touch <a class="reference external" href="mailto:support&#37;&#52;&#48;talkable&#46;com">here</a>.</p>
+</section>
 </section>
 
 
