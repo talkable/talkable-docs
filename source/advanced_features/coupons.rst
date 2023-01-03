@@ -29,7 +29,7 @@ In this case each, customer will receive unique coupon code from the pool availa
 There are several steps that need to be taken for this scenario:
 
 1. Create a coupon list at ``All reports → Coupon Lists`` page
-2. Generate a list of coupons on the merchant site using mass coupon generation tool. Check the Best Practice section, before generating coupons.
+2. Generate a list of coupons on the merchant site using mass coupon generation tool. Check the `Best Practice`_ section before generating coupons.
 3. Upload generated coupons to coupon list
 4. Use a coupon list in the Incentive with "Coupon Code" reward type
 
@@ -50,7 +50,7 @@ Best Practice
 Coupons should be unique and 3 to 255 characters long.
 All coupons would be converted to uppercase, consider that during code generation, ``fr_coupon`` and ``FR_COUPON`` would be equal.
 
-The is a list of allowed characters:
+Only the following characters are allowed in a coupon code:
 
 .. code-block:: text
 
@@ -61,7 +61,6 @@ The is a list of allowed characters:
 
 Try to avoid ambiguous characters. This simple solution generates a string of easily readable characters for activation codes.
 We do not want people confusing 8 with B, 1 with I, 0 with O, L with 1, etc.
-
 
 .. code-block:: ruby
 
