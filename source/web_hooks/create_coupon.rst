@@ -75,50 +75,8 @@ Create Coupon Webhook can now be set up.
 .. raw:: html
 
    <h2>Payload parameters provided by Create Coupon Webhook</h2>
-
-* **coupon_auto_sync_enabled** — :ref:`Shopify Coupon auto-sync <advanced_features/shopify_coupons_auto_sync>` status.
-  Note that the webhook takes precedence over Shopify Coupon auto-sync
-* **coupon_code** — coupon code
-* **coupon_list_id** — ID of the coupon list that needs to be filled
-* **coupon_list_name** — name of the coupon list that needs to be filled
-* **email** — email of the advocate.
-  This field is only relevant for :ref:`personal coupons <advanced_features/personal_coupon_sharing>`
-* **discount_amount** — discount amount
-* **percentage_discount** — when ``true`` percentage discount should be created,
-  otherwise fixed discount
-* **expires_at** — coupon expiration date
-* **usage_limit** — number of usages for the coupon
-
-.. raw:: html
-
-   <h2>Sample payload</h2>
-
-.. code-block:: javascript
-
-   {
-     "coupon_auto_sync_enabled": false,
-     "coupon_code": "WHT58574",
-     "coupon_list_id": 1,
-     "coupon_list_name": "$10 off",
-     "discount_amount": "10.0",
-     "email": null,
-     "expires_at": "2014-04-14T06:17:14.309-07:00",
-     "percentage_discount": false,
-     "usage_limit": 1
-   }
-
-.. raw:: html
-
-   <h2>cURL example</h2>
-
-.. code-block:: bash
-
-   curl <url> \
-        -d "key=<key>" \
-        -d "site=<site>" \
-        -d "type=create_coupon_web_hook" \
-        -d "extras={}" \
-        -d 'payload={"coupon_auto_sync_enabled":false,"coupon_code":"WHT58574","coupon_list_id":1,"coupon_list_name":"$10 off","discount_amount":"10.0","email":null,"expires_at":"2014-04-14T06:17:14.309-07:00","percentage_discount":false,"usage_limit":1}'
+    The sample payload with parameters for Create Coupon Webhook is available here:
+    <p><a href="https://www.talkable.com/api-docs/index.html?urls.primaryName=Webhooks#/Create%20Coupon%20Webhook/post_yourApiCreateCouponWebhookPath">Create Coupon Webhook Payload</a></p>
 
 .. container:: hidden
 

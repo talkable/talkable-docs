@@ -35,73 +35,8 @@ Advocate Signup Form example:
 .. raw:: html
 
    <h2>Payload parameters provided for Advocate Signup Webhook</h2>
-
-* **offer** — subhash of parameters describing the offer
-
-  .. include:: /partials/offer_fields.rst
-
-* **campaign** — subhash of parameters describing the campaign
-
-  .. include:: /partials/campaign_fields.rst
-
-.. include:: /partials/person_fields.rst
-.. |person| replace:: affiliate member
-
-.. raw:: html
-
-   <h2>Sample payload</h2>
-
-.. code-block:: javascript
-
-   {
-     "campaign": {
-       "cached_slug": 615437538,
-       "id": 615437538,
-       "joinable_category_names": ["affiliate_member"],
-       "new_customer": null,
-       "origin_max_age": null,
-       "origin_min_age": null,
-       "tag_names": ["default"],
-       "type": "StandaloneCampaign"
-     },
-     "custom_properties": {},
-     "email": "john@example.com",
-     "first_name": "John",
-     "gender": null,
-     "is_loyalty_member": false,
-     "last_name": "Doe",
-     "loyalty_member": null,
-     "offer": {
-       "email": "referrer@example.com",
-       "short_url_code": "1a2PV",
-       "ip_address": "127.0.0.1"
-     },
-     "opted_in_at": null,
-     "phone_number": "+12025551111",
-     "phone_opted_in_at": null,
-     "referral_counts": {
-       "total": 0,
-       "approved": 0,
-       "pending": 0
-     },
-     "sub_choice": false,
-     "subscribed_at": null,
-     "unsubscribed_at": null,
-     "username": null
-   }
-
-.. raw:: html
-
-   <h2>cURL example</h2>
-
-.. code-block:: bash
-
-   curl <url> \
-        -d "key=<key>" \
-        -d "site=<site>" \
-        -d "type=offer_signup_web_hook" \
-        -d "extras={}" \
-        -d 'payload={"campaign":{"cached_slug":615437538,"id":615437538,"joinable_category_names":["affiliate_member"],"new_customer":null,"origin_max_age":null,"origin_min_age":null,"tag_names":["default"],"type":"StandaloneCampaign"},"custom_properties":{},"email":"john@example.com","first_name":"John","gender":null,"is_loyalty_member":false,"last_name":"Doe","loyalty_member":null,"offer":{"email":"referrer@example.com","short_url_code":"1a2PV","ip_address":"127.0.0.1"},"opted_in_at":null,"phone_number":"+12025551111","phone_opted_in_at":null,"referral_counts":{"total":0,"approved":0,"pending":0},"sub_choice":false,"subscribed_at":null,"unsubscribed_at":null,"username":null}'
+   The sample payload with parameters for Advocate Signup Webhook is available here:
+   <p><a href="https://www.talkable.com/api-docs/index.htmlurls.primaryName=Webhooks#/Advocate%20Signup%20Webhook/post_yourApiAdvocateSignUpWebhookPath">Advocate Signup Webhook Payload</a></p>
 
 .. container:: hidden
 
