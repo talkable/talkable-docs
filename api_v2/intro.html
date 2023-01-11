@@ -3,16 +3,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <meta content="The Talkable API is built on HTTP. Our API is RESTful, returns JSON, and responds with standard HTTP response codes to indicate errors." name="description" />
 
     <title>Introduction &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/api_v2/intro.html" />
@@ -163,10 +160,6 @@ meaningful information to the user.</p>
 <p>Talkable returns standard HTTP response codes.</p>
 <div class="ptable docutils container">
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 26%" />
-<col style="width: 74%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Code</p></th>
 <th class="head"><p>Description</p></th>
@@ -206,11 +199,11 @@ or delete cannot be performed due to validation errors.
 responsive for customers. Our throttling mechanism is implemented in the next
 way: we calculate number of resources each client consumes for all requests made
 to Talkable (not only API requests, but rather all requests from all
-integrations e.g. JavaScript integration library, Mobile SDK etc.), and if the customer (site) consumption of the
-resources increases unexpectedly, we start to throttle requests for this
-customer by responding with HTTP status code <code class="docutils literal notranslate"><span class="pre">429</span></code>. Rate limits are not
-published because the computation logic is evolving continuously to maximize
-reliability and performance for customers.</p>
+integrations e.g. JavaScript integration library, Mobile SDK etc.), and if the
+customer (site) consumption of the resources increases unexpectedly, we start to
+throttle requests for this customer by responding with HTTP status code <code class="docutils literal notranslate"><span class="pre">429</span></code>.
+Rate limits are not published because the computation logic is evolving
+continuously to maximize reliability and performance for customers.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>In case the request was throttled and the server responded with HTTP status
