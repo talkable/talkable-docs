@@ -99,28 +99,25 @@
             
   <span class="target" id="campaigns-views-notifier-rewards-paid"></span><section id="advocate-reward-paid-email">
 <h1>Advocate Reward Paid Email<a class="headerlink" href="#advocate-reward-paid-email" title="Permalink to this heading">¶</a></h1>
-<p>Email is triggered to an Advocate when Referral marked as <code class="docutils literal notranslate"><span class="pre">Approved</span></code>. <br>
-Let Advocate know their account has been credited or a partial refund has
-been issued.</p>
+<p>Let Advocates know they have been rewarded, or a partial refund has been issued. <br>
+The email is triggered and sent when an Advocate receives a reward. It can be a Signup, Share, or Referral reward (when Referral is marked as <code class="docutils literal notranslate"><span class="pre">Approved</span></code>).
+All trigger conditions are configured via <a class="reference internal" href="../tutorials/incentive_criteria.html#incentive-criteria"><span class="std std-ref">Incentive Criteria</span></a>.</p>
+<p>Advocate Reward Paid Email template could be customised via <a class="reference internal" href="../editor.html#editor"><span class="std std-ref">Editor</span></a>.</p>
 <p>Frequently used Variables:</p>
 <ul class="simple">
 <li><p>To show Reward Coupon Code use <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">coupon_code</span> <span class="pre">}}</span></code>.</p></li>
-<li><p>Main <abbr title="Call to action">CTA</abbr> should point to a merchant site to start shopping <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">proceed_to_merchant_path</span> <span class="pre">}}</span></code>.</p></li>
+<li><p>Main <abbr title="Call to action">CTA</abbr> should point to a merchant site to start shopping <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">proceed_to_advocate_destination_url</span> <span class="pre">}}</span></code>.</p></li>
 </ul>
-<p><br></p>
-<img alt="Advocate Reward Paid Email" src="../../_images/advocate-reward-paid-email.png" />
-<p><br></p>
-<div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span>Your credit code: <span class="p">{{</span><span class="w"> </span><span class="nv">coupon_code</span><span class="w"> </span><span class="p">}}</span>
-&lt;a href=&quot;http://merchant-site.com/products&quot;&gt;Spend your credit&lt;/a&gt;
-</pre></div>
-</div>
+<img alt="Advocate Reward Paid Email" src="../../_images/advocate-reward-paid-email-v2.png" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Ideal email width is 480px. This is a most universal width for both
 mobile and desktop platforms.
 <a class="reference internal" href="../designer.html#designer-email"><span class="std std-ref">Read more about email design</span></a>.</p>
 </div>
-<h2>Email sending conditions</h2><p>By default is sent immediately after the reward status turns into <cite>Paid</cite>, but can be delayed by configuration. This View is available only for <strong>Advocate Incentive</strong> where <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> is rewarded after <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> buys using their coupon code.</p>
+<h2>Email sending conditions</h2><p>By default is sent immediately after the reward status turns into <cite>Paid</cite>, but can be delayed by configuration. <br></p>
+<p>When the coupon list for Sharing or Signup incentive is empty at the moment of reward issuing, <strong>Reward Paid Email</strong> will not be sent.
+We will try to reward the Advocate and send the email in the background for 60 days (with an increasing duration between retries) in the case of coupon list fulfillment.</p>
 </section>
 
 
