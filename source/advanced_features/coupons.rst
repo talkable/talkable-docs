@@ -10,7 +10,7 @@ Automatic Coupon Creation
 You can reward |advocate| and their |friend| with coupons. Talkable supports both
 one-time-use coupons as well as multi-use coupons. If you are using one-time-use
 coupons there is a need to refill a list of coupons within Talkable. You will need
-to export a list of coupons or provide a multi-use coupon code creation end point.
+to export a list of coupons or provide a multi-use coupon code creation endpoint.
 
 Multi-use Coupons
 -----------------
@@ -37,8 +37,13 @@ There are several steps that need to be taken for this scenario:
 
    <h2>REST API to Create Coupons</h2>
 
-Talkable can create coupons via a webhook using your REST API end point.
+Talkable can create coupons via a webhook using your REST API endpoint.
 Read :ref:`Create Coupon Webhook Documentation <web_hooks/create_coupon>` for implementation details.
+
+Shopify coupon auto-sync
+------------------------
+
+Read :ref:`Shopify coupon auto-sync documentation <advanced_features/shopify_coupons_auto_sync>` for details.
 
 .. container:: hidden
 

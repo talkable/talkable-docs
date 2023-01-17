@@ -77,7 +77,7 @@ Create Coupon Webhook can now be set up.
    <h2>Payload parameters provided by Create Coupon Webhook</h2>
 
 * **coupon_auto_sync_enabled** — :ref:`Shopify Coupon auto-sync <advanced_features/shopify_coupons_auto_sync>` status.
-  Note that the webhook takes precedence over Shopify Coupon auto-sync
+  Note that the webhook and Shopify Coupon auto-sync can be enabled simultaneously
 * **coupon_code** — coupon code
 * **coupon_list_id** — ID of the coupon list that needs to be filled
 * **coupon_list_name** — name of the coupon list that needs to be filled
