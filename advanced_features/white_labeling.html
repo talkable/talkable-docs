@@ -14,7 +14,7 @@
     <script src="../_static/sphinx_highlight.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/advanced_features/white_labeling.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Single Sign-On (SSO)" href="single_sign_on.html" />
+    <link rel="next" title="Adding DNS records in AWS Route53" href="white_labeling/aws_route53.html" />
     <link rel="prev" title="Using URL Parameters" href="url_parameters.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
   <link href="../_static/pygments-github.css" rel="stylesheet">
   <link href="../_static/img/favicon.ico" rel="shortcut icon" />
@@ -62,7 +62,9 @@
 <li class="toctree-l2"><a class="reference internal" href="subscribing_to_events.html">Subscribing To Iframe Events</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reg_ex.html">Setting up Campaign Placement criteria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="url_parameters.html">Using URL Parameters</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">White-labeling</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">White-labeling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-set-up-a-custom-domain">How to set up a custom domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-dns-records">Adding DNS records</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="single_sign_on.html">Single Sign-On (SSO)</a></li>
@@ -105,13 +107,125 @@
             
   <span class="target" id="advanced-features-white-labeling"></span><section id="white-labeling">
 <h1>White-labeling<a class="headerlink" href="#white-labeling" title="Permalink to this heading">¶</a></h1>
-<p>Talkable can be white-labeled so that links and urls point to your domain
-instead of talkable.com. This is currently an Enterprise plan-only feature.
+<p>By default, Talkable runs campaigns on talkable.com domain and sends emails
+from &#64;p2p.talkable.com or &#64;offers.talkable.com. That can be changed by configuring
+a custom web and/or email domain so that links and emails
+appear to be pointing to the store itself (e.g &#64;share.puravida.com).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is currently an Enterprise plan-only feature.
 Please <a href="https://www.talkable.com/contact" target="_blank">contact us</a> for more information.</p>
+</div>
+<section id="how-to-set-up-a-custom-domain">
+<h2>How to set up a custom domain<a class="headerlink" href="#how-to-set-up-a-custom-domain" title="Permalink to this heading">¶</a></h2>
+<p>Custom Email and Web domains can be configured in <strong>Site Settings</strong> → <strong>Custom domains</strong>.</p>
+<ol class="arabic">
+<li><p>Decide if you want custom <strong>web domain</strong>, <strong>email domain</strong>, or <strong>both</strong>.
+The domain names can match or be different. By default, if you select “Set up web domain”,
+both web and email domains will be configured and will share the same domain name.
+This can be changed in the following step.</p>
+<img alt="../_images/custom_domain_settings.png" src="../_images/custom_domain_settings.png" />
+</li>
+<li><p>Choose a <strong>domain name</strong> you want to use for white-labeling.</p></li>
+<li><p>Choose if you want to <strong>delegate</strong> the custom domain to Talkable or want to keep control over its DNS settings.
+Read more about this in the section below.</p></li>
+<li><p>If you clicked “Set up web domain” and you only want the web domain
+or you want different names for the web and email domains,
+change <strong>“Domain consistency”</strong> to “Web only”.
+Otherwise, you will proceed to set up both web and email domains with the same name (which is recommended).
+If you clicked “Set up email domain”, you can only configure email domain.</p></li>
+<li><p>Once the domain configuration is confirmed, it is time to add <strong>DNS records</strong> to your parent domain accordingly.
+Read detailed instructions on how to add records for the most common DNS providers below.
+Please note that any DNS changes might take a while (sometimes more than a day) to become active.</p></li>
+<li><p>After adding all the required DNS records, wait for a while for the records to become active.
+Click “Check DNS status” on Talkable custom domain settings to see the updated status of your domain.</p></li>
+</ol>
+<img alt="../_images/custom_domain_missing_records.png" src="../_images/custom_domain_missing_records.png" />
+<section id="delegated-vs-self-managed-setup">
+<h3>Delegated VS Self-managed setup<a class="headerlink" href="#delegated-vs-self-managed-setup" title="Permalink to this heading">¶</a></h3>
+<p>Talkable offers two options for custom domain management:</p>
+<ul>
+<li><dl>
+<dt><strong>Delegated</strong> (recommended)</dt><dd><p>This option allows adding fewer DNS records on your main domain.
+Once you set up the correct NS records, the rest of the configuration will be done by Talkable.
+However, it might not be available in every DNS provider.</p>
+<p>Required DNS records:</p>
+<ul class="simple">
+<li><p>NS records (to delegate custom domain management to Talkable).</p></li>
+</ul>
+<p>Example:</p>
+<img alt="../_images/custom_domain_ns.png" src="../_images/custom_domain_ns.png" />
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Self-managed</strong></dt><dd><p>This option provides more granular control over DNS settings of the custom domain.
+It requires adding multiple DNS records to support the white-labeling and thus is more prone to errors
+if the records are omitted or misconfigured.</p>
+<p>Required DNS records for a web domain:</p>
+<ul class="simple">
+<li><p>CNAME record (to point custom domain to Talkable)</p></li>
+<li><p>CNAME record (to verify SSL certificate)</p></li>
+</ul>
+<p>Required DNS records for an email domain (see the picture below for reference):</p>
+<ul class="simple">
+<li><p>CNAME record (to verify SSL certificate, number 3 on the picture)</p></li>
+<li><p>CNAME record (to enable click tracking, 2)</p></li>
+<li><p>MX records (direct mail to a mail server, 4 and 5)</p></li>
+<li><p>TXT record (allows sending mail from Talkable on behalf of your domain, 1)</p></li>
+</ul>
+<p>Example of DNS records required for a self-managed custom email domain:</p>
+<img alt="../_images/custom_email_domain_records.png" src="../_images/custom_email_domain_records.png" />
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+</section>
+<section id="adding-dns-records">
+<span id="id1"></span><h2>Adding DNS records<a class="headerlink" href="#adding-dns-records" title="Permalink to this heading">¶</a></h2>
+<p>See detailed instructions on adding or modifying DNS records in the most common DNS management services below.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="white_labeling/aws_route53.html#advanced-features-white-labeling-aws-route53"><span class="std std-ref">Add DNS records in AWS Route53</span></a></p></li>
+<li><p><a class="reference internal" href="white_labeling/shopify.html#advanced-features-white-labeling-shopify"><span class="std std-ref">Add DNS records in Shopify</span></a></p></li>
+<li><p><a class="reference internal" href="white_labeling/godaddy.html#advanced-features-white-labeling-godaddy"><span class="std std-ref">Add DNS records in GoDaddy</span></a></p></li>
+<li><p><a class="reference internal" href="white_labeling/cloudflare.html#advanced-features-white-labeling-cloudflare"><span class="std std-ref">Add DNS records in Cloudflare</span></a></p></li>
+</ul>
+<section id="email-sending-issues">
+<h3>Email sending issues<a class="headerlink" href="#email-sending-issues" title="Permalink to this heading">¶</a></h3>
+<p>If the emails sent by Talkable go to spam, it is likely that there are issues with the DNS records setup,
+namely <a class="reference external" rel="nofollow" href="https://www.mailgun.com/blog/deliverability/domain-reputation-and-dmarc/">DMARC policies</a>.</p>
+<p>Custom email domains in Talkable use a special DNS record called SPF record (Sender Policy Framework)
+to mark Talkable as a valid sender of emails on behalf of your site.
+So if your site uses a strict DMARC policy, emails sent from unverified domains will likely go to spam.</p>
+<p>To avoid that, you either need to:</p>
+<ul>
+<li><p>ensure that the emails sent by Talkable are from a properly set up custom domain.</p>
+<p>Check that <strong>“Customer service email”</strong> in <strong>All site settings</strong> → <strong>General</strong> → <strong>Notifications</strong> has the same
+custom domain. For instance, if your custom domain is <cite>subdomain.example.com</cite>, and your customer service email is
+<cite>cm&#64;another_subdomain.example.com</cite> or <cite>cm&#64;sub.subdomain.example.com</cite>, there might be problems with sending.</p>
+</li>
+<li><p>add Mailgun (a service that Talkable uses for sending emails) to a whitelist in your SPF record.</p>
+<p>This requires <a class="reference internal" href="#adding-dns-records"><span class="std std-ref">Adding DNS records</span></a>. To look up your current SPF record, enter the domain of a “From” value
+of an email that went to spam in a <a class="reference external" rel="nofollow" href="https://dnslookup.online/spf.html">lookup service</a>.</p>
+<p>Example of a TXT record value that allows Mailgun to send emails:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">=</span><span class="n">spf1</span> <span class="n">include</span><span class="p">:</span><span class="n">mailgun</span><span class="o">.</span><span class="n">org</span> <span class="n">include</span><span class="p">:</span><span class="n">_spf</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span> <span class="n">include</span><span class="p">:</span><span class="n">mail</span><span class="o">.</span><span class="n">zendesk</span><span class="o">.</span><span class="n">com</span> <span class="n">include</span><span class="p">:</span><span class="n">_spf</span><span class="o">.</span><span class="n">salesforce</span><span class="o">.</span><span class="n">com</span> <span class="o">~</span><span class="nb">all</span>
+</pre></div>
+</div>
+</li>
+</ul>
 <div class="hidden docutils container">
 <div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="white_labeling/aws_route53.html">Adding DNS records in AWS Route53</a></li>
+<li class="toctree-l1"><a class="reference internal" href="white_labeling/shopify.html">Adding DNS records in Shopify</a></li>
+<li class="toctree-l1"><a class="reference internal" href="white_labeling/godaddy.html">Adding DNS records in GoDaddy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="white_labeling/cloudflare.html">Adding DNS records in Cloudflare</a></li>
+</ul>
 </div>
 </div>
+</section>
+</section>
 </section>
 
 
