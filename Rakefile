@@ -77,21 +77,10 @@ namespace :deploy do
     File.write('CNAME', domain)
     File.write('robots.txt', "User-agent: *\nDisallow: /") if disallow_robots
     sh 'git add -A'
-
-    deployed_successfully = true
-
-    sh "git commit -m \"Generated gh-pages for `git log #{source_branch} -1 --pretty=short --abbrev-commit`\" && #{push_command}" do |ok, _|
-      deployed_successfully = ok
-    end
-
+    sh "git commit -m \"Generated gh-pages for `git log #{source_branch} -1 --pretty=short --abbrev-commit`\" && #{push_command}"
     sh "git checkout #{source_branch}"
 
-    if deployed_successfully
-      puts "\nDeployment finished. Check updated docs at https://#{domain}"
-    else
-      puts "\nDeployment failed."
-      puts "\nMake sure you ran `rake setup`." if source_branch == 'void'
-    end
+    puts "\nDeployment finished. Check updated docs at https://#{domain}"
   end
 
   task :production do
