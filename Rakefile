@@ -77,7 +77,8 @@ namespace :deploy do
     File.write('CNAME', domain)
     File.write('robots.txt', "User-agent: *\nDisallow: /") if disallow_robots
     sh 'git add -A'
-    sh "git commit -m \"Generated gh-pages for `git log #{source_branch} -1 --pretty=short --abbrev-commit`\" && #{push_command} ; git checkout #{source_branch}"
+    sh "git commit -m \"Generated gh-pages for `git log #{source_branch} -1 --pretty=short --abbrev-commit`\" && #{push_command}"
+    sh "git checkout #{source_branch}"
 
     puts "\nDeployment finished. Check updated docs at https://#{domain}"
   end
