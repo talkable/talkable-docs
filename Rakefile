@@ -54,9 +54,9 @@ end
 desc 'Make standalone HTML files'
 task :preview => [:clean, :build]
 
-desc 'Run the server on localhost:5000 and open a browser'
+desc 'Run the server on localhost:5001 and open a browser'
 task :server => :preview do
-  sh '(sleep 2 && open "http://localhost:5000")&'
+  sh '(sleep 2 && open "http://localhost:5001")&'
   sh 'bundle exec foreman start'
 end
 
