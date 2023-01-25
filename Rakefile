@@ -94,6 +94,10 @@ namespace :deploy do
 
   desc 'Commit and deploy changes to https://void-docs.talkable.com'
   task :staging do
+    sh 'git remote show staging' do |ok, _|
+      Rake::Task[:setup].invoke unless ok
+    end
+
     deploy(
       domain: 'void-docs.talkable.com',
       html_branch: 'void-gh-pages',
