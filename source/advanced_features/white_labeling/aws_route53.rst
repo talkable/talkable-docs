@@ -18,6 +18,8 @@ Adding DNS records in AWS Route53
 #. Select appropriate record type (might be NS, CNAME, MX, etc.).
 
 #. Copy the DNS record value (or values) from the Talkable custom domain settings into the "Value" field.
+   Note: For `NS` and `MX` record types, insert multiple values separated by newline
+   if they share the same "Record name".
 
 #. Click "Create records" once you are ready.
 
