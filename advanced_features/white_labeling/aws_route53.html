@@ -115,7 +115,9 @@ Note that the main domain part (<cite>.example.com</cite>) needs to be omitted s
 In some cases, sub-subdomain separated by dot may need to be entered,
 e.g. <cite>email.subdomain</cite> for a click-tracking CNAME record.</p></li>
 <li><p>Select appropriate record type (might be NS, CNAME, MX, etc.).</p></li>
-<li><p>Copy the DNS record value (or values) from the Talkable custom domain settings into the “Value” field.</p></li>
+<li><p>Copy the DNS record value (or values) from the Talkable custom domain settings into the “Value” field.
+Note: For <cite>NS</cite> and <cite>MX</cite> record types, insert multiple values separated by newline
+if they share the same “Record name”.</p></li>
 <li><p>Click “Create records” once you are ready.</p></li>
 </ol>
 <img alt="../../_images/custom_domain_aws.png" src="../../_images/custom_domain_aws.png" />
