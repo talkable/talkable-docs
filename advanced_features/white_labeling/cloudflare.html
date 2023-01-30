@@ -108,14 +108,21 @@
   <section id="adding-dns-records-in-cloudflare">
 <span id="advanced-features-white-labeling-cloudflare"></span><h1>Adding DNS records in Cloudflare<a class="headerlink" href="#adding-dns-records-in-cloudflare" title="Permalink to this heading">¶</a></h1>
 <p><a class="reference external" rel="nofollow" href="https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/#create-dns-records">Cloudflare docs</a></p>
-<ol class="arabic simple">
-<li><p>In your Cloudflare dashboard, select the site you want to manage (e.g. <cite>example.com</cite>).</p></li>
+<ol class="arabic">
+<li><p>In your Cloudflare dashboard, select the site you want to manage in <strong>Websites</strong> (e.g. <cite>example.com</cite>).</p></li>
 <li><p>Go to <strong>DNS</strong> → <strong>Records</strong> and click “Add record”.</p></li>
-<li><p>Select appropriate record type (might be NS, CNAME, MX, etc.).</p></li>
+<li><p>Select appropriate record type (might be <cite>NS</cite>, <cite>CNAME</cite>, <cite>MX</cite>, etc.).</p></li>
 <li><p>In the “Name” field, enter only the <strong>subdomain</strong> part
 (e.g. <cite>subdomain</cite> if you want to add a record for <cite>subdomain.example.com</cite>).</p></li>
-<li><p>Copy the DNS record value (or values) from the Talkable custom domain settings into the “Value” field.</p></li>
-<li><p>Save the changes.</p></li>
+<li><p>Copy the DNS record value from the Talkable custom domain settings into the “Value” field.
+Note: Unlike some other platforms, Cloudfront does not allow multiple values in NS record.
+Instead, you’ll need to add multiple NS records with the same name and different values.</p>
+<img alt="../../_images/custom_domain_cloudfront_add_record.png" src="../../_images/custom_domain_cloudfront_add_record.png" />
+</li>
+<li><p>Save the changes.</p>
+<p>Example of properly added <cite>NS</cite> records:</p>
+<img alt="../../_images/custom_domain_cloudfront_success.png" src="../../_images/custom_domain_cloudfront_success.png" />
+</li>
 </ol>
 </section>
 

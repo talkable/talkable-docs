@@ -7,10 +7,10 @@
 White-labeling
 ==============
 
-By default, Talkable runs campaigns on talkable.com domain and sends emails
-from @p2p.talkable.com or @offers.talkable.com. That can be changed by configuring
+By default, Talkable runs campaigns on `talkable.com` domain and sends emails
+from `@p2p.talkable.com` or `@offers.talkable.com`. That can be changed by configuring
 a custom web and/or email domain so that links and emails
-appear to be pointing to the store itself (e.g @share.puravida.com).
+appear to be pointing to the store itself (e.g `@share.puravida.com`).
 
 .. note::
    This is currently an Enterprise plan-only feature.
@@ -31,7 +31,7 @@ Custom Email and Web domains can be configured in **Site Settings** → **Custom
 #. Choose a **domain name** you want to use for white-labeling.
 
 #. Choose if you want to **delegate** the custom domain to Talkable or want to keep control over its DNS settings.
-   Read more about this in the section below.
+   Read more about this in :ref:`delegated-vs-self-managed`.
 
 #. If you clicked "Set up web domain" and you only want the web domain
    or you want different names for the web and email domains,
@@ -39,8 +39,8 @@ Custom Email and Web domains can be configured in **Site Settings** → **Custom
    Otherwise, you will proceed to set up both web and email domains with the same name (which is recommended).
    If you clicked "Set up email domain", you can only configure email domain.
 
-#. Once the domain configuration is confirmed, it is time to add **DNS records** to your parent domain accordingly.
-   Read detailed instructions on how to add records for the most common DNS providers below.
+#. Once the domain configuration is confirmed, it is time to add **DNS records** to your parent domain.
+   Read :ref:`adding-dns-records` for detailed instructions on how to add records for the most common DNS providers below.
    Please note that any DNS changes might take a while (sometimes more than a day) to become active.
 
 #. After adding all the required DNS records, wait for a while for the records to become active.
@@ -48,44 +48,47 @@ Custom Email and Web domains can be configured in **Site Settings** → **Custom
 
 .. image:: /_static/img/advanced_features/custom_domain_missing_records.png
 
+.. _delegated-vs-self-managed:
+
 Delegated VS Self-managed setup
 ...............................
 
 Talkable offers two options for custom domain management:
 
 * **Delegated** (recommended)
-   This option allows adding fewer DNS records on your main domain.
-   Once you set up the correct NS records, the rest of the configuration will be done by Talkable.
-   However, it might not be available in every DNS provider.
 
-   Required DNS records:
+  This option allows adding fewer DNS records on your main domain.
+  Once you set up the correct `NS` records, the rest of the configuration will be done by Talkable.
 
-   * NS records (to delegate custom domain management to Talkable).
+  Required DNS records:
 
-   Example:
+  * `NS` records (to delegate custom domain management to Talkable).
 
-   .. image:: /_static/img/advanced_features/custom_domain_ns.png
+  Example:
+
+  .. image:: /_static/img/advanced_features/custom_domain_ns.png
 
 * **Self-managed**
-   This option provides more granular control over DNS settings of the custom domain.
-   It requires adding multiple DNS records to support the white-labeling and thus is more prone to errors
-   if the records are omitted or misconfigured.
 
-   Required DNS records for a web domain:
+  This option provides more granular control over DNS settings of the custom domain.
+  It requires adding multiple DNS records to support white-labeling and thus is more prone to errors
+  if the records are omitted or misconfigured.
 
-   * CNAME record (to point custom domain to Talkable)
-   * CNAME record (to verify SSL certificate)
+  Required DNS records for a web domain:
 
-   Required DNS records for an email domain (see the picture below for reference):
+  * `CNAME` record (to point custom domain to Talkable)
+  * `CNAME` record (to verify SSL certificate)
 
-   * CNAME record (to verify SSL certificate, number 3 on the picture)
-   * CNAME record (to enable click tracking, 2)
-   * MX records (direct mail to a mail server, 4 and 5)
-   * TXT record (allows sending mail from Talkable on behalf of your domain, 1)
+  Required DNS records for an email domain (see the picture below for reference):
 
-   Example of DNS records required for a self-managed custom email domain:
+  * `CNAME` record (to verify SSL certificate, number 3 on the picture)
+  * `CNAME` record (to enable click tracking, 2)
+  * `MX` records (direct mail to a mail server, 4 and 5)
+  * `TXT` record (allows sending mail from Talkable on behalf of your domain, 1)
 
-   .. image:: /_static/img/advanced_features/custom_email_domain_records.png
+  Example of DNS records required for a self-managed custom email domain:
+
+  .. image:: /_static/img/advanced_features/custom_email_domain_records.png
 
 .. _adding-dns-records:
 
@@ -122,10 +125,13 @@ To avoid that, you either need to:
 
 * add Mailgun (a service that Talkable uses for sending emails) to a whitelist in your SPF record.
 
+  An SPF record is a simple `TXT` DNS record that starts with `v=spf1`. If it is present, make sure that the record
+  includes `include:mailgun.org` text.
+
   This requires :ref:`adding-dns-records`. To look up your current SPF record, enter the domain of a "From" value
   of an email that went to spam in a `lookup service <https://dnslookup.online/spf.html>`_.
 
-  Example of a TXT record value that allows Mailgun to send emails:
+  Example of a `TXT` record value that allows Mailgun (among other services) to send emails:
 
   .. code-block::
 
