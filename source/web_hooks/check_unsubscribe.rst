@@ -35,9 +35,10 @@ merchant side.
 .. raw:: html
 
    <h2>Payload parameters provided</h2>
-    http://talkable.local:3000/api-docs/index.html?urls.primaryName=Webhooks#/Check%20Unsubscribe%20Webhook/post_yourApiCheckUnsubscribeWebhookPath
-    The sample payload with parameters for Check Unsubscribe Webhook is available here:
-    <p><a href="https://www.talkable.com/api-docs/index.html?urls.primaryName=Webhooks#/Check%20Unsubscribe%20Webhook/post_yourApiCheckUnsubscribeWebhookPath">Check Unsubscribe Webhook Payload</a></p>
+
+The sample payload with parameters for Check Unsubscribe Webhook is available here: `Check Unsubscribe Webhook Payload`_.
+
+.. _Check Unsubscribe Webhook Payload: https://www.talkable.com/api-docs/index.html?urls.primaryName=Webhooks#/Check%20Unsubscribe%20Webhook/post_yourApiCheckUnsubscribeWebhookPath
 
 .. raw:: html
 

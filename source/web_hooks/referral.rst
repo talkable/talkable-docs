@@ -57,8 +57,9 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
 
    <h2>Payload parameters provided for Referral Webhook</h2>
 
-    The sample payload with parameters for Referral Webhook is available here:
-    <p><a href="https://www.talkable.com/api-docs/index.html?urls.primaryName=Webhooks#/Referral/post_yourApiReferralWebhookPath">Referral Webhook Payload</a></p>
+The sample payload with parameters for Referral Webhook is available here: `Referral Webhook Payload`_.
+
+.. _Referral Webhook Payload: https://www.talkable.com/api-docs/index.html?urls.primaryName=Webhooks#/Referral/post_yourApiReferralWebhookPath
 
 .. include:: /partials/coupon_as_reward.rst
 

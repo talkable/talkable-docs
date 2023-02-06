@@ -29,8 +29,9 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
 
    <h2>Payload parameters provided</h2>
 
-    The sample payload with parameters for Event Webhook is available here:
-    <p><a href="https://www.talkable.com/api-docs/index.html?urls.primaryName=Webhooks#/Event%20Webhook/post_yourApiEventWebhookPath">Event Webhook Payload</a></p>
+The sample payload with parameters for Event Webhook is available here: `Event Webhook Payload`_.
+
+.. _Event Webhook Payload: https://www.talkable.com/api-docs/index.html?urls.primaryName=Webhooks#/Event%20Webhook/post_yourApiEventWebhookPath
 
 .. container:: hidden
 
