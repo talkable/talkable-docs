@@ -35,9 +35,7 @@ triggered twice.
 
    <h2>Payload parameters provided for Post Share Webhook</h2>
 
-The sample payload with parameters for Post Share Coupon Webhook is available here: `Post Share Webhook Payload`_.
-
-.. _Post Share Webhook Payload: https://www.talkable.com/api-docs/index.html?urls.primaryName=Webhooks#/Post%20Share%20Webhook/post_yourApiPostShareWebhookPath
+The sample payload with parameters for Post Share Coupon Webhook is available here: `Post Share Webhook Payload <https://www.talkable.com/api-docs/index.html?urls.primaryName=Webhooks#/Post%20Share%20Webhook/post_yourApiPostShareWebhookPath>`_.
 
 .. note::
 

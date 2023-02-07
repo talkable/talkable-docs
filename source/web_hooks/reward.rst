@@ -87,9 +87,7 @@ Webhook Set Up Steps <web_hooks>`
 
    <h2>Payload parameters provided by Reward Webhook</h2>
 
-The sample payload with parameters for Reward Webhook is available here: `Referral Webhook Payload`_.
-
-.. _Referral Webhook Payload: https://www.talkable.com/api-docs/index.html?urls.primaryName=Webhooks#/Reward/post_yourApiRewardWebhookPath
+The sample payload with parameters for Reward Webhook is available here: `Referral Webhook Payload <https://www.talkable.com/api-docs/index.html?urls.primaryName=Webhooks#/Reward/post_yourApiRewardWebhookPath>`_.
 
 .. raw:: html
 

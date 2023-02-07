@@ -28,9 +28,7 @@ Talkable sent email.
 
    <h2>Payload parameters provided</h2>
 
-The sample payload with parameters for Unsubscribe Webhook is available here: `Unsubscribe Webhook Payload`_.
-
-.. _Unsubscribe Webhook Payload: https://www.talkable.com/api-docs/index.html?urls.primaryName=Webhooks#/Unsubscribe%20Webhook/post_yourApiUnsubscribeWebhookPath
+The sample payload with parameters for Unsubscribe Webhook is available here: `Unsubscribe Webhook Payload <https://www.talkable.com/api-docs/index.html?urls.primaryName=Webhooks#/Unsubscribe%20Webhook/post_yourApiUnsubscribeWebhookPath>`_.
 
 .. container:: hidden
 

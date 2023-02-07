@@ -76,9 +76,7 @@ Create Coupon Webhook can now be set up.
 
    <h2>Payload parameters provided by Create Coupon Webhook</h2>
 
-The sample payload with parameters for Create Coupon Webhook is available here: `Create Coupon Webhook Payload`_.
-
-.. _Create Coupon Webhook Payload: https://www.talkable.com/api-docs/index.html?urls.primaryName=Webhooks#/Create%20Coupon%20Webhook/post_yourApiCreateCouponWebhookPath
+The sample payload with parameters for Create Coupon Webhook is available here: `Create Coupon Webhook Payload <https://www.talkable.com/api-docs/index.html?urls.primaryName=Webhooks#/Create%20Coupon%20Webhook/post_yourApiCreateCouponWebhookPath>`_.
 
 .. container:: hidden
 
