@@ -36,7 +36,7 @@ Friend Email Gating form example:
 
    <h2>Payload parameters provided</h2>
 
-The sample payload with parameters for Friend Email Gating Webhook is availablehere: `Friend Email Gating Webhook Payload <https://www.talkable.com/api-docs/index.html?urls.primaryName=Webhooks#/Friend%20Email%20Gating%20Webhook/post_yourApiFriendEmailGatingWebhookPath>`_.
+The sample payload with parameters for Friend Email Gating Webhook is available here: `Friend Email Gating Webhook Payload <https://www.talkable.com/api-docs/index.html?urls.primaryname=webhooks%20api&urls.primaryName=Webhooks#/Friend%20Email%20Gating/post_your_api_claim_signup_web_hook_path>`_.
 
 .. container:: hidden
 
