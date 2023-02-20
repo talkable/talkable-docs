@@ -7,18 +7,15 @@
     <title>Search &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/talkable.css" />
+  
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/sphinx_highlight.js"></script>
-    <script src="_static/language_data.js"></script>
-    <script src="_static/searchtools.js"></script>
+  <script src="_static/searchtools.js"></script>
+  <script src="_static/language_data.js"></script>
     <link rel="canonical" href="https://docs.talkable.com/search.html" />
     <link rel="search" title="Search" href="#" />
-  <script type="text/javascript">
-    jQuery(function() { Search.loadIndex("searchindex.js"); });
-  </script>
-  
-  <script type="text/javascript" id="searchindexloader"></script>
+  <script src="searchindex.js" defer></script>
   <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
   <link href="_static/pygments-github.css" rel="stylesheet">
   <link href="_static/img/favicon.ico" rel="shortcut icon" />
@@ -77,28 +74,35 @@
           <div class="body" role="main">
             
   <h1 id="search-documentation">Search</h1>
-  <div id="fallback" class="admonition warning">
-  <script type="text/javascript">$('#fallback').hide();</script>
-  <p>
-    Please activate JavaScript to enable the search
-    functionality.
-  </p>
-  </div>
-  <p>
-    From here you can search these documents. Enter your search
-    words into the box below and click "search". Note that the search
-    function will automatically search for all of the words. Pages
-    containing fewer words won’t appear in the result list.
-  </p>
-  <form action="" class="search-form" method="get">
-    <input type="text" class="textfield search-form-field" name="q" value="" />
-    <input type="submit" class="button" value="Search" />
-    <span id="search-progress" style="padding-left: 10px"></span>
-  </form>
   
-  <div id="search-results">
+    <noscript>
+      <div class="admonition warning">
+        <p>
+          Please activate JavaScript to enable the search
+          functionality.
+        </p>
+      </div>
+    </noscript>
   
-  </div>
+  
+    <p>
+      Searching for multiple words only shows matches that contain
+      all words.
+    </p>
+  
+  
+    <form action="" method="get">
+      <input type="text" name="q" aria-labelledby="search-documentation" value="" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="search" />
+      <span id="search-progress" style="padding-left: 10px"></span>
+    </form>
+  
+  
+    
+    <div id="search-results">
+      
+    </div>
+  
 
             <div class="clearer"></div>
           </div>
