@@ -121,14 +121,14 @@ All other integration components are dependent on the Initialization
 script.</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Begin Talkable integration code --&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/&lt;YOUR-TALKABLE-SITE-ID&gt;.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
-<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">[];</span><span class="w"></span>
-<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">unshift</span><span class="p">([</span><span class="s1">&#39;init&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">site_id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;YOUR-TALKABLE-SITE-ID&gt;&#39;</span><span class="w"> </span><span class="p">}]);</span><span class="w"></span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">unshift</span><span class="p">([</span><span class="s1">&#39;init&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">site_id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;YOUR-TALKABLE-SITE-ID&gt;&#39;</span><span class="w"> </span><span class="p">}]);</span>
 
-<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;authenticate_customer&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// required, loyalty program is only available to logged in users. Example: &#39;customer@example.com&#39;</span><span class="w"></span>
-<span class="w">    </span><span class="nx">phone_number</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="c1">// Optional, pass when available. Example: &#39;+12025551111&#39;</span><span class="w"></span>
-<span class="w">  </span><span class="p">}]);</span><span class="w"></span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;authenticate_customer&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// required, loyalty program is only available to logged in users. Example: &#39;customer@example.com&#39;</span>
+<span class="w">    </span><span class="nx">phone_number</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="c1">// Optional, pass when available. Example: &#39;+12025551111&#39;</span>
+<span class="w">  </span><span class="p">}]);</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="cm">&lt;!-- End Talkable integration code --&gt;</span>
 </pre></div>
@@ -174,11 +174,11 @@ You can find more info about where to place the DIV tag in <a class="reference i
 <span id="id2"></span><h2>Loyalty Actions<a class="headerlink" href="#loyalty-actions" title="Permalink to this heading">¶</a></h2>
 <p>To register custom loyalty actions (e.g. completing surveys, adding reviews, uploading something on site),
 use the following code:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="w"></span>
-<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;register_loyalty_action&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">rule_identifier</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// required, can be found in Campaign Rules -&gt; Loyalty action configurations -&gt; &quot;identifier&quot; field</span><span class="w"></span>
-<span class="w">    </span><span class="nx">traffic_source</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="c1">// optional</span><span class="w"></span>
-<span class="w">  </span><span class="p">}]);</span><span class="w"></span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;register_loyalty_action&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">rule_identifier</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// required, can be found in Campaign Rules -&gt; Loyalty action configurations -&gt; &quot;identifier&quot; field</span>
+<span class="w">    </span><span class="nx">traffic_source</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="c1">// optional</span>
+<span class="w">  </span><span class="p">}]);</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </pre></div>
 </div>
