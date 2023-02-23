@@ -36,16 +36,7 @@ merchant side.
 
    <h2>Payload parameters provided</h2>
 
-* **campaign** — subhash of parameters describing the campaign
-
-  .. include:: /partials/campaign_fields.rst
-
-* **recipient** — subhash of parameters describing the recipient
-
-  .. include:: /partials/person_fields.rst
-  .. |person| replace:: recipient
-
-* **email_type** — described view category
+The sample payload with parameters for Check Unsubscribe Webhook is available here: `Check Unsubscribe Webhook Payload <https://www.talkable.com/api-docs/index.html?urls.primaryname=webhooks%20api&urls.primaryName=Webhooks#/Check%20Unsubscribe/post_your_api_check_unsubscribe_web_hook_path>`_.
 
 .. raw:: html
 
@@ -59,60 +50,6 @@ View category can be one of the following:
 * advocate_rewards_confirmation
 * advocate_rewards_paid
 * friend_rewards_paid
-
-.. raw:: html
-
-   <h2>Sample payload</h2>
-
-.. code-block:: javascript
-
-   {
-     "campaign": {
-       "id": 509365458,
-       "type": "StandaloneCampaign",
-       "cached_slug": 509365458,
-       "tag_names": ["default"],
-       "joinable_category_names": ["affiliate_member"],
-       "origin_min_age": null,
-       "origin_max_age": null,
-       "new_customer": null
-     },
-     "recipient": {
-       "first_name": "Bob",
-       "last_name": "Smith",
-       "email": "referrer@example.com",
-       "phone_number": "+12025551111",
-       "username": "username",
-       "unsubscribed_at": null,
-       "subscribed_at": "2018-09-27T22:55:40.610+03:00",
-       "opted_in_at": "2018-09-27T22:55:40.610+03:00",
-       "phone_opted_in_at": "2018-09-27T22:55:40.610+03:00",
-       "sub_choice": true,
-       "custom_properties": {},
-       "referral_counts": {
-         "total": 0,
-         "approved": 0,
-         "pending": 0
-       },
-       "is_loyalty_member": false,
-       "loyalty_member": null,
-       "gender": null
-     },
-     "email_type": "notifier_offers_email"
-   }
-
-.. raw:: html
-
-   <h2>cURL example</h2>
-
-.. code-block:: bash
-
-   curl <url> \
-        -d "key=<key>" \
-        -d "site=<site>" \
-        -d "type=check_unsubscribe_web_hook" \
-        -d "extras={}" \
-        -d 'payload={"campaign":{"id":509365458,"type":"StandaloneCampaign","cached_slug":509365458,"tag_names":["default"],"joinable_category_names":["affiliate_member"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"recipient":{"first_name":"Bob","last_name":"Smith","email":"referrer@example.com","phone_number":"+12025551111","username":"username","unsubscribed_at":null,"subscribed_at":"2018-09-27T22:55:40.610+03:00","opted_in_at":"2018-09-27T22:55:40.610+03:00","phone_opted_in_at":"2018-09-27T22:55:40.610+03:00","sub_choice":true,"custom_properties":{},"referral_counts":{"total":0,"approved":0,"pending":0},"is_loyalty_member":false,"loyalty_member":null,"gender":null},"email_type":"notifier_offers_email"}'
 
 .. container:: hidden
 
