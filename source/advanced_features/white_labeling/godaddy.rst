@@ -6,6 +6,10 @@
 Adding DNS records in GoDaddy
 =============================
 
+.. note::
+
+   The instructions below use `subdomain.example.com` as an example of a custom domain.
+
 `Godaddy docs <https://www.godaddy.com/help/manage-dns-records-680>`_
 
 .. note::

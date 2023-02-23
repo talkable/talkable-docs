@@ -6,6 +6,10 @@
 Adding DNS records in AWS Route53
 =================================
 
+.. note::
+
+   The instructions below use `subdomain.example.com` as an example of a custom domain.
+
 #. Go to Hosted zones and select your main domain hosted zone (for instance, `example.com`).
 
 #. Once the domain is selected, click "Create record" button.
