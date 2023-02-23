@@ -107,15 +107,10 @@
             
   <span class="target" id="advanced-features-white-labeling"></span><section id="white-labeling">
 <h1>White-labeling<a class="headerlink" href="#white-labeling" title="Permalink to this heading">¶</a></h1>
-<p>By default, Talkable runs campaigns on <cite>talkable.com</cite> domain and sends emails
+<p>By default, Talkable runs campaigns on <cite>www.talkable.com</cite> domain and sends emails
 from <cite>&#64;p2p.talkable.com</cite> or <cite>&#64;offers.talkable.com</cite>. That can be changed by configuring
 a custom web and/or email domain so that links and emails
-appear to be pointing to the store itself (e.g <cite>&#64;share.puravida.com</cite>).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is currently an Enterprise plan-only feature.
-Please <a href="https://www.talkable.com/contact" target="_blank">contact us</a> for more information.</p>
-</div>
+appear to be pointing to the store itself (e.g <cite>&#64;share.your-shop.com</cite>).</p>
 <section id="how-to-set-up-a-custom-domain">
 <h2>How to set up a custom domain<a class="headerlink" href="#how-to-set-up-a-custom-domain" title="Permalink to this heading">¶</a></h2>
 <p>Custom Email and Web domains can be configured in <strong>Site Settings</strong> → <strong>Custom domains</strong>.</p>
@@ -126,8 +121,10 @@ both web and email domains will be configured and will share the same domain nam
 This can be changed in the following step.</p>
 <img alt="../_images/custom_domain_settings.png" src="../_images/custom_domain_settings.png" />
 </li>
-<li><p>Choose a <strong>domain name</strong> you want to use for white-labeling.</p></li>
-<li><p>Choose if you want to <strong>delegate</strong> the custom domain to Talkable or want to keep control over its DNS settings.
+<li><p>Choose a <strong>domain name</strong> you want to use for white-labeling.
+Please note that it should be a sub-domain of a domain you control.
+For example, if your shop’s domain is <cite>example.com</cite>, you can set up <cite>subdomain.example.com</cite> custom domain.</p></li>
+<li><p>Choose if you want to <strong>delegate</strong> the custom domain to Talkable (recommended) or want to keep control over its DNS settings.
 Read more about this in <a class="reference internal" href="#delegated-vs-self-managed"><span class="std std-ref">Delegated VS Self-managed setup</span></a>.</p></li>
 <li><p>If you clicked “Set up web domain” and you only want the web domain
 or you want different names for the web and email domains,
@@ -138,7 +135,8 @@ If you clicked “Set up email domain”, you can only configure email domain.</
 Read <a class="reference internal" href="#adding-dns-records"><span class="std std-ref">Adding DNS records</span></a> for detailed instructions on how to add records for the most common DNS providers below.
 Please note that any DNS changes might take a while (sometimes more than a day) to become active.</p></li>
 <li><p>After adding all the required DNS records, wait for a while for the records to become active.
-Click “Check DNS status” on Talkable custom domain settings to see the updated status of your domain.</p></li>
+Click “Check DNS status” on Talkable custom domain settings to see the updated status of your domain
+(it could take up to 24 hours for the records to propagate).</p></li>
 </ol>
 <img alt="../_images/custom_domain_missing_records.png" src="../_images/custom_domain_missing_records.png" />
 <section id="delegated-vs-self-managed-setup">
@@ -205,7 +203,7 @@ custom domain. For instance, if your custom domain is <cite>subdomain.example.co
 includes <cite>include:mailgun.org</cite> text.</p>
 <p>This requires <a class="reference internal" href="#adding-dns-records"><span class="std std-ref">Adding DNS records</span></a>. To look up your current SPF record, enter the domain of a “From” value
 of an email that went to spam in a <a class="reference external" rel="nofollow" href="https://dnslookup.online/spf.html">lookup service</a>.</p>
-<p>Example of a <cite>TXT</cite> record value that allows Mailgun (among other services) to send emails:</p>
+<p>Example of a <cite>TXT</cite> record value that allows Mailgun (among other specified services) to send emails:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">v</span><span class="o">=</span><span class="n">spf1</span> <span class="n">include</span><span class="p">:</span><span class="n">mailgun</span><span class="o">.</span><span class="n">org</span> <span class="n">include</span><span class="p">:</span><span class="n">_spf</span><span class="o">.</span><span class="n">google</span><span class="o">.</span><span class="n">com</span> <span class="n">include</span><span class="p">:</span><span class="n">mail</span><span class="o">.</span><span class="n">zendesk</span><span class="o">.</span><span class="n">com</span> <span class="n">include</span><span class="p">:</span><span class="n">_spf</span><span class="o">.</span><span class="n">salesforce</span><span class="o">.</span><span class="n">com</span> <span class="o">~</span><span class="nb">all</span>
 </pre></div>
 </div>

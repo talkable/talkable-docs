@@ -7,14 +7,10 @@
 White-labeling
 ==============
 
-By default, Talkable runs campaigns on `talkable.com` domain and sends emails
+By default, Talkable runs campaigns on `www.talkable.com` domain and sends emails
 from `@p2p.talkable.com` or `@offers.talkable.com`. That can be changed by configuring
 a custom web and/or email domain so that links and emails
-appear to be pointing to the store itself (e.g `@share.puravida.com`).
-
-.. note::
-   This is currently an Enterprise plan-only feature.
-   Please |contact_us| for more information.
+appear to be pointing to the store itself (e.g `@share.your-shop.com`).
 
 How to set up a custom domain
 -----------------------------
@@ -29,8 +25,10 @@ Custom Email and Web domains can be configured in **Site Settings** → **Custom
    .. image:: /_static/img/advanced_features/custom_domain_settings.png
 
 #. Choose a **domain name** you want to use for white-labeling.
+   Please note that it should be a sub-domain of a domain you control.
+   For example, if your shop's domain is `example.com`, you can set up `subdomain.example.com` custom domain.
 
-#. Choose if you want to **delegate** the custom domain to Talkable or want to keep control over its DNS settings.
+#. Choose if you want to **delegate** the custom domain to Talkable (recommended) or want to keep control over its DNS settings.
    Read more about this in :ref:`delegated-vs-self-managed`.
 
 #. If you clicked "Set up web domain" and you only want the web domain
@@ -44,7 +42,8 @@ Custom Email and Web domains can be configured in **Site Settings** → **Custom
    Please note that any DNS changes might take a while (sometimes more than a day) to become active.
 
 #. After adding all the required DNS records, wait for a while for the records to become active.
-   Click "Check DNS status" on Talkable custom domain settings to see the updated status of your domain.
+   Click "Check DNS status" on Talkable custom domain settings to see the updated status of your domain
+   (it could take up to 24 hours for the records to propagate).
 
 .. image:: /_static/img/advanced_features/custom_domain_missing_records.png
 
@@ -131,7 +130,7 @@ To avoid that, you either need to:
   This requires :ref:`adding-dns-records`. To look up your current SPF record, enter the domain of a "From" value
   of an email that went to spam in a `lookup service <https://dnslookup.online/spf.html>`_.
 
-  Example of a `TXT` record value that allows Mailgun (among other services) to send emails:
+  Example of a `TXT` record value that allows Mailgun (among other specified services) to send emails:
 
   .. code-block::
 

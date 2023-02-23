@@ -116,7 +116,7 @@ It’s recommended to show coupon code for the <abbr title="Person who is invite
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">offer_active</span><span class="w"> </span><span class="p">%}</span>
   Copy your code: <span class="p">{{</span><span class="w"> </span><span class="nv">coupon_code</span><span class="w"> </span><span class="p">}}</span>
   &lt;a href=&quot;<span class="p">{{</span><span class="w"> </span><span class="nv">proceed_to_merchant_path</span><span class="w"> </span><span class="p">}}</span>&quot;&gt;Shop now&lt;/a&gt;
-  Offer is valid until <span class="p">{{</span><span class="w"> </span><span class="nv">friend_offer</span><span class="p">.</span><span class="nv">valid_until</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">format_date</span><span class="w"> </span><span class="p">}}</span><span class="nf">.</span>
+  Offer is valid until <span class="p">{{</span><span class="w"> </span><span class="nv">friend_offer</span><span class="p">.</span><span class="nv">valid_until</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">format_date</span><span class="w"> </span><span class="p">}}</span><span class="nf">.</span><span class="w"></span>
 {%<span class="w"> </span>else<span class="w"> </span>%}
   Offer expired.
   &lt;a href=&quot;<span class="p">{{</span><span class="w"> </span><span class="nv">proceed_to_merchant_path</span><span class="w"> </span><span class="p">}}</span>&quot;&gt;Proceed without offer&lt;/a&gt;

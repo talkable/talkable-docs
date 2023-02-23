@@ -109,6 +109,10 @@
 <span id="advanced-features-white-labeling-shopify"></span><h1>Adding DNS records in Shopify<a class="headerlink" href="#adding-dns-records-in-shopify" title="Permalink to this heading">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+<p>The instructions below use <cite>subdomain.example.com</cite> as an example of a custom domain.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>This instruction applies to domains that are transferred to Shopify
 or registered there in the first place.
 Third-party domains connected to Shopify should be managed in respective domain registries.</p>
@@ -119,7 +123,7 @@ Third-party domains connected to Shopify should be managed in respective domain 
 (Settings → <a class="reference external" rel="nofollow" href="https://shopify.com/admin/settings/domains">Domains</a>)</p></li>
 <li><p>Add NS records listed in Talkable custom domain settings.</p></li>
 </ol>
-<p>For self-managed setup,</p>
+<p>For self-managed setup of a custom web domain,</p>
 <ol class="arabic simple">
 <li><p><a class="reference external" rel="nofollow" href="https://help.shopify.com/en/manual/domains/add-a-domain/add-subdomains">Add a subdomain</a> in Shopify.</p></li>
 <li><p><a class="reference external" rel="nofollow" href="https://help.shopify.com/en/manual/domains/managing-domains/edit-dns-settings#edit-dns-record">Edit</a>
@@ -127,6 +131,11 @@ the automatically created CNAME record for the subdomain to point to Talkable.
 See the value of the CNAME record in Talkable custom domain settings.
 Example: your-talkable-site-id.elb.talkable.com</p></li>
 <li><p>Add another CNAME record to verify the SSL certificate created by Talkable.</p></li>
+</ol>
+<p>For self-managed setup of a custom email domain,</p>
+<ol class="arabic simple">
+<li><p><a class="reference external" rel="nofollow" href="https://help.shopify.com/en/manual/domains/add-a-domain/add-subdomains">Add a subdomain</a> in Shopify.</p></li>
+<li><p>Add the CNAME, MX, and other records listed on Talkable custom domain settings to enable the email sending.</p></li>
 </ol>
 </section>
 

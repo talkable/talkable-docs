@@ -7,6 +7,10 @@ Adding DNS records in Shopify
 =============================
 
 .. note::
+
+   The instructions below use `subdomain.example.com` as an example of a custom domain.
+
+.. note::
    This instruction applies to domains that are transferred to Shopify
    or registered there in the first place.
    Third-party domains connected to Shopify should be managed in respective domain registries.
@@ -18,7 +22,7 @@ For delegated setup,
 
 #. Add NS records listed in Talkable custom domain settings.
 
-For self-managed setup,
+For self-managed setup of a custom web domain,
 
 #. `Add a subdomain <https://help.shopify.com/en/manual/domains/add-a-domain/add-subdomains>`_ in Shopify.
 
@@ -28,3 +32,9 @@ For self-managed setup,
    Example: your-talkable-site-id.elb.talkable.com
 
 #. Add another CNAME record to verify the SSL certificate created by Talkable.
+
+For self-managed setup of a custom email domain,
+
+#. `Add a subdomain <https://help.shopify.com/en/manual/domains/add-a-domain/add-subdomains>`_ in Shopify.
+
+#. Add the CNAME, MX, and other records listed on Talkable custom domain settings to enable the email sending.
