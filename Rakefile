@@ -54,9 +54,9 @@ end
 desc 'Make standalone HTML files'
 task :preview => [:clean, :build]
 
-desc 'Run the server on localhost:5000 and open a browser'
+desc 'Run the server on localhost:5001 and open a browser'
 task :server => :preview do
-  sh '(sleep 2 && open "http://localhost:5000")&'
+  sh '(sleep 2 && open "http://localhost:5001")&'
   sh 'bundle exec foreman start'
 end
 
@@ -94,6 +94,10 @@ namespace :deploy do
 
   desc 'Commit and deploy changes to https://void-docs.talkable.com'
   task :staging do
+    sh 'git remote show staging' do |ok, _|
+      Rake::Task[:setup].invoke unless ok
+    end
+
     deploy(
       domain: 'void-docs.talkable.com',
       html_branch: 'void-gh-pages',
