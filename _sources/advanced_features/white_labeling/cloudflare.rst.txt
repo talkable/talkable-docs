@@ -8,7 +8,7 @@ Adding DNS records in Cloudflare
 
 .. note::
 
-   The instructions below use `subdomain.example.com` as an example of a custom domain.
+   The instructions below use `subdomain.example.com` as an example of a custom domain where `example.com` is your domain.
 
 `Cloudflare docs <https://developers.cloudflare.com/dns/manage-dns-records/how-to/create-dns-records/#create-dns-records>`_
 
