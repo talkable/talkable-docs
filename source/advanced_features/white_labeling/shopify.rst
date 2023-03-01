@@ -8,7 +8,7 @@ Adding DNS records in Shopify
 
 .. note::
 
-   The instructions below use `subdomain.example.com` as an example of a custom domain.
+   The instructions below use `subdomain.example.com` as an example of a custom domain where `example.com` is your domain.
 
 .. note::
    This instruction applies to domains that are transferred to Shopify
