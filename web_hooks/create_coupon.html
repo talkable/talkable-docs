@@ -97,6 +97,11 @@ eliminates the need to upload coupon lists into the Talkable platform manually.
 Talkable creates unique coupon codes then passes those codes via the Create
 Coupon Webhook to the client; it is then up to the client to enable these coupons
 on their platform.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Create Coupon Webhook and <a class="reference internal" href="../advanced_features/shopify_coupons_auto_sync.html#advanced-features-shopify-coupons-auto-sync"><span class="std std-ref">Shopify Coupon auto-sync</span></a> can be enabled simultaneously.
+In that case, coupons will be passed via the webhook only after successful Shopify sync.</p>
+</div>
 <h2>When does Talkable call the Create Coupon Webhook?</h2><p>Create Coupon Webhook is called when the quantity of available coupons drops
 below a Talkable threshold.</p>
 <p>This threshold is dynamically calculated based on the number of coupon codes
