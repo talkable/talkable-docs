@@ -8,8 +8,8 @@ White-labeling
 ==============
 
 By default, Talkable runs campaigns on `www.talkable.com` domain and sends emails
-from `@p2p.talkable.com` or `@offers.talkable.com`. That can be changed by configuring
-a custom web and/or email domain so that links and emails
+from `@p2p.talkable.com` (advocate share emails) or `@offers.talkable.com` (other emails, e.g. reward notifications).
+That can be changed by configuring a custom web and/or email domain so that links and emails
 appear to be pointing to the store itself (e.g `@share.your-shop.com`).
 
 How to set up a custom domain
