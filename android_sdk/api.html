@@ -101,19 +101,19 @@ All methods are available in any place of your app (after <a class="reference in
 <p>It’s the simplest method. You don’t need anything to create <cite>Visitor</cite>.
 But you can do anything you need with just create one.</p>
 <blockquote>
-<div><div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.talkable.sdk.TalkableApi</span><span class="p">;</span>
+<div><div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.talkable.sdk.TalkableApi</span><span class="p">;</span><span class="w"></span>
 
-<span class="n">TalkableApi</span><span class="p">.</span><span class="na">createVisitor</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Callback1</span><span class="o">&lt;</span><span class="n">Visitor</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onSuccess</span><span class="p">(</span><span class="n">Visitor</span><span class="w"> </span><span class="n">apiVisitor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Process success</span>
-<span class="w">    </span><span class="p">}</span>
+<span class="n">TalkableApi</span><span class="p">.</span><span class="na">createVisitor</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Callback1</span><span class="o">&lt;</span><span class="n">Visitor</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onSuccess</span><span class="p">(</span><span class="n">Visitor</span><span class="w"> </span><span class="n">apiVisitor</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Process success</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onError</span><span class="p">(</span><span class="n">ApiError</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Process error</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">});</span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onError</span><span class="p">(</span><span class="n">ApiError</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Process error</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -145,45 +145,45 @@ But you can do anything you need with just create one.</p>
 <section id="building-origin">
 <h3>Building Origin<a class="headerlink" href="#building-origin" title="Permalink to this heading">¶</a></h3>
 <p>You need to build <cite>Origin</cite> using one of examples below:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Building customer, required for all types</span>
-<span class="n">String</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;advocate@example.com&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Required</span>
-<span class="n">String</span><span class="w"> </span><span class="n">idInYourApp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;a8db7683-0f7f-407e-8d12-af2d501035c8&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Use unique identifier from your system, optional</span>
-<span class="n">String</span><span class="w"> </span><span class="n">firstName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Optional</span>
-<span class="n">String</span><span class="w"> </span><span class="n">lastName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Smith&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Optional</span>
-<span class="n">Customer</span><span class="w"> </span><span class="n">customer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Customer</span><span class="p">(</span><span class="n">idInYourApp</span><span class="p">,</span><span class="w"> </span><span class="n">firstName</span><span class="p">,</span><span class="w"> </span><span class="n">lastName</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">);</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="c1">// Building customer, required for all types</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;advocate@example.com&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Required</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">idInYourApp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;a8db7683-0f7f-407e-8d12-af2d501035c8&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Use unique identifier from your system, optional</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">firstName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Optional</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">lastName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Smith&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Optional</span><span class="w"></span>
+<span class="n">Customer</span><span class="w"> </span><span class="n">customer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Customer</span><span class="p">(</span><span class="n">idInYourApp</span><span class="p">,</span><span class="w"> </span><span class="n">firstName</span><span class="p">,</span><span class="w"> </span><span class="n">lastName</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">);</span><span class="w"></span>
 
-<span class="c1">// Building AffiliateMember</span>
-<span class="n">AffiliateMember</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AffiliateMember</span><span class="p">();</span>
-<span class="n">origin</span><span class="p">.</span><span class="na">setCustomer</span><span class="p">(</span><span class="n">customer</span><span class="p">);</span><span class="w"> </span><span class="c1">// Required</span>
-<span class="n">origin</span><span class="p">.</span><span class="na">setCampaignTag</span><span class="p">(</span><span class="s">&quot;your-campaign-tag&quot;</span><span class="p">);</span>
+<span class="c1">// Building AffiliateMember</span><span class="w"></span>
+<span class="n">AffiliateMember</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AffiliateMember</span><span class="p">();</span><span class="w"></span>
+<span class="n">origin</span><span class="p">.</span><span class="na">setCustomer</span><span class="p">(</span><span class="n">customer</span><span class="p">);</span><span class="w"> </span><span class="c1">// Required</span><span class="w"></span>
+<span class="n">origin</span><span class="p">.</span><span class="na">setCampaignTag</span><span class="p">(</span><span class="s">&quot;your-campaign-tag&quot;</span><span class="p">);</span><span class="w"></span>
 
-<span class="c1">// Building Event</span>
-<span class="n">String</span><span class="w"> </span><span class="n">eventNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Required</span>
-<span class="n">String</span><span class="w"> </span><span class="n">eventCategory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;event-category&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Required</span>
-<span class="n">Double</span><span class="w"> </span><span class="n">subtotal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10.99</span><span class="p">;</span><span class="w"> </span><span class="c1">// Optional</span>
-<span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">coupons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;EXAMPLE-CODE&quot;</span><span class="p">};</span><span class="w"> </span><span class="c1">// Optional</span>
+<span class="c1">// Building Event</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">eventNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Required</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">eventCategory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;event-category&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Required</span><span class="w"></span>
+<span class="n">Double</span><span class="w"> </span><span class="n">subtotal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10.99</span><span class="p">;</span><span class="w"> </span><span class="c1">// Optional</span><span class="w"></span>
+<span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">coupons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;EXAMPLE-CODE&quot;</span><span class="p">};</span><span class="w"> </span><span class="c1">// Optional</span><span class="w"></span>
 
-<span class="n">Event</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Event</span><span class="p">(</span><span class="n">eventNumber</span><span class="p">,</span><span class="w"> </span><span class="n">eventCategory</span><span class="p">,</span><span class="w"> </span><span class="n">subtotal</span><span class="p">,</span><span class="w"> </span><span class="n">coupons</span><span class="p">);</span>
-<span class="n">origin</span><span class="p">.</span><span class="na">setCustomer</span><span class="p">(</span><span class="n">customer</span><span class="p">);</span><span class="w"> </span><span class="c1">// Required</span>
-<span class="n">origin</span><span class="p">.</span><span class="na">setCampaignTag</span><span class="p">(</span><span class="s">&quot;your-campaign-tag&quot;</span><span class="p">);</span>
+<span class="n">Event</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Event</span><span class="p">(</span><span class="n">eventNumber</span><span class="p">,</span><span class="w"> </span><span class="n">eventCategory</span><span class="p">,</span><span class="w"> </span><span class="n">subtotal</span><span class="p">,</span><span class="w"> </span><span class="n">coupons</span><span class="p">);</span><span class="w"></span>
+<span class="n">origin</span><span class="p">.</span><span class="na">setCustomer</span><span class="p">(</span><span class="n">customer</span><span class="p">);</span><span class="w"> </span><span class="c1">// Required</span><span class="w"></span>
+<span class="n">origin</span><span class="p">.</span><span class="na">setCampaignTag</span><span class="p">(</span><span class="s">&quot;your-campaign-tag&quot;</span><span class="p">);</span><span class="w"></span>
 
-<span class="c1">// Build purchase</span>
-<span class="n">Double</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10.99</span><span class="p">;</span>
-<span class="n">Integer</span><span class="w"> </span><span class="n">quantity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="n">String</span><span class="w"> </span><span class="n">productId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">;</span>
-<span class="n">Item</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Item</span><span class="p">(</span><span class="n">subtotal</span><span class="p">,</span><span class="w"> </span><span class="n">quantity</span><span class="p">,</span><span class="w"> </span><span class="n">productId</span><span class="p">);</span>
-<span class="n">item</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">&quot;Item Title&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Optional</span>
-<span class="n">item</span><span class="p">.</span><span class="na">setUrl</span><span class="p">(</span><span class="s">&quot;https://site.com/product.html&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Optional</span>
-<span class="n">item</span><span class="p">.</span><span class="na">setImageUrl</span><span class="p">(</span><span class="s">&quot;https://site.com/image.jpg&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Optional</span>
+<span class="c1">// Build purchase</span><span class="w"></span>
+<span class="n">Double</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10.99</span><span class="p">;</span><span class="w"></span>
+<span class="n">Integer</span><span class="w"> </span><span class="n">quantity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">productId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">Item</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Item</span><span class="p">(</span><span class="n">subtotal</span><span class="p">,</span><span class="w"> </span><span class="n">quantity</span><span class="p">,</span><span class="w"> </span><span class="n">productId</span><span class="p">);</span><span class="w"></span>
+<span class="n">item</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">&quot;Item Title&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Optional</span><span class="w"></span>
+<span class="n">item</span><span class="p">.</span><span class="na">setUrl</span><span class="p">(</span><span class="s">&quot;https://site.com/product.html&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Optional</span><span class="w"></span>
+<span class="n">item</span><span class="p">.</span><span class="na">setImageUrl</span><span class="p">(</span><span class="s">&quot;https://site.com/image.jpg&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Optional</span><span class="w"></span>
 
-<span class="n">Double</span><span class="w"> </span><span class="n">subtotal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">quantity</span><span class="p">;</span><span class="w"> </span><span class="c1">// Required</span>
-<span class="n">String</span><span class="w"> </span><span class="n">orderNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;123456&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Required</span>
-<span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">coupons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;EXAMPLE-CODE-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;EXAMPLE-CODE-2&quot;</span><span class="p">};</span><span class="w"> </span><span class="c1">// Optional</span>
+<span class="n">Double</span><span class="w"> </span><span class="n">subtotal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">quantity</span><span class="p">;</span><span class="w"> </span><span class="c1">// Required</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">orderNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;123456&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Required</span><span class="w"></span>
+<span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">coupons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;EXAMPLE-CODE-1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;EXAMPLE-CODE-2&quot;</span><span class="p">};</span><span class="w"> </span><span class="c1">// Optional</span><span class="w"></span>
 
-<span class="n">Purchase</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Purchase</span><span class="p">(</span><span class="n">subtotal</span><span class="p">,</span><span class="w"> </span><span class="n">orderNumber</span><span class="p">,</span><span class="w"> </span><span class="n">coupons</span><span class="p">);</span>
-<span class="n">origin</span><span class="p">.</span><span class="na">setCustomer</span><span class="p">(</span><span class="n">customer</span><span class="p">);</span><span class="w"> </span><span class="c1">// Required</span>
-<span class="n">origin</span><span class="p">.</span><span class="na">setCampaignTag</span><span class="p">(</span><span class="s">&quot;your-campaign-tag&quot;</span><span class="p">);</span>
-<span class="n">origin</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="n">item</span><span class="p">);</span><span class="w"> </span><span class="c1">// Optional</span>
+<span class="n">Purchase</span><span class="w"> </span><span class="n">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Purchase</span><span class="p">(</span><span class="n">subtotal</span><span class="p">,</span><span class="w"> </span><span class="n">orderNumber</span><span class="p">,</span><span class="w"> </span><span class="n">coupons</span><span class="p">);</span><span class="w"></span>
+<span class="n">origin</span><span class="p">.</span><span class="na">setCustomer</span><span class="p">(</span><span class="n">customer</span><span class="p">);</span><span class="w"> </span><span class="c1">// Required</span><span class="w"></span>
+<span class="n">origin</span><span class="p">.</span><span class="na">setCampaignTag</span><span class="p">(</span><span class="s">&quot;your-campaign-tag&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">origin</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="n">item</span><span class="p">);</span><span class="w"> </span><span class="c1">// Optional</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -191,17 +191,17 @@ But you can do anything you need with just create one.</p>
 <h3>API request<a class="headerlink" href="#api-request" title="Permalink to this heading">¶</a></h3>
 <p>You need built <cite>origin</cite> created in previous step to save in in Talkable.
 If you have, you need call method like in the example below:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">TalkableApi</span><span class="p">.</span><span class="na">createOrigin</span><span class="p">(</span><span class="n">origin</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Callback2</span><span class="o">&lt;</span><span class="n">Origin</span><span class="p">,</span><span class="w"> </span><span class="n">Offer</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onSuccess</span><span class="p">(</span><span class="n">Origin</span><span class="w"> </span><span class="n">origin</span><span class="p">,</span><span class="w"> </span><span class="n">Offer</span><span class="w"> </span><span class="n">offer</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Process success</span>
-<span class="w">    </span><span class="p">}</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">TalkableApi</span><span class="p">.</span><span class="na">createOrigin</span><span class="p">(</span><span class="n">origin</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Callback2</span><span class="o">&lt;</span><span class="n">Origin</span><span class="p">,</span><span class="w"> </span><span class="n">Offer</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onSuccess</span><span class="p">(</span><span class="n">Origin</span><span class="w"> </span><span class="n">origin</span><span class="p">,</span><span class="w"> </span><span class="n">Offer</span><span class="w"> </span><span class="n">offer</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Process success</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onError</span><span class="p">(</span><span class="n">ApiError</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Process error</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">});</span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onError</span><span class="p">(</span><span class="n">ApiError</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Process error</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -209,53 +209,53 @@ If you have, you need call method like in the example below:</p>
 <section id="retrieve-rewards">
 <span id="android-api-rewards"></span><h2>Retrieve rewards<a class="headerlink" href="#retrieve-rewards" title="Permalink to this heading">¶</a></h2>
 <p>This methods is used for retrieving rewards for user. Example:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">TalkableApi</span><span class="p">.</span><span class="na">retrieveRewards</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Callback1</span><span class="o">&lt;</span><span class="n">Reward</span><span class="o">[]&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onSuccess</span><span class="p">(</span><span class="n">Reward</span><span class="o">[]</span><span class="w"> </span><span class="n">rewards</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Process success</span>
-<span class="w">    </span><span class="p">}</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">TalkableApi</span><span class="p">.</span><span class="na">retrieveRewards</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Callback1</span><span class="o">&lt;</span><span class="n">Reward</span><span class="o">[]&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onSuccess</span><span class="p">(</span><span class="n">Reward</span><span class="o">[]</span><span class="w"> </span><span class="n">rewards</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Process success</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onError</span><span class="p">(</span><span class="n">ApiError</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Process error</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">});</span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onError</span><span class="p">(</span><span class="n">ApiError</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Process error</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
 <p>If you need get only rewards with some status or for other than user UUID,
 you need to pass this data to this method. Example:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Params</span><span class="w"> </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Params</span><span class="p">();</span>
-<span class="n">params</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;status&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Paid&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Optional</span>
-<span class="n">params</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;visitor_uuid&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;eb71e496-6567-41ec-a68c-49e96d101e0e&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Some other uuid, optional</span>
-<span class="n">TalkableApi</span><span class="p">.</span><span class="na">retrieveRewards</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Callback1</span><span class="o">&lt;</span><span class="n">Reward</span><span class="o">[]&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onSuccess</span><span class="p">(</span><span class="n">Reward</span><span class="o">[]</span><span class="w"> </span><span class="n">rewards</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Process success</span>
-<span class="w">    </span><span class="p">}</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">Params</span><span class="w"> </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Params</span><span class="p">();</span><span class="w"></span>
+<span class="n">params</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;status&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Paid&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Optional</span><span class="w"></span>
+<span class="n">params</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;visitor_uuid&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;eb71e496-6567-41ec-a68c-49e96d101e0e&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Some other uuid, optional</span><span class="w"></span>
+<span class="n">TalkableApi</span><span class="p">.</span><span class="na">retrieveRewards</span><span class="p">(</span><span class="n">params</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Callback1</span><span class="o">&lt;</span><span class="n">Reward</span><span class="o">[]&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onSuccess</span><span class="p">(</span><span class="n">Reward</span><span class="o">[]</span><span class="w"> </span><span class="n">rewards</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Process success</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onError</span><span class="p">(</span><span class="n">ApiError</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Process error</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">});</span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onError</span><span class="p">(</span><span class="n">ApiError</span><span class="w"> </span><span class="n">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Process error</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
 <section id="retrieve-offer">
 <h2>Retrieve offer<a class="headerlink" href="#retrieve-offer" title="Permalink to this heading">¶</a></h2>
 <p>This method is used to get offer details by it’s short code. Example:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">shortUrlCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ABCXYZ&quot;</span><span class="p">;</span>
-<span class="n">TalkableApi</span><span class="p">.</span><span class="na">retrieveOffer</span><span class="p">(</span><span class="n">shortUrlCode</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Callback1</span><span class="o">&lt;</span><span class="n">Offer</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onSuccess</span><span class="p">(</span><span class="n">Offer</span><span class="w"> </span><span class="n">newOffer</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Process success</span>
-<span class="w">    </span><span class="p">}</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">shortUrlCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ABCXYZ&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">TalkableApi</span><span class="p">.</span><span class="na">retrieveOffer</span><span class="p">(</span><span class="n">shortUrlCode</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Callback1</span><span class="o">&lt;</span><span class="n">Offer</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onSuccess</span><span class="p">(</span><span class="n">Offer</span><span class="w"> </span><span class="n">newOffer</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Process success</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
 
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onError</span><span class="p">(</span><span class="n">ApiError</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Process error</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">});</span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onError</span><span class="p">(</span><span class="n">ApiError</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Process error</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
@@ -267,23 +267,23 @@ method.</p>
 <section id="email-share">
 <h3>Email Share<a class="headerlink" href="#email-share" title="Permalink to this heading">¶</a></h3>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">createEmailShare</span></code> method to share an offer via email.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">subject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Email Subject&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// optional</span>
-<span class="n">String</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Email custom message&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// optional</span>
-<span class="n">Boolean</span><span class="w"> </span><span class="n">reminder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// whether Talkable should send a reminder email later; true by default; optional</span>
-<span class="n">ShareEmail</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ShareEmail</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span><span class="w"> </span><span class="n">body</span><span class="p">,</span><span class="w"> </span><span class="n">reminder</span><span class="p">);</span><span class="w"> </span><span class="c1">// optional</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">String</span><span class="w"> </span><span class="n">subject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Email Subject&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// optional</span><span class="w"></span>
+<span class="n">String</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Email custom message&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// optional</span><span class="w"></span>
+<span class="n">Boolean</span><span class="w"> </span><span class="n">reminder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// whether Talkable should send a reminder email later; true by default; optional</span><span class="w"></span>
+<span class="n">ShareEmail</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ShareEmail</span><span class="p">(</span><span class="n">subject</span><span class="p">,</span><span class="w"> </span><span class="n">body</span><span class="p">,</span><span class="w"> </span><span class="n">reminder</span><span class="p">);</span><span class="w"> </span><span class="c1">// optional</span><span class="w"></span>
 
-<span class="n">String</span><span class="w"> </span><span class="n">recipients</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;friend1@example.com,friend2@example.com&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// emails separated by commas; required</span>
-<span class="n">EmailOfferShare</span><span class="w"> </span><span class="n">share</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EmailOfferShare</span><span class="p">(</span><span class="n">offer</span><span class="p">,</span><span class="w"> </span><span class="n">recipients</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">);</span>
-<span class="n">TalkableApi</span><span class="p">.</span><span class="na">createEmailShare</span><span class="p">(</span><span class="n">share</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Callback2</span><span class="o">&lt;</span><span class="n">JsonElement</span><span class="p">,</span><span class="w"> </span><span class="n">Reward</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onSuccess</span><span class="p">(</span><span class="n">JsonElement</span><span class="w"> </span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="n">Reward</span><span class="w"> </span><span class="n">reward</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Process success</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onError</span><span class="p">(</span><span class="n">ApiError</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Process error</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">});</span>
+<span class="n">String</span><span class="w"> </span><span class="n">recipients</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;friend1@example.com,friend2@example.com&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// emails separated by commas; required</span><span class="w"></span>
+<span class="n">EmailOfferShare</span><span class="w"> </span><span class="n">share</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EmailOfferShare</span><span class="p">(</span><span class="n">offer</span><span class="p">,</span><span class="w"> </span><span class="n">recipients</span><span class="p">,</span><span class="w"> </span><span class="n">email</span><span class="p">);</span><span class="w"></span>
+<span class="n">TalkableApi</span><span class="p">.</span><span class="na">createEmailShare</span><span class="p">(</span><span class="n">share</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Callback2</span><span class="o">&lt;</span><span class="n">JsonElement</span><span class="p">,</span><span class="w"> </span><span class="n">Reward</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onSuccess</span><span class="p">(</span><span class="n">JsonElement</span><span class="w"> </span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="n">Reward</span><span class="w"> </span><span class="n">reward</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Process success</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onError</span><span class="p">(</span><span class="n">ApiError</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Process error</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -295,18 +295,18 @@ contains data, described in <a href="https://www.talkable.com/api-docs/#/Shares/
 <section id="social-share">
 <h3>Social Share<a class="headerlink" href="#social-share" title="Permalink to this heading">¶</a></h3>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">createSocialShare</span></code> method to track a social share.</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">SharingChannel</span><span class="w"> </span><span class="n">channel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SharingChannel</span><span class="p">.</span><span class="na">FACEBOOK</span><span class="p">;</span><span class="w"> </span><span class="c1">// required</span>
-<span class="n">SocialOfferShare</span><span class="w"> </span><span class="n">share</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SocialOfferShare</span><span class="p">(</span><span class="n">offer</span><span class="p">,</span><span class="w"> </span><span class="n">channel</span><span class="p">);</span>
-<span class="n">TalkableApi</span><span class="p">.</span><span class="na">createSocialShare</span><span class="p">(</span><span class="n">share</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Callback2</span><span class="o">&lt;</span><span class="n">SocialOfferShare</span><span class="p">,</span><span class="w"> </span><span class="n">Reward</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onSuccess</span><span class="p">(</span><span class="n">SocialOfferShare</span><span class="w"> </span><span class="n">createdShare</span><span class="p">,</span><span class="w"> </span><span class="n">Reward</span><span class="w"> </span><span class="n">reward</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Process success</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onError</span><span class="p">(</span><span class="n">ApiError</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// Process error</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">});</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">SharingChannel</span><span class="w"> </span><span class="n">channel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SharingChannel</span><span class="p">.</span><span class="na">FACEBOOK</span><span class="p">;</span><span class="w"> </span><span class="c1">// required</span><span class="w"></span>
+<span class="n">SocialOfferShare</span><span class="w"> </span><span class="n">share</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">SocialOfferShare</span><span class="p">(</span><span class="n">offer</span><span class="p">,</span><span class="w"> </span><span class="n">channel</span><span class="p">);</span><span class="w"></span>
+<span class="n">TalkableApi</span><span class="p">.</span><span class="na">createSocialShare</span><span class="p">(</span><span class="n">share</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Callback2</span><span class="o">&lt;</span><span class="n">SocialOfferShare</span><span class="p">,</span><span class="w"> </span><span class="n">Reward</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onSuccess</span><span class="p">(</span><span class="n">SocialOfferShare</span><span class="w"> </span><span class="n">createdShare</span><span class="p">,</span><span class="w"> </span><span class="n">Reward</span><span class="w"> </span><span class="n">reward</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Process success</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onError</span><span class="p">(</span><span class="n">ApiError</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="c1">// Process error</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="hidden docutils container">
