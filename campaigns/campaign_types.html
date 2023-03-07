@@ -45,6 +45,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#reward-gleam">Reward Gleam</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#leaderboard">Leaderboard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#tiered-rewards">Tiered Rewards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#claim-by-name">Claim by Name</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="campaign_placements.html">Campaign Placements</a></li>
@@ -133,6 +134,30 @@ time period, top performers can be identified and rewarded with a grand prize.</
 as they are rewarded for subsequent successful referrals. By setting reward
 goals for Advocates, they are more likely to increase their share rate.</p>
 <img alt="Campaign Type - Tiered Rewards" class="is-minimal" src="../_images/tiered_rewards.png" />
+</section>
+<section id="claim-by-name">
+<h2>Claim by Name<a class="headerlink" href="#claim-by-name" title="Permalink to this heading">¶</a></h2>
+<p>A Claim by Name campaign is a part of the name sharing setup for referral campaigns.
+The setup consists of the campaign(s) where the personal name sharing channel is enabled
+(the Advocate campaign) and the Claim by Name campaign (the Friend campaign).
+The Advocate can share their name and describe the referral offer via any channel they prefer,
+and the Friend can then claim the reward by entering the Advocate’s personal name in the Claim by Name popup.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Claim by Name campaign does not offer any incentives on its own. Both the Advocate and the Friend rewards
+should be specified in the name sharing campaign (i.e. the campaign with personal name sharing channel enabled).</p>
+</div>
+<p>Personal name sharing channel is available as a configuration localization on Advocate share page
+in all new campaign templates.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You need to have the Claim by Name campaign launched to see the “Advocate share page channel personal name” localization.</p>
+</div>
+<p>If you don’t have the localization in your campaign code, you can add it manually in the HTML &amp; CSS editor mode.</p>
+<div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="na">advocate_share_page_channel_personal_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;advocate_share_page_channel_personal_name&quot;</span><span class="w"> </span>|<span class="w"> </span><span class="na">localize</span><span class="o">:</span><span class="w"> </span><span class="na">trait</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;boolean&quot;</span><span class="p">,</span><span class="w"> </span><span class="na">default</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Disabled&quot;</span><span class="w"> </span><span class="p">%}</span>
+</pre></div>
+</div>
+<img alt="Campaign Type - Claim by Name" class="is-minimal" src="../_images/claim_by_name.png" />
 </section>
 </section>
 
