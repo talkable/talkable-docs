@@ -66,6 +66,18 @@ and a close button.
 
 .. raw:: html
 
+  <h3>Claim by Name Widget</h3>
+
+Campaign will show up as a floating button in a corner of the screen on the cart or checkout page on your site,
+for example: |br|
+`https://[your-site]/cart`.
+|br|
+Clicking on a Claim by Name widget opens a popup with an overlay and a close button.
+
+:ref:`Learn more about Claim by Name Placement <campaigns/campaign_placements/claim_by_name>`
+
+.. raw:: html
+
   <h3>Gleam</h3>
 
 Campaign will show up on every page as a floating bar that shows your customers their coupon codes

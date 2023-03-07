@@ -65,3 +65,32 @@ goals for Advocates, they are more likely to increase their share rate.
 .. image:: /_static/img/campaign_types/tiered_rewards.png
    :alt: Campaign Type - Tiered Rewards
    :class: is-minimal
+
+Claim by Name
+-------------
+
+A Claim by Name campaign is a part of the name sharing setup for referral campaigns.
+The setup consists of the campaign(s) where the personal name sharing channel is enabled
+(the Advocate campaign) and the Claim by Name campaign (the Friend campaign).
+The Advocate can share their name and describe the referral offer via any channel they prefer,
+and the Friend can then claim the reward by entering the Advocate's personal name in the Claim by Name popup.
+
+.. note::
+   Claim by Name campaign does not offer any incentives on its own. Both the Advocate and the Friend rewards
+   should be specified in the name sharing campaign (i.e. the campaign with personal name sharing channel enabled).
+
+Personal name sharing channel is available as a configuration localization on Advocate share page
+in all new campaign templates.
+
+.. note::
+   You need to have the Claim by Name campaign launched to see the "Advocate share page channel personal name" localization.
+
+If you don't have the localization in your campaign code, you can add it manually in the HTML & CSS editor mode.
+
+.. code-block:: liquid
+
+  {% assign advocate_share_page_channel_personal_name = "advocate_share_page_channel_personal_name" | localize: trait: "boolean", default: "Disabled" %}
+
+.. image:: /_static/img/campaign_types/claim_by_name.png
+   :alt: Campaign Type - Claim by Name
+   :class: is-minimal
