@@ -35,36 +35,7 @@ triggered twice.
 
    <h2>Payload parameters provided for Post Share Webhook</h2>
 
-* **campaign** — subhash of parameters describing the campaign
-
-  .. include:: /partials/campaign_fields.rst
-
-* **share_type** — *"email"*, *"facebook"*, *"twitter"*, *"facebook_message"*,
-  *"facebook_sponsored"*, *"whatsapp"*, *"sms"*, *"linkedin"*, *"other"*
-
-  * Note: custom share_type's can be created
-
-* **share_info** — share-specific information
-
-  * For Facebook share:
-
-    * **facebook_share_post_id** — Facebook post ID
-    * **facebook_share_user_id** — Facebook user ID
-
-  * For email share:
-
-    * **recipients** — an array of email addresses
-
-* **sharer_info** — subhash of parameters describing the person who shared the offer
-
-  .. include:: /partials/person_fields.rst
-  .. |person| replace:: sharer
-
-* **share_link** — link sent in share message (optional, present only for
-  Facebook and Twitter shares)
-* **origin** — contains data about the event that issued an offer:
-
-  .. include:: /partials/origin_fields.rst
+The sample payload with parameters for Post Share Webhook is available here: `Post Share Webhook Payload <https://www.talkable.com/api-docs/index.html?urls.primaryname=webhooks%20api&urls.primaryName=Webhooks#/Post%20Share/post_your_api_post_share_web_hook_path>`_.
 
 .. note::
 
@@ -72,76 +43,6 @@ triggered twice.
    first shown to the Advocate. It could be ``null``. For the most up-to-date
    information about the Advocate, use ``sharer_info`` property which is updated
    with the email address the Advocate has entered on the Advocate Signup/Share Page.
-
-.. raw:: html
-
-   <h2>Sample payload</h2>
-
-.. code-block:: javascript
-
-   {
-     "campaign": {
-       "id": 83587635,
-       "type": "StandaloneCampaign",
-       "cached_slug": 83587635,
-       "tag_names": ["default"],
-       "joinable_category_names": ["affiliate_member"],
-       "origin_min_age": null,
-       "origin_max_age": null,
-       "new_customer": null
-     },
-     "share_type": "email",
-     "share_info": {
-       "recipients": ["john@example.com"]
-     },
-     "sharer_info": {
-       "first_name": "Bob",
-       "last_name": "Smith",
-       "email": "sharer@example.com",
-       "phone_number": null,
-       "username": "username",
-       "unsubscribed_at": null,
-       "subscribed_at": "2018-09-27T22:55:13.860+03:00",
-       "opted_in_at": "2018-09-27T22:55:13.860+03:00",
-       "phone_opted_in_at": null,
-       "sub_choice": true,
-       "custom_properties": {},
-       "referral_counts": {
-         "total": 0,
-         "approved": 0,
-         "pending": 0
-       },
-       "is_loyalty_member": false,
-       "loyalty_member": null,
-       "gender": null
-     },
-     "origin": {
-       "id": 147886587,
-       "type": "Purchase",
-       "order_number": "450901776",
-       "subtotal": 35.03,
-       "currency_iso_code": "USD",
-       "email": "sharer@example.com",
-       "customer_id": "565659001",
-       "order_date": "2019-04-11T07:28:31.258-07:00",
-       "ip_address": "127.0.0.1",
-       "coupon_code": "WHT29123",
-       "traffic_source": "post-checkout"
-     }
-   }
-
-.. raw:: html
-
-   <h2>cURL example</h2>
-
-.. code-block:: bash
-
-   curl <url> \
-        -d "key=<key>" \
-        -d "site=<site>" \
-        -d "type=post_share_web_hook" \
-        -d "extras={}" \
-        -d 'payload={"campaign":{"id":83587635,"type":"StandaloneCampaign","cached_slug":83587635,"tag_names":["default"],"joinable_category_names":["affiliate_member"],"origin_min_age":null,"origin_max_age":null,"new_customer":null},"share_type":"email","share_info":{"recipients":["john@example.com"]},"sharer_info":{"first_name":"Bob","last_name":"Smith","email":"sharer@example.com","phone_number":null,"username":"username","unsubscribed_at":null,"subscribed_at":"2018-09-27T22:55:13.860+03:00","opted_in_at":"2018-09-27T22:55:13.860+03:00","phone_opted_in_at":null,"sub_choice":true,"custom_properties":{},"referral_counts":{"total":0,"approved":0,"pending":0},"is_loyalty_member":false,"loyalty_member":null,"gender":null},"origin":{"id":147886587,"type":"Purchase","order_number":"450901776","subtotal":35.03,"currency_iso_code":"USD","email":"sharer@example.com","customer_id":"565659001","order_date":"2019-04-11T07:28:31.258-07:00","ip_address":"127.0.0.1","coupon_code":"WHT29123","traffic_source":"post-checkout"}}'
 
 .. container:: hidden
 

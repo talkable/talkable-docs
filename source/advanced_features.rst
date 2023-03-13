@@ -15,7 +15,7 @@ each with links to integration details.
    :widths: 35 65
 
    * - :ref:`Automatic Coupon Creation <advanced_features/coupons>`
-     - Issue single and multi-use coupons automatically for your campaigns
+     - Issue single and multi-use coupons for your campaigns
 
    * - :ref:`Shopify Coupon auto-sync <advanced_features/shopify_coupons_auto_sync>`
      - Issue coupons automatically for your Shopify store
@@ -44,6 +44,9 @@ each with links to integration details.
    * - :ref:`File encryption <advanced_features/file_encryption>`
      - For additional security, it is possible to encrypt files.
 
+   * - :ref:`Report password protection <advanced_features/report_password_protection>`
+     - For additional security, reports have password protection by default.
+
    * - :ref:`Including Product Items <advanced_features/product_items>`
      - Let your customers share specific items that they’ve purchased
        and pass product details along with purchase data
@@ -55,6 +58,9 @@ each with links to integration details.
 
    * - :ref:`Pass custom user data <advanced_features/passing_custom_data>`
      - Pass additional data to Talkable to operate with it inside campaigns
+
+   * - :ref:`Phone number gating <advanced_features/phone_number_gating>`
+     - Collect customers' phone numbers and sync with ESPs.
 
    * - :ref:`Referrals Approval <advanced_features/referrals_approval>`
      - Learn about Talkable Fraud settings, why they are important
@@ -94,8 +100,10 @@ each with links to integration details.
     advanced_features/params_encryption
     advanced_features/events
     advanced_features/file_encryption
+    advanced_features/report_password_protection
     advanced_features/product_items
     advanced_features/passing_custom_data
+    advanced_features/phone_number_gating
     advanced_features/referrals_approval
     advanced_features/product_sku
     advanced_features/traffic_source
