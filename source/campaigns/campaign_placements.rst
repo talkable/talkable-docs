@@ -20,4 +20,3 @@ Campaign Placements
     campaign_placements/claim_by_name
     campaign_placements/loyalty_dashboard
     campaign_placements/loyalty_widget
-    campaign_placements/claim_by_name
