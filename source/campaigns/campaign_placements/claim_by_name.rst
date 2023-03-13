@@ -13,6 +13,8 @@ to see the widget that shows a call to action message, ex. “Have been referred
 Clicking on it expands the widget in a pop-up, allowing the visitor to enter their email and
 their friend's personal name to claim their reward.
 
+:ref:`Learn more about Claim by Name campaigns <campaigns/claim_by_name>`
+
 :ref:`Learn more about Placements <campaigns/campaign_placements>`
 
 Integration instructions
@@ -29,7 +31,6 @@ the Campaign on the pages specified by the respective placement.
 |br|
 After creating and launching the Claim by Name campaign, you can enable the personal name sharing channel
 in any other referral campaign to allow advocates to share their name.
-
 
 If you need to change or reconfigure which Campaigns are shown on which URLs then visit
 |br|
