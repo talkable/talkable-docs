@@ -50,7 +50,7 @@ How to create or check for existing campaigns
 You’ll need to have a campaign of each type in order to validate
 display.
 
-There are 4 types:
+There are 5 types:
 
 1. :underline:`Post Purchase:` displays as a pop up after checkout
 
@@ -62,6 +62,11 @@ There are 4 types:
 
 4. :underline:`Advocate Dashboard Standalone:` displays inline in your /referrals
    page
+
+5. :underline:`Claim by Name` displays as a floating widget button on your checkout page.
+
+   .. note::
+      Claim by Name campaign has its own DIV container and can be shown along with the Floating Widget on the same page.
 
 -  :underline:`How to create campaigns:` Here’s a video showing you how to quickly
    create all campaigns in less than 1 minute
@@ -93,6 +98,11 @@ these in the URL using the following guidelines:
 3. Referral Dashboard:
 
    `www.your-site.com/referrals?tkbl_campaign_id=11113`
+
+4. Claim by Name widget:
+
+   `www.your-site.com/cart?tkbl_campaign_id=11114` or
+   `www.your-site.com/checkouts?tkbl_campaign_id=11114`
 
 Note that campaigns must be newly created campaigns in test mode to be
 eligible for test mode display. Use the following image as a visual

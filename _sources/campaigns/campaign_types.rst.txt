@@ -66,6 +66,8 @@ goals for Advocates, they are more likely to increase their share rate.
    :alt: Campaign Type - Tiered Rewards
    :class: is-minimal
 
+.. _campaigns/claim_by_name:
+
 Claim by Name
 -------------
 
@@ -78,6 +80,7 @@ and the Friend can then claim the reward by entering the Advocate's personal nam
 .. note::
    Claim by Name campaign does not offer any incentives on its own. Both the Advocate and the Friend rewards
    should be specified in the name sharing campaign (i.e. the campaign with personal name sharing channel enabled).
+   Similarly, the funnel metrics are also tracked within the Advocate campaign.
 
 Personal name sharing channel is available as a configuration localization on Advocate share page
 in all new campaign templates.
