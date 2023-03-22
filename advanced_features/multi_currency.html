@@ -4,18 +4,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<meta content="Phone number feature allows you to collect customers' phone numbers inside your campaigns and use them for promotions." name="description" />
+<meta content="Talkable supports working with multiple currencies within the same site." name="description" />
 
-    <title>Phone number gating &#8212; Talkable Documentation</title>
+    <title>Multi-currency &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
-    <link rel="canonical" href="https://docs.talkable.com/advanced_features/phone_number_gating.html" />
+    <link rel="canonical" href="https://docs.talkable.com/advanced_features/multi_currency.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Referrals Approval" href="referrals_approval.html" />
-    <link rel="prev" title="Pass Custom User Data" href="passing_custom_data.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <link rel="next" title="Standard Integration" href="../integration/custom_integration.html" />
+    <link rel="prev" title="Single Sign-On (SSO)" href="single_sign_on.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
   <link href="../_static/pygments-github.css" rel="stylesheet">
   <link href="../_static/img/favicon.ico" rel="shortcut icon" />
   </head><body>
@@ -55,10 +55,7 @@
 <li class="toctree-l2"><a class="reference internal" href="report_password_protection.html">Report Password Protection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="product_items.html">Including Product Items</a></li>
 <li class="toctree-l2"><a class="reference internal" href="passing_custom_data.html">Pass Custom User Data</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Phone number gating</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#synchronization-with-esps">Synchronization with ESPs</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="phone_number_gating.html">Phone number gating</a></li>
 <li class="toctree-l2"><a class="reference internal" href="referrals_approval.html">Referrals Approval</a></li>
 <li class="toctree-l2"><a class="reference internal" href="product_sku.html">Segment With Product SKU</a></li>
 <li class="toctree-l2"><a class="reference internal" href="traffic_source.html">Segment With Traffic Source</a></li>
@@ -67,7 +64,14 @@
 <li class="toctree-l2"><a class="reference internal" href="url_parameters.html">Using URL Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="white_labeling.html">White-labeling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="single_sign_on.html">Single Sign-On (SSO)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="multi_currency.html">Multi-currency</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Multi-currency</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#passing-currency-with-the-purchase-or-event">Passing currency with the purchase or event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#incentives-for-different-currencies">Incentives for different currencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#preferred-currency">Preferred currency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#currencies-on-dashboard">Currencies on dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#currencies-in-reports">Currencies in reports</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -105,30 +109,70 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="advanced-features-phone-number-gating"></span><section id="phone-number-gating">
-<h1>Phone number gating<a class="headerlink" href="#phone-number-gating" title="Permalink to this heading">¶</a></h1>
-<p>Phone number feature allows you to collect customers’ phone numbers inside your campaigns and use them for promotions.</p>
-<p>You can set the phone number as a required field for customers to join the campaign or get a reward.
-Setting can be found inside <code class="docutils literal notranslate"><span class="pre">Campaign</span> <span class="pre">→</span> <span class="pre">Rules</span> <span class="pre">→</span> <span class="pre">Extra</span> <span class="pre">section</span></code> for both Advocate and Friend.</p>
-<img alt="../_images/phone_number_gating_for_advocate.png" src="../_images/phone_number_gating_for_advocate.png" />
+  <span class="target" id="advanced-features-multi-currency"></span><section id="multi-currency">
+<h1>Multi-currency<a class="headerlink" href="#multi-currency" title="Permalink to this heading">¶</a></h1>
+<p>By default, Talkable works in a single-currency mode. The main currency is chosen during the account setup.</p>
+<p>However, the multi-currency mode can be enabled for a site. In multi-currency mode, the referral campaigns allow
+Advocates and Friends to choose their preferred currency, and the incentives can be configured to offer different
+rewards based on the preferred currency. Every purchase and/or event should have a currency specified.
+The dashboard and reports can be filtered by currencies, and the values can be converted to a currency of your choice.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Currently, phone number gating can be enabled only with enabled email gating.</p>
+<p>Please contact your Customer Success Manager to enable multi-currency. Note that in this mode,
+the integration should pass currency data with every purchase.</p>
 </div>
-<p>Inside the campaign, you can change the default setting for the consent checkbox.</p>
-<img alt="../_images/phone_number_campaign_settings.jpg" src="../_images/phone_number_campaign_settings.jpg" />
-<section id="synchronization-with-esps">
-<h2>Synchronization with ESPs<a class="headerlink" href="#synchronization-with-esps" title="Permalink to this heading">¶</a></h2>
-<p>You can configure App store apps to send opt-ins with a customer’s phone number.
-Currently, a phone number can be used for the next apps:</p>
+<section id="passing-currency-with-the-purchase-or-event">
+<h2>Passing currency with the purchase or event<a class="headerlink" href="#passing-currency-with-the-purchase-or-event" title="Permalink to this heading">¶</a></h2>
+<p>Currency is required to be specified if multi-currency mode is enabled for a site.</p>
+<p>Please pass the currency using the <cite>currency_iso_code</cite> argument to the <cite>register_purchase</cite> function.
+The code must be in <a class="reference external" rel="nofollow" href="https://www.iso.org/iso-4217-currency-codes.html">ISO 4217 format</a>, e.g. “USD”.</p>
+<p><a class="reference internal" href="../integration/custom/integration_components.html#integration-custom-integration-components-post-purchase-script"><span class="std std-ref">More on the integration of purchases</span></a></p>
+</section>
+<section id="incentives-for-different-currencies">
+<h2>Incentives for different currencies<a class="headerlink" href="#incentives-for-different-currencies" title="Permalink to this heading">¶</a></h2>
+<p>In multi-currency mode, the following incentive details can be configured per currency:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../email_marketing_and_automation/attentive.html#email-marketing-and-automation-attentive"><span class="std std-ref">Attentive</span></a></p></li>
-<li><p><a class="reference internal" href="../email_marketing_and_automation/oracle_bronto.html#email-marketing-and-automation-oracle-bronto"><span class="std std-ref">Bronto</span></a></p></li>
-<li><p><a class="reference internal" href="../email_marketing_and_automation/klaviyo.html#email-marketing-and-automation-klaviyo"><span class="std std-ref">Klaviyo</span></a></p></li>
-<li><p><a class="reference internal" href="../email_marketing_and_automation/hubspot.html#email-marketing-and-automation-hubspot"><span class="std std-ref">HubSpot</span></a></p></li>
+<li><p>incentive amount</p></li>
+<li><p>coupon list or multi-use coupon</p></li>
+<li><p>subtotal minimum and maximum</p></li>
 </ul>
-<p>Sample configuration</p>
-<img alt="../_images/phone_number_sync_appstore.png" src="../_images/phone_number_sync_appstore.png" />
+<p>A reward for an Advocate or a Friend will be issued based on their preferred currency. If none specified,
+the main site currency will be used.</p>
+</section>
+<section id="preferred-currency">
+<h2>Preferred currency<a class="headerlink" href="#preferred-currency" title="Permalink to this heading">¶</a></h2>
+<p>Talkable allows storing an Advocate’s or Friend’s preferred currency. The selected currency can be accessed in liquid
+in the <cite>[[ preferred_currency ]]</cite> variable.</p>
+</section>
+<section id="currencies-on-dashboard">
+<h2>Currencies on dashboard<a class="headerlink" href="#currencies-on-dashboard" title="Permalink to this heading">¶</a></h2>
+<p>Dashboard tiles have two helpful configuration options for multi-currency setup:</p>
+<ul class="simple">
+<li><p>filter events by currencies (“Segment Currency”)</p></li>
+<li><p>convert all amounts to one currency (“Reporting Currency”)</p></li>
+</ul>
+<img alt="../_images/multi_currency_dashboard_tile.png" src="../_images/multi_currency_dashboard_tile.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Conversion rate for a specific currency is actualized daily and cached for the accuracy of historical data.
+So a purchase amount is converted according to its creation date’s conversion rate.</p>
+</div>
+</section>
+<section id="currencies-in-reports">
+<h2>Currencies in reports<a class="headerlink" href="#currencies-in-reports" title="Permalink to this heading">¶</a></h2>
+<p>There are several tools that can be used for multi-currency site to make the reporting more flexible.</p>
+<p>Available options in <strong>Metrics Aggregation Report</strong>:</p>
+<ul class="simple">
+<li><p>segmentation by currencies</p></li>
+<li><p>filter by the currency of the purchase / event</p></li>
+<li><p>select a currency to convert the amounts to</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/multi_currency_mar.png"><img alt="../_images/multi_currency_mar.png" src="../_images/multi_currency_mar.png" style="width: 300px;" /></a>
+<p>Available options in <strong>Purchases</strong> and <strong>Events</strong> reports:</p>
+<ul class="simple">
+<li><p>filter by the currency of the purchase / event</p></li>
+<li><p>select a currency to convert the amounts to</p></li>
+</ul>
 </section>
 </section>
 
