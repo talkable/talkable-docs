@@ -44,7 +44,7 @@ the main site currency will be used.
 Preferred currency
 ------------------
 
-Talkable allows storing an Advocate's or Friend's preferred currency. The selected currency can be accessed in liquid
+Talkable allows storing an Advocate's or Friend's preferred currency. The selected currency can be accessed in |liquid|
 in the `[[ preferred_currency ]]` variable.
 
 Currencies on dashboard
@@ -65,12 +65,12 @@ Dashboard tiles have two helpful configuration options for multi-currency setup:
 Currencies in reports
 ---------------------
 
-There are several tools that can be used for multi-currency site to make the reporting more flexible.
+Several tools can be used for multi-currency sites to make reporting more flexible.
 
 Available options in **Metrics Aggregation Report**:
 
 * segmentation by currencies
-* filter by the currency of the purchase / event
+* filter by the currency of the purchase/event
 * select a currency to convert the amounts to
 
 .. image:: /_static/img/advanced_features/multi_currency_mar.png
@@ -78,5 +78,5 @@ Available options in **Metrics Aggregation Report**:
 
 Available options in **Purchases** and **Events** reports:
 
-* filter by the currency of the purchase / event
+* filter by the currency of the purchase/event
 * select a currency to convert the amounts to
