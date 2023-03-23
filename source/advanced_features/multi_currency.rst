@@ -59,7 +59,8 @@ Dashboard tiles have two helpful configuration options for multi-currency setup:
 
 .. note::
 
-   Conversion rate for a specific currency is actualized daily and cached for the accuracy of historical data.
+   Conversion rate for a specific currency is actualized daily (data taken from
+   `open exchange rates <https://openexchangerates.org>`_) and cached for the accuracy of historical data.
    So a purchase amount is converted according to its creation date's conversion rate.
 
 Currencies in reports
@@ -76,7 +77,17 @@ Available options in **Metrics Aggregation Report**:
 .. image:: /_static/img/advanced_features/multi_currency_mar.png
   :width: 300
 
+.. note::
+
+   If a currency to convert to is not specified, the site currency is used for conversion.
+
 Available options in **Purchases** and **Events** reports:
 
 * filter by the currency of the purchase/event
 * select a currency to convert the amounts to
+
+.. note::
+
+   The options list in the currency filter consists of all the currencies passed to Talkable
+   along with the purchases/events. If you can't find a currency in the list, it means Talkable never received
+   a purchase/event with such currency.
