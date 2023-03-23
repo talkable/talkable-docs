@@ -154,7 +154,8 @@ in the <cite>[[ preferred_currency ]]</cite> variable.</p>
 <img alt="../_images/multi_currency_dashboard_tile.png" src="../_images/multi_currency_dashboard_tile.png" />
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Conversion rate for a specific currency is actualized daily and cached for the accuracy of historical data.
+<p>Conversion rate for a specific currency is actualized daily (data taken from
+<a class="reference external" rel="nofollow" href="https://openexchangerates.org">open exchange rates</a>) and cached for the accuracy of historical data.
 So a purchase amount is converted according to its creation date’s conversion rate.</p>
 </div>
 </section>
@@ -168,11 +169,21 @@ So a purchase amount is converted according to its creation date’s conversion 
 <li><p>select a currency to convert the amounts to</p></li>
 </ul>
 <a class="reference internal image-reference" href="../_images/multi_currency_mar.png"><img alt="../_images/multi_currency_mar.png" src="../_images/multi_currency_mar.png" style="width: 300px;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a currency to convert to is not specified, the site currency is used for conversion.</p>
+</div>
 <p>Available options in <strong>Purchases</strong> and <strong>Events</strong> reports:</p>
 <ul class="simple">
 <li><p>filter by the currency of the purchase/event</p></li>
 <li><p>select a currency to convert the amounts to</p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The options list in the currency filter consists of all the currencies passed to Talkable
+along with the purchases/events. If you can’t find a currency in the list, it means Talkable never received
+a purchase/event with such currency.</p>
+</div>
 </section>
 </section>
 
