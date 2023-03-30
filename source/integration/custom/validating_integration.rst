@@ -67,6 +67,7 @@ There are 5 types:
 
    .. note::
       Claim by Name campaign has its own DIV container and can be shown along with the Floating Widget on the same page.
+      The DIV id is `talkable-claim-by-name`.
 
 -  :underline:`How to create campaigns:` Here’s a video showing you how to quickly
    create all campaigns in less than 1 minute
