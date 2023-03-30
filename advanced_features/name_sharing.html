@@ -4,18 +4,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<meta content="Talkable allows overriding some of the parameters right through URL query string." name="description" />
+<meta content="Talkable allows the Advocates to share referral offers by their names." name="description" />
 
-    <title>Using URL Parameters &#8212; Talkable Documentation</title>
+    <title>Name Sharing &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
-    <link rel="canonical" href="https://docs.talkable.com/advanced_features/url_parameters.html" />
+    <link rel="canonical" href="https://docs.talkable.com/advanced_features/name_sharing.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="White-labeling" href="white_labeling.html" />
-    <link rel="prev" title="Setting up Campaign Placement criteria" href="reg_ex.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <link rel="next" title="Converting Into Localization" href="converting_into_localization.html" />
+    <link rel="prev" title="Advocate Personal Coupon Sharing" href="personal_coupon_sharing.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
   <link href="../_static/pygments-github.css" rel="stylesheet">
   <link href="../_static/img/favicon.ico" rel="shortcut icon" />
   </head><body>
@@ -47,7 +47,11 @@
 <li class="toctree-l2"><a class="reference internal" href="shopify_purchase_syncing.html">Shopify Purchase Syncing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="track_methods.html">Referral Tracking Methods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="personal_coupon_sharing.html">Advocate Personal Coupon Sharing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="name_sharing.html">Name Sharing</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Name Sharing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#name-sharing-user-flow">Name Sharing User Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#name-sharing-setup">Name Sharing Setup</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="converting_into_localization.html">Converting Into Localization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="customer_service_portal.html">Customer Service Portal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="params_encryption.html">Params Encryption</a></li>
@@ -62,9 +66,7 @@
 <li class="toctree-l2"><a class="reference internal" href="traffic_source.html">Segment With Traffic Source</a></li>
 <li class="toctree-l2"><a class="reference internal" href="subscribing_to_events.html">Subscribing To Iframe Events</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reg_ex.html">Setting up Campaign Placement criteria</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Using URL Parameters</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="url_parameters.html">Using URL Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="white_labeling.html">White-labeling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="single_sign_on.html">Single Sign-On (SSO)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="multi_currency.html">Multi-currency</a></li>
@@ -105,31 +107,56 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="advanced-features-url-parameters"></span><section id="using-url-parameters">
-<h1>Using URL Parameters<a class="headerlink" href="#using-url-parameters" title="Permalink to this heading">¶</a></h1>
-<p>Talkable allows overriding some of the parameters right through URL query string:</p>
+  <span class="target" id="advanced-features-name-sharing"></span><section id="name-sharing">
+<h1>Name Sharing<a class="headerlink" href="#name-sharing" title="Permalink to this heading">¶</a></h1>
+<p>There is a way to enable sharing referral offers by the <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> name.</p>
+<section id="name-sharing-user-flow">
+<h2>Name Sharing User Flow<a class="headerlink" href="#name-sharing-user-flow" title="Permalink to this heading">¶</a></h2>
+<p>For users, the name sharing would proceed as follows:</p>
+<ol class="arabic simple">
+<li><p>The Advocate opens the referral offer share page.</p></li>
+<li><p>The Advocate opts to share the offer by their personal name.</p></li>
+<li><p>The Advocate confirms or edits their personal name <a class="footnote-reference brackets" href="#f1" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p></li>
+<li><p>The Advocate tells their personal name to their Friends in any way they find suitable.</p></li>
+<li><p>The Friend visits site and opens the Claim by Name widget.</p></li>
+<li><p>The Friend enters their email and the Advocate’s name.</p></li>
+<li><p>The Friend receives a Click Reward (if it was configured in the Advocate campaign).</p></li>
+</ol>
+<hr class="docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>A personal name should be unique within a site and be 3 to 50 symbols long.
+It can only contain latin letters, numbers, and underscore as a separator.
+A personal name cannot begin with a number.</p>
+</aside>
+</aside>
+</section>
+<section id="name-sharing-setup">
+<span id="advanced-features-name-sharing-setup"></span><h2>Name Sharing Setup<a class="headerlink" href="#name-sharing-setup" title="Permalink to this heading">¶</a></h2>
+<p>To make name sharing work, at least two referral campaigns are required:</p>
 <ul class="simple">
-<li><p>email - <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> email address</p></li>
-<li><p>first_name - <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> first name</p></li>
-<li><p>last_name - <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> last name</p></li>
-<li><p>traffic_source - <a class="reference internal" href="traffic_source.html#advanced-features-traffic-source"><span class="std std-ref">Traffic Source</span></a> value</p></li>
-<li><p>campaign_tags - overrides campaign tag to be loaded</p></li>
+<li><p>one for <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> (it can be any campaign that has a share page)</p></li>
+<li><p>one for <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> - a <a class="reference internal" href="../campaigns/campaign_types.html#campaigns-claim-by-name"><span class="std std-ref">Claim by Name campaign</span></a>.</p></li>
 </ul>
-<p>Below is an example of <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> authorization through URL. Given the URL of
-the page where Talkable campaign is integrated: <a class="reference external" rel="nofollow" href="http://example.com/share">http://example.com/share</a>:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>http://example.com/share?email=advocate%40example.com
+<p>Personal name sharing channel is available as a configuration localization on Advocate share page
+in all new campaign templates. It should be enabled so that the Advocate can enter/edit their name on a share page.</p>
+<p>If you don’t have the localization in your campaign code, you can add it manually in the HTML &amp; CSS editor mode.</p>
+<div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="na">advocate_share_page_channel_personal_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;advocate_share_page_channel_personal_name&quot;</span><span class="w"> </span>|<span class="w"> </span><span class="na">localize</span><span class="o">:</span><span class="w"> </span><span class="na">trait</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;boolean&quot;</span><span class="p">,</span><span class="w"> </span><span class="na">default</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Disabled&quot;</span><span class="w"> </span><span class="p">%}</span>
 </pre></div>
 </div>
-<p>Location parameters have higher priority than explicit parameters passed in the
-integration.</p>
+<p>There can be multiple Advocate campaigns, as well as multiple Friend campaigns.
+Upon a reward claim by a Friend, the newest offer from the respective Advocate will be matched.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Make sure to set up both advocate and friend incentives in the Advocate campaign. The Claim by Name campaign
+does not hold any incentive configuration and only serves to show a claim widget.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Don’t forget to escape URL parameters with URI parameter encoder.</p>
+<p>All advocate and friend metrics are counted toward the Advocate campaign.</p>
 </div>
-<div class="hidden docutils container">
-<div class="toctree-wrapper compound">
-</div>
-</div>
+</section>
 </section>
 
 

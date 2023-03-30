@@ -137,7 +137,7 @@ goals for Advocates, they are more likely to increase their share rate.</p>
 </section>
 <section id="claim-by-name">
 <span id="campaigns-claim-by-name"></span><h2>Claim by Name<a class="headerlink" href="#claim-by-name" title="Permalink to this heading">¶</a></h2>
-<p>A Claim by Name campaign is a part of the name sharing setup for referral campaigns.
+<p>A Claim by Name campaign is a part of the <a class="reference internal" href="../advanced_features/name_sharing.html#advanced-features-name-sharing-setup"><span class="std std-ref">name sharing setup</span></a> for referral campaigns.
 The setup consists of the campaign(s) where the personal name sharing channel is enabled
 (the Advocate campaign) and the Claim by Name campaign (the Friend campaign).
 The Advocate can share their name and describe the referral offer via any channel they prefer,
@@ -147,16 +147,6 @@ and the Friend can then claim the reward by entering the Advocate’s personal n
 <p>Claim by Name campaign does not offer any incentives on its own. Both the Advocate and the Friend rewards
 should be specified in the name sharing campaign (i.e. the campaign with personal name sharing channel enabled).
 Similarly, the funnel metrics are also tracked within the Advocate campaign.</p>
-</div>
-<p>Personal name sharing channel is available as a configuration localization on Advocate share page
-in all new campaign templates.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You need to have the Claim by Name campaign launched to see the “Advocate share page channel personal name” localization.</p>
-</div>
-<p>If you don’t have the localization in your campaign code, you can add it manually in the HTML &amp; CSS editor mode.</p>
-<div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="na">advocate_share_page_channel_personal_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;advocate_share_page_channel_personal_name&quot;</span><span class="w"> </span>|<span class="w"> </span><span class="na">localize</span><span class="o">:</span><span class="w"> </span><span class="na">trait</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;boolean&quot;</span><span class="p">,</span><span class="w"> </span><span class="na">default</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Disabled&quot;</span><span class="w"> </span><span class="p">%}</span>
-</pre></div>
 </div>
 <img alt="Campaign Type - Claim by Name" class="is-minimal" src="../_images/claim_by_name.png" />
 </section>
