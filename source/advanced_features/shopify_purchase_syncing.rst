@@ -20,7 +20,7 @@ How it works?
 
 It works as a server-to-server integration between Shopify and Talkable using Shopify `orders/create` and `refunds/create` `webhooks <https://shopify.dev/api/admin-rest/2022-04/resources/webhook>`_.
 
-When enabling Purchase Syncing, Talkable creates and subscribes to this `orders/create` and `refunds/create` webhooks from the customer's Shopify store. When disabling the setting, the webhooks and the subscription are deleted.
+When enabling Purchase Syncing, Talkable creates and subscribes to `orders/create` and `refunds/create` webhooks from the customer's Shopify store. When disabling the setting, the webhook's subscriptions are deleted.
 
 Each time a purchase is placed on a customer's store, Shopify triggers the webhook and Talkable registers the purchase with attributes sent in the webhook’s payload.
 Whenever a purchase is refunded on a customer's store, Shopify triggers the refund webhook and Talkable updates the purchase status as refunded. If a purchase has a pending referral and a full refund is issued, the referral will be voided.
