@@ -65,3 +65,23 @@ goals for Advocates, they are more likely to increase their share rate.
 .. image:: /_static/img/campaign_types/tiered_rewards.png
    :alt: Campaign Type - Tiered Rewards
    :class: is-minimal
+
+.. _campaigns/claim_by_name:
+
+Claim by Name
+-------------
+
+A Claim by Name campaign is a part of the :ref:`name sharing setup <advanced_features/name_sharing_setup>` for referral campaigns.
+The setup consists of the campaign(s) where the personal name sharing channel is enabled
+(the Advocate campaign) and the Claim by Name campaign (the Friend campaign).
+The Advocate can share their name and describe the referral offer via any channel they prefer,
+and the Friend can then claim the reward by entering the Advocate's personal name in the Claim by Name popup.
+
+.. note::
+   Claim by Name campaign does not offer any incentives on its own. Both the Advocate and the Friend rewards
+   should be specified in the name sharing campaign (i.e. the campaign with personal name sharing channel enabled).
+   Similarly, the funnel metrics are also tracked within the Advocate campaign.
+
+.. image:: /_static/img/campaign_types/claim_by_name.png
+   :alt: Campaign Type - Claim by Name
+   :class: is-minimal
