@@ -4,18 +4,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<meta content="Phone number feature allows you to collect customers' phone numbers inside your campaigns and use them for promotions." name="description" />
+<meta content="Talkable allows the Advocates to share referral offers by their names." name="description" />
 
-    <title>Phone number gating &#8212; Talkable Documentation</title>
+    <title>Name Sharing &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
-    <link rel="canonical" href="https://docs.talkable.com/advanced_features/phone_number_gating.html" />
+    <link rel="canonical" href="https://docs.talkable.com/advanced_features/name_sharing.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Referrals Approval" href="referrals_approval.html" />
-    <link rel="prev" title="Pass Custom User Data" href="passing_custom_data.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <link rel="next" title="Converting Into Localization" href="converting_into_localization.html" />
+    <link rel="prev" title="Advocate Personal Coupon Sharing" href="personal_coupon_sharing.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
   <link href="../_static/pygments-github.css" rel="stylesheet">
   <link href="../_static/img/favicon.ico" rel="shortcut icon" />
   </head><body>
@@ -47,7 +47,11 @@
 <li class="toctree-l2"><a class="reference internal" href="shopify_purchase_syncing.html">Shopify Purchase Syncing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="track_methods.html">Referral Tracking Methods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="personal_coupon_sharing.html">Advocate Personal Coupon Sharing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="name_sharing.html">Name Sharing</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Name Sharing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#name-sharing-user-flow">Name Sharing User Flow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#name-sharing-setup">Name Sharing Setup</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="converting_into_localization.html">Converting Into Localization</a></li>
 <li class="toctree-l2"><a class="reference internal" href="customer_service_portal.html">Customer Service Portal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="params_encryption.html">Params Encryption</a></li>
@@ -56,10 +60,7 @@
 <li class="toctree-l2"><a class="reference internal" href="report_password_protection.html">Report Password Protection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="product_items.html">Including Product Items</a></li>
 <li class="toctree-l2"><a class="reference internal" href="passing_custom_data.html">Pass Custom User Data</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Phone number gating</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#synchronization-with-esps">Synchronization with ESPs</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="phone_number_gating.html">Phone number gating</a></li>
 <li class="toctree-l2"><a class="reference internal" href="referrals_approval.html">Referrals Approval</a></li>
 <li class="toctree-l2"><a class="reference internal" href="product_sku.html">Segment With Product SKU</a></li>
 <li class="toctree-l2"><a class="reference internal" href="traffic_source.html">Segment With Traffic Source</a></li>
@@ -105,30 +106,55 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="advanced-features-phone-number-gating"></span><section id="phone-number-gating">
-<h1>Phone number gating<a class="headerlink" href="#phone-number-gating" title="Permalink to this heading">¶</a></h1>
-<p>Phone number feature allows you to collect customers’ phone numbers inside your campaigns and use them for promotions.</p>
-<p>You can set the phone number as a required field for customers to join the campaign or get a reward.
-Setting can be found inside <code class="docutils literal notranslate"><span class="pre">Campaign</span> <span class="pre">→</span> <span class="pre">Rules</span> <span class="pre">→</span> <span class="pre">Extra</span> <span class="pre">section</span></code> for both Advocate and Friend.</p>
-<img alt="../_images/phone_number_gating_for_advocate.png" src="../_images/phone_number_gating_for_advocate.png" />
+  <span class="target" id="advanced-features-name-sharing"></span><section id="name-sharing">
+<h1>Name Sharing<a class="headerlink" href="#name-sharing" title="Permalink to this heading">¶</a></h1>
+<p>There is a way to enable sharing referral offers by the <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> name.</p>
+<section id="name-sharing-user-flow">
+<h2>Name Sharing User Flow<a class="headerlink" href="#name-sharing-user-flow" title="Permalink to this heading">¶</a></h2>
+<p>For users, the name sharing would proceed as follows:</p>
+<ol class="arabic simple">
+<li><p>The Advocate opens the referral offer share page.</p></li>
+<li><p>The Advocate opts to share the offer by their personal name.</p></li>
+<li><p>The Advocate confirms or edits their personal name <a class="footnote-reference brackets" href="#f1" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.</p></li>
+<li><p>The Advocate tells their personal name to their Friends in any way they find suitable.</p></li>
+<li><p>The Friend visits site and opens the Claim by Name widget.</p></li>
+<li><p>The Friend enters their email and the Advocate’s name.</p></li>
+<li><p>The Friend receives a Click Reward (if it was configured in the Advocate campaign).</p></li>
+</ol>
+<hr class="docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>A personal name should be unique within a site and be 3 to 50 symbols long.
+It can only contain latin letters, numbers, and underscore as a separator.
+A personal name cannot begin with a number.</p>
+</aside>
+</aside>
+</section>
+<section id="name-sharing-setup">
+<span id="advanced-features-name-sharing-setup"></span><h2>Name Sharing Setup<a class="headerlink" href="#name-sharing-setup" title="Permalink to this heading">¶</a></h2>
+<p>To make name sharing work, at least two referral campaigns are required:</p>
+<ul class="simple">
+<li><p>one for <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> (it can be any campaign that has a share page)</p></li>
+<li><p>one for <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> - a <a class="reference internal" href="../campaigns/campaign_types.html#campaigns-claim-by-name"><span class="std std-ref">Claim by Name campaign</span></a>.</p></li>
+</ul>
+<p>Personal name sharing channel is available as a configuration localization on Advocate share page
+in all new campaign templates. It should be enabled so that the Advocate can enter/edit their name on a share page.</p>
+<p>If you don’t have the localization in your campaign code, you can add it manually in the HTML &amp; CSS editor mode.</p>
+<div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="na">advocate_share_page_channel_personal_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;advocate_share_page_channel_personal_name&quot;</span><span class="w"> </span>|<span class="w"> </span><span class="na">localize</span><span class="o">:</span><span class="w"> </span><span class="na">trait</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;boolean&quot;</span><span class="p">,</span><span class="w"> </span><span class="na">default</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Disabled&quot;</span><span class="w"> </span><span class="p">%}</span>
+</pre></div>
+</div>
+<p>There can be multiple Advocate campaigns, as well as multiple Friend campaigns.
+Upon a reward claim by a Friend, the newest offer from the respective Advocate will be matched.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Make sure to set up both advocate and friend incentives in the Advocate campaign. The Claim by Name campaign
+does not hold any incentive configuration and only serves to show a claim widget.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Currently, phone number gating can be enabled only with enabled email gating.</p>
+<p>All advocate and friend metrics are counted toward the Advocate campaign.</p>
 </div>
-<p>Inside the campaign, you can change the default setting for the consent checkbox.</p>
-<img alt="../_images/phone_number_campaign_settings.jpg" src="../_images/phone_number_campaign_settings.jpg" />
-<section id="synchronization-with-esps">
-<h2>Synchronization with ESPs<a class="headerlink" href="#synchronization-with-esps" title="Permalink to this heading">¶</a></h2>
-<p>You can configure App store apps to send opt-ins with a customer’s phone number.
-Currently, a phone number can be used for the next apps:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="../email_marketing_and_automation/attentive.html#email-marketing-and-automation-attentive"><span class="std std-ref">Attentive</span></a></p></li>
-<li><p><a class="reference internal" href="../email_marketing_and_automation/oracle_bronto.html#email-marketing-and-automation-oracle-bronto"><span class="std std-ref">Bronto</span></a></p></li>
-<li><p><a class="reference internal" href="../email_marketing_and_automation/klaviyo.html#email-marketing-and-automation-klaviyo"><span class="std std-ref">Klaviyo</span></a></p></li>
-<li><p><a class="reference internal" href="../email_marketing_and_automation/hubspot.html#email-marketing-and-automation-hubspot"><span class="std std-ref">HubSpot</span></a></p></li>
-</ul>
-<p>Sample configuration</p>
-<img alt="../_images/phone_number_sync_appstore.png" src="../_images/phone_number_sync_appstore.png" />
 </section>
 </section>
 

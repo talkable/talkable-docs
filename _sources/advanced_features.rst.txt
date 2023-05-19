@@ -95,6 +95,7 @@ each with links to integration details.
     advanced_features/shopify_purchase_syncing
     advanced_features/track_methods
     advanced_features/personal_coupon_sharing
+    advanced_features/name_sharing
     advanced_features/converting_into_localization
     advanced_features/customer_service_portal
     advanced_features/params_encryption

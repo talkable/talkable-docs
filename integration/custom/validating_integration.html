@@ -129,8 +129,8 @@ in the location where you placed the Talkable Container DIV.</p>
 <h2>How to create or check for existing campaigns<a class="headerlink" href="#how-to-create-or-check-for-existing-campaigns" title="Permalink to this heading">¶</a></h2>
 <p>You’ll need to have a campaign of each type in order to validate
 display.</p>
-<p>There are 4 types:</p>
-<ol class="arabic simple">
+<p>There are 5 types:</p>
+<ol class="arabic">
 <li><p><span class="underline">Post Purchase:</span> displays as a pop up after checkout</p></li>
 <li><p><span class="underline">Floating Widget:</span> displays as a floating widget button on your home
 page (and every page)</p></li>
@@ -138,6 +138,13 @@ page (and every page)</p></li>
 page</p></li>
 <li><p><span class="underline">Advocate Dashboard Standalone:</span> displays inline in your /referrals
 page</p></li>
+<li><p><span class="underline">Claim by Name</span> displays as a floating widget button on your checkout page.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Claim by Name campaign has its own DIV container and can be shown along with the Floating Widget on the same page.
+The DIV id is <cite>talkable-claim-by-name</cite>.</p>
+</div>
+</li>
 </ol>
 <ul class="simple">
 <li><p><span class="underline">How to create campaigns:</span> Here’s a video showing you how to quickly
@@ -164,6 +171,10 @@ these in the URL using the following guidelines:</p>
 </li>
 <li><p>Referral Dashboard:</p>
 <p><cite>www.your-site.com/referrals?tkbl_campaign_id=11113</cite></p>
+</li>
+<li><p>Claim by Name widget:</p>
+<p><cite>www.your-site.com/cart?tkbl_campaign_id=11114</cite> or
+<cite>www.your-site.com/checkouts?tkbl_campaign_id=11114</cite></p>
 </li>
 </ol>
 <p>Note that campaigns must be newly created campaigns in test mode to be
