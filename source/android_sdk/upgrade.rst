@@ -6,6 +6,11 @@ Upgrade
 
 Sometimes we need you to upgrade existing integration to use our latest features.
 
+0.5.12
+------
+
+Migrated to `AndroidX`, updated Facebook SDK.
+
 0.5.11
 ------
 
