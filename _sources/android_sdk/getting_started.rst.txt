@@ -27,7 +27,7 @@ Installation
 
       dependencies {
         ...
-        implementation 'com.github.talkable:android-sdk:0.5.11'
+        implementation 'com.github.talkable:android-sdk:0.5.12'
       }
 
 .. _setup_credentials:
