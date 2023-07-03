@@ -28,7 +28,7 @@ Automatic integration
 4. Click “Integrate automatically“
 5. Turn on coupon auto-sync checkbox
 6. Create, set up, and launch Campaigns (Invite, Advocate Dashboard, etc.)
-7. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`.
+7. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`
 
   .. note::
 
