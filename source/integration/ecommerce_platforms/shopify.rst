@@ -23,7 +23,7 @@ Automatic integration
 |space_indent| - Provide a valid Shopify store URL. Example: |example_link|. |br|
 |space_indent| - Choose “Shopify” as your platform during registration process
 
-2. Visit the install link that has been provided by the Integration team. You will be redirected to your Shopify store, log in and click the install button
+2. Install the Shopify integration app via the link provided by Talkable team
 3. After successful installation you will be redirected back to Talkable
 4. Click “Integrate automatically“
 5. Turn on coupon auto-sync checkbox
