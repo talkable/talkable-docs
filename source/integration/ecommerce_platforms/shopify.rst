@@ -24,7 +24,7 @@ Automatic integration
 |space_indent| - Choose “Shopify” as your platform during registration process
 
 2. Install the Shopify integration app via the link provided by Talkable team
-3. After successful installation you will be redirected back to Talkable
+3. After the successful installation you will be redirected back to Talkable
 4. Click “Integrate automatically“
 5. Turn on coupon auto-sync checkbox
 6. Create, set up, and launch Campaigns (Invite, Advocate Dashboard, etc.)
