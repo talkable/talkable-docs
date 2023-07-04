@@ -129,9 +129,10 @@ different from Shopify Purchase ID (Talkable default Shopify integration behavio
 </section>
 <section id="how-it-works">
 <h2>How it works?<a class="headerlink" href="#how-it-works" title="Permalink to this heading">¶</a></h2>
-<p>It works as a server-to-server integration between Shopify and Talkable using Shopify <cite>orders/create</cite> <a class="reference external" rel="nofollow" href="https://shopify.dev/api/admin-rest/2022-04/resources/webhook">webhook</a>.</p>
-<p>When enabling Purchase Syncing, Talkable creates and subscribes to this <cite>orders/create</cite> webhook from the customer’s Shopify store. When disabling the setting, the webhook and the subscription are deleted.</p>
-<p>Each time a purchase is placed on a customer’s store, Shopify triggers the webhook and Talkable registers the purchase with attributes sent in the webhook’s payload.</p>
+<p>It works as a server-to-server integration between Shopify and Talkable using Shopify <cite>orders/create</cite> and <cite>refunds/create</cite> <a class="reference external" rel="nofollow" href="https://shopify.dev/api/admin-rest/2022-04/resources/webhook">webhooks</a>.</p>
+<p>When enabling Purchase Syncing, Talkable creates and subscribes to <cite>orders/create</cite> and <cite>refunds/create</cite> webhooks from the customer’s Shopify store. When disabling the setting, the webhook’s subscriptions are deleted.</p>
+<p>Each time a purchase is placed on a customer’s store, Shopify triggers the webhook and Talkable registers the purchase with attributes sent in the webhook’s payload.
+Whenever a purchase is refunded on a customer’s store, Shopify triggers the refund webhook and Talkable updates the purchase status as refunded. If a purchase has a pending referral and a full refund is issued, the referral will be voided.</p>
 </section>
 <section id="shopify-webhook-payload-and-talkable-purchase-attributes-mapping">
 <h2>Shopify Webhook payload and Talkable Purchase attributes mapping<a class="headerlink" href="#shopify-webhook-payload-and-talkable-purchase-attributes-mapping" title="Permalink to this heading">¶</a></h2>
