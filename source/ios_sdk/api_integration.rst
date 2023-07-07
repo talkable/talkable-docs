@@ -194,8 +194,6 @@ to fetch the Offer.
       NSDictionary* offerParams = [response objectForKey:TKBLOfferKey];
   }];
 
-Alternatively, you can subscribe to a ``TKBLDidReceiveReward`` notification as described in the :ref:`Advanced Usage <ios_sdk/advanced/notifications>` section.
-
 .. container:: hidden
 
    .. toctree::
