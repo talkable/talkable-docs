@@ -197,20 +197,6 @@ corresponding sharing view.</p>
 </div>
 </div></blockquote>
 <ol class="arabic simple" start="2">
-<li><p>Receive the reward given to an Advocate:</p></li>
-</ol>
-<blockquote>
-<div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="cp">#import &lt;TalkableSDK/Talkable.h&gt;</span>
-<span class="c1">// ...</span>
-<span class="p">[[</span><span class="bp">NSNotificationCenter</span><span class="w"> </span><span class="n">defaultCenter</span><span class="p">]</span><span class="w"> </span><span class="n">addObserver</span><span class="o">:</span><span class="nb">self</span><span class="w"> </span><span class="n">selector</span><span class="o">:</span><span class="k">@selector</span><span class="p">(</span><span class="n">rewardReceived</span><span class="o">:</span><span class="p">)</span><span class="w"> </span><span class="n">name</span><span class="o">:</span><span class="n">TKBLDidReceiveReward</span><span class="w"> </span><span class="n">object</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span><span class="w"></span>
-<span class="c1">// ...</span>
-<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">rewardReceived:</span><span class="p">(</span><span class="bp">NSNotification</span><span class="o">*</span><span class="p">)</span><span class="nv">ntf</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="c1">// Your logic here</span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-</div></blockquote>
-<ol class="arabic simple" start="3">
 <li><p>Catch every message from presented offer:</p></li>
 </ol>
 <blockquote>
