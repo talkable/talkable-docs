@@ -38,6 +38,9 @@ The criteria can be defined using one of the following operators:
 * `not_eq`
 * `regex` (performs a case-insensitive match)
 
+.. note::
+  Custom Property Criteria require integration version 5.1.4 or higher to work.
+
 |hr|
 
 .. raw:: html
