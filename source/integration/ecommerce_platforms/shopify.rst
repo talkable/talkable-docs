@@ -25,10 +25,9 @@ Automatic integration
 
 2. Install the Shopify integration app via the link provided by Talkable team
 3. After the successful installation you will be redirected back to Talkable
-4. Click “Integrate automatically“
-5. Turn on coupon auto-sync checkbox
-6. Create, set up, and launch Campaigns (Invite, Advocate Dashboard, etc.)
-7. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`
+4. Enable “Referral Integration“ toggle
+5. Create, set up, and launch Campaigns (Invite, Advocate Dashboard, etc.)
+6. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`
 
   .. note::
 
