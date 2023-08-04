@@ -124,19 +124,19 @@ Also, you can find a brief list of software that has PGP capability
 <h2>How To Import the Talkable Public Key<a class="headerlink" href="#how-to-import-the-talkable-public-key" title="Permalink to this heading">¶</a></h2>
 <p>Before encrypting or decrypting you should import the Talkable public key.
 Here is a command to do it:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl https://d2jjzw81hqbuqv.cloudfront.net/integration/talkable_public_key.asc <span class="p">|</span> gpg --import
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>https://d2jjzw81hqbuqv.cloudfront.net/integration/talkable_public_key.asc<span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--import
 </pre></div>
 </div>
 <p>To check that the Talkable public key importing was done right, make sure that
 the next command is successful:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gpg --list-keys dev@talkable.com
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gpg<span class="w"> </span>--list-keys<span class="w"> </span>dev@talkable.com
 </pre></div>
 </div>
 </section>
 <section id="encrypting">
 <h2>Encrypting<a class="headerlink" href="#encrypting" title="Permalink to this heading">¶</a></h2>
 <p>To encrypt data, you can use the following syntax:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gpg --encrypt --sign --armor -r dev@talkable.com name_of_file
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gpg<span class="w"> </span>--encrypt<span class="w"> </span>--sign<span class="w"> </span>--armor<span class="w"> </span>-r<span class="w"> </span>dev@talkable.com<span class="w"> </span>name_of_file
 </pre></div>
 </div>
 <p>This encrypts data using the Talkable public key and signs it with your own
@@ -153,7 +153,7 @@ you want to be able to read the encrypted message.</p>
 <section id="decrypting">
 <h2>Decrypting<a class="headerlink" href="#decrypting" title="Permalink to this heading">¶</a></h2>
 <p>To decrypt a file simply call GPG on it:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gpg file_name.asc
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>gpg<span class="w"> </span>file_name.asc
 </pre></div>
 </div>
 <div class="hidden docutils container">
