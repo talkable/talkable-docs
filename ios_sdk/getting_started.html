@@ -132,7 +132,7 @@
 <h3>CocoaPods<a class="headerlink" href="#cocoapods" title="Permalink to this heading">¶</a></h3>
 <p>To integrate Talkable SDK into your Xcode project using CocoaPods, specify it in your <a class="reference external" rel="nofollow" href="https://guides.cocoapods.org/using/the-podfile.html">Podfile</a>:</p>
 <blockquote>
-<div><div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">pod</span><span class="w"> </span><span class="s1">&#39;TalkableSDK&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;~&gt; 1.5.1&#39;</span>
+<div><div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="n">pod</span> <span class="s1">&#39;TalkableSDK&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 1.5.1&#39;</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -159,7 +159,7 @@ It should already be included by default after following the steps above, howeve
 <blockquote>
 <div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="cp">#import &lt;TalkableSDK/Talkable.h&gt;</span>
 <span class="c1">// ...</span>
-<span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="n">setApiKey</span><span class="o">:</span><span class="s">@&quot;YOUR_TALKABLE_PUBLIC_API_KEY&quot;</span><span class="w"> </span><span class="n">andSiteId</span><span class="o">:</span><span class="s">@&quot;YOUR_SITE_ID&quot;</span><span class="p">];</span>
+<span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="n">setApiKey</span><span class="o">:</span><span class="s">@&quot;YOUR_TALKABLE_PUBLIC_API_KEY&quot;</span><span class="w"> </span><span class="n">andSiteId</span><span class="o">:</span><span class="s">@&quot;YOUR_SITE_ID&quot;</span><span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -180,12 +180,12 @@ Use only the <em>Public API Key</em> in your application submitted to the App St
 <li><p>Defines <cite>tkbl-YOUR-SITE-ID</cite> as URL Scheme in your Info.plist file:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>CFBundleURLTypes<span class="nt">&lt;/key&gt;</span>
 <span class="nt">&lt;array&gt;</span>
-<span class="w">  </span><span class="nt">&lt;dict&gt;</span>
-<span class="w">    </span><span class="nt">&lt;key&gt;</span>CFBundleURLSchemes<span class="nt">&lt;/key&gt;</span>
-<span class="w">    </span><span class="nt">&lt;array&gt;</span>
-<span class="w">      </span><span class="nt">&lt;string&gt;</span>tkbl-YOUR-SITE-ID<span class="nt">&lt;/string&gt;</span>
-<span class="w">    </span><span class="nt">&lt;/array&gt;</span>
-<span class="w">  </span><span class="nt">&lt;/dict&gt;</span>
+  <span class="nt">&lt;dict&gt;</span>
+    <span class="nt">&lt;key&gt;</span>CFBundleURLSchemes<span class="nt">&lt;/key&gt;</span>
+    <span class="nt">&lt;array&gt;</span>
+      <span class="nt">&lt;string&gt;</span>tkbl-YOUR-SITE-ID<span class="nt">&lt;/string&gt;</span>
+    <span class="nt">&lt;/array&gt;</span>
+  <span class="nt">&lt;/dict&gt;</span>
 <span class="nt">&lt;/array&gt;</span>
 </pre></div>
 </div>
@@ -194,10 +194,10 @@ Use only the <em>Public API Key</em> in your application submitted to the App St
 Also add <cite>fb-messenger</cite>, <cite>fbauth2</cite>, <cite>whatsapp</cite> schemes if you are going to utilize these sharing channels:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>LSApplicationQueriesSchemes<span class="nt">&lt;/key&gt;</span>
 <span class="nt">&lt;array&gt;</span>
-<span class="w">  </span><span class="nt">&lt;string&gt;</span>tkbl-YOUR-SITE-ID<span class="nt">&lt;/string&gt;</span>
-<span class="w">  </span><span class="nt">&lt;string&gt;</span>fb-messenger<span class="nt">&lt;/string&gt;</span>
-<span class="w">  </span><span class="nt">&lt;string&gt;</span>fbauth2<span class="nt">&lt;/string&gt;</span>
-<span class="w">  </span><span class="nt">&lt;string&gt;</span>whatsapp<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>tkbl-YOUR-SITE-ID<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>fb-messenger<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>fbauth2<span class="nt">&lt;/string&gt;</span>
+  <span class="nt">&lt;string&gt;</span>whatsapp<span class="nt">&lt;/string&gt;</span>
 <span class="nt">&lt;/array&gt;</span>
 </pre></div>
 </div>
@@ -216,7 +216,7 @@ if your site ID is <cite>my-store</cite>, the correct <cite>&lt;string&gt;</cite
 <blockquote>
 <div><div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="cp">#import &lt;TalkableSDK/Talkable.h&gt;</span>
 <span class="c1">// ...</span>
-<span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="n">handleOpenURL</span><span class="o">:</span><span class="n">url</span><span class="p">];</span>
+<span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="n">handleOpenURL</span><span class="o">:</span><span class="n">url</span><span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 </div></blockquote>

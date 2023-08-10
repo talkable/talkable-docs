@@ -109,29 +109,29 @@ and add Talkable SDK as a module dependency to your main module</p>
 </div>
 </li>
 <li><p>Add Talkable SDK dependencies to <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>:</p>
-<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="o">...</span>
-<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;com.squareup.okhttp3:okhttp:3.2.0&#39;</span>
-<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;com.facebook.android:facebook-android-sdk:[4,5)&#39;</span>
-<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;im.getsocial:getsocial-core:[6,7)@aar&#39;</span>
-<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;com.android.installreferrer:installreferrer:1.0&#39;</span>
-<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;com.google.code.gson:gson:2.8.0&#39;</span>
-<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;com.android.support:support-v4:27.1.1&#39;</span>
-<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="n">project</span><span class="o">(</span><span class="s1">&#39;:talkable-sdk&#39;</span><span class="o">)</span>
-<span class="w">    </span><span class="o">...</span>
-<span class="o">}</span>
+<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
+<span class="w">    </span><span class="o">...</span><span class="w"></span>
+<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;com.squareup.okhttp3:okhttp:3.2.0&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;com.facebook.android:facebook-android-sdk:[4,5)&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;im.getsocial:getsocial-core:[6,7)@aar&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;com.android.installreferrer:installreferrer:1.0&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;com.google.code.gson:gson:2.8.0&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;com.android.support:support-v4:27.1.1&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="n">project</span><span class="o">(</span><span class="s1">&#39;:talkable-sdk&#39;</span><span class="o">)</span><span class="w"></span>
+<span class="w">    </span><span class="o">...</span><span class="w"></span>
+<span class="o">}</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
 <li><p>Add GetSocial Maven Repository to the list of project dependency
 repositories inside your top-level <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>:</p>
-<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">allprojects</span><span class="w"> </span><span class="o">{</span>
-<span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
-<span class="w">        </span><span class="o">...</span>
-<span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="s1">&#39;http://maven.getsocial.im/&#39;</span><span class="w"> </span><span class="o">}</span>
-<span class="w">        </span><span class="o">...</span>
-<span class="w">    </span><span class="o">}</span>
-<span class="o">}</span>
+<div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">allprojects</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">repositories</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
+<span class="w">        </span><span class="o">...</span><span class="w"></span>
+<span class="w">        </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="s1">&#39;http://maven.getsocial.im/&#39;</span><span class="w"> </span><span class="o">}</span><span class="w"></span>
+<span class="w">        </span><span class="o">...</span><span class="w"></span>
+<span class="w">    </span><span class="o">}</span><span class="w"></span>
+<span class="o">}</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
@@ -144,22 +144,22 @@ repositories inside your top-level <code class="docutils literal notranslate"><s
 <li><p>Specify Talkable credentials as a meta-data inside the <code class="docutils literal notranslate"><span class="pre">&lt;application&gt;</span></code> tag
 in the following format:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;application&gt;</span>
-<span class="w">    </span>...
-<span class="w">    </span><span class="nt">&lt;meta-data</span>
-<span class="w">        </span><span class="na">android:name=</span><span class="s">&quot;tkbl-api-key-YOUR_SITE_SLUG&quot;</span>
-<span class="w">        </span><span class="na">android:value=</span><span class="s">&quot;YOUR_TALKABLE_PUBLIC_API_KEY&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">    </span>...
+    ...
+    <span class="nt">&lt;meta-data</span>
+        <span class="na">android:name=</span><span class="s">&quot;tkbl-api-key-YOUR_SITE_SLUG&quot;</span>
+        <span class="na">android:value=</span><span class="s">&quot;YOUR_TALKABLE_PUBLIC_API_KEY&quot;</span> <span class="nt">/&gt;</span>
+    ...
 <span class="nt">&lt;/application&gt;</span>
 </pre></div>
 </div>
 </li>
 <li><p>Specify GetSocial App ID as a meta-data inside the <code class="docutils literal notranslate"><span class="pre">&lt;application&gt;</span></code> tag:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;application&gt;</span>
-<span class="w">    </span>...
-<span class="w">    </span><span class="nt">&lt;meta-data</span>
-<span class="w">        </span><span class="na">android:name=</span><span class="s">&quot;im.getsocial.sdk.AppId&quot;</span>
-<span class="w">        </span><span class="na">android:value=</span><span class="s">&quot;YOUR_GETSOCIAL_APP_ID&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">    </span>...
+    ...
+    <span class="nt">&lt;meta-data</span>
+        <span class="na">android:name=</span><span class="s">&quot;im.getsocial.sdk.AppId&quot;</span>
+        <span class="na">android:value=</span><span class="s">&quot;YOUR_GETSOCIAL_APP_ID&quot;</span> <span class="nt">/&gt;</span>
+    ...
 <span class="nt">&lt;/application&gt;</span>
 </pre></div>
 </div>
@@ -167,13 +167,13 @@ in the following format:</p>
 <li><p>Add Content Provider for GetSocial SDK auto initialization inside the
 <code class="docutils literal notranslate"><span class="pre">&lt;application&gt;</span></code> tag:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;application&gt;</span>
-<span class="w">    </span>...
-<span class="w">    </span><span class="nt">&lt;provider</span>
-<span class="w">        </span><span class="na">android:authorities=</span><span class="s">&quot;YOUR_GETSOCIAL_APP_ID.AutoInitSdkContentProvider&quot;</span>
-<span class="w">        </span><span class="na">android:exported=</span><span class="s">&quot;false&quot;</span>
-<span class="w">        </span><span class="na">android:enabled=</span><span class="s">&quot;true&quot;</span>
-<span class="w">        </span><span class="na">android:name=</span><span class="s">&quot;im.getsocial.sdk.AutoInitSdkContentProvider&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">    </span>...
+    ...
+    <span class="nt">&lt;provider</span>
+        <span class="na">android:authorities=</span><span class="s">&quot;YOUR_GETSOCIAL_APP_ID.AutoInitSdkContentProvider&quot;</span>
+        <span class="na">android:exported=</span><span class="s">&quot;false&quot;</span>
+        <span class="na">android:enabled=</span><span class="s">&quot;true&quot;</span>
+        <span class="na">android:name=</span><span class="s">&quot;im.getsocial.sdk.AutoInitSdkContentProvider&quot;</span> <span class="nt">/&gt;</span>
+    ...
 <span class="nt">&lt;/application&gt;</span>
 </pre></div>
 </div>
@@ -181,13 +181,13 @@ in the following format:</p>
 <li><p>Configure Install Referrer Receiver as the <em>first</em> receiver for <code class="docutils literal notranslate"><span class="pre">INSTALL_REFERRER</span></code>
 inside the <code class="docutils literal notranslate"><span class="pre">&lt;application&gt;</span></code> tag:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;application&gt;</span>
-<span class="w">    </span>...
-<span class="w">    </span><span class="nt">&lt;receiver</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;im.getsocial.sdk.invites.MultipleInstallReferrerReceiver&quot;</span><span class="w">  </span><span class="na">android:exported=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
-<span class="w">        </span><span class="nt">&lt;intent-filter&gt;</span>
-<span class="w">            </span><span class="nt">&lt;action</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;com.android.vending.INSTALL_REFERRER&quot;</span><span class="nt">/&gt;</span>
-<span class="w">        </span><span class="nt">&lt;/intent-filter&gt;</span>
-<span class="w">    </span><span class="nt">&lt;/receiver&gt;</span>
-<span class="w">    </span>...
+    ...
+    <span class="nt">&lt;receiver</span> <span class="na">android:name=</span><span class="s">&quot;im.getsocial.sdk.invites.MultipleInstallReferrerReceiver&quot;</span>  <span class="na">android:exported=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;intent-filter&gt;</span>
+            <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;com.android.vending.INSTALL_REFERRER&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/intent-filter&gt;</span>
+    <span class="nt">&lt;/receiver&gt;</span>
+    ...
 <span class="nt">&lt;/application&gt;</span>
 </pre></div>
 </div>
@@ -195,27 +195,27 @@ inside the <code class="docutils literal notranslate"><span class="pre">&lt;appl
 <li><p>Add the following intent filter to the activity, that should be opened from the
 deep link, inside the corresponding tag:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;activity&gt;</span>
-<span class="w">    </span>...
-<span class="w">   </span><span class="nt">&lt;intent-filter&gt;</span>
-<span class="w">       </span><span class="nt">&lt;action</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.intent.action.VIEW&quot;</span><span class="nt">/&gt;</span>
+    ...
+   <span class="nt">&lt;intent-filter&gt;</span>
+       <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.action.VIEW&quot;</span><span class="nt">/&gt;</span>
 
-<span class="w">       </span><span class="nt">&lt;category</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.intent.category.DEFAULT&quot;</span><span class="nt">/&gt;</span>
-<span class="w">       </span><span class="nt">&lt;category</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.intent.category.BROWSABLE&quot;</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.DEFAULT&quot;</span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.BROWSABLE&quot;</span><span class="nt">/&gt;</span>
 
-<span class="w">       </span><span class="nt">&lt;data</span>
-<span class="w">           </span><span class="na">android:host=</span><span class="s">&quot;YOUR_GETSOCIAL_APP_ID&quot;</span>
-<span class="w">           </span><span class="na">android:scheme=</span><span class="s">&quot;getsocial&quot;</span><span class="nt">/&gt;</span>
-<span class="w">   </span><span class="nt">&lt;/intent-filter&gt;</span>
+       <span class="nt">&lt;data</span>
+           <span class="na">android:host=</span><span class="s">&quot;YOUR_GETSOCIAL_APP_ID&quot;</span>
+           <span class="na">android:scheme=</span><span class="s">&quot;getsocial&quot;</span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;/intent-filter&gt;</span>
 
-<span class="w">   </span><span class="nt">&lt;intent-filter&gt;</span>
-<span class="w">       </span><span class="nt">&lt;action</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.intent.action.VIEW&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+   <span class="nt">&lt;intent-filter&gt;</span>
+       <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.action.VIEW&quot;</span> <span class="nt">/&gt;</span>
 
-<span class="w">       </span><span class="nt">&lt;category</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.intent.category.DEFAULT&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">       </span><span class="nt">&lt;category</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.intent.category.BROWSABLE&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+       <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.DEFAULT&quot;</span> <span class="nt">/&gt;</span>
+       <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.BROWSABLE&quot;</span> <span class="nt">/&gt;</span>
 
-<span class="w">       </span><span class="nt">&lt;data</span><span class="w"> </span><span class="na">android:scheme=</span><span class="s">&quot;tkbl-YOUR_SITE_SLUG&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">   </span><span class="nt">&lt;/intent-filter&gt;</span>
-<span class="w">   </span>...
+       <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;tkbl-YOUR_SITE_SLUG&quot;</span> <span class="nt">/&gt;</span>
+   <span class="nt">&lt;/intent-filter&gt;</span>
+   ...
 <span class="nt">&lt;/activity&gt;</span>
 </pre></div>
 </div>
@@ -227,15 +227,15 @@ the official <a class="reference external" rel="nofollow" href="https://develope
 To set them up add intent filter with the following host configuration
 to the activity that must be opened from the deep link:</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;activity&gt;</span>
-<span class="w">    </span>...
-<span class="w">   </span><span class="nt">&lt;intent-filter</span><span class="w"> </span><span class="na">android:autoVerify=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
-<span class="w">       </span><span class="nt">&lt;action</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.intent.action.VIEW&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">       </span><span class="nt">&lt;category</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.intent.category.DEFAULT&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">       </span><span class="nt">&lt;category</span><span class="w"> </span><span class="na">android:name=</span><span class="s">&quot;android.intent.category.BROWSABLE&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">       </span><span class="nt">&lt;data</span><span class="w"> </span><span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span><span class="w"> </span><span class="na">android:host=</span><span class="s">&quot;YOUR_LINK_DOMAIN_PREFIX.gsc.im&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">       </span><span class="nt">&lt;data</span><span class="w"> </span><span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span><span class="w"> </span><span class="na">android:host=</span><span class="s">&quot;YOUR_LINK_DOMAIN_PREFIX-gsalt.gsc.im&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<span class="w">   </span><span class="nt">&lt;/intent-filter&gt;</span>
-<span class="w">   </span>...
+    ...
+   <span class="nt">&lt;intent-filter</span> <span class="na">android:autoVerify=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+       <span class="nt">&lt;action</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.action.VIEW&quot;</span> <span class="nt">/&gt;</span>
+       <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.DEFAULT&quot;</span> <span class="nt">/&gt;</span>
+       <span class="nt">&lt;category</span> <span class="na">android:name=</span><span class="s">&quot;android.intent.category.BROWSABLE&quot;</span> <span class="nt">/&gt;</span>
+       <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;YOUR_LINK_DOMAIN_PREFIX.gsc.im&quot;</span> <span class="nt">/&gt;</span>
+       <span class="nt">&lt;data</span> <span class="na">android:scheme=</span><span class="s">&quot;https&quot;</span> <span class="na">android:host=</span><span class="s">&quot;YOUR_LINK_DOMAIN_PREFIX-gsalt.gsc.im&quot;</span> <span class="nt">/&gt;</span>
+   <span class="nt">&lt;/intent-filter&gt;</span>
+   ...
 <span class="nt">&lt;/activity&gt;</span>
 </pre></div>
 </div>
@@ -246,15 +246,15 @@ to the activity that must be opened from the deep link:</p>
 <h2>SDK Initialization<a class="headerlink" href="#sdk-initialization" title="Permalink to this heading">¶</a></h2>
 <ol class="arabic">
 <li><p>Initialize Talkable in the <code class="docutils literal notranslate"><span class="pre">Application</span></code>:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.talkable.sdk.Talkable</span><span class="p">;</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.talkable.sdk.Talkable</span><span class="p">;</span><span class="w"></span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">App</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Application</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">();</span>
-<span class="w">        </span><span class="n">Talkable</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">App</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Application</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">Talkable</span><span class="p">.</span><span class="na">initialize</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -264,15 +264,15 @@ of the <code class="docutils literal notranslate"><span class="pre">&lt;applicat
 </div>
 </li>
 <li><p>Call the <code class="docutils literal notranslate"><span class="pre">Talkable.trackAppOpen</span></code> method inside your main activity:</p>
-<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.talkable.sdk.Talkable</span><span class="p">;</span>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.talkable.sdk.Talkable</span><span class="p">;</span><span class="w"></span>
 
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MainActivity</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Activity</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nd">@Override</span>
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">();</span>
-<span class="w">        </span><span class="n">Talkable</span><span class="p">.</span><span class="na">trackAppOpen</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MainActivity</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Activity</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nd">@Override</span><span class="w"></span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span><span class="w"> </span><span class="n">savedInstanceState</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="kd">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">();</span><span class="w"></span>
+<span class="w">        </span><span class="n">Talkable</span><span class="p">.</span><span class="na">trackAppOpen</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </li>

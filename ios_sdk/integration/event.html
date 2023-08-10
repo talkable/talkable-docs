@@ -96,14 +96,14 @@
 <p>An Event has two required properties: event category and event number. Please refer to <a class="reference internal" href="../../advanced_features/events.html#advanced-features-events-available-properties"><span class="std std-ref">available properties</span></a> for a complete list of optional properties.</p>
 <div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="cp">#import &lt;TalkableSDK/Talkable.h&gt;</span>
 <span class="c1">// ...</span>
-<span class="bp">NSDictionary</span><span class="o">*</span><span class="w"> </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="l">@{</span>
-<span class="w">  </span><span class="nl">TKBLCampaignTags</span><span class="p">:</span><span class="w"> </span><span class="s">@&quot;your-campaign-tag&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nl">TKBLEventKey</span><span class="p">:</span><span class="w"> </span><span class="l">@{</span>
-<span class="w">    </span><span class="nl">TKBLEventCategoryKey</span><span class="p">:</span><span class="w"> </span><span class="s">@&quot;subscription_purchased&quot;</span><span class="p">,</span>
+<span class="bp">NSDictionary</span><span class="o">*</span><span class="w"> </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="l">@{</span><span class="w"></span>
+<span class="w">  </span><span class="nl">TKBLCampaignTags</span><span class="p">:</span><span class="w"> </span><span class="s">@&quot;your-campaign-tag&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nl">TKBLEventKey</span><span class="p">:</span><span class="w"> </span><span class="l">@{</span><span class="w"></span>
+<span class="w">    </span><span class="nl">TKBLEventCategoryKey</span><span class="p">:</span><span class="w"> </span><span class="s">@&quot;subscription_purchased&quot;</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="nl">TKBLEventNumberKey</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="bp">NSUUID</span><span class="w"> </span><span class="n">UUID</span><span class="p">]</span><span class="w"> </span><span class="n">UUIDString</span><span class="p">]</span><span class="w"> </span><span class="c1">//must be unique for given category</span>
-<span class="w">  </span><span class="l">}</span>
-<span class="l">}</span><span class="p">;</span>
-<span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="n">registerOrigin</span><span class="o">:</span><span class="n">TKBLEvent</span><span class="w"> </span><span class="n">params</span><span class="o">:</span><span class="n">params</span><span class="p">];</span>
+<span class="w">  </span><span class="l">}</span><span class="w"></span>
+<span class="l">}</span><span class="p">;</span><span class="w"></span>
+<span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="n">registerOrigin</span><span class="o">:</span><span class="n">TKBLEvent</span><span class="w"> </span><span class="n">params</span><span class="o">:</span><span class="n">params</span><span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 <p>If you have a Talkable offer configured for this event, the Talkable campaign screen will be displayed as a result of calling the <code class="docutils literal notranslate"><span class="pre">registerOrigin</span></code> method.</p>
@@ -114,19 +114,19 @@
 <p>Customer data can be added to the registered event. Custom properties passed with the event will be added to the customer profile.</p>
 <div class="highlight-objc notranslate"><div class="highlight"><pre><span></span><span class="cp">#import &lt;TalkableSDK/Talkable.h&gt;</span>
 <span class="c1">// ...</span>
-<span class="bp">NSDictionary</span><span class="o">*</span><span class="w"> </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="l">@{</span>
-<span class="w">  </span><span class="nl">TKBLCampaignTags</span><span class="p">:</span><span class="w"> </span><span class="s">@&quot;your-campaign-tag&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nl">TKBLEventKey</span><span class="p">:</span><span class="w"> </span><span class="l">@{</span>
-<span class="w">    </span><span class="nl">TKBLEventEmailKey</span><span class="p">:</span><span class="w"> </span><span class="s">@&quot;customer@example.com&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nl">TKBLEventCategoryKey</span><span class="p">:</span><span class="w"> </span><span class="s">@&quot;subscription_purchased&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nl">TKBLEventNumberKey</span><span class="p">:</span><span class="w"> </span><span class="nb">self</span><span class="p">.</span><span class="n">orderNumberField</span><span class="p">.</span><span class="n">text</span><span class="p">,</span>
-<span class="w">    </span><span class="nl">TKBLEventPersonCustomPropertiesKey</span><span class="p">:</span><span class="w"> </span><span class="l">@{</span>
-<span class="w">        </span><span class="s">@&quot;property_key&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">@&quot;property_value&quot;</span>
-<span class="w">      </span><span class="l">}</span>
-<span class="w">    </span><span class="l">}</span>
-<span class="w">  </span><span class="l">}</span>
-<span class="p">};</span>
-<span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="n">registerOrigin</span><span class="o">:</span><span class="n">TKBLEvent</span><span class="w"> </span><span class="n">params</span><span class="o">:</span><span class="n">params</span><span class="p">];</span>
+<span class="bp">NSDictionary</span><span class="o">*</span><span class="w"> </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="l">@{</span><span class="w"></span>
+<span class="w">  </span><span class="nl">TKBLCampaignTags</span><span class="p">:</span><span class="w"> </span><span class="s">@&quot;your-campaign-tag&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nl">TKBLEventKey</span><span class="p">:</span><span class="w"> </span><span class="l">@{</span><span class="w"></span>
+<span class="w">    </span><span class="nl">TKBLEventEmailKey</span><span class="p">:</span><span class="w"> </span><span class="s">@&quot;customer@example.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nl">TKBLEventCategoryKey</span><span class="p">:</span><span class="w"> </span><span class="s">@&quot;subscription_purchased&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nl">TKBLEventNumberKey</span><span class="p">:</span><span class="w"> </span><span class="nb">self</span><span class="p">.</span><span class="n">orderNumberField</span><span class="p">.</span><span class="n">text</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nl">TKBLEventPersonCustomPropertiesKey</span><span class="p">:</span><span class="w"> </span><span class="l">@{</span><span class="w"></span>
+<span class="w">        </span><span class="s">@&quot;property_key&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">@&quot;property_value&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="l">}</span><span class="w"></span>
+<span class="w">    </span><span class="l">}</span><span class="w"></span>
+<span class="w">  </span><span class="l">}</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+<span class="p">[[</span><span class="n">Talkable</span><span class="w"> </span><span class="n">manager</span><span class="p">]</span><span class="w"> </span><span class="n">registerOrigin</span><span class="o">:</span><span class="n">TKBLEvent</span><span class="w"> </span><span class="n">params</span><span class="o">:</span><span class="n">params</span><span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Please refer to the <a class="reference internal" href="../../advanced_features/events.html#advanced-features-events"><span class="std std-ref">Integrating Events</span></a> page to learn more about event-based campaigns.</p>
