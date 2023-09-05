@@ -2,13 +2,13 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: With Custom App clients can synchronize data that Talkable collected with their apps such as site, ESP, CDP.
+  :description: Custom App allows you to send Talkable data to a desired destination such as your site, ESP, CDP.
 
 Custom App
 =========
 
-With Custom App clients can synchronize data that Talkable collected with their apps such as site, ESP, CDP.
-Talkable will send a webhook with data to the Custom App for each customer's event specified by clients in Custom App settings.
+Custom App allows you to send Talkable data to a desired destination such as your site, ESP, CDP.
+Talkable will send a request with data to the Custom App URL for each customer's event specified in the Custom App settings.
 
 Webhook Signature Verification
 ------------------------------
@@ -29,14 +29,21 @@ To verify signature, you must complete the following steps:
 
   - Encode a computed hash with **Base64**
 
-  Your Talkable **Webhook security key** can be found in the Webhook set up page.
+Your Talkable **Webhook security key** can be found in the Webhook set up page by navigating to **Menu** then **Webhooks**.
 
-  .. image:: /_static/img/webhook_secret_key.png
+.. image:: /_static/img/menu_webhooks_screenshot.png
+ :alt: Webhooks Menu Item
+
+.. raw:: html
+
+  <hr>
+
+.. image:: /_static/img/webhook_secret_key.png
     :alt: Webhook security key
 
 **3. Compare the signatures**
 
-  Compare the signature in the header to the expected signature.
+  Compare the signature from the header with your calculated signature.
 
 Examples:
 .........
@@ -49,10 +56,10 @@ Examples:
     require 'openssl'
     require 'active_support/security_utils'
 
-    API_SECRET_KEY = 'my_webhook_secret'
+    WEBHOOK_SECRET_KEY = 'my_webhook_secret'
 
     def verify_webhook(data, header_signature)
-      calculated_signature = Base64.strict_encode64(OpenSSL::HMAC.hexdigest('sha256', API_SECRET_KEY, data))
+      calculated_signature = Base64.strict_encode64(OpenSSL::HMAC.hexdigest('sha256', WEBHOOK_SECRET_KEY, data))
       ActiveSupport::SecurityUtils.secure_compare(calculated_signature, header_signature)
     end
 
@@ -62,17 +69,18 @@ Examples:
 
     const crypto = require('crypto');
 
-    const API_SECRET_KEY = 'my_webhook_secret';
+    const WEBHOOK_SECRET_KEY = 'my_webhook_secret';
 
     function verifyWebhook(data, headerSignature) {
         // Calculate HMAC
-        const calculatedSignature = crypto
-            .createHmac('sha256', API_SECRET_KEY)
+        const calculatedSignature = btoa(crypto
+            .createHmac('sha256', WEBHOOK_SECRET_KEY)
             .update(data)
-            .digest('hex');
+            .digest('hex')
+        );
 
         return crypto.timingSafeEqual(
-            Buffer.from(calculatedSignature).toString("base64"),
+            Buffer.from(calculatedSignature, 'base64'),
             Buffer.from(headerSignature, 'base64')
         );
     }
