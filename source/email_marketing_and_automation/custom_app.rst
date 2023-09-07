@@ -5,7 +5,7 @@
   :description: Custom App allows you to send Talkable data to a desired destination such as your site, ESP, CDP.
 
 Custom App
-=========
+==========
 
 Custom App allows you to send Talkable data to a desired destination such as your site, ESP, CDP.
 Talkable will send a request with data to the Custom App URL for each customer's event specified in the Custom App settings.
@@ -13,7 +13,7 @@ Talkable will send a request with data to the Custom App URL for each customer's
 Webhook Signature Verification
 ------------------------------
 
-The `x-talkable-signature` header is included in each request contains a signature that you have to verify to make sure the request is not compromised.
+The `x-talkable-signature` header is included in each request and contains a signature that you have to verify to make sure the request is not compromised.
 
 Talkable generates the signature using a `Base64 <https://en.wikipedia.org/wiki/Base64>`_ encoded hash-based message authentication code (`HMAC <https://en.wikipedia.org/wiki/HMAC>`_) with `SHA-256 <https://en.wikipedia.org/wiki/SHA-2>`_.
 
@@ -39,7 +39,7 @@ Your Talkable **Webhook security key** can be found in the Webhook set up page b
   <hr>
 
 .. image:: /_static/img/webhook_secret_key.png
-    :alt: Webhook security key
+    :alt: Webhook Security Key
 
 **3. Compare the signatures**
 
@@ -84,5 +84,3 @@ Examples:
             Buffer.from(headerSignature, 'base64')
         );
     }
-
-
