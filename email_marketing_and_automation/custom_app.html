@@ -95,12 +95,12 @@
 Talkable will send a request with data to the Custom App URL for each customer’s event specified in the Custom App settings.</p>
 <section id="webhook-signature-verification">
 <h2>Webhook Signature Verification<a class="headerlink" href="#webhook-signature-verification" title="Permalink to this heading">¶</a></h2>
-<p>The <cite>x-talkable-signature</cite> header included in each signed event contains signature that you must verify.</p>
-<p>Talkable generates signatures using a <a class="reference external" href="https://en.wikipedia.org/wiki/Base64">Base64</a> encoded hash-based message authentication code (<a class="reference external" href="https://en.wikipedia.org/wiki/HMAC">HMAC</a>) with <a class="reference external" rel="nofollow" href="https://en.wikipedia.org/wiki/SHA-2">SHA-256</a>.</p>
-<p>To verify signature, you must complete the following steps:</p>
+<p>The <cite>x-talkable-signature</cite> header is included in each request contains a signature that you have to verify to make sure the request is not compromised.</p>
+<p>Talkable generates the signature using a <a class="reference external" href="https://en.wikipedia.org/wiki/Base64">Base64</a> encoded hash-based message authentication code (<a class="reference external" href="https://en.wikipedia.org/wiki/HMAC">HMAC</a>) with <a class="reference external" rel="nofollow" href="https://en.wikipedia.org/wiki/SHA-2">SHA-256</a>.</p>
+<p>To verify the signature, you should complete the following steps:</p>
 <p><strong>1. Prepare the</strong> <cite>payload_json</cite> <strong>string</strong></p>
 <blockquote>
-<div><p>Create a JSON string from the payload of request.</p>
+<div><p>Create a JSON string from the payload of the request.</p>
 </div></blockquote>
 <p><strong>2. Determine the expected signature</strong></p>
 <blockquote>
