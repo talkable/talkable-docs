@@ -95,7 +95,7 @@
 Talkable will send a request with data to the Custom App URL for each customer’s event specified in the Custom App settings.</p>
 <section id="webhook-signature-verification">
 <h2>Webhook Signature Verification<a class="headerlink" href="#webhook-signature-verification" title="Permalink to this heading">¶</a></h2>
-<p>The <cite>x-talkable-signature</cite> header is included in each request contains a signature that you have to verify to make sure the request is not compromised.</p>
+<p>The <cite>x-talkable-signature</cite> header is included in each request and contains a signature that you have to verify to make sure the request is not compromised.</p>
 <p>Talkable generates the signature using a <a class="reference external" href="https://en.wikipedia.org/wiki/Base64">Base64</a> encoded hash-based message authentication code (<a class="reference external" href="https://en.wikipedia.org/wiki/HMAC">HMAC</a>) with <a class="reference external" rel="nofollow" href="https://en.wikipedia.org/wiki/SHA-2">SHA-256</a>.</p>
 <p>To verify the signature, you should complete the following steps:</p>
 <p><strong>1. Prepare the</strong> <cite>payload_json</cite> <strong>string</strong></p>
@@ -111,7 +111,7 @@ Talkable will send a request with data to the Custom App URL for each customer�
 </div></blockquote>
 <p>Your Talkable <strong>Webhook security key</strong> can be found in the Webhook set up page by navigating to <strong>Menu</strong> then <strong>Webhooks</strong>.</p>
 <img alt="Webhooks Menu Item" src="../_images/menu_webhooks_screenshot.png" />
-<hr><img alt="Webhook security key" src="../_images/webhook_secret_key.png" />
+<hr><img alt="Webhook Security Key" src="../_images/webhook_secret_key.png" />
 <p><strong>3. Compare the signatures</strong></p>
 <blockquote>
 <div><p>Compare the signature from the header with your calculated signature.</p>
