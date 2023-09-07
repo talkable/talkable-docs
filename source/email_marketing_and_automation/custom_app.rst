@@ -13,15 +13,15 @@ Talkable will send a request with data to the Custom App URL for each customer's
 Webhook Signature Verification
 ------------------------------
 
-The `x-talkable-signature` header included in each signed event contains signature that you must verify.
+The `x-talkable-signature` header is included in each request contains a signature that you have to verify to make sure the request is not compromised.
 
-Talkable generates signatures using a `Base64 <https://en.wikipedia.org/wiki/Base64>`_ encoded hash-based message authentication code (`HMAC <https://en.wikipedia.org/wiki/HMAC>`_) with `SHA-256 <https://en.wikipedia.org/wiki/SHA-2>`_.
+Talkable generates the signature using a `Base64 <https://en.wikipedia.org/wiki/Base64>`_ encoded hash-based message authentication code (`HMAC <https://en.wikipedia.org/wiki/HMAC>`_) with `SHA-256 <https://en.wikipedia.org/wiki/SHA-2>`_.
 
-To verify signature, you must complete the following steps:
+To verify the signature, you should complete the following steps:
 
 **1. Prepare the** `payload_json` **string**
 
-  Create a JSON string from the payload of request.
+  Create a JSON string from the payload of the request.
 
 **2. Determine the expected signature**
 
