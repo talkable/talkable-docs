@@ -19,3 +19,4 @@ Contents:
    email_marketing_and_automation/sailthru
    email_marketing_and_automation/hubspot
    email_marketing_and_automation/attentive
+   email_marketing_and_automation/custom_app

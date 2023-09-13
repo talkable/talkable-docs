@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+<meta content="Custom App allows you to send Talkable data to a desired destination such as your site, ESP, CDP." name="description" />
+
+    <title>Custom App &#8212; Talkable Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="canonical" href="https://docs.talkable.com/email_marketing_and_automation/custom_app.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Payment Solutions" href="../payment_solutions.html" />
+    <link rel="prev" title="Attentive" href="attentive.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+  <link href="../_static/pygments-github.css" rel="stylesheet">
+  <link href="../_static/img/favicon.ico" rel="shortcut icon" />
+  </head><body>
+  
+    <div class="header">
+      <a href="../index.html" class="header-logo">Talkable docs</a>
+          <form class="search-form" action="../search.html" method="get">
+            <input type="text" class="textfield search-form-field" name="q" placeholder="Search docs" />
+            <input type="submit" class="button search-form-button" value="Search" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+      <div class="header-disclaimer">
+        Visit
+        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+      </div>
+    </div> <!-- /.header -->
+  
+
+  <div class="content-container content clearfix">
+      <div class="nav">
+        <ul>
+<li class="toctree-l1"><a class="reference internal" href="../campaigns.html">Talkable Campaigns</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../advanced_features.html">Features</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/custom_integration.html">Standard Integration</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/loyalty.html">Loyalty Integration (beta)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integration/ecommerce_platforms.html">E-commerce Platforms</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../email_marketing_and_automation.html">Email Marketing &amp; Automation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="klaviyo.html">Klaviyo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="oracle_bronto.html">Oracle Bronto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mailchimp.html">Mailchimp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sailthru.html">Sailthru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hubspot.html">Hubspot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="attentive.html">Attentive</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Custom App</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#webhook-signature-verification">Webhook Signature Verification</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../payment_solutions.html">Payment Solutions</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api_v2.html">API Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../web_hooks.html">Webhooks</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ios_sdk.html">Talkable iOS SDK</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../android_sdk.html">Talkable Android SDK</a></li>
+</ul>
+
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <span class="target" id="email-marketing-and-automation-custom-app"></span><section id="custom-app">
+<h1>Custom App<a class="headerlink" href="#custom-app" title="Permalink to this heading">¶</a></h1>
+<p>Custom App allows you to send Talkable data to a desired destination such as your site, ESP, CDP.
+Talkable will send a request with data to the Custom App URL for each customer’s event specified in the Custom App settings.</p>
+<section id="webhook-signature-verification">
+<h2>Webhook Signature Verification<a class="headerlink" href="#webhook-signature-verification" title="Permalink to this heading">¶</a></h2>
+<p>The <cite>x-talkable-signature</cite> header is included in each request and contains a signature that you have to verify to make sure the request is not compromised.</p>
+<p>Talkable generates the signature using a <a class="reference external" href="https://en.wikipedia.org/wiki/Base64">Base64</a> encoded hash-based message authentication code (<a class="reference external" href="https://en.wikipedia.org/wiki/HMAC">HMAC</a>) with <a class="reference external" rel="nofollow" href="https://en.wikipedia.org/wiki/SHA-2">SHA-256</a>.</p>
+<p>To verify the signature, you should complete the following steps:</p>
+<p><strong>1. Prepare the</strong> <cite>payload_json</cite> <strong>string</strong></p>
+<blockquote>
+<div><p>Create a JSON string from the payload of the request.</p>
+</div></blockquote>
+<p><strong>2. Determine the expected signature</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Compute an hex encoded <strong>HMAC</strong> with the <strong>SHA256</strong> hash function. Use the <strong>Webhook security key</strong> as a key, and use the <cite>payload_json</cite> string as a message.</p></li>
+<li><p>Encode a computed hash with <strong>Base64</strong></p></li>
+</ul>
+</div></blockquote>
+<p>Your Talkable <strong>Webhook security key</strong> can be found in the Webhook set up page by navigating to <strong>Menu</strong> then <strong>Webhooks</strong>.</p>
+<img alt="Webhooks Menu Item" src="../_images/menu_webhooks_screenshot.png" />
+<hr><img alt="Webhook Security Key" src="../_images/webhook_secret_key.png" />
+<p><strong>3. Compare the signatures</strong></p>
+<blockquote>
+<div><p>Compare the signature from the header with your calculated signature.</p>
+</div></blockquote>
+<section id="examples">
+<h3>Examples:<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h3>
+<p><strong>Ruby:</strong></p>
+<div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="nb">require</span><span class="w"> </span><span class="s1">&#39;base64&#39;</span>
+<span class="nb">require</span><span class="w"> </span><span class="s1">&#39;openssl&#39;</span>
+<span class="nb">require</span><span class="w"> </span><span class="s1">&#39;active_support/security_utils&#39;</span>
+
+<span class="no">WEBHOOK_SECRET_KEY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;my_webhook_secret&#39;</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">verify_webhook</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">header_signature</span><span class="p">)</span>
+<span class="w">  </span><span class="n">calculated_signature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">Base64</span><span class="o">.</span><span class="n">strict_encode64</span><span class="p">(</span><span class="no">OpenSSL</span><span class="o">::</span><span class="no">HMAC</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">(</span><span class="s1">&#39;sha256&#39;</span><span class="p">,</span><span class="w"> </span><span class="no">WEBHOOK_SECRET_KEY</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">))</span>
+<span class="w">  </span><span class="no">ActiveSupport</span><span class="o">::</span><span class="no">SecurityUtils</span><span class="o">.</span><span class="n">secure_compare</span><span class="p">(</span><span class="n">calculated_signature</span><span class="p">,</span><span class="w"> </span><span class="n">header_signature</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>JavaScript:</strong></p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">crypto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;crypto&#39;</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">WEBHOOK_SECRET_KEY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;my_webhook_secret&#39;</span><span class="p">;</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">verifyWebhook</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">headerSignature</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Calculate HMAC</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">calculatedSignature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">btoa</span><span class="p">(</span><span class="nx">crypto</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">createHmac</span><span class="p">(</span><span class="s1">&#39;sha256&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">WEBHOOK_SECRET_KEY</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+<span class="w">        </span><span class="p">.</span><span class="nx">digest</span><span class="p">(</span><span class="s1">&#39;hex&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">crypto</span><span class="p">.</span><span class="nx">timingSafeEqual</span><span class="p">(</span>
+<span class="w">        </span><span class="nx">Buffer</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="nx">calculatedSignature</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;base64&#39;</span><span class="p">),</span>
+<span class="w">        </span><span class="nx">Buffer</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="nx">headerSignature</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;base64&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </div> <!-- /.content-container -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-63500208-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  </body>
+</html>
