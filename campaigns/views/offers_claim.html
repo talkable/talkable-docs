@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta content="Tell a Friend that every link they share will be rewarded." name="description" />
 
     <title>Friend Claim Page &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css?v=ec60a709" />
+    <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="canonical" href="https://docs.talkable.com/campaigns/views/offers_claim.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Advocate Reward Confirmation Email" href="advocate_rewards_confirmation.html" />
@@ -98,7 +98,7 @@
           <div class="body" role="main">
             
   <span class="target" id="campaigns-views-offers-claim"></span><section id="friend-claim-page">
-<span id="friend-claim-page-view"></span><h1>Friend Claim Page<a class="headerlink" href="#friend-claim-page" title="Permalink to this heading">¶</a></h1>
+<span id="friend-claim-page-view"></span><h1>Friend Claim Page<a class="headerlink" href="#friend-claim-page" title="Link to this heading">¶</a></h1>
 <p><abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> lands here from <a class="reference internal" href="notifier_offers_share_via_email.html#friend-share-email-view"><span class="std std-ref">Friend Share Email</span></a>. <br>
 Explain him what special discount he will get when using this link. <br>
 It’s recommended to show coupon code for the <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> on this page
@@ -116,7 +116,7 @@ It’s recommended to show coupon code for the <abbr title="Person who is invite
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">offer_active</span><span class="w"> </span><span class="p">%}</span>
   Copy your code: <span class="p">{{</span><span class="w"> </span><span class="nv">coupon_code</span><span class="w"> </span><span class="p">}}</span>
   &lt;a href=&quot;<span class="p">{{</span><span class="w"> </span><span class="nv">proceed_to_merchant_path</span><span class="w"> </span><span class="p">}}</span>&quot;&gt;Shop now&lt;/a&gt;
-  Offer is valid until <span class="p">{{</span><span class="w"> </span><span class="nv">friend_offer</span><span class="p">.</span><span class="nv">valid_until</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">format_date</span><span class="w"> </span><span class="p">}}</span><span class="nf">.</span><span class="w"></span>
+  Offer is valid until <span class="p">{{</span><span class="w"> </span><span class="nv">friend_offer</span><span class="p">.</span><span class="nv">valid_until</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">format_date</span><span class="w"> </span><span class="p">}}</span><span class="nf">.</span>
 {%<span class="w"> </span>else<span class="w"> </span>%}
   Offer expired.
   &lt;a href=&quot;<span class="p">{{</span><span class="w"> </span><span class="nv">proceed_to_merchant_path</span><span class="w"> </span><span class="p">}}</span>&quot;&gt;Proceed without offer&lt;/a&gt;

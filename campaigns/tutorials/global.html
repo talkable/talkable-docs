@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta content="Learn how to work with multiple ZeroClipboard instances." name="description" />
 
     <title>Global &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css?v=ec60a709" />
+    <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="canonical" href="https://docs.talkable.com/campaigns/tutorials/global.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Advocate Signup/Share Page" href="offers_show.html" />
@@ -94,9 +94,9 @@
           <div class="body" role="main">
             
   <span class="target" id="campaigns-tutorials-global"></span><section id="global">
-<h1>Global<a class="headerlink" href="#global" title="Permalink to this heading">¶</a></h1>
+<h1>Global<a class="headerlink" href="#global" title="Link to this heading">¶</a></h1>
 <section id="zeroclipboard">
-<span id="tutorials-zeroclipboard"></span><h2>ZeroClipboard<a class="headerlink" href="#zeroclipboard" title="Permalink to this heading">¶</a></h2>
+<span id="tutorials-zeroclipboard"></span><h2>ZeroClipboard<a class="headerlink" href="#zeroclipboard" title="Link to this heading">¶</a></h2>
 <p>If you are using more multiple ZeroClipboard instances and one of them is placed inside hidden block (with display: none;), make sure to fire up that instance like following:</p>
 <p><strong>HTML:</strong></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;js-before&quot;</span><span class="p">&gt;</span>
@@ -112,28 +112,28 @@
 </pre></div>
 </div>
 <p><strong>JS:</strong></p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">  </span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">bindClickToCopy</span><span class="p">(</span><span class="s1">&#39;.js-click-to-copy&#39;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">bindClickToCopy</span><span class="p">(</span><span class="s1">&#39;.js-click-to-copy&#39;</span><span class="p">);</span>
 
-<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">switchBlocks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-before, .js-after&#39;</span><span class="p">).</span><span class="nx">toggleClass</span><span class="p">(</span><span class="s2">&quot;hidden&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// Re-init ZeroClipboard instance to refresh tooltip position</span><span class="w"></span>
-<span class="w">    </span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">bindClickToCopy</span><span class="p">(</span><span class="s1">&#39;.js-click-to-copy&#39;</span><span class="p">);</span><span class="w"></span>
-<span class="w">  </span><span class="p">};</span><span class="w"></span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">switchBlocks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.js-before, .js-after&#39;</span><span class="p">).</span><span class="nx">toggleClass</span><span class="p">(</span><span class="s2">&quot;hidden&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// Re-init ZeroClipboard instance to refresh tooltip position</span>
+<span class="w">    </span><span class="nx">Talkable</span><span class="p">.</span><span class="nx">bindClickToCopy</span><span class="p">(</span><span class="s1">&#39;.js-click-to-copy&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">};</span>
 
-<span class="p">});</span><span class="w"></span>
+<span class="p">});</span>
 </pre></div>
 </div>
 <p><strong>CSS:</strong></p>
-<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">hidden</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">hidden</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </section>
 <section id="allow-showing-coupon-in-the-friend-share-email-and-its-reminder">
-<span id="tutorials-single-visitor-for-email-shares"></span><h2>Allow showing coupon in the Friend Share Email and its reminder<a class="headerlink" href="#allow-showing-coupon-in-the-friend-share-email-and-its-reminder" title="Permalink to this heading">¶</a></h2>
+<span id="tutorials-single-visitor-for-email-shares"></span><h2>Allow showing coupon in the Friend Share Email and its reminder<a class="headerlink" href="#allow-showing-coupon-in-the-friend-share-email-and-its-reminder" title="Link to this heading">¶</a></h2>
 <p>This option means that there could be only one visitor for each email share (one per email per offer). When this option is active such opportunities appear:</p>
 <dl class="simple">
 <dt><strong>Show Coupon in the Friend Share Email and its reminder:</strong></dt><dd><p>Talkable allows you to control whether you want to generate a unique coupon code for each email share or all shares made by an Advocate should have an exact same coupon code associated with it. When using single-use coupons it is recommended to enable this option only if you want to show the coupon inside Friend Share email and its reminder(s).</p>

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta content="You can reward Advocate and their Friend with coupons. Talkable supports both one-time-use coupons as well as multi-use coupons." name="description" />
 
     <title>Coupons &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css?v=ec60a709" />
+    <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="canonical" href="https://docs.talkable.com/advanced_features/coupons.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Shopify coupon auto-sync" href="shopify_coupons_auto_sync.html" />
@@ -109,19 +109,19 @@
           <div class="body" role="main">
             
   <span class="target" id="advanced-features-coupons"></span><section id="coupons">
-<h1>Coupons<a class="headerlink" href="#coupons" title="Permalink to this heading">¶</a></h1>
+<h1>Coupons<a class="headerlink" href="#coupons" title="Link to this heading">¶</a></h1>
 <p>You can reward <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> and their <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> with coupons. Talkable supports both
 one-time-use coupons as well as multi-use coupons. If you are using one-time-use
 coupons there is a need to refill a list of coupons within Talkable. You will need
 to export a list of coupons or provide a multi-use coupon code creation endpoint.</p>
 <section id="multi-use-coupons">
-<h2>Multi-use Coupons<a class="headerlink" href="#multi-use-coupons" title="Permalink to this heading">¶</a></h2>
+<h2>Multi-use Coupons<a class="headerlink" href="#multi-use-coupons" title="Link to this heading">¶</a></h2>
 <p>Multi-use Coupons can be given to Talkable customers as a reward by create an Incentive with reward type “Coupon”.
 It can be done from Campaign Rules page.</p>
 <p>Multi-use coupon will be given to any customer that perfomed action that matcher Incentive Reward Criteria.</p>
 </section>
 <section id="single-use-coupons">
-<h2>Single-use Coupons<a class="headerlink" href="#single-use-coupons" title="Permalink to this heading">¶</a></h2>
+<h2>Single-use Coupons<a class="headerlink" href="#single-use-coupons" title="Link to this heading">¶</a></h2>
 <p>In case you want to give a unique coupon to each customer, you may attach a coupon list to campaign incentive.
 In this case each, customer will receive unique coupon code from the pool available in coupon list.</p>
 <p>There are several steps that need to be taken for this scenario:</p>
@@ -135,7 +135,7 @@ In this case each, customer will receive unique coupon code from the pool availa
 Read <a class="reference internal" href="../web_hooks/create_coupon.html#web-hooks-create-coupon"><span class="std std-ref">Create Coupon Webhook Documentation</span></a> for implementation details.</p>
 </section>
 <section id="shopify-coupon-auto-sync">
-<h2>Shopify coupon auto-sync<a class="headerlink" href="#shopify-coupon-auto-sync" title="Permalink to this heading">¶</a></h2>
+<h2>Shopify coupon auto-sync<a class="headerlink" href="#shopify-coupon-auto-sync" title="Link to this heading">¶</a></h2>
 <p>Read <a class="reference internal" href="shopify_coupons_auto_sync.html#advanced-features-shopify-coupons-auto-sync"><span class="std std-ref">Shopify coupon auto-sync documentation</span></a> for details.</p>
 <div class="hidden docutils container">
 <div class="toctree-wrapper compound">
@@ -143,7 +143,7 @@ Read <a class="reference internal" href="../web_hooks/create_coupon.html#web-hoo
 </div>
 </section>
 <section id="requirements">
-<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this heading">¶</a></h2>
+<h2>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h2>
 <p>Coupons should be unique and 3 to 255 characters long.
 All coupons would be converted to uppercase, consider that during code generation, <code class="docutils literal notranslate"><span class="pre">fr_coupon</span></code> and <code class="docutils literal notranslate"><span class="pre">FR_COUPON</span></code> would be equal.</p>
 <p>Only the following characters are allowed in a coupon code:</p>
@@ -157,9 +157,9 @@ All coupons would be converted to uppercase, consider that during code generatio
 <p>Try to avoid ambiguous characters. This simple solution generates a string of easily readable characters for activation codes.
 We do not want people confusing 8 with B, 1 with I, 0 with O, L with 1, etc.</p>
 <div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="c1"># Generates a random string from a set of easily readable characters</span>
-<span class="k">def</span> <span class="nf">generate_activation_code</span><span class="p">(</span><span class="n">size</span> <span class="o">=</span> <span class="mi">6</span><span class="p">)</span>
-  <span class="n">charset</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;2&quot;</span><span class="p">,</span> <span class="s2">&quot;3&quot;</span><span class="p">,</span> <span class="s2">&quot;4&quot;</span><span class="p">,</span> <span class="s2">&quot;6&quot;</span><span class="p">,</span> <span class="s2">&quot;7&quot;</span><span class="p">,</span> <span class="s2">&quot;9&quot;</span><span class="p">,</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">,</span> <span class="s2">&quot;H&quot;</span><span class="p">,</span> <span class="s2">&quot;J&quot;</span><span class="p">,</span> <span class="s2">&quot;K&quot;</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span> <span class="s2">&quot;N&quot;</span><span class="p">,</span> <span class="s2">&quot;P&quot;</span><span class="p">,</span> <span class="s2">&quot;Q&quot;</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="s2">&quot;T&quot;</span><span class="p">,</span> <span class="s2">&quot;V&quot;</span><span class="p">,</span> <span class="s2">&quot;W&quot;</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="s2">&quot;Y&quot;</span><span class="p">,</span> <span class="s2">&quot;Z&quot;</span><span class="o">]</span>
-  <span class="p">(</span><span class="mi">0</span><span class="o">...</span><span class="n">size</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">charset</span><span class="o">[</span><span class="nb">rand</span><span class="p">(</span><span class="n">charset</span><span class="o">.</span><span class="n">size</span><span class="p">)</span><span class="o">]</span> <span class="p">}</span><span class="o">.</span><span class="n">join</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_activation_code</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">)</span>
+<span class="w">  </span><span class="n">charset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;3&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;4&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;6&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;7&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;9&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;D&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;E&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;F&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;G&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;H&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;J&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;K&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;M&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;N&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;P&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Q&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;R&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;T&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;V&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;W&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;X&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Y&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Z&quot;</span><span class="o">]</span>
+<span class="w">  </span><span class="p">(</span><span class="mi">0</span><span class="o">...</span><span class="n">size</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">charset</span><span class="o">[</span><span class="nb">rand</span><span class="p">(</span><span class="n">charset</span><span class="o">.</span><span class="n">size</span><span class="p">)</span><span class="o">]</span><span class="w"> </span><span class="p">}</span><span class="o">.</span><span class="n">join</span>
 <span class="k">end</span>
 </pre></div>
 </div>

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta content="Talkable can be white-labeled so that links and URLs will point to your domain. Nobody will know how you created your referral program." name="description" />
 
     <title>White-labeling &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css?v=ec60a709" />
+    <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="canonical" href="https://docs.talkable.com/advanced_features/white_labeling.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Adding DNS records in AWS Route53" href="white_labeling/aws_route53.html" />
@@ -107,13 +107,13 @@
           <div class="body" role="main">
             
   <span class="target" id="advanced-features-white-labeling"></span><section id="white-labeling">
-<h1>White-labeling<a class="headerlink" href="#white-labeling" title="Permalink to this heading">¶</a></h1>
+<h1>White-labeling<a class="headerlink" href="#white-labeling" title="Link to this heading">¶</a></h1>
 <p>By default, Talkable runs campaigns on <cite>www.talkable.com</cite> domain and sends emails
 from <cite>&#64;p2p.talkable.com</cite> (advocate share emails) or <cite>&#64;offers.talkable.com</cite> (other emails, e.g. reward notifications).
 That can be changed by configuring a custom web and/or email domain so that links and emails
 appear to be pointing to the store itself (e.g <cite>&#64;share.your-shop.com</cite>).</p>
 <section id="how-to-set-up-a-custom-domain">
-<h2>How to set up a custom domain<a class="headerlink" href="#how-to-set-up-a-custom-domain" title="Permalink to this heading">¶</a></h2>
+<h2>How to set up a custom domain<a class="headerlink" href="#how-to-set-up-a-custom-domain" title="Link to this heading">¶</a></h2>
 <p>Custom Email and Web domains can be configured in <strong>Site Settings</strong> → <strong>Custom domains</strong>.</p>
 <ol class="arabic">
 <li><p>Decide if you want custom <strong>web domain</strong>, <strong>email domain</strong>, or <strong>both</strong>.
@@ -141,7 +141,7 @@ Click “Check DNS status” on Talkable custom domain settings to see the updat
 </ol>
 <img alt="../_images/custom_domain_missing_records.png" src="../_images/custom_domain_missing_records.png" />
 <section id="delegated-vs-self-managed-setup">
-<span id="delegated-vs-self-managed"></span><h3>Delegated VS Self-managed setup<a class="headerlink" href="#delegated-vs-self-managed-setup" title="Permalink to this heading">¶</a></h3>
+<span id="delegated-vs-self-managed"></span><h3>Delegated VS Self-managed setup<a class="headerlink" href="#delegated-vs-self-managed-setup" title="Link to this heading">¶</a></h3>
 <p>Talkable offers two options for custom domain management:</p>
 <ul>
 <li><p><strong>Delegated</strong> (recommended)</p>
@@ -177,7 +177,7 @@ if the records are omitted or misconfigured.</p>
 </section>
 </section>
 <section id="adding-dns-records">
-<span id="id1"></span><h2>Adding DNS records<a class="headerlink" href="#adding-dns-records" title="Permalink to this heading">¶</a></h2>
+<span id="id1"></span><h2>Adding DNS records<a class="headerlink" href="#adding-dns-records" title="Link to this heading">¶</a></h2>
 <p>See detailed instructions on adding or modifying DNS records in the most common DNS management services below.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="white_labeling/aws_route53.html#advanced-features-white-labeling-aws-route53"><span class="std std-ref">Add DNS records in AWS Route53</span></a></p></li>
@@ -186,7 +186,7 @@ if the records are omitted or misconfigured.</p>
 <li><p><a class="reference internal" href="white_labeling/cloudflare.html#advanced-features-white-labeling-cloudflare"><span class="std std-ref">Add DNS records in Cloudflare</span></a></p></li>
 </ul>
 <section id="email-sending-issues">
-<h3>Email sending issues<a class="headerlink" href="#email-sending-issues" title="Permalink to this heading">¶</a></h3>
+<h3>Email sending issues<a class="headerlink" href="#email-sending-issues" title="Link to this heading">¶</a></h3>
 <p>If the emails sent by Talkable go to spam, it is likely that there are issues with the DNS records setup,
 namely <a class="reference external" rel="nofollow" href="https://www.mailgun.com/blog/deliverability/domain-reputation-and-dmarc/">DMARC policies</a>.</p>
 <p>Custom email domains in Talkable use a special DNS record called SPF record (Sender Policy Framework)

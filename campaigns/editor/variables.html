@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta content="Variables show you dynamic data such as Campaign tag, Advocate info, etc." name="description" />
 
     <title>Variables &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css" />
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css?v=ec60a709" />
+    <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="canonical" href="https://docs.talkable.com/campaigns/editor/variables.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Files" href="files.html" />
@@ -95,7 +95,7 @@
           <div class="body" role="main">
             
   <span class="target" id="campaigns-editor-variables"></span><section id="variables">
-<span id="editor-variables"></span><h1>Variables<a class="headerlink" href="#variables" title="Permalink to this heading">¶</a></h1>
+<span id="editor-variables"></span><h1>Variables<a class="headerlink" href="#variables" title="Link to this heading">¶</a></h1>
 <p>Variables are used to show dynamic data like Campaign tag, Advocate info, etc.
 <br>
 All Variables are enclosed into <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">}}</span></code> which means
@@ -128,7 +128,7 @@ different between preview and production scenarious)</p></li>
 <p><br>
 <hr></p>
 <section id="advocate-info">
-<span id="editor-variables-advocate-info"></span><h2>{{ advocate_info }}<a class="headerlink" href="#advocate-info" title="Permalink to this heading">¶</a></h2>
+<span id="editor-variables-advocate-info"></span><h2>{{ advocate_info }}<a class="headerlink" href="#advocate-info" title="Link to this heading">¶</a></h2>
 <p><strong>Available in</strong>: all Views <br>
 <strong>Type</strong>: <code class="docutils literal notranslate"><span class="pre">Object</span></code></p>
 <p>Personal data for <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>.</p>
@@ -172,7 +172,7 @@ data to Advocate Signup/Share Page</p></td>
 <p><br></p>
 </section>
 <section id="advocate-origin">
-<h2>{{ advocate_origin }}<a class="headerlink" href="#advocate-origin" title="Permalink to this heading">¶</a></h2>
+<h2>{{ advocate_origin }}<a class="headerlink" href="#advocate-origin" title="Link to this heading">¶</a></h2>
 <p><strong>Available in</strong>: all Views <br>
 <strong>Type</strong>: <code class="docutils literal notranslate"><span class="pre">Object</span></code></p>
 <p><abbr title="Origin is the point where a referral loop begins (Standalone or Post Purchase campaign)">Origin</abbr> data for <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr>.</p>
@@ -265,7 +265,7 @@ associated with the IP address</p></td>
 <p><br></p>
 </section>
 <section id="coupon-code">
-<h2>{{ coupon_code }}<a class="headerlink" href="#coupon-code" title="Permalink to this heading">¶</a></h2>
+<h2>{{ coupon_code }}<a class="headerlink" href="#coupon-code" title="Link to this heading">¶</a></h2>
 <p><strong>Available in</strong>: Friend Claim Page, Advocate Redemption Email, Advocate Reward
 Paid Email <br>
 <strong>Type</strong>: <code class="docutils literal notranslate"><span class="pre">String</span></code></p>
@@ -289,25 +289,25 @@ enough coupons and they are valid in terms of uniqueness and validity</p></li>
 <p><hr></p>
 </section>
 <section id="incentives">
-<h2>{{ incentives }}<a class="headerlink" href="#incentives" title="Permalink to this heading">¶</a></h2>
+<h2>{{ incentives }}<a class="headerlink" href="#incentives" title="Link to this heading">¶</a></h2>
 <p><strong>Available in</strong>: all Views <br>
 <strong>Type</strong>: <code class="docutils literal notranslate"><span class="pre">Object</span></code></p>
 <p>Reflects entire Campaign Incentives list including. This object can include
 several Incentives which are also objects.</p>
 <p>Here is an example of <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">incentives</span> <span class="pre">}}</span></code> Variable with two incentives:
 <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> and <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr>:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">  </span><span class="nx">advocate</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">amount</span><span class="o">:</span><span class="w"> </span><span class="mf">10.0</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$10&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">percentage</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
-<span class="w">  </span><span class="p">},</span><span class="w"></span>
-<span class="w">  </span><span class="nx">friend</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nx">amount</span><span class="o">:</span><span class="w"> </span><span class="mf">100.0</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;100%&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nx">percentage</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nx">advocate</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">amount</span><span class="o">:</span><span class="w"> </span><span class="mf">10.0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;$10&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">percentage</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">friend</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">amount</span><span class="o">:</span><span class="w"> </span><span class="mf">100.0</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">description</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;100%&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">percentage</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>And here is an example of using <code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">incentives</span> <span class="pre">}}</span></code> values:</p>

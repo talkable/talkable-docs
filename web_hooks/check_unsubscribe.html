@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta content="Check Unsubscribe Webhook ensures that emails are not sent to unsubscribed users." name="description" />
 
     <title>Check Unsubscribe Webhook &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css?v=ec60a709" />
+    <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="canonical" href="https://docs.talkable.com/web_hooks/check_unsubscribe.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Event Webhook" href="event.html" />
@@ -91,7 +91,7 @@
           <div class="body" role="main">
             
   <span class="target" id="web-hooks-check-unsubscribe"></span><section id="check-unsubscribe-webhook">
-<h1>Check Unsubscribe Webhook<a class="headerlink" href="#check-unsubscribe-webhook" title="Permalink to this heading">¶</a></h1>
+<h1>Check Unsubscribe Webhook<a class="headerlink" href="#check-unsubscribe-webhook" title="Link to this heading">¶</a></h1>
 <p>Talkable Check Unsubscribe Webhook is used to ensure emails are not sent from
 Talkable to user email addresses who have unsubscribed from the client side.
 This is an optional functionality. Note: users do have the ability to unsubscribe
@@ -103,7 +103,7 @@ merchant side.</p>
 <p class="admonition-title">Important</p>
 <p>If this Check Unsubscribe Webhook is used, the response JSON returned by
 merchant must contain the following fields:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;result&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;unsubscribed&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;result&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;unsubscribed&quot;</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
 <p>The ‘unsubscribed’ field should have a boolean value,
