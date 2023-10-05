@@ -119,36 +119,36 @@ Talkable will send a request with data to the Custom App URL for each customerâ€
 <section id="examples">
 <h3>Examples:<a class="headerlink" href="#examples" title="Permalink to this heading">Â¶</a></h3>
 <p><strong>Ruby:</strong></p>
-<div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="nb">require</span><span class="w"> </span><span class="s1">&#39;base64&#39;</span>
-<span class="nb">require</span><span class="w"> </span><span class="s1">&#39;openssl&#39;</span>
-<span class="nb">require</span><span class="w"> </span><span class="s1">&#39;active_support/security_utils&#39;</span>
+<div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="nb">require</span> <span class="s1">&#39;base64&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;openssl&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;active_support/security_utils&#39;</span>
 
-<span class="no">WEBHOOK_SECRET_KEY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;my_webhook_secret&#39;</span>
+<span class="no">WEBHOOK_SECRET_KEY</span> <span class="o">=</span> <span class="s1">&#39;my_webhook_secret&#39;</span>
 
-<span class="k">def</span><span class="w"> </span><span class="nf">verify_webhook</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">header_signature</span><span class="p">)</span>
-<span class="w">  </span><span class="n">calculated_signature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">Base64</span><span class="o">.</span><span class="n">strict_encode64</span><span class="p">(</span><span class="no">OpenSSL</span><span class="o">::</span><span class="no">HMAC</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">(</span><span class="s1">&#39;sha256&#39;</span><span class="p">,</span><span class="w"> </span><span class="no">WEBHOOK_SECRET_KEY</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">))</span>
-<span class="w">  </span><span class="no">ActiveSupport</span><span class="o">::</span><span class="no">SecurityUtils</span><span class="o">.</span><span class="n">secure_compare</span><span class="p">(</span><span class="n">calculated_signature</span><span class="p">,</span><span class="w"> </span><span class="n">header_signature</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">verify_webhook</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">header_signature</span><span class="p">)</span>
+  <span class="n">calculated_signature</span> <span class="o">=</span> <span class="no">Base64</span><span class="o">.</span><span class="n">strict_encode64</span><span class="p">(</span><span class="no">OpenSSL</span><span class="o">::</span><span class="no">HMAC</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">(</span><span class="s1">&#39;sha256&#39;</span><span class="p">,</span> <span class="no">WEBHOOK_SECRET_KEY</span><span class="p">,</span> <span class="n">data</span><span class="p">))</span>
+  <span class="no">ActiveSupport</span><span class="o">::</span><span class="no">SecurityUtils</span><span class="o">.</span><span class="n">secure_compare</span><span class="p">(</span><span class="n">calculated_signature</span><span class="p">,</span> <span class="n">header_signature</span><span class="p">)</span>
 <span class="k">end</span>
 </pre></div>
 </div>
 <p><strong>JavaScript:</strong></p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">crypto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;crypto&#39;</span><span class="p">);</span>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">crypto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;crypto&#39;</span><span class="p">);</span><span class="w"></span>
 
-<span class="kd">const</span><span class="w"> </span><span class="nx">WEBHOOK_SECRET_KEY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;my_webhook_secret&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">WEBHOOK_SECRET_KEY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;my_webhook_secret&#39;</span><span class="p">;</span><span class="w"></span>
 
-<span class="kd">function</span><span class="w"> </span><span class="nx">verifyWebhook</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">headerSignature</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Calculate HMAC</span>
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">calculatedSignature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">btoa</span><span class="p">(</span><span class="nx">crypto</span>
-<span class="w">        </span><span class="p">.</span><span class="nx">createHmac</span><span class="p">(</span><span class="s1">&#39;sha256&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">WEBHOOK_SECRET_KEY</span><span class="p">)</span>
-<span class="w">        </span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
-<span class="w">        </span><span class="p">.</span><span class="nx">digest</span><span class="p">(</span><span class="s1">&#39;hex&#39;</span><span class="p">)</span>
-<span class="w">    </span><span class="p">);</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">verifyWebhook</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">headerSignature</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// Calculate HMAC</span><span class="w"></span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">calculatedSignature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">btoa</span><span class="p">(</span><span class="nx">crypto</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="nx">createHmac</span><span class="p">(</span><span class="s1">&#39;sha256&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">WEBHOOK_SECRET_KEY</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="nx">digest</span><span class="p">(</span><span class="s1">&#39;hex&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">);</span><span class="w"></span>
 
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">crypto</span><span class="p">.</span><span class="nx">timingSafeEqual</span><span class="p">(</span>
-<span class="w">        </span><span class="nx">Buffer</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="nx">calculatedSignature</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;base64&#39;</span><span class="p">),</span>
-<span class="w">        </span><span class="nx">Buffer</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="nx">headerSignature</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;base64&#39;</span><span class="p">)</span>
-<span class="w">    </span><span class="p">);</span>
-<span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">crypto</span><span class="p">.</span><span class="nx">timingSafeEqual</span><span class="p">(</span><span class="w"></span>
+<span class="w">        </span><span class="nx">Buffer</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="nx">calculatedSignature</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;base64&#39;</span><span class="p">),</span><span class="w"></span>
+<span class="w">        </span><span class="nx">Buffer</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="nx">headerSignature</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;base64&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </section>
