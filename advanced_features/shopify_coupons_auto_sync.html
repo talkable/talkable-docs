@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta content="Talkable supports coupon auto-sync for Shopify. This feature allows to avoid manual coupon uploads and/or Shopify Price Rule management." name="description" />
 
     <title>Shopify coupon auto-sync &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css?v=ec60a709" />
+    <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="canonical" href="https://docs.talkable.com/advanced_features/shopify_coupons_auto_sync.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Shopify Purchase Syncing" href="shopify_purchase_syncing.html" />
@@ -108,7 +108,7 @@
           <div class="body" role="main">
             
   <section id="shopify-coupon-auto-sync">
-<span id="advanced-features-shopify-coupons-auto-sync"></span><h1>Shopify coupon auto-sync<a class="headerlink" href="#shopify-coupon-auto-sync" title="Permalink to this heading">¶</a></h1>
+<span id="advanced-features-shopify-coupons-auto-sync"></span><h1>Shopify coupon auto-sync<a class="headerlink" href="#shopify-coupon-auto-sync" title="Link to this heading">¶</a></h1>
 <p>Talkable supports coupon auto-sync for Shopify. This feature allows the automation of code creation and management of Shopify Price Rules, rather than manual code creation and upload to the Talkable Platform.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -116,7 +116,7 @@
 In that case, coupons will be passed via the webhook only after successful Shopify sync.</p>
 </div>
 <section id="get-started">
-<h2>Get started<a class="headerlink" href="#get-started" title="Permalink to this heading">¶</a></h2>
+<h2>Get started<a class="headerlink" href="#get-started" title="Link to this heading">¶</a></h2>
 <p>Before using coupon auto-sync, you’ll need to install the Talkable Shopify app (Settings → Shopify Integration → Authorize).</p>
 <p>To enable coupon auto-sync in a coupon list, go to the coupon list edit/create page (All reports → Coupon lists) and check “Enable Coupon List Shopify Auto-Sync”.
 If this checkbox is disabled (you are unable to check/uncheck it), it means that your user doesn’t have rights for this site or Shopify Integration is not authorized.</p>
@@ -127,11 +127,11 @@ When you try to create a coupon list with a 100% discount you have to provide a 
 <p>Please see <strong>Advanced features</strong> for more information about Shopify Price Rule ID.</p>
 </div>
 <section id="what-is-price-rule">
-<h3>What is Price Rule?<a class="headerlink" href="#what-is-price-rule" title="Permalink to this heading">¶</a></h3>
+<h3>What is Price Rule?<a class="headerlink" href="#what-is-price-rule" title="Link to this heading">¶</a></h3>
 <p>A price rule is the closest thing to Talkable coupon lists in Shopify. It defines the properties and applicability of associated coupon codes. You can read more on the Shopify site <a class="reference external" rel="nofollow" href="https://shopify.dev/docs/admin-api/rest/reference/discounts/pricerule">here</a>.</p>
 </section>
 <section id="what-attributes-will-the-auto-generated-price-rule-have">
-<h3>What attributes will the auto-generated Price Rule have?<a class="headerlink" href="#what-attributes-will-the-auto-generated-price-rule-have" title="Permalink to this heading">¶</a></h3>
+<h3>What attributes will the auto-generated Price Rule have?<a class="headerlink" href="#what-attributes-will-the-auto-generated-price-rule-have" title="Link to this heading">¶</a></h3>
 <p>Talkable applies the below coupon list settings onto Price Rule:</p>
 <div class="ptable docutils container">
 <table class="docutils align-default">
@@ -212,14 +212,14 @@ creation</p></td>
 </div>
 </section>
 <section id="why-aren-t-there-any-coupons-created-for-my-auto-synced-list">
-<h3>Why aren’t there any coupons created for my auto-synced list?<a class="headerlink" href="#why-aren-t-there-any-coupons-created-for-my-auto-synced-list" title="Permalink to this heading">¶</a></h3>
+<h3>Why aren’t there any coupons created for my auto-synced list?<a class="headerlink" href="#why-aren-t-there-any-coupons-created-for-my-auto-synced-list" title="Link to this heading">¶</a></h3>
 <p>Auto-sync generates and uploads coupons when there is demand for them. That means that nothing will happen until the first reward is requested from a specific coupon list. When this happens, Talkable will generate a code and sync it with Shopify, while scheduling a refill task that will generate a set of codes in advance. This logic is triggered every time a coupon is issued, so there  will always be some coupons available for future rewards.</p>
 </section>
 </section>
 <section id="advanced-features">
-<h2>Advanced features<a class="headerlink" href="#advanced-features" title="Permalink to this heading">¶</a></h2>
+<h2>Advanced features<a class="headerlink" href="#advanced-features" title="Link to this heading">¶</a></h2>
 <section id="shopify-price-rule-id">
-<h3>Shopify Price Rule ID<a class="headerlink" href="#shopify-price-rule-id" title="Permalink to this heading">¶</a></h3>
+<h3>Shopify Price Rule ID<a class="headerlink" href="#shopify-price-rule-id" title="Link to this heading">¶</a></h3>
 <p>Talkable allows you to assign a custom Price Rule ID to a coupon list. This might be helpful if you want to deviate from our default Price Rule settings, e.g. restrict codes to a group of customers or group of products.</p>
 <p>It is recommended to create a new Price Rule in Shopify if there is a need to use a custom one, instead of editing the Price Rule generated by Talkable.</p>
 <div class="admonition warning">
@@ -238,7 +238,7 @@ These include:</p>
 </div>
 </section>
 <section id="shopify-price-rule-changed-email-notification">
-<h3>Shopify Price Rule Changed Email Notification<a class="headerlink" href="#shopify-price-rule-changed-email-notification" title="Permalink to this heading">¶</a></h3>
+<h3>Shopify Price Rule Changed Email Notification<a class="headerlink" href="#shopify-price-rule-changed-email-notification" title="Link to this heading">¶</a></h3>
 <p>If you modify a Price Rules on Shopify, it could make them incompatible with the coupon lists they are attached to. In order to find out about such changes as early as possible, we have a daily monitoring job that checks that Price Rules have no critical differences from respective coupon lists.</p>
 <p>Attributes that are checked in this job are the following:</p>
 <blockquote>
@@ -254,7 +254,7 @@ These include:</p>
 <p>Once the Price Rule becomes critically different from the coupon list it is assigned to, the coupon list is no longer editable. Please fix the issues listed in the email notification to remedy this situation.</p>
 </section>
 <section id="coupon-list-sync">
-<h3>Coupon list sync<a class="headerlink" href="#coupon-list-sync" title="Permalink to this heading">¶</a></h3>
+<h3>Coupon list sync<a class="headerlink" href="#coupon-list-sync" title="Link to this heading">¶</a></h3>
 <p>Talkable tries to keep up with the Price Rules assigned to coupon lists when/if Price Rules change.</p>
 <p>As long as the Price Rule is otherwise valid for a coupon list, we update the coupon list’s:</p>
 <p><strong>expiration date</strong> - only if Price Rule end date is further in the future (or absent)</p>

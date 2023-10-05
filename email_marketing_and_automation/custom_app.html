@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta content="Custom App allows you to send Talkable data to a desired destination such as your site, ESP, CDP." name="description" />
 
     <title>Custom App &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css?v=ec60a709" />
+    <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="canonical" href="https://docs.talkable.com/email_marketing_and_automation/custom_app.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Payment Solutions" href="../payment_solutions.html" />
@@ -90,11 +90,11 @@
           <div class="body" role="main">
             
   <span class="target" id="email-marketing-and-automation-custom-app"></span><section id="custom-app">
-<h1>Custom App<a class="headerlink" href="#custom-app" title="Permalink to this heading">¶</a></h1>
+<h1>Custom App<a class="headerlink" href="#custom-app" title="Link to this heading">¶</a></h1>
 <p>Custom App allows you to send Talkable data to a desired destination such as your site, ESP, CDP.
 Talkable will send a request with data to the Custom App URL for each customer’s event specified in the Custom App settings.</p>
 <section id="webhook-signature-verification">
-<h2>Webhook Signature Verification<a class="headerlink" href="#webhook-signature-verification" title="Permalink to this heading">¶</a></h2>
+<h2>Webhook Signature Verification<a class="headerlink" href="#webhook-signature-verification" title="Link to this heading">¶</a></h2>
 <p>The <cite>x-talkable-signature</cite> header is included in each request and contains a signature that you have to verify to make sure the request is not compromised.</p>
 <p>Talkable generates the signature using a <a class="reference external" href="https://en.wikipedia.org/wiki/Base64">Base64</a> encoded hash-based message authentication code (<a class="reference external" href="https://en.wikipedia.org/wiki/HMAC">HMAC</a>) with <a class="reference external" rel="nofollow" href="https://en.wikipedia.org/wiki/SHA-2">SHA-256</a>.</p>
 <p>To verify the signature, you should complete the following steps:</p>
@@ -117,7 +117,7 @@ Talkable will send a request with data to the Custom App URL for each customer�
 <div><p>Compare the signature from the header with your calculated signature.</p>
 </div></blockquote>
 <section id="examples">
-<h3>Examples:<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h3>
+<h3>Examples:<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h3>
 <p><strong>Ruby:</strong></p>
 <div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="nb">require</span><span class="w"> </span><span class="s1">&#39;base64&#39;</span>
 <span class="nb">require</span><span class="w"> </span><span class="s1">&#39;openssl&#39;</span>

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta content="Purchase Syncing is a feature available for Shopify customers integrated with Talkable extension. It allows automatic purchases synchronization from Shopify instead of (or additionally to) passing purchases with Talkable JavaScript integration or Talkable backend integration." name="description" />
 
     <title>Shopify Purchase Syncing &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/talkable.css" />
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css?v=ec60a709" />
+    <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="canonical" href="https://docs.talkable.com/advanced_features/shopify_purchase_syncing.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Referral Tracking Methods" href="track_methods.html" />
@@ -110,7 +110,7 @@
           <div class="body" role="main">
             
   <section id="shopify-purchase-syncing">
-<span id="advanced-features-shopify-purchase-syncing"></span><h1>Shopify Purchase Syncing<a class="headerlink" href="#shopify-purchase-syncing" title="Permalink to this heading">¶</a></h1>
+<span id="advanced-features-shopify-purchase-syncing"></span><h1>Shopify Purchase Syncing<a class="headerlink" href="#shopify-purchase-syncing" title="Link to this heading">¶</a></h1>
 <p>Purchase Syncing is a feature available for Shopify customers integrated with Talkable extension.
 It allows automatic purchases synchronization from Shopify instead of (or additionally to) passing purchases with Talkable JavaScript integration from a browser or Talkable backend integration.</p>
 <p>To access this setting, go to the Shopify Integration page (Settings → Shopify Integration).</p>
@@ -123,19 +123,19 @@ It allows automatic purchases synchronization from Shopify instead of (or additi
 different from Shopify Purchase ID (Talkable default Shopify integration behavior) as it will lead to double purchases registering.</p>
 </div>
 <section id="talkable-backend-integration">
-<h2>Talkable backend integration<a class="headerlink" href="#talkable-backend-integration" title="Permalink to this heading">¶</a></h2>
+<h2>Talkable backend integration<a class="headerlink" href="#talkable-backend-integration" title="Link to this heading">¶</a></h2>
 <p>Talkable backend integration allows you to directly sync your Shopify purchases with the Talkable API, allowing you to track different types of Order Number Identifier.</p>
 <p>You can choose your purchase ID in the integration section (Settings → Shopify Integration → Order Number Identifier).</p>
 </section>
 <section id="how-it-works">
-<h2>How it works?<a class="headerlink" href="#how-it-works" title="Permalink to this heading">¶</a></h2>
+<h2>How it works?<a class="headerlink" href="#how-it-works" title="Link to this heading">¶</a></h2>
 <p>It works as a server-to-server integration between Shopify and Talkable using Shopify <cite>orders/create</cite> and <cite>refunds/create</cite> <a class="reference external" rel="nofollow" href="https://shopify.dev/api/admin-rest/2022-04/resources/webhook">webhooks</a>.</p>
 <p>When enabling Purchase Syncing, Talkable creates and subscribes to <cite>orders/create</cite> and <cite>refunds/create</cite> webhooks from the customer’s Shopify store. When disabling the setting, the webhook’s subscriptions are deleted.</p>
 <p>Each time a purchase is placed on a customer’s store, Shopify triggers the webhook and Talkable registers the purchase with attributes sent in the webhook’s payload.
 Whenever a purchase is refunded on a customer’s store, Shopify triggers the refund webhook and Talkable updates the purchase status as refunded. If a purchase has a pending referral and a full refund is issued, the referral will be voided.</p>
 </section>
 <section id="shopify-webhook-payload-and-talkable-purchase-attributes-mapping">
-<h2>Shopify Webhook payload and Talkable Purchase attributes mapping<a class="headerlink" href="#shopify-webhook-payload-and-talkable-purchase-attributes-mapping" title="Permalink to this heading">¶</a></h2>
+<h2>Shopify Webhook payload and Talkable Purchase attributes mapping<a class="headerlink" href="#shopify-webhook-payload-and-talkable-purchase-attributes-mapping" title="Link to this heading">¶</a></h2>
 <p>Talkable uses next mapping when syncing purchases from Shopify Webhook payload:</p>
 <div class="ptable docutils container">
 <table class="docutils align-default">
@@ -189,7 +189,7 @@ Whenever a purchase is refunded on a customer’s store, Shopify triggers the re
 </div>
 </section>
 <section id="post-purchase-campaign-setup">
-<h2>Post Purchase Campaign setup<a class="headerlink" href="#post-purchase-campaign-setup" title="Permalink to this heading">¶</a></h2>
+<h2>Post Purchase Campaign setup<a class="headerlink" href="#post-purchase-campaign-setup" title="Link to this heading">¶</a></h2>
 <p>To render Talkable Post Purchase Campaign, there is still a need of registering purchases
 with Talkable JavaScript integration (is managed automatically by Talkable).</p>
 <p>JavaScript purchase registration has priority over Purchase Syncing and registers the purchase from JavaScript integration first.</p>
