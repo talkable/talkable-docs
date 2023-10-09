@@ -9,7 +9,8 @@ Pass Custom User Data
 
 The ``custom_properties`` variable allows you to pass any custom data
 to Talkable as a collection of Key-Value pairs.
-Those can be used for various segmentation purposes, since join criteria and incentive criteria are capable of using the ones in conditions.
+Those can be used for various segmentation purposes, since join criteria, incentive criteria, and placement criteria
+are capable of using the ones in conditions.
 
 All data associated with ``custom_properties`` is available for use
 across all Campaign Views.

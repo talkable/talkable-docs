@@ -28,6 +28,19 @@ It is possible to indicate on which specific pages the Campaigns attached to the
 It allows you to show the Campaign on all pages of your site except few specified in the "Hidden on" section, for example.
 Also, you can use :ref:`regular expressions<advanced_features/reg_ex>` to select pages you want to not show Talkable campaigns on.
 
+**Custom Property Criteria**.
+A Placement can have a set of criteria defined based on :ref:`custom properties <advanced_features/passing_custom_data>`.
+If all of the criteria are met, the placement will show a campaign.
+
+The criteria can be defined using one of the following operators:
+
+* `eq`
+* `not_eq`
+* `regex` (performs a case-insensitive match)
+
+.. note::
+  Custom Property Criteria require integration version 5.1.4 or higher to work.
+
 |hr|
 
 .. raw:: html
@@ -63,6 +76,18 @@ Clicking on a Floating Widget Campaign expands the full Campaign view that looks
 and a close button.
 
 :ref:`Learn more about Floating Widget Placement <campaigns/campaign_placements/floating_widget>`
+
+.. raw:: html
+
+  <h3>Claim by Name Widget</h3>
+
+Campaign will show up as a floating button in a corner of the screen on the cart or checkout page on your site,
+for example: |br|
+`https://[your-site]/cart`.
+|br|
+Clicking on a Claim by Name widget opens a popup with an overlay and a close button.
+
+:ref:`Learn more about Claim by Name Placement <campaigns/campaign_placements/claim_by_name>`
 
 .. raw:: html
 
