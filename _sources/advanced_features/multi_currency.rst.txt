@@ -41,11 +41,15 @@ In multi-currency mode, the following incentive details can be configured per cu
 A reward for an Advocate or a Friend will be issued based on their preferred currency. If none specified,
 the main site currency will be used.
 
+.. image:: /_static/img/advanced_features/multi_currency_incentive.png
+
 Preferred currency
 ------------------
 
 Talkable allows storing an Advocate's or Friend's preferred currency. The selected currency can be accessed in |liquid|
 in the `[[ preferred_currency ]]` variable.
+
+.. image:: /_static/img/advanced_features/multi_currency_advocate_offer.png
 
 Currencies on dashboard
 -----------------------
