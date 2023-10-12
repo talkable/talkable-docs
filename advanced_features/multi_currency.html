@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="Talkable supports working with multiple currencies within the same site." name="description" />
+
+    <title>Multi-currency &#8212; Talkable Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css?v=ec60a709" />
+    <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="canonical" href="https://docs.talkable.com/advanced_features/multi_currency.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Standard Integration" href="../integration/custom_integration.html" />
+    <link rel="prev" title="Single Sign-On (SSO)" href="single_sign_on.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+  <link href="../_static/pygments-github.css" rel="stylesheet">
+  <link href="../_static/img/favicon.ico" rel="shortcut icon" />
+  </head><body>
+  
+    <div class="header">
+      <a href="../index.html" class="header-logo">Talkable docs</a>
+          <form class="search-form" action="../search.html" method="get">
+            <input type="text" class="textfield search-form-field" name="q" placeholder="Search docs" />
+            <input type="submit" class="button search-form-button" value="Search" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+      <div class="header-disclaimer">
+        Visit
+        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+      </div>
+    </div> <!-- /.header -->
+  
+
+  <div class="content-container content clearfix">
+      <div class="nav">
+        <ul>
+<li class="toctree-l1"><a class="reference internal" href="../campaigns.html">Talkable Campaigns</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../advanced_features.html">Features</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="coupons.html">Coupons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shopify_coupons_auto_sync.html">Shopify coupon auto-sync</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shopify_purchase_syncing.html">Shopify Purchase Syncing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="track_methods.html">Referral Tracking Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal_coupon_sharing.html">Advocate Personal Coupon Sharing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="name_sharing.html">Name Sharing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="converting_into_localization.html">Converting Into Localization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="customer_service_portal.html">Customer Service Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="params_encryption.html">Params Encryption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html">Integrating Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_encryption.html">File Encryption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="report_password_protection.html">Report Password Protection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="product_items.html">Including Product Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passing_custom_data.html">Pass Custom User Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="phone_number_gating.html">Phone number gating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="referrals_approval.html">Referrals Approval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="product_sku.html">Segment With Product SKU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="traffic_source.html">Segment With Traffic Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subscribing_to_events.html">Subscribing To Iframe Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reg_ex.html">Setting up Campaign Placement criteria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="url_parameters.html">Using URL Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="white_labeling.html">White-labeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="single_sign_on.html">Single Sign-On (SSO)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Multi-currency</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#passing-currency-with-the-purchase-or-event">Passing currency with the purchase or event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#incentives-for-different-currencies">Incentives for different currencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#preferred-currency">Preferred currency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#currencies-on-dashboard">Currencies on dashboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#currencies-in-reports">Currencies in reports</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/custom_integration.html">Standard Integration</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/loyalty.html">Loyalty Integration (beta)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integration/ecommerce_platforms.html">E-commerce Platforms</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../email_marketing_and_automation.html">Email Marketing &amp; Automation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../payment_solutions.html">Payment Solutions</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api_v2.html">API Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../web_hooks.html">Webhooks</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ios_sdk.html">Talkable iOS SDK</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../android_sdk.html">Talkable Android SDK</a></li>
+</ul>
+
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <span class="target" id="advanced-features-multi-currency"></span><section id="multi-currency">
+<h1>Multi-currency<a class="headerlink" href="#multi-currency" title="Link to this heading">¶</a></h1>
+<p>By default, Talkable works in a single-currency mode. The main currency is chosen during the account setup.</p>
+<p>However, the multi-currency mode can be enabled for a site. In multi-currency mode, the referral campaigns allow
+Advocates and Friends to choose their preferred currency, and the incentives can be configured to offer different
+rewards based on the preferred currency. Every purchase and/or event should have a currency specified.
+The dashboard and reports can be filtered by currencies, and the values can be converted to a currency of your choice.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please contact your Customer Success Manager to enable multi-currency. Note that in this mode,
+the integration should pass currency data with every purchase.</p>
+</div>
+<section id="passing-currency-with-the-purchase-or-event">
+<h2>Passing currency with the purchase or event<a class="headerlink" href="#passing-currency-with-the-purchase-or-event" title="Link to this heading">¶</a></h2>
+<p>Currency is required to be specified if multi-currency mode is enabled for a site.</p>
+<p>Please pass the currency using the <cite>currency_iso_code</cite> argument to the <cite>register_purchase</cite> function.
+The code must be in <a class="reference external" rel="nofollow" href="https://www.iso.org/iso-4217-currency-codes.html">ISO 4217 format</a>, e.g. “USD”.</p>
+<p><a class="reference internal" href="../integration/custom/integration_components.html#integration-custom-integration-components-post-purchase-script"><span class="std std-ref">More on the integration of purchases</span></a></p>
+</section>
+<section id="incentives-for-different-currencies">
+<h2>Incentives for different currencies<a class="headerlink" href="#incentives-for-different-currencies" title="Link to this heading">¶</a></h2>
+<p>In multi-currency mode, the following incentive details can be configured per currency:</p>
+<ul class="simple">
+<li><p>incentive amount</p></li>
+<li><p>coupon list or multi-use coupon</p></li>
+<li><p>subtotal minimum and maximum</p></li>
+</ul>
+<p>A reward for an Advocate or a Friend will be issued based on their preferred currency. If none specified,
+the main site currency will be used.</p>
+<img alt="../_images/multi_currency_incentive.png" src="../_images/multi_currency_incentive.png" />
+</section>
+<section id="preferred-currency">
+<h2>Preferred currency<a class="headerlink" href="#preferred-currency" title="Link to this heading">¶</a></h2>
+<p>Talkable allows storing an Advocate’s or Friend’s preferred currency. The selected currency can be accessed in <a rel="nofollow" href="https://github.com/Shopify/liquid" target="_blank">Liquid</a>
+in the <cite>[[ preferred_currency ]]</cite> variable.</p>
+<img alt="../_images/multi_currency_advocate_offer.png" src="../_images/multi_currency_advocate_offer.png" />
+</section>
+<section id="currencies-on-dashboard">
+<h2>Currencies on dashboard<a class="headerlink" href="#currencies-on-dashboard" title="Link to this heading">¶</a></h2>
+<p>Dashboard tiles have two helpful configuration options for multi-currency setup:</p>
+<ul class="simple">
+<li><p>filter events by currencies (“Segment Currency”)</p></li>
+<li><p>convert all amounts to one currency (“Reporting Currency”)</p></li>
+</ul>
+<img alt="../_images/multi_currency_dashboard_tile.png" src="../_images/multi_currency_dashboard_tile.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Conversion rate for a specific currency is actualized daily (data taken from
+<a class="reference external" rel="nofollow" href="https://openexchangerates.org">open exchange rates</a>) and cached for the accuracy of historical data.
+So a purchase amount is converted according to its creation date’s conversion rate.</p>
+</div>
+</section>
+<section id="currencies-in-reports">
+<h2>Currencies in reports<a class="headerlink" href="#currencies-in-reports" title="Link to this heading">¶</a></h2>
+<p>Several tools can be used for multi-currency sites to make reporting more flexible.</p>
+<p>Available options in <strong>Metrics Aggregation Report</strong>:</p>
+<ul class="simple">
+<li><p>segmentation by currencies</p></li>
+<li><p>filter by the currency of the purchase/event</p></li>
+<li><p>select a currency to convert the amounts to</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/multi_currency_mar.png"><img alt="../_images/multi_currency_mar.png" src="../_images/multi_currency_mar.png" style="width: 300px;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If a currency to convert to is not specified, the site currency is used for conversion.</p>
+</div>
+<p>Available options in <strong>Purchases</strong> and <strong>Events</strong> reports:</p>
+<ul class="simple">
+<li><p>filter by the currency of the purchase/event</p></li>
+<li><p>select a currency to convert the amounts to</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The options list in the currency filter consists of all the currencies passed to Talkable
+along with the purchases/events. If you can’t find a currency in the list, it means Talkable never received
+a purchase/event with such currency.</p>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </div> <!-- /.content-container -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-63500208-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  </body>
+</html>
