@@ -29,7 +29,7 @@ Installing from Xcode:
 
     https://github.com/talkable/ios-sdk.git
 
-3. Set the **Dependency Rule** to be `Up to Next Major Version` and specify `1.4.14` as the lower bound (default option).
+3. Set the **Dependency Rule** to be `Up to Next Major Version` and specify `1.5.1` as the lower bound (default option).
 4. Select **Add Package** and choose `TakableSDK` package.
 
 Alternatively, you can add Talkable SDK directly to a `Package.swift` manifest:
@@ -37,7 +37,7 @@ Alternatively, you can add Talkable SDK directly to a `Package.swift` manifest:
   .. code-block:: swift
 
       dependencies: [
-          .package(url: "https://github.com/talkable/ios-sdk.git", .upToNextMajor(from: "1.4.14"))
+          .package(url: "https://github.com/talkable/ios-sdk.git", .upToNextMajor(from: "1.5.1"))
       ]
 
 CocoaPods
@@ -47,7 +47,7 @@ To integrate Talkable SDK into your Xcode project using CocoaPods, specify it in
 
   .. code-block:: ruby
 
-    pod 'TalkableSDK', '~> 1.4.14'
+    pod 'TalkableSDK', '~> 1.5.1'
 
 Binary Framework
 ````````````````

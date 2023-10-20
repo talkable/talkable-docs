@@ -35,7 +35,7 @@ How to add a new app?
 
 Please use the following guide to start using an app you need:
 
-1. Navigate into the app store:
+1. Navigate into the App store:
 
   .. image:: /_static/img/email_marketing_and_automation/app_store_step_1.png
       :alt: App store step 1
