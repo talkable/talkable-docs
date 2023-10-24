@@ -68,7 +68,7 @@ First install [Sphinx](https://www.sphinx-doc.org). See below.
 
 * Install Ruby and [Bundler](https://bundler.io), and run `bundle install` to install dependencies.
 
-* Install Python (>= 3.6) and pip:
+* Install Python (>= 3.9) and pip:
 
   ```
   brew install python

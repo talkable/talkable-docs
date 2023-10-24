@@ -15,7 +15,7 @@ each with links to integration details.
    :widths: 35 65
 
    * - :ref:`Automatic Coupon Creation <advanced_features/coupons>`
-     - Issue single and multi-use coupons automatically for your campaigns
+     - Issue single and multi-use coupons for your campaigns
 
    * - :ref:`Shopify Coupon auto-sync <advanced_features/shopify_coupons_auto_sync>`
      - Issue coupons automatically for your Shopify store
@@ -59,6 +59,9 @@ each with links to integration details.
    * - :ref:`Pass custom user data <advanced_features/passing_custom_data>`
      - Pass additional data to Talkable to operate with it inside campaigns
 
+   * - :ref:`Phone number gating <advanced_features/phone_number_gating>`
+     - Collect customers' phone numbers and sync with ESPs.
+
    * - :ref:`Referrals Approval <advanced_features/referrals_approval>`
      - Learn about Talkable Fraud settings, why they are important
        and how to find a right Fraud Profile that works best for your site.
@@ -92,6 +95,7 @@ each with links to integration details.
     advanced_features/shopify_purchase_syncing
     advanced_features/track_methods
     advanced_features/personal_coupon_sharing
+    advanced_features/name_sharing
     advanced_features/converting_into_localization
     advanced_features/customer_service_portal
     advanced_features/params_encryption
@@ -100,6 +104,7 @@ each with links to integration details.
     advanced_features/report_password_protection
     advanced_features/product_items
     advanced_features/passing_custom_data
+    advanced_features/phone_number_gating
     advanced_features/referrals_approval
     advanced_features/product_sku
     advanced_features/traffic_source
@@ -108,3 +113,4 @@ each with links to integration details.
     advanced_features/url_parameters
     advanced_features/white_labeling
     advanced_features/single_sign_on
+    advanced_features/multi_currency

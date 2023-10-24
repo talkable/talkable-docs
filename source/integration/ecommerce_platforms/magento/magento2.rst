@@ -31,20 +31,20 @@ Installation
 
    .. image:: /_static/img/magento2/install.jpg
 
-2. Log in to your Magento 2 server and navigate to the root directory of your Magento app from your command line tool. This guide shows example outputs for Terminal, but these steps can be modified for any command line tool of your choice.
+2. Log in to your Magento 2 server and navigate to the root directory of your Magento app from your command line tool.
+   This guide shows example outputs for Terminal, but these steps can be modified for any command line tool of your choice.
 
 3. Run the following command to access the latest version of the Talkable extension.
 
-    .. code-block::
+    .. code-block:: bash
 
        composer require talkable/magento2-integration
 
 4. Run the following command to enable the Talkable extension you just downloaded:
 
-    .. code-block::
+    .. code-block:: bash
 
-       php bin/magento module:enable Talkable_Integration
-       --clear-static-content
+       php bin/magento module:enable Talkable_Integration --clear-static-content
 
    You should see the following output:
 
@@ -61,13 +61,13 @@ Installation
 
 5. As displayed in the sample output, you must now enable any additional modules. Run the following command to enable them:
 
-    .. code-block::
+    .. code-block:: bash
 
         php bin/magento setup:upgrade
 
 6. To ensure that the CSS and JS on your Magento 2 store continues to work properly, you’ll need to run a static content deploy command.
 
-    .. code-block::
+    .. code-block:: bash
 
         php bin/magento setup:static-content:deploy -f
 
@@ -154,4 +154,4 @@ Default values correspond to default placements in Talkable.
 
 .. _Talkable extension:
 .. _Magento 2 Integration Extension: https://commercemarketplace.adobe.com/talkable-magento2-integration.html
-.. _Magento Extensions Guide: https://devdocs.magento.com/extensions/install/
+.. _Magento Extensions Guide: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/extensions.html

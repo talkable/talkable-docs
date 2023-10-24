@@ -49,7 +49,7 @@ div.section::after {
     box-sizing: border-box;
 }
 
-a, .a {
+a, .a, a:visited {
     color: #D36835;
     cursor: pointer;
     text-decoration: none;

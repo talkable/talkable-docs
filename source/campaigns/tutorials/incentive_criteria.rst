@@ -4,6 +4,8 @@
 .. meta::
    :description: When you create an incentive for Advocate or Friend, you can set terms and conditions.
 
+.. _incentive_criteria:
+
 Incentive Criteria
 ------------------
 
