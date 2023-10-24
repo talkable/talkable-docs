@@ -44,8 +44,7 @@ Installation
 
     .. code-block:: bash
 
-       php bin/magento module:enable Talkable_Integration
-       --clear-static-content
+       php bin/magento module:enable Talkable_Integration --clear-static-content
 
    You should see the following output:
 
