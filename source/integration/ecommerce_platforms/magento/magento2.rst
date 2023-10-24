@@ -29,7 +29,7 @@ Installation
 
 1. Visit the Magento Marketplace and get the `Talkable extension`_.
 
-   .. image:: /_static/img/magento2/install0.jpg
+   .. image:: /_static/img/magento2/install.jpg
 
 2. Log in to your Magento 2 server and navigate to the root directory of your Magento app from your command line tool. This guide shows example outputs for Terminal, but these steps can be modified for any command line tool of your choice.
 
