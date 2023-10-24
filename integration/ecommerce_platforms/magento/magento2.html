@@ -107,20 +107,20 @@ To install the Talkable extension, you’ll need to execute four commands.</p>
 </div>
 <ol class="arabic">
 <li><p>Visit the Magento Marketplace and get the <a class="reference external" rel="nofollow" href="https://commercemarketplace.adobe.com/talkable-magento2-integration.html">Talkable extension</a>.</p>
-<img alt="../../../_images/install0.jpg" src="../../../_images/install0.jpg" />
+<img alt="../../../_images/install.jpg" src="../../../_images/install.jpg" />
 </li>
-<li><p>Log in to your Magento 2 server and navigate to the root directory of your Magento app from your command line tool. This guide shows example outputs for Terminal, but these steps can be modified for any command line tool of your choice.</p></li>
+<li><p>Log in to your Magento 2 server and navigate to the root directory of your Magento app from your command line tool.
+This guide shows example outputs for Terminal, but these steps can be modified for any command line tool of your choice.</p></li>
 <li><p>Run the following command to access the latest version of the Talkable extension.</p>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">composer</span> <span class="n">require</span> <span class="n">talkable</span><span class="o">/</span><span class="n">magento2</span><span class="o">-</span><span class="n">integration</span>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>composer<span class="w"> </span>require<span class="w"> </span>talkable/magento2-integration
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p>Run the following command to enable the Talkable extension you just downloaded:</p>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">php</span> <span class="nb">bin</span><span class="o">/</span><span class="n">magento</span> <span class="n">module</span><span class="p">:</span><span class="n">enable</span> <span class="n">Talkable_Integration</span>
-<span class="o">--</span><span class="n">clear</span><span class="o">-</span><span class="n">static</span><span class="o">-</span><span class="n">content</span>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>php<span class="w"> </span>bin/magento<span class="w"> </span>module:enable<span class="w"> </span>Talkable_Integration<span class="w"> </span>--clear-static-content
 </pre></div>
 </div>
 </div></blockquote>
@@ -140,14 +140,14 @@ To install the Talkable extension, you’ll need to execute four commands.</p>
 </li>
 <li><p>As displayed in the sample output, you must now enable any additional modules. Run the following command to enable them:</p>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">php</span> <span class="nb">bin</span><span class="o">/</span><span class="n">magento</span> <span class="n">setup</span><span class="p">:</span><span class="n">upgrade</span>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>php<span class="w"> </span>bin/magento<span class="w"> </span>setup:upgrade
 </pre></div>
 </div>
 </div></blockquote>
 </li>
 <li><p>To ensure that the CSS and JS on your Magento 2 store continues to work properly, you’ll need to run a static content deploy command.</p>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">php</span> <span class="nb">bin</span><span class="o">/</span><span class="n">magento</span> <span class="n">setup</span><span class="p">:</span><span class="n">static</span><span class="o">-</span><span class="n">content</span><span class="p">:</span><span class="n">deploy</span> <span class="o">-</span><span class="n">f</span>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>php<span class="w"> </span>bin/magento<span class="w"> </span>setup:static-content:deploy<span class="w"> </span>-f
 </pre></div>
 </div>
 </div></blockquote>
