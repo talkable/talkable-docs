@@ -151,37 +151,40 @@ Whenever a purchase is refunded on a customer’s store, Shopify triggers the re
 <tr class="row-odd"><td><p><strong>Email</strong></p></td>
 <td><p><cite>payload.email</cite></p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Subtotal</strong></p></td>
-<td><p><cite>payload.subtotal_price</cite></p></td>
+<tr class="row-even"><td><p><strong>Currency</strong></p></td>
+<td><p><cite>payload.presentment_currency</cite></p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Taxes</strong></p></td>
+<tr class="row-odd"><td><p><strong>Subtotal</strong></p></td>
+<td><p><cite>payload.subtotal_price_set.presentment_money.amount</cite></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Taxes</strong></p></td>
 <td><p><cite>payload.total_tax</cite></p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Discount Amount</strong></p></td>
+<tr class="row-odd"><td><p><strong>Discount Amount</strong></p></td>
 <td><p><cite>payload.total_discounts</cite></p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Shipping Cost</strong></p></td>
+<tr class="row-even"><td><p><strong>Shipping Cost</strong></p></td>
 <td><p><cite>payload.total_shipping_price_set</cite></p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Items Purchased</strong></p></td>
+<tr class="row-odd"><td><p><strong>Items Purchased</strong></p></td>
 <td><p><cite>payload.line_items</cite></p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Coupon codes</strong></p></td>
+<tr class="row-even"><td><p><strong>Coupon codes</strong></p></td>
 <td><p><cite>payload.discount_codes</cite></p></td>
 </tr>
-<tr class="row-even"><td><p><strong>IP Address</strong></p></td>
+<tr class="row-odd"><td><p><strong>IP Address</strong></p></td>
 <td><p><cite>payload.browser_ip</cite></p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Shipping Address</strong></p></td>
+<tr class="row-even"><td><p><strong>Shipping Address</strong></p></td>
 <td><p><cite>payload.shipping_address</cite> (joined by comma)</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Shipping Zip</strong></p></td>
+<tr class="row-odd"><td><p><strong>Shipping Zip</strong></p></td>
 <td><p><cite>payload.shipping_address.zip</cite></p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>Traffic Source</strong></p></td>
+<tr class="row-even"><td><p><strong>Traffic Source</strong></p></td>
 <td><p>“purchase-syncing” (constant value)</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>Visitor</strong></p></td>
+<tr class="row-odd"><td><p><strong>Visitor</strong></p></td>
 <td><p>None (empty)</p></td>
 </tr>
 </tbody>
