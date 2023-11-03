@@ -22,7 +22,7 @@
       var _talkable_data = {
         purchase: {
           order_number: checkout.order_id, // REQUIRED - Order number
-          currency_iso_code: checkout.currency, // Optional - Purchase Currency. REQUIRED for Multi-Currency Sites
+          currency_iso_code: checkout.presentment_currency, // Optional - Purchase Currency. REQUIRED for Multi-Currency Sites
           subtotal: checkout.line_items_subtotal_price, // REQUIRED - Purchase Subtotal Price
           tax_amount: checkout.total_tax, // REQUIRED - Purchase tax amount
           discount_amount: checkout.discount ? checkout.discount.amount : null, // REQUIRED - Total Discount
