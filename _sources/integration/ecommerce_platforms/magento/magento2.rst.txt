@@ -22,45 +22,56 @@ The extension supports all versions of Magento 2.0 or higher.
 Installation
 ------------
 
-1. Visit the Magento Marketplace and get the `Talkable extension`_.
-
-   .. image:: /_static/img/magento2/install0.jpg
-
-2. Follow `Magento Extensions Guide`_ for installation.
-
-|page_break|
-
-Activating the Integration
---------------------------
-
-1. After successful installation, navigate to **System** → **Integrations** page of your admin panel.
-
-   .. image:: /_static/img/magento2/activate1.jpg
-
-2. Find *"Talkable"* in the list of integrations and click the **Activate** link.
-
-   .. image:: /_static/img/magento2/activate2.jpg
-
-3. Review the list of permissions that the Talkable extension needs and click **Allow**.
-
-   .. image:: /_static/img/magento2/activate3.jpg
-
-4. Log in to your Talkable account (if you’re already logged in, this step will be omitted).
-
-   .. image:: /_static/img/magento2/activate4.jpg
-
-|page_break|
-
-5. All done! You have successfully integrated Talkable. To verify your Talkable integration,
-   please visit **Integration** tab in **Site Settings**.
-
-   .. image:: /_static/img/magento2/activate5.jpg
-
 .. note::
 
-  Activating the integration allows Talkable to configure your extension automatically.
-  If you choose not to activate the integration, you will need to specify your Talkable Site ID in
-  the Integration_ section of extension settings.
+   Installation via Composer requires an IT administrator with SSH access to the server where Magento 2 is hosted.
+   To install the Talkable extension, you’ll need to execute four commands.
+
+1. Visit the Magento Marketplace and get the `Talkable extension`_.
+
+   .. image:: /_static/img/magento2/install.jpg
+
+2. Log in to your Magento 2 server and navigate to the root directory of your Magento app from your command line tool.
+   This guide shows example outputs for Terminal, but these steps can be modified for any command line tool of your choice.
+
+3. Run the following command to access the latest version of the Talkable extension.
+
+    .. code-block:: bash
+
+       composer require talkable/magento2-integration
+
+4. Run the following command to enable the Talkable extension you just downloaded:
+
+    .. code-block:: bash
+
+       php bin/magento module:enable Talkable_Integration --clear-static-content
+
+   You should see the following output:
+
+    .. code-block::
+
+        The following modules have been enabled:
+        - Talkable_Integration
+
+        To make sure that the enabled modules are properly registered, run 'setup:upgrade'.
+        Cache cleared successfully.
+        Generated classes cleared successfully.
+        Please run the 'setup:di:compile' command to generate classes.
+        Generated static view files cleared successfully.
+
+5. As displayed in the sample output, you must now enable any additional modules. Run the following command to enable them:
+
+    .. code-block:: bash
+
+        php bin/magento setup:upgrade
+
+6. To ensure that the CSS and JS on your Magento 2 store continues to work properly, you’ll need to run a static content deploy command.
+
+    .. code-block:: bash
+
+        php bin/magento setup:static-content:deploy -f
+
+7. Installation via Composer is complete! You can now return to the Magento admin dashboard from your browser.
 
 |page_break|
 
@@ -108,9 +119,7 @@ to your Talkable account.
 
 .. note::
 
-   If you have activated the extension's integration, the Site ID will be prefilled
-   (see `Activating the Integration`_). If you chose not to activate the integration,
-   you need to paste the Site ID from your Talkable Site Dashboard into this field.
+   You need to paste the Site ID from your Talkable Site Dashboard into this field.
 
    .. image:: /_static/img/magento2/configure3.jpg
 
@@ -144,5 +153,5 @@ Default values correspond to default placements in Talkable.
 .. image:: /_static/img/magento2/configure6.jpg
 
 .. _Talkable extension:
-.. _Magento 2 Integration Extension: https://marketplace.magento.com/talkable-magento2-integration.html
-.. _Magento Extensions Guide: https://devdocs.magento.com/extensions/install/
+.. _Magento 2 Integration Extension: https://commercemarketplace.adobe.com/talkable-magento2-integration.html
+.. _Magento Extensions Guide: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/extensions.html
