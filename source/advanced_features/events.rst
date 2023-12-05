@@ -27,8 +27,9 @@ Subscription payments should be registered under the “subscription” event ca
 can be found in the Reports → Events section of your Talkable Dashboard. Here is an example:
 
 .. code-block:: html
-
+  <script async src="https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/<YOUR-TALKABLE-SITE-ID>.min.js"></script>
   <script>
+    window._talkableq = window._talkableq || []
     window._talkableq.push(['register_event', {
       event: {
         event_category: 'subscription',
@@ -46,8 +47,9 @@ One-time purchases should go under the “purchase” event category. You can fi
 in the Reports → Purchases section of your Talkable Dashboard. Here is an example:
 
 .. code-block:: html
-
+  <script async src="https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/<YOUR-TALKABLE-SITE-ID>.min.js"></script>
   <script>
+    window._talkableq = window._talkableq || []
     window._talkableq.push(['register_event', {
       event: {
         event_category: 'purchase',
