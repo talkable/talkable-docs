@@ -28,6 +28,7 @@ can be found in the Reports → Events section of your Talkable Dashboard. Here 
 
 .. code-block:: html
   <script async src="https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/<YOUR-TALKABLE-SITE-ID>.min.js"></script>
+.. code-block:: html
   <script>
     window._talkableq = window._talkableq || []
     window._talkableq.push(['register_event', {
@@ -48,6 +49,7 @@ in the Reports → Purchases section of your Talkable Dashboard. Here is an exam
 
 .. code-block:: html
   <script async src="https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/<YOUR-TALKABLE-SITE-ID>.min.js"></script>
+.. code-block:: html
   <script>
     window._talkableq = window._talkableq || []
     window._talkableq.push(['register_event', {
