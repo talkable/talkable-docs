@@ -30,7 +30,7 @@ can be found in the Reports → Events section of your Talkable Dashboard. Here 
 
   <!-- Begin Talkable integration code -->
   <script>
-    window._talkableq = window._talkableq || []
+    window._talkableq = window._talkableq || [];
     window._talkableq.push(['register_event', {
       event: {
         event_category: 'subscription',
@@ -56,7 +56,7 @@ in the Reports → Purchases section of your Talkable Dashboard. Here is an exam
 
   <!-- Begin Talkable integration code -->
   <script>
-    window._talkableq = window._talkableq || []
+    window._talkableq = window._talkableq || [];
     window._talkableq.push(['register_event', {
       event: {
         event_category: 'purchase',
