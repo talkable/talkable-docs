@@ -28,7 +28,9 @@ can be found in the Reports → Events section of your Talkable Dashboard. Here 
 
 .. code-block:: html
 
+  <!-- Begin Talkable integration code -->
   <script>
+    window._talkableq = window._talkableq || []
     window._talkableq.push(['register_event', {
       event: {
         event_category: 'subscription',
@@ -41,13 +43,20 @@ can be found in the Reports → Events section of your Talkable Dashboard. Here 
       }
     }]);
   </script>
+  <!-- End Talkable integration code -->
+
+.. note::
+
+   Please make sure you've added :ref:`Talkable Initialization Script <integration/custom/integration_components/initialization_script>` to your header or any template spanning every page.
 
 One-time purchases should go under the “purchase” event category. You can find all purchases
 in the Reports → Purchases section of your Talkable Dashboard. Here is an example:
 
 .. code-block:: html
 
+  <!-- Begin Talkable integration code -->
   <script>
+    window._talkableq = window._talkableq || []
     window._talkableq.push(['register_event', {
       event: {
         event_category: 'purchase',
@@ -60,6 +69,7 @@ in the Reports → Purchases section of your Talkable Dashboard. Here is an exam
       }
     }]);
   </script>
+  <!-- End Talkable integration code -->
 
 .. note::
 
