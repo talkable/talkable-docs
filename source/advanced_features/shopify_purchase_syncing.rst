@@ -37,10 +37,11 @@ Talkable uses next mapping when syncing purchases from Shopify Webhook payload:
   =========================== =====================================================
   **Order Number**            `payload.id` (Shopify Purchase ID)
   **Email**                   `payload.email`
-  **Subtotal**                `payload.total_price`
-  **Taxes**                   `payload.total_tax`
-  **Discount Amount**         `payload.total_discounts`
-  **Shipping Cost**           `payload.total_shipping_price_set`
+  **Currency**                `payload.presentment_currency`
+  **Subtotal**                `payload.subtotal_price_set.presentment_money.amount`
+  **Taxes**                   `payload.total_tax_set.presentment_money.amount`
+  **Discount Amount**         `payload.total_discounts_set.presentment_money.amount`
+  **Shipping Cost**           `payload.total_shipping_price_set.presentment_money.amount`
   **Items Purchased**         `payload.line_items`
   **Coupon codes**            `payload.discount_codes`
   **IP Address**              `payload.browser_ip`
