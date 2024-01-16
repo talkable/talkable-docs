@@ -5,7 +5,7 @@
    :description: This is all about how we use cookies.
 
 Cookies
-####################
+#######
 
 At Talkable, we prioritize enhancing your digital experience.
 Our use of cookies is instrumental in this endeavor, as they play a critical role in tracking referrals and conversions, personalizing content, and maintaining the overall performance and reliability of our services.
@@ -71,7 +71,7 @@ We use these cookies to understand, improve, and research our Site and Services.
 .. _integration/custom/cookies/gdpr_and_ccpa_compliance:
 
 GDPR and CCPA compliance
---------------------
+------------------------
 Talkable ensures compliance with GDPR and CCPA regulations.
 In compliant mode, we only set a session cookie during the first user interaction.
 These session cookies, being temporary, disappear once the browser is closed.
@@ -83,5 +83,4 @@ Post-consent (e.g., during signup), Talkable activates standard cookies to monit
    It is advised to use compliant mode only if you are legally obligated to do so.
 
 To enable GDPR and CCPA compliant mode, please contact your Customer Success Manager.
-
 
