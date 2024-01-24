@@ -66,6 +66,9 @@ Manual integration
              The name of the section should be the same as the one you used
              in the previous step when naming your section file.
 
+          .. important::
+             If your main section is disabled, remove the row that does it.
+
     3. Create a page:
 
         * Exit theme editor if it was opened
@@ -96,7 +99,16 @@ you need to do the following:
     * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Sections**
     * Click “Add a new section“
     * Create a new Liquid section called `talkable-loyalty-dashboard.liquid`
-    * In the newly created file, add the contents of the deleted `templates/page.talkable-loyalty-dashboard.liquid` file
+    * In the newly created file, add the following code:
+
+      .. code-block:: html
+
+         {% if shop.customer_accounts_enabled %}
+           <div id="talkable-loyalty"></div>
+         {% endif %}
+
+      If there were any customizations in the `templates/page.talkable-loyalty-dashboard.liquid`, add them as well
+
     * Optionally, update the schema name to anything meaningful, for example, “Loyalty dashboard“
     * Click “Save”
 
@@ -120,3 +132,6 @@ you need to do the following:
       .. important::
          The name of the section should be the same as the one you used
          in the previous step when naming your section file.
+
+      .. important::
+         If your main section is disabled, remove the row that does it.

@@ -219,19 +219,15 @@ integration library which is displayed on the integration page. Example:
 <li><p>Click “Add a new template“</p></li>
 <li><p>Create a new JSON template of type <cite>page</cite> called <cite>talkable</cite> (<cite>page.talkable.json</cite>)</p></li>
 <li><p>Change the type of the main section to <cite>talkable-campaign</cite></p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;sections&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;talkable-campaign&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
+<img alt="Shopify editor - Talkable page section" class="is-minimal" src="../../_images/editor_template.png" />
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>The name of the section should be the same as the one you used
 in the previous step when naming your section file.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If your main section is disabled, remove the row that does it.</p>
 </div>
 </li>
 </ul>
@@ -297,6 +293,10 @@ in the previous step when naming your section file.</p>
 <p class="admonition-title">Important</p>
 <p>The name of the section should be the same as the one you used
 in the previous step when naming your section file.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If your main section is disabled, remove the row that does it.</p>
 </div>
 </li>
 </ul>
@@ -426,11 +426,16 @@ you need to do the following:</p>
 <li><p>If you have a <cite>templates/page.talkable.liquid</cite> file, store its content elsewhere and delete the file</p></li>
 <li><p>Create a share page section:</p>
 <blockquote>
-<div><ul class="simple">
+<div><ul>
 <li><p>In the theme code editor (<strong>Online Store</strong> → <strong>Themes</strong> → <strong>Edit code</strong>), go to <strong>Sections</strong></p></li>
 <li><p>Click “Add a new section“</p></li>
 <li><p>Create a new Liquid section called <cite>talkable-campaign.liquid</cite></p></li>
-<li><p>In the newly created file, add the contents of the deleted <cite>templates/page.talkable.liquid</cite> file</p></li>
+<li><p>In the newly created file, add the <cite>&lt;div&gt;</cite> block for the referral campaign.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;talkable-offer&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>If there were any customizations in the <cite>templates/page.talkable.liquid</cite>, add them as well</p>
+</li>
 <li><p>Optionally, update the schema name to anything meaningful, for example, “Referral campaign</p></li>
 <li><p>Click “Save”</p></li>
 </ul>
@@ -443,19 +448,15 @@ you need to do the following:</p>
 <li><p>Click “Add a new template“</p></li>
 <li><p>Create a new JSON template of type <cite>page</cite> called <cite>talkable</cite> (<cite>page.talkable.json</cite>)</p></li>
 <li><p>Change the type of the main section to <cite>talkable-campaign</cite></p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;sections&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;talkable-campaign&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
+<img alt="Shopify editor - Talkable page section" class="is-minimal" src="../../_images/editor_template.png" />
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>The name of the section should be the same as the one you used
 in the previous step when naming your section file.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If your main section is disabled, remove the row that does it.</p>
 </div>
 </li>
 </ul>
@@ -470,11 +471,22 @@ in the previous step when naming your section file.</p>
 <li><p>If you have a <cite>templates/page.talkable-dashboard.liquid</cite> file, store its content elsewhere and delete the file</p></li>
 <li><p>Create a dashboard page section:</p>
 <blockquote>
-<div><ul class="simple">
+<div><ul>
 <li><p>In the theme code editor (<strong>Online Store</strong> → <strong>Themes</strong> → <strong>Edit code</strong>), go to <strong>Sections</strong></p></li>
 <li><p>Click “Add a new section“</p></li>
 <li><p>Create a new Liquid section called <cite>talkable-dashboard.liquid</cite></p></li>
-<li><p>In the newly created file, add the contents of the deleted <cite>templates/page.talkable-dashboard.liquid</cite> file</p></li>
+<li><p>In the newly created file, add the <cite>&lt;div&gt;</cite> block for the referral campaign.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{% if shop.customer_accounts_enabled %}
+  {% if customer %}
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;talkable-offer&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  {% else %}
+    {{ &#39;Log in&#39; | customer_login_link }}
+  {% endif %}
+{% endif %}
+</pre></div>
+</div>
+<p>If there were any customizations in the <cite>templates/page.talkable-dashboard.liquid</cite>, add them as well</p>
+</li>
 <li><p>Optionally, update the schema name to anything meaningful, for example, “Referral dashboard“</p></li>
 <li><p>Click “Save”</p></li>
 </ul>
@@ -500,6 +512,10 @@ in the previous step when naming your section file.</p>
 <p class="admonition-title">Important</p>
 <p>The name of the section should be the same as the one you used
 in the previous step when naming your section file.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If your main section is disabled, remove the row that does it.</p>
 </div>
 </li>
 </ul>

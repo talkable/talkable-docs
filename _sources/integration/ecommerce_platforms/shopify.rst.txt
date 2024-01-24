@@ -105,19 +105,16 @@ Manual integration
         * Create a new JSON template of type `page` called `talkable` (`page.talkable.json`)
         * Change the type of the main section to `talkable-campaign`
 
-          .. code-block:: JSON
-
-             {
-               "sections": {
-                 "main": {
-                   "type": "talkable-campaign"
-                 }
-               }
-             }
+          .. image:: /_static/img/shopify/editor_template.png
+             :alt: Shopify editor - Talkable page section
+             :class: is-minimal
 
           .. important::
              The name of the section should be the same as the one you used
              in the previous step when naming your section file.
+
+          .. important::
+             If your main section is disabled, remove the row that does it.
 
     3. Create a page:
 
@@ -171,6 +168,9 @@ Manual integration
              The name of the section should be the same as the one you used
              in the previous step when naming your section file.
 
+          .. important::
+             If your main section is disabled, remove the row that does it.
+
     3. Create a page:
 
         * Exit theme editor if it was opened
@@ -223,7 +223,14 @@ you need to do the following:
         * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Sections**
         * Click “Add a new section“
         * Create a new Liquid section called `talkable-campaign.liquid`
-        * In the newly created file, add the contents of the deleted `templates/page.talkable.liquid` file
+        * In the newly created file, add the `<div>` block for the referral campaign.
+
+          .. code-block:: html
+
+             <div id="talkable-offer"></div>
+
+          If there were any customizations in the `templates/page.talkable.liquid`, add them as well
+
         * Optionally, update the schema name to anything meaningful, for example, “Referral campaign
         * Click “Save”
 
@@ -234,19 +241,16 @@ you need to do the following:
         * Create a new JSON template of type `page` called `talkable` (`page.talkable.json`)
         * Change the type of the main section to `talkable-campaign`
 
-          .. code-block:: JSON
-
-             {
-               "sections": {
-                 "main": {
-                   "type": "talkable-campaign"
-                 }
-               }
-             }
+          .. image:: /_static/img/shopify/editor_template.png
+             :alt: Shopify editor - Talkable page section
+             :class: is-minimal
 
           .. important::
              The name of the section should be the same as the one you used
              in the previous step when naming your section file.
+
+          .. important::
+             If your main section is disabled, remove the row that does it.
 
 2. Dashboard page migration:
 
@@ -257,7 +261,20 @@ you need to do the following:
         * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Sections**
         * Click “Add a new section“
         * Create a new Liquid section called `talkable-dashboard.liquid`
-        * In the newly created file, add the contents of the deleted `templates/page.talkable-dashboard.liquid` file
+        * In the newly created file, add the `<div>` block for the referral campaign.
+
+          .. code-block:: html
+
+             {% if shop.customer_accounts_enabled %}
+               {% if customer %}
+                 <div id="talkable-offer"></div>
+               {% else %}
+                 {{ 'Log in' | customer_login_link }}
+               {% endif %}
+             {% endif %}
+
+          If there were any customizations in the `templates/page.talkable-dashboard.liquid`, add them as well
+
         * Optionally, update the schema name to anything meaningful, for example, “Referral dashboard“
         * Click “Save”
 
@@ -281,3 +298,6 @@ you need to do the following:
           .. important::
              The name of the section should be the same as the one you used
              in the previous step when naming your section file.
+
+          .. important::
+             If your main section is disabled, remove the row that does it.
