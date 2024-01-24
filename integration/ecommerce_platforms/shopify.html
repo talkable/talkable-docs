@@ -317,65 +317,6 @@ in the previous step when naming your section file.</p>
 </ol>
 </div></blockquote>
 </li>
-<li><p>Optionally, in your Shopify Admin create resources for loyalty dashboard page:</p>
-<ol class="arabic">
-<li><p>Create a loyalty dashboard page section:</p>
-<blockquote>
-<div><ul>
-<li><p>In the theme code editor (<strong>Online Store</strong> → <strong>Themes</strong> → <strong>Edit code</strong>), go to <strong>Sections</strong></p></li>
-<li><p>Click “Add a new section“</p></li>
-<li><p>Create a new Liquid section called <cite>talkable-loyalty-dashboard.liquid</cite></p></li>
-<li><p>In the newly created file, add the following code:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{% if shop.customer_accounts_enabled %}
-  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;talkable-loyalty&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-{% endif %}
-</pre></div>
-</div>
-</li>
-<li><p>Optionally, update the schema name to anything meaningful, for example, “Loyalty dashboard“</p></li>
-<li><p>Click “Save”</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p>Create a loyalty dashboard page template:</p>
-<blockquote>
-<div><ul>
-<li><p>Go to <strong>Templates</strong></p></li>
-<li><p>Click “Add a new template“</p></li>
-<li><p>Create a new JSON template of type <cite>page</cite> called <cite>loyalty_dashboard.talkable</cite> (<cite>page.loyalty_dashboard.talkable.json</cite>)</p></li>
-<li><p>Change the type of the main section to <cite>talkable-loyalty-dashboard</cite></p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;sections&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;talkable-loyalty-dashboard&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>The name of the section should be the same as the one you used
-in the previous step when naming your section file.</p>
-</div>
-</li>
-</ul>
-</div></blockquote>
-</li>
-<li><p>Create a page:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Exit theme editor if it was opened</p></li>
-<li><p>Go to <strong>Online Store</strong> → <strong>Pages</strong></p></li>
-<li><p>Click “Add page“</p></li>
-<li><p>Add title: <cite>Loyalty Dashboard</cite></p></li>
-<li><p>Select theme template: <cite>loyalty_dashboard.talkable</cite></p></li>
-<li><p>Click “Save” (Customer accounts must be enabled in <strong>Settings</strong> → <strong>Checkout</strong>)</p></li>
-</ul>
-</div></blockquote>
-</li>
-</ol>
-</li>
 <li><p>In your Shopify Admin, add a post-purchase script:</p>
 <ul class="simple">
 <li><p>Go to <strong>Settings</strong> → <strong>Checkout</strong></p></li>
@@ -550,50 +491,6 @@ in the previous step when naming your section file.</p>
 <span class="w">  </span><span class="nt">&quot;sections&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;talkable-dashboard&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
-<p>The name of the section should be the same as the one you used
-in the previous step when naming your section file.</p>
-</div>
-</li>
-</ul>
-</div></blockquote>
-</li>
-</ol>
-</div></blockquote>
-</li>
-<li><p>Loyalty dashboard page migration:</p>
-<blockquote>
-<div><ol class="arabic">
-<li><p>If you have a <cite>templates/page.talkable-loyalty-dashboard.liquid</cite> file, store its content elsewhere and delete the file</p></li>
-<li><p>Create a loyalty dashboard page section:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>In the theme code editor (<strong>Online Store</strong> → <strong>Themes</strong> → <strong>Edit code</strong>), go to <strong>Sections</strong></p></li>
-<li><p>Click “Add a new section“</p></li>
-<li><p>Create a new Liquid section called <cite>talkable-loyalty-dashboard.liquid</cite></p></li>
-<li><p>In the newly created file, add the contents of the deleted <cite>templates/page.talkable-loyalty-dashboard.liquid</cite> file</p></li>
-<li><p>Optionally, update the schema name to anything meaningful, for example, “Loyalty dashboard“</p></li>
-<li><p>Click “Save”</p></li>
-</ul>
-</div></blockquote>
-</li>
-<li><p>Create a loyalty dashboard page template:</p>
-<blockquote>
-<div><ul>
-<li><p>Go to <strong>Templates</strong></p></li>
-<li><p>Click “Add a new template“</p></li>
-<li><p>Create a new JSON template of type <cite>page</cite> called <cite>loyalty_dashboard.talkable</cite> (<cite>page.loyalty_dashboard.talkable.json</cite>)</p></li>
-<li><p>Change the type of the main section to <cite>talkable-loyalty-dashboard</cite></p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;sections&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;talkable-loyalty-dashboard&quot;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
