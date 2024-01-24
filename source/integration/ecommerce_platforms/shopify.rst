@@ -180,55 +180,7 @@ Manual integration
         * Select theme template: `dashboard.talkable`
         * Click “Save” (Customer accounts must be enabled in **Settings** → **Checkout**)
 
-10. Optionally, in your Shopify Admin create resources for loyalty dashboard page:
-
-    1. Create a loyalty dashboard page section:
-
-        * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Sections**
-        * Click “Add a new section“
-        * Create a new Liquid section called `talkable-loyalty-dashboard.liquid`
-        * In the newly created file, add the following code:
-
-          .. code-block:: html
-
-             {% if shop.customer_accounts_enabled %}
-               <div id="talkable-loyalty"></div>
-             {% endif %}
-
-        * Optionally, update the schema name to anything meaningful, for example, “Loyalty dashboard“
-        * Click “Save”
-
-    2. Create a loyalty dashboard page template:
-
-        * Go to **Templates**
-        * Click “Add a new template“
-        * Create a new JSON template of type `page` called `loyalty_dashboard.talkable` (`page.loyalty_dashboard.talkable.json`)
-        * Change the type of the main section to `talkable-loyalty-dashboard`
-
-          .. code-block:: JSON
-
-             {
-               "sections": {
-                 "main": {
-                   "type": "talkable-loyalty-dashboard"
-                 }
-               }
-             }
-
-          .. important::
-             The name of the section should be the same as the one you used
-             in the previous step when naming your section file.
-
-    3. Create a page:
-
-        * Exit theme editor if it was opened
-        * Go to **Online Store** → **Pages**
-        * Click “Add page“
-        * Add title: `Loyalty Dashboard`
-        * Select theme template: `loyalty_dashboard.talkable`
-        * Click “Save” (Customer accounts must be enabled in **Settings** → **Checkout**)
-
-11. In your Shopify Admin, add a post-purchase script:
+10. In your Shopify Admin, add a post-purchase script:
 
     * Go to **Settings** → **Checkout**
     * Scroll down to **Order status page**
@@ -242,7 +194,7 @@ Manual integration
 
     * Click “Save”.
 
-12. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`.
+11. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`.
 
 .. |example_link| raw:: html
 
@@ -322,40 +274,6 @@ you need to do the following:
                "sections": {
                  "main": {
                    "type": "talkable-dashboard"
-                 }
-               }
-             }
-
-          .. important::
-             The name of the section should be the same as the one you used
-             in the previous step when naming your section file.
-
-3. Loyalty dashboard page migration:
-
-    1. If you have a `templates/page.talkable-loyalty-dashboard.liquid` file, store its content elsewhere and delete the file
-
-    2. Create a loyalty dashboard page section:
-
-        * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Sections**
-        * Click “Add a new section“
-        * Create a new Liquid section called `talkable-loyalty-dashboard.liquid`
-        * In the newly created file, add the contents of the deleted `templates/page.talkable-loyalty-dashboard.liquid` file
-        * Optionally, update the schema name to anything meaningful, for example, “Loyalty dashboard“
-        * Click “Save”
-
-    3. Create a loyalty dashboard page template:
-
-        * Go to **Templates**
-        * Click “Add a new template“
-        * Create a new JSON template of type `page` called `loyalty_dashboard.talkable` (`page.loyalty_dashboard.talkable.json`)
-        * Change the type of the main section to `talkable-loyalty-dashboard`
-
-          .. code-block:: JSON
-
-             {
-               "sections": {
-                 "main": {
-                   "type": "talkable-loyalty-dashboard"
                  }
                }
              }

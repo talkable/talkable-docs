@@ -27,31 +27,96 @@ Manual integration
 3. After successful installation you will be redirected back to Talkable
 4. Click “Integrate manually“
 5. Set up Referral Integration :ref:`manually <integration/ecommerce_platforms/shopify/manual_integration>`
-6. Then navigate to:
+6. In your Shopify Admin create resources for loyalty dashboard page:
 
-    * Open `Themes / Templates`
-    * Click “Add a new template“
-    * Create a new template for `page` called `loyalty`
-    * Paste the following code inside layout:
+    1. Create a loyalty dashboard page section:
 
-    .. code-block:: html
+        * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Sections**
+        * Click “Add a new section“
+        * Create a new Liquid section called `talkable-loyalty-dashboard.liquid`
+        * In the newly created file, add the following code:
 
-      {% if shop.customer_accounts_enabled %}
-         <div id="talkable-loyalty"></div>
-      {% endif %}
+          .. code-block:: html
 
-    * Click “Save”
+             {% if shop.customer_accounts_enabled %}
+               <div id="talkable-loyalty"></div>
+             {% endif %}
 
-7. Then navigate to:
+        * Optionally, update the schema name to anything meaningful, for example, “Loyalty dashboard“
+        * Click “Save”
 
-    * Open `Online Store / Pages`
-    * Click “Add page“
-    * Add title `loyalty`
-    * Select Theme template `loyalty`
-    * Click “Save”
+    2. Create a loyalty dashboard page template:
+
+        * Go to **Templates**
+        * Click “Add a new template“
+        * Create a new JSON template of type `page` called `loyalty_dashboard.talkable` (`page.loyalty_dashboard.talkable.json`)
+        * Change the type of the main section to `talkable-loyalty-dashboard`
+
+          .. code-block:: JSON
+
+             {
+               "sections": {
+                 "main": {
+                   "type": "talkable-loyalty-dashboard"
+                 }
+               }
+             }
+
+          .. important::
+             The name of the section should be the same as the one you used
+             in the previous step when naming your section file.
+
+    3. Create a page:
+
+        * Exit theme editor if it was opened
+        * Go to **Online Store** → **Pages**
+        * Click “Add page“
+        * Add title: `Loyalty Dashboard`
+        * Select theme template: `loyalty_dashboard.talkable`
+        * Click “Save”
 
 .. raw:: html
 
    <h2>Requirements</h2>
 
 User accounts. The website must support user accounts since the loyalty program is only available to logged in users.
+
+Manual migrating from a vintage theme to an Online store 2.0 theme
+------------------------------------------------------------------
+
+If you have previously integrated Talkable in your vintage Shopify theme and want to migrate to a newer theme,
+you need to do the following:
+
+1. :ref:`Migrate the referral pages <integration/ecommerce_platforms/shopify/manual_integration_theme_migration>`
+
+2. If you have a `templates/page.talkable-loyalty-dashboard.liquid` file, store its content elsewhere and delete the file
+
+3. Create a loyalty dashboard page section:
+
+    * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Sections**
+    * Click “Add a new section“
+    * Create a new Liquid section called `talkable-loyalty-dashboard.liquid`
+    * In the newly created file, add the contents of the deleted `templates/page.talkable-loyalty-dashboard.liquid` file
+    * Optionally, update the schema name to anything meaningful, for example, “Loyalty dashboard“
+    * Click “Save”
+
+4. Create a loyalty dashboard page template:
+
+    * Go to **Templates**
+    * Click “Add a new template“
+    * Create a new JSON template of type `page` called `loyalty_dashboard.talkable` (`page.loyalty_dashboard.talkable.json`)
+    * Change the type of the main section to `talkable-loyalty-dashboard`
+
+      .. code-block:: JSON
+
+         {
+           "sections": {
+             "main": {
+               "type": "talkable-loyalty-dashboard"
+             }
+           }
+         }
+
+      .. important::
+         The name of the section should be the same as the one you used
+         in the previous step when naming your section file.
