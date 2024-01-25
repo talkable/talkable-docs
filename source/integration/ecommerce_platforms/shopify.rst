@@ -231,7 +231,7 @@ you need to do the following:
 
           If there were any customizations in the `templates/page.talkable.liquid`, add them as well
 
-        * Optionally, update the schema name to anything meaningful, for example, “Referral campaign
+        * Optionally, update the schema name to anything meaningful, for example, “Referral campaign“
         * Click “Save”
 
     3. Create a share page template:
