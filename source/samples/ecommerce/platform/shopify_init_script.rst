@@ -2,11 +2,9 @@
 
   <!-- Begin Talkable integration code -->
   <script type="text/javascript">
-    window._talkableq = [['init', {
-      site_id: '<YOUR-TALKABLE-SITE-ID>' // REQUIRED - Replace with your Talkable Site ID
-    }]];
+    window._talkableq = window._talkableq || [];
     {% if customer %}
-      _talkableq.push(['authenticate_customer', {
+      window._talkableq.push(['authenticate_customer', {
         email:        '{{ customer.email }}',
         phone_number: '{{ customer.phone }}',
         first_name:   '{{ customer.first_name }}',
@@ -14,5 +12,5 @@
       }]);
     {% endif %}
   </script>
-  <script src="https://YOUR-PER-CLIENT-INTEGRATION.js" type="text/javascript"></script>
+  <script async src="https://YOUR-PER-CLIENT-INTEGRATION.js" type="text/javascript"></script>
   <!-- End Talkable integration code -->
