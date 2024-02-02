@@ -3,11 +3,11 @@
 <html lang="en" data-content_root="../../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta content="Here’s how you can integrate Talkable Shopify app with your store." name="description" />
 
     <title>Shopify Integration &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b76e3c8a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/talkable.css?v=ec60a709" />
     <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
@@ -146,11 +146,9 @@ please follow the instructions below.</p>
 <li><p>In the newly created file, add the following code:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Begin Talkable integration code --&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
-<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="s1">&#39;init&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">site_id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;YOUR-TALKABLE-SITE-ID&gt;&#39;</span><span class="w"> </span><span class="c1">// REQUIRED - Replace with your Talkable Site ID</span>
-<span class="w">  </span><span class="p">}]];</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">[];</span>
 <span class="w">  </span><span class="p">{</span><span class="o">%</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">customer</span><span class="w"> </span><span class="o">%</span><span class="p">}</span>
-<span class="w">    </span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;authenticate_customer&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;authenticate_customer&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">email</span><span class="o">:</span><span class="w">        </span><span class="s1">&#39;{{ customer.email }}&#39;</span><span class="p">,</span>
 <span class="w">      </span><span class="nx">phone_number</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;{{ customer.phone }}&#39;</span><span class="p">,</span>
 <span class="w">      </span><span class="nx">first_name</span><span class="o">:</span><span class="w">   </span><span class="s1">&#39;{{ customer.first_name }}&#39;</span><span class="p">,</span>
@@ -158,7 +156,7 @@ please follow the instructions below.</p>
 <span class="w">    </span><span class="p">}]);</span>
 <span class="w">  </span><span class="p">{</span><span class="o">%</span><span class="w"> </span><span class="nx">endif</span><span class="w"> </span><span class="o">%</span><span class="p">}</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://YOUR-PER-CLIENT-INTEGRATION.js&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://YOUR-PER-CLIENT-INTEGRATION.js&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="cm">&lt;!-- End Talkable integration code --&gt;</span>
 </pre></div>
 </div>
@@ -432,11 +430,9 @@ please follow the instructions below.</p>
 <li><p>In the newly created file, add the following code:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Begin Talkable integration code --&gt;</span>
 <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
-<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="s1">&#39;init&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">site_id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&lt;YOUR-TALKABLE-SITE-ID&gt;&#39;</span><span class="w"> </span><span class="c1">// REQUIRED - Replace with your Talkable Site ID</span>
-<span class="w">  </span><span class="p">}]];</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">[];</span>
 <span class="w">  </span><span class="p">{</span><span class="o">%</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">customer</span><span class="w"> </span><span class="o">%</span><span class="p">}</span>
-<span class="w">    </span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;authenticate_customer&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;authenticate_customer&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">email</span><span class="o">:</span><span class="w">        </span><span class="s1">&#39;{{ customer.email }}&#39;</span><span class="p">,</span>
 <span class="w">      </span><span class="nx">phone_number</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;{{ customer.phone }}&#39;</span><span class="p">,</span>
 <span class="w">      </span><span class="nx">first_name</span><span class="o">:</span><span class="w">   </span><span class="s1">&#39;{{ customer.first_name }}&#39;</span><span class="p">,</span>
@@ -444,7 +440,7 @@ please follow the instructions below.</p>
 <span class="w">    </span><span class="p">}]);</span>
 <span class="w">  </span><span class="p">{</span><span class="o">%</span><span class="w"> </span><span class="nx">endif</span><span class="w"> </span><span class="o">%</span><span class="p">}</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://YOUR-PER-CLIENT-INTEGRATION.js&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">async</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://YOUR-PER-CLIENT-INTEGRATION.js&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="cm">&lt;!-- End Talkable integration code --&gt;</span>
 </pre></div>
 </div>
