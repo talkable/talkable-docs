@@ -12,5 +12,5 @@
       }]);
     {% endif %}
   </script>
-  <script async src="https://YOUR-PER-CLIENT-INTEGRATION.js" type="text/javascript"></script>
+  <script async src="//d2jjzw81hqbuqv.cloudfront.net/integration/clients/<YOUR-TALKABLE-SITE-ID>.min.js" type="text/javascript"></script>
   <!-- End Talkable integration code -->

@@ -60,5 +60,5 @@
       _talkableq.push(['register_purchase', _talkable_data]);
     }
   </script>
-  <script async src="YOUR-PER-CLIENT-INTEGRATION" type="text/javascript"></script>
+  <script async src="//d2jjzw81hqbuqv.cloudfront.net/integration/clients/<YOUR-TALKABLE-SITE-ID>.min.js" type="text/javascript"></script>
   <!-- End Talkable integration code -->
