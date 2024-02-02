@@ -67,8 +67,6 @@ please follow the instructions below.
 
           .. include:: /partials/note_sample_code.rst
 
-          .. include:: /partials/note_sample_integration.rst
-
         * Click “Save”
 
     2. Render the snippet in the layout:
@@ -196,8 +194,6 @@ please follow the instructions below.
 
     .. include:: /partials/note_sample_code.rst
 
-    .. include:: /partials/note_sample_integration.rst
-
     * Click “Save”.
 
 11. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`.
@@ -227,8 +223,6 @@ please follow the instructions below.
           .. include:: /samples/ecommerce/platform/shopify_init_script.rst
 
           .. include:: /partials/note_sample_code.rst
-
-          .. include:: /partials/note_sample_integration.rst
 
         * Click “Save”
 
@@ -307,8 +301,6 @@ please follow the instructions below.
     .. include:: /samples/ecommerce/platform/shopify.rst
 
     .. include:: /partials/note_sample_code.rst
-
-    .. include:: /partials/note_sample_integration.rst
 
     * Click “Save”.
 
