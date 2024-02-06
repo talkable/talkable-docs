@@ -31,7 +31,7 @@ For users, the name sharing would proceed as follows:
 ----
 
 .. [#f1] A personal name should be unique within a site and be 3 to 50 symbols long.
-   It can only contain latin letters, numbers, and underscore as a separator.
+   It can only contain latin letters, and numbers.
    A personal name cannot begin with a number.
 
 .. _advanced_features/name_sharing_setup:
