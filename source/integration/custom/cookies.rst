@@ -12,6 +12,7 @@ Our use of cookies is instrumental in this endeavor, as they play a critical rol
 
 Understanding the Cookies We Use
 --------------------------------
+
 We broadly categorize our cookies and similar technologies as follows:
 
 **Strictly Necessary**
@@ -39,34 +40,33 @@ We use these cookies to understand, improve, and research our Site and Services.
      - Purpose
      - Domain(s)
      - Retention period(Days)
-   * - tkbl_session_id
+   * - ``tkbl_session_id``
      - Strictly Necessary
      - | talkable.com
        | shop domain
      - 0
-   * - tkbl_session
+   * - ``tkbl_session``
      - Functionality
      - | talkable.com
        | shop domain
      - 400
-   * - tkbl_cvuuid
+   * - ``tkbl_cvuuid``
      - Functionality
      - | talkable.com
        | shop domain
      - 400
-   * - `multiple`_
+   * - `multiple <https://newrelic.com/termsandconditions/cookie-policy/cookie-table>`_
      - Analytics and Performance
      - \*.newrelic.com
      - 0-400
-   * - bugsnag*
+   * - ``bugsnag*``
      - Analytics and Performance
      - \*.bugsnag.com
      - 0-400
-   * - _ga
+   * - ``_ga``
      - Analytics and Performance
      - talkable.com
      - 400
-.. _multiple: https://newrelic.com/termsandconditions/cookie-policy/cookie-table
 
 .. _integration/custom/cookies/gdpr_and_ccpa_compliance:
 
