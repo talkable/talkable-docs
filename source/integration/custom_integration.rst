@@ -43,4 +43,5 @@ Contents:
    custom/integration_components
    custom/validating_integration
    verify
+   custom/cookies
    custom/questions
