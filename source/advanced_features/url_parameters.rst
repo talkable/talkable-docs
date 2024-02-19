@@ -12,7 +12,7 @@ Talkable allows overriding some of the parameters right through URL query string
 * email - |advocate| email address
 * first_name - |advocate| first name
 * last_name - |advocate| last name
-* traffic_source - :ref:`Traffic Source <advanced_features/traffic_source>` value
+* traffic_source - :ref:`Traffic Source <advanced_features/segments>` value
 * campaign_tags - overrides campaign tag to be loaded
 
 Below is an example of |advocate| authorization through URL. Given the URL of
