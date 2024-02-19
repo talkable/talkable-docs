@@ -20,12 +20,7 @@ Components of UTM Tags:
 
 Example of usage:
  Add to your page link UTM parameters:
-``/friends?refer=friends&utm_source=example_source&utm_medium=example_medium``
-
-.. How to use the traffic_source parameter in a call to action:
-..
-.. Say you have a Standalone integration displaying a campaign on www.yoursite.com/share.
-.. You could append the traffic_source parameter on to your footer call to action as seen below:
+ ``/friends?refer=friends&utm_source=example_source&utm_medium=example_medium``
 
 .. container:: hidden
 
