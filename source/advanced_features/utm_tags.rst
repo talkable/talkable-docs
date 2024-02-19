@@ -20,7 +20,7 @@ Components of UTM Tags:
 
 Example of usage:
  Add to your page link UTM parameters:
-``/friends?refer=friends&utm_source=example_source&utm_medium=example_medium``
+ ``/friends?refer=friends&utm_source=example_source&utm_medium=example_medium``
 
 .. container:: hidden
 
