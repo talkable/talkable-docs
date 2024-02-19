@@ -81,7 +81,7 @@ each with links to integration details.
      - Override some of the parameters right through URL query string
 
    * - :ref:`UTM Tags <advanced_features/utm_tags>`
-    - Brings more power and flexibility into segmenting your reporting by UTM tags
+     - Brings more power and flexibility into segmenting your reporting by UTM tags
 
    * - :ref:`White Labeling <advanced_features/white_labeling>`
      - Change all visible URLs to your domain instead of talkable.com
