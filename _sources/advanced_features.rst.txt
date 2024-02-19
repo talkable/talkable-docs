@@ -66,10 +66,7 @@ each with links to integration details.
      - Learn about Talkable Fraud settings, why they are important
        and how to find a right Fraud Profile that works best for your site.
 
-   * - :ref:`Segment with Product SKU <advanced_features/product_sku>`
-     - Show Campaign only to the Advocates who purchase a particular set of product SKUs
-
-   * - :ref:`Segment with Traffic Source <advanced_features/traffic_source>`
+   * - :ref:`Segments <advanced_features/segments>`
      - Brings more power and flexibility into segmenting your reporting
 
    * - :ref:`Subscribing to Talkable Iframe events <advanced_features/subscribing_to_events>`
@@ -82,6 +79,9 @@ each with links to integration details.
 
    * - :ref:`Using URL Parameters <advanced_features/url_parameters>`
      - Override some of the parameters right through URL query string
+
+   * - :ref:`UTM Tags <advanced_features/utm_tags>`
+    - Brings more power and flexibility into segmenting your reporting by UTM tags
 
    * - :ref:`White Labeling <advanced_features/white_labeling>`
      - Change all visible URLs to your domain instead of talkable.com
@@ -106,11 +106,11 @@ each with links to integration details.
     advanced_features/passing_custom_data
     advanced_features/phone_number_gating
     advanced_features/referrals_approval
-    advanced_features/product_sku
-    advanced_features/traffic_source
+    advanced_features/segments
     advanced_features/subscribing_to_events
     advanced_features/reg_ex
     advanced_features/url_parameters
+    advanced_features/utm_tags
     advanced_features/white_labeling
     advanced_features/single_sign_on
     advanced_features/multi_currency
