@@ -37,6 +37,7 @@ Talkable is composed of the following components:
    - Currency ISO code. It is required for multi-currency sites.
    - (optional) Shipping Address for additional fraud protection.
    - (optional) Shopping cart line items. This is only necessary if segmenting based on cart contents.
+   - (optional) Segments (segment1, segment2, segment3). Custom attribute for segmenting purchases by value (e.g., location, age group, source channel, platform, gender, interests).
 
 3. In case your business has one-time purchases and subscription model, or you are in SaaS
    business we recommend integrating through Events. :ref:`Learn more <advanced_features/events>`.
@@ -124,6 +125,9 @@ passed where division by zero or `null` value does not occur.
          currency_iso_code: '', // Required for multi-currency sites. Example: 'USD'
          shipping_zip: '', // Used for fraud protection by address. Example: '02222'
          shipping_address: '' // Full address of the order, make sure to strictly follow a format: 'Apt #, Street address, City, State, ZIP, Country'
+         segment1: '', // Segment 1: Represents custom segment (e.g., location, age group, source channel, platform, gender, interests).
+         segment2: '', // Segment 2: Represents custom segment (e.g., location, age group, source channel, platform, gender, interests).
+         segment3: '', // Segment 3: Represents custom segment (e.g., location, age group, source channel, platform, gender, interests).
        },
        customer: {
          email: '', // Required - Email of the customer who issued a purchase. Example: 'customer@example.com'
@@ -155,6 +159,10 @@ Post Purchase Script Notes
 
 6. If you need to pass shopping cart line items, to see the alternate
    post purchase integration script :ref:`click here <advanced_features/product_items>`.
+
+7. For individual purchase segmentation, you have the option to utilize one of three custom
+   segments: `segment1`, `segment2`, `segment3`.
+   These segments can represent various criteria such as location, age group, traffic source, etc.
 
 .. note::
 

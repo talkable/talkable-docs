@@ -39,21 +39,34 @@ We use these cookies to understand, improve, and research our Site and Services.
      - Purpose
      - Domain(s)
      - Retention period(Days)
+<<<<<<< HEAD
    * - tkbl_session_id
+=======
+   * - ``tkbl_session_id``
+>>>>>>> gudz/PR-20941
      - Strictly Necessary
      - | talkable.com
        | shop domain
      - 0
+<<<<<<< HEAD
    * - tkbl_session
+=======
+   * - ``tkbl_session``
+>>>>>>> gudz/PR-20941
      - Functionality
      - | talkable.com
        | shop domain
      - 400
+<<<<<<< HEAD
    * - tkbl_cvuuid
+=======
+   * - ``tkbl_cvuuid``
+>>>>>>> gudz/PR-20941
      - Functionality
      - | talkable.com
        | shop domain
      - 400
+<<<<<<< HEAD
    * - `multiple`_
      - Analytics and Performance
      - \*.newrelic.com
@@ -67,6 +80,20 @@ We use these cookies to understand, improve, and research our Site and Services.
      - talkable.com
      - 400
 .. _multiple: https://newrelic.com/termsandconditions/cookie-policy/cookie-table
+=======
+   * - `multiple <https://newrelic.com/termsandconditions/cookie-policy/cookie-table>`_
+     - Analytics and Performance
+     - \*.newrelic.com
+     - 0-400
+   * - ``bugsnag*``
+     - Analytics and Performance
+     - \*.bugsnag.com
+     - 0-400
+   * - ``_ga``
+     - Analytics and Performance
+     - talkable.com
+     - 400
+>>>>>>> gudz/PR-20941
 
 .. _integration/custom/cookies/gdpr_and_ccpa_compliance:
 
