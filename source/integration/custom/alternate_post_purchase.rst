@@ -28,6 +28,9 @@ Alternate Post Purchase Script for cart line item passing
         items: _talkable_purchase_items,  // Cart items declared in the example above
         shipping_zip: '', // Used for fraud protection by address. Example: '02222'
         shipping_address: '' // Full address of the order, make sure to strictly follow a format: 'Apt #, Street address, City, State, ZIP, Country'
+        segment1: '', // Segment 1: Represents custom segment (e.g., location, age group, source channel, platform, gender, interests).
+        segment2: '', // Segment 2: Represents custom segment (e.g., location, age group, source channel, platform, gender, interests).
+        segment3: '', // Segment 3: Represents custom segment (e.g., location, age group, source channel, platform, gender, interests).
       },
       customer: {
         email: '', // Required - Email of the customer who issued a purchase. Example: 'customer@example.com'
