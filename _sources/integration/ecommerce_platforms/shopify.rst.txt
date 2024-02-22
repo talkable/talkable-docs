@@ -41,69 +41,152 @@ Automatic integration
 Manual integration
 ------------------
 
+For Shopify Online Store 2.0 themes
+...................................
+
+If your Shopify store uses an `Online Store 2.0 theme <https://help.shopify.com/en/manual/online-store/themes/managing-themes/versions>`_,
+please follow the instructions below.
+
 1. Provide a valid Shopify store URL and choose “Shopify” as your platform during registration process
 2. On the Welcome screen click “I’m a Developer”
 3. Pass Shopify authorization
 4. You will be redirected to your Shopify store, log in and click the install button
 5. After successful installation you will be redirected back to Talkable
 6. Click “Integrate manually“
-7. In your Shopify Admin follow:
+7. In your Shopify Admin, add the integration to your layout:
+    1. Create a snippet:
 
-    * Online Store
-    * Themes
-    * Actions → Edit code
-    * Open `Layout / theme.liquid` file
-    * Before closing `</head>` paste the following code:
+        * Go to **Online Store** → **Themes**
+        * Click **Actions** ("..." button) → **Edit code**
+        * Go to **Snippets**
+        * Click “Add a new snippet“
+        * Create a new snippet called `talkable-partial`
+        * In the newly created file, add the following code:
 
-    .. include:: /samples/ecommerce/platform/shopify_init_script.rst
+          .. include:: /samples/ecommerce/platform/shopify_init_script.rst
 
-    .. include:: /partials/note_sample_code.rst
+          .. include:: /partials/note_sample_code.rst
 
-    .. include:: /partials/note_sample_integration.rst
+        * Click “Save”
 
-    * Click “Save”.
+    2. Render the snippet in the layout:
 
-8. Then navigate to:
+        * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Layout**
+        * Open `theme.liquid` file
+        * Before closing `</head>` paste the following code:
 
-    * Open `Themes / Templates`
-    * Click “Add a new template“
-    * Create a new template for `page` called `talkable`
-    * Paste the following code inside layout of this page instead of `{{ page.content }}`:
+          .. code-block:: liquid
 
-    .. code-block:: html
+             {% render "talkable-partial" %}
 
-      <div id="talkable-offer"></div>
+        * Click “Save”
 
-    * Click “Save”
-    * Create a new template for page called `dashboard.talkable`
-    * Paste the following code inside layout of this page instead of `{{ page.content }}`:
+8. In your Shopify Admin, create resources for referral share page:
 
-    .. code-block:: html
+    1. Create a share page section:
 
-      {% if shop.customer_accounts_enabled %}
-        {% if customer %}
-          <div id="talkable-offer"></div>
-        {% else %}
-          {{ 'Log in' | customer_login_link }}
-        {% endif %}
-      {% endif %}
+        * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Sections**
+        * Click “Add a new section“
+        * Create a new Liquid section called `talkable-campaign.liquid`
+        * In the newly created file, add the `<div>` block for the referral campaign.
 
-9. Then navigate to:
+          .. code-block:: html
 
-    * Open `Online Store / Pages`
-    * Click “Add page“
-    * Add title `Share`
-    * Select Template suffix `page.talkable`
-    * Click “Save”
-    * Click “Add page“
-    * Add title `Referral Dashboard`
-    * Select Template suffix `page.dashboard.talkable`
-    * Click “Save” (Customer accounts must be enabled in `Settings / Checkout`)
+             <div id="talkable-offer"></div>
 
-10. Then navigate to:
+        * Optionally, update the schema name to anything meaningful, for example, “Referral campaign“
 
-    * Settings
-    * Checkout
+          .. image:: /_static/img/shopify/editor_section.png
+             :alt: Shopify editor - talkable-campaign section
+             :class: is-minimal
+
+        * Click “Save”
+
+    2. Create a share page template:
+
+        * Go to **Templates**
+        * Click “Add a new template“
+        * Create a new JSON template of type `page` called `talkable` (`page.talkable.json`)
+        * Change the type of the main section to `talkable-campaign`
+
+          .. image:: /_static/img/shopify/editor_template.png
+             :alt: Shopify editor - Talkable page section
+             :class: is-minimal
+
+          .. important::
+             The name of the section should be the same as the one you used
+             in the previous step when naming your section file.
+
+          .. important::
+             If your main section is disabled, remove the row that does it.
+
+    3. Create a page:
+
+        * Exit theme editor if it was opened
+        * Go to **Online Store** → **Pages**
+        * Click “Add page“
+        * Add title: `Share`
+        * Select theme template: `talkable`
+        * Click “Save”
+
+9. In your Shopify Admin, create resources for referral dashboard page:
+
+    1. Create a dashboard page section:
+
+        * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Sections**
+        * Click “Add a new section“
+        * Create a new Liquid section called `talkable-dashboard.liquid`
+        * In the newly created file, add the following code:
+
+          .. code-block:: html
+
+             {% if shop.customer_accounts_enabled %}
+               {% if customer %}
+                 <div id="talkable-offer"></div>
+               {% else %}
+                 {{ 'Log in' | customer_login_link }}
+               {% endif %}
+             {% endif %}
+
+        * Optionally, update the schema name to anything meaningful, for example, “Referral dashboard“
+        * Click “Save”
+
+    2. Create a dashboard page template:
+
+        * Go to **Templates**
+        * Click “Add a new template“
+        * Create a new JSON template of type `page` called `dashboard.talkable` (`page.dashboard.talkable.json`)
+        * Change the type of the main section to `talkable-dashboard`
+
+          .. code-block:: JSON
+
+             {
+               "sections": {
+                 "main": {
+                   "type": "talkable-dashboard"
+                 }
+               }
+             }
+
+          .. important::
+             The name of the section should be the same as the one you used
+             in the previous step when naming your section file.
+
+          .. important::
+             If your main section is disabled, remove the row that does it.
+
+    3. Create a page:
+
+        * Exit theme editor if it was opened
+        * Go to **Online Store** → **Pages**
+        * Click “Add page“
+        * Add title: `Referral Dashboard`
+        * Select theme template: `dashboard.talkable`
+        * Click “Save” (Customer accounts must be enabled in **Settings** → **Checkout**)
+
+10. In your Shopify Admin, add a post-purchase script:
+
+    * Go to **Settings** → **Checkout**
     * Scroll down to **Order status page**
     * Paste the following code into **Additional scripts** field:
 
@@ -111,10 +194,117 @@ Manual integration
 
     .. include:: /partials/note_sample_code.rst
 
-    .. include:: /partials/note_sample_integration.rst
+    * Click “Save”.
 
-11. Click “Save”.
-12. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`.
+11. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`.
+
+For Shopify vintage themes
+..........................
+
+If your Shopify store uses a `vintage theme <https://help.shopify.com/en/manual/online-store/themes/managing-themes/versions>`_,
+please follow the instructions below.
+
+1. Provide a valid Shopify store URL and choose “Shopify” as your platform during registration process
+2. On the Welcome screen click “I’m a Developer”
+3. Pass Shopify authorization
+4. You will be redirected to your Shopify store, log in and click the install button
+5. After successful installation you will be redirected back to Talkable
+6. Click “Integrate manually“
+7. In your Shopify Admin, add the integration to your layout:
+    1. Create a snippet:
+
+        * Go to **Online Store** → **Themes**
+        * Click **Actions** ("..." button) → **Edit code**
+        * Go to **Snippets**
+        * Click “Add a new snippet“
+        * Create a new snippet called `talkable-partial`
+        * In the newly created file, add the following code:
+
+          .. include:: /samples/ecommerce/platform/shopify_init_script.rst
+
+          .. include:: /partials/note_sample_code.rst
+
+        * Click “Save”
+
+    2. Render the snippet in the layout:
+
+        * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Layout**
+        * Open `theme.liquid` file
+        * Before closing `</head>` paste the following code:
+
+          .. code-block:: liquid
+
+             {% render "talkable-partial" %}
+
+        * Click “Save”
+
+8. In your Shopify Admin, create resources for referral share page:
+
+    1. Create a share page template:
+
+        * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Templates**
+        * Click “Add a new template“
+        * Create a new Liquid template of type `page` called `talkable` (`page.talkable.liquid`)
+        * Paste the following code inside layout of this page instead of `{{ page.content }}`:
+
+          .. code-block:: html
+
+             <div id="talkable-offer"></div>
+
+        * Click “Save”
+
+    2. Create a page:
+
+        * Exit theme editor if it was opened
+        * Go to **Online Store** → **Pages**
+        * Click “Add page“
+        * Add title: `Share`
+        * Select theme template: `talkable`
+        * Click “Save”
+
+9. In your Shopify Admin, create resources for referral dashboard page:
+
+    1. Create a dashboard page template:
+
+        * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Templates**
+        * Click “Add a new template“
+        * Create a new Liquid template of type `page` called `dashboard.talkable` (`page.dashboard.talkable.liquid`)
+        * Paste the following code inside layout of this page instead of `{{ page.content }}`:
+
+          .. code-block:: html
+
+             {% if shop.customer_accounts_enabled %}
+               {% if customer %}
+                 <div id="talkable-offer"></div>
+               {% else %}
+                 {{ 'Log in' | customer_login_link }}
+               {% endif %}
+             {% endif %}
+
+        * Click “Save”
+
+    2. Create a page:
+
+        * Exit theme editor if it was opened
+        * Go to **Online Store** → **Pages**
+        * Click “Add page“
+        * Add title: `Referral Dashboard`
+        * Select theme template: `dashboard.talkable`
+        * Click “Save” (Customer accounts must be enabled in **Settings** → **Checkout**)
+
+10. In your Shopify Admin, add a post-purchase script:
+
+    * Go to **Settings** → **Checkout**
+    * Scroll down to **Order status page**
+    * Paste the following code into **Additional scripts** field:
+
+    .. include:: /samples/ecommerce/platform/shopify.rst
+
+    .. include:: /partials/note_sample_code.rst
+
+    * Click “Save”.
+
+11. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`.
 
 .. |example_link| raw:: html
 
@@ -125,3 +315,99 @@ Manual integration
    .. toctree::
 
       Verifying Integration instructions <../verify>
+
+.. _integration/ecommerce_platforms/shopify/manual_integration_theme_migration:
+
+Manual migrating from a vintage theme to an Online store 2.0 theme
+------------------------------------------------------------------
+
+If you have previously integrated Talkable in your vintage Shopify theme and want to migrate to a newer theme,
+you need to do the following:
+
+1. Share page migration:
+
+    1. If you have a `templates/page.talkable.liquid` file, store its content elsewhere and delete the file
+
+    2. Create a share page section:
+
+        * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Sections**
+        * Click “Add a new section“
+        * Create a new Liquid section called `talkable-campaign.liquid`
+        * In the newly created file, add the `<div>` block for the referral campaign.
+
+          .. code-block:: html
+
+             <div id="talkable-offer"></div>
+
+          If there were any customizations in the `templates/page.talkable.liquid`, add them as well
+
+        * Optionally, update the schema name to anything meaningful, for example, “Referral campaign“
+        * Click “Save”
+
+    3. Create a share page template:
+
+        * Go to **Templates**
+        * Click “Add a new template“
+        * Create a new JSON template of type `page` called `talkable` (`page.talkable.json`)
+        * Change the type of the main section to `talkable-campaign`
+
+          .. image:: /_static/img/shopify/editor_template.png
+             :alt: Shopify editor - Talkable page section
+             :class: is-minimal
+
+          .. important::
+             The name of the section should be the same as the one you used
+             in the previous step when naming your section file.
+
+          .. important::
+             If your main section is disabled, remove the row that does it.
+
+2. Dashboard page migration:
+
+    1. If you have a `templates/page.talkable-dashboard.liquid` file, store its content elsewhere and delete the file
+
+    2. Create a dashboard page section:
+
+        * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Sections**
+        * Click “Add a new section“
+        * Create a new Liquid section called `talkable-dashboard.liquid`
+        * In the newly created file, add the `<div>` block for the referral campaign.
+
+          .. code-block:: html
+
+             {% if shop.customer_accounts_enabled %}
+               {% if customer %}
+                 <div id="talkable-offer"></div>
+               {% else %}
+                 {{ 'Log in' | customer_login_link }}
+               {% endif %}
+             {% endif %}
+
+          If there were any customizations in the `templates/page.talkable-dashboard.liquid`, add them as well
+
+        * Optionally, update the schema name to anything meaningful, for example, “Referral dashboard“
+        * Click “Save”
+
+    3. Create a dashboard page template:
+
+        * Go to **Templates**
+        * Click “Add a new template“
+        * Create a new JSON template of type `page` called `dashboard.talkable` (`page.dashboard.talkable.json`)
+        * Change the type of the main section to `talkable-dashboard`
+
+          .. code-block:: JSON
+
+             {
+               "sections": {
+                 "main": {
+                   "type": "talkable-dashboard"
+                 }
+               }
+             }
+
+          .. important::
+             The name of the section should be the same as the one you used
+             in the previous step when naming your section file.
+
+          .. important::
+             If your main section is disabled, remove the row that does it.
