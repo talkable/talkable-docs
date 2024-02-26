@@ -19,8 +19,7 @@ Components of UTM Tags:
     - Content (utm_content): Used to differentiate similar content, such as different versions of an ad.
 
 Example of usage:
- Add to your page link UTM parameters:
- ``/friends?refer=friends&utm_source=example_source&utm_medium=example_medium``
+ ``https://example.com/friends?refer=friends&utm_source=example_source&utm_medium=example_medium``
 
 .. container:: hidden
 
