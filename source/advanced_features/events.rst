@@ -132,7 +132,7 @@ Here is a list of available properties each event can include:
                          * **last_name** (optional) |br|
                            Example: ``'Smith'``.
                          * **traffic_source** (optional) - specific
-                           :ref:`Traffic Source <advanced_features/traffic_source>` value
+                           :ref:`Traffic Source <advanced_features/segments>` value
                            that helps to distinguish different points of integration. |br|
                            Example: ``'facebook'``.
 
