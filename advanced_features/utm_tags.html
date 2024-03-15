@@ -3,19 +3,19 @@
 <html lang="en" data-content_root="../">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<meta content="From now on, you can show a campaign on post purchase placement only to those customers who purchased a particular product or a set of products." name="description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="While driving traffic to one of your campaigns, you can include a UTM Tags parameters as a URL query string. This will help to segment your reporting." name="description" />
 
-    <title>Segment With Product SKU &#8212; Talkable Documentation</title>
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b76e3c8a" />
+    <title>UTM Tags &#8212; Talkable Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/talkable.css?v=ec60a709" />
     <script src="../_static/documentation_options.js?v=f2a433a1"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <link rel="canonical" href="https://docs.talkable.com/advanced_features/product_sku.html" />
+    <link rel="canonical" href="https://docs.talkable.com/advanced_features/utm_tags.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Segment With Traffic Source" href="traffic_source.html" />
-    <link rel="prev" title="Referrals Approval" href="referrals_approval.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <link rel="next" title="White-labeling" href="white_labeling.html" />
+    <link rel="prev" title="Using URL Parameters" href="url_parameters.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
   <link href="../_static/pygments-github.css" rel="stylesheet">
   <link href="../_static/img/favicon.ico" rel="shortcut icon" />
   </head><body>
@@ -58,13 +58,13 @@
 <li class="toctree-l2"><a class="reference internal" href="passing_custom_data.html">Pass Custom User Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="phone_number_gating.html">Phone number gating</a></li>
 <li class="toctree-l2"><a class="reference internal" href="referrals_approval.html">Referrals Approval</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Segment With Product SKU</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="traffic_source.html">Segment With Traffic Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="segments.html">Segments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="subscribing_to_events.html">Subscribing To Iframe Events</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reg_ex.html">Setting up Campaign Placement criteria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="url_parameters.html">Using URL Parameters</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">UTM Tags</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="white_labeling.html">White-labeling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="single_sign_on.html">Single Sign-On (SSO)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="multi_currency.html">Multi-currency</a></li>
@@ -105,40 +105,23 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="advanced-features-product-sku"></span><section id="segment-with-product-sku">
-<h1>Segment With Product SKU<a class="headerlink" href="#segment-with-product-sku" title="Link to this heading">¶</a></h1>
-<p>Sometimes there is a need to show a Campaign on Post Purchase Placement only to those customers who
-purchased a particular product or a set of products. In this case you can put such a limitation inside Campaign Join Criteria.
-To do that visit Campaign Details page → Go into Rules → Advanced → Campaign Join Criteria field and put the following
-criteria in there:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>{% assign available_items = &quot;sku1,sku2&quot; | split: &quot;,&quot; %}
-{% assign user_items = advocate_origin.products | map: &quot;product_id&quot; %}
-{% assign result = false %}
-
-{% for available_item in available_items %}
-  {% for user_item in user_items %}
-    {% if user_item == available_item %}
-      {% assign result = true %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
-{% endfor %}
-
-{{ result }}
-</pre></div>
-</div>
-<p>Now only those customers who purchased a product with SKU of “SKU_GOES_HERE” will see a Campaign.
-The Campaign won’t show for any other product purchased.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In order to use this Campaign Join Criteria you need to make sure that the SKU numbers are passed
-throught the integration first of all. To do that you need to go into Reports
-(top header navigation) → Purchases → Click on “Details” link of any purchase and make sure there is “Product Id”
-column with a valid “Product ID” value in place.
-If there is no such column or it is blank you cannot use this feature unless you pass the following instructions
-<a class="reference internal" href="product_items.html#advanced-features-product-items"><span class="std std-ref">Including Product Items</span></a>.</p>
-</div>
-<p>Please <a href="https://www.talkable.com/contact" target="_blank">contact us</a> if you have any questions.</p>
+  <span class="target" id="advanced-features-utm-tags"></span><section id="utm-tags">
+<h1>UTM Tags<a class="headerlink" href="#utm-tags" title="Link to this heading">¶</a></h1>
+<p>UTM tags are essential for tracking the performance of marketing campaigns across various
+channels. By correctly implementing UTM tags, marketers can gain valuable insights into
+the effectiveness of their campaigns and optimize their strategies accordingly.</p>
+<dl class="simple">
+<dt>Components of UTM Tags:</dt><dd><ul class="simple">
+<li><p>Source (utm_source): Identifies the specific source of the traffic, such as a search engine or newsletter.</p></li>
+<li><p>Medium (utm_medium): Specifies the marketing medium, such as email, social, or CPC (Cost Per Click).</p></li>
+<li><p>Campaign (utm_campaign): Specifies the name of the marketing campaign.</p></li>
+<li><p>Term (utm_term): Used for paid search keywords.</p></li>
+<li><p>Content (utm_content): Used to differentiate similar content, such as different versions of an ad.</p></li>
+</ul>
+</dd>
+<dt>Example of usage:</dt><dd><p><code class="docutils literal notranslate"><span class="pre">https://example.com/friends?refer=friends&amp;utm_source=example_source&amp;utm_medium=example_medium</span></code></p>
+</dd>
+</dl>
 <div class="hidden docutils container">
 <div class="toctree-wrapper compound">
 </div>
