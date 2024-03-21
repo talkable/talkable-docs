@@ -44,7 +44,7 @@ This section addresses two key considerations for integrating Talkable using Goo
 Alternative Approach: Direct Integration
 ----------------------------------------
 
-To mitigate these potential issues, you can integrate Talkable directly into your web pages without using GTM. Here's a step-by-step guide on :ref:`custom integration <integration/custom/integration_components/initialization_script>`
+To mitigate these potential issues, you can integrate Talkable directly into your web pages without using GTM. Here's a step-by-step guide on :ref:`Custom Integration <integration/custom/integration_components>`.
 
 **Benefits of Direct Integration:**
 
