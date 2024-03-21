@@ -77,7 +77,7 @@ Step 2: Configuration
 
     You can locate your credentials inside Talkable site:
 
-    - Select site and go to **Dashboard** → **Settings** → **Site Settings**.
+    - Select site and go to **Dashboard** → **Settings** → **Site Settings** → **Integrations**.
       Find **API integration** section and there you will see your API Keys and Site ID.
       Use only the *Public API Key* in your application submitted to the App Store.
 
