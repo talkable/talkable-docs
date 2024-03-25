@@ -63,6 +63,15 @@ The optimal approach depends on your specific priorities:
 - Thoroughly test both approaches (GTM and direct integration) to ensure the Talkable referral program functions as expected in all browsers and scenarios.
 - If you encounter further issues, check Talkable's support resources or contact support team for assistance.
 
-**Conclusion:**
+Removing the Talkable Integration Script from GTM
+-------------------------------------------------
 
-By understanding the potential performance impact and alternative approach, you can make an informed decision on the best method to integrate Talkable with your website using Google Tag Manager.
+If you've decided to remove the Talkable integration script from GTM, follow these steps:
+
+1. Log in to your Google Tag Manager account.
+2. Select the container where your Talkable integration resides.
+3. Locate the Talkable integration tag (usually named "Talkable Integration" or similar).
+4. Click on the tag to open its details.
+5. Click the "Delete" button to remove the Talkable integration tag.
+
+**Important Note:** After removing the Talkable integration script from GTM, you'll need to implement the direct integration approach documented earlier to ensure Talkable functionality on your website.
