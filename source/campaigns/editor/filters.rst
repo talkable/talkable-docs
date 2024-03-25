@@ -962,6 +962,7 @@ Returns
       "created_at": "2019-05-22T15:53:41-07:00",
       "email": "ad@site.com",
       "order_number": 98237519,
+      "refunded": false,
       "subtotal": 100.0
     },
     {
@@ -969,6 +970,7 @@ Returns
       "created_at": "2019-05-22T15:53:41-07:00",
       "email": "ad@site.com",
       "order_number": 98237520,
+      "refunded": true,
       "subtotal": 200.0
     }
   ]
