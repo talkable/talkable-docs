@@ -49,7 +49,7 @@ Installation
 
       You can locate your credentials inside Talkable site:
 
-      - Select site and go to **Dashboard** → **Settings** → **Site Settings**.
+      - Select site and go to **Dashboard** → **Settings** → **Site Settings** → **Integrations**.
         Find **API integration** section and there you will see your API Keys and Site ID (also known as Site slug).
         Use only the *Public API Key* in your production application.
 
