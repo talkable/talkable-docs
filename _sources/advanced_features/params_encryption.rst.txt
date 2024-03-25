@@ -15,7 +15,7 @@ So, instead of sending params in plain text, you can send them encrypted.
 Site public encryption key
 --------------------------
 
-To get your unique site public encryption key, go to **All Site Settings → API integration → Public encryption key for email addresses**.
+To get your unique site public encryption key, go to **All Site Settings → Integrations → API integration → Public encryption key for email addresses**.
 
 Passing email as a GET parameter to Standalone Campaign
 -------------------------------------------------------
