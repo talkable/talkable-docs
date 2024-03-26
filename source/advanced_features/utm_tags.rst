@@ -5,7 +5,7 @@
    :description: While driving traffic to one of your campaigns, you can include a UTM Tags parameters as a URL query string. This will help to segment your reporting.
 
 UTM Tags
-===========================
+========
 
 UTM tags are essential for tracking the performance of marketing campaigns across various
 channels. By correctly implementing UTM tags, marketers can gain valuable insights into
