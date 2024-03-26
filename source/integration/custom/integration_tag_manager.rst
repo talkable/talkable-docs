@@ -73,4 +73,4 @@ If you've decided to remove the Talkable integration script from GTM, follow the
 3. Click on the tag to open its details.
 4. Click the "Delete" button to remove the Talkable integration tag.
 
-**Important Note:** After removing the Talkable integration script from GTM, you'll need to implement the direct integration approach documented earlier to ensure Talkable functionality on your website.
+**Important Note:** After removing the Talkable integration script from GTM, you'll need to implement the :ref:`direct integration approach <integration/custom/integration_components>` documented earlier to ensure Talkable functionality on your website.
