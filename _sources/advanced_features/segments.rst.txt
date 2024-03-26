@@ -5,7 +5,7 @@
    :description: While driving traffic to one of your campaigns, you can include a traffic source parameter as a URL query string. This will help to segment your reporting.
 
 Segments
-===========================
+========
 
 When driving traffic to one of your campaigns, you can include a segment
 parameters to help segment your reporting.
