@@ -26,3 +26,51 @@ Integrating with a Tag Manager
 -  :underline:`Troubleshooting:` You can use `window._talkableq` for all
    `talkableq` variable instances if you’re having trouble with variable
    interpolation and need to use a global namespace.
+
+Potential Performance Impact
+----------------------------
+
+This section addresses two key considerations for integrating Talkable using Google Tag Manager (GTM):
+
+**1. Potential Performance Impact:**
+
+- In some cases, using GTM to load the Talkable integration code can introduce a slight delay in the referral program's functionality. This is because GTM typically waits for all its tags to load before executing them.
+- If you've identified performance concerns related to the Talkable integration's load time, consider the alternative approach outlined below.
+
+**2. Safari Private Mode Blocking Third-Party Vendors:**
+
+- A known issue exists where Safari in private mode blocks third-party vendors, including GTM. This can prevent the Talkable integration code from loading entirely, hindering the referral program's operation.
+
+Alternative Approach: Direct Integration
+----------------------------------------
+
+To mitigate these potential issues, you can integrate Talkable directly into your web pages without using GTM. Here's a step-by-step guide on :ref:`Custom Integration <integration/custom/integration_components>`.
+
+**Benefits of Direct Integration:**
+
+- **Improved Performance:** Eliminates the delay associated with GTM loading all tags before execution.
+- **Enhanced Compatibility:** Ensures the Talkable integration code loads even in Safari private mode, where GTM might be blocked.
+
+**Choosing the Right Approach:**
+
+The optimal approach depends on your specific priorities:
+
+- If performance is a critical concern, direct integration is generally recommended.
+- If you prefer a more centralized tag management system for other integrations, GTM might still be suitable, but be aware of the potential performance impact and Safari private mode blocking.
+
+**Additional Considerations:**
+
+- Thoroughly test both approaches (GTM and direct integration) to ensure the Talkable referral program functions as expected in all browsers and scenarios.
+- If you encounter further issues, check Talkable's support resources or contact support team for assistance.
+
+Removing the Talkable Integration Script from GTM
+-------------------------------------------------
+
+If you've decided to remove the Talkable integration script from GTM, follow these steps:
+
+1. Log in to your Google Tag Manager account.
+2. Locate the Talkable integration tag (usually named "Talkable Integration" or similar).
+3. Click on the tag to open its details.
+4. Click the "Delete" button to remove the Talkable integration tag.
+
+**Important Note:** After removing the Talkable integration script from GTM, you'll need to implement the :ref:`direct integration approach <integration/custom/integration_components>` documented earlier to ensure Talkable functionality on your website.
