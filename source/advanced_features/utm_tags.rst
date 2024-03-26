@@ -5,7 +5,7 @@
    :description: While driving traffic to one of your campaigns, you can include a UTM Tags parameters as a URL query string. This will help to segment your reporting.
 
 UTM Tags
-===========================
+========
 
 UTM tags are essential for tracking the performance of marketing campaigns across various
 channels. By correctly implementing UTM tags, marketers can gain valuable insights into
@@ -19,7 +19,10 @@ Components of UTM Tags:
     - Content (utm_content): Used to differentiate similar content, such as different versions of an ad.
 
 Example of usage:
- ``https://example.com/friends?refer=friends&utm_source=example_source&utm_medium=example_medium``
+
+.. code-block:: text
+
+   https://example1.com/friends?refer=friends&utm_source=example_source&utm_medium=example_medium
 
 .. container:: hidden
 
