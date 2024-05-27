@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="While driving traffic to one of your campaigns, you can include a traffic source parameter as a URL query string. This will help to segment your reporting." name="description" />
+
+    <title>Segment With Traffic Source &#8212; Talkable Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/talkable.css?v=ec60a709" />
+    <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="canonical" href="https://docs.talkable.com/advanced_features/traffic_source.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Subscribing To Iframe Events" href="subscribing_to_events.html" />
+    <link rel="prev" title="Segment With Product SKU" href="product_sku.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+  <link href="../_static/pygments-github.css" rel="stylesheet">
+  <link href="../_static/img/favicon.ico" rel="shortcut icon" />
+  </head><body>
+  
+    <div class="header">
+      <a href="../index.html" class="header-logo">Talkable docs</a>
+          <form class="search-form" action="../search.html" method="get">
+            <input type="text" class="textfield search-form-field" name="q" placeholder="Search docs" />
+            <input type="submit" class="button search-form-button" value="Search" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+      <div class="header-disclaimer">
+        Visit
+        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+      </div>
+    </div> <!-- /.header -->
+  
+
+  <div class="content-container content clearfix">
+      <div class="nav">
+        <ul>
+<li class="toctree-l1"><a class="reference internal" href="../campaigns.html">Talkable Campaigns</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../advanced_features.html">Features</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="coupons.html">Coupons</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shopify_coupons_auto_sync.html">Shopify coupon auto-sync</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shopify_purchase_syncing.html">Shopify Purchase Syncing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="track_methods.html">Referral Tracking Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="personal_coupon_sharing.html">Advocate Personal Coupon Sharing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="name_sharing.html">Name Sharing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="converting_into_localization.html">Converting Into Localization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="customer_service_portal.html">Customer Service Portal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="params_encryption.html">Params Encryption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="events.html">Integrating Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_encryption.html">File Encryption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="report_password_protection.html">Report Password Protection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="product_items.html">Including Product Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="passing_custom_data.html">Pass Custom User Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="phone_number_gating.html">Phone number gating</a></li>
+<li class="toctree-l2"><a class="reference internal" href="referrals_approval.html">Referrals Approval</a></li>
+<li class="toctree-l2"><a class="reference internal" href="product_sku.html">Segment With Product SKU</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Segment With Traffic Source</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="subscribing_to_events.html">Subscribing To Iframe Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reg_ex.html">Setting up Campaign Placement criteria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="url_parameters.html">Using URL Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="white_labeling.html">White-labeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="single_sign_on.html">Single Sign-On (SSO)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multi_currency.html">Multi-currency</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/custom_integration.html">Standard Integration</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../integration/loyalty.html">Loyalty Integration (beta)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integration/ecommerce_platforms.html">E-commerce Platforms</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../email_marketing_and_automation.html">Email Marketing &amp; Automation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../payment_solutions.html">Payment Solutions</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api_v2.html">API Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../web_hooks.html">Webhooks</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ios_sdk.html">Talkable iOS SDK</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../android_sdk.html">Talkable Android SDK</a></li>
+</ul>
+
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <span class="target" id="advanced-features-traffic-source"></span><section id="segment-with-traffic-source">
+<h1>Segment With Traffic Source<a class="headerlink" href="#segment-with-traffic-source" title="Link to this heading">¶</a></h1>
+<p>When driving traffic to one of your campaigns, you can include a traffic source
+parameter as a URL query string to help segment your reporting. This is helpful
+when you are driving traffic from many different sources to the same campaign.
+This makes sense to do for both on-site and off-site call to actions where you
+want to specifically track your traffic source. For example, if you are driving
+traffic on-site to your Standalone campaign both from your home page navigation
+bar and from your footer template, and you wanted to see which one is more high
+value and driving more traffic to your campaign, you could look at the different
+traffic sources in reporting to clearly see this.</p>
+<p>How to use the traffic_source parameter in a call to action:</p>
+<p>Say you have a Standalone integration displaying a campaign on www.yoursite.com/share.
+You could append the traffic_source parameter on to your footer call to action as seen below:</p>
+<p><code class="docutils literal notranslate"><span class="pre">www.yoursite.com/share?traffic_source=footer</span></code></p>
+<div class="hidden docutils container">
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </div> <!-- /.content-container -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-63500208-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  </body>
+</html>
