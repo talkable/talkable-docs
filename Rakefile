@@ -24,7 +24,7 @@ task :environment do
   required = File.read('requirements.txt').match(regexp).to_s
   installed = `#{SPHINX_BUILD} --version`.match(regexp).to_s rescue ''
   if !required.empty? && !installed.empty? && Gem::Version.new(required) > Gem::Version.new(installed)
-    abort "\nYou are running an outdated version of Sphinx #{installed}. Required version is #{required}. Run `pip3 install -r requirements.txt` to upgrade Sphinx."
+    abort "\nYou are running an outdated version of Sphinx #{installed}. Required version is #{required}. Run `pip3 install -r requirements.txt --break-system-packages` to upgrade Sphinx."
   end
 end
 

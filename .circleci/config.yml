@@ -6,7 +6,7 @@ executors:
       - auth:
           username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_ACCESS_TOKEN
-        image: cimg/python:3.11
+        image: cimg/python:3.12
 
 orbs:
   python: circleci/python@2.1.1

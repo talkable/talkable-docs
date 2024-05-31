@@ -79,7 +79,7 @@ First install [Sphinx](https://www.sphinx-doc.org). See below.
 * Install dependencies:
 
   ```
-  pip3 install -r requirements.txt
+  pip3 install -r requirements.txt --break-system-package
   ```
 
   If you have problems, try adding `-I` flag (`--ignore-installed`) to the `pip install` command.

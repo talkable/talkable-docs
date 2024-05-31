@@ -30,9 +30,9 @@ For users, the name sharing would proceed as follows:
 
 ----
 
-.. [#f1] A personal name should be unique within a site and be 3 to 50 symbols long.
-   It can only contain latin letters, and numbers.
-   A personal name cannot begin with a number.
+.. [#f1] To be a valid personal name or code-word, it must be unique, between 3 and 50 characters
+   in length, and can contain Latin letters, numbers, underscores as separators, or even spaces.
+   It should not start with a number.
 
 .. _advanced_features/name_sharing_setup:
 
@@ -62,3 +62,50 @@ Upon a reward claim by a Friend, the newest offer from the respective Advocate w
 
 .. note::
    All advocate and friend metrics are counted toward the Advocate campaign.
+
+Inline Widget
+-------------
+
+The Claim by Name campaign does not hold any incentive configuration and only serves to show a claim widget. There can be multiple campaigns with
+the different offers and only one Claim by Name campaign, which will serve all these campaigns.
+
+In the rules of the Claim by Name campaign there is an option to make the floating widget inline. This can be done in the Rules of the campaign:
+
+.. image:: /_static/img/advanced_features/name_sharing_inline_widget_1.png
+  :alt: Inline widget option
+
+After that the campaign will be embedded in the page:
+
+.. image:: /_static/img/advanced_features/name_sharing_inline_widget_2.png
+  :alt: Inline widget
+
+Once you enabled “Inline Widget”, ask client to add the following code for the inline campaign (container):
+
+.. code-block:: html
+
+   <div id=’talkable-claim-by-name’></div>
+
+Without adding this code, the campaign won’t be visible.
+
+Shopify Fast Checkout
+-----------------------------------------
+
+If Shopify theme uses shopping cart as a dynamic widget, you can integrate Claim by name campaign to show it in the cart by following these steps:
+
+* Change placement rule to show campaign everywhere
+
+* Enable option 'Inline Widget' in Campaign settings
+
+* Add
+
+.. code-block:: html
+
+   <div id=’talkable-claim-by-name’></div>
+
+to the Cart snippet in the Shopify theme. `Snippets/card.liquid`
+
+Interactions with the personal name-share link
+----------------------------------------------
+
+When Advocate creates a username, his personal name link gets updated as well, and vice versa.
+However, the old personal name links that he shared before this change will still be valid
