@@ -55,6 +55,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="validating_integration.html">Validating the Integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../verify.html">Verifying Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cookies.html">Cookies</a></li>
 <li class="toctree-l2"><a class="reference internal" href="questions.html">F.A.Q.</a></li>
 </ul>
 </li>
@@ -120,6 +121,7 @@ be applied at checkout)</p></li>
 <li><p>Currency ISO code. It is required for multi-currency sites.</p></li>
 <li><p>(optional) Shipping Address for additional fraud protection.</p></li>
 <li><p>(optional) Shopping cart line items. This is only necessary if segmenting based on cart contents.</p></li>
+<li><p>(optional) Segments (segment1, segment2, segment3). Custom attribute for segmenting purchases by value (e.g., location, age group, source channel, platform, gender, interests).</p></li>
 </ul>
 </li>
 <li><p>In case your business has one-time purchases and subscription model, or you are in SaaS
@@ -195,6 +197,9 @@ passed where division by zero or <cite>null</cite> value does not occur.</p>
 <span class="w">      </span><span class="nx">currency_iso_code</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Required for multi-currency sites. Example: &#39;USD&#39;</span>
 <span class="w">      </span><span class="nx">shipping_zip</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Used for fraud protection by address. Example: &#39;02222&#39;</span>
 <span class="w">      </span><span class="nx">shipping_address</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="c1">// Full address of the order, make sure to strictly follow a format: &#39;Apt #, Street address, City, State, ZIP, Country&#39;</span>
+<span class="w">      </span><span class="nx">segment1</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Segment 1: Represents custom segment (e.g., location, age group, source channel, platform, gender, interests).</span>
+<span class="w">      </span><span class="nx">segment2</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Segment 2: Represents custom segment (e.g., location, age group, source channel, platform, gender, interests).</span>
+<span class="w">      </span><span class="nx">segment3</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Segment 3: Represents custom segment (e.g., location, age group, source channel, platform, gender, interests).</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="nx">customer</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Required - Email of the customer who issued a purchase. Example: &#39;customer@example.com&#39;</span>
@@ -222,6 +227,9 @@ allow the post purchase script to run.</p></li>
 <li><p>If you’re using a tag manager <a class="reference internal" href="integration_tag_manager.html#integration-custom-integration-tag-manager"><span class="std std-ref">click here</span></a>.</p></li>
 <li><p>If you need to pass shopping cart line items, to see the alternate
 post purchase integration script <a class="reference internal" href="../../advanced_features/product_items.html#advanced-features-product-items"><span class="std std-ref">click here</span></a>.</p></li>
+<li><p>For individual purchase segmentation, you have the option to utilize one of three custom
+segments: <cite>segment1</cite>, <cite>segment2</cite>, <cite>segment3</cite>.
+These segments can represent various criteria such as location, age group, traffic source, etc.</p></li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -292,7 +300,12 @@ public access.</p></li>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="alternate_post_purchase.html">Alternate Post Purchase Script for cart line item passing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="integration_tag_manager.html">Integrating with a Tag Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="integration_tag_manager.html">Integrating with a Tag Manager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="integration_tag_manager.html#potential-performance-impact">Potential Performance Impact</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration_tag_manager.html#alternative-approach-direct-integration">Alternative Approach: Direct Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="integration_tag_manager.html#removing-the-talkable-integration-script-from-gtm">Removing the Talkable Integration Script from GTM</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>

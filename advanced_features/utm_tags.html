@@ -4,18 +4,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta content="While driving traffic to one of your campaigns, you can include a traffic source parameter as a URL query string. This will help to segment your reporting." name="description" />
+<meta content="While driving traffic to one of your campaigns, you can include a UTM Tags parameters as a URL query string. This will help to segment your reporting." name="description" />
 
-    <title>Segment With Traffic Source &#8212; Talkable Documentation</title>
+    <title>UTM Tags &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/talkable.css?v=ec60a709" />
     <script src="../_static/documentation_options.js?v=f2a433a1"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <link rel="canonical" href="https://docs.talkable.com/advanced_features/traffic_source.html" />
+    <link rel="canonical" href="https://docs.talkable.com/advanced_features/utm_tags.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Subscribing To Iframe Events" href="subscribing_to_events.html" />
-    <link rel="prev" title="Segment With Product SKU" href="product_sku.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <link rel="next" title="White-labeling" href="white_labeling.html" />
+    <link rel="prev" title="Using URL Parameters" href="url_parameters.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
   <link href="../_static/pygments-github.css" rel="stylesheet">
   <link href="../_static/img/favicon.ico" rel="shortcut icon" />
   </head><body>
@@ -58,13 +58,13 @@
 <li class="toctree-l2"><a class="reference internal" href="passing_custom_data.html">Pass Custom User Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="phone_number_gating.html">Phone number gating</a></li>
 <li class="toctree-l2"><a class="reference internal" href="referrals_approval.html">Referrals Approval</a></li>
-<li class="toctree-l2"><a class="reference internal" href="product_sku.html">Segment With Product SKU</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Segment With Traffic Source</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="segments.html">Segments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="subscribing_to_events.html">Subscribing To Iframe Events</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reg_ex.html">Setting up Campaign Placement criteria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="url_parameters.html">Using URL Parameters</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">UTM Tags</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="white_labeling.html">White-labeling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="single_sign_on.html">Single Sign-On (SSO)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="multi_currency.html">Multi-currency</a></li>
@@ -105,21 +105,25 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="advanced-features-traffic-source"></span><section id="segment-with-traffic-source">
-<h1>Segment With Traffic Source<a class="headerlink" href="#segment-with-traffic-source" title="Link to this heading">¶</a></h1>
-<p>When driving traffic to one of your campaigns, you can include a traffic source
-parameter as a URL query string to help segment your reporting. This is helpful
-when you are driving traffic from many different sources to the same campaign.
-This makes sense to do for both on-site and off-site call to actions where you
-want to specifically track your traffic source. For example, if you are driving
-traffic on-site to your Standalone campaign both from your home page navigation
-bar and from your footer template, and you wanted to see which one is more high
-value and driving more traffic to your campaign, you could look at the different
-traffic sources in reporting to clearly see this.</p>
-<p>How to use the traffic_source parameter in a call to action:</p>
-<p>Say you have a Standalone integration displaying a campaign on www.yoursite.com/share.
-You could append the traffic_source parameter on to your footer call to action as seen below:</p>
-<p><code class="docutils literal notranslate"><span class="pre">www.yoursite.com/share?traffic_source=footer</span></code></p>
+  <span class="target" id="advanced-features-utm-tags"></span><section id="utm-tags">
+<h1>UTM Tags<a class="headerlink" href="#utm-tags" title="Link to this heading">¶</a></h1>
+<p>UTM tags are essential for tracking the performance of marketing campaigns across various
+channels. By correctly implementing UTM tags, marketers can gain valuable insights into
+the effectiveness of their campaigns and optimize their strategies accordingly.</p>
+<dl class="simple">
+<dt>Components of UTM Tags:</dt><dd><ul class="simple">
+<li><p>Source (utm_source): Identifies the specific source of the traffic, such as a search engine or newsletter.</p></li>
+<li><p>Medium (utm_medium): Specifies the marketing medium, such as email, social, or CPC (Cost Per Click).</p></li>
+<li><p>Campaign (utm_campaign): Specifies the name of the marketing campaign.</p></li>
+<li><p>Term (utm_term): Used for paid search keywords.</p></li>
+<li><p>Content (utm_content): Used to differentiate similar content, such as different versions of an ad.</p></li>
+</ul>
+</dd>
+</dl>
+<p>Example of usage:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>https://example1.com/friends?refer=friends&amp;utm_source=example_source&amp;utm_medium=example_medium
+</pre></div>
+</div>
 <div class="hidden docutils container">
 <div class="toctree-wrapper compound">
 </div>

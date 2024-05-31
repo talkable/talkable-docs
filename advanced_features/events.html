@@ -61,11 +61,11 @@
 <li class="toctree-l2"><a class="reference internal" href="passing_custom_data.html">Pass Custom User Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="phone_number_gating.html">Phone number gating</a></li>
 <li class="toctree-l2"><a class="reference internal" href="referrals_approval.html">Referrals Approval</a></li>
-<li class="toctree-l2"><a class="reference internal" href="product_sku.html">Segment With Product SKU</a></li>
-<li class="toctree-l2"><a class="reference internal" href="traffic_source.html">Segment With Traffic Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="segments.html">Segments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="subscribing_to_events.html">Subscribing To Iframe Events</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reg_ex.html">Setting up Campaign Placement criteria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="url_parameters.html">Using URL Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utm_tags.html">UTM Tags</a></li>
 <li class="toctree-l2"><a class="reference internal" href="white_labeling.html">White-labeling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="single_sign_on.html">Single Sign-On (SSO)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="multi_currency.html">Multi-currency</a></li>
@@ -123,7 +123,9 @@ whether the event was associated with a referral or not. With both “subscripti
 to report on and reward these events as desired. See some examples below.</p>
 <p>Subscription payments should be registered under the “subscription” event category. All such events
 can be found in the Reports → Events section of your Talkable Dashboard. Here is an example:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Begin Talkable integration code --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">[];</span>
 <span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;register_event&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">event</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">event_category</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;subscription&#39;</span><span class="p">,</span>
@@ -136,11 +138,18 @@ can be found in the Reports → Events section of your Talkable Dashboard. Here 
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}]);</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="cm">&lt;!-- End Talkable integration code --&gt;</span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please make sure you’ve added <a class="reference internal" href="../integration/custom/integration_components.html#integration-custom-integration-components-initialization-script"><span class="std std-ref">Talkable Initialization Script</span></a> to your header or any template spanning every page.</p>
 </div>
 <p>One-time purchases should go under the “purchase” event category. You can find all purchases
 in the Reports → Purchases section of your Talkable Dashboard. Here is an example:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Begin Talkable integration code --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">[];</span>
 <span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;register_event&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">event</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">event_category</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;purchase&#39;</span><span class="p">,</span>
@@ -153,6 +162,7 @@ in the Reports → Purchases section of your Talkable Dashboard. Here is an exam
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">}]);</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="cm">&lt;!-- End Talkable integration code --&gt;</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -219,7 +229,7 @@ Example: <code class="docutils literal notranslate"><span class="pre">'John'</sp
 <li><p><strong>last_name</strong> (optional) <br>
 Example: <code class="docutils literal notranslate"><span class="pre">'Smith'</span></code>.</p></li>
 <li><p><strong>traffic_source</strong> (optional) - specific
-<a class="reference internal" href="traffic_source.html#advanced-features-traffic-source"><span class="std std-ref">Traffic Source</span></a> value
+<a class="reference internal" href="segments.html#advanced-features-segments"><span class="std std-ref">Traffic Source</span></a> value
 that helps to distinguish different points of integration. <br>
 Example: <code class="docutils literal notranslate"><span class="pre">'facebook'</span></code>.</p></li>
 </ul>

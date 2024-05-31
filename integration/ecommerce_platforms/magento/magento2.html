@@ -95,48 +95,65 @@ If you do not have a Magento Marketplace account configured, follow
 <a class="reference external" rel="nofollow" href="https://docs.magento.com/user-guide/magento/magento-marketplace.html#marketplace-credentials">these steps</a>
 to connect one to your Magento store.</p>
 </div>
-<p>The <a class="reference external" rel="nofollow" href="https://marketplace.magento.com/talkable-magento2-integration.html">Magento 2 Integration Extension</a> is available to download in the Magento Marketplace.
+<p>The <a class="reference external" rel="nofollow" href="https://commercemarketplace.adobe.com/talkable-magento2-integration.html">Magento 2 Integration Extension</a> is available to download in the Magento Marketplace.
 The extension supports all versions of Magento 2.0 or higher.</p>
 <p><div class="page-break-after"></div></p>
 <section id="installation">
 <h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h2>
-<ol class="arabic">
-<li><p>Visit the Magento Marketplace and get the <a class="reference external" rel="nofollow" href="https://marketplace.magento.com/talkable-magento2-integration.html">Talkable extension</a>.</p>
-<img alt="../../../_images/install0.jpg" src="../../../_images/install0.jpg" />
-</li>
-<li><p>Follow <a class="reference external" rel="nofollow" href="https://devdocs.magento.com/extensions/install/">Magento Extensions Guide</a> for installation.</p></li>
-</ol>
-<p><div class="page-break-after"></div></p>
-</section>
-<section id="activating-the-integration">
-<h2>Activating the Integration<a class="headerlink" href="#activating-the-integration" title="Link to this heading">¶</a></h2>
-<ol class="arabic">
-<li><p>After successful installation, navigate to <strong>System</strong> → <strong>Integrations</strong> page of your admin panel.</p>
-<img alt="../../../_images/activate1.jpg" src="../../../_images/activate1.jpg" />
-</li>
-<li><p>Find <em>“Talkable”</em> in the list of integrations and click the <strong>Activate</strong> link.</p>
-<img alt="../../../_images/activate2.jpg" src="../../../_images/activate2.jpg" />
-</li>
-<li><p>Review the list of permissions that the Talkable extension needs and click <strong>Allow</strong>.</p>
-<img alt="../../../_images/activate3.jpg" src="../../../_images/activate3.jpg" />
-</li>
-<li><p>Log in to your Talkable account (if you’re already logged in, this step will be omitted).</p>
-<img alt="../../../_images/activate4.jpg" src="../../../_images/activate4.jpg" />
-</li>
-</ol>
-<p><div class="page-break-after"></div></p>
-<ol class="arabic" start="5">
-<li><p>All done! You have successfully integrated Talkable. To verify your Talkable integration,
-please visit <strong>Integration</strong> tab in <strong>Site Settings</strong>.</p>
-<img alt="../../../_images/activate5.jpg" src="../../../_images/activate5.jpg" />
-</li>
-</ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Activating the integration allows Talkable to configure your extension automatically.
-If you choose not to activate the integration, you will need to specify your Talkable Site ID in
-the <a class="reference internal" href="#integration">Integration</a> section of extension settings.</p>
+<p>Installation via Composer requires an IT administrator with SSH access to the server where Magento 2 is hosted.
+To install the Talkable extension, you’ll need to execute four commands.</p>
 </div>
+<ol class="arabic">
+<li><p>Visit the Magento Marketplace and get the <a class="reference external" rel="nofollow" href="https://commercemarketplace.adobe.com/talkable-magento2-integration.html">Talkable extension</a>.</p>
+<img alt="../../../_images/install.jpg" src="../../../_images/install.jpg" />
+</li>
+<li><p>Log in to your Magento 2 server and navigate to the root directory of your Magento app from your command line tool.
+This guide shows example outputs for Terminal, but these steps can be modified for any command line tool of your choice.</p></li>
+<li><p>Run the following command to access the latest version of the Talkable extension.</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>composer<span class="w"> </span>require<span class="w"> </span>talkable/magento2-integration
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Run the following command to enable the Talkable extension you just downloaded:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>php<span class="w"> </span>bin/magento<span class="w"> </span>module:enable<span class="w"> </span>Talkable_Integration<span class="w"> </span>--clear-static-content
+</pre></div>
+</div>
+</div></blockquote>
+<p>You should see the following output:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">following</span> <span class="n">modules</span> <span class="n">have</span> <span class="n">been</span> <span class="n">enabled</span><span class="p">:</span>
+<span class="o">-</span> <span class="n">Talkable_Integration</span>
+
+<span class="n">To</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">that</span> <span class="n">the</span> <span class="n">enabled</span> <span class="n">modules</span> <span class="n">are</span> <span class="n">properly</span> <span class="n">registered</span><span class="p">,</span> <span class="n">run</span> <span class="s1">&#39;setup:upgrade&#39;</span><span class="o">.</span>
+<span class="n">Cache</span> <span class="n">cleared</span> <span class="n">successfully</span><span class="o">.</span>
+<span class="n">Generated</span> <span class="n">classes</span> <span class="n">cleared</span> <span class="n">successfully</span><span class="o">.</span>
+<span class="n">Please</span> <span class="n">run</span> <span class="n">the</span> <span class="s1">&#39;setup:di:compile&#39;</span> <span class="n">command</span> <span class="n">to</span> <span class="n">generate</span> <span class="n">classes</span><span class="o">.</span>
+<span class="n">Generated</span> <span class="n">static</span> <span class="n">view</span> <span class="n">files</span> <span class="n">cleared</span> <span class="n">successfully</span><span class="o">.</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>As displayed in the sample output, you must now enable any additional modules. Run the following command to enable them:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>php<span class="w"> </span>bin/magento<span class="w"> </span>setup:upgrade
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>To ensure that the CSS and JS on your Magento 2 store continues to work properly, you’ll need to run a static content deploy command.</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>php<span class="w"> </span>bin/magento<span class="w"> </span>setup:static-content:deploy<span class="w"> </span>-f
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Installation via Composer is complete! You can now return to the Magento admin dashboard from your browser.</p></li>
+</ol>
 <p><div class="page-break-after"></div></p>
 </section>
 <section id="accessing-talkable-configuration">
@@ -177,9 +194,7 @@ a link to the Cache Management page. Please follow this link and refresh the inv
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you have activated the extension’s integration, the Site ID will be prefilled
-(see <a class="reference internal" href="#activating-the-integration">Activating the Integration</a>). If you chose not to activate the integration,
-you need to paste the Site ID from your Talkable Site Dashboard into this field.</p>
+<p>You need to paste the Site ID from your Talkable Site Dashboard into this field.</p>
 <img alt="../../../_images/configure3.jpg" src="../../../_images/configure3.jpg" />
 </div>
 <p><div class="page-break-after"></div></p>

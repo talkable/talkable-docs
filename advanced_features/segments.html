@@ -4,17 +4,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta content="From now on, you can show a campaign on post purchase placement only to those customers who purchased a particular product or a set of products." name="description" />
+<meta content="While driving traffic to one of your campaigns, you can include a traffic source parameter as a URL query string. This will help to segment your reporting." name="description" />
 
-    <title>Segment With Product SKU &#8212; Talkable Documentation</title>
+    <title>Segments &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/talkable.css?v=ec60a709" />
     <script src="../_static/documentation_options.js?v=f2a433a1"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <link rel="canonical" href="https://docs.talkable.com/advanced_features/product_sku.html" />
+    <link rel="canonical" href="https://docs.talkable.com/advanced_features/segments.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Segment With Traffic Source" href="traffic_source.html" />
+    <link rel="next" title="Subscribing To Iframe Events" href="subscribing_to_events.html" />
     <link rel="prev" title="Referrals Approval" href="referrals_approval.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
   <link href="../_static/pygments-github.css" rel="stylesheet">
   <link href="../_static/img/favicon.ico" rel="shortcut icon" />
@@ -58,13 +58,16 @@
 <li class="toctree-l2"><a class="reference internal" href="passing_custom_data.html">Pass Custom User Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="phone_number_gating.html">Phone number gating</a></li>
 <li class="toctree-l2"><a class="reference internal" href="referrals_approval.html">Referrals Approval</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Segment With Product SKU</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Segments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#segment-with-product-sku">Segment With Product SKU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#segment-with-traffic-source">Segment With Traffic Source</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-segments">Custom Segments</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="traffic_source.html">Segment With Traffic Source</a></li>
 <li class="toctree-l2"><a class="reference internal" href="subscribing_to_events.html">Subscribing To Iframe Events</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reg_ex.html">Setting up Campaign Placement criteria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="url_parameters.html">Using URL Parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utm_tags.html">UTM Tags</a></li>
 <li class="toctree-l2"><a class="reference internal" href="white_labeling.html">White-labeling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="single_sign_on.html">Single Sign-On (SSO)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="multi_currency.html">Multi-currency</a></li>
@@ -105,8 +108,12 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="advanced-features-product-sku"></span><section id="segment-with-product-sku">
-<h1>Segment With Product SKU<a class="headerlink" href="#segment-with-product-sku" title="Link to this heading">¶</a></h1>
+  <span class="target" id="advanced-features-segments"></span><section id="segments">
+<h1>Segments<a class="headerlink" href="#segments" title="Link to this heading">¶</a></h1>
+<p>When driving traffic to one of your campaigns, you can include a segment
+parameters to help segment your reporting.</p>
+<section id="segment-with-product-sku">
+<h2>Segment With Product SKU<a class="headerlink" href="#segment-with-product-sku" title="Link to this heading">¶</a></h2>
 <p>Sometimes there is a need to show a Campaign on Post Purchase Placement only to those customers who
 purchased a particular product or a set of products. In this case you can put such a limitation inside Campaign Join Criteria.
 To do that visit Campaign Details page → Go into Rules → Advanced → Campaign Join Criteria field and put the following
@@ -139,10 +146,61 @@ If there is no such column or it is blank you cannot use this feature unless you
 <a class="reference internal" href="product_items.html#advanced-features-product-items"><span class="std std-ref">Including Product Items</span></a>.</p>
 </div>
 <p>Please <a href="https://www.talkable.com/contact" target="_blank">contact us</a> if you have any questions.</p>
+</section>
+<section id="segment-with-traffic-source">
+<h2>Segment With Traffic Source<a class="headerlink" href="#segment-with-traffic-source" title="Link to this heading">¶</a></h2>
+<p>When driving traffic to one of your campaigns, you can include a traffic source
+parameter as a URL query string to help segment your reporting. This is helpful
+when you are driving traffic from many different sources to the same campaign.
+This makes sense to do for both on-site and off-site call to actions where you
+want to specifically track your traffic source. For example, if you are driving
+traffic on-site to your Standalone campaign both from your home page navigation
+bar and from your footer template, and you wanted to see which one is more high
+value and driving more traffic to your campaign, you could look at the different
+traffic sources in reporting to clearly see this.</p>
+<p>How to use the traffic_source parameter in a call to action:</p>
+<p>Say you have a Standalone integration displaying a campaign on www.yoursite.com/share.
+You could append the traffic_source parameter on to your footer call to action as seen below:</p>
+<p><code class="docutils literal notranslate"><span class="pre">www.yoursite.com/share?traffic_source=footer</span></code></p>
+</section>
+<section id="custom-segments">
+<h2>Custom Segments<a class="headerlink" href="#custom-segments" title="Link to this heading">¶</a></h2>
+<p>For individual purchase segmentation, you have the option to utilize three custom segments: <cite>segment1</cite>, <cite>segment2</cite>, <cite>segment3</cite>.
+Each of these segments can represent various criteria such as location, age group, traffic source, etc.
+These segments offer flexibility in categorizing purchases based on different customer characteristics or transaction attributes.</p>
+<p>Example of usage:</p>
+<blockquote>
+<div><div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- Begin Talkable integration code --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">_talkable_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">purchase</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">order_number</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;100011&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Unique order number</span>
+<span class="w">      </span><span class="nx">subtotal</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;23.97&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Order subtotal</span>
+<span class="w">      </span><span class="nx">coupon_code</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;SAVE20&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Coupon code used at checkout</span>
+<span class="w">      </span><span class="nx">currency_iso_code</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;USD&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Currency code</span>
+<span class="w">      </span><span class="nx">shipping_zip</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;02222&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Shipping ZIP code</span>
+<span class="w">      </span><span class="nx">shipping_address</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Apt 123, 456 Street, Cityville, CA, 02222, USA&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Shipping address</span>
+<span class="w">      </span><span class="nx">segment1</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;CA&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Custom segment 1</span>
+<span class="w">      </span><span class="nx">segment2</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;female&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Custom segment 2</span>
+<span class="w">      </span><span class="nx">segment3</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;social-media&#39;</span><span class="w"> </span><span class="c1">// Custom segment 3</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">customer</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;customer@example.com&#39;</span>
+<span class="w">      </span><span class="nx">traffic_source</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;facebook&#39;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;register_purchase&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">_talkable_data</span><span class="p">]);</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="cm">&lt;!-- End Talkable integration code --&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
 <div class="hidden docutils container">
 <div class="toctree-wrapper compound">
 </div>
 </div>
+</section>
 </section>
 
 
