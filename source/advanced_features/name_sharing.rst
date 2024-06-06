@@ -88,7 +88,7 @@ Once you enabled “Inline Widget”, ask client to add the following code for t
 Without adding this code, the campaign won’t be visible.
 
 Shopify Fast Checkout
------------------------------------------
+---------------------
 
 If Shopify theme uses shopping cart as a dynamic widget, you can integrate Claim by name campaign to show it in the cart by following these steps:
 
