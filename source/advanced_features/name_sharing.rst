@@ -72,12 +72,12 @@ the different offers and only one Claim by Name campaign, which will serve all t
 In the rules of the Claim by Name campaign there is an option to make the floating widget inline. This can be done in the Rules of the campaign:
 
 .. image:: /_static/img/advanced_features/name_sharing_inline_widget_1.png
-  :alt: Inline widget option
+   :alt: Inline widget option
 
 After that the campaign will be embedded in the page:
 
 .. image:: /_static/img/advanced_features/name_sharing_inline_widget_2.png
-  :alt: Inline widget
+   :alt: Inline widget
 
 Once you enabled “Inline Widget”, ask client to add the following code for the inline campaign (container):
 
@@ -96,16 +96,14 @@ If Shopify theme uses shopping cart as a dynamic widget, you can integrate Claim
 
 * Enable option 'Inline Widget' in Campaign settings
 
-* Add
+* Add the following code to the Cart snippet in the Shopify theme (``Snippets/card.liquid``):
 
 .. code-block:: html
 
    <div id=’talkable-claim-by-name’></div>
 
-to the Cart snippet in the Shopify theme. `Snippets/card.liquid`
-
 Interactions with the personal name-share link
 ----------------------------------------------
 
 When Advocate creates a username, his personal name link gets updated as well, and vice versa.
-However, the old personal name links that he shared before this change will still be valid
+However, the old personal name links that he shared before this change will still be valid.
