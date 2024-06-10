@@ -21,7 +21,7 @@ Talkable Basics
 |br|
 
 Talkable JS Integration
-=======================
+-----------------------
 
 This section comes with full documentation for Talkable integration into E-Commerce store as well as into any SaaS product.
 
@@ -39,7 +39,7 @@ This section comes with full documentation for Talkable integration into E-Comme
   <p>&nbsp;</p>
 
 Email Marketing & Automation
-============================
+----------------------------
 
 With these apps Talkable synchronizes all people who opt in for Talkable email marketing during signup. This way you will keep all your emails in one place in an automated way.
 
@@ -51,7 +51,7 @@ With these apps Talkable synchronizes all people who opt in for Talkable email m
 +-----------------------------------+
 
 Payment Solutions
-=================
+-----------------
 
 +----------------------+
 | .. toctree::         |
@@ -61,7 +61,7 @@ Payment Solutions
 +----------------------+
 
 Talkable Back-end Integration
-=============================
+-----------------------------
 
 Follow one of these sections in case you need to get or send data from/to Talkable.
 
@@ -77,7 +77,7 @@ Follow one of these sections in case you need to get or send data from/to Talkab
   <p>&nbsp;</p>
 
 Talkable For Mobile
-===================
+-------------------
 
 Follow our instructions on how to integrate Talkable into your native mobile app.
 
