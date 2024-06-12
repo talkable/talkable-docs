@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://docs.talkable.com/</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/integration/custom_integration.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/integration/loyalty.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/integration/ecommerce_platforms.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/email_marketing_and_automation.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/payment_solutions.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/api_v2.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/web_hooks.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/ios_sdk.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/android_sdk.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/campaign_types.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/campaign_placements.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/views.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/tutorials.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/offers_expiration.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/localization.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/editor.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/designer.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/coupons.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/shopify_coupons_auto_sync.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/shopify_purchase_syncing.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/track_methods.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/personal_coupon_sharing.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/name_sharing.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/converting_into_localization.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/customer_service_portal.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/params_encryption.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/events.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/file_encryption.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/report_password_protection.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/product_items.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/passing_custom_data.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/phone_number_gating.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/referrals_approval.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/segments.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/subscribing_to_events.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/reg_ex.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/url_parameters.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/utm_tags.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/white_labeling.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/single_sign_on.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/multi_currency.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/integration/custom/overview.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/integration/custom/integration_components.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/integration/custom/validating_integration.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/integration/verify.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/integration/custom/cookies.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/integration/custom/questions.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/integration/loyalty/integration_components.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/integration/loyalty/custom_app.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/integration/loyalty/auto_enrollment.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/integration/loyalty/shopify_integration.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/integration/ecommerce_platforms/demandware.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/integration/ecommerce_platforms/shopify.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/integration/ecommerce_platforms/magento.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/email_marketing_and_automation/klaviyo.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/email_marketing_and_automation/oracle_bronto.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/email_marketing_and_automation/mailchimp.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/email_marketing_and_automation/sailthru.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/email_marketing_and_automation/hubspot.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/email_marketing_and_automation/attentive.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/email_marketing_and_automation/custom_app.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/payment_solutions/recharge.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/api_v2/intro.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/api_v2/flow.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/api_v2/origins.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/api_v2/referrals.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/web_hooks/create_coupon.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/web_hooks/referral.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/web_hooks/reward.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/web_hooks/post_share.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/web_hooks/offer_signup.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/web_hooks/claim_signup.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/web_hooks/unsubscribe.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/web_hooks/check_unsubscribe.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/web_hooks/event.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/ios_sdk/getting_started.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/ios_sdk/integration.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/ios_sdk/social_sharing.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/ios_sdk/api_integration.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/ios_sdk/advanced.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/ios_sdk/custom_deep_linking.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/ios_sdk/example.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/android_sdk/getting_started.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/android_sdk/integration.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/android_sdk/advanced.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/android_sdk/api.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/android_sdk/custom_deep_linking.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/android_sdk/testing.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/android_sdk/upgrade.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/index.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/campaign_placements/standalone.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/campaign_placements/post_purchase.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/campaign_placements/floating_widget.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/campaign_placements/gleam.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/campaign_placements/claim_by_name.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/campaign_placements/loyalty_dashboard.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/campaign_placements/loyalty_widget.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/views/offers_show.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/views/notifier_offers_email.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/views/notifier_offers_share_via_email.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/views/notifier_offers_share_via_email_reminder.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/views/offers_claim.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/views/advocate_rewards_confirmation.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/views/advocate_rewards_paid.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/views/friend_rewards_paid.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/tutorials/global.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/tutorials/offers_show.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/tutorials/offers_claim.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/tutorials/incentive_criteria.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/editor/variables.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/editor/files.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/editor/history.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/editor/filters.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/campaigns/editor/videos.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/customer_service_portal/overview.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/customer_service_portal/terminology.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/customer_service_portal/use_case_1.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/customer_service_portal/use_case_2.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/customer_service_portal/use_case_3.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/customer_service_portal/use_case_4.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/customer_service_portal/use_case_5.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/customer_service_portal/use_case_6.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/white_labeling/aws_route53.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/white_labeling/shopify.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/white_labeling/godaddy.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/advanced_features/white_labeling/cloudflare.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/integration/custom/alternate_post_purchase.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/integration/custom/integration_tag_manager.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/integration/ecommerce_platforms/magento/magento1.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/integration/ecommerce_platforms/magento/magento2.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/ios_sdk/integration/standalone.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/ios_sdk/integration/post_purchase.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/ios_sdk/integration/event.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/android_sdk/integration/standalone.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/android_sdk/integration/post_purchase.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/android_sdk/integration/event.html</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://docs.talkable.com/_static/talkable-integration-guide.pdf</loc>
+  <lastmod>2024-05-28T07:32:19+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
