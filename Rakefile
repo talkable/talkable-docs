@@ -75,7 +75,12 @@ namespace :deploy do
     sh "rm -rf #{BUILD_DIR} #{SOURCE_DIR} .buildinfo"
     File.write('.nojekyll', '')
     File.write('CNAME', domain)
-    File.write('robots.txt', "User-agent: *\nDisallow: /") if disallow_robots
+    robots_content = if disallow_robots
+      "User-agent: *\nDisallow: /"
+    else
+      "User-agent: *\nDisallow: \n\nSitemap: https://docs.talkable.com/sitemap.xml"
+    end
+    File.write('robots.txt', robots_content)
     sh 'git add -A'
     sh "git commit -m \"Generated gh-pages for `git log #{source_branch} -1 --pretty=short --abbrev-commit`\" && #{push_command} ; git checkout #{source_branch}"
 
