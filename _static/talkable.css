@@ -217,6 +217,18 @@ abbr {
     background-size: 100%;
 }
 
+.logo-title-wrapper {
+  display: inline-block;
+  padding: 0;
+  line-height: 0;
+  height: 32px;
+  font-size: 16px;
+}
+
+.first-header {
+  margin-top: 0;
+}
+
 blockquote.epigraph {
     display: inline-block;
     zoom: 1;
