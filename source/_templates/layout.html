@@ -33,7 +33,11 @@
 {%- block sidebar1 %}
   {% block rootrellink %}
     <div class="header">
-      <a href="{{ pathto(master_doc) }}" class="header-logo">Talkable docs</a>
+      {%- if current_page_name == "index" -%}
+        <h1 class="logo-title-wrapper"><a href="{{ pathto(master_doc) }}" class="header-logo">Talkable docs</a></h1>
+      {%- else -%}
+        <a href="{{ pathto(master_doc) }}" class="header-logo">Talkable docs</a>
+      {%- endif -%}
       {%- block sidebarsearch %}
         {%- if pagename != "search" and builder != "singlehtml" %}
           <form class="search-form" action="{{ pathto('search') }}" method="get">
