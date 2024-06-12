@@ -20,10 +20,6 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-53LKB6');</script>
   <!-- End Google Tag Manager -->
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="ns "
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
   <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
   <link href="{{ pathto("_static/pygments-github.css", 1) }}" rel="stylesheet">
   <link href="{{ pathto("_static/img/favicon.ico", 1) }}" rel="shortcut icon" />
@@ -31,6 +27,10 @@
 
 {# put the sidebar before the body #}
 {%- block sidebar1 %}
+  <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="ns "
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   {% block rootrellink %}
     <div class="header">
       {%- if current_page_name == "index" -%}
