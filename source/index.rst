@@ -8,8 +8,9 @@
 .. meta::
    :description: Talkable campaigns, features and integration docs for referral program launch and settings.
 
-Talkable Basics
-===============
+.. raw:: html
+
+  <h2 class="first-header">Talkable Basics</h2>
 
 +------------------------------------+--------------------------------+
 | .. toctree::                       | .. toctree::                   |
@@ -20,8 +21,9 @@ Talkable Basics
 
 |br|
 
-Talkable JS Integration
------------------------
+.. raw:: html
+
+  <h2>Talkable JS Integration</h2>
 
 This section comes with full documentation for Talkable integration into E-Commerce store as well as into any SaaS product.
 
@@ -38,8 +40,9 @@ This section comes with full documentation for Talkable integration into E-Comme
 
   <p>&nbsp;</p>
 
-Email Marketing & Automation
-----------------------------
+.. raw:: html
+
+  <h2>Email Marketing & Automation</h2>
 
 With these apps Talkable synchronizes all people who opt in for Talkable email marketing during signup. This way you will keep all your emails in one place in an automated way.
 
@@ -50,8 +53,9 @@ With these apps Talkable synchronizes all people who opt in for Talkable email m
 |   email_marketing_and_automation  |
 +-----------------------------------+
 
-Payment Solutions
------------------
+.. raw:: html
+
+  <h2>Payment Solutions</h2>
 
 +----------------------+
 | .. toctree::         |
@@ -60,8 +64,9 @@ Payment Solutions
 |   payment_solutions  |
 +----------------------+
 
-Talkable Back-end Integration
------------------------------
+.. raw:: html
+
+  <h2>Talkable Back-end Integration</h2>
 
 Follow one of these sections in case you need to get or send data from/to Talkable.
 
@@ -76,8 +81,9 @@ Follow one of these sections in case you need to get or send data from/to Talkab
 
   <p>&nbsp;</p>
 
-Talkable For Mobile
--------------------
+.. raw:: html
+  
+  <h2>Talkable For Mobile</h2>
 
 Follow our instructions on how to integrate Talkable into your native mobile app.
 
