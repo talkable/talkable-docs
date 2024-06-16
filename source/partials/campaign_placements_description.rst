@@ -43,7 +43,7 @@ The criteria can be defined using one of the following operators:
 
 **Container name changes**.
 It is possible to update the container name from the admin panel in placements settings. It allows you to edit the `div` name in the placement setup, ensuring flexibility and customization according to your needs. By default, the `div` name is `talkable-offer` for Standalone, Standalone Dashboard, Floating Widget; `talkable-gleam-reward` for Gleam; `talkable-claim-by-name` for Claim By Name; `talkable-email-capture-offer` for Email Capture; `talkable-loyalty` for Loyalty Dashboard and Loyalty Widget, but it can be changed to any value you type.
-For Post Purchase Placement, the container name will generate automatically based on the site slug.
+For Post Purchase Placement, the container name is generated automatically based on the site slug.
 
 |hr|
 
