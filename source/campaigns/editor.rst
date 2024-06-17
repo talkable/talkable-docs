@@ -36,3 +36,4 @@ developers:
      editor/history
      editor/filters
      editor/videos
+     editor/partials
