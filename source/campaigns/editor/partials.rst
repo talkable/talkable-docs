@@ -18,7 +18,8 @@ To add a new Liquid partial, follow these steps:
 
 1. **Navigate to the Partials modal**: Navigate to the HTML & CSS section of the Editor. Click on the `Partials` button.
 2. **Create a Partial**: Click on the `Create Partial` button. This will open a new form where you can define your partial.
-  - **Name**: Provide a unique name for your partial. This name will be used to reference the partial in your main templates.
+  - **Name**: Provide a unique name for your partial. This name will be used to reference the partial in your main templates. The name could be separated by underscores.
+  - **Type**: Select the type of content you want to include in your partial. This can be either `HTML` or `CSS`. The content of the partial will be rendered as HTML or CSS based on the type you select.
   - **Insert to current position**: This option will insert the partial at the current cursor position in the editor.
 
   .. image:: /_static/img/editor/partial-modal.png
@@ -30,7 +31,7 @@ To include a partial in a main template, use the name of the partial you created
 
 .. code-block:: liquid
 
-  {% include 'partial_name' %}
+  {% render 'partial_name' %}
 
 Replace ``partial_name`` with the actual name of your partial. This will insert the content of the partial at the specified location in your main template.
 
@@ -67,6 +68,9 @@ Here is an example of how to create and use a Liquid partial:
 
     {% assign my_variable = 'apples' %}
     {% render 'header', my_variable: my_variable, my_other_variable: 'oranges' %}
+
+
+The code within the rendered template does not automatically have access to the variables assigned using variable tags within the parent template. Similarly, variables assigned within the rendered template cannot be accessed by code in any other template.
 
 By following these steps, you can efficiently manage reusable components within your Liquid templates, enhancing both modularity and maintainability.
 
