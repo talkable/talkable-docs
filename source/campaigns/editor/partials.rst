@@ -70,7 +70,9 @@ Here is an example of how to create and use a Liquid partial:
     {% render 'header', my_variable: my_variable, my_other_variable: 'oranges' %}
 
 
-The code within the rendered template does not automatically have access to the variables assigned using variable tags within the parent template. Similarly, variables assigned within the rendered template cannot be accessed by code in any other template.
+.. note::
+
+  The code within the rendered template does not automatically have access to the variables assigned using variable tags within the parent template. Similarly, variables assigned within the rendered template cannot be accessed by code in any other template.
 
 By following these steps, you can efficiently manage reusable components within your Liquid templates, enhancing both modularity and maintainability.
 
