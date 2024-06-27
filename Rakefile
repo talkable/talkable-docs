@@ -102,7 +102,7 @@ namespace :deploy do
       domain: 'void-docs.talkable.com',
       html_branch: 'void-gh-pages',
       source_branch: 'void',
-      disallow_robots: true,
+      disallow_robots: false,
       push_command: 'git push -f origin void-gh-pages && git push -f staging void-gh-pages:gh-pages'
     )
   end
