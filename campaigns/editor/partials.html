@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="Partials are used to make components from Liquid code and reuse them in different places." name="description" />
+
+    <title>Partials &#8212; Talkable Documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/talkable.css?v=ec60a709" />
+    <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="canonical" href="https://docs.talkable.com/campaigns/editor/partials.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Designer" href="../designer.html" />
+    <link rel="prev" title="Videos" href="videos.html" /><link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+  <link href="../../_static/pygments-github.css" rel="stylesheet">
+  <link href="../../_static/img/favicon.ico" rel="shortcut icon" />
+  </head><body>
+  
+    <div class="header">
+      <a href="../../index.html" class="header-logo">Talkable docs</a>
+          <form class="search-form" action="../../search.html" method="get">
+            <input type="text" class="textfield search-form-field" name="q" placeholder="Search docs" />
+            <input type="submit" class="button search-form-button" value="Search" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+      <div class="header-disclaimer">
+        Visit
+        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
+      </div>
+    </div> <!-- /.header -->
+  
+
+  <div class="content-container content clearfix">
+      <div class="nav">
+        <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../campaigns.html">Talkable Campaigns</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../campaign_types.html">Campaign Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../campaign_placements.html">Campaign Placements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../views.html">Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../offers_expiration.html">Offers Expiration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../localization.html">Localization</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../editor.html">Editor</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="variables.html">Variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="files.html">Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="history.html">History</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filters.html">Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="videos.html">Videos</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Partials</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../designer.html">Designer</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced_features.html">Features</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../integration/custom_integration.html">Standard Integration</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../integration/loyalty.html">Loyalty Integration (beta)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../integration/ecommerce_platforms.html">E-commerce Platforms</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../email_marketing_and_automation.html">Email Marketing &amp; Automation</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../payment_solutions.html">Payment Solutions</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../api_v2.html">API Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../web_hooks.html">Webhooks</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../ios_sdk.html">Talkable iOS SDK</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../android_sdk.html">Talkable Android SDK</a></li>
+</ul>
+
+      </div>
+
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <span class="target" id="campaigns-editor-partials"></span><section id="partials">
+<span id="editor-partials"></span><h1>Partials<a class="headerlink" href="#partials" title="Link to this heading">¶</a></h1>
+<p>In Talkable, Liquid partials are reusable snippets of code that can be included in main template. This allows for modular and maintainable template design.</p>
+<section id="adding-a-partial">
+<h2>Adding a Partial<a class="headerlink" href="#adding-a-partial" title="Link to this heading">¶</a></h2>
+<p>To add a new Liquid partial, follow these steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Navigate to the Partials modal</strong>: Navigate to the HTML &amp; CSS section of the Editor. Click on the <cite>Partials</cite> button.</p></li>
+<li><p><strong>Create a Partial</strong>: Click on the <cite>Create Partial</cite> button. This will open a new form where you can define your partial.</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Name</strong>: Provide a unique name for your partial. This name will be used to reference the partial in your main templates. The name could be separated by underscores.</p></li>
+<li><p><strong>Type</strong>: Select the type of content you want to include in your partial. This can be either <cite>HTML</cite> or <cite>CSS</cite>. The content of the partial will be rendered as HTML or CSS based on the type you select.</p></li>
+<li><p><strong>Insert to current position</strong>: This option will insert the partial at the current cursor position in the editor.</p></li>
+</ul>
+<img alt="../../_images/partial-modal.png" src="../../_images/partial-modal.png" />
+</div></blockquote>
+</section>
+<section id="including-a-partial-in-a-main-template">
+<h2>Including a Partial in a Main Template<a class="headerlink" href="#including-a-partial-in-a-main-template" title="Link to this heading">¶</a></h2>
+<p>To include a partial in a main template, use the name of the partial you created. The syntax for including a partial is as follows:</p>
+<div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{%</span><span class="w"> </span><span class="nt">render</span><span class="w"> </span><span class="s1">&#39;partial_name&#39;</span><span class="w"> </span><span class="p">%}</span>
+</pre></div>
+</div>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">partial_name</span></code> with the actual name of your partial. This will insert the content of the partial at the specified location in your main template.</p>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading">¶</a></h2>
+<p>Here is an example of how to create and use a Liquid partial:</p>
+<ol class="arabic simple">
+<li><p><strong>Create a Partial</strong>:</p></li>
+</ol>
+<blockquote>
+<div><ul>
+<li><p><strong>Name</strong>: <cite>header</cite></p></li>
+<li><p><strong>Type</strong>: <cite>HTML</cite></p></li>
+<li><p><strong>Content</strong>:</p>
+<div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span>&lt;header&gt;
+  &lt;h1&gt;<span class="p">{{</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="p">}}</span>&lt;/h1&gt;
+&lt;/header&gt;
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p><strong>Render the Partial in a Main Template</strong>:</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span>&lt;body&gt;
+  <span class="p">{%</span><span class="w"> </span><span class="nt">render</span><span class="w"> </span><span class="s1">&#39;header&#39;</span><span class="w"> </span><span class="p">%}</span>
+  &lt;main&gt;
+    <span class="p">{{</span><span class="w"> </span><span class="nv">content</span><span class="w"> </span><span class="p">}}</span>
+  &lt;/main&gt;
+&lt;/body&gt;
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p><strong>Variables assigned using variable tags can be passed to a template by listing them as parameters on the render tag</strong>:</p></li>
+</ol>
+<blockquote>
+<div><div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{%</span><span class="w"> </span><span class="nt">assign</span><span class="w"> </span><span class="na">my_variable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;apples&#39;</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">render</span><span class="w"> </span><span class="s1">&#39;header&#39;</span><span class="p">,</span><span class="w"> </span><span class="na">my_variable</span><span class="o">:</span><span class="w"> </span>my_variable<span class="p">,</span><span class="w"> </span><span class="na">my_other_variable</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;oranges&#39;</span><span class="w"> </span><span class="p">%}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The code within the rendered template does not automatically have access to the variables assigned using variable tags within the parent template. Similarly, variables assigned within the rendered template cannot be accessed by code in any other template.</p>
+</div>
+<p>By following these steps, you can efficiently manage reusable components within your Liquid templates, enhancing both modularity and maintainability.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" rel="nofollow" href="https://shopify.github.io/liquid/tags/template/#render">Liquid Partials documentation</a></p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  </div> <!-- /.content-container -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-63500208-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  </body>
+</html>
