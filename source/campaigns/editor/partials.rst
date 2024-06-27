@@ -24,6 +24,7 @@ To add a new Liquid partial, follow these steps:
 
   .. image:: /_static/img/editor/partial-modal.png
 
+
 Including a Partial in a Main Template
 ======================================
 
