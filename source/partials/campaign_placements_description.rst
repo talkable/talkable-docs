@@ -41,6 +41,17 @@ The criteria can be defined using one of the following operators:
 .. note::
   Custom Property Criteria require integration version 5.1.4 or higher to work.
 
+**Container name changes**.
+It is possible to update the container name from the admin panel in placements settings. It allows you to edit the `div` id in the placement setup, ensuring flexibility and customization according to your needs.
+By default, the `div` id is:
+* `talkable-offer` for Standalone, Standalone Dashboard, Floating Widget;
+* `talkable-post-purchase` for Post Purchase;
+* `talkable-post-event` for Post Event;
+* `talkable-gleam-reward` for Gleam;
+* `talkable-claim-by-name` for Claim By Name;
+* `talkable-email-capture-offer` for Email Capture;
+* `talkable-loyalty` for Loyalty Dashboard and Loyalty Widget.
+
 |hr|
 
 .. raw:: html
