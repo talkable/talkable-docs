@@ -1,10 +1,10 @@
-.. _email_marketing_and_automation/klaviyo:
+.. _email_marketing_and_automation/ometria:
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: With Klaviyo app clients can synchronize emails that Talkable collected.
+  :description: With Hubspot app clients can synchronize emails that Talkable collected.
 
-Klaviyo
+Ometria
 =======
 
 With ESP apps clients can synchronize emails that Talkable acquires with their ESP. Here are the conditions when Talkable acquires emails:
@@ -47,8 +47,8 @@ Please use the following guide to start using an app you need:
 3. Fill in all necessary fields. You can use tips on the right that instruct how to find all necessary credentials.
 4. Complete installation and enable the app:
 
-  .. image:: /_static/img/email_marketing_and_automation/klaviyo.png
-      :alt: klaviyo
+  .. image:: /_static/img/email_marketing_and_automation/hubspot.jpg
+      :alt: hubspot
 
 5. Test the app by pressing on the “Send sample payload” and then check if you are seeing a test request inside your ESP:
 

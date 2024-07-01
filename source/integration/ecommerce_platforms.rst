@@ -12,6 +12,7 @@ Contents:
 .. toctree::
     ecommerce_platforms/demandware
     ecommerce_platforms/shopify
+    ecommerce_platforms/shopify_plus
     ecommerce_platforms/magento
 
 
