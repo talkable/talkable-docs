@@ -18,6 +18,7 @@ To add a new Liquid partial, follow these steps:
 
 1. **Navigate to the Partials modal**: Navigate to the HTML & CSS section of the Editor. Click on the `Partials` button.
 2. **Create a Partial**: Click on the `Create Partial` button. This will open a new form where you can define your partial.
+
   - **Name**: Provide a unique name for your partial. This name will be used to reference the partial in your main templates. The name could be separated by underscores.
   - **Type**: Select the type of content you want to include in your partial. This can be either `HTML` or `CSS`. The content of the partial will be rendered as HTML or CSS based on the type you select.
   - **Insert to current position**: This option will insert the partial at the current cursor position in the editor.
@@ -41,6 +42,7 @@ Example
 Here is an example of how to create and use a Liquid partial:
 
 1. **Create a Partial**:
+
   - **Name**: `header`
   - **Type**: `HTML`
   - **Content**:
@@ -68,7 +70,6 @@ Here is an example of how to create and use a Liquid partial:
 
     {% assign my_variable = 'apples' %}
     {% render 'header', my_variable: my_variable, my_other_variable: 'oranges' %}
-
 
 .. note::
 
