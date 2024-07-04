@@ -70,7 +70,6 @@ overriding the `authenticate_customer` data:
   - `register_affiliate`
   - `register_purchase`
   - `register_event`
-  - `show_claim_by_name`
 
 For example:
 
