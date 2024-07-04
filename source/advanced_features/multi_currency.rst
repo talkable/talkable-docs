@@ -51,6 +51,41 @@ in the `[[ preferred_currency ]]` variable.
 
 .. image:: /_static/img/advanced_features/multi_currency_advocate_offer.png
 
+Passing visitor's preferred currency
+....................................
+
+If the preferred currency of the visitor is known, it can be passed as customer data to render the referral campaign
+with the currency pre-selected:
+
+.. code-block:: javascript
+
+  _talkableq.push(['authenticate_customer', {
+    email: '',
+    currency: 'AUD' // Currency should be an ISO-code
+  }]);
+
+Currency can also be provided directly in any of the following function calls,
+overriding the `authenticate_customer` data:
+
+  - `register_affiliate`
+  - `register_purchase`
+  - `register_event`
+  - `show_claim_by_name`
+
+For example:
+
+.. code-block:: javascript
+
+   var _purchase_data = {
+     purchase: {
+       order_number: '',
+       subtotal: '',
+       currency_iso_code: 'AUD' // currency of the purchase
+     },
+     currency: 'AUD', // preferred currency of the person, used to show suitable incentive information in the campaign
+   };
+   _talkableq.push(['register_purchase', _purchase_data]);
+
 Currencies on dashboard
 -----------------------
 
