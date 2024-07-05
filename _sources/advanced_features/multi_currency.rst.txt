@@ -85,6 +85,10 @@ For example:
    };
    _talkableq.push(['register_purchase', _purchase_data]);
 
+.. note::
+
+   Passing `currency` is available in integration version 5.1.14 or higher.
+
 Currencies on dashboard
 -----------------------
 
