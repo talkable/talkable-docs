@@ -7,39 +7,8 @@
 SheerID Integration
 =======================
 
-Overview
---------
+With SheerID app, you can verify your customers' eligibility for your referral program. This way you can ensure that only the right customers are rewarded for their referrals.
 
-This documentation provides a comprehensive guide on integrating the SheerID app into your Talkable system.
+**Contact us**
 
-Prerequisites
--------------
-
-Before you begin, ensure you have the following:
-
-- Access to MySheerID Customer Portal.
-
-Integration Steps
------------------
-
-1. **Install SheerID App from Talkable Apps Store**
-   - Navigate to the Talkable Apps Store.
-   - Install the SheerID app.
-   - During installation, you will be prompted to enter a SheerID Access Token.
-     - The Access Token should be provided by the SheerID team or your customer’s team.
-   - The app works as a SheerID features enabler and opens app SheerID fields in Campaign Rules.
-
-2. **Connect Talkable Campaign to SheerID Program**
-   - Go to the Talkable Campaign settings.
-   - Locate the SheerID integration section.
-   - Fill in the `SheerID Program ID` with the appropriate value provided by SheerID.
-   - Save the settings.
-
-Additional Resources
---------------------
-
-- SheerID Developer Portal: https://developer.sheerid.com/
-- API Documentation: https://developer.sheerid.com/docs/
-
-.. note::
-   For detailed examples and advanced usage, refer to the official SheerID API documentation.
+Interested in setting this up? Contact your CSM or get in touch `here <https://lp.talkable.com/lets-talk-referral>`_.
