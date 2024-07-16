@@ -54,8 +54,8 @@ Java Example
 
 This example uses `Bouncy Castle library`_ and has been tested on:
 
-* bcprov-jdk15on-156.jar (Provider)
-* bcpkix-jdk15on-156.jar (PKIX/CMS/EAC/PKCS/OCSP/TSP/OPENSSL)
+* bcprov-jdk18on-1.78.1.jar (Provider)
+* bcpkix-jdk18on-1.78.1.jar (PKIX/CMS/EAC/PKCS/OCSP/TSP/OPENSSL)
 
 that can be downloaded from `Bouncy Castle Latest Releases`_.
 
