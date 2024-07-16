@@ -25,7 +25,7 @@ point to standalone invite page). But to do that encrypted email should be **URL
 
 .. note::
 
-    It's recommended to use `Optimal Asymmetric Encryption Padding (OAEP) <https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding>`_ padding scheme together with RSA encryption.
+   It’s recommended to use `Optimal Asymmetric Encryption Padding (OAEP)`_ padding scheme together with RSA encryption.
 
 Ruby Example
 ------------
@@ -151,4 +151,5 @@ Please modify the front-end using this pseudo code example:
 
 .. _Talkable Public Key: https://d2jjzw81hqbuqv.cloudfront.net/integration/talkable_public_key.pem
 .. _Bouncy Castle Library: https://www.bouncycastle.org
-.. _Bouncy Castle Latest Releases: https://www.bouncycastle.org/latest_releases.html
+.. _Bouncy Castle Latest Releases: http://git.bouncycastle.org/latest_releases.html
+.. _Optimal Asymmetric Encryption Padding (OAEP): https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding
