@@ -23,6 +23,10 @@ Passing email as a GET parameter to Standalone Campaign
 Also it’s possible to pass encrypted email as a GET parameter (e.g. for CTA links that
 point to standalone invite page). But to do that encrypted email should be **URL-encoded**.
 
+.. note::
+
+    It's recommended to use `Optimal Asymmetric Encryption Padding (OAEP) <https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding>`_ padding scheme together with RSA encryption.
+
 Ruby Example
 ------------
 
@@ -39,7 +43,7 @@ Ruby Example
    end
 
    def encode_param_for_talkable(param)
-     encrypted_param = key.public_encrypt(param)
+     encrypted_param = key.public_encrypt(param, OpenSSL::PKey::RSA::PKCS1_OAEP_PADDING)
      Base64.strict_encode64(encrypted_param)
    end
 
@@ -88,7 +92,7 @@ that can be downloaded from `Bouncy Castle Latest Releases`_.
            }
 
            private void initCipher() throws GeneralSecurityException {
-               cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding", "BC");
+               cipher = Cipher.getInstance("RSA/ECB/OAEPPadding", "BC");
                cipher.init(Cipher.ENCRYPT_MODE, publicKey);
            }
 

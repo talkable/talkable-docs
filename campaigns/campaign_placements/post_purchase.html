@@ -115,6 +115,10 @@ show up automatically as a popup once the customer made a successful purchase on
 <section id="integration-instructions">
 <h2>Integration instructions<a class="headerlink" href="#integration-instructions" title="Link to this heading">¶</a></h2>
 <p>Instructions slightly vary based on your site platform.</p>
+<ol class="arabic simple">
+<li><p><strong>Talkable Container DIV.</strong> By default post purchase campaign will have <cite>talkable-post-purchase</cite> id of container. If
+you want to update it you can do it in admin panel.</p></li>
+</ol>
 </section>
 <section id="shopify-platform">
 <h2>Shopify Platform<a class="headerlink" href="#shopify-platform" title="Link to this heading">¶</a></h2>
@@ -124,7 +128,9 @@ then go to Integration Guide <cite>https://admin.talkable.com/sites/&lt;YOUR-TAL
 Shopify Talkable extension. Check the integration status with “Verify Integration” button.</p></li>
 <li><p><strong>Configure Campaign and Placement.</strong> Create a new Campaign with Post Purchase type of Placement,
 configure it and launch. It will be automatically attached to the Post Purchase Placement and so,
-show up to your customers every time they purchase successfully on your site.</p>
+show up to your customers every time they purchase successfully on your site.
+<br>
+In the placement settings, you can now change the <cite>div</cite> id value. It can be customized to any value you type.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -141,7 +147,9 @@ Purchase Success page, so you don’t need to do anything in addition.
 Make sure the Post Purchase type of Campaigns is enabled in the Talkable extension settings in your Magento Admin Panel.</p></li>
 <li><p><strong>Configure Campaign and Placement.</strong> Create a new Campaign with Post Purchase type of Placement,
 configure it and launch. It will be automatically attached to the Post Purchase Placement and so,
-show up to your customers every time they purchase successfully on your site.</p>
+show up to your customers every time they purchase successfully on your site.
+<br>
+In the placement settings, you can now change the <cite>div</cite> id value. It can be customized to any value you type.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
@@ -163,6 +171,8 @@ At this point you need to pass all the order related properties such as order nu
 Create a new Campaign with Post Purchase type of Placement and launch it.
 It will be automatically attached to its Post Purchase Placement that triggers a
 Campaign on the order confirmation page.
+<br>
+In the placement settings, you can now change the <cite>div</cite> id value. It can be customized to any value you type.
 <br>
 If you need to change or reconfigure which Campaigns are shown on which URLs then visit
 <cite>https://admin.talkable.com/sites/&lt;YOUR-TALKABLE-SITE-ID&gt;/placements</cite> page.</p>
