@@ -2,10 +2,12 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: With Yotpo app clients can synchronize emails that Talkable collected.
+  :description: Synchronize emails Talkable collected with Yotpo integration.
 
 Yotpo
 =====
+
+With this integration Talkable synchronizes all people who opt in for Talkable email marketing during sign up. This way you will keep all your emails in one place in an automated way.
 
 **Contact us**
 

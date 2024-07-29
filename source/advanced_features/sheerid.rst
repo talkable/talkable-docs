@@ -2,12 +2,12 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Learn how to seamlessly integrate the SheerID app into your Talkable system. Follow our step-by-step guide for installation, API integration, and error handling to enhance your verification processes and improve campaign management.
+  :description: Learn how to seamlessly integrate SheerID verifications into your Talkable Campaign. Enable exclusive discounts and offers made for teachers, students, military, nurses, and more.
 
 SheerID Integration
 =======================
 
-With SheerID app, you can verify your customers' eligibility for your referral program. This way you can ensure that only the right customers are rewarded for their referrals.
+With SheerID and Talkable integration, you can verify your customers' eligibility for your referral program and offer exclusive discounts and deals tailored for teachers, students, military personnel, nurses, and more.
 
 **Contact us**
 

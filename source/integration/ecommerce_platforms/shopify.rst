@@ -411,3 +411,7 @@ you need to do the following:
 
           .. important::
              If your main section is disabled, remove the row that does it.
+
+**Contact us**
+
+Also Talkable provide integration for Shopify Plus. Interested in setting this up? Contact your CSM or get in touch `here <https://lp.talkable.com/lets-talk-referral>`_.
