@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: With Hubspot app clients can synchronize emails that Talkable collected.
+  :description: Synchronize emails Talkable collected with Hubspot integration.
 
 Emarsys
 =======

@@ -414,4 +414,4 @@ you need to do the following:
 
 **Contact us**
 
-Also Talkable provide integration for Shopify Plus. Interested in setting this up? Contact your CSM or get in touch `here <https://lp.talkable.com/lets-talk-referral>`_.
+Also Talkable provides integration for Shopify Plus. Interested in setting this up? Contact your CSM or get in touch `here <https://lp.talkable.com/lets-talk-referral>`_.
