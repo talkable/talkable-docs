@@ -4,9 +4,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta content="Talkable JS integration script embeds Talkable campaign as an iframe." name="description" />
+<meta content="Integrate Google Login with your Talkable system for secure and seamless user authentication. Follow our step-by-step guide to enable the app, configure custom Google Client IDs, and enhance your login processes." name="description" />
 
-    <title>Subscribing To Iframe Events &#8212; Talkable Documentation</title>
+    <title>Google Login &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/talkable.css?v=6a6e49b7" />
     <script src="../_static/documentation_options.js?v=f2a433a1"></script>
@@ -65,10 +65,7 @@
 <li class="toctree-l2"><a class="reference internal" href="phone_number_gating.html">Phone number gating</a></li>
 <li class="toctree-l2"><a class="reference internal" href="referrals_approval.html">Referrals Approval</a></li>
 <li class="toctree-l2"><a class="reference internal" href="segments.html">Segments</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Subscribing To Iframe Events</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#iframe-events-list">Iframe Events List</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="subscribing_to_events.html">Subscribing To Iframe Events</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reg_ex.html">Setting up Campaign Placement criteria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="url_parameters.html">Using URL Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utm_tags.html">UTM Tags</a></li>
@@ -76,7 +73,16 @@
 <li class="toctree-l2"><a class="reference internal" href="single_sign_on.html">Single Sign-On (SSO)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="multi_currency.html">Multi-currency</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sheerid.html">SheerID Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="google_login.html">Google Login</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Google Login</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#integration-steps">Integration Steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-a-google-api-client-id">Creating a Google API Client ID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#error-handling">Error Handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#testing-and-deployment">Testing and Deployment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#additional-resources">Additional Resources</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -114,50 +120,98 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="advanced-features-subscribing-to-events"></span><section id="subscribing-to-iframe-events">
-<h1>Subscribing To Iframe Events<a class="headerlink" href="#subscribing-to-iframe-events" title="Link to this heading">¶</a></h1>
-<p>Talkable integration embeds a referral campaign as an iframe with <cite>src</cite> attribute starting with <cite>www.talkable.com</cite> domain (or custom domain if the <a class="reference internal" href="white_labeling.html#advanced-features-white-labeling"><span class="std std-ref">white-labeling</span></a> is setup).</p>
-<p>In order to subscribe to an iframe Event you need to know <cite>name</cite> HTML attribute of the Talkable iframe and the Event name.
-Iframe ‘name’ attribute may change depending on the <a class="reference internal" href="../campaigns/views.html#campaigns-views"><span class="std std-ref">campaign view</span></a> opened. Thus, to use the right iframe name, open the campaign view you want to capture events from and copy the iframe name from the HTML of the page.</p>
-<p>Below is an example of subscription to <cite>offer_loaded</cite> Talkable iframe Event.</p>
-<p>Given we have integrated Campaign for <a class="reference internal" href="../campaigns/campaign_placements/standalone.html#campaigns-campaign-placements-standalone"><span class="std std-ref">Standalone</span></a> Placement, its HTML iframe reference looks like that:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;talkable-offer&quot;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;talkable-offer-iframe&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.talkable.com/...&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-<p>Knowing the container <cite>name</cite> attribute of the iframe is <cite>talkable-offer-iframe</cite> the subscription JS will be:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">talkable</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s2">&quot;offer_loaded&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;talkable-offer-iframe&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">iframe</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Talkable campaign iframe is loaded!&quot;</span><span class="p">);</span>
-<span class="p">});</span>
-</pre></div>
-</div>
-<p>Notice two arguments passed in the callback:</p>
+  <span class="target" id="advanced-features-google-login"></span><section id="google-login">
+<h1>Google Login<a class="headerlink" href="#google-login" title="Link to this heading">¶</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
+<p>This documentation provides a comprehensive guide on integrating the Google Sign-In app into your Talkable system. By enabling this app, users can sign in using their Google accounts, enhancing security and reducing login friction.</p>
+<p>In case you don’t have the Talkable Google Sign-In app installed, users can still log in via Google in your Campaign, but Talkable credentials will be used for the OAuth flow.</p>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">¶</a></h2>
+<p>Before you begin, ensure you have the following:</p>
+<ul class="simple">
+<li><p>Access to Google API Console.</p></li>
+<li><p>A Google API Client ID (if you want to use a custom Client ID).</p></li>
+</ul>
+</section>
+<section id="integration-steps">
+<h2>Integration Steps<a class="headerlink" href="#integration-steps" title="Link to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p><strong>Install Google Sign-In App from Talkable Apps Store</strong>
+- Navigate to the Talkable Apps Store.
+- Install the Google Sign-In app.
+- You will see an option to enter your custom Google Client ID. If left blank, Talkable’s default Google identifier will be used.</p></li>
+<li><p><strong>Configure Google Sign-In Settings</strong>
+- Go to the Google Sign-In app settings page.
+- Enter your custom Google Client ID in the provided field.</p>
 <blockquote>
-<div><ol class="arabic simple">
-<li><p><cite>data</cite> object — the data passed by the iframe upon firing the event</p></li>
-<li><p><cite>iframe</cite> object — iframe’s <a class="reference external" rel="nofollow" href="https://www.w3schools.com/jsref/dom_obj_frame.asp">HTML DOM reference</a></p></li>
-</ol>
+<div><ul class="simple">
+<li><p>You can find your Client ID in the Google API Console.</p></li>
+<li><p>Ensure the Authorized JavaScript origins of your Client ID include Talkable’s domain (<cite>www.talkable.com</cite>) and your custom web domain if set up.</p></li>
+</ul>
 </div></blockquote>
-<section id="iframe-events-list">
-<h2>Iframe Events List<a class="headerlink" href="#iframe-events-list" title="Link to this heading">¶</a></h2>
-<p>Talkable campaigns are equipped with the following set of events:</p>
+<ul class="simple">
+<li><p>Example Client ID format: <cite>123.apps.googleusercontent.com</cite></p></li>
+<li><p>Save the changes.</p></li>
+</ul>
+</li>
+<li><p><strong>Activate the Google Sign-In App</strong>
+- Toggle the activation switch to enable the Google Sign-In app.
+- The app is now active, and users can use their Google accounts to sign in.</p></li>
+</ol>
+</section>
+<section id="creating-a-google-api-client-id">
+<h2>Creating a Google API Client ID<a class="headerlink" href="#creating-a-google-api-client-id" title="Link to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p><strong>Access Google API Console</strong>
+- Go to the [Google API Console](<a class="reference external" rel="nofollow" href="https://console.developers.google.com/">https://console.developers.google.com/</a>).
+- Create a new project or select an existing project.</p></li>
+<li><p><strong>Configure OAuth Consent Screen</strong>
+- Navigate to the OAuth consent screen configuration.
+- Fill in the necessary details and save the configuration.</p></li>
+<li><p><strong>Create OAuth 2.0 Client ID</strong>
+- Go to the Credentials page.
+- Click on “Create Credentials” and select “OAuth 2.0 Client ID”.
+- Configure the application type as “Web application”.
+- Add Authorized JavaScript origins, including:</p>
 <blockquote>
-<div><ol class="arabic simple">
-<li><p><cite>offer_loaded</cite> — Talkable iframe DOM ready event which is in fact the very first event that you can use to determine if the iframe is loaded.</p></li>
-<li><p><cite>responsive_iframe_height</cite> — fires every time iframe size gets changed. You can use it to detect changes in iframe size.
-You can read more <a class="reference internal" href="../campaigns/designer.html#responsive-views"><span class="std std-ref">here</span></a>. Previously named as <code class="docutils literal notranslate"><span class="pre">curebit_offer_iframe_broadcast</span></code>.</p></li>
-<li><p><cite>offer_close</cite> — fires when the close button is clicked. You can use this event to determine when user closes Talkable campaign, it then disappears from the screen.</p></li>
-<li><p><cite>offer_triggered</cite> — Talkable Trigger Widget iframe fires this event when user clicks on it. You can use this event to detect when the main offer iframe is about to show up.</p></li>
-<li><p><cite>coupon_issued</cite> — fires upon issuing coupon code as a reward for sharing. You can use it to determine when the user shares and receives their reward. <cite>data.channel</cite> tells which sharing channel was used and <cite>data.coupon_code</cite> stores the coupon code value.</p></li>
-<li><p><cite>share_succeeded</cite> — fires each time <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> shares. <cite>data.channel</cite> tells which sharing channel was used for the share.</p></li>
-<li><p><cite>email_gating_passed</cite> — fires when <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> passes email gating on <a class="reference internal" href="../campaigns/views/offers_claim.html#campaigns-views-offers-claim"><span class="std std-ref">Friend Claim Page</span></a>.</p></li>
-<li><p><cite>email_gating_failed</cite> — fires when <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> fails to pass email gating on <a class="reference internal" href="../campaigns/views/offers_claim.html#campaigns-views-offers-claim"><span class="std std-ref">Friend Claim Page</span></a>.</p></li>
-</ol>
+<div><ul class="simple">
+<li><p><cite>https://www.talkable.com</cite></p></li>
+<li><p>Your custom domain, if applicable.</p></li>
+</ul>
 </div></blockquote>
-<div class="hidden docutils container">
-<div class="toctree-wrapper compound">
-</div>
+<ul class="simple">
+<li><p>Save and copy the generated Client ID.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="error-handling">
+<h2>Error Handling<a class="headerlink" href="#error-handling" title="Link to this heading">¶</a></h2>
+<p>Common errors and how to handle them:</p>
+<ul class="simple">
+<li><p><strong>Invalid Client ID</strong>: Ensure the Client ID is correctly entered and is active in the Google API Console.</p></li>
+<li><p><strong>Authorization Errors</strong>: Verify that the Authorized JavaScript origins include the necessary domains.</p></li>
+<li><p><strong>Network Issues</strong>: Retry the request or check your network connection.</p></li>
+</ul>
+</section>
+<section id="testing-and-deployment">
+<h2>Testing and Deployment<a class="headerlink" href="#testing-and-deployment" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Testing</strong>: Use a test account to verify that the Google Sign-In works correctly with your custom Client ID.</p></li>
+<li><p><strong>Deployment</strong>: Once testing is complete, ensure that all configurations are saved and the app is activated.</p></li>
+</ul>
+</section>
+<section id="additional-resources">
+<h2>Additional Resources<a class="headerlink" href="#additional-resources" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Google API Console: <a class="reference external" rel="nofollow" href="https://console.developers.google.com/">https://console.developers.google.com/</a></p></li>
+<li><p>OAuth 2.0 Documentation: <a class="reference external" rel="nofollow" href="https://developers.google.com/identity/protocols/oauth2">https://developers.google.com/identity/protocols/oauth2</a></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For detailed examples and advanced usage, refer to the official Google OAuth 2.0 documentation.</p>
 </div>
 </section>
 </section>

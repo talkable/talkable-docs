@@ -54,3 +54,7 @@ Please use the following guide to start using an app you need:
 
   .. image:: /_static/img/email_marketing_and_automation/send_same_payload.png
     :alt: Send same payload
+
+**Contact us**
+
+Interested in setting this up? Contact your CSM or get in touch `here <https://lp.talkable.com/lets-talk-referral>`_.

@@ -4,9 +4,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta content="Talkable JS integration script embeds Talkable campaign as an iframe." name="description" />
+<meta content="Learn how to seamlessly integrate SheerID verifications into your Talkable Campaign. Enable exclusive discounts and offers made for teachers, students, military, nurses, and more." name="description" />
 
-    <title>Subscribing To Iframe Events &#8212; Talkable Documentation</title>
+    <title>SheerID Integration &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/talkable.css?v=6a6e49b7" />
     <script src="../_static/documentation_options.js?v=f2a433a1"></script>
@@ -65,17 +65,14 @@
 <li class="toctree-l2"><a class="reference internal" href="phone_number_gating.html">Phone number gating</a></li>
 <li class="toctree-l2"><a class="reference internal" href="referrals_approval.html">Referrals Approval</a></li>
 <li class="toctree-l2"><a class="reference internal" href="segments.html">Segments</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Subscribing To Iframe Events</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#iframe-events-list">Iframe Events List</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="subscribing_to_events.html">Subscribing To Iframe Events</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reg_ex.html">Setting up Campaign Placement criteria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="url_parameters.html">Using URL Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utm_tags.html">UTM Tags</a></li>
 <li class="toctree-l2"><a class="reference internal" href="white_labeling.html">White-labeling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="single_sign_on.html">Single Sign-On (SSO)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="multi_currency.html">Multi-currency</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sheerid.html">SheerID Integration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SheerID Integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google_login.html">Google Login</a></li>
 </ul>
 </li>
@@ -114,52 +111,11 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="advanced-features-subscribing-to-events"></span><section id="subscribing-to-iframe-events">
-<h1>Subscribing To Iframe Events<a class="headerlink" href="#subscribing-to-iframe-events" title="Link to this heading">¶</a></h1>
-<p>Talkable integration embeds a referral campaign as an iframe with <cite>src</cite> attribute starting with <cite>www.talkable.com</cite> domain (or custom domain if the <a class="reference internal" href="white_labeling.html#advanced-features-white-labeling"><span class="std std-ref">white-labeling</span></a> is setup).</p>
-<p>In order to subscribe to an iframe Event you need to know <cite>name</cite> HTML attribute of the Talkable iframe and the Event name.
-Iframe ‘name’ attribute may change depending on the <a class="reference internal" href="../campaigns/views.html#campaigns-views"><span class="std std-ref">campaign view</span></a> opened. Thus, to use the right iframe name, open the campaign view you want to capture events from and copy the iframe name from the HTML of the page.</p>
-<p>Below is an example of subscription to <cite>offer_loaded</cite> Talkable iframe Event.</p>
-<p>Given we have integrated Campaign for <a class="reference internal" href="../campaigns/campaign_placements/standalone.html#campaigns-campaign-placements-standalone"><span class="std std-ref">Standalone</span></a> Placement, its HTML iframe reference looks like that:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;talkable-offer&quot;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;talkable-offer-iframe&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://www.talkable.com/...&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</pre></div>
-</div>
-<p>Knowing the container <cite>name</cite> attribute of the iframe is <cite>talkable-offer-iframe</cite> the subscription JS will be:</p>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">talkable</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="s2">&quot;offer_loaded&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;talkable-offer-iframe&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">iframe</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Talkable campaign iframe is loaded!&quot;</span><span class="p">);</span>
-<span class="p">});</span>
-</pre></div>
-</div>
-<p>Notice two arguments passed in the callback:</p>
-<blockquote>
-<div><ol class="arabic simple">
-<li><p><cite>data</cite> object — the data passed by the iframe upon firing the event</p></li>
-<li><p><cite>iframe</cite> object — iframe’s <a class="reference external" rel="nofollow" href="https://www.w3schools.com/jsref/dom_obj_frame.asp">HTML DOM reference</a></p></li>
-</ol>
-</div></blockquote>
-<section id="iframe-events-list">
-<h2>Iframe Events List<a class="headerlink" href="#iframe-events-list" title="Link to this heading">¶</a></h2>
-<p>Talkable campaigns are equipped with the following set of events:</p>
-<blockquote>
-<div><ol class="arabic simple">
-<li><p><cite>offer_loaded</cite> — Talkable iframe DOM ready event which is in fact the very first event that you can use to determine if the iframe is loaded.</p></li>
-<li><p><cite>responsive_iframe_height</cite> — fires every time iframe size gets changed. You can use it to detect changes in iframe size.
-You can read more <a class="reference internal" href="../campaigns/designer.html#responsive-views"><span class="std std-ref">here</span></a>. Previously named as <code class="docutils literal notranslate"><span class="pre">curebit_offer_iframe_broadcast</span></code>.</p></li>
-<li><p><cite>offer_close</cite> — fires when the close button is clicked. You can use this event to determine when user closes Talkable campaign, it then disappears from the screen.</p></li>
-<li><p><cite>offer_triggered</cite> — Talkable Trigger Widget iframe fires this event when user clicks on it. You can use this event to detect when the main offer iframe is about to show up.</p></li>
-<li><p><cite>coupon_issued</cite> — fires upon issuing coupon code as a reward for sharing. You can use it to determine when the user shares and receives their reward. <cite>data.channel</cite> tells which sharing channel was used and <cite>data.coupon_code</cite> stores the coupon code value.</p></li>
-<li><p><cite>share_succeeded</cite> — fires each time <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> shares. <cite>data.channel</cite> tells which sharing channel was used for the share.</p></li>
-<li><p><cite>email_gating_passed</cite> — fires when <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> passes email gating on <a class="reference internal" href="../campaigns/views/offers_claim.html#campaigns-views-offers-claim"><span class="std std-ref">Friend Claim Page</span></a>.</p></li>
-<li><p><cite>email_gating_failed</cite> — fires when <abbr title="Person who is invited to participate in Campaign by Advocate">Friend</abbr> fails to pass email gating on <a class="reference internal" href="../campaigns/views/offers_claim.html#campaigns-views-offers-claim"><span class="std std-ref">Friend Claim Page</span></a>.</p></li>
-</ol>
-</div></blockquote>
-<div class="hidden docutils container">
-<div class="toctree-wrapper compound">
-</div>
-</div>
-</section>
+  <span class="target" id="advanced-features-sheerid"></span><section id="sheerid-integration">
+<h1>SheerID Integration<a class="headerlink" href="#sheerid-integration" title="Link to this heading">¶</a></h1>
+<p>With SheerID and Talkable integration, you can verify your customers’ eligibility for your referral program and offer exclusive discounts and deals tailored for teachers, students, military personnel, nurses, and more.</p>
+<p><strong>Contact us</strong></p>
+<p>Interested in setting this up? Contact your CSM or get in touch <a class="reference external" rel="nofollow" href="https://lp.talkable.com/lets-talk-referral">here</a>.</p>
 </section>
 
 

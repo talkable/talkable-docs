@@ -4,9 +4,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta content="With Mailchimp app clients can synchronize emails that Talkable collected." name="description" />
+<meta content="Synchronize emails Talkable collected with Yotpo integration." name="description" />
 
-    <title>Mailchimp &#8212; Talkable Documentation</title>
+    <title>Yotpo &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/talkable.css?v=6a6e49b7" />
     <script src="../_static/documentation_options.js?v=f2a433a1"></script>
@@ -59,13 +59,10 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../email_marketing_and_automation.html">Email Marketing &amp; Automation</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="klaviyo.html">Klaviyo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="yotpo.html">Yotpo</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Yotpo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ometria.html">Ometria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="oracle_bronto.html">Oracle Bronto</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Mailchimp</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#how-to-add-a-new-app">How to add a new app?</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="mailchimp.html">Mailchimp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sailthru.html">Sailthru</a></li>
 <li class="toctree-l2"><a class="reference internal" href="emarsys.html">Emarsys</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hubspot.html">Hubspot</a></li>
@@ -98,56 +95,11 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="email-marketing-and-automation-mailchimp"></span><section id="mailchimp">
-<h1>Mailchimp<a class="headerlink" href="#mailchimp" title="Link to this heading">¶</a></h1>
-<p>With ESP apps clients can synchronize emails that Talkable acquires with their ESP. Here are the conditions when Talkable acquires emails:</p>
-<ol class="arabic simple">
-<li><p>Advocate signs up and opts in for Talkable marketing emails:</p></li>
-</ol>
-<blockquote>
-<div><img alt="Subscribe" src="../_images/subscribe.png" />
-</div></blockquote>
-<ol class="arabic simple" start="2">
-<li><p>A friend passes email gating and opts in for Talkable marketing emails:</p></li>
-</ol>
-<blockquote>
-<div><img alt="Signup" src="../_images/signup.png" />
-</div></blockquote>
-<p>Each ESP application allows custom attributes to be included with each request. The following interpolation variables are allowed:</p>
-<ol class="arabic simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">person</span> <span class="pre">}}</span></code> - a data object for either advocate or friend whenever they sign up or pass email gating and opt-in for marketing emails.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">ip</span> <span class="pre">}}</span></code> – a data object from which IP address either a signup or email gating occurred.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">{{</span> <span class="pre">campaign</span> <span class="pre">}}</span></code> – a data object with details about the campaign within which the email was captured.</p></li>
-</ol>
-<img alt="Variables" src="../_images/variables.png" />
-<p>Each variable is described in the “Available variables” sidebar and can be expanded to see all nested properties.</p>
-<section id="how-to-add-a-new-app">
-<h2>How to add a new app?<a class="headerlink" href="#how-to-add-a-new-app" title="Link to this heading">¶</a></h2>
-<p>Please use the following guide to start using an app you need:</p>
-<ol class="arabic simple">
-<li><p>Navigate into the App store:</p></li>
-</ol>
-<blockquote>
-<div><img alt="App store step 1" src="../_images/app_store_step_1.png" />
-<img alt="App store step 2" src="../_images/app_store_step_2.png" />
-</div></blockquote>
-<ol class="arabic simple" start="2">
-<li><p>Choose an app you need by clicking “Install”</p></li>
-<li><p>Fill in all necessary fields. You can use tips on the right that instruct how to find all necessary credentials.</p></li>
-<li><p>Complete installation and enable the app:</p></li>
-</ol>
-<blockquote>
-<div><img alt="mailchimp" src="../_images/mailchimp.png" />
-</div></blockquote>
-<ol class="arabic simple" start="5">
-<li><p>Test the app by pressing on the “Send sample payload” and then check if you are seeing a test request inside your ESP:</p></li>
-</ol>
-<blockquote>
-<div><img alt="Send same payload" src="../_images/send_same_payload.png" />
-</div></blockquote>
+  <span class="target" id="email-marketing-and-automation-yotpo"></span><section id="yotpo">
+<h1>Yotpo<a class="headerlink" href="#yotpo" title="Link to this heading">¶</a></h1>
+<p>With this integration Talkable synchronizes all people who opt in for Talkable email marketing during sign up. This way you will keep all your emails in one place in an automated way.</p>
 <p><strong>Contact us</strong></p>
 <p>Interested in setting this up? Contact your CSM or get in touch <a class="reference external" rel="nofollow" href="https://lp.talkable.com/lets-talk-referral">here</a>.</p>
-</section>
 </section>
 
 

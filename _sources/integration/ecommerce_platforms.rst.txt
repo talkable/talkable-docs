@@ -13,5 +13,3 @@ Contents:
     ecommerce_platforms/demandware
     ecommerce_platforms/shopify
     ecommerce_platforms/magento
-
-
