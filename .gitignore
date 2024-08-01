@@ -5,3 +5,4 @@ source/_static/test
 .pivotalrc
 .idea
 *.log
+.DS_Store
