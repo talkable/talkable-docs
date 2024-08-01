@@ -41,6 +41,22 @@ This section addresses two key considerations for integrating Talkable using Goo
 
 - A known issue exists where Safari in private mode blocks third-party vendors, including GTM. This can prevent the Talkable integration code from loading entirely, hindering the referral program's operation.
 
+Best Practices for Speed Optimization
+-------------------------------------
+
+1. One sure way to optimize the load speed would be to change the :ref:`Talkable Initialization script <integration/custom/integration_components>` placement on the page. If the Talkable script tag is located at the bottom of the page and doesn’t have the “async” attribute, it would wait for other scripts to load first. Adding the attribute to the script and moving it higher in the body or to the head (even better) will prioritize the load.
+
+2. Make sure the campaign uses optimized image/file sizes and upload lower-resolution versions if it is.
+
+3. There should be only one copy of the Initialization script on the page. Delete all duplicates if there are any.
+
+4. Make sure you don't have JS errors from code executed before Talkable. If there is some critical error, the browser may not be able to process Talkable scripts quickly.
+
+.. note:: 
+   If you use GTM, you can add priority to the tag. The higher the priority, the quicker it gets loaded.
+
+   .. image:: /_static/img/gtm-priority.png
+
 Alternative Approach: Direct Integration
 ----------------------------------------
 
@@ -74,3 +90,12 @@ If you've decided to remove the Talkable integration script from GTM, follow the
 4. Click the "Delete" button to remove the Talkable integration tag.
 
 **Important Note:** After removing the Talkable integration script from GTM, you'll need to implement the :ref:`direct integration approach <integration/custom/integration_components>` documented earlier to ensure Talkable functionality on your website.
+
+.. note::
+   Talkable do not recommend adding a GTM tag to a campaign due to the risks of slow loading, as well as the fact that some purchases in Post Purchase campaigns may not be tracked and the reasons for this are difficult to trace.
+
+Helpful Links
+-------------
+
+- `How to make campaigns load faster? <https://talkable.freshdesk.com/support/solutions/articles/43000682297-how-to-make-campaigns-load-faster->`_
+- `How to integrate with a Tag Manager <https://talkable.freshdesk.com/support/solutions/articles/43000628861-how-to-integrate-with-a-tag-manager>`_
