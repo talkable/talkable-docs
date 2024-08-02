@@ -53,7 +53,7 @@ Best Practices for Speed Optimization
 4. Make sure you don't have JS errors from code executed before Talkable. If there is some critical error, the browser may not be able to process Talkable scripts quickly.
 
 .. note:: 
-   If you use GTM, you can add priority to the tag. The higher the priority, the quicker it gets loaded.
+   If you use GTM, you can add `priority <https://support.google.com/tagmanager/answer/2772421>`_ to the tag. The higher the priority, the quicker it gets loaded.
 
    .. image:: /_static/img/gtm-priority.png
 
