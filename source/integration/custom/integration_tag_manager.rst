@@ -99,3 +99,4 @@ Helpful Links
 
 - `How to make campaigns load faster? <https://talkable.freshdesk.com/support/solutions/articles/43000682297-how-to-make-campaigns-load-faster->`_
 - `How to integrate with a Tag Manager <https://talkable.freshdesk.com/support/solutions/articles/43000628861-how-to-integrate-with-a-tag-manager>`_
+- `GTM tag prioritization <https://support.google.com/tagmanager/answer/2772421>`_
