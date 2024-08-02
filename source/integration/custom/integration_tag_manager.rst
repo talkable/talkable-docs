@@ -92,7 +92,7 @@ If you've decided to remove the Talkable integration script from GTM, follow the
 **Important Note:** After removing the Talkable integration script from GTM, you'll need to implement the :ref:`direct integration approach <integration/custom/integration_components>` documented earlier to ensure Talkable functionality on your website.
 
 .. note::
-   Talkable do not recommend adding a GTM tag to a campaign due to the risks of slow loading, as well as the fact that some purchases in Post Purchase campaigns may not be tracked and the reasons for this are difficult to trace.
+   Talkable doesn't recommend adding integration as tags in Google Tag Manager because of slow loading of campaigns for certain user agents as well as GTM being blocked by some Ad blockers
 
 Helpful Links
 -------------
