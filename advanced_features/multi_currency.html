@@ -146,6 +146,42 @@ the main site currency will be used.</p>
 <p>Talkable allows storing an Advocate’s or Friend’s preferred currency. The selected currency can be accessed in <a rel="nofollow" href="https://github.com/Shopify/liquid" target="_blank">Liquid</a>
 in the <cite>[[ preferred_currency ]]</cite> variable.</p>
 <img alt="../_images/multi_currency_advocate_offer.png" src="../_images/multi_currency_advocate_offer.png" />
+<section id="passing-visitor-s-preferred-currency">
+<h3>Passing visitor’s preferred currency<a class="headerlink" href="#passing-visitor-s-preferred-currency" title="Link to this heading">¶</a></h3>
+<p>If the preferred currency of the visitor is known, it can be passed as customer data to render the referral campaign
+with the currency pre-selected:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;authenticate_customer&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">currency</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;AUD&#39;</span><span class="w"> </span><span class="c1">// Currency should be an international 3-letter code as defined by the ISO 4217 standard</span>
+<span class="p">}]);</span>
+</pre></div>
+</div>
+<p>Currency can also be provided directly in any of the following function calls,
+overriding the <cite>authenticate_customer</cite> data:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><cite>register_affiliate</cite></p></li>
+<li><p><cite>register_purchase</cite></p></li>
+<li><p><cite>register_event</cite></p></li>
+</ul>
+</div></blockquote>
+<p>For example:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span><span class="w"> </span><span class="nx">_purchase_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">purchase</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">order_number</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">subtotal</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">currency_iso_code</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;AUD&#39;</span><span class="w"> </span><span class="c1">// currency of the purchase</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">currency</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;AUD&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// preferred currency of the person, used to show suitable incentive information in the campaign</span>
+<span class="p">};</span>
+<span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;register_purchase&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">_purchase_data</span><span class="p">]);</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Passing <cite>currency</cite> is available in integration version 5.2.1 or higher.</p>
+</div>
+</section>
 </section>
 <section id="currencies-on-dashboard">
 <h2>Currencies on dashboard<a class="headerlink" href="#currencies-on-dashboard" title="Link to this heading">¶</a></h2>

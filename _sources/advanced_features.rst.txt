@@ -86,6 +86,9 @@ each with links to integration details.
    * - :ref:`White Labeling <advanced_features/white_labeling>`
      - Change all visible URLs to your domain instead of talkable.com
 
+   * - :ref:`Multi-Currency <advanced_features/multi_currency>`
+     - Accept multiple currencies and set different rewards per currency
+
 .. container:: hidden
 
   .. toctree::
