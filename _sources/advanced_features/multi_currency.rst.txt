@@ -59,10 +59,10 @@ with the currency pre-selected:
 
 .. code-block:: javascript
 
-  _talkableq.push(['authenticate_customer', {
-    email: '',
-    currency: 'AUD' // Currency should be an ISO-code
-  }]);
+   _talkableq.push(['authenticate_customer', {
+     email: '',
+     currency: 'AUD' // Currency should be an international 3-letter code as defined by the ISO 4217 standard
+   }]);
 
 Currency can also be provided directly in any of the following function calls,
 overriding the `authenticate_customer` data:
@@ -87,7 +87,7 @@ For example:
 
 .. note::
 
-   Passing `currency` is available in integration version 5.1.14 or higher.
+   Passing `currency` is available in integration version 5.2.1 or higher.
 
 Currencies on dashboard
 -----------------------
