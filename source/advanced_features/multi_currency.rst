@@ -87,7 +87,7 @@ For example:
 
 .. note::
 
-   Passing `currency` is available in integration version 5.1.14 or higher.
+   Passing `currency` is available in integration version 5.2.1 or higher.
 
 Currencies on dashboard
 -----------------------
