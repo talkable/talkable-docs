@@ -126,6 +126,20 @@ interpolation and need to use a global namespace.</p></li>
 <li><p>A known issue exists where Safari in private mode blocks third-party vendors, including GTM. This can prevent the Talkable integration code from loading entirely, hindering the referral program’s operation.</p></li>
 </ul>
 </section>
+<section id="best-practices-for-speed-optimization">
+<h2>Best Practices for Speed Optimization<a class="headerlink" href="#best-practices-for-speed-optimization" title="Link to this heading">¶</a></h2>
+<ol class="arabic simple">
+<li><p>One sure way to optimize the load speed would be to change the <a class="reference internal" href="integration_components.html#integration-custom-integration-components"><span class="std std-ref">Talkable Initialization script</span></a> placement on the page. If the Talkable script tag is located at the bottom of the page and doesn’t have the “async” attribute, it would wait for other scripts to load first. Adding the attribute to the script and moving it higher in the body or to the head (even better) will prioritize the load.</p></li>
+<li><p>Make sure the campaign uses optimized image/file sizes and upload lower-resolution versions if it is.</p></li>
+<li><p>There should be only one copy of the Initialization script on the page. Delete all duplicates if there are any.</p></li>
+<li><p>Make sure you don’t have JS errors from code executed before Talkable. If there is some critical error, the browser may not be able to process Talkable scripts quickly.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you use GTM, you can add <a class="reference external" rel="nofollow" href="https://support.google.com/tagmanager/answer/2772421">priority</a> to the tag. The higher the priority, the quicker it gets loaded.</p>
+<img alt="../../_images/gtm-priority.png" src="../../_images/gtm-priority.png" />
+</div>
+</section>
 <section id="alternative-approach-direct-integration">
 <h2>Alternative Approach: Direct Integration<a class="headerlink" href="#alternative-approach-direct-integration" title="Link to this heading">¶</a></h2>
 <p>To mitigate these potential issues, you can integrate Talkable directly into your web pages without using GTM. Here’s a step-by-step guide on <a class="reference internal" href="integration_components.html#integration-custom-integration-components"><span class="std std-ref">Custom Integration</span></a>.</p>
@@ -156,6 +170,18 @@ interpolation and need to use a global namespace.</p></li>
 <li><p>Click the “Delete” button to remove the Talkable integration tag.</p></li>
 </ol>
 <p><strong>Important Note:</strong> After removing the Talkable integration script from GTM, you’ll need to implement the <a class="reference internal" href="integration_components.html#integration-custom-integration-components"><span class="std std-ref">direct integration approach</span></a> documented earlier to ensure Talkable functionality on your website.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Talkable doesn’t recommend adding integration as tags in Google Tag Manager because of slow loading of campaigns for certain user agents as well as GTM being blocked by some Ad blockers</p>
+</div>
+</section>
+<section id="helpful-links">
+<h2>Helpful Links<a class="headerlink" href="#helpful-links" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" rel="nofollow" href="https://talkable.freshdesk.com/support/solutions/articles/43000682297-how-to-make-campaigns-load-faster-">How to make campaigns load faster?</a></p></li>
+<li><p><a class="reference external" rel="nofollow" href="https://talkable.freshdesk.com/support/solutions/articles/43000628861-how-to-integrate-with-a-tag-manager">How to integrate with a Tag Manager</a></p></li>
+<li><p><a class="reference external" rel="nofollow" href="https://support.google.com/tagmanager/answer/2772421">GTM tag prioritization</a></p></li>
+</ul>
 </section>
 </section>
 
