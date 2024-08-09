@@ -124,6 +124,10 @@ So, instead of sending params in plain text, you can send them encrypted.</p>
 <h2>Passing email as a GET parameter to Standalone Campaign<a class="headerlink" href="#passing-email-as-a-get-parameter-to-standalone-campaign" title="Link to this heading">¶</a></h2>
 <p>Also it’s possible to pass encrypted email as a GET parameter (e.g. for CTA links that
 point to standalone invite page). But to do that encrypted email should be <strong>URL-encoded</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It’s recommended to use <a class="reference external" rel="nofollow" href="https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding">Optimal Asymmetric Encryption Padding (OAEP)</a> padding scheme together with RSA encryption.</p>
+</div>
 </section>
 <section id="ruby-example">
 <h2>Ruby Example<a class="headerlink" href="#ruby-example" title="Link to this heading">¶</a></h2>
@@ -138,7 +142,7 @@ point to standalone invite page). But to do that encrypted email should be <stro
 <span class="k">end</span>
 
 <span class="k">def</span><span class="w"> </span><span class="nf">encode_param_for_talkable</span><span class="p">(</span><span class="n">param</span><span class="p">)</span>
-<span class="w">  </span><span class="n">encrypted_param</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">key</span><span class="o">.</span><span class="n">public_encrypt</span><span class="p">(</span><span class="n">param</span><span class="p">)</span>
+<span class="w">  </span><span class="n">encrypted_param</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">key</span><span class="o">.</span><span class="n">public_encrypt</span><span class="p">(</span><span class="n">param</span><span class="p">,</span><span class="w"> </span><span class="no">OpenSSL</span><span class="o">::</span><span class="no">PKey</span><span class="o">::</span><span class="no">RSA</span><span class="o">::</span><span class="no">PKCS1_OAEP_PADDING</span><span class="p">)</span>
 <span class="w">  </span><span class="no">Base64</span><span class="o">.</span><span class="n">strict_encode64</span><span class="p">(</span><span class="n">encrypted_param</span><span class="p">)</span>
 <span class="k">end</span>
 
@@ -150,10 +154,10 @@ point to standalone invite page). But to do that encrypted email should be <stro
 <h2>Java Example<a class="headerlink" href="#java-example" title="Link to this heading">¶</a></h2>
 <p>This example uses <a class="reference external" rel="nofollow" href="https://www.bouncycastle.org">Bouncy Castle library</a> and has been tested on:</p>
 <ul class="simple">
-<li><p>bcprov-jdk15on-156.jar (Provider)</p></li>
-<li><p>bcpkix-jdk15on-156.jar (PKIX/CMS/EAC/PKCS/OCSP/TSP/OPENSSL)</p></li>
+<li><p>bcprov-jdk18on-1.78.1.jar (Provider)</p></li>
+<li><p>bcpkix-jdk18on-1.78.1.jar (PKIX/CMS/EAC/PKCS/OCSP/TSP/OPENSSL)</p></li>
 </ul>
-<p>that can be downloaded from <a class="reference external" rel="nofollow" href="https://www.bouncycastle.org/latest_releases.html">Bouncy Castle Latest Releases</a>.</p>
+<p>that can be downloaded from <a class="reference external" rel="nofollow" href="http://git.bouncycastle.org/latest_releases.html">Bouncy Castle Latest Releases</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Please note that loading a Security Provider and a key into memory takes more time than encrypting.
@@ -185,7 +189,7 @@ So it is recommended to store the key in memory instead of loading it each time 
 <span class="w">        </span><span class="p">}</span>
 
 <span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">initCipher</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">GeneralSecurityException</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">cipher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cipher</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="s">&quot;RSA/ECB/PKCS1Padding&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;BC&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">cipher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Cipher</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="s">&quot;RSA/ECB/OAEPPadding&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;BC&quot;</span><span class="p">);</span>
 <span class="w">            </span><span class="n">cipher</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="n">Cipher</span><span class="p">.</span><span class="na">ENCRYPT_MODE</span><span class="p">,</span><span class="w"> </span><span class="n">publicKey</span><span class="p">);</span>
 <span class="w">        </span><span class="p">}</span>
 
