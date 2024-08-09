@@ -23,6 +23,10 @@ Passing email as a GET parameter to Standalone Campaign
 Also it’s possible to pass encrypted email as a GET parameter (e.g. for CTA links that
 point to standalone invite page). But to do that encrypted email should be **URL-encoded**.
 
+.. note::
+
+   It’s recommended to use `Optimal Asymmetric Encryption Padding (OAEP)`_ padding scheme together with RSA encryption.
+
 Ruby Example
 ------------
 
@@ -39,7 +43,7 @@ Ruby Example
    end
 
    def encode_param_for_talkable(param)
-     encrypted_param = key.public_encrypt(param)
+     encrypted_param = key.public_encrypt(param, OpenSSL::PKey::RSA::PKCS1_OAEP_PADDING)
      Base64.strict_encode64(encrypted_param)
    end
 
@@ -50,8 +54,8 @@ Java Example
 
 This example uses `Bouncy Castle library`_ and has been tested on:
 
-* bcprov-jdk15on-156.jar (Provider)
-* bcpkix-jdk15on-156.jar (PKIX/CMS/EAC/PKCS/OCSP/TSP/OPENSSL)
+* bcprov-jdk18on-1.78.1.jar (Provider)
+* bcpkix-jdk18on-1.78.1.jar (PKIX/CMS/EAC/PKCS/OCSP/TSP/OPENSSL)
 
 that can be downloaded from `Bouncy Castle Latest Releases`_.
 
@@ -88,7 +92,7 @@ that can be downloaded from `Bouncy Castle Latest Releases`_.
            }
 
            private void initCipher() throws GeneralSecurityException {
-               cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding", "BC");
+               cipher = Cipher.getInstance("RSA/ECB/OAEPPadding", "BC");
                cipher.init(Cipher.ENCRYPT_MODE, publicKey);
            }
 
@@ -147,4 +151,5 @@ Please modify the front-end using this pseudo code example:
 
 .. _Talkable Public Key: https://d2jjzw81hqbuqv.cloudfront.net/integration/talkable_public_key.pem
 .. _Bouncy Castle Library: https://www.bouncycastle.org
-.. _Bouncy Castle Latest Releases: https://www.bouncycastle.org/latest_releases.html
+.. _Bouncy Castle Latest Releases: http://git.bouncycastle.org/latest_releases.html
+.. _Optimal Asymmetric Encryption Padding (OAEP): https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding
