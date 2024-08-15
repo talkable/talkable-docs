@@ -1,4 +1,4 @@
-.. _payment_solutions/recharge:
+.. _custom_integration/recharge:
 .. include:: /partials/common.rst
 
 .. meta::

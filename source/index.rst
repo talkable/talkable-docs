@@ -50,15 +50,15 @@ With these apps Talkable synchronizes all people who opt in for Talkable email m
 |   email_marketing_and_automation  |
 +-----------------------------------+
 
-Payment Solutions
-=================
+Custom Integration
+==================
 
-+----------------------+
-| .. toctree::         |
-|   :maxdepth: 2       |
-|                      |
-|   payment_solutions  |
-+----------------------+
++-----------------------+
+| .. toctree::          |
+|   :maxdepth: 2        |
+|                       |
+|   custom_integration  |
++-----------------------+
 
 Talkable Back-end Integration
 =============================
