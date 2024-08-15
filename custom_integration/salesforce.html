@@ -4,9 +4,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta content="With Recharge app Talkable clients allow consumers to apply accumulated rewards towards upcoming subscription orders." name="description" />
+<meta content="Push data to Salesforce and sync status changes from Salesforce to Talkable." name="description" />
 
-    <title>Recharge &#8212; Talkable Documentation</title>
+    <title>Salesforce Integration &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/talkable.css?v=6a6e49b7" />
     <script src="../_static/documentation_options.js?v=f2a433a1"></script>
@@ -60,8 +60,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../email_marketing_and_automation.html">Email Marketing &amp; Automation</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../payment_solutions.html">Payment Solutions</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Recharge</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../custom_integration.html">Custom Integration</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="recharge.html">Recharge</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Salesforce Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="microsoft.html">Microsoft Dynamics CRM Integration</a></li>
 </ul>
 </li>
 </ul>
@@ -86,38 +88,14 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="payment-solutions-recharge"></span><section id="recharge">
-<h1>Recharge<a class="headerlink" href="#recharge" title="Link to this heading">¶</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is a custom integration that can be implemented with extra effort. If you wish to integrate this vendor, please
-contact your Customer Success Manager to apply it to your campaigns.</p>
-</div>
-<p>Recharge allows consumers to apply accumulated rewards towards upcoming subscription orders. Please note this is essentially ‘stacking’ of referral rewards.</p>
-<p>Talkable integration with Recharge enables next use cases:</p>
-<ol class="arabic simple">
-<li><p>Tracking Recharge orders (includes initial, subsequent).</p></li>
-<li><p>Showing the Post Purchase campaign on subscription checkout with the ability to tweak it for Recharge flow specifically</p></li>
-<li><p>Coupon auto-sync.</p></li>
-</ol>
-<blockquote>
-<div><p>Talkable will reward with coupons applicable on both Recharge and Shopify checkouts.</p>
-<p>The offer should be equal for both Recharge and Shopify within the same campaign.</p>
-</div></blockquote>
-<ol class="arabic simple" start="4">
-<li><p>Coupon auto-apply.</p></li>
-</ol>
-<blockquote>
-<div><p>Talkable will try to apply a coupon to the next charge of the customer’s subscription. This coupon will also be sent to the customer’s email in case they want to use it for Shopify instead.</p>
-<p><strong>Version 2</strong>  of the integration also allows for accrued discounts in case the customer refers multiple friends.</p>
-</div></blockquote>
-<ol class="arabic simple" start="5">
-<li><p>If the Gleam widget is enabled, it can behave differently depending on the customer’s actions (if it’s set up according to a non-default flow):</p></li>
-</ol>
-<blockquote>
-<div><p>Once the Advocate receives a reward, they will be shown a Gleam widget that will be showing the coupon code as well as
-a notice that the coupon would be automatically applied to the ongoing subscription if the advocate has the one. The discount is still available for use on regular Shopify flow, but once used it won’t be applied to the subscription of the customer.</p>
-</div></blockquote>
+  <span class="target" id="custom-integration-salesforce"></span><section id="salesforce-integration">
+<h1>Salesforce Integration<a class="headerlink" href="#salesforce-integration" title="Link to this heading">¶</a></h1>
+<p>With this integration, Talkable pushes relevant customer data to Salesforce and synchronizes status changes back to Talkable.</p>
+<p><strong>How it works</strong></p>
+<ul class="simple">
+<li><p><strong>Data Push</strong>: Customer data collected through Talkable is automatically pushed to Salesforce, ensuring your CRM has the latest information.</p></li>
+<li><p><strong>Status Sync</strong>: Any status changes made in Salesforce are synced back to Talkable, keeping your marketing campaigns up to date.</p></li>
+</ul>
 <p><strong>Contact us</strong></p>
 <p>Interested in setting this up? Contact your CSM or get in touch <a class="reference external" rel="nofollow" href="https://lp.talkable.com/lets-talk-referral">here</a>.</p>
 </section>

@@ -14,7 +14,6 @@ Contents:
 .. toctree::
 
    email_marketing_and_automation/klaviyo
-   email_marketing_and_automation/salesforce
    email_marketing_and_automation/yotpo
    email_marketing_and_automation/ometria
    email_marketing_and_automation/oracle_bronto

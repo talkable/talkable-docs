@@ -13,8 +13,7 @@ Overview
 This documentation provides a comprehensive guide on integrating the Google Sign-In app into your Talkable system. By enabling this app, users can sign in using their Google accounts, enhancing security and reducing login friction.
 
 .. note::
-
-In case you don't have the Talkable Google Sign-In app installed, users can still log in via Google in your Campaign, but Talkable credentials will be used for the OAuth flow.
+   In case you don't have the Talkable Google Sign-In app installed, users can still log in via Google in your Campaign, but Talkable credentials will be used for the OAuth flow.
 
 Prerequisites
 -------------
@@ -35,8 +34,8 @@ Integration Steps
 2. **Configure Google Sign-In Settings**
    - Go to the Google Sign-In app settings page.
    - Enter your custom Google Client ID in the provided field.
-     - You can find your Client ID in the Google API Console.
-     - Ensure the Authorized JavaScript origins of your Client ID include Talkable's domain (`www.talkable.com`) and your custom web domain if set up.
+   - You can find your Client ID in the Google API Console.
+   - Ensure the Authorized JavaScript origins of your Client ID include Talkable's domain (`www.talkable.com`) and your custom web domain if set up.
    - Example Client ID format: `123.apps.googleusercontent.com`
    - Save the changes.
 
@@ -60,8 +59,8 @@ Creating a Google API Client ID
    - Click on "Create Credentials" and select "OAuth 2.0 Client ID".
    - Configure the application type as "Web application".
    - Add Authorized JavaScript origins, including:
-     - `https://www.talkable.com`
-     - Your custom domain, if applicable.
+   - `https://www.talkable.com`
+   - Your custom domain, if applicable.
    - Save and copy the generated Client ID.
 
 Error Handling

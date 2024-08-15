@@ -97,7 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../email_marketing_and_automation.html">Email Marketing &amp; Automation</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../payment_solutions.html">Payment Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../custom_integration.html">Custom Integration</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../api_v2.html">API Reference</a></li>
@@ -125,7 +125,10 @@
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
 <p>This documentation provides a comprehensive guide on integrating the Google Sign-In app into your Talkable system. By enabling this app, users can sign in using their Google accounts, enhancing security and reducing login friction.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>In case you don’t have the Talkable Google Sign-In app installed, users can still log in via Google in your Campaign, but Talkable credentials will be used for the OAuth flow.</p>
+</div>
 </section>
 <section id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">¶</a></h2>
@@ -137,25 +140,18 @@
 </section>
 <section id="integration-steps">
 <h2>Integration Steps<a class="headerlink" href="#integration-steps" title="Link to this heading">¶</a></h2>
-<ol class="arabic">
+<ol class="arabic simple">
 <li><p><strong>Install Google Sign-In App from Talkable Apps Store</strong>
 - Navigate to the Talkable Apps Store.
 - Install the Google Sign-In app.
 - You will see an option to enter your custom Google Client ID. If left blank, Talkable’s default Google identifier will be used.</p></li>
 <li><p><strong>Configure Google Sign-In Settings</strong>
 - Go to the Google Sign-In app settings page.
-- Enter your custom Google Client ID in the provided field.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>You can find your Client ID in the Google API Console.</p></li>
-<li><p>Ensure the Authorized JavaScript origins of your Client ID include Talkable’s domain (<cite>www.talkable.com</cite>) and your custom web domain if set up.</p></li>
-</ul>
-</div></blockquote>
-<ul class="simple">
-<li><p>Example Client ID format: <cite>123.apps.googleusercontent.com</cite></p></li>
-<li><p>Save the changes.</p></li>
-</ul>
-</li>
+- Enter your custom Google Client ID in the provided field.
+- You can find your Client ID in the Google API Console.
+- Ensure the Authorized JavaScript origins of your Client ID include Talkable’s domain (<cite>www.talkable.com</cite>) and your custom web domain if set up.
+- Example Client ID format: <cite>123.apps.googleusercontent.com</cite>
+- Save the changes.</p></li>
 <li><p><strong>Activate the Google Sign-In App</strong>
 - Toggle the activation switch to enable the Google Sign-In app.
 - The app is now active, and users can use their Google accounts to sign in.</p></li>
@@ -163,7 +159,7 @@
 </section>
 <section id="creating-a-google-api-client-id">
 <h2>Creating a Google API Client ID<a class="headerlink" href="#creating-a-google-api-client-id" title="Link to this heading">¶</a></h2>
-<ol class="arabic">
+<ol class="arabic simple">
 <li><p><strong>Access Google API Console</strong>
 - Go to the [Google API Console](<a class="reference external" rel="nofollow" href="https://console.developers.google.com/">https://console.developers.google.com/</a>).
 - Create a new project or select an existing project.</p></li>
@@ -174,17 +170,10 @@
 - Go to the Credentials page.
 - Click on “Create Credentials” and select “OAuth 2.0 Client ID”.
 - Configure the application type as “Web application”.
-- Add Authorized JavaScript origins, including:</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><cite>https://www.talkable.com</cite></p></li>
-<li><p>Your custom domain, if applicable.</p></li>
-</ul>
-</div></blockquote>
-<ul class="simple">
-<li><p>Save and copy the generated Client ID.</p></li>
-</ul>
-</li>
+- Add Authorized JavaScript origins, including:
+- <cite>https://www.talkable.com</cite>
+- Your custom domain, if applicable.
+- Save and copy the generated Client ID.</p></li>
 </ol>
 </section>
 <section id="error-handling">

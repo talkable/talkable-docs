@@ -55,14 +55,14 @@ With these apps Talkable synchronizes all people who opt in for Talkable email m
 
 .. raw:: html
 
-  <h2>Payment Solutions</h2>
+  <h2>Custom Integration</h2>
 
-+----------------------+
-| .. toctree::         |
-|   :maxdepth: 2       |
-|                      |
-|   payment_solutions  |
-+----------------------+
++-----------------------+
+| .. toctree::          |
+|   :maxdepth: 2        |
+|                       |
+|   custom_integration  |
++-----------------------+
 
 .. raw:: html
 
