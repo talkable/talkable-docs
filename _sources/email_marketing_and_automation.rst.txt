@@ -14,9 +14,12 @@ Contents:
 .. toctree::
 
    email_marketing_and_automation/klaviyo
+   email_marketing_and_automation/yotpo
+   email_marketing_and_automation/ometria
    email_marketing_and_automation/oracle_bronto
    email_marketing_and_automation/mailchimp
    email_marketing_and_automation/sailthru
+   email_marketing_and_automation/emarsys
    email_marketing_and_automation/hubspot
    email_marketing_and_automation/attentive
    email_marketing_and_automation/custom_app
