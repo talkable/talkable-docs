@@ -81,6 +81,15 @@ The optimal approach depends on your specific priorities:
 - Thoroughly test both approaches (GTM and direct integration) to ensure the Talkable referral program functions as expected in all browsers and scenarios.
 - If you encounter further issues, check Talkable's support resources or contact support team for assistance.
 
+Verifying success
+-----------------
+
+1. Open Talkable admin, open or create Floating widget campaign. Scroll down to the Placements section and click on the eye button. It will open up your site with the Talkable campaign shown in test mode.
+2. Submit purchase through your site
+3. Open Talkable admin, go to Reports -> Purchases and find your purchase in the list
+4. Visit the Standalone page you created for the site, it should be showing up withing 1-3s
+
+
 Removing the Talkable Integration Script from GTM
 -------------------------------------------------
 
