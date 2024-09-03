@@ -54,8 +54,8 @@ Java Example
 
 This example uses `Bouncy Castle library`_ and has been tested on:
 
-* bcprov-jdk15on-156.jar (Provider)
-* bcpkix-jdk15on-156.jar (PKIX/CMS/EAC/PKCS/OCSP/TSP/OPENSSL)
+* bcprov-jdk18on-1.78.1.jar (Provider)
+* bcpkix-jdk18on-1.78.1.jar (PKIX/CMS/EAC/PKCS/OCSP/TSP/OPENSSL)
 
 that can be downloaded from `Bouncy Castle Latest Releases`_.
 
@@ -151,4 +151,5 @@ Please modify the front-end using this pseudo code example:
 
 .. _Talkable Public Key: https://d2jjzw81hqbuqv.cloudfront.net/integration/talkable_public_key.pem
 .. _Bouncy Castle Library: https://www.bouncycastle.org
-.. _Bouncy Castle Latest Releases: https://www.bouncycastle.org/latest_releases.html
+.. _Bouncy Castle Latest Releases: http://git.bouncycastle.org/latest_releases.html
+.. _Optimal Asymmetric Encryption Padding (OAEP): https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding
