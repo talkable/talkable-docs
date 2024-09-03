@@ -52,7 +52,7 @@ Best Practices for Speed Optimization
 
 4. Make sure you don't have JS errors from code executed before Talkable. If there is some critical error, the browser may not be able to process Talkable scripts quickly.
 
-5. Implementing a custom domain for your integration won't directly increase its speed, but it will significantly reduce issues related to incognito mode.
+5. Implementing a custom domain for your integration won't directly increase its speed, but it will significantly reduce issues related to incognito mode and security policies blocking for third-party content.
 
 .. note:: 
    If you use GTM, you can add `priority <https://support.google.com/tagmanager/answer/2772421>`_ to the tag. The higher the priority, the quicker it gets loaded.
@@ -85,10 +85,9 @@ Verifying success
 -----------------
 
 1. Open Talkable admin, open or create Floating widget campaign. Scroll down to the Placements section and click on the eye button. It will open up your site with the Talkable campaign shown in test mode.
-2. Submit purchase through your site
-3. Open Talkable admin, go to Reports -> Purchases and find your purchase in the list
-4. Visit the Standalone page you created for the site, it should be showing up withing 1-3s
-
+2. Submit purchase through your site.
+3. Open Talkable admin, go to Reports → Purchases and find your purchase in the list.
+4. Visit the Standalone page you created for the site, it should be showing up within 1-3 seconds.
 
 Removing the Talkable Integration Script from GTM
 -------------------------------------------------
