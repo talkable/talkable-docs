@@ -135,7 +135,6 @@ interpolation and need to use a global namespace.</p></li>
 <section id="best-practices-for-speed-optimization">
 <h2>Best Practices for Speed Optimization<a class="headerlink" href="#best-practices-for-speed-optimization" title="Link to this heading">¶</a></h2>
 <ol class="arabic simple">
-<li><p>One sure way to optimize the load speed would be to change the <a class="reference internal" href="integration_components.html#integration-custom-integration-components"><span class="std std-ref">Talkable Initialization script</span></a> placement on the page. If the Talkable script tag is located at the bottom of the page, it would wait for other scripts to load first. Adding the attribute to the script and moving it higher in the body or to the head (even better) will prioritize the load.</p></li>
 <li><p>Make sure the campaign uses optimized image/file sizes and upload lower-resolution versions if it is.</p></li>
 <li><p>There should be only one copy of the Initialization script on the page. Delete all duplicates if there are any.</p></li>
 <li><p>Make sure you don’t have JS errors from code executed before Talkable. If there is some critical error, the browser may not be able to process Talkable scripts quickly.</p></li>
