@@ -44,13 +44,13 @@ This section addresses two key considerations for integrating Talkable using Goo
 Best Practices for Speed Optimization
 -------------------------------------
 
-1. One sure way to optimize the load speed would be to change the :ref:`Talkable Initialization script <integration/custom/integration_components>` placement on the page. If the Talkable script tag is located at the bottom of the page and doesn’t have the “async” attribute, it would wait for other scripts to load first. Adding the attribute to the script and moving it higher in the body or to the head (even better) will prioritize the load.
+1. Make sure the campaign uses optimized image/file sizes and upload lower-resolution versions if it is.
 
-2. Make sure the campaign uses optimized image/file sizes and upload lower-resolution versions if it is.
+2. There should be only one copy of the Initialization script on the page. Delete all duplicates if there are any.
 
-3. There should be only one copy of the Initialization script on the page. Delete all duplicates if there are any.
+3. Make sure you don't have JS errors from code executed before Talkable. If there is some critical error, the browser may not be able to process Talkable scripts quickly.
 
-4. Make sure you don't have JS errors from code executed before Talkable. If there is some critical error, the browser may not be able to process Talkable scripts quickly.
+4. Implementing a custom domain for your integration won't directly increase its speed, but it will significantly reduce issues related to incognito mode and security policies blocking for third-party content.
 
 .. note:: 
    If you use GTM, you can add `priority <https://support.google.com/tagmanager/answer/2772421>`_ to the tag. The higher the priority, the quicker it gets loaded.
@@ -78,6 +78,14 @@ The optimal approach depends on your specific priorities:
 
 - Thoroughly test both approaches (GTM and direct integration) to ensure the Talkable referral program functions as expected in all browsers and scenarios.
 - If you encounter further issues, check Talkable's support resources or contact support team for assistance.
+
+Verifying success
+-----------------
+
+1. Open Talkable admin, open or create Floating widget campaign. Scroll down to the Placements section and click on the eye button. It will open up your site with the Talkable campaign shown in test mode.
+2. Submit purchase through your site.
+3. Open Talkable admin, go to Reports → Purchases and find your purchase in the list.
+4. Visit the Standalone page you created for the site, it should be showing up within 1-3 seconds.
 
 Removing the Talkable Integration Script from GTM
 -------------------------------------------------
