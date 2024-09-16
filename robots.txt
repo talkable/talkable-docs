@@ -1,3 +1,2 @@
 User-agent: *
-
-Sitemap: https://docs.talkable.com/sitemap.xml
+Disallow: /
