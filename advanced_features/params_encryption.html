@@ -62,6 +62,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#passing-email-as-a-get-parameter-to-standalone-campaign">Passing email as a GET parameter to Standalone Campaign</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ruby-example">Ruby Example</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#java-example">Java Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#node-js-example">Node JS example</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#front-end-part">Front-end Part</a></li>
 </ul>
 </li>
@@ -235,6 +236,32 @@ So it is recommended to store the key in memory instead of loading it each time 
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">encryptParam</span><span class="p">(</span><span class="n">email</span><span class="p">));</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="node-js-example">
+<h2>Node JS example<a class="headerlink" href="#node-js-example" title="Link to this heading">¶</a></h2>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">fs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">crypto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;crypto&#39;</span><span class="p">);</span>
+
+<span class="c1">// Read the public key from file</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">publicKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">&#39;talkable_your_site_slug_public_key.pem&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;utf8&#39;</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">encryptData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">encryptedData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">crypto</span><span class="p">.</span><span class="nx">publicEncrypt</span><span class="p">(</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">key</span><span class="o">:</span><span class="w"> </span><span class="nx">publicKey</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">padding</span><span class="o">:</span><span class="w"> </span><span class="nx">crypto</span><span class="p">.</span><span class="nx">constants</span><span class="p">.</span><span class="nx">RSA_PKCS1_OAEP_PADDING</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">oaepHash</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;sha1&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">Buffer</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">encryptedData</span><span class="p">.</span><span class="nx">toString</span><span class="p">(</span><span class="s1">&#39;base64&#39;</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="c1">// Example usage</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">encryptedEmail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">encryptData</span><span class="p">(</span><span class="s1">&#39;email_to_encrypt@example.com&#39;</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Encrypted email:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">encryptedEmail</span><span class="p">);</span>
 </pre></div>
 </div>
 </section>

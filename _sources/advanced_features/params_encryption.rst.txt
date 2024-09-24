@@ -130,6 +130,33 @@ that can be downloaded from `Bouncy Castle Latest Releases`_.
        }
    }
 
+Node JS example
+---------------
+
+.. code-block:: js
+
+  const fs = require('fs');
+  const crypto = require('crypto');
+
+  // Read the public key from file
+  const publicKey = fs.readFileSync('talkable_your_site_slug_public_key.pem', 'utf8');
+
+  const encryptData = (data) => {
+    const encryptedData = crypto.publicEncrypt(
+      {
+        key: publicKey,
+        padding: crypto.constants.RSA_PKCS1_OAEP_PADDING,
+        oaepHash: 'sha1',
+      },
+      Buffer.from(data)
+    );
+    return encryptedData.toString('base64');
+  };
+
+  // Example usage
+  const encryptedEmail = encryptData('email_to_encrypt@example.com');
+  console.log('Encrypted email:', encryptedEmail);
+
 Front-end Part
 --------------
 
