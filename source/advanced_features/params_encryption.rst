@@ -125,37 +125,37 @@ that can be downloaded from `Bouncy Castle Latest Releases`_.
        }
 
        public static void main(String[] args) throws Exception {
-           String email = "encrypted_email@example.com";
+           String email = "email_to_encrypt@example.com";
            System.out.println(encryptParam(email));
        }
    }
 
-Node JS example
+Node.js example
 ---------------
 
 .. code-block:: js
 
-  const fs = require('fs');
-  const crypto = require('crypto');
+   const fs = require('fs');
+   const crypto = require('crypto');
 
-  // Read the public key from file
-  const publicKey = fs.readFileSync('talkable_your_site_slug_public_key.pem', 'utf8');
+   // Read the public key from file
+   const publicKey = fs.readFileSync('talkable_your_site_slug_public_key.pem', 'utf8');
 
-  const encryptData = (data) => {
-    const encryptedData = crypto.publicEncrypt(
-      {
-        key: publicKey,
-        padding: crypto.constants.RSA_PKCS1_OAEP_PADDING,
-        oaepHash: 'sha1',
-      },
-      Buffer.from(data)
-    );
-    return encryptedData.toString('base64');
-  };
+   const encryptData = (data) => {
+     const encryptedData = crypto.publicEncrypt(
+       {
+         key: publicKey,
+         padding: crypto.constants.RSA_PKCS1_OAEP_PADDING,
+         oaepHash: 'sha1',
+       },
+       Buffer.from(data)
+     );
+     return encryptedData.toString('base64');
+   };
 
-  // Example usage
-  const encryptedEmail = encryptData('email_to_encrypt@example.com');
-  console.log('Encrypted email:', encryptedEmail);
+   // Example usage
+   const encryptedEmail = encryptData('email_to_encrypt@example.com');
+   console.log('Encrypted email:', encryptedEmail);
 
 Front-end Part
 --------------
