@@ -130,7 +130,7 @@ that can be downloaded from `Bouncy Castle Latest Releases`_.
        }
    }
 
-Node.js example
+Node.js Example
 ---------------
 
 .. code-block:: js
