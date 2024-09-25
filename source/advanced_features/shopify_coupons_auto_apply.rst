@@ -1,7 +1,7 @@
 .. _advanced_features/shopify_coupons_auto_apply:
 
 .. meta::
-  :description: Talkable supports coupon auto-sync for Shopify. This feature allows to avoid manual coupon uploads and/or Shopify Price Rule management.
+  :description: Talkable supports coupon auto-apply for Shopify. This feature allows to avoid manual coupon uploads and/or Shopify Price Rule management.
 
 Shopify coupon auto-apply
 ========================
