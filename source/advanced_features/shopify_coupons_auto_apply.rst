@@ -4,7 +4,7 @@
   :description: Talkable supports coupon auto-apply for Shopify. This feature allows to avoid manual coupon uploads and/or Shopify Price Rule management.
 
 Shopify coupon auto-apply
-========================
+=========================
 
 Talkable supports coupon auto-apply for Shopify. This guide provides clear and easy-to-follow documentation on two methods of automatically applying Shopify coupons.
 
