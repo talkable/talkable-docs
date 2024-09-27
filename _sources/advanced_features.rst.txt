@@ -118,4 +118,5 @@ each with links to integration details.
     advanced_features/single_sign_on
     advanced_features/multi_currency
     advanced_features/sheerid
+    advanced_features/tremendous
     advanced_features/google_login

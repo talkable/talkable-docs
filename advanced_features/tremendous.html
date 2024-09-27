@@ -4,15 +4,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta content="Talkable allows overriding some of the parameters right through URL query string." name="description" />
+<meta content="Reward advocates with gift cards provided by Tremendous." name="description" />
 
-    <title>Using URL Parameters &#8212; Talkable Documentation</title>
+    <title>Tremendous Integration &#8212; Talkable Documentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/talkable.css?v=6a6e49b7" />
     <script src="../_static/documentation_options.js?v=f2a433a1"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <link rel="canonical" href="https://docs.talkable.com/advanced_features/url_parameters.html" /><!-- Google Tag Manager -->
+    <link rel="canonical" href="https://docs.talkable.com/advanced_features/tremendous.html" /><!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -68,15 +68,13 @@
 <li class="toctree-l2"><a class="reference internal" href="segments.html">Segments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="subscribing_to_events.html">Subscribing To Iframe Events</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reg_ex.html">Setting up Campaign Placement criteria</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Using URL Parameters</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="url_parameters.html">Using URL Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utm_tags.html">UTM Tags</a></li>
 <li class="toctree-l2"><a class="reference internal" href="white_labeling.html">White-labeling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="single_sign_on.html">Single Sign-On (SSO)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="multi_currency.html">Multi-currency</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sheerid.html">SheerID Integration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tremendous.html">Tremendous Integration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Tremendous Integration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="google_login.html">Google Login</a></li>
 </ul>
 </li>
@@ -115,31 +113,44 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <span class="target" id="advanced-features-url-parameters"></span><section id="using-url-parameters">
-<h1>Using URL Parameters<a class="headerlink" href="#using-url-parameters" title="Link to this heading">¶</a></h1>
-<p>Talkable allows overriding some of the parameters right through URL query string:</p>
-<ul class="simple">
-<li><p>email - <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> email address</p></li>
-<li><p>first_name - <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> first name</p></li>
-<li><p>last_name - <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> last name</p></li>
-<li><p>traffic_source - <a class="reference internal" href="segments.html#advanced-features-segments"><span class="std std-ref">Traffic Source</span></a> value</p></li>
-<li><p>campaign_tags - overrides campaign tag to be loaded</p></li>
-</ul>
-<p>Below is an example of <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> authorization through URL. Given the URL of
-the page where Talkable campaign is integrated: <a class="reference external" rel="nofollow" href="http://example.com/share">http://example.com/share</a>:</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>http://example.com/share?email=advocate%40example.com
-</pre></div>
-</div>
-<p>Location parameters have higher priority than explicit parameters passed in the
-integration.</p>
+  <span class="target" id="advanced-features-tremendous"></span><section id="tremendous-integration">
+<h1>Tremendous Integration<a class="headerlink" href="#tremendous-integration" title="Link to this heading">¶</a></h1>
+<p>Reward advocates with gift cards from various retailers provided by Tremendous.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Don’t forget to escape URL parameters with URI parameter encoder.</p>
+<p>The Tremendous integration is an enterprise feature.
+To become an enterprise client, please <a class="reference external" href="mailto:support&#37;&#52;&#48;talkable&#46;com">contact Talkable team</a>.</p>
 </div>
-<div class="hidden docutils container">
-<div class="toctree-wrapper compound">
+<p>Tremendous integration consists of several parts:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>A campaign in Tremendous with the selected rewards for customers.</p></li>
+</ol>
+<ol class="arabic simple" start="3">
+<li><p>A “Tremendous” application installed from Talkable App Store. This application is responsible
+for storing API tokens so that Talkable can request gift cards from Tremendous and insert the generated
+claim links in the referral campaign theme.</p></li>
+</ol>
+<ol class="arabic" start="2">
+<li><p>A referral campaign in Talkable having the following attributes:</p>
+<ul>
+<li><p>An Advocate Referral Incentive with “Tremendous” reward type</p>
+<a class="reference internal image-reference" href="_static/img/advanced_features/tremendous_incentive.png"><img alt="Creating a Tremendous Advocate Referral incentive" src="_static/img/advanced_features/tremendous_incentive.png" style="width: 400px;" />
+</a>
+</li>
+<li><p>A <a class="reference internal" href="../campaigns/editor/filters.html#tremendous-filter"><span class="std std-ref">“tremendous” Liquid filter</span></a> used in Reward Paid Email Page.
+The filter generates a claim link within the specified Tremendous campaign.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="cm">&lt;!-- An example of the claim link leading to Tremendous --&gt;</span>
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ &#39;KBBYF5Q64BL4&#39; | tremendous }}&quot;</span> <span class="na">target</span><span class="o">=</span><span class="s">&quot;_blank&quot;</span> <span class="na">title</span><span class="o">=</span><span class="s">&quot;{{ cta_text }}&quot;</span><span class="p">&gt;</span>
+  {{ cta_text }}
+<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</pre></div>
 </div>
-</div>
+</li>
+</ul>
+</li>
+</ol>
+</div></blockquote>
 </section>
 
 
