@@ -9,7 +9,7 @@ Shopify coupon auto-apply
 Talkable supports coupon auto-apply for Shopify. This guide provides clear and easy-to-follow documentation on two methods of automatically applying Shopify coupons.
 
 Method 1: Coupon application via destination URL
------------
+------------------------------------------------
 
 This method involves including the discount code in the URL. This way, when a customer clicks the link, the coupon is automatically applied to their cart.
 
@@ -77,7 +77,7 @@ This method involves including the discount code in the URL. This way, when a cu
 
 
 Method 2: Coupon application via client-side library integration
------------
+----------------------------------------------------------------
 
 The second method involves updating the per-client JS library with a code snippet that listens for a form submission event and appends the discount code to the form data.
 
