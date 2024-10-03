@@ -9,17 +9,12 @@ Tremendous Integration
 
 Reward advocates with gift cards from various retailers provided by Tremendous.
 
-.. note::
-
-   The Tremendous integration is an enterprise feature.
-   To become an enterprise client, please `contact Talkable team <mailto:support@talkable.com>`_.
-
 Tremendous integration consists of several parts:
 
   1. A campaign in Tremendous with the selected rewards for customers.
 
   3. A "Tremendous" application installed from Talkable App Store. This application is responsible
-     for storing API tokens so that Talkable can request gift cards from Tremendous and insert the generated
+     for storing API tokens, enabling Talkable to request gift cards from Tremendous and insert the generated
      claim links in the referral campaign theme.
 
   2. A referral campaign in Talkable having the following attributes:
@@ -40,3 +35,6 @@ Tremendous integration consists of several parts:
             {{ cta_text }}
           </a>
 
+**Contact us**
+
+Interested in setting this up? Contact your CSM or get in touch `here <https://lp.talkable.com/lets-talk-referral>`_.
