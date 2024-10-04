@@ -805,6 +805,99 @@ Returns ``some string``
 
 |hr|
 
+new\_array
+..........
+
+Creates a new array. If arguments are provided, they become the elements of the array.
+
+Liquid
+
+.. code-block:: liquid
+
+   {% assign my_array = "" | new_array: "element1", "element2" %}
+   {% assign empty_array = "" | new_array %}
+
+   Array: {{ my_array | json }}
+   Empty array: {{ empty_array | json }}
+
+Rendered Liquid
+
+.. code-block:: text
+
+   Array: ["element1","element2"]
+   Empty array: []
+
+|hr|
+
+append\_to\_array
+.................
+
+Appends elements to an existing array.
+
+Liquid
+
+.. code-block:: liquid
+
+   {% assign my_array = "" | new_array %}
+   {% assign my_array = my_array | append_to_array: "element1", "element2" %}
+
+   Array: {{ my_array | json }}
+
+Rendered Liquid
+
+.. code-block:: text
+
+   Array: ["element1","element2"]
+
+|hr|
+
+new\_hash
+.........
+
+Creates a new hash. If a hash is provided as an argument, it returns that hash.
+
+Liquid
+
+.. code-block:: liquid
+
+   {% assign my_hash = "" | new_hash: key: "value", key2: 42 %}
+   {% assign empty_hash = "" | new_hash %}
+
+   Hash: {{ my_hash | json }}
+   Empty hash: {{ empty_hash | json }}
+
+Rendered Liquid
+
+.. code-block:: text
+
+   Hash: {"key":"value","key2":42}
+   Empty hash: {}
+
+|hr|
+
+assign\_key
+...........
+
+Assigns a key-value pair to an existing hash. If the key already exists, its value is updated.
+
+Liquid
+
+.. code-block:: liquid
+
+   {% assign my_hash = "" | new_hash: key: "value", key2: 42 %}
+   {% assign my_hash = my_hash | assign_key: "key2", "value2" %}
+   {% assign my_hash = my_hash | assign_key: "key3", "value3" %}
+
+   Hash: {{ my_hash | json }}
+
+Rendered Liquid
+
+.. code-block:: text
+
+   Hash: {"key":"value","key2":"value2","key3":"value3"}
+
+|hr|
+
 values
 ......
 
