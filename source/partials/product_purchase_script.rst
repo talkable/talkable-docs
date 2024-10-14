@@ -5,16 +5,13 @@
     window._talkableq = window._talkableq || [];
     var _talkable_purchase_items = [];
 
-    // Start for loop
+    // Start for loop - iterate through cart and push details for each line item
     _talkable_purchase_items.push({
-      product_id: 'sku1', // Required — Item Product ID
-      price: '199.00', // Required — Item Unit Price
-      quantity: '1', // Required — Item Quantity
-      title: 'Awesome Product', // Optional — Name of product
-      url: 'http://www.store.com/product1', // Optional — URL for product
-      image_url: 'http://www.store.com/product1/image.jpg' // Optional — URL for product image
-    });
-    // End for loop
+      product_id: '', // Item Product ID. Example: 'sku0001'
+      price: '', // Item Unit Price. Example: '199.00'
+      quantity: '', // Item Quantity. Example: '1'
+      title: '' // Name of a product. Example: 'Product Name'
+    });  // End for loop
 
     var _talkable_data = {
       purchase: {
