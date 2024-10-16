@@ -45,10 +45,9 @@ Your Talkable **Webhook security key** can be found in the Webhook set up page b
 
   Compare the signature from the header with your calculated signature.
 
-Examples:
-.........
+**Examples:**
 
-**Ruby:**
+*Ruby:*
 
 .. code-block:: ruby
 
@@ -63,7 +62,7 @@ Examples:
       ActiveSupport::SecurityUtils.secure_compare(calculated_signature, header_signature)
     end
 
-**JavaScript:**
+*JavaScript:*
 
 .. code-block:: javascript
 
