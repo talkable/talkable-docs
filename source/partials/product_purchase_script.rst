@@ -7,12 +7,12 @@
 
     // Start for loop
     _talkable_purchase_items.push({
-      product_id: 'sku1', // Required — Item Product ID. Example: 'sku0001'
-      price: '199.00', // Required — Item Unit Price. Example: '199.00'
-      quantity: '1', // Required — Item Quantity. Example: '1'
-      title: 'Awesome Product', // Optional — Name of product. Example: 'Product Name'
-      url: 'http://www.store.com/product1', // Optional — URL for product. Example: 'http://www.store.com/product1'
-      image_url: 'http://www.store.com/product1/image.jpg' // Optional — URL for product image. Example: 'http://www.store.com/product1/image.jpg'
+      product_id: '', // Required — Item Product ID. Example: 'sku0001'
+      price: '', // Required — Item Unit Price. Example: '199.00'
+      quantity: '', // Required — Item Quantity. Example: '1'
+      title: '', // Optional — Name of product. Example: 'Product Name'
+      url: '', // Optional — URL for product. Example: 'http://www.store.com/product1'
+      image_url: '' // Optional — URL for product image. Example: 'http://www.store.com/product1/image.jpg'
     });
     // End for loop
 
