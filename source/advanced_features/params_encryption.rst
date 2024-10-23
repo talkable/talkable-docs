@@ -161,7 +161,7 @@ Front-end Part
 --------------
 
 .. important::
-   Do not use params encryption for :ref:`API Reference <api_v2>`.
+   Do not use params encryption for :ref:`Talkable backend API <api_v2/origins>`.
 
    Params encryption is only for JS integration.
 
