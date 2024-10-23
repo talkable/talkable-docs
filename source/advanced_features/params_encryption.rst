@@ -15,7 +15,7 @@ So, instead of sending params in plain text, you can send them encrypted.
 Site public encryption key
 --------------------------
 
-To get your unique site public encryption key, go to **All Site Settings → Integrations → API integration → Public encryption key for email addresses**.
+To get your unique site public encryption key, go to **All Site Settings → Integrations → JS integration → Public encryption key**.
 
 Passing email as a GET parameter to Standalone Campaign
 -------------------------------------------------------
@@ -159,6 +159,11 @@ Node.js Example
 
 Front-end Part
 --------------
+
+.. important::
+   Do not use params encryption for :ref:`API Reference <api_v2>`.
+
+   Params encryption is only for JS integration.
 
 Please modify the front-end using this pseudo code example:
 
