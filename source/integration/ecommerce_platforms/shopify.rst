@@ -40,7 +40,8 @@ Automatic integration
 
      If you are managing the Shopify theme code using a version control system (e.g. git),
      make sure to pull the changes to the theme made by the automatic integration to avoid
-     resetting them with a commit.
+     resetting them with a commit. The theme updates are described in the
+     :ref:`Manual integration instructions<integration/ecommerce_platforms/shopify/manual_integration>`.
 
 .. _integration/ecommerce_platforms/shopify/manual_integration:
 
