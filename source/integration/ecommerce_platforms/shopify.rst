@@ -36,6 +36,12 @@ Automatic integration
      To check how Standalone Campaign looks visit */pages/share* or */pages/invite* links of your store.
      You can edit these links in Administrative panel of your store.
 
+  .. important::
+
+     If you are managing the Shopify theme code using a version control system (e.g. git),
+     make sure to pull the changes to the theme made by the automatic integration to avoid
+     resetting them with a commit.
+
 .. _integration/ecommerce_platforms/shopify/manual_integration:
 
 Manual integration
@@ -198,6 +204,11 @@ please follow the instructions below.
 
 11. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`.
 
+.. important::
+
+   If you are managing the Shopify theme code using a version control system (e.g. git),
+   make sure to pull the changes to the theme to avoid resetting them with a commit.
+
 For Shopify vintage themes
 ..........................
 
@@ -306,6 +317,11 @@ please follow the instructions below.
 
 11. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`.
 
+.. important::
+
+   If you are managing the Shopify theme code using a version control system (e.g. git),
+   make sure to pull the changes to the theme to avoid resetting them with a commit.
+
 .. |example_link| raw:: html
 
   <span class="a">https://123test.myshopify.com</span>
@@ -411,6 +427,11 @@ you need to do the following:
 
           .. important::
              If your main section is disabled, remove the row that does it.
+
+.. important::
+
+   If you are managing the Shopify theme code using a version control system (e.g. git),
+   make sure to pull the changes to the theme to avoid resetting them with a commit.
 
 **Contact us**
 
