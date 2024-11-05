@@ -108,6 +108,7 @@ each with links to integration details.
     advanced_features/params_encryption
     advanced_features/events
     advanced_features/file_encryption
+    advanced_features/facebook_login_share
     advanced_features/report_password_protection
     advanced_features/product_items
     advanced_features/passing_custom_data
@@ -116,6 +117,7 @@ each with links to integration details.
     advanced_features/segments
     advanced_features/subscribing_to_events
     advanced_features/reg_ex
+    advanced_features/rybbon
     advanced_features/url_parameters
     advanced_features/utm_tags
     advanced_features/white_labeling
