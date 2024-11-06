@@ -73,5 +73,4 @@ Additional Resources
 - Facebook Developer Console: https://developers.facebook.com/
 - Facebook Login Documentation: https://developers.facebook.com/docs/facebook-login
 
-.. note::
-   For detailed examples and advanced usage, refer to the official Facebook documentation.
+.. note:: For detailed examples and advanced usage, refer to the official Facebook documentation.
