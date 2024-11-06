@@ -1078,19 +1078,20 @@ Makes a claim request within the scope of the given campaign and returns a gift 
 Requires Rybbon app to be installed and enabled in order to work.
 
 .. code-block:: liquid
+
    {{ "a9a3472f4ea858758e0cd686de8408e2" | rybbon }}
+
 Returns ``https://www.rybbon.net/redeem.php?claimcode=ee645de47765bdbede751c8c6f08a619``
 
 Accepts custom amount of reward for Rybbon campaigns with variable denomination. The minimum amount conforms to each specific Rybbon gift card restrictions. The maximum amount is 50.
 
 .. code-block:: liquid
+
    {{ "a9a3472f4ea858758e0cd686de8408e2" | rybbon: amount: 13.5 }}
 
 Find more details about the integration here: :ref:`Rybbon <advanced_features/rybbon>`
 
 |hr|
-
-.. _tremendous_filter:
 
 tremendous
 ..........
@@ -1101,7 +1102,9 @@ Requires Tremendous app to be installed and enabled in order to work.
 Implies that there is only one funding source in the Tremendous account.
 
 .. code-block:: liquid
+
    {{ "DEM8ULSSATK0" | tremendous }}
+
 Returns ``https://www.tremendous.com/rewards/payout/reward123``
 
 Find more details about the integration here: :ref:`Tremendous <advanced_features/tremendous>`
