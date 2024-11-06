@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Synchronize emails Talkable collected with Listrak integration.
+   :description: Synchronize Talkable collected emails with Listrak integration.
 
 Listrak
 =======

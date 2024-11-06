@@ -7,24 +7,7 @@
 Validity
 ========
 
-With this integration, Talkable performs additional validation on email addresses using the Validity service, helping to maintain accurate and clean customer data.
-
-**Endpoint for Validity Integration:**
-|br|
-`POST <https://esp.talkable.com/validity>`_
-
-**Params configuration for Validity integration**
-
-.. code-block:: javascript
-
-   const params = {
-     email: "person-6ad487a3a0ccc1e7@talkable-sample.com", // required
-     api_key: "6ad487a3a0ccc1e76ad487a3a0ccc1e7" // required
-   };
-
-Support
--------
-- Custom app (click reward verification) - Returns true if email is valid
+With this integration, Talkable performs additional validation on email addresses using the Validity service. This helps maintain accurate and clean customer data and adds an extra layer of security to your Campaign.
 
 **Contact us**
 

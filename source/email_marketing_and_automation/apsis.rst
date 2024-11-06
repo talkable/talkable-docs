@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Synchronize emails Talkable collected with Apsis integration.
+   :description: Synchronize Talkable collected emails with Apsis integration.
 
 Apsis
 =====

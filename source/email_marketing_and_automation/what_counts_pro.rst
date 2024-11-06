@@ -2,33 +2,12 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Synchronize emails Talkable collected with What Counts PRO integration.
+   :description: Synchronize Talkable collected emails with WhatCounts integration.
 
-What Counts PRO
-===============
+WhatCounts
+==========
 
 With this integration, Talkable synchronizes all people who opt in for Talkable email marketing during sign up. This way, you will keep all your emails in one place in an automated way.
-
-**Endpoint for What Counts PRO Integration:**
-|br|
-`<https://esp.talkable.com/what-counts>`_
-
-**Extras configuration for What Counts PRO integration**
-
-.. code-block:: javascript
-
-   const extras = {
-     username: "realm",
-     password: "lad2e30",
-     list_id: "245",
-     fields: {} // optional, custom fields, need to be pre-created in the ESP first
-   };
-
-Webhook Support
----------------
-- Offer signup
-- Claim signup
-- Unsubscribe
 
 **Contact us**
 

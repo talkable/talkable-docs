@@ -9,26 +9,6 @@ Braze
 
 With this integration, Talkable syncs email opt-ins to Braze, enabling efficient customer data management for targeted email marketing campaigns.
 
-**Endpoint for Braze Integration:**
-|br|
-`POST <https://esp.talkable.com/braze>`_
-
-**Params configuration for Braze integration**
-
-.. code-block:: javascript
-
-   const params = {
-     email: "person-6ad487a3a0ccc1e7@talkable-sample.com", // required
-     email_optin: "true", // required
-     api_key: "ba32321156cab8343a752543f30905", // required
-     alias: "referral", // specific tag to identify users
-     endpoint: "https://rest.iad-05.braze.com/" // client's endpoint
-   };
-
-Support
--------
-- Apps (sync opt-ins)
-
 **Contact us**
 
 Interested in setting this up? Contact your CSM or get in touch `here <https://lp.talkable.com/lets-talk-referral>`_.

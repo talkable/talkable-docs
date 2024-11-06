@@ -26,7 +26,7 @@ Contents:
    email_marketing_and_automation/mailchimp
    email_marketing_and_automation/sailthru
    email_marketing_and_automation/sendgrid
-   email_marketing_and_automation/sfmc_dataextension
+   email_marketing_and_automation/sfmc
    email_marketing_and_automation/getresponse
    email_marketing_and_automation/targetbay
    email_marketing_and_automation/emarsys

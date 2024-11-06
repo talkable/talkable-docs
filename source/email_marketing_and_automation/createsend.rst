@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Synchronize emails Talkable collected with CreateSend integration.
+   :description: Synchronize Talkable collected emails with CreateSend integration.
 
 CreateSend
 ==========

@@ -48,12 +48,6 @@ Limitations
 - Minimum and maximum reward amounts vary based on the specific Rybbon gift card settings.
 - Custom reward amounts must not exceed the maximum value of 50.
 
-Testing and Deployment
-----------------------
-
-- **Testing**: Use a test key to verify that the Rybbon gift links generate correctly within the campaign scope.
-- **Deployment**: Ensure the Rybbon app is installed and enabled before deploying this feature.
-
 **Contact us**
 
 Interested in setting this up? Contact your CSM or get in touch `here <https://lp.talkable.com/lets-talk-referral>`_.
