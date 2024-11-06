@@ -76,7 +76,7 @@ For individual purchase segmentation, you have the option to utilize three custo
 Each of these segments can represent various criteria such as location, age group, traffic source, etc.
 These segments offer flexibility in categorizing purchases based on different customer characteristics or transaction attributes.
 
-Example of usage:
+Example of usage with `register_purchase`:
 
     .. code-block:: html
 
@@ -103,6 +103,28 @@ Example of usage:
          window._talkableq.push(['register_purchase', _talkable_data]);
        </script>
        <!-- End Talkable integration code -->
+
+Example of usage with `authenticate_customer`:
+
+    .. code-block:: javascript
+
+       window._talkableq.push(['authenticate_customer', {
+         email: 'email@mail.com',
+         first_name: 'John',
+         last_name: 'Doe',
+         traffic_source: 'facebook',
+         segment1: 'segment1', // e.g., geographic region
+         segment2: 'segment2', // e.g., demographic group
+         segment3: 'segment3'  // e.g., traffic source
+       }]);
+
+In this example, `segment1`, `segment2`, and `segment3` attributes are passed through `authenticate_customer` to enable segmentation without requiring an Origin creation.
+
+.. note::
+
+   Segments can also be passed in `register_affiliate`, `register_purchase`, and `register_event`, providing flexibility for different integration scenarios.
+
+This approach simplifies custom data handling for customers, allowing for unified data across various methods and optimizing segmentation management without additional calls.
 
 .. container:: hidden
 
