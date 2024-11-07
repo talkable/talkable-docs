@@ -78,45 +78,11 @@ These segments offer flexibility in categorizing purchases based on different cu
 
 Example of usage with `register_purchase`:
 
-    .. code-block:: html
-
-       <!-- Begin Talkable integration code -->
-       <script>
-         window._talkableq = window._talkableq || [];
-         var _talkable_data = {
-           purchase: {
-             order_number: '100011', // Unique order number
-             subtotal: '23.97', // Order subtotal
-             coupon_code: 'SAVE20', // Coupon code used at checkout
-             currency_iso_code: 'USD', // Currency code
-             shipping_zip: '02222', // Shipping ZIP code
-             shipping_address: 'Apt 123, 456 Street, Cityville, CA, 02222, USA', // Shipping address
-             segment1: 'CA', // Custom segment 1
-             segment2: 'female', // Custom segment 2
-             segment3: 'social-media' // Custom segment 3
-           },
-           customer: {
-             email: 'customer@example.com'
-             traffic_source: 'facebook'
-           }
-         };
-         window._talkableq.push(['register_purchase', _talkable_data]);
-       </script>
-       <!-- End Talkable integration code -->
+.. include:: /partials/purchase_script.rst
 
 Example of usage with `authenticate_customer`:
 
-    .. code-block:: javascript
-
-       window._talkableq.push(['authenticate_customer', {
-         email: 'email@mail.com',
-         first_name: 'John',
-         last_name: 'Doe',
-         traffic_source: 'facebook',
-         segment1: 'segment1', // e.g., geographic region
-         segment2: 'segment2', // e.g., demographic group
-         segment3: 'segment3'  // e.g., traffic source
-       }]);
+.. include:: /partials/authenticate_customer.rst
 
 In this example, `segment1`, `segment2`, and `segment3` attributes are passed through `authenticate_customer` to enable segmentation without requiring an Origin creation.
 

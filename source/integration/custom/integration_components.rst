@@ -112,7 +112,22 @@ be passed as strings. A Number can be passed for `subtotal`, however, if
 using any calculation, you’re responsible for ensuring that some number is
 passed where division by zero or `null` value does not occur.
 
+Example of usage with `register_purchase`:
+
 .. include:: /partials/purchase_script.rst
+
+Example of usage with `authenticate_customer`:
+
+.. include:: /partials/authenticate_customer.rst
+
+In this example, `segment1`, `segment2`, and `segment3` attributes are passed through `authenticate_customer` to enable segmentation without requiring an Origin creation.
+
+.. note::
+
+   Segments can also be passed in `register_affiliate`, `register_purchase`, and `register_event`, providing flexibility for different integration scenarios.
+
+This approach simplifies custom data handling for customers, allowing for unified data across various methods and optimizing segmentation management without additional calls.
+
 
 Post Purchase Script Notes
 --------------------------
