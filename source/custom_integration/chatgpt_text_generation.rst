@@ -7,7 +7,7 @@
 ChatGPT AI Text Generation
 ==========================
 
-With this integration, Talkable utilizes OpenAI's ChatGPT API to generate custom AI-driven text for AD notes or other campaign-specific purposes.
+With this integration, Talkable utilizes OpenAI's ChatGPT API to generate custom AI-driven text for Advocate's sharing message or other campaign-specific purposes.
 
 **Contact us**
 
