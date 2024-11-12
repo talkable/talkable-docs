@@ -73,14 +73,14 @@ script.
      window._talkableq = window._talkableq || [];
      window._talkableq.unshift(['init', { site_id: '<YOUR-TALKABLE-SITE-ID>' }]);
      window._talkableq.push(['authenticate_customer', {
-       email: '',          // Optional - Email of the customer, if available. Example: 'customer@example.com'
-       phone_number: '',   // Optional - Customer's phone number. Example: '+12025551111'
-       first_name: '',     // Optional - First name of the customer. Example: 'John'
-       last_name: '',      // Optional - Last name of the customer. Example: 'Smith'
+       email: '', // Optional - Email of the customer, if available. Example: 'customer@example.com'
+       phone_number: '', // Optional - Customer's phone number. Example: '+12025551111'
+       first_name: '', // Optional - First name of the customer. Example: 'John'
+       last_name: '', // Optional - Last name of the customer. Example: 'Smith'
        traffic_source: '', // Optional - Traffic source that led to the campaign. Example: 'facebook'
-       segment1: '',       // Custom segment (e.g., location, age group, source channel, platform, gender, interests).
-       segment2: '',       // Custom segment (e.g., location, age group, source channel, platform, gender, interests).
-       segment3: ''        // Custom segment (e.g., location, age group, source channel, platform, gender, interests).
+       segment1: '', // Optional - Custom segment (e.g., location, age group, source channel, platform, gender, interests).
+       segment2: '', // Optional - Custom segment (e.g., location, age group, source channel, platform, gender, interests).
+       segment3: '' // Optional - Custom segment (e.g., location, age group, source channel, platform, gender, interests).
         }]);
    </script>
    <!-- End Talkable integration code -->
