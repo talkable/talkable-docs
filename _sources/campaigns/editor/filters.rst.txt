@@ -293,8 +293,8 @@ Reference to all available locales can be found in `rails-i18n documentation`_
 
    {{ valid_until | format_date }}
    {{ valid_until | format_date: format: "%Y-%m-%d" }}
-   {{ valid_until | format_date: locale: "ru" }}
-   {{ valid_until | format_date: format: "%Y-%m-%d", locale: "ru" }}
+   {{ valid_until | format_date: locale: "en" }}
+   {{ valid_until | format_date: format: "%Y-%m-%d", locale: "en" }}
    {{ current_time | format_date }}
 
 |hr|
@@ -311,7 +311,7 @@ Reference to all available locales can be found in `rails-i18n documentation`_
 .. code-block:: liquid
 
    {{ valid_until | human_time_ago }}
-   {{ valid_until | human_time_ago: locale: "ru" }}
+   {{ valid_until | human_time_ago: locale: "en" }}
    {{ current_time | human_time_ago }}
 
 |hr|
