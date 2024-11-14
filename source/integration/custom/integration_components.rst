@@ -81,7 +81,7 @@ script.
        segment1: '', // Optional - Custom segment (e.g., location, age group, source channel, platform, gender, interests).
        segment2: '', // Optional - Custom segment (e.g., location, age group, source channel, platform, gender, interests).
        segment3: '' // Optional - Custom segment (e.g., location, age group, source channel, platform, gender, interests).
-        }]);
+     }]);
    </script>
    <!-- End Talkable integration code -->
 
