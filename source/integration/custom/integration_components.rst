@@ -73,14 +73,25 @@ script.
      window._talkableq = window._talkableq || [];
      window._talkableq.unshift(['init', { site_id: '<YOUR-TALKABLE-SITE-ID>' }]);
      window._talkableq.push(['authenticate_customer', {
-       email: '', // Optional, pass when available. Example: 'customer@example.com'
-       phone_number: '', // Optional, pass when available. Example: '+12025551111'
-       first_name: '', // Optional, pass when available. Example: 'John'
-       last_name: '', // Optional, pass when available. Example: 'Smith'
-       traffic_source: '' // Optional, the source of the traffic driven to the campaign. Example: 'facebook'
+       email: '', // Optional - Email of the customer, if available. Example: 'customer@example.com'
+       phone_number: '', // Optional - Customer's phone number. Example: '+12025551111'
+       first_name: '', // Optional - First name of the customer. Example: 'John'
+       last_name: '', // Optional - Last name of the customer. Example: 'Smith'
+       traffic_source: '', // Optional - Traffic source that led to the campaign. Example: 'facebook'
+       segment1: '', // Optional - Custom segment (e.g., location, age group, source channel, platform, gender, interests).
+       segment2: '', // Optional - Custom segment (e.g., location, age group, source channel, platform, gender, interests).
+       segment3: '' // Optional - Custom segment (e.g., location, age group, source channel, platform, gender, interests).
      }]);
    </script>
    <!-- End Talkable integration code -->
+
+In this example, `segment1`, `segment2`, and `segment3` attributes are passed through `authenticate_customer` to enable segmentation without requiring an Origin creation.
+
+.. note::
+
+   Segments can also be passed in `register_affiliate`, `register_purchase`, and `register_event`, providing flexibility for different integration scenarios.
+
+This approach simplifies custom data handling for customers, allowing for unified data across various methods and optimizing segmentation management without additional calls.
 
 Initialization Script Notes
 ---------------------------
