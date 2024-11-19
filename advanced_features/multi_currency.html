@@ -79,6 +79,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#preferred-currency">Preferred currency</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#currencies-on-dashboard">Currencies on dashboard</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#currencies-in-reports">Currencies in reports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shopify-discounts">Shopify discounts</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="sheerid.html">SheerID Integration</a></li>
@@ -234,6 +235,31 @@ So a purchase amount is converted according to its creation date’s conversion 
 <p>The options list in the currency filter consists of all the currencies passed to Talkable
 along with the purchases/events. If you can’t find a currency in the list, it means Talkable never received
 a purchase/event with such currency.</p>
+</div>
+</section>
+<section id="shopify-discounts">
+<h2>Shopify discounts<a class="headerlink" href="#shopify-discounts" title="Link to this heading">¶</a></h2>
+<p>At checkout, Shopify converts these fixed-amount discounts into the customer’s local currency using the store’s
+defined currency settings. The conversion adheres to the exchange rates Shopify provides, ensuring customers see
+discounts in their familiar currency, enhancing transparency and trust during international transactions.</p>
+<p>For example:</p>
+<ul class="simple">
+<li><p>A fixed discount of <strong>$10 USD</strong> will display as <strong>€9 EUR</strong> if the conversion rate at the time of checkout is 1 USD = 0.9 EUR.</p></li>
+</ul>
+<p>Shopify performs this conversion dynamically based on the customer’s selected currency, simplifying the shopping
+experience for international buyers. For more details, refer to Shopify’s guide on
+<a class="reference external" rel="nofollow" href="https://help.shopify.com/en/manual/international/pricing/discounts">international pricing and discounts</a>.</p>
+<p><strong>We proactively manage price rule values, such as:</strong></p>
+<ul class="simple">
+<li><p>Discount Amounts</p></li>
+<li><p>Prerequisite Subtotal Ranges</p></li>
+</ul>
+<p>If an exchange rate changes significantly, our system automatically recalculates these values to ensure pricing rules
+remain fair and aligned with the intended value of the discount. This adjustment process minimizes manual updates for
+merchants and prevents discrepancies in pricing across currencies.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Our product uses <strong>own exchange rates</strong>, which are updated automatically every 24 hours</p>
 </div>
 </section>
 </section>
