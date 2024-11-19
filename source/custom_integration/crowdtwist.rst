@@ -4,8 +4,8 @@
 .. meta::
    :description: Integrate store credit rewards using CrowdTwist API with Talkable.
 
-CrowdTwist - Store Credit API
-=============================
+CrowdTwist
+==========
 
 With this integration, Talkable enables store credit rewards through the CrowdTwist platform, allowing for custom incentives and campaign tagging.
 

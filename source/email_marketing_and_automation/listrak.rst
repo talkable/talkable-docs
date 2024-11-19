@@ -2,12 +2,18 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Synchronize Talkable collected emails with Listrak integration.
+   :description: Synchronize Talkable collected emails and phone numbers with Listrak integration for email marketing and SMS rewards.
 
 Listrak
 =======
 
-With this integration, Talkable synchronizes all people who opt in for Talkable email marketing during sign up. This way, you will keep all your emails in one place in an automated way.
+Talkable offers seamless integration with Listrak to enhance your marketing and communication efforts by synchronizing email and phone number data. This integration is divided into two components:
+
+1. **Listrak Email Marketing**
+   Talkable synchronizes all people who opt in for Talkable email marketing during sign-up, ensuring all your emails are stored in one place in an automated way.
+
+2. **Listrak SMS**
+   Talkable syncs phone numbers to Listrak and enables the setup of reward SMS messages for campaigns, enhancing customer engagement through direct messaging.
 
 **Contact us**
 
