@@ -133,3 +133,31 @@ Available options in **Purchases** and **Events** reports:
    The options list in the currency filter consists of all the currencies passed to Talkable
    along with the purchases/events. If you can't find a currency in the list, it means Talkable never received
    a purchase/event with such currency.
+
+Shopify discounts
+-----------------
+
+At checkout, Shopify converts these fixed-amount discounts into the customer’s local currency using the store's
+defined currency settings. The conversion adheres to the exchange rates Shopify provides, ensuring customers see
+discounts in their familiar currency, enhancing transparency and trust during international transactions.
+
+For example:
+
+* A fixed discount of **$10 USD** will display as **€9 EUR** if the conversion rate at the time of checkout is 1 USD = 0.9 EUR.
+
+Shopify performs this conversion dynamically based on the customer's selected currency, simplifying the shopping
+experience for international buyers. For more details, refer to Shopify's guide on
+`international pricing and discounts <https://help.shopify.com/en/manual/international/pricing/discounts>`_.
+
+**We proactively manage price rule values, such as:**
+
+* Discount Amounts
+* Prerequisite Subtotal Ranges
+
+If an exchange rate changes significantly, our system automatically recalculates these values to ensure pricing rules
+remain fair and aligned with the intended value of the discount. This adjustment process minimizes manual updates for
+merchants and prevents discrepancies in pricing across currencies.
+
+.. note::
+
+    Our product uses **own exchange rates**, which are updated automatically every 24 hours
