@@ -79,3 +79,7 @@ Additional Resources
 - Facebook Login Documentation: https://developers.facebook.com/docs/facebook-login
 
 .. note:: For detailed examples and advanced usage, refer to the official Facebook documentation.
+
+**Contact us**
+
+Interested in setting this up? Contact your CSM or get in touch `here <https://lp.talkable.com/lets-talk-referral>`_.
