@@ -14,14 +14,17 @@ Set Up
 ------
 
 1. Navigate into the App store:
+
   .. image:: /_static/img/email_marketing_and_automation/app_store_step_1.png
     :alt: App store step 1
 
   .. image:: /_static/img/email_marketing_and_automation/app_store_step_2.png
     :alt: App store step 2
+
 2. Choose an `Custom app` and clicking “Install”
 3. Fill in `Endpoint URL` and `App name` fields and enable actions you need.
 4. Complete installation and enable the app:
+
   .. image:: /_static/img/email_marketing_and_automation/custom_app.png
       :alt: Custom App
 
@@ -100,7 +103,7 @@ Your Talkable **Webhook security key** can be found in the Webhook set up page b
   }
 
 Available actions
-----------------
+-----------------
 Each action allows custom attributes to be included. You can see allowed interpolation variables by clicking `Show available variables` button:
 
 .. image:: /_static/img/email_marketing_and_automation/variables.png
@@ -306,8 +309,10 @@ Testing Custom app actions can be accomplished with the help of Webhook Tester, 
 2. Open your Custom app .
 3. Paste your Webhook Tester URL into **Endpoint URL** field and save.
 4. Click **Send sample payload** near the action you want to test.
+
   .. image:: /_static/img/email_marketing_and_automation/send_same_payload.png
       :alt: Send same payload
+
 5. After you finish the implementation on your site **change Webhook Tester URL
    to the live URL** in your Custom app.
 6. Click **Send sample payload** to test action with Live URL.
