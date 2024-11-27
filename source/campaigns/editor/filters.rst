@@ -1089,6 +1089,8 @@ Accepts custom amount of reward for Rybbon campaigns with variable denomination.
 
    {{ "a9a3472f4ea858758e0cd686de8408e2" | rybbon: amount: 13.5 }}
 
+Find more details about the integration here: :ref:`Rybbon <advanced_features/rybbon>`
+
 |hr|
 
 .. _tremendous_filter:
@@ -1106,3 +1108,5 @@ Implies that there is only one funding source in the Tremendous account.
    {{ "DEM8ULSSATK0" | tremendous }}
 
 Returns ``https://www.tremendous.com/rewards/payout/reward123``
+
+Find more details about the integration here: :ref:`Tremendous <advanced_features/tremendous>`
