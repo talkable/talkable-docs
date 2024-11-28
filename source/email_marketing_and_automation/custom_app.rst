@@ -13,7 +13,7 @@ Talkable will send a request with data to the Custom App URL for each customer's
 Set Up
 ------
 
-1. Navigate into the App store:
+1. Navigate to the App store:
 
   .. image:: /_static/img/email_marketing_and_automation/app_store_step_1.png
     :alt: App store step 1
@@ -21,8 +21,8 @@ Set Up
   .. image:: /_static/img/email_marketing_and_automation/app_store_step_2.png
     :alt: App store step 2
 
-2. Choose an `Custom app` and clicking “Install”
-3. Fill in `Endpoint URL` and `App name` fields and enable actions you need.
+2. Choose a `Custom app` and click “Install”
+3. Fill in `Endpoint URL` and `App name` fields, and enable the required actions.
 4. Complete installation and enable the app:
 
   .. image:: /_static/img/email_marketing_and_automation/custom_app.png
@@ -104,13 +104,15 @@ Your Talkable **Webhook security key** can be found in the Webhook set up page b
 
 Available actions
 -----------------
+
 Each action allows custom attributes to be included. You can see allowed interpolation variables by clicking `Show available variables` button:
 
 .. image:: /_static/img/email_marketing_and_automation/variables.png
   :alt: Send same payload
 
 Referral Create
-^^^^^^^^^^^^^^^
+...............
+
 When referral has been created this action sends you information.
 
 *Default payload:*
@@ -126,7 +128,8 @@ When referral has been created this action sends you information.
   }
 
 Sync signups
-^^^^^^^^^^^^
+............
+
 This action automatically synchronizes all people whenever they sign up no matter if person opted in by email or phone number.
 
 *Default payload:*
@@ -141,7 +144,8 @@ This action automatically synchronizes all people whenever they sign up no matte
   }
 
 Sync email opt ins
-^^^^^^^^^^^^^^^^^^
+..................
+
 This action automatically synchronizes all people whenever they sign up and opt in. Email signups without opt in are not triggered by this action.
 
 *Default payload:*
@@ -155,7 +159,8 @@ This action automatically synchronizes all people whenever they sign up and opt 
   }
 
 Sync phone opt ins
-^^^^^^^^^^^^^^^^^^
+..................
+
 This action automatically synchronizes all people whenever they sign up and opt in for text messages. Signups without phone opt in are not triggered by this action.
 
 *Default payload:*
@@ -169,7 +174,8 @@ This action automatically synchronizes all people whenever they sign up and opt 
   }
 
 Sync loyalty actions
-^^^^^^^^^^^^^^^^^^^^
+....................
+
 This action automatically synchronizes all loyalty members whenever they make a loyalty action.
 
 *Default payload:*
@@ -182,7 +188,8 @@ This action automatically synchronizes all loyalty members whenever they make a 
   }
 
 Sync loyalty tier transitions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.............................
+
 This action automatically synchronizes all loyalty members whenever their tier is changed.
 
 *Default payload:*
@@ -195,7 +202,8 @@ This action automatically synchronizes all loyalty members whenever their tier i
   }
 
 Unsubscribe
-^^^^^^^^^^^
+...........
+
 Whenever customers unsubscribe from Talkable emails they will also become unsubscribed in your ESP.
 
 *Default payload:*
@@ -208,7 +216,8 @@ Whenever customers unsubscribe from Talkable emails they will also become unsubs
   }
 
 Offer Share
-^^^^^^^^^^^
+...........
+
 Whenever a person shares the offer the share information will be sent to your ESP.
 
 *Default payload:*
@@ -221,7 +230,8 @@ Whenever a person shares the offer the share information will be sent to your ES
   }
 
 Send reward
-^^^^^^^^^^^
+...........
+
 This action sends the reward information to your ESP.
 
 *Default payload:*
@@ -237,7 +247,8 @@ This action sends the reward information to your ESP.
   }
 
 Create coupon
-^^^^^^^^^^^^^
+.............
+
 When the quantity of available coupons drops below a Talkable threshold this action sends you information.
 
 *Default payload:*
@@ -251,7 +262,8 @@ When the quantity of available coupons drops below a Talkable threshold this act
   }
 
 Event
-^^^^^
+.....
+
 When Event or Purchase have been registered this actions sends you information.
 
 *Default payload:*
@@ -270,7 +282,8 @@ When Event or Purchase have been registered this actions sends you information.
   }
 
 Referral Status Change
-^^^^^^^^^^^^^^^^^^^^^^
+......................
+
 When referral has been created this action sends you information.
 
 *Default payload:*
@@ -286,7 +299,8 @@ When referral has been created this action sends you information.
   }
 
 Click reward verification
-^^^^^^^^^^^^^^^^^^^^^^^^^
+.........................
+
 This action sends information about a Friend when they attempt claiming a reward. The response from the Endpoint URL is checked to decide if a reward should be given. To reject unverified rewards, use `click_reward_verified` liquid variable in the incentive criteria.
 
 **Note:** By default, the verification request times out at 1 second, and in that case the reward is considered verified.
@@ -303,6 +317,7 @@ This action sends information about a Friend when they attempt claiming a reward
 
 Testing
 -------
+
 Testing Custom app actions can be accomplished with the help of Webhook Tester, an external service that tests your post-receive messages.
 
 1. Visit `Webhook Tester <https://webhook.site/>`_ and click **Copy** to copy the URL you are given.
@@ -324,33 +339,6 @@ In case your servers are behind firewall, you may need to whitelist Talkable IP
 addresses so webhooks can be delivered. Pass list of these addresses to your network administrator:
 
 .. hlist::
-   :columns: 4
+  :columns: 4
 
-   * 100.26.94.244
-   * 18.207.91.200
-   * 18.210.165.17
-   * 18.232.203.127
-   * 18.233.48.151
-   * 184.73.206.68
-   * 23.21.155.129
-   * 3.222.226.72
-   * 34.197.54.191
-   * 34.226.253.236
-   * 34.231.104.179
-   * 34.232.247.192
-   * 35.169.186.170
-   * 35.171.77.58
-   * 35.173.87.187
-   * 44.217.136.252
-   * 44.219.211.174
-   * 50.16.143.102
-   * 50.17.244.178
-   * 52.204.148.18
-   * 52.22.0.55
-   * 52.6.41.1
-   * 52.7.94.243
-   * 54.164.128.44
-   * 54.208.14.192
-   * 54.86.208.153
-   * 54.86.241.218
-   * 54.91.51.228
+  .. include:: /partials/talkable_ip_list.rst
