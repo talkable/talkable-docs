@@ -124,21 +124,17 @@
 Talkable will send a request with data to the Custom App URL for each customer’s event specified in the Custom App settings.</p>
 <section id="set-up">
 <h2>Set Up<a class="headerlink" href="#set-up" title="Link to this heading">¶</a></h2>
-<ol class="arabic simple">
-<li><p>Navigate to the App store:</p></li>
-</ol>
-<blockquote>
-<div><img alt="App store step 1" src="../_images/app_store_step_1.png" />
+<ol class="arabic">
+<li><p>Navigate to the App store:</p>
+<img alt="App store step 1" src="../_images/app_store_step_1.png" />
 <img alt="App store step 2" src="../_images/app_store_step_2.png" />
-</div></blockquote>
-<ol class="arabic simple" start="2">
+</li>
 <li><p>Choose a <cite>Custom app</cite> and click “Install”</p></li>
 <li><p>Fill in <cite>Endpoint URL</cite> and <cite>App name</cite> fields, and enable the required actions.</p></li>
-<li><p>Complete installation and enable the app:</p></li>
+<li><p>Complete installation and enable the app:</p>
+<img alt="Custom App" src="../_images/custom_app.png" />
+</li>
 </ol>
-<blockquote>
-<div><img alt="Custom App" src="../_images/custom_app.png" />
-</div></blockquote>
 </section>
 <section id="webhook-signature-verification">
 <h2>Webhook Signature Verification<a class="headerlink" href="#webhook-signature-verification" title="Link to this heading">¶</a></h2>
@@ -204,7 +200,7 @@ Talkable will send a request with data to the Custom App URL for each customer�
 <img alt="Send same payload" src="../_images/variables.png" />
 <section id="referral-create">
 <h3>Referral Create<a class="headerlink" href="#referral-create" title="Link to this heading">¶</a></h3>
-<p>When referral has been created this action sends you information.</p>
+<p>Triggers when a new referral is created, sending detailed information about the referral.</p>
 <p><em>Default payload:</em></p>
 <div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;site_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
@@ -288,7 +284,7 @@ Talkable will send a request with data to the Custom App URL for each customer�
 </section>
 <section id="offer-share">
 <h3>Offer Share<a class="headerlink" href="#offer-share" title="Link to this heading">¶</a></h3>
-<p>Whenever a person shares the offer the share information will be sent to your ESP.</p>
+<p>Whenever a person shares the offer, the share information will be sent to your ESP.</p>
 <p><em>Default payload:</em></p>
 <div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;site_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
@@ -325,7 +321,7 @@ Talkable will send a request with data to the Custom App URL for each customer�
 </section>
 <section id="event">
 <h3>Event<a class="headerlink" href="#event" title="Link to this heading">¶</a></h3>
-<p>When Event or Purchase have been registered this actions sends you information.</p>
+<p>Triggers when a new event or purchase is created.</p>
 <p><em>Default payload:</em></p>
 <div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;site_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
@@ -342,7 +338,7 @@ Talkable will send a request with data to the Custom App URL for each customer�
 </section>
 <section id="referral-status-change">
 <h3>Referral Status Change<a class="headerlink" href="#referral-status-change" title="Link to this heading">¶</a></h3>
-<p>When referral has been created this action sends you information.</p>
+<p>This action is triggered when referral’s status changes.</p>
 <p><em>Default payload:</em></p>
 <div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;site_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
@@ -370,16 +366,13 @@ Talkable will send a request with data to the Custom App URL for each customer�
 <section id="testing">
 <h2>Testing<a class="headerlink" href="#testing" title="Link to this heading">¶</a></h2>
 <p>Testing Custom app actions can be accomplished with the help of Webhook Tester, an external service that tests your post-receive messages.</p>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p>Visit <a class="reference external" rel="nofollow" href="https://webhook.site/">Webhook Tester</a> and click <strong>Copy</strong> to copy the URL you are given.</p></li>
-<li><p>Open your Custom app .</p></li>
+<li><p>Open your Custom app.</p></li>
 <li><p>Paste your Webhook Tester URL into <strong>Endpoint URL</strong> field and save.</p></li>
-<li><p>Click <strong>Send sample payload</strong> near the action you want to test.</p></li>
-</ol>
-<blockquote>
-<div><img alt="Send same payload" src="../_images/send_same_payload.png" />
-</div></blockquote>
-<ol class="arabic simple" start="5">
+<li><p>Click <strong>Send sample payload</strong> near the action you want to test.</p>
+<img alt="Send same payload" src="../_images/send_sample_payload.png" />
+</li>
 <li><p>After you finish the implementation on your site <strong>change Webhook Tester URL
 to the live URL</strong> in your Custom app.</p></li>
 <li><p>Click <strong>Send sample payload</strong> to test action with Live URL.</p></li>
