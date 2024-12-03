@@ -95,7 +95,7 @@ instruct how to find all necessary credentials.
 5. Test the app by pressing on the “Send sample payload” and then check if you are seeing a test request inside your ESP:
 
   .. image:: /_static/img/email_marketing_and_automation/attentive_send_sample.png
-    :alt: Send same payload
+    :alt: Attentive send sample
 
 **Contact us**
 

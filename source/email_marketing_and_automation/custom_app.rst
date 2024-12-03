@@ -108,7 +108,7 @@ Available actions
 Each action allows custom attributes to be included. You can see allowed interpolation variables by clicking `Show available variables` button:
 
 .. image:: /_static/img/email_marketing_and_automation/variables.png
-   :alt: Send same payload
+   :alt: Variables
 
 Referral Create
 ...............
@@ -143,10 +143,10 @@ This action automatically synchronizes all people whenever they sign up no matte
      "phone_optin": "true"
    }
 
-Sync email opt ins
+Sync email opt-ins
 ..................
 
-This action automatically synchronizes all people whenever they sign up and opt in. Email signups without opt in are not triggered by this action.
+This action automatically synchronizes all people whenever they sign up and opt in. Email signups without opt-in are not triggered by this action.
 
 *Default payload:*
 
@@ -158,7 +158,7 @@ This action automatically synchronizes all people whenever they sign up and opt 
      "email_optin": "true"
    }
 
-Sync phone opt ins
+Sync phone opt-ins
 ..................
 
 This action automatically synchronizes all people whenever they sign up and opt in for text messages. Signups without phone opt in are not triggered by this action.
@@ -215,7 +215,7 @@ Whenever customers unsubscribe from Talkable emails they will also become unsubs
      "email": "person-591542c54ff21a49@talkable-sample.com"
    }
 
-Offer Share
+Offer share
 ...........
 
 Whenever a person shares the offer, the share information will be sent to your ESP.
@@ -281,7 +281,7 @@ Triggers when a new event or purchase is created.
      "email": "advocate@example.com"
    }
 
-Referral Status Change
+Referral status change
 ......................
 
 This action is triggered when referral’s status changes.
@@ -326,7 +326,7 @@ Testing Custom app actions can be accomplished with the help of Webhook Tester, 
 4. Click **Send sample payload** near the action you want to test.
 
    .. image:: /_static/img/email_marketing_and_automation/send_sample_payload.png
-      :alt: Send same payload
+      :alt: Send sample payload
 
 5. After you finish the implementation on your site **change Webhook Tester URL
    to the live URL** in your Custom app.
