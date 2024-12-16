@@ -53,7 +53,7 @@ Please use the following guide to start using an app you need:
 5. Test the app by pressing on the “Send sample payload” and then check if you are seeing a test request inside your ESP:
 
   .. image:: /_static/img/email_marketing_and_automation/send_sample_payload.png
-    :alt: Send same payload
+    :alt: Send sample payload
 
 **Contact us**
 
