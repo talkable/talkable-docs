@@ -239,6 +239,7 @@ creation</p></td>
 <p class="admonition-title">Warning</p>
 <p>Talkable validates the Price Rule attached to a coupon list. There are certain Price Rule attributes that must match the coupon list configuration.
 These include:</p>
+<p><cite>allocation_method</cite> - must be “across”</p>
 <p><cite>value</cite> - must correspond to coupon list amount</p>
 <p><cite>value_type</cite> - must correspond to coupon list type</p>
 <p><cite>ends_at</cite> - must be greater than or equal to coupon list expiration (and absent if coupon list has no expiration)</p>
@@ -256,6 +257,7 @@ These include:</p>
 <p>Attributes that are checked in this job are the following:</p>
 <blockquote>
 <div><ul class="simple">
+<li><p><cite>allocation_method</cite> - must always be “across”</p></li>
 <li><p><cite>usage_limit</cite> - must always be 1</p></li>
 <li><p><cite>value</cite> - must correspond to coupon list amount</p></li>
 <li><p><cite>value_type</cite> - must correspond to coupon list type</p></li>
