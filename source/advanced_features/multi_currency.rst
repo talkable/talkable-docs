@@ -155,8 +155,8 @@ experience for international buyers. For more details, refer to Shopify's guide 
 * Prerequisite Subtotal Ranges
 
 If an exchange rate changes significantly, our system automatically recalculates these values to ensure pricing rules
-remain fair and aligned with the intended value of the discount. This adjustment process minimizes manual updates for
-merchants and prevents discrepancies in pricing across currencies.
+remain fair and aligned with the intended value of the discount as defined in Talkable campaign incentive.
+This adjustment process minimizes manual updates for merchants and prevents discrepancies in pricing across currencies.
 
 .. note::
 
