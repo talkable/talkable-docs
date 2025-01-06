@@ -76,33 +76,31 @@ For individual purchase segmentation, you have the option to utilize three custo
 Each of these segments can represent various criteria such as location, age group, traffic source, etc.
 These segments offer flexibility in categorizing purchases based on different customer characteristics or transaction attributes.
 
-Example of usage:
+Example of usage with `register_purchase`:
 
-    .. code-block:: html
+.. include:: /partials/purchase_script.rst
 
-       <!-- Begin Talkable integration code -->
-       <script>
-         window._talkableq = window._talkableq || [];
-         var _talkable_data = {
-           purchase: {
-             order_number: '100011', // Unique order number
-             subtotal: '23.97', // Order subtotal
-             coupon_code: 'SAVE20', // Coupon code used at checkout
-             currency_iso_code: 'USD', // Currency code
-             shipping_zip: '02222', // Shipping ZIP code
-             shipping_address: 'Apt 123, 456 Street, Cityville, CA, 02222, USA', // Shipping address
-             segment1: 'CA', // Custom segment 1
-             segment2: 'female', // Custom segment 2
-             segment3: 'social-media' // Custom segment 3
-           },
-           customer: {
-             email: 'customer@example.com'
-             traffic_source: 'facebook'
-           }
-         };
-         window._talkableq.push(['register_purchase', _talkable_data]);
-       </script>
-       <!-- End Talkable integration code -->
+Example of usage with `authenticate_customer`:
+
+ .. code-block:: javascript
+
+       window._talkableq.push(['authenticate_customer', {
+         email: '', // Email of the customer. Example: 'customer@example.com'
+         first_name: '', // First name of the customer. Example: 'John'
+         last_name: '', // Last name of the customer. Example: 'Doe'
+         traffic_source: '', // The source of the traffic driven to the campaign. Example: 'facebook'
+         segment1: '', // Custom segment (e.g., location, age group, source channel, platform, gender, interests).
+         segment2: '', // Custom segment (e.g., location, age group, source channel, platform, gender, interests).
+         segment3: '' // Custom segment (e.g., location, age group, source channel, platform, gender, interests).
+       }]);
+
+In this example, `segment1`, `segment2`, and `segment3` attributes are passed through `authenticate_customer` to enable segmentation without requiring an Origin creation.
+
+.. note::
+
+   Segments can also be passed in `register_affiliate`, `register_purchase`, and `register_event`, providing flexibility for different integration scenarios.
+
+This approach simplifies custom data handling for customers, allowing for unified data across various methods and optimizing segmentation management without additional calls.
 
 .. container:: hidden
 

@@ -67,7 +67,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../email_marketing_and_automation.html">Email Marketing &amp; Automation</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../payment_solutions.html">Payment Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../custom_integration.html">Custom Integration</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../api_v2.html">API Reference</a></li>
@@ -97,13 +97,16 @@
 <span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">[];</span>
 <span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">_talkable_purchase_items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
 
-<span class="w">  </span><span class="c1">// Start for loop - iterate through cart and push details for each line item</span>
+<span class="w">  </span><span class="c1">// Start for loop</span>
 <span class="w">  </span><span class="nx">_talkable_purchase_items</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
-<span class="w">    </span><span class="nx">product_id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Item Product ID. Example: &#39;sku0001&#39;</span>
-<span class="w">    </span><span class="nx">price</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Item Unit Price. Example: &#39;199.00&#39;</span>
-<span class="w">    </span><span class="nx">quantity</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Item Quantity. Example: &#39;1&#39;</span>
-<span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="c1">// Name of a product. Example: &#39;Product Name&#39;</span>
-<span class="w">  </span><span class="p">});</span><span class="w">  </span><span class="c1">// End for loop</span>
+<span class="w">    </span><span class="nx">product_id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Required — Item Product ID. Example: &#39;sku0001&#39;</span>
+<span class="w">    </span><span class="nx">price</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Required — Item Unit Price. Example: &#39;199.00&#39;</span>
+<span class="w">    </span><span class="nx">quantity</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Required — Item Quantity. Example: &#39;1&#39;</span>
+<span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Optional — Name of product. Example: &#39;Product Name&#39;</span>
+<span class="w">    </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Optional — URL for product. Example: &#39;http://www.store.com/product1&#39;</span>
+<span class="w">    </span><span class="nx">image_url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="c1">// Optional — URL for product image. Example: &#39;http://www.store.com/product1/image.jpg&#39;</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="w">  </span><span class="c1">// End for loop</span>
 
 <span class="w">  </span><span class="kd">var</span><span class="w"> </span><span class="nx">_talkable_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">purchase</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
@@ -111,9 +114,9 @@
 <span class="w">      </span><span class="nx">subtotal</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Required - Order subtotal (pre-tax, post-discount). Example: &#39;23.97&#39;</span>
 <span class="w">      </span><span class="nx">coupon_code</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Coupon code that was used at checkout (pass multiple as an array). Example: &#39;SAVE20&#39;</span>
 <span class="w">      </span><span class="nx">currency_iso_code</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Required for multi-currency sites. Example: &#39;USD&#39;</span>
-<span class="w">      </span><span class="nx">items</span><span class="o">:</span><span class="w"> </span><span class="nx">_talkable_purchase_items</span><span class="p">,</span><span class="w">  </span><span class="c1">// Cart items declared in the example above</span>
 <span class="w">      </span><span class="nx">shipping_zip</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Used for fraud protection by address. Example: &#39;02222&#39;</span>
-<span class="w">      </span><span class="nx">shipping_address</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="c1">// Full address of the order, make sure to strictly follow a format: &#39;Apt #, Street address, City, State, ZIP, Country&#39;</span>
+<span class="w">      </span><span class="nx">shipping_address</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Full address of the order, make sure to strictly follow a format: &#39;Apt #, Street address, City, State, ZIP, Country&#39;</span>
+<span class="w">      </span><span class="nx">items</span><span class="o">:</span><span class="w"> </span><span class="nx">_talkable_purchase_items</span><span class="w"> </span><span class="c1">// Cart items declared in the example above</span>
 <span class="w">      </span><span class="nx">segment1</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Segment 1: Represents custom segment (e.g., location, age group, source channel, platform, gender, interests).</span>
 <span class="w">      </span><span class="nx">segment2</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Segment 2: Represents custom segment (e.g., location, age group, source channel, platform, gender, interests).</span>
 <span class="w">      </span><span class="nx">segment3</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Segment 3: Represents custom segment (e.g., location, age group, source channel, platform, gender, interests).</span>
@@ -123,7 +126,8 @@
 <span class="w">      </span><span class="nx">traffic_source</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="c1">// The source of the traffic driven to the campaign. Example: &#39;facebook&#39;</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="w">  </span><span class="p">};</span>
-<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;register_purchase&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">_talkable_data</span><span class="p">]);</span>
+
+<span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">_talkableq</span><span class="p">.</span><span class="nx">push</span><span class="p">([</span><span class="s1">&#39;register_purchase&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">_talkable_data</span><span class="p">]);</span><span class="w"> </span><span class="c1">// Pass data to Talkable and show Post Purchase campaign as a result</span>
 <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 <span class="cm">&lt;!-- End Talkable integration code --&gt;</span>
 </pre></div>

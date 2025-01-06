@@ -17,6 +17,10 @@ It shows how you can do the following actions via API:
 
 Each of these steps can be done individually or all together to achieve API integration
 
+.. note::
+
+   Offers created via API are not marked as shown and thus are not counted towards advocate impressions.
+
 Initial Origin
 --------------
 

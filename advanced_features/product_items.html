@@ -44,6 +44,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../advanced_features.html">Features</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="coupons.html">Coupons</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shopify_coupons_auto_sync.html">Shopify coupon auto-sync</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shopify_coupons_auto_apply.html">Shopify coupon auto-apply</a></li>
 <li class="toctree-l2"><a class="reference internal" href="shopify_purchase_syncing.html">Shopify Purchase Syncing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="track_methods.html">Referral Tracking Methods</a></li>
 <li class="toctree-l2"><a class="reference internal" href="personal_coupon_sharing.html">Advocate Personal Coupon Sharing</a></li>
@@ -53,6 +54,7 @@
 <li class="toctree-l2"><a class="reference internal" href="params_encryption.html">Params Encryption</a></li>
 <li class="toctree-l2"><a class="reference internal" href="events.html">Integrating Events</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_encryption.html">File Encryption</a></li>
+<li class="toctree-l2"><a class="reference internal" href="facebook_login_share.html">Facebook Login &amp; Share</a></li>
 <li class="toctree-l2"><a class="reference internal" href="report_password_protection.html">Report Password Protection</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Including Product Items</a></li>
 <li class="toctree-l2"><a class="reference internal" href="passing_custom_data.html">Pass Custom User Data</a></li>
@@ -61,11 +63,15 @@
 <li class="toctree-l2"><a class="reference internal" href="segments.html">Segments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="subscribing_to_events.html">Subscribing To Iframe Events</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reg_ex.html">Setting up Campaign Placement criteria</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rybbon.html">Rybbon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="url_parameters.html">Using URL Parameters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utm_tags.html">UTM Tags</a></li>
 <li class="toctree-l2"><a class="reference internal" href="white_labeling.html">White-labeling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="single_sign_on.html">Single Sign-On (SSO)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="multi_currency.html">Multi-currency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sheerid.html">SheerID Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tremendous.html">Tremendous Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="google_login.html">Google Login</a></li>
 </ul>
 </li>
 </ul>
@@ -80,7 +86,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../email_marketing_and_automation.html">Email Marketing &amp; Automation</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../payment_solutions.html">Payment Solutions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../custom_integration.html">Custom Integration</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../api_v2.html">API Reference</a></li>
@@ -116,12 +122,12 @@ Customer shares with products have higher click through and conversion rates.</p
 
 <span class="w">  </span><span class="c1">// Start for loop</span>
 <span class="w">  </span><span class="nx">_talkable_purchase_items</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
-<span class="w">    </span><span class="nx">product_id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;sku1&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Required — Item Product ID</span>
-<span class="w">    </span><span class="nx">price</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;199.00&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Required — Item Unit Price</span>
-<span class="w">    </span><span class="nx">quantity</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Required — Item Quantity</span>
-<span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Awesome Product&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Optional — Name of product</span>
-<span class="w">    </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;http://www.store.com/product1&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Optional — URL for product</span>
-<span class="w">    </span><span class="nx">image_url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;http://www.store.com/product1/image.jpg&#39;</span><span class="w"> </span><span class="c1">// Optional — URL for product image</span>
+<span class="w">    </span><span class="nx">product_id</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Required — Item Product ID. Example: &#39;sku0001&#39;</span>
+<span class="w">    </span><span class="nx">price</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Required — Item Unit Price. Example: &#39;199.00&#39;</span>
+<span class="w">    </span><span class="nx">quantity</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Required — Item Quantity. Example: &#39;1&#39;</span>
+<span class="w">    </span><span class="nx">title</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Optional — Name of product. Example: &#39;Product Name&#39;</span>
+<span class="w">    </span><span class="nx">url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Optional — URL for product. Example: &#39;http://www.store.com/product1&#39;</span>
+<span class="w">    </span><span class="nx">image_url</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="w"> </span><span class="c1">// Optional — URL for product image. Example: &#39;http://www.store.com/product1/image.jpg&#39;</span>
 <span class="w">  </span><span class="p">});</span>
 <span class="w">  </span><span class="c1">// End for loop</span>
 
@@ -134,6 +140,9 @@ Customer shares with products have higher click through and conversion rates.</p
 <span class="w">      </span><span class="nx">shipping_zip</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Used for fraud protection by address. Example: &#39;02222&#39;</span>
 <span class="w">      </span><span class="nx">shipping_address</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Full address of the order, make sure to strictly follow a format: &#39;Apt #, Street address, City, State, ZIP, Country&#39;</span>
 <span class="w">      </span><span class="nx">items</span><span class="o">:</span><span class="w"> </span><span class="nx">_talkable_purchase_items</span><span class="w"> </span><span class="c1">// Cart items declared in the example above</span>
+<span class="w">      </span><span class="nx">segment1</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Segment 1: Represents custom segment (e.g., location, age group, source channel, platform, gender, interests).</span>
+<span class="w">      </span><span class="nx">segment2</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Segment 2: Represents custom segment (e.g., location, age group, source channel, platform, gender, interests).</span>
+<span class="w">      </span><span class="nx">segment3</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Segment 3: Represents custom segment (e.g., location, age group, source channel, platform, gender, interests).</span>
 <span class="w">    </span><span class="p">},</span>
 <span class="w">    </span><span class="nx">customer</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Required - Email of the customer who issued a purchase. Example: &#39;customer@example.com&#39;</span>
