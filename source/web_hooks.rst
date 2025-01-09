@@ -22,29 +22,29 @@ Each Webhook in Talkable is defined with an HTTP URL to deliver Webhook data
 
 .. raw:: html
 
-   <h2>Available Webhooks</h2>
+  <h2>Available Webhooks</h2>
 
 Below is a user experience flow showing when Talkable Webhooks are called.
 For more details concerning specific Talkable Webhooks, click the appropriate
 Webhook type in the left-hand menu.
 
 .. image:: /_static/img/flowchart_webhooks_1.png
-   :alt: Webhooks Flowchart
-   :class: is-minimal
+  :alt: Webhooks Flowchart
+  :class: is-minimal
 
 .. note::
 
-   The Reward Webhooks will only send if there is an associated incentive
-   configured. For example, for the 'Reward Webhook' (reason = signup) to send,
-   there must be a signup incentive configured in the campaign rules.
+  The Reward Webhooks will only send if there is an associated incentive
+  configured. For example, for the 'Reward Webhook' (reason = signup) to send,
+  there must be a signup incentive configured in the campaign rules.
 
 .. raw:: html
 
-   <h2>Set Up</h2>
+  <h2>Set Up</h2>
 
 .. image:: /_static/img/menu_webhooks_screenshot.png
-   :alt: Webhooks Menu Item
-   :class: is-minimal
+  :alt: Webhooks Menu Item
+  :class: is-minimal
 
 1. Set up and test Talkable Webhooks by navigating to **Menu** then **Webhooks**
 2. Proceed to **Create New Webhook**
@@ -61,7 +61,7 @@ by Webhook type.
 
 .. raw:: html
 
-   <h2>Testing</h2>
+  <h2>Testing</h2>
 
 Testing webhooks can be accomplished with the help of Webhook Tester, an external
 service that tests your post-receive messages.
@@ -78,7 +78,7 @@ service that tests your post-receive messages.
 
 .. raw:: html
 
-   <h2>Data</h2>
+  <h2>Data</h2>
 
 All Webhooks are delivered as an HTTP Post request with the main parameter
 called payload. All data inside this parameter is encoded as JSON. Below is
@@ -86,11 +86,11 @@ a PHP parameter decode example:
 
 .. code-block:: php
 
-   json_decode($_POST["payload"])
+  json_decode($_POST["payload"])
 
 .. raw:: html
 
-   <h2>Parsing Timestamps</h2>
+  <h2>Parsing Timestamps</h2>
 
 **Timestamp data type** is not a part of JSON standard. Timestamps
 are passed as strings in |iso8601| compatible format. To function properly, ensure
@@ -99,7 +99,7 @@ https://stackoverflow.com/questions/2201925/converting-iso-8601-compliant-string
 
 .. raw:: html
 
-   <h2>Response Codes</h2>
+  <h2>Response Codes</h2>
 
 Talkable considers a Webhook as "delivered successfully" when a site
 server returns a **2xx response status**. Otherwise Talkable will continually
@@ -107,7 +107,7 @@ retry to deliver a Webhook after a set interval of time.
 
 .. raw:: html
 
-   <h2>HTTP Responses and Their Meanings</h2>
+  <h2>HTTP Responses and Their Meanings</h2>
 
 * 2xx: Success
 * 200: OK
@@ -126,7 +126,7 @@ Talkable will retry delivery of Webhook if any other error code is received.
 
 .. raw:: html
 
-   <h2>Security Key</h2>
+  <h2>Security Key</h2>
 
 Talkable includes a ``key`` parameter in Webhooks which are unique to each site
 as a way to identify Talkable as an authorized server. Your Talkable Webhook
@@ -134,7 +134,7 @@ security key can be found in the Webhook set up page.
 
 .. raw:: html
 
-   <h2>Type</h2>
+  <h2>Type</h2>
 
 The ``type`` parameter of a Webhook request can be used to identify which Webhook
 is received without looking at the payload. This will be useful if you point multiple
@@ -154,26 +154,26 @@ Possible types are:
 
 .. raw:: html
 
-   <h2>Site</h2>
+  <h2>Site</h2>
 
 Every Webhook has a ``site`` parameter that identifies which Talkable site sent
 this request. This is useful if you have a multi-site setup or use a staging site.
 
 .. raw:: html
 
-   <h2 id="talkable_ips">Whitelisting Talkable IPs</h2>
+  <h2 id="talkable_ips">Whitelisting Talkable IPs</h2>
 
 In case your servers are behind firewall, you may need to whitelist Talkable IP
 addresses so webhooks can be delivered. Pass list of these addresses to your network administrator:
 
 .. hlist::
-   :columns: 4
+  :columns: 4
 
-   .. include:: /partials/talkable_ip_list.rst
+  .. include:: /partials/talkable_ip_list.rst
 
 .. raw:: html
 
-   <h2>Compatibility and Versioning</h2>
+  <h2>Compatibility and Versioning</h2>
 
 Talkable Webhooks do not currently incorporate versioning. Current spec will not
 be changed for all existing hooks. Note that Talkable may add additional data
@@ -187,14 +187,14 @@ See available Webhooks on the navigation sidebar.
 
 .. container:: hidden
 
-   .. toctree::
+  .. toctree::
 
-      Create Coupons <web_hooks/create_coupon>
-      Referral <web_hooks/referral>
-      Reward <web_hooks/reward>
-      Post Share <web_hooks/post_share>
-      Advocate Signup <web_hooks/offer_signup>
-      Friend Email Gating <web_hooks/claim_signup>
-      Unsubscribe <web_hooks/unsubscribe>
-      Check Unsubscribe <web_hooks/check_unsubscribe>
-      Event <web_hooks/event>
+    Create Coupons <web_hooks/create_coupon>
+    Referral <web_hooks/referral>
+    Reward <web_hooks/reward>
+    Post Share <web_hooks/post_share>
+    Advocate Signup <web_hooks/offer_signup>
+    Friend Email Gating <web_hooks/claim_signup>
+    Unsubscribe <web_hooks/unsubscribe>
+    Check Unsubscribe <web_hooks/check_unsubscribe>
+    Event <web_hooks/event>
