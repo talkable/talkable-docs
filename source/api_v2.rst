@@ -11,7 +11,7 @@ Contents:
 
 .. toctree::
 
-   api_v2/intro
-   api_v2/flow
-   api_v2/origins
-   api_v2/referrals
+  api_v2/intro
+  api_v2/flow
+  api_v2/origins
+  api_v2/referrals

@@ -16,7 +16,7 @@ within a referral campaign workflow. Use cases for the Post Share Webhook includ
 
 .. raw:: html
 
-   <h2>When does Talkable call the Post Share Webhook?</h2>
+  <h2>When does Talkable call the Post Share Webhook?</h2>
 
 Talkable Post Share Webhook is triggered any time an |advocate| (referrer)
 shares offer details with a |friend| (referee) via the corresponding form
@@ -33,17 +33,17 @@ triggered twice.
 
 .. raw:: html
 
-   <h2>Payload parameters provided for Post Share Webhook</h2>
+  <h2>Payload parameters provided for Post Share Webhook</h2>
 
 The sample payload with parameters for Post Share Webhook is available here: `Post Share Webhook Payload <https://www.talkable.com/api-docs/index.html?urls.primaryname=webhooks%20api&urls.primaryName=Webhooks#/Post%20Share/post_your_api_post_share_web_hook_path>`_.
 
 .. note::
 
-   ``origin.email`` contains the email saved at the moment when the campaign is
-   first shown to the Advocate. It could be ``null``. For the most up-to-date
-   information about the Advocate, use ``sharer_info`` property which is updated
-   with the email address the Advocate has entered on the Advocate Signup/Share Page.
+  ``origin.email`` contains the email saved at the moment when the campaign is
+  first shown to the Advocate. It could be ``null``. For the most up-to-date
+  information about the Advocate, use ``sharer_info`` property which is updated
+  with the email address the Advocate has entered on the Advocate Signup/Share Page.
 
 .. container:: hidden
 
-   .. toctree::
+  .. toctree::

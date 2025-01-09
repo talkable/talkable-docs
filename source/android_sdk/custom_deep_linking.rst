@@ -25,14 +25,14 @@ To use deep linking with Talkable campaigns, simply use your deep link URL as yo
 
 .. note::
 
-   If you have configured a custom Friend Destination URL for your campaign,
-   make sure the following GET parameters are present in the final URL:
-   ``?tkbl_cvuuid={{ visitor_uuid }}&talkable_visitor_offer_id={{ friend_offer.id }}``.
+  If you have configured a custom Friend Destination URL for your campaign,
+  make sure the following GET parameters are present in the final URL:
+  ``?tkbl_cvuuid={{ visitor_uuid }}&talkable_visitor_offer_id={{ friend_offer.id }}``.
 
-   All major deep linking providers support passing additional GET parameters
-   with the deep link. This functionality is used to pass the Friend's identifying
-   information to the Talkable SDK in your iOS app. To use this functionality with
-   Firebase, refer to this document: `Manually constructing a Dynamic Link URL`_.
+  All major deep linking providers support passing additional GET parameters
+  with the deep link. This functionality is used to pass the Friend's identifying
+  information to the Talkable SDK in your iOS app. To use this functionality with
+  Firebase, refer to this document: `Manually constructing a Dynamic Link URL`_.
 
 2. Pass deep linking params to the Talkable SDK
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -49,58 +49,58 @@ following types:
 
 .. code-block:: java
 
-   // For Branch.io
+  // For Branch.io
 
-   Branch.getInstance().initSession(new Branch.BranchReferralInitListener() {
-       @Override
-       public void onInitFinished(JSONObject referringParams, BranchError error) {
-           TalkableDeepLinking.track(referringParams);
-       }
-   }, this.getIntent().getData(), this);
+  Branch.getInstance().initSession(new Branch.BranchReferralInitListener() {
+      @Override
+      public void onInitFinished(JSONObject referringParams, BranchError error) {
+          TalkableDeepLinking.track(referringParams);
+      }
+  }, this.getIntent().getData(), this);
 
 .. note::
 
-   Most deep linking services provide additional parameters in the deep link
-   handler to indicate whether the app was installed on this device for the first
-   time, reinstalled or simply launched. You can use these params to register
-   installs only when desired conditions are met.
+  Most deep linking services provide additional parameters in the deep link
+  handler to indicate whether the app was installed on this device for the first
+  time, reinstalled or simply launched. You can use these params to register
+  installs only when desired conditions are met.
 
 .. code-block:: java
 
-   // For GetSocial
+  // For GetSocial
 
-   GetSocial.getReferralData(new FetchReferralDataCallback() {
-       @Override
-       public void onSuccess(@Nullable ReferralData referralData) {
-           if (referralData != null && referralData.isFirstMatch()) {
-               TalkableDeepLinking.track(referralData.getLinkParams().getStringValues());
-           }
-       }
+  GetSocial.getReferralData(new FetchReferralDataCallback() {
+      @Override
+      public void onSuccess(@Nullable ReferralData referralData) {
+          if (referralData != null && referralData.isFirstMatch()) {
+              TalkableDeepLinking.track(referralData.getLinkParams().getStringValues());
+          }
+      }
 
-       @Override
-       public void onFailure(GetSocialException error) {}
-   }
+      @Override
+      public void onFailure(GetSocialException error) {}
+  }
 
 .. code-block:: java
 
-   // For Firebase
+  // For Firebase
 
-   FirebaseDynamicLinks.getInstance()
-       .getDynamicLink(getIntent())
-       .addOnSuccessListener(this, new OnSuccessListener<PendingDynamicLinkData>() {
-           @Override
-           public void onSuccess(PendingDynamicLinkData pendingDynamicLinkData) {
-               // Get deep link from result (may be null if no link is found)
-               Uri deepLink = null;
-               if (pendingDynamicLinkData != null) {
-                   deepLink = pendingDynamicLinkData.getLink();
-               }
+  FirebaseDynamicLinks.getInstance()
+      .getDynamicLink(getIntent())
+      .addOnSuccessListener(this, new OnSuccessListener<PendingDynamicLinkData>() {
+          @Override
+          public void onSuccess(PendingDynamicLinkData pendingDynamicLinkData) {
+              // Get deep link from result (may be null if no link is found)
+              Uri deepLink = null;
+              if (pendingDynamicLinkData != null) {
+                  deepLink = pendingDynamicLinkData.getLink();
+              }
 
-               if (deepLink != null) {
-                   TalkableDeepLinking.track(deepLink);
-               }
-           }
-       })
+              if (deepLink != null) {
+                  TalkableDeepLinking.track(deepLink);
+              }
+          }
+      })
 
 Calling the ``TalkableDeepLinking.track()`` method will register the app
 installation event in Talkable and complete the referral cycle.

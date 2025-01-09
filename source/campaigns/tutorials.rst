@@ -11,7 +11,7 @@ Contents:
 
 .. toctree::
 
-   tutorials/global
-   tutorials/offers_show
-   tutorials/offers_claim
-   tutorials/incentive_criteria
+  tutorials/global
+  tutorials/offers_show
+  tutorials/offers_claim
+  tutorials/incentive_criteria

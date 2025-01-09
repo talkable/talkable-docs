@@ -17,8 +17,8 @@ Flow
 ----
 
 .. image:: /_static/img/campaign_placements/pp.png
-   :alt: Talkable campaign flow — Post Purchase placement
-   :class: is-minimal
+  :alt: Talkable campaign flow — Post Purchase placement
+  :class: is-minimal
 
 Integration instructions
 ------------------------

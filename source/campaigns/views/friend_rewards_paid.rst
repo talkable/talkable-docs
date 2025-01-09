@@ -27,22 +27,22 @@ Frequently used Variables:
 |br|
 
 .. image:: /_static/img/basics/friend-claim-email.png
-   :alt: Friend Claim Email
+  :alt: Friend Claim Email
 
 |br|
 
 .. code-block:: liquid
 
-   Here is your {{ reward.incentive.description }} OFF deal you just claimed!
-   Use it on any purchase by {{ valid_until }}
-   Coupon code: {{ coupon_code }}
-   <a href="{{ proceed_to_merchant_path }}">Shop now</a>
+  Here is your {{ reward.incentive.description }} OFF deal you just claimed!
+  Use it on any purchase by {{ valid_until }}
+  Coupon code: {{ coupon_code }}
+  <a href="{{ proceed_to_merchant_path }}">Shop now</a>
 
 .. include:: /partials/developer_email_note.rst
 
 .. raw:: html
 
-   <h2>Email sending conditions</h2>
+  <h2>Email sending conditions</h2>
 
 By default is sent immediately after the reward is created, but can be delayed by configuration.
 

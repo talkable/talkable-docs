@@ -19,7 +19,7 @@ field, submit button, and "signup for latest news" checkbox.
 First of all, turn on email gating in Restricted settings:
 
 .. image:: /_static/img/liquid/gating/image1.png
-   :alt:
+  :alt:
 
 **Basic Setup**
 

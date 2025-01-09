@@ -53,4 +53,4 @@ on the screenshot above.
 
 .. container:: hidden
 
-   .. toctree::
+  .. toctree::

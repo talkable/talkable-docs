@@ -25,10 +25,10 @@ Contents:
 
 .. toctree::
 
-   android_sdk/getting_started
-   android_sdk/integration
-   android_sdk/advanced
-   android_sdk/api
-   android_sdk/custom_deep_linking
-   android_sdk/testing
-   android_sdk/upgrade
+  android_sdk/getting_started
+  android_sdk/integration
+  android_sdk/advanced
+  android_sdk/api
+  android_sdk/custom_deep_linking
+  android_sdk/testing
+  android_sdk/upgrade

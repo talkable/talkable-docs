@@ -13,13 +13,13 @@ excellent customer service.
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+  :maxdepth: 2
 
-   customer_service_portal/overview
-   customer_service_portal/terminology
-   customer_service_portal/use_case_1
-   customer_service_portal/use_case_2
-   customer_service_portal/use_case_3
-   customer_service_portal/use_case_4
-   customer_service_portal/use_case_5
-   customer_service_portal/use_case_6
+  customer_service_portal/overview
+  customer_service_portal/terminology
+  customer_service_portal/use_case_1
+  customer_service_portal/use_case_2
+  customer_service_portal/use_case_3
+  customer_service_portal/use_case_4
+  customer_service_portal/use_case_5
+  customer_service_portal/use_case_6

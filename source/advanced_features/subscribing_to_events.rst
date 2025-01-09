@@ -54,4 +54,4 @@ Talkable campaigns are equipped with the following set of events:
 
 .. container:: hidden
 
-   .. toctree::
+  .. toctree::

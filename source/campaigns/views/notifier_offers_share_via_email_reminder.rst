@@ -21,13 +21,13 @@ particular email.
 |br|
 
 .. image:: /_static/img/basics/friend-share-email-reminder.png
-   :alt: Friend Share Email Reminder
+  :alt: Friend Share Email Reminder
 
 .. include:: /partials/developer_email_note.rst
 
 .. raw:: html
 
-   <h2>Email sending conditions</h2>
+  <h2>Email sending conditions</h2>
 
 By default the email is sent in 72 hours after the offer is shared.
 

@@ -40,4 +40,4 @@ Note that `params` are empty, in this case user will see Signup form on :ref:`Ad
 
 .. container:: hidden
 
-   .. toctree::
+  .. toctree::

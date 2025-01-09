@@ -14,15 +14,15 @@ off-site transactions, or other off-site events.
 
 .. note::
 
-   The :ref:`standard front-end <integration/custom/overview>` Talkable
-   integration will capture all one-time purchases happening on the client
-   e-commerce site, but will not on its own capture purchases or CRM events
-   happening on the backend. To do this, the |api_v2_origins| must be utilized to
-   feed ‘off-site’ or ‘backend’ purchases or CRM events to Talkable.
+  The :ref:`standard front-end <integration/custom/overview>` Talkable
+  integration will capture all one-time purchases happening on the client
+  e-commerce site, but will not on its own capture purchases or CRM events
+  happening on the backend. To do this, the |api_v2_origins| must be utilized to
+  feed ‘off-site’ or ‘backend’ purchases or CRM events to Talkable.
 
 .. raw:: html
 
-   <h2>Example use cases for the Origins API</h2>
+  <h2>Example use cases for the Origins API</h2>
 
 **Subscription:**
 

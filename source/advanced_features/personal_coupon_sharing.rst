@@ -129,4 +129,4 @@ Any UTF8 characters are allowed (including spaces).
 
 .. container:: hidden
 
-   .. toctree::
+  .. toctree::

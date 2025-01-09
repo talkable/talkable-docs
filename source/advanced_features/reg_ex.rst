@@ -133,4 +133,4 @@ formats:
 
 .. container:: hidden
 
-   .. toctree::
+  .. toctree::

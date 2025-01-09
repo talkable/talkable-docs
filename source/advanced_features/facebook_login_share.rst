@@ -13,15 +13,15 @@ Overview
 This documentation provides a comprehensive guide on connecting your Facebook App for Login & Share in Talkable.
 
 .. note::
-   In case you don't have the Talkable Facebook app installed, users can still log in and share via Facebook, but Talkable's default Facebook app will be used.
+  In case you don't have the Talkable Facebook app installed, users can still log in and share via Facebook, but Talkable's default Facebook app will be used.
 
 Prerequisites
 -------------
 
 Before you begin, ensure you have the following:
 
-   - Access to the Facebook Developer Console.
-   - A Facebook App ID.
+- Access to the Facebook Developer Console.
+- A Facebook App ID.
 
 Integration Steps
 -----------------

@@ -23,13 +23,13 @@ Frequently used Variables:
 |br|
 
 .. image:: /_static/img/basics/friend-share-email.png
-   :alt: Friend Share Email
+  :alt: Friend Share Email
 
 .. include:: /partials/developer_email_note.rst
 
 .. raw:: html
 
-   <h2>Email sending conditions</h2>
+  <h2>Email sending conditions</h2>
 
 By default is sent immediately after the offer is shared, but can be delayed by configuration.
 

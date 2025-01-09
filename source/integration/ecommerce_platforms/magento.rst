@@ -38,8 +38,8 @@ To check your Magento version, navigate to your store's admin panel. The version
 
   .. toctree::
 
-     magento/magento1
-     magento/magento2
+    magento/magento1
+    magento/magento2
 
 **Contact us**
 

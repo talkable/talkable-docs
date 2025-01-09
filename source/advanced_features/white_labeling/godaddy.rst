@@ -8,14 +8,14 @@ Adding DNS records in GoDaddy
 
 .. note::
 
-   The instructions below use `subdomain.example.com` as an example of a custom domain where `example.com` is your domain.
+  The instructions below use `subdomain.example.com` as an example of a custom domain where `example.com` is your domain.
 
 `GoDaddy docs <https://www.godaddy.com/help/manage-dns-records-680>`_
 
 .. note::
-   This instruction applies to domains that have GoDaddy name servers.
-   If you purchased a GoDaddy domain, but use other service's name servers,
-   you should add DNS records in the name server account.
+  This instruction applies to domains that have GoDaddy name servers.
+  If you purchased a GoDaddy domain, but use other service's name servers,
+  you should add DNS records in the name server account.
 
 #. Click **My Account** → **Domains**.
 

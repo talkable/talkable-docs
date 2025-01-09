@@ -15,7 +15,7 @@
    <hr>
 
 .. role:: underline
-   :class: underline
+  :class: underline
 
 .. |cta| raw:: html
 

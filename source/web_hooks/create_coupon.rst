@@ -19,7 +19,7 @@ on their platform.
 
 .. raw:: html
 
-   <h2>When does Talkable call the Create Coupon Webhook?</h2>
+  <h2>When does Talkable call the Create Coupon Webhook?</h2>
 
 Create Coupon Webhook is called when the quantity of available coupons drops
 below a Talkable threshold.
@@ -39,7 +39,7 @@ a successful response.
 
 .. raw:: html
 
-   <h2>Set Up</h2>
+  <h2>Set Up</h2>
 
 The Create Coupon Webhook will add coupons to a specific coupon list on Talkable’s
 backend. These coupon lists must be set up in the Talkable campaign editor before
@@ -52,8 +52,8 @@ coupon list for a campaign:
    incentives for both Advocate and Friend can be configured
 
 .. image:: /_static/img/advocate_referral_incentive.png
-   :alt: Edit Referral Incentives
-   :class: is-minimal
+  :alt: Edit Referral Incentives
+  :class: is-minimal
 
 3. Inside the Referral Incentive Editor choose the **Coupon code type: Single-use**
    then select an existing Coupon list or create a new coupon list by clicking
@@ -67,10 +67,10 @@ coupon list for a campaign:
 
 .. note::
 
-   Coupons created by the **Create Coupon Webhook** will be added to the coupon
-   list associated with the referral campaign. Multiple referral campaigns can
-   use the same or unique coupon lists. **Advocate** and **Friend** referral
-   incentives can also use the same or unique coupon lists.
+  Coupons created by the **Create Coupon Webhook** will be added to the coupon
+  list associated with the referral campaign. Multiple referral campaigns can
+  use the same or unique coupon lists. **Advocate** and **Friend** referral
+  incentives can also use the same or unique coupon lists.
 
 Once a single-use coupon code list is associated with a campaign, then the
 Create Coupon Webhook can now be set up.
@@ -78,10 +78,10 @@ Create Coupon Webhook can now be set up.
 
 .. raw:: html
 
-   <h2>Payload parameters provided by Create Coupon Webhook</h2>
+  <h2>Payload parameters provided by Create Coupon Webhook</h2>
 
 The sample payload with parameters for Create Coupon Webhook is available here: `Create Coupon Webhook Payload <https://www.talkable.com/api-docs/index.html?urls.primaryname=webhooks%20api&urls.primaryName=Webhooks#/Create%20Coupon/post_your_api_create_coupon_web_hook_path>`_.
 
 .. container:: hidden
 
-   .. toctree::
+  .. toctree::
