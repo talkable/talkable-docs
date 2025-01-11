@@ -51,6 +51,44 @@ in the `[[ preferred_currency ]]` variable.
 
 .. image:: /_static/img/advanced_features/multi_currency_advocate_offer.png
 
+Passing visitor's preferred currency
+....................................
+
+If the preferred currency of the visitor is known, it can be passed as customer data to render the referral campaign
+with the currency pre-selected:
+
+.. code-block:: javascript
+
+   _talkableq.push(['authenticate_customer', {
+     email: '',
+     currency: 'AUD' // Currency should be an international 3-letter code as defined by the ISO 4217 standard
+   }]);
+
+Currency can also be provided directly in any of the following function calls,
+overriding the `authenticate_customer` data:
+
+  - `register_affiliate`
+  - `register_purchase`
+  - `register_event`
+
+For example:
+
+.. code-block:: javascript
+
+   var _purchase_data = {
+     purchase: {
+       order_number: '',
+       subtotal: '',
+       currency_iso_code: 'AUD' // currency of the purchase
+     },
+     currency: 'AUD', // preferred currency of the person, used to show suitable incentive information in the campaign
+   };
+   _talkableq.push(['register_purchase', _purchase_data]);
+
+.. note::
+
+   Passing `currency` is available in integration version 5.2.1 or higher.
+
 Currencies on dashboard
 -----------------------
 
@@ -95,3 +133,31 @@ Available options in **Purchases** and **Events** reports:
    The options list in the currency filter consists of all the currencies passed to Talkable
    along with the purchases/events. If you can't find a currency in the list, it means Talkable never received
    a purchase/event with such currency.
+
+Shopify discounts
+-----------------
+
+At checkout, Shopify converts these fixed-amount discounts into the customer’s local currency using the store's
+defined currency settings. The conversion adheres to the exchange rates Shopify provides, ensuring customers see
+discounts in their familiar currency, enhancing transparency and trust during international transactions.
+
+For example:
+
+* A fixed discount of **$10 USD** will display as **€9 EUR** if the conversion rate at the time of checkout is 1 USD = 0.9 EUR.
+
+Shopify performs this conversion dynamically based on the customer's selected currency, simplifying the shopping
+experience for international buyers. For more details, refer to Shopify's guide on
+`international pricing and discounts <https://help.shopify.com/en/manual/international/pricing/discounts>`_.
+
+**We proactively manage price rule values, such as:**
+
+* Discount Amounts
+* Prerequisite Subtotal Ranges
+
+If an exchange rate changes significantly, our system automatically recalculates these values to ensure pricing rules
+remain fair and aligned with the intended value of the discount as defined in Talkable campaign incentive.
+This adjustment process minimizes manual updates for merchants and prevents discrepancies in pricing across currencies.
+
+.. note::
+
+    Our product uses **own exchange rates**, which are updated automatically every 24 hours

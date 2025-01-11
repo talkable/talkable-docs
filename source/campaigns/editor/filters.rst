@@ -293,8 +293,8 @@ Reference to all available locales can be found in `rails-i18n documentation`_
 
    {{ valid_until | format_date }}
    {{ valid_until | format_date: format: "%Y-%m-%d" }}
-   {{ valid_until | format_date: locale: "ru" }}
-   {{ valid_until | format_date: format: "%Y-%m-%d", locale: "ru" }}
+   {{ valid_until | format_date: locale: "en" }}
+   {{ valid_until | format_date: format: "%Y-%m-%d", locale: "en" }}
    {{ current_time | format_date }}
 
 |hr|
@@ -311,7 +311,7 @@ Reference to all available locales can be found in `rails-i18n documentation`_
 .. code-block:: liquid
 
    {{ valid_until | human_time_ago }}
-   {{ valid_until | human_time_ago: locale: "ru" }}
+   {{ valid_until | human_time_ago: locale: "en" }}
    {{ current_time | human_time_ago }}
 
 |hr|
@@ -805,6 +805,99 @@ Returns ``some string``
 
 |hr|
 
+new\_array
+..........
+
+Creates a new array. If arguments are provided, they become the elements of the array.
+
+Liquid
+
+.. code-block:: liquid
+
+   {% assign my_array = "" | new_array: "element1", "element2" %}
+   {% assign empty_array = "" | new_array %}
+
+   Array: {{ my_array | json }}
+   Empty array: {{ empty_array | json }}
+
+Rendered Liquid
+
+.. code-block:: text
+
+   Array: ["element1","element2"]
+   Empty array: []
+
+|hr|
+
+append\_to\_array
+.................
+
+Appends elements to an existing array.
+
+Liquid
+
+.. code-block:: liquid
+
+   {% assign my_array = "" | new_array %}
+   {% assign my_array = my_array | append_to_array: "element1", "element2" %}
+
+   Array: {{ my_array | json }}
+
+Rendered Liquid
+
+.. code-block:: text
+
+   Array: ["element1","element2"]
+
+|hr|
+
+new\_hash
+.........
+
+Creates a new hash. If a hash is provided as an argument, it returns that hash.
+
+Liquid
+
+.. code-block:: liquid
+
+   {% assign my_hash = "" | new_hash: key: "value", key2: 42 %}
+   {% assign empty_hash = "" | new_hash %}
+
+   Hash: {{ my_hash | json }}
+   Empty hash: {{ empty_hash | json }}
+
+Rendered Liquid
+
+.. code-block:: text
+
+   Hash: {"key":"value","key2":42}
+   Empty hash: {}
+
+|hr|
+
+assign\_key
+...........
+
+Assigns a key-value pair to an existing hash. If the key already exists, its value is updated.
+
+Liquid
+
+.. code-block:: liquid
+
+   {% assign my_hash = "" | new_hash: key: "value", key2: 42 %}
+   {% assign my_hash = my_hash | assign_key: "key2", "value2" %}
+   {% assign my_hash = my_hash | assign_key: "key3", "value3" %}
+
+   Hash: {{ my_hash | json }}
+
+Rendered Liquid
+
+.. code-block:: text
+
+   Hash: {"key":"value","key2":"value2","key3":"value3"}
+
+|hr|
+
 values
 ......
 
@@ -996,7 +1089,11 @@ Accepts custom amount of reward for Rybbon campaigns with variable denomination.
 
    {{ "a9a3472f4ea858758e0cd686de8408e2" | rybbon: amount: 13.5 }}
 
+Find more details about the integration here: :ref:`Rybbon <advanced_features/rybbon>`
+
 |hr|
+
+.. _tremendous_filter:
 
 tremendous
 ..........
@@ -1011,3 +1108,5 @@ Implies that there is only one funding source in the Tremendous account.
    {{ "DEM8ULSSATK0" | tremendous }}
 
 Returns ``https://www.tremendous.com/rewards/payout/reward123``
+
+Find more details about the integration here: :ref:`Tremendous <advanced_features/tremendous>`

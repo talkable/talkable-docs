@@ -28,7 +28,8 @@
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = []
+extensions = ['sphinx_sitemap']
+sitemap_url_scheme = "{link}"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -134,7 +135,7 @@ html_static_path = ['_static']
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
 # directly to the root of the documentation.
-#html_extra_path = []
+html_extra_path = ['robots.txt']
 
 # If not None, a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
@@ -183,7 +184,7 @@ htmlhelp_basename = 'Talkabledoc'
 
 # The URL which points to the root of the HTML documentation.
 # It is used to indicate the location of document like canonical_url.
-html_baseurl = 'https://docs.talkable.com'
+html_baseurl = 'https://docs.talkable.com/'
 
 # -- Options for manual page output ---------------------------------------
 

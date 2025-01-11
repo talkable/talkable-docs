@@ -20,6 +20,9 @@ each with links to integration details.
    * - :ref:`Shopify Coupon auto-sync <advanced_features/shopify_coupons_auto_sync>`
      - Issue coupons automatically for your Shopify store
 
+   * - :ref:`Shopify Coupon auto-apply <advanced_features/shopify_coupons_auto_apply>`
+     - Issue coupons automatically for your Shopify store
+
    * - :ref:`Shopify Purchase Syncing <advanced_features/shopify_purchase_syncing>`
      - Automatic purchases synchronization from your Shopify store
 
@@ -86,12 +89,16 @@ each with links to integration details.
    * - :ref:`White Labeling <advanced_features/white_labeling>`
      - Change all visible URLs to your domain instead of talkable.com
 
+   * - :ref:`Multi-Currency <advanced_features/multi_currency>`
+     - Accept multiple currencies and set different rewards per currency
+
 .. container:: hidden
 
   .. toctree::
 
     advanced_features/coupons
     advanced_features/shopify_coupons_auto_sync
+    advanced_features/shopify_coupons_auto_apply
     advanced_features/shopify_purchase_syncing
     advanced_features/track_methods
     advanced_features/personal_coupon_sharing
@@ -101,6 +108,7 @@ each with links to integration details.
     advanced_features/params_encryption
     advanced_features/events
     advanced_features/file_encryption
+    advanced_features/facebook_login_share
     advanced_features/report_password_protection
     advanced_features/product_items
     advanced_features/passing_custom_data
@@ -109,8 +117,12 @@ each with links to integration details.
     advanced_features/segments
     advanced_features/subscribing_to_events
     advanced_features/reg_ex
+    advanced_features/rybbon
     advanced_features/url_parameters
     advanced_features/utm_tags
     advanced_features/white_labeling
     advanced_features/single_sign_on
     advanced_features/multi_currency
+    advanced_features/sheerid
+    advanced_features/tremendous
+    advanced_features/google_login

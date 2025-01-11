@@ -15,13 +15,17 @@ So, instead of sending params in plain text, you can send them encrypted.
 Site public encryption key
 --------------------------
 
-To get your unique site public encryption key, go to **All Site Settings → Integrations → API integration → Public encryption key for email addresses**.
+To get your unique site public encryption key, go to **All Site Settings → Integrations → JS integration → Public encryption key**.
 
 Passing email as a GET parameter to Standalone Campaign
 -------------------------------------------------------
 
 Also it’s possible to pass encrypted email as a GET parameter (e.g. for CTA links that
 point to standalone invite page). But to do that encrypted email should be **URL-encoded**.
+
+.. note::
+
+   It’s recommended to use `Optimal Asymmetric Encryption Padding (OAEP)`_ padding scheme together with RSA encryption.
 
 Ruby Example
 ------------
@@ -39,7 +43,7 @@ Ruby Example
    end
 
    def encode_param_for_talkable(param)
-     encrypted_param = key.public_encrypt(param)
+     encrypted_param = key.public_encrypt(param, OpenSSL::PKey::RSA::PKCS1_OAEP_PADDING)
      Base64.strict_encode64(encrypted_param)
    end
 
@@ -50,8 +54,8 @@ Java Example
 
 This example uses `Bouncy Castle library`_ and has been tested on:
 
-* bcprov-jdk15on-156.jar (Provider)
-* bcpkix-jdk15on-156.jar (PKIX/CMS/EAC/PKCS/OCSP/TSP/OPENSSL)
+* bcprov-jdk18on-1.78.1.jar (Provider)
+* bcpkix-jdk18on-1.78.1.jar (PKIX/CMS/EAC/PKCS/OCSP/TSP/OPENSSL)
 
 that can be downloaded from `Bouncy Castle Latest Releases`_.
 
@@ -88,7 +92,7 @@ that can be downloaded from `Bouncy Castle Latest Releases`_.
            }
 
            private void initCipher() throws GeneralSecurityException {
-               cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding", "BC");
+               cipher = Cipher.getInstance("RSA/ECB/OAEPPadding", "BC");
                cipher.init(Cipher.ENCRYPT_MODE, publicKey);
            }
 
@@ -121,13 +125,45 @@ that can be downloaded from `Bouncy Castle Latest Releases`_.
        }
 
        public static void main(String[] args) throws Exception {
-           String email = "encrypted_email@example.com";
+           String email = "email_to_encrypt@example.com";
            System.out.println(encryptParam(email));
        }
    }
 
+Node.js Example
+---------------
+
+.. code-block:: js
+
+   const fs = require('fs');
+   const crypto = require('crypto');
+
+   // Read the public key from file
+   const publicKey = fs.readFileSync('talkable_your_site_slug_public_key.pem', 'utf8');
+
+   const encryptData = (data) => {
+     const encryptedData = crypto.publicEncrypt(
+       {
+         key: publicKey,
+         padding: crypto.constants.RSA_PKCS1_OAEP_PADDING,
+         oaepHash: 'sha1',
+       },
+       Buffer.from(data)
+     );
+     return encryptedData.toString('base64');
+   };
+
+   // Example usage
+   const encryptedEmail = encryptData('email_to_encrypt@example.com');
+   console.log('Encrypted email:', encryptedEmail);
+
 Front-end Part
 --------------
+
+.. important::
+   Do not use params encryption for :ref:`Talkable backend API <api_v2/origins>`.
+
+   Params encryption is only for JS integration.
 
 Please modify the front-end using this pseudo code example:
 
@@ -147,4 +183,5 @@ Please modify the front-end using this pseudo code example:
 
 .. _Talkable Public Key: https://d2jjzw81hqbuqv.cloudfront.net/integration/talkable_public_key.pem
 .. _Bouncy Castle Library: https://www.bouncycastle.org
-.. _Bouncy Castle Latest Releases: https://www.bouncycastle.org/latest_releases.html
+.. _Bouncy Castle Latest Releases: http://git.bouncycastle.org/latest_releases.html
+.. _Optimal Asymmetric Encryption Padding (OAEP): https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding
