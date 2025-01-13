@@ -10,6 +10,7 @@ E-commerce Platforms
 Contents:
 
 .. toctree::
+    ecommerce_platforms/bigcommerce
     ecommerce_platforms/demandware
     ecommerce_platforms/shopify
     ecommerce_platforms/magento

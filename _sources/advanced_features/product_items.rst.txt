@@ -13,7 +13,7 @@ Customer shares with products have higher click through and conversion rates.
 
 Below is an example with product items passed along with purchase data (notice FOR loop):
 
-.. include:: /samples/advanced_features/product_items.rst
+.. include:: /partials/product_purchase_script.rst
 
 .. note::
 

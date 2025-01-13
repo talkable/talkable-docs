@@ -25,9 +25,6 @@ Integration instructions
 
 Instructions slightly vary based on your site platform.
 
-#. **Talkable Container DIV.** By default post purchase campaign will have `talkable-post-purchase` id of container. If
-   you want to update it you can do it in admin panel.
-
 Shopify Platform
 ----------------
 
@@ -38,8 +35,6 @@ Shopify Platform
 #. **Configure Campaign and Placement.** Create a new Campaign with Post Purchase type of Placement,
    configure it and launch. It will be automatically attached to the Post Purchase Placement and so,
    show up to your customers every time they purchase successfully on your site.
-   |br|
-   In the placement settings, you can now change the `div` id value. It can be customized to any value you type.
 
    |
 
@@ -56,8 +51,6 @@ Magento Platform
 #. **Configure Campaign and Placement.** Create a new Campaign with Post Purchase type of Placement,
    configure it and launch. It will be automatically attached to the Post Purchase Placement and so,
    show up to your customers every time they purchase successfully on your site.
-   |br|
-   In the placement settings, you can now change the `div` id value. It can be customized to any value you type.
 
    |
 
@@ -78,8 +71,6 @@ Custom Platform
    Create a new Campaign with Post Purchase type of Placement and launch it.
    It will be automatically attached to its Post Purchase Placement that triggers a
    Campaign on the order confirmation page.
-   |br|
-   In the placement settings, you can now change the `div` id value. It can be customized to any value you type.
    |br|
    If you need to change or reconfigure which Campaigns are shown on which URLs then visit
    `https://admin.talkable.com/sites/<YOUR-TALKABLE-SITE-ID>/placements` page.

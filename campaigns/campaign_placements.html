@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/talkable.css?v=6a6e49b7" />
     <script src="../_static/documentation_options.js?v=f2a433a1"></script>
-    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="canonical" href="https://docs.talkable.com/campaigns/campaign_placements.html" /><!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -140,16 +140,21 @@ If all of the criteria are met, the placement will show a campaign.</p>
 <p class="admonition-title">Note</p>
 <p>Custom Property Criteria require integration version 5.1.4 or higher to work.</p>
 </div>
-<p><strong>Container name changes</strong>.
-It is possible to update the container name from the admin panel in placements settings. It allows you to edit the <cite>div</cite> id in the placement setup, ensuring flexibility and customization according to your needs.
-By default, the <cite>div</cite> id is:
-* <cite>talkable-offer</cite> for Standalone, Standalone Dashboard, Floating Widget;
-* <cite>talkable-post-purchase</cite> for Post Purchase;
-* <cite>talkable-post-event</cite> for Post Event;
-* <cite>talkable-gleam-reward</cite> for Gleam;
-* <cite>talkable-claim-by-name</cite> for Claim By Name;
-* <cite>talkable-email-capture-offer</cite> for Email Capture;
-* <cite>talkable-loyalty</cite> for Loyalty Dashboard and Loyalty Widget.</p>
+<p><strong>Container name</strong>.
+It is possible to update the container name from the admin panel in placements settings.
+It allows you to edit the <cite>div</cite> id for each event category, ensuring flexibility and customization according to your needs.</p>
+<p>By default, the <cite>div</cite> id is:</p>
+<ul class="simple">
+<li><p><cite>talkable-offer</cite> for <cite>affiliate_member</cite> event category which includes: Standalone, Standalone Dashboard, Floating Widget, Gleam;</p></li>
+<li><p><cite>talkable-post-purchase</cite> for <cite>purchase</cite> event category which includes: Post Purchase;</p></li>
+<li><p><cite>talkable-claim-by-name</cite> for <cite>claim_by_name_popup</cite> event category which includes: Claim By Name;</p></li>
+<li><p><cite>talkable-email-capture-offer</cite> for <cite>email_capture_popup</cite> event category which includes: Conversion Popup;</p></li>
+<li><p><cite>talkable-loyalty</cite> for <cite>loyalty_dashboard</cite> and <cite>loyalty_widget</cite> event categories which include: Loyalty Dashboard and Loyalty Widget.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Container name changes require integration version 5.3.0 or higher to work.</p>
+</div>
 <p><hr></p>
 <h2>Referral Placements</h2>
 

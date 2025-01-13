@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/talkable.css?v=6a6e49b7" />
     <script src="../_static/documentation_options.js?v=f2a433a1"></script>
-    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="canonical" href="https://docs.talkable.com/email_marketing_and_automation/custom_app.html" /><!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -59,17 +59,36 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../email_marketing_and_automation.html">Email Marketing &amp; Automation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bluecore.html">Bluecore</a></li>
+<li class="toctree-l2"><a class="reference internal" href="braze.html">Braze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cordial.html">Cordial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="createsend.html">CreateSend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cheetah.html">Cheetah</a></li>
 <li class="toctree-l2"><a class="reference internal" href="klaviyo.html">Klaviyo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="yotpo.html">Yotpo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ometria.html">Ometria</a></li>
 <li class="toctree-l2"><a class="reference internal" href="oracle_bronto.html">Oracle Bronto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="omnisend.html">Omnisend</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mailchimp.html">Mailchimp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sailthru.html">Sailthru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sendgrid.html">Sendgrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sfmc.html">Salesforce Marketing Cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getresponse.html">GetResponse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="targetbay.html">TargetBay</a></li>
 <li class="toctree-l2"><a class="reference internal" href="emarsys.html">Emarsys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="exponea.html">Exponea</a></li>
 <li class="toctree-l2"><a class="reference internal" href="hubspot.html">Hubspot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="iterable.html">Iterable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="listrak.html">Listrak</a></li>
 <li class="toctree-l2"><a class="reference internal" href="attentive.html">Attentive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apsis.html">Apsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="what_counts_pro.html">WhatCounts</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Custom App</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#set-up">Set Up</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#webhook-signature-verification">Webhook Signature Verification</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#available-actions">Available actions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#testing">Testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#whitelisting-talkable-ips">Whitelisting Talkable IPs</a></li>
 </ul>
 </li>
 </ul>
@@ -103,6 +122,20 @@
 <h1>Custom App<a class="headerlink" href="#custom-app" title="Link to this heading">¶</a></h1>
 <p>Custom App allows you to send Talkable data to a desired destination such as your site, ESP, CDP.
 Talkable will send a request with data to the Custom App URL for each customer’s event specified in the Custom App settings.</p>
+<section id="set-up">
+<h2>Set Up<a class="headerlink" href="#set-up" title="Link to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p>Navigate to the App store:</p>
+<img alt="App store step 1" src="../_images/app_store_step_1.png" />
+<img alt="App store step 2" src="../_images/app_store_step_2.png" />
+</li>
+<li><p>Choose a <cite>Custom app</cite> and click “Install”</p></li>
+<li><p>Fill in <cite>Endpoint URL</cite> and <cite>App name</cite> fields, and enable the required actions.</p></li>
+<li><p>Complete installation and enable the app:</p>
+<img alt="Custom App" src="../_images/custom_app.png" />
+</li>
+</ol>
+</section>
 <section id="webhook-signature-verification">
 <h2>Webhook Signature Verification<a class="headerlink" href="#webhook-signature-verification" title="Link to this heading">¶</a></h2>
 <p>The <cite>x-talkable-signature</cite> header is included in each request and contains a signature that you have to verify to make sure the request is not compromised.</p>
@@ -126,9 +159,8 @@ Talkable will send a request with data to the Custom App URL for each customer�
 <blockquote>
 <div><p>Compare the signature from the header with your calculated signature.</p>
 </div></blockquote>
-<section id="examples">
-<h3>Examples:<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h3>
-<p><strong>Ruby:</strong></p>
+<p><strong>Examples:</strong></p>
+<p><em>Ruby:</em></p>
 <div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="nb">require</span><span class="w"> </span><span class="s1">&#39;base64&#39;</span>
 <span class="nb">require</span><span class="w"> </span><span class="s1">&#39;openssl&#39;</span>
 <span class="nb">require</span><span class="w"> </span><span class="s1">&#39;active_support/security_utils&#39;</span>
@@ -141,27 +173,252 @@ Talkable will send a request with data to the Custom App URL for each customer�
 <span class="k">end</span>
 </pre></div>
 </div>
-<p><strong>JavaScript:</strong></p>
+<p><em>JavaScript:</em></p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">crypto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;crypto&#39;</span><span class="p">);</span>
 
 <span class="kd">const</span><span class="w"> </span><span class="nx">WEBHOOK_SECRET_KEY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;my_webhook_secret&#39;</span><span class="p">;</span>
 
 <span class="kd">function</span><span class="w"> </span><span class="nx">verifyWebhook</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="w"> </span><span class="nx">headerSignature</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Calculate HMAC</span>
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">calculatedSignature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">btoa</span><span class="p">(</span><span class="nx">crypto</span>
-<span class="w">        </span><span class="p">.</span><span class="nx">createHmac</span><span class="p">(</span><span class="s1">&#39;sha256&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">WEBHOOK_SECRET_KEY</span><span class="p">)</span>
-<span class="w">        </span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
-<span class="w">        </span><span class="p">.</span><span class="nx">digest</span><span class="p">(</span><span class="s1">&#39;hex&#39;</span><span class="p">)</span>
-<span class="w">    </span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Calculate HMAC</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">calculatedSignature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">btoa</span><span class="p">(</span><span class="nx">crypto</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">createHmac</span><span class="p">(</span><span class="s1">&#39;sha256&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">WEBHOOK_SECRET_KEY</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">update</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">digest</span><span class="p">(</span><span class="s1">&#39;hex&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">);</span>
 
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">crypto</span><span class="p">.</span><span class="nx">timingSafeEqual</span><span class="p">(</span>
-<span class="w">        </span><span class="nx">Buffer</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="nx">calculatedSignature</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;base64&#39;</span><span class="p">),</span>
-<span class="w">        </span><span class="nx">Buffer</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="nx">headerSignature</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;base64&#39;</span><span class="p">)</span>
-<span class="w">    </span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">crypto</span><span class="p">.</span><span class="nx">timingSafeEqual</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">Buffer</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="nx">calculatedSignature</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;base64&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">Buffer</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="nx">headerSignature</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;base64&#39;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </section>
+<section id="available-actions">
+<h2>Available actions<a class="headerlink" href="#available-actions" title="Link to this heading">¶</a></h2>
+<p>Each action allows custom attributes to be included. You can see allowed interpolation variables by clicking <cite>Show available variables</cite> button:</p>
+<img alt="Variables" src="../_images/variables.png" />
+<section id="referral-create">
+<h3>Referral Create<a class="headerlink" href="#referral-create" title="Link to this heading">¶</a></h3>
+<p>Triggers when a new referral is created, sending detailed information about the referral.</p>
+<p><em>Default payload:</em></p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;site_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;campaign_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;142&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;referral_status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;in_progress&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;advocate_email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;advocate@example.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;friend_email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;friend@example.com&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="sync-signups">
+<h3>Sync signups<a class="headerlink" href="#sync-signups" title="Link to this heading">¶</a></h3>
+<p>This action automatically synchronizes all people whenever they sign up no matter if person opted in by email or phone number.</p>
+<p><em>Default payload:</em></p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;person-9eb230f8d189fca9@talkable-sample.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;email_optin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;phone_number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+12025551111&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;phone_optin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="sync-email-opt-ins">
+<h3>Sync email opt-ins<a class="headerlink" href="#sync-email-opt-ins" title="Link to this heading">¶</a></h3>
+<p>This action automatically synchronizes all people whenever they sign up and opt in. Email signups without opt-in are not triggered by this action.</p>
+<p><em>Default payload:</em></p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;site_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;person-40728a5b940e3247@talkable-sample.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;email_optin&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;true&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="sync-phone-opt-ins">
+<h3>Sync phone opt-ins<a class="headerlink" href="#sync-phone-opt-ins" title="Link to this heading">¶</a></h3>
+<p>This action automatically synchronizes all people whenever they sign up and opt in for text messages. Signups without phone opt in are not triggered by this action.</p>
+<p><em>Default payload:</em></p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;site_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;person-fa8e880e25bd47b3@talkable-sample.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;phone_number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+12025551111&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="sync-loyalty-actions">
+<h3>Sync loyalty actions<a class="headerlink" href="#sync-loyalty-actions" title="Link to this heading">¶</a></h3>
+<p>This action automatically synchronizes all loyalty members whenever they make a loyalty action.</p>
+<p><em>Default payload:</em></p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;site_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;loyalty@talkable.com&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="sync-loyalty-tier-transitions">
+<h3>Sync loyalty tier transitions<a class="headerlink" href="#sync-loyalty-tier-transitions" title="Link to this heading">¶</a></h3>
+<p>This action automatically synchronizes all loyalty members whenever their tier is changed.</p>
+<p><em>Default payload:</em></p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;site_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;loyalty@talkable.com&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="unsubscribe">
+<h3>Unsubscribe<a class="headerlink" href="#unsubscribe" title="Link to this heading">¶</a></h3>
+<p>Whenever customers unsubscribe from Talkable emails they will also become unsubscribed in your ESP.</p>
+<p><em>Default payload:</em></p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;site_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;person-591542c54ff21a49@talkable-sample.com&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="offer-share">
+<h3>Offer share<a class="headerlink" href="#offer-share" title="Link to this heading">¶</a></h3>
+<p>Whenever a person shares the offer, the share information will be sent to your ESP.</p>
+<p><em>Default payload:</em></p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;site_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;person-591542c54ff21a49@talkable-sample.com&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="send-reward">
+<h3>Send reward<a class="headerlink" href="#send-reward" title="Link to this heading">¶</a></h3>
+<p>This action sends the reward information to your ESP.</p>
+<p><em>Default payload:</em></p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$5&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;5.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;coupon_code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;FR_NEW_5_OFF&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;reason&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;click&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;site_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="create-coupon">
+<h3>Create coupon<a class="headerlink" href="#create-coupon" title="Link to this heading">¶</a></h3>
+<p>When the quantity of available coupons drops below a Talkable threshold this action sends you information.</p>
+<p><em>Default payload:</em></p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;site_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;coupon_code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SAMPLE-COUPON-CODE&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;coupon_discount_amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.0&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="event">
+<h3>Event<a class="headerlink" href="#event" title="Link to this heading">¶</a></h3>
+<p>Triggers when a new event or purchase is created.</p>
+<p><em>Default payload:</em></p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;site_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Event&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-11-25 00:00:00 -0800&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;event_category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;public_event&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;event_number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;183247241&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;subtotal&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;100.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;currency_iso_code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;USD&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;advocate@example.com&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="referral-status-change">
+<h3>Referral status change<a class="headerlink" href="#referral-status-change" title="Link to this heading">¶</a></h3>
+<p>This action is triggered when referral’s status changes.</p>
+<p><em>Default payload:</em></p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;site_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;campaign_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;142&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;referral_status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;in_progress&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;advocate_email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;advocate@example.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;friend_email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;friend@example.com&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="click-reward-verification">
+<h3>Click reward verification<a class="headerlink" href="#click-reward-verification" title="Link to this heading">¶</a></h3>
+<p>This action sends information about a Friend when they attempt claiming a reward. The response from the Endpoint URL is checked to decide if a reward should be given. To reject unverified rewards, use <cite>click_reward_verified</cite> liquid variable in the incentive criteria.</p>
+<p><strong>Note:</strong> By default, the verification request times out at 1 second, and in that case the reward is considered verified.</p>
+<p><em>Default payload:</em></p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;friend@example.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;site_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Link to this heading">¶</a></h2>
+<p>Testing Custom app actions can be accomplished with the help of Webhook Tester, an external service that tests your post-receive messages.</p>
+<ol class="arabic">
+<li><p>Visit <a class="reference external" rel="nofollow" href="https://webhook.site/">Webhook Tester</a> and click <strong>Copy</strong> to copy the URL you are given.</p></li>
+<li><p>Open your Custom app.</p></li>
+<li><p>Paste your Webhook Tester URL into <strong>Endpoint URL</strong> field and save.</p></li>
+<li><p>Click <strong>Send sample payload</strong> near the action you want to test.</p>
+<img alt="Send sample payload" src="../_images/send_sample_payload.png" />
+</li>
+<li><p>After you finish the implementation on your site <strong>change Webhook Tester URL
+to the live URL</strong> in your Custom app.</p></li>
+<li><p>Click <strong>Send sample payload</strong> to test action with Live URL.</p></li>
+</ol>
+</section>
+<section id="whitelisting-talkable-ips">
+<h2>Whitelisting Talkable IPs<a class="headerlink" href="#whitelisting-talkable-ips" title="Link to this heading">¶</a></h2>
+<p>In case your servers are behind firewall, you may need to whitelist Talkable IP
+addresses so webhooks can be delivered. Pass list of these addresses to your network administrator:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>100.26.94.244</p></li>
+<li><p>18.207.91.200</p></li>
+<li><p>18.210.165.17</p></li>
+<li><p>18.232.203.127</p></li>
+<li><p>18.233.48.151</p></li>
+<li><p>184.73.206.68</p></li>
+<li><p>23.21.155.129</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>3.222.226.72</p></li>
+<li><p>34.197.54.191</p></li>
+<li><p>34.226.253.236</p></li>
+<li><p>34.231.104.179</p></li>
+<li><p>34.232.247.192</p></li>
+<li><p>35.169.186.170</p></li>
+<li><p>35.171.77.58</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>35.173.87.187</p></li>
+<li><p>44.217.136.252</p></li>
+<li><p>44.219.211.174</p></li>
+<li><p>50.16.143.102</p></li>
+<li><p>50.17.244.178</p></li>
+<li><p>52.204.148.18</p></li>
+<li><p>52.22.0.55</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>52.6.41.1</p></li>
+<li><p>52.7.94.243</p></li>
+<li><p>54.164.128.44</p></li>
+<li><p>54.208.14.192</p></li>
+<li><p>54.86.208.153</p></li>
+<li><p>54.86.241.218</p></li>
+<li><p>54.91.51.228</p></li>
+</ul>
+</td></tr></table>
 </section>
 </section>
 
