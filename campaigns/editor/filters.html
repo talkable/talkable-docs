@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../../_static/talkable.css?v=6a6e49b7" />
     <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
-    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <link rel="canonical" href="https://docs.talkable.com/campaigns/editor/filters.html" /><!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -310,8 +310,8 @@ unless time zone is specified.</p>
 <p>Reference to all available locales can be found in <a class="reference external" rel="nofollow" href="https://github.com/svenfuchs/rails-i18n#available-locales">rails-i18n documentation</a></p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="nv">valid_until</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">format_date</span><span class="w"> </span><span class="p">}}</span>
 <span class="p">{{</span><span class="w"> </span><span class="nv">valid_until</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">format_date</span><span class="p">:</span><span class="w"> </span><span class="na">format</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;%Y-%m-%d&quot;</span><span class="w"> </span><span class="p">}}</span>
-<span class="p">{{</span><span class="w"> </span><span class="nv">valid_until</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">format_date</span><span class="p">:</span><span class="w"> </span><span class="na">locale</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;en&quot;</span><span class="w"> </span><span class="p">}}</span>
-<span class="p">{{</span><span class="w"> </span><span class="nv">valid_until</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">format_date</span><span class="p">:</span><span class="w"> </span><span class="na">format</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;%Y-%m-%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="na">locale</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;en&quot;</span><span class="w"> </span><span class="p">}}</span>
+<span class="p">{{</span><span class="w"> </span><span class="nv">valid_until</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">format_date</span><span class="p">:</span><span class="w"> </span><span class="na">locale</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ru&quot;</span><span class="w"> </span><span class="p">}}</span>
+<span class="p">{{</span><span class="w"> </span><span class="nv">valid_until</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">format_date</span><span class="p">:</span><span class="w"> </span><span class="na">format</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;%Y-%m-%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="na">locale</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ru&quot;</span><span class="w"> </span><span class="p">}}</span>
 <span class="p">{{</span><span class="w"> </span><span class="nv">current_time</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">format_date</span><span class="w"> </span><span class="p">}}</span>
 </pre></div>
 </div>
@@ -323,7 +323,7 @@ unless time zone is specified.</p>
 <p>If given time is yesterday, returns <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">day</span></code>.</p>
 <p>Reference to all available locales can be found in <a class="reference external" rel="nofollow" href="https://github.com/svenfuchs/rails-i18n#available-locales">rails-i18n documentation</a></p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="nv">valid_until</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">human_time_ago</span><span class="w"> </span><span class="p">}}</span>
-<span class="p">{{</span><span class="w"> </span><span class="nv">valid_until</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">human_time_ago</span><span class="p">:</span><span class="w"> </span><span class="na">locale</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;en&quot;</span><span class="w"> </span><span class="p">}}</span>
+<span class="p">{{</span><span class="w"> </span><span class="nv">valid_until</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">human_time_ago</span><span class="p">:</span><span class="w"> </span><span class="na">locale</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;ru&quot;</span><span class="w"> </span><span class="p">}}</span>
 <span class="p">{{</span><span class="w"> </span><span class="nv">current_time</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">human_time_ago</span><span class="w"> </span><span class="p">}}</span>
 </pre></div>
 </div>
@@ -980,7 +980,6 @@ Requires Rybbon app to be installed and enabled in order to work.</p>
 <div class="highlight-liquid notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="w"> </span><span class="s2">&quot;a9a3472f4ea858758e0cd686de8408e2&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">rybbon</span><span class="p">:</span><span class="w"> </span><span class="na">amount</span><span class="o">:</span><span class="w"> </span><span class="mf">13.5</span><span class="w"> </span><span class="p">}}</span>
 </pre></div>
 </div>
-<p>Find more details about the integration here: <a class="reference internal" href="../../advanced_features/rybbon.html#advanced-features-rybbon"><span class="std std-ref">Rybbon</span></a></p>
 <p><hr></p>
 </section>
 <section id="tremendous">
@@ -993,7 +992,6 @@ Implies that there is only one funding source in the Tremendous account.</p>
 </pre></div>
 </div>
 <p>Returns <code class="docutils literal notranslate"><span class="pre">https://www.tremendous.com/rewards/payout/reward123</span></code></p>
-<p>Find more details about the integration here: <a class="reference internal" href="../../advanced_features/tremendous.html#advanced-features-tremendous"><span class="std std-ref">Tremendous</span></a></p>
 </section>
 </section>
 
