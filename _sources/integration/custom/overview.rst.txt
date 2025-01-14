@@ -18,7 +18,8 @@ a few quick steps by adding the below scripts to your site.
     data for Talkable to service the referral campaigns.
 
     Site-specific integration scripts are found after logging in at
-    ``https://www.admin.talkable.com/sites/<YOUR-TALKABLE-SITE-ID>/integration/other``
+    ``https://www.admin.talkable.com/sites/<YOUR-TALKABLE-SITE-
+    ID>/integration/other``
 
 .. raw:: html
 
