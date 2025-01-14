@@ -620,6 +620,18 @@ div.hidden {
     }
 }
 
+@media only screen and (min-width: 1245px) {
+    .content-container, .header {
+        transform: translateX(-122px);
+    }
+}
+
+@media only screen and (min-width: 981px) and ( max-width: 1244px) {
+    .content-container, .header {
+        margin-left: 20px;
+    }
+}
+
 @media only print {
   html {
     background-color: transparent;
