@@ -92,6 +92,8 @@ It is recommended to create a new Price Rule in Shopify if there is a need to us
   Talkable validates the Price Rule attached to a coupon list. There are certain Price Rule attributes that must match the coupon list configuration.
   These include:
 
+  `allocation_method` - must be "across"
+
   `value` - must correspond to coupon list amount
 
   `value_type` - must correspond to coupon list type
@@ -111,6 +113,8 @@ Shopify Price Rule Changed Email Notification
 If you modify a Price Rules on Shopify, it could make them incompatible with the coupon lists they are attached to. In order to find out about such changes as early as possible, we have a daily monitoring job that checks that Price Rules have no critical differences from respective coupon lists.
 
 Attributes that are checked in this job are the following:
+
+  - `allocation_method` - must always be "across"
 
   - `usage_limit` - must always be 1
 
