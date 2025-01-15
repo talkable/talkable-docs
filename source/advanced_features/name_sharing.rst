@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Talkable allows the Advocates to share referral offers by their names.
+  :description: Talkable allows the Advocates to share referral offers by their names.
 
 Name Sharing
 ============
@@ -51,17 +51,17 @@ If you don't have the localization in your campaign code, you can add it manuall
 
 .. code-block:: liquid
 
-   {% assign advocate_share_page_channel_personal_name = "advocate_share_page_channel_personal_name" | localize: trait: "boolean", default: "Disabled" %}
+  {% assign advocate_share_page_channel_personal_name = "advocate_share_page_channel_personal_name" | localize: trait: "boolean", default: "Disabled" %}
 
 There can be multiple Advocate campaigns, as well as multiple Friend campaigns.
 Upon a reward claim by a Friend, the newest offer from the respective Advocate will be matched.
 
 .. important::
-   Make sure to set up both advocate and friend incentives in the Advocate campaign. The Claim by Name campaign
-   does not hold any incentive configuration and only serves to show a claim widget.
+  Make sure to set up both advocate and friend incentives in the Advocate campaign. The Claim by Name campaign
+  does not hold any incentive configuration and only serves to show a claim widget.
 
 .. note::
-   All advocate and friend metrics are counted toward the Advocate campaign.
+  All advocate and friend metrics are counted toward the Advocate campaign.
 
 Inline Widget
 -------------
@@ -72,18 +72,18 @@ the different offers and only one Claim by Name campaign, which will serve all t
 In the rules of the Claim by Name campaign there is an option to make the floating widget inline. This can be done in the Rules of the campaign:
 
 .. image:: /_static/img/advanced_features/name_sharing_inline_widget_1.png
-   :alt: Inline widget option
+  :alt: Inline widget option
 
 After that the campaign will be embedded in the page:
 
 .. image:: /_static/img/advanced_features/name_sharing_inline_widget_2.png
-   :alt: Inline widget
+  :alt: Inline widget
 
 Once you enabled “Inline Widget”, ask client to add the following code for the inline campaign (container):
 
 .. code-block:: html
 
-   <div id=’talkable-claim-by-name’></div>
+  <div id=’talkable-claim-by-name’></div>
 
 Without adding this code, the campaign won’t be visible.
 
@@ -100,7 +100,7 @@ If Shopify theme uses shopping cart as a dynamic widget, you can integrate Claim
 
 .. code-block:: html
 
-   <div id=’talkable-claim-by-name’></div>
+  <div id=’talkable-claim-by-name’></div>
 
 Interactions with the personal name-share link
 ----------------------------------------------

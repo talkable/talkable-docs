@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Talkable offers free extensions for Magento 1.x and Magento 2.x. Now you can integrate and use Talkable with your Magento store.
+  :description: Talkable offers free extensions for Magento 1.x and Magento 2.x. Now you can integrate and use Talkable with your Magento store.
 
 Magento Integration
 *******************
@@ -38,8 +38,8 @@ To check your Magento version, navigate to your store's admin panel. The version
 
   .. toctree::
 
-     magento/magento1
-     magento/magento2
+    magento/magento1
+    magento/magento2
 
 **Contact us**
 

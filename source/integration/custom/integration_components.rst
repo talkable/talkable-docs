@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Find the components of what Talkable is composed.
+  :description: Find the components of what Talkable is composed.
 
 Integration Components
 ======================
@@ -67,29 +67,29 @@ script.
 
 .. code-block:: html
 
-   <!-- Begin Talkable integration code -->
-   <script async src="https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/<YOUR-TALKABLE-SITE-ID>.min.js"></script>
-   <script>
-     window._talkableq = window._talkableq || [];
-     window._talkableq.unshift(['init', { site_id: '<YOUR-TALKABLE-SITE-ID>' }]);
-     window._talkableq.push(['authenticate_customer', {
-       email: '', // Optional - Email of the customer, if available. Example: 'customer@example.com'
-       phone_number: '', // Optional - Customer's phone number. Example: '+12025551111'
-       first_name: '', // Optional - First name of the customer. Example: 'John'
-       last_name: '', // Optional - Last name of the customer. Example: 'Smith'
-       traffic_source: '', // Optional - Traffic source that led to the campaign. Example: 'facebook'
-       segment1: '', // Optional - Custom segment (e.g., location, age group, source channel, platform, gender, interests).
-       segment2: '', // Optional - Custom segment (e.g., location, age group, source channel, platform, gender, interests).
-       segment3: '' // Optional - Custom segment (e.g., location, age group, source channel, platform, gender, interests).
-     }]);
-   </script>
-   <!-- End Talkable integration code -->
+  <!-- Begin Talkable integration code -->
+  <script async src="https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/<YOUR-TALKABLE-SITE-ID>.min.js"></script>
+  <script>
+    window._talkableq = window._talkableq || [];
+    window._talkableq.unshift(['init', { site_id: '<YOUR-TALKABLE-SITE-ID>' }]);
+    window._talkableq.push(['authenticate_customer', {
+      email: '', // Optional - Email of the customer, if available. Example: 'customer@example.com'
+      phone_number: '', // Optional - Customer's phone number. Example: '+12025551111'
+      first_name: '', // Optional - First name of the customer. Example: 'John'
+      last_name: '', // Optional - Last name of the customer. Example: 'Smith'
+      traffic_source: '', // Optional - Traffic source that led to the campaign. Example: 'facebook'
+      segment1: '', // Optional - Custom segment (e.g., location, age group, source channel, platform, gender, interests).
+      segment2: '', // Optional - Custom segment (e.g., location, age group, source channel, platform, gender, interests).
+      segment3: '' // Optional - Custom segment (e.g., location, age group, source channel, platform, gender, interests).
+    }]);
+  </script>
+  <!-- End Talkable integration code -->
 
 In this example, `segment1`, `segment2`, and `segment3` attributes are passed through `authenticate_customer` to enable segmentation without requiring an Origin creation.
 
 .. note::
 
-   Segments can also be passed in `register_affiliate`, `register_purchase`, and `register_event`, providing flexibility for different integration scenarios.
+  Segments can also be passed in `register_affiliate`, `register_purchase`, and `register_event`, providing flexibility for different integration scenarios.
 
 This approach simplifies custom data handling for customers, allowing for unified data across various methods and optimizing segmentation management without additional calls.
 
@@ -101,7 +101,7 @@ Initialization Script Notes
    here:
 
    .. figure:: /_static/img/site_id.png
-      :alt: Site ID
+     :alt: Site ID
 
 2. **Variables.** Use your dynamic variables to pass user details {email,
    first_name, last_name} if the user is logged in and the data
@@ -153,7 +153,7 @@ Post Purchase Script Notes
 
 .. note::
 
-   All PII params support data encryption. Find more about :ref:`Params Encryption <advanced_features/params_encryption>`.
+  All PII params support data encryption. Find more about :ref:`Params Encryption <advanced_features/params_encryption>`.
 
 .. _integration/custom/integration_components/advocate_landing_page:
 
@@ -165,7 +165,7 @@ in the body of the page between your standard site header and footer:
 
 .. code-block:: html
 
-   <div id="talkable-offer"></div>
+  <div id="talkable-offer"></div>
 
 Advocate Landing Page Notes
 ---------------------------
@@ -183,7 +183,7 @@ Advocate Landing Page Notes
    `https://www.admin.talkable.com/sites/<YOUR-TALKABLE-SITE-ID>/placements:`
 
    .. figure:: /_static/img/placement_edit.png
-      :alt: Placement Edit
+     :alt: Placement Edit
 
 |hr|
 
@@ -198,7 +198,7 @@ the body of the page:
 
 .. code-block:: html
 
-   <div id="talkable-offer"></div>
+  <div id="talkable-offer"></div>
 
 Referral Dashboard Notes
 ------------------------
@@ -230,7 +230,7 @@ Referral Dashboard Notes
 
 .. container:: hidden
 
- .. toctree::
+  .. toctree::
 
     Alternate Post Purchase Script for cart line item passing <alternate_post_purchase>
     Integrating with a Tag Manager <integration_tag_manager>

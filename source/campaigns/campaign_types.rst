@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Motivate customers to share your products with their Friends from anywhere on your site.
+  :description: Motivate customers to share your products with their Friends from anywhere on your site.
 
 Campaign Types
 ==============
@@ -17,8 +17,8 @@ on your site. Invite campaigns are both powerful and versatile. Multiple Invite
 campaigns can be run simultaneously for maximum results.
 
 .. image:: /_static/img/campaign_types/invite.png
-   :alt: Campaign Type - Invite
-   :class: is-minimal
+  :alt: Campaign Type - Invite
+  :class: is-minimal
 
 Advocate Dashboard
 ------------------
@@ -29,8 +29,8 @@ motivated to share. Advocate Dashboards also reduce Customer Service inquiries
 as customers can see statuses directly from the dashboard.
 
 .. image:: /_static/img/campaign_types/dashboard-type.png
-   :alt: Campaign Type - Dashboard
-   :class: is-minimal
+  :alt: Campaign Type - Dashboard
+  :class: is-minimal
 
 Reward Gleam
 ------------
@@ -41,8 +41,8 @@ receives a reward and visits your website the coupon code is captured. The code
 will be highlighted in the Reward Gleam at the bottom of the page.
 
 .. image:: /_static/img/campaign_types/gleam.jpg
-   :alt: Campaign Type - Reward Gleam
-   :class: is-minimal
+  :alt: Campaign Type - Reward Gleam
+  :class: is-minimal
 
 Leaderboard
 -----------
@@ -52,8 +52,8 @@ Leaderboard page based on the number of successful referrals. After an allotted
 time period, top performers can be identified and rewarded with a grand prize.
 
 .. image:: /_static/img/campaign_types/leaderboard.png
-   :alt: Campaign Type - Leaderboard
-   :class: is-minimal
+  :alt: Campaign Type - Leaderboard
+  :class: is-minimal
 
 Tiered Rewards
 --------------
@@ -63,8 +63,8 @@ as they are rewarded for subsequent successful referrals. By setting reward
 goals for Advocates, they are more likely to increase their share rate.
 
 .. image:: /_static/img/campaign_types/tiered_rewards.png
-   :alt: Campaign Type - Tiered Rewards
-   :class: is-minimal
+  :alt: Campaign Type - Tiered Rewards
+  :class: is-minimal
 
 .. _campaigns/claim_by_name:
 
@@ -78,10 +78,10 @@ The Advocate can share their name and describe the referral offer via any channe
 and the Friend can then claim the reward by entering the Advocate's personal name in the Claim by Name popup.
 
 .. note::
-   Claim by Name campaign does not offer any incentives on its own. Both the Advocate and the Friend rewards
-   should be specified in the name sharing campaign (i.e. the campaign with personal name sharing channel enabled).
-   Similarly, the funnel metrics are also tracked within the Advocate campaign.
+  Claim by Name campaign does not offer any incentives on its own. Both the Advocate and the Friend rewards
+  should be specified in the name sharing campaign (i.e. the campaign with personal name sharing channel enabled).
+  Similarly, the funnel metrics are also tracked within the Advocate campaign.
 
 .. image:: /_static/img/campaign_types/claim_by_name.png
-   :alt: Campaign Type - Claim by Name
-   :class: is-minimal
+  :alt: Campaign Type - Claim by Name
+  :class: is-minimal

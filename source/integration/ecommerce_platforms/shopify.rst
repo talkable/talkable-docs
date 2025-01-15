@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Here’s how you can integrate Talkable Shopify app with your store.
+  :description: Here’s how you can integrate Talkable Shopify app with your store.
 
 Shopify Integration
 ===================
@@ -14,9 +14,9 @@ Automatic integration
 
   .. note::
 
-     If you have previously integrated with Talkable, make sure you remove the manual
-     Talkable integration script located in the Additional Content & Scripts section before
-     you start the Automatic integration process. See `Manual integration`_ for details.
+    If you have previously integrated with Talkable, make sure you remove the manual
+    Talkable integration script located in the Additional Content & Scripts section before
+    you start the Automatic integration process. See `Manual integration`_ for details.
 
 1. Contact sales@talkable.com to learn about our pricing and set up an account with Talkable
 
@@ -31,10 +31,10 @@ Automatic integration
 
   .. note::
 
-     Post Purchase campaign is located at the “Thank you” page after Checkout.
+    Post Purchase campaign is located at the “Thank you” page after Checkout.
 
-     To check how Standalone Campaign looks visit */pages/share* or */pages/invite* links of your store.
-     You can edit these links in Administrative panel of your store.
+    To check how Standalone Campaign looks visit */pages/share* or */pages/invite* links of your store.
+    You can edit these links in Administrative panel of your store.
 
 .. _integration/ecommerce_platforms/shopify/manual_integration:
 
@@ -77,7 +77,7 @@ please follow the instructions below.
 
           .. code-block:: liquid
 
-             {% render "talkable-partial" %}
+            {% render "talkable-partial" %}
 
         * Click “Save”
 
@@ -92,13 +92,13 @@ please follow the instructions below.
 
           .. code-block:: html
 
-             <div id="talkable-offer"></div>
+            <div id="talkable-offer"></div>
 
         * Optionally, update the schema name to anything meaningful, for example, “Referral campaign“
 
           .. image:: /_static/img/shopify/editor_section.png
-             :alt: Shopify editor - talkable-campaign section
-             :class: is-minimal
+            :alt: Shopify editor - talkable-campaign section
+            :class: is-minimal
 
         * Click “Save”
 
@@ -110,15 +110,15 @@ please follow the instructions below.
         * Change the type of the main section to `talkable-campaign`
 
           .. image:: /_static/img/shopify/editor_template.png
-             :alt: Shopify editor - Talkable page section
-             :class: is-minimal
+            :alt: Shopify editor - Talkable page section
+            :class: is-minimal
 
           .. important::
-             The name of the section should be the same as the one you used
-             in the previous step when naming your section file.
+            The name of the section should be the same as the one you used
+            in the previous step when naming your section file.
 
           .. important::
-             If your main section is disabled, remove the row that does it.
+            If your main section is disabled, remove the row that does it.
 
     3. Create a page:
 
@@ -140,13 +140,13 @@ please follow the instructions below.
 
           .. code-block:: html
 
-             {% if shop.customer_accounts_enabled %}
-               {% if customer %}
-                 <div id="talkable-offer"></div>
-               {% else %}
-                 {{ 'Log in' | customer_login_link }}
-               {% endif %}
-             {% endif %}
+            {% if shop.customer_accounts_enabled %}
+              {% if customer %}
+                <div id="talkable-offer"></div>
+              {% else %}
+                {{ 'Log in' | customer_login_link }}
+              {% endif %}
+            {% endif %}
 
         * Optionally, update the schema name to anything meaningful, for example, “Referral dashboard“
         * Click “Save”
@@ -160,20 +160,20 @@ please follow the instructions below.
 
           .. code-block:: JSON
 
-             {
-               "sections": {
-                 "main": {
-                   "type": "talkable-dashboard"
-                 }
-               }
-             }
+            {
+              "sections": {
+                "main": {
+                  "type": "talkable-dashboard"
+                }
+              }
+            }
 
           .. important::
-             The name of the section should be the same as the one you used
-             in the previous step when naming your section file.
+            The name of the section should be the same as the one you used
+            in the previous step when naming your section file.
 
           .. important::
-             If your main section is disabled, remove the row that does it.
+            If your main section is disabled, remove the row that does it.
 
     3. Create a page:
 
@@ -234,7 +234,7 @@ please follow the instructions below.
 
           .. code-block:: liquid
 
-             {% render "talkable-partial" %}
+            {% render "talkable-partial" %}
 
         * Click “Save”
 
@@ -249,7 +249,7 @@ please follow the instructions below.
 
           .. code-block:: html
 
-             <div id="talkable-offer"></div>
+            <div id="talkable-offer"></div>
 
         * Click “Save”
 
@@ -273,13 +273,13 @@ please follow the instructions below.
 
           .. code-block:: html
 
-             {% if shop.customer_accounts_enabled %}
-               {% if customer %}
-                 <div id="talkable-offer"></div>
-               {% else %}
-                 {{ 'Log in' | customer_login_link }}
-               {% endif %}
-             {% endif %}
+            {% if shop.customer_accounts_enabled %}
+              {% if customer %}
+                <div id="talkable-offer"></div>
+              {% else %}
+                {{ 'Log in' | customer_login_link }}
+              {% endif %}
+            {% endif %}
 
         * Click “Save”
 
@@ -312,9 +312,9 @@ please follow the instructions below.
 
 .. container:: hidden
 
-   .. toctree::
+  .. toctree::
 
-      Verifying Integration instructions <../verify>
+    Verifying Integration instructions <../verify>
 
 .. _integration/ecommerce_platforms/shopify/manual_integration_theme_migration:
 
@@ -337,7 +337,7 @@ you need to do the following:
 
           .. code-block:: html
 
-             <div id="talkable-offer"></div>
+            <div id="talkable-offer"></div>
 
           If there were any customizations in the `templates/page.talkable.liquid`, add them as well
 
@@ -352,15 +352,15 @@ you need to do the following:
         * Change the type of the main section to `talkable-campaign`
 
           .. image:: /_static/img/shopify/editor_template.png
-             :alt: Shopify editor - Talkable page section
-             :class: is-minimal
+            :alt: Shopify editor - Talkable page section
+            :class: is-minimal
 
           .. important::
-             The name of the section should be the same as the one you used
-             in the previous step when naming your section file.
+            The name of the section should be the same as the one you used
+            in the previous step when naming your section file.
 
           .. important::
-             If your main section is disabled, remove the row that does it.
+            If your main section is disabled, remove the row that does it.
 
 2. Dashboard page migration:
 
@@ -375,13 +375,13 @@ you need to do the following:
 
           .. code-block:: html
 
-             {% if shop.customer_accounts_enabled %}
-               {% if customer %}
-                 <div id="talkable-offer"></div>
-               {% else %}
-                 {{ 'Log in' | customer_login_link }}
-               {% endif %}
-             {% endif %}
+            {% if shop.customer_accounts_enabled %}
+              {% if customer %}
+                <div id="talkable-offer"></div>
+              {% else %}
+                {{ 'Log in' | customer_login_link }}
+              {% endif %}
+            {% endif %}
 
           If there were any customizations in the `templates/page.talkable-dashboard.liquid`, add them as well
 
@@ -397,20 +397,20 @@ you need to do the following:
 
           .. code-block:: JSON
 
-             {
-               "sections": {
-                 "main": {
-                   "type": "talkable-dashboard"
-                 }
-               }
-             }
+            {
+              "sections": {
+                "main": {
+                  "type": "talkable-dashboard"
+                }
+              }
+            }
 
           .. important::
-             The name of the section should be the same as the one you used
-             in the previous step when naming your section file.
+            The name of the section should be the same as the one you used
+            in the previous step when naming your section file.
 
           .. important::
-             If your main section is disabled, remove the row that does it.
+            If your main section is disabled, remove the row that does it.
 
 **Contact us**
 

@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Synchronize Talkable collected emails with Salesforce Marketing Cloud integration.
+  :description: Synchronize Talkable collected emails with Salesforce Marketing Cloud integration.
 
 Salesforce Marketing Cloud
 ==========================

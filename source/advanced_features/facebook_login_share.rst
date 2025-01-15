@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Integrate Facebook Login & Share with your Talkable system for enhanced user authentication and social sharing. Follow our step-by-step guide to enable the app, configure Facebook App IDs, and streamline users login and sharing processes.
+  :description: Integrate Facebook Login & Share with your Talkable system for enhanced user authentication and social sharing. Follow our step-by-step guide to enable the app, configure Facebook App IDs, and streamline users login and sharing processes.
 
 Facebook Login & Share
 ======================
@@ -13,15 +13,15 @@ Overview
 This documentation provides a comprehensive guide on connecting your Facebook App for Login & Share in Talkable.
 
 .. note::
-   In case you don't have the Talkable Facebook app installed, users can still log in and share via Facebook, but Talkable's default Facebook app will be used.
+  In case you don't have the Talkable Facebook app installed, users can still log in and share via Facebook, but Talkable's default Facebook app will be used.
 
 Prerequisites
 -------------
 
 Before you begin, ensure you have the following:
 
-   - Access to the Facebook Developer Console.
-   - A Facebook App ID.
+- Access to the Facebook Developer Console.
+- A Facebook App ID.
 
 Integration Steps
 -----------------

@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Claim by Name campaign appears from the corner of a page showing call-to-action messages to your customers. And it all happens smoothly.
+  :description: Claim by Name campaign appears from the corner of a page showing call-to-action messages to your customers. And it all happens smoothly.
 
 Claim by Name Placement
 =======================

@@ -57,6 +57,30 @@ Here is a reference to "talkable section": :ref:`talkable-section` which will ha
 name "Talkable Section".
 ```
 
+### General Formatting Rules for Documentation
+
+**Directives (`..` syntax)**:
+
+* All directives starting with `..` (e.g., `.. image::`, `.. note::`) must have **2 spaces** indentation for their content. Examples:
+
+    ```rst
+    .. meta::
+      :description: This is an example of a meta directive.
+
+    .. image:: /_static/img/example.jpg
+      :alt: Example Image
+
+    .. note::
+      This is an important note.
+    
+    .. code-block:: html
+      <h1>Hello world!</h1>
+    ```
+
+#### Empty Line at the End of Files
+
+Always ensure there is a blank line at the end of each file to adhere to formatting standards.
+
 Build the documentation
 -----------------------
 

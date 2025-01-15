@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: BigCommerce integration allows synchronizing coupons to BigCommerce with webhook support.
+  :description: BigCommerce integration allows synchronizing coupons to BigCommerce with webhook support.
 
 BigCommerce
 ===========
