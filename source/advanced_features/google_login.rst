@@ -85,4 +85,4 @@ Additional Resources
 - OAuth 2.0 Documentation: https://developers.google.com/identity/protocols/oauth2
 
 .. note::
-   For detailed examples and advanced usage, refer to the official Google OAuth 2.0 documentation.
+  For detailed examples and advanced usage, refer to the official Google OAuth 2.0 documentation.

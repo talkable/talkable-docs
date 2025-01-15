@@ -312,9 +312,9 @@ please follow the instructions below.
 
 .. container:: hidden
 
-   .. toctree::
+  .. toctree::
 
-     Verifying Integration instructions <../verify>
+    Verifying Integration instructions <../verify>
 
 .. _integration/ecommerce_platforms/shopify/manual_integration_theme_migration:
 

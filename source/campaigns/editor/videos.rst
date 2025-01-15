@@ -46,4 +46,4 @@ Liquid Tutorial 3: Using Custom Assets
 
 .. |liquid_basics| raw:: html
 
-   <a href="https://shopify.dev/api/liquid/basics" target="_blank">https://shopify.dev/api/liquid/basics</a>
+  <a href="https://shopify.dev/api/liquid/basics" target="_blank">https://shopify.dev/api/liquid/basics</a>
