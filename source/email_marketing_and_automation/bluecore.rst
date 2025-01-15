@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Synchronize email opt-ins collected with Talkable to Bluecore for email marketing and automation.
+  :description: Synchronize email opt-ins collected with Talkable to Bluecore for email marketing and automation.
 
 Bluecore
 ========

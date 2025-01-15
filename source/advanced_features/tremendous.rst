@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Reward advocates with gift cards provided by Tremendous.
+  :description: Reward advocates with gift cards provided by Tremendous.
 
 Tremendous Integration
 ######################

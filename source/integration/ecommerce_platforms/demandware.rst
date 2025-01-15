@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Talkable cartridge is a self-contained cartridge, which you can easily integrate into any Salesforce B2C Commerce Cloud store.
+  :description: Talkable cartridge is a self-contained cartridge, which you can easily integrate into any Salesforce B2C Commerce Cloud store.
 
 Salesforce B2C Commerce Cloud Integration
 =========================================

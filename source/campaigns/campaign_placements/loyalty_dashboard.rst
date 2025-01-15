@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Loyalty Dashboard Placement is a Placement for Loyalty Campaigns.
+  :description: Loyalty Dashboard Placement is a Placement for Loyalty Campaigns.
 
 Loyalty Dashboard Placement
 ===========================

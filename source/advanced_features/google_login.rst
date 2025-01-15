@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Integrate Google Login with your Talkable system for secure and seamless user authentication. Follow our step-by-step guide to enable the app, configure custom Google Client IDs, and enhance your login processes.
+  :description: Integrate Google Login with your Talkable system for secure and seamless user authentication. Follow our step-by-step guide to enable the app, configure custom Google Client IDs, and enhance your login processes.
 
 Google Login
 ============

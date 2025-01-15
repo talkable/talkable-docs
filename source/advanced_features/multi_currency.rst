@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Talkable supports working with multiple currencies within the same site.
+  :description: Talkable supports working with multiple currencies within the same site.
 
 Multi-currency
 ==============

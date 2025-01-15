@@ -1,7 +1,7 @@
 .. _advanced_features/white_labeling/shopify:
 
 .. meta::
-   :description: Learn how to add DNS records in Shopify to enable white-labeling.
+  :description: Learn how to add DNS records in Shopify to enable white-labeling.
 
 Adding DNS records in Shopify
 =============================

@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Whenever view or stylesheet is updated, the editor automatically saves changes to History.
+  :description: Whenever view or stylesheet is updated, the editor automatically saves changes to History.
 
 History
 -------

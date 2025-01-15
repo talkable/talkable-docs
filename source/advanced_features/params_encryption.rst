@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: It is possible to encrypt Advocate, Friend, and Loyalty member emails on back-end if you want to provide additional security.
+  :description: It is possible to encrypt Advocate, Friend, and Loyalty member emails on back-end if you want to provide additional security.
 
 Params Encryption
 =================
@@ -24,7 +24,7 @@ Also it’s possible to pass encrypted email as a GET parameter (e.g. for CTA li
 point to standalone invite page). But to do that encrypted email should be **URL-encoded**.
 
 .. note::
-   It’s recommended to use `Optimal Asymmetric Encryption Padding (OAEP)`_ padding scheme together with RSA encryption.
+  It’s recommended to use `Optimal Asymmetric Encryption Padding (OAEP)`_ padding scheme together with RSA encryption.
 
 Ruby Example
 ------------

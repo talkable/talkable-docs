@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Find the components of what Talkable is composed.
+  :description: Find the components of what Talkable is composed.
 
 Integration Components
 ======================
@@ -230,7 +230,7 @@ Referral Dashboard Notes
 
 .. container:: hidden
 
- .. toctree::
+  .. toctree::
 
-   Alternate Post Purchase Script for cart line item passing <alternate_post_purchase>
-   Integrating with a Tag Manager <integration_tag_manager>
+    Alternate Post Purchase Script for cart line item passing <alternate_post_purchase>
+    Integrating with a Tag Manager <integration_tag_manager>

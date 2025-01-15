@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Referral Webhook notifies your endpoint that your brand Advocate’s referral status has become “Approved”.
+  :description: Referral Webhook notifies your endpoint that your brand Advocate’s referral status has become “Approved”.
 
 Referral Webhook
 ================

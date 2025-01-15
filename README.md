@@ -57,33 +57,22 @@ Here is a reference to "talkable section": :ref:`talkable-section` which will ha
 name "Talkable Section".
 ```
 
-### Coding Guidelines for Documentation
+### General Formatting Rules for Documentation
 
-#### General Formatting Rules
+**Directives (`..` syntax)**:
 
-1. **Directives (`..` syntax)**:
-  - All directives starting with `..` (e.g., `.. image::`, `.. note::`) must have **2 spaces** indentation for their content. Examples:
+* All directives starting with `..` (e.g., `.. image::`, `.. note::`) must have **2 spaces** indentation for their content. Examples:
 
     ```rst
+    .. meta::
+      :description: This is an example of a meta directive.
+
     .. image:: /_static/img/example.jpg
       :alt: Example Image
 
     .. note::
       This is an important note.
-    ```
-
-2. **Meta Directives (`.. meta::`)**:
-  - For `.. meta::` blocks, use **3 spaces** for the content indentation. Example:
-
-    ```rst
-    .. meta::
-       :description: This is an example of a meta directive.
-    ```
-
-3. **Code Blocks (`.. code-block::`)**:
-  - Code inside `.. code-block::` must have **2 spaces** indentation. Example:
-
-    ```rst
+    
     .. code-block:: html
       <h1>Hello world!</h1>
     ```

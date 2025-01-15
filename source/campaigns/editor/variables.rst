@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Variables show you dynamic data such as Campaign tag, Advocate info, etc.
+  :description: Variables show you dynamic data such as Campaign tag, Advocate info, etc.
 
 .. _editor_variables:
 

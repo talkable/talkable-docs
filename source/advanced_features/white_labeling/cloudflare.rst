@@ -1,7 +1,7 @@
 .. _advanced_features/white_labeling/cloudflare:
 
 .. meta::
-   :description: Learn how to add DNS records in Cloudflare to enable white-labeling.
+  :description: Learn how to add DNS records in Cloudflare to enable white-labeling.
 
 Adding DNS records in Cloudflare
 ================================

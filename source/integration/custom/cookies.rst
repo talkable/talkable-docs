@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: This is all about how we use cookies.
+  :description: This is all about how we use cookies.
 
 Cookies
 #######

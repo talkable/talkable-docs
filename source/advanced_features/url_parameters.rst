@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Talkable allows overriding some of the parameters right through URL query string.
+  :description: Talkable allows overriding some of the parameters right through URL query string.
 
 Using URL Parameters
 ====================

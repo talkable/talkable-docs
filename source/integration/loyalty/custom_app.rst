@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Learn how to use Custom app to receive data about loyalty events.
+  :description: Learn how to use Custom app to receive data about loyalty events.
 
 Custom App for Loyalty
 ======================

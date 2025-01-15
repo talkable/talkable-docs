@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Two powerful instruments, Page-Views and Email-Views, let you control nearly every step of the refer-a-friend campaign. You won’t miss the moment of your success.
+  :description: Two powerful instruments, Page-Views and Email-Views, let you control nearly every step of the refer-a-friend campaign. You won’t miss the moment of your success.
 
 Views
 =====

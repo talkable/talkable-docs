@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: The Magento 2 Integration Extension is available to download in the Magento Marketplace. The extension supports all versions of Magento 2.0 or higher.
+  :description: The Magento 2 Integration Extension is available to download in the Magento Marketplace. The extension supports all versions of Magento 2.0 or higher.
 
 Magento 2.x Integration
 =======================
@@ -115,13 +115,13 @@ to your Talkable account.
   Changing the Site ID will invalidate the full page cache. Magento will display a warning message with
   a link to the Cache Management page. Please follow this link and refresh the invalidated cache types.
 
-   .. image:: /_static/img/magento2/cache.jpg
+  .. image:: /_static/img/magento2/cache.jpg
 
 .. note::
 
   You need to paste the Site ID from your Talkable Site Dashboard into this field.
 
-   .. image:: /_static/img/magento2/configure3.jpg
+  .. image:: /_static/img/magento2/configure3.jpg
 
 |page_break|
 

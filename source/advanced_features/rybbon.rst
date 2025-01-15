@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Integrate Rybbon with your Talkable system to generate gift claim links and manage campaign-specific rewards.
+  :description: Integrate Rybbon with your Talkable system to generate gift claim links and manage campaign-specific rewards.
 
 Rybbon
 ======

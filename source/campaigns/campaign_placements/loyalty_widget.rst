@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Loyalty Widget Placement is a Placement for Loyalty Campaigns.
+  :description: Loyalty Widget Placement is a Placement for Loyalty Campaigns.
 
 Loyalty Widget Placement
 ========================

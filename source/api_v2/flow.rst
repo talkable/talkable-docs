@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: This flow helps to integrate with Talkable via API for a default store or service.
+  :description: This flow helps to integrate with Talkable via API for a default store or service.
 
 Referral Program via API
 ========================

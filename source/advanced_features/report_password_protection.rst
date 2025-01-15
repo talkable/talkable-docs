@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: To protect sensitive information, all exported reports are password protected by default.
+  :description: To protect sensitive information, all exported reports are password protected by default.
 
 Report Password Protection
 ==========================

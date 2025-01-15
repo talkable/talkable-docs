@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Find out how to auto-enroll loyalty members.
+  :description: Find out how to auto-enroll loyalty members.
 
 Auto-Enrollment
 ===============

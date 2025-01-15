@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: This is a public key encryption program that has become the most popular standard for email encryption.
+  :description: This is a public key encryption program that has become the most popular standard for email encryption.
 
 File Encryption
 ===============

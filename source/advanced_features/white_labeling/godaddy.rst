@@ -1,7 +1,7 @@
 .. _advanced_features/white_labeling/godaddy:
 
 .. meta::
-   :description: Learn how to add DNS records in GoDaddy to enable white-labeling.
+  :description: Learn how to add DNS records in GoDaddy to enable white-labeling.
 
 Adding DNS records in GoDaddy
 =============================

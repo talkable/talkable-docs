@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Custom App allows you to send Talkable data to a desired destination such as your site, ESP, CDP.
+  :description: Custom App allows you to send Talkable data to a desired destination such as your site, ESP, CDP.
 
 Custom App
 ==========

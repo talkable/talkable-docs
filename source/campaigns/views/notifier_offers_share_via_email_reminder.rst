@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Sometimes you need only one email to remind a Friend about your offer — just check on the checkbox on the Advocate Signup/Share Page.
+  :description: Sometimes you need only one email to remind a Friend about your offer — just check on the checkbox on the Advocate Signup/Share Page.
 
 .. _friend_share_email_reminder_view:
 

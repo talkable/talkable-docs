@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Customer Service Portal
+  :description: Customer Service Portal
 
 Customer Service Portal
 =======================

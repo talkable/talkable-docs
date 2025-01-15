@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: You can integrate Talkable Loyalty to e-commerce sites in a few quick steps.
+  :description: You can integrate Talkable Loyalty to e-commerce sites in a few quick steps.
 
 Loyalty Integration (beta)
 ==========================

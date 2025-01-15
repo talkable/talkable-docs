@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: This is all about validating integration, from a checklist to testing.
+  :description: This is all about validating integration, from a checklist to testing.
 
 Validating the Integration
 ==========================

@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: That’s where the beauty of your referral campaign is.
+  :description: That’s where the beauty of your referral campaign is.
 
 Designer
 ========

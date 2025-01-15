@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: You can also add product-specific tracking to Talkable’s campaign. This will let your customers share specific items they purchased.
+  :description: You can also add product-specific tracking to Talkable’s campaign. This will let your customers share specific items they purchased.
 
 Including Product Items
 =======================
