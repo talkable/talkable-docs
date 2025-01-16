@@ -191,7 +191,3 @@ In order to chieve this AB test we need to
     All other nested children can be styled following this pattern.
 
   4. Once you’re done with styling it is very easy to set up an AB test, just go back to Campaign Editor and click "Add A/B test variant" link. Once a Campaign goes Live it will start rotating both variants following AB test distribution rules (50:50 by default).
-
-.. container:: hidden
-
-   .. toctree::

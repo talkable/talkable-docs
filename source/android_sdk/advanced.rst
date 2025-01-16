@@ -192,7 +192,3 @@ your Android application.
 .. _`handle configuration changes`: https://developer.android.com/guide/topics/resources/runtime-changes.html
 .. _`Fragment`: https://developer.android.com/guide/fragments
 .. _`Fragment Transactions`: https://developer.android.com/guide/fragments/transactions
-
-.. container:: hidden
-
-   .. toctree::

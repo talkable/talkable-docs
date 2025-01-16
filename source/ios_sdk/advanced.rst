@@ -148,7 +148,3 @@ See all debugging information in your console which can help you to understand w
     #import <TalkableSDK/Talkable.h>
     // ...
     [Talkable manager].debug = YES;
-
-.. container:: hidden
-
-   .. toctree::

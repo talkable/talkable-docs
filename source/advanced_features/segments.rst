@@ -101,8 +101,3 @@ In this example, `segment1`, `segment2`, and `segment3` attributes are passed th
    Segments can also be passed in `register_affiliate`, `register_purchase`, and `register_event`, providing flexibility for different integration scenarios.
 
 This approach simplifies custom data handling for customers, allowing for unified data across various methods and optimizing segmentation management without additional calls.
-
-.. container:: hidden
-
-   .. toctree::
-

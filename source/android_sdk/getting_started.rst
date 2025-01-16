@@ -162,7 +162,3 @@ Requirements
 The SDK supports Android 4.1 and later.
 
 .. _`Talkable SDK framework`: https://talkable-downloads.s3.amazonaws.com/android-sdk/talkable-sdk.aar
-
-.. container:: hidden
-
-   .. toctree::

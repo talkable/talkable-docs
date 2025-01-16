@@ -23,7 +23,3 @@ Example of usage:
 .. code-block:: text
 
    https://example1.com/friends?refer=friends&utm_source=example_source&utm_medium=example_medium
-
-.. container:: hidden
-
-   .. toctree::

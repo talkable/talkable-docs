@@ -92,7 +92,3 @@ Once you've configured SSO, you can test it as followed:
 2. Visit the SP-Initiated SSO URL (provided on the SSO configuration page in Talkable)
 
    .. image:: /_static/img/advanced_features/sso_sp_initiated_url.png
-
-.. container:: hidden
-
-   .. toctree::

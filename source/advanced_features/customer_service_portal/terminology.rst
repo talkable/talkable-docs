@@ -59,7 +59,3 @@ This is what the person gets as a result of some action (incentive). Available r
 
 - **Blocked/No reward**: there was no reward created either because the associated referral was blocked according to
   Fraud Settings or because of other reasons: incentive criteria has blocked it, or the person was blocklisted.
-
-.. container:: hidden
-
-   .. toctree::

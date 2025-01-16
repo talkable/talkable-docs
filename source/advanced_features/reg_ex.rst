@@ -130,7 +130,3 @@ formats:
      * `http://site.com/test/products/one`
      * `http://stage.com/products/two`
      * `http://test.com/test/products/one/deep?utm=test`
-
-.. container:: hidden
-
-   .. toctree::

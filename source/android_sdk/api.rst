@@ -230,7 +230,3 @@ Use the ``createSocialShare`` method to track a social share.
            // Process error
        }
    });
-
-.. container:: hidden
-
-   .. toctree::

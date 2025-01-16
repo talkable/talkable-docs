@@ -37,7 +37,3 @@ Advocate Signup Form example:
    <h2>Payload parameters provided for Advocate Signup Webhook</h2>
 
 The sample payload with parameters for Advocate Signup Webhook is available here: `Advocate Signup Webhook Payload <https://www.talkable.com/api-docs/index.html?urls.primaryname=webhooks%20api&urls.primaryName=Webhooks#/Advocate%20Signup/post_your_api_advocate_signup_web_hook_path>`_.
-
-.. container:: hidden
-
-   .. toctree::

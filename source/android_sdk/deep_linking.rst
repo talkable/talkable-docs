@@ -225,7 +225,3 @@ The SDK supports Android 4.1 and later.
 .. _`GetSocial.im`: https://www.getsocial.im
 .. _`Android App Links docs`: https://developer.android.com/training/app-links/index.html
 .. _`Finding SHA256 fingerprint for Android signing keys`: https://docs.getsocial.im/knowledge-base/android-signing-key-sha256/
-
-.. container:: hidden
-
-   .. toctree::

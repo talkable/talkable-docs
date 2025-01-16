@@ -94,7 +94,3 @@ occurs when an Advocate shares with a Friend who purchases and that same Friend 
 in an attempt to get both the Advocate and Friend rewards.
 
 We identify this in the same way as described above.
-
-.. container:: hidden
-
-   .. toctree::

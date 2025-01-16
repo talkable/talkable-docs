@@ -39,7 +39,3 @@ Here is an example of a Purchase capturing, this action should be triggered on t
   If Post Purchase campaign does not show up when testing, make sure you have it
   Live on the Campaigns listing with a default tag (`ios-post-purchase`) or with
   a tag you specified in the `registerOrigin` call.
-
-.. container:: hidden
-
-   .. toctree::

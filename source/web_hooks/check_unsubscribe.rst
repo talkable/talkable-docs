@@ -50,7 +50,3 @@ View category can be one of the following:
 * advocate_rewards_confirmation
 * advocate_rewards_paid
 * friend_rewards_paid
-
-.. container:: hidden
-
-   .. toctree::

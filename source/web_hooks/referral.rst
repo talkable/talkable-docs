@@ -62,7 +62,3 @@ The sample payload with parameters for Referral Webhook is available here: `Refe
 .. include:: /partials/coupon_as_reward.rst
 
 .. include:: /partials/incentive_types.rst
-
-.. container:: hidden
-
-   .. toctree::

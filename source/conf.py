@@ -28,7 +28,7 @@
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx_sitemap']
+extensions = ['sphinx_sitemap', 'sphinx_copybutton']
 sitemap_url_scheme = "{link}"
 
 # Add any paths that contain templates here, relative to this directory.
@@ -100,20 +100,22 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'basic'
-html_style = 'talkable.css'
+html_theme = "furo"
+# html_style = 'talkable.css'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#html_theme_options = {}
+
+html_copy_source = False
+html_show_sourcelink = False
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = u'Talkable Documentation'
+html_title = u''
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -131,6 +133,18 @@ html_title = u'Talkable Documentation'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+html_css_files = [
+    'talkable.css',
+]
+html_theme_options = {
+    "light_logo": "img/logo.svg",
+    "dark_logo": "img/logo.svg",
+    "light_css_variables": {
+        "color-brand-primary": "#D36835",
+        "color-brand-content": "#D36835",
+        "color-brand-visited": "#D36835",
+    },
+}
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied

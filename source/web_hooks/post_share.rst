@@ -43,7 +43,3 @@ The sample payload with parameters for Post Share Webhook is available here: `Po
    first shown to the Advocate. It could be ``null``. For the most up-to-date
    information about the Advocate, use ``sharer_info`` property which is updated
    with the email address the Advocate has entered on the Advocate Signup/Share Page.
-
-.. container:: hidden
-
-   .. toctree::

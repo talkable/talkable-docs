@@ -30,7 +30,3 @@ To see more personal details, select a user from the list.
 Example of Customer Service Portal person lookup:
 
 .. image:: /_static/img/advanced_features/customer_service_portal/person_lookup.png
-
-.. container:: hidden
-
-   .. toctree::

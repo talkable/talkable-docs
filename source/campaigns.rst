@@ -41,12 +41,12 @@ To start editing Views simply visit ``Editor`` page from the Campaign dashboard.
 
   <h2>Campaign Structure</h2>
 
-+-------------------------------+-----------------------------+
-| .. toctree::                  |                             |
-|   :maxdepth: 2                |                             |
-|                               |                             |
-|   campaigns/views             |                             |
-+-------------------------------+-----------------------------+
++-------------------------------+
+| .. toctree::                  |
+|   :maxdepth: 2                |
+|                               |
+|   campaigns/views             |
++-------------------------------+
 
 .. raw:: html
 
@@ -65,9 +65,9 @@ To start editing Views simply visit ``Editor`` page from the Campaign dashboard.
 
   <h2>Designer Guide</h2>
 
-+-------------------------------+-----------------------------+
-| .. toctree::                  |                             |
-|   :maxdepth: 2                |                             |
-|                               |                             |
-|   campaigns/designer          |                             |
-+-------------------------------+-----------------------------+
++-------------------------------+
+| .. toctree::                  |
+|   :maxdepth: 2                |
+|                               |
+|   campaigns/designer          |
++-------------------------------+

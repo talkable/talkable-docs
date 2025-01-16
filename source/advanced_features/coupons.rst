@@ -45,10 +45,6 @@ Shopify coupon auto-sync
 
 Read :ref:`Shopify coupon auto-sync documentation <advanced_features/shopify_coupons_auto_sync>` for details.
 
-.. container:: hidden
-
-   .. toctree::
-
 Requirements
 ------------
 
@@ -71,6 +67,6 @@ We do not want people confusing 8 with B, 1 with I, 0 with O, L with 1, etc.
 
    # Generates a random string from a set of easily readable characters
    def generate_activation_code(size = 6)
-     charset = ["2", "3", "4", "6", "7", "9", "A", "C", "D", "E", "F", "G", "H", "J", "K", "M", "N", "P", "Q", "R", "T", "V", "W", "X", "Y", "Z"]
-     (0...size).map { charset[rand(charset.size)] }.join
+      charset = ["2", "3", "4", "6", "7", "9", "A", "C", "D", "E", "F", "G", "H", "J", "K", "M", "N", "P", "Q", "R", "T", "V", "W", "X", "Y", "Z"]
+      (0...size).map { charset[rand(charset.size)] }.join
    end

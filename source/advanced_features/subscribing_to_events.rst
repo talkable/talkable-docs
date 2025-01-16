@@ -51,7 +51,3 @@ Talkable campaigns are equipped with the following set of events:
   6. `share_succeeded` — fires each time |advocate| shares. `data.channel` tells which sharing channel was used for the share.
   7. `email_gating_passed` — fires when |friend| passes email gating on :ref:`Friend Claim Page <campaigns/views/offers_claim>`.
   8. `email_gating_failed` — fires when |friend| fails to pass email gating on :ref:`Friend Claim Page <campaigns/views/offers_claim>`.
-
-.. container:: hidden
-
-   .. toctree::

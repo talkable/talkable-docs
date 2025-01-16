@@ -7,8 +7,8 @@ Advocate Personal Coupon Sharing
 ================================
 
 .. note::
-  This is an experimental feature, please ask your Customer Success Manager
-  to apply it into your campaigns.
+   This is an experimental feature, please ask your Customer Success Manager
+   to apply it into your campaigns.
 
 At Talkable Advocates can invite Friends in two ways:
 
@@ -125,8 +125,3 @@ A: Here is a list of validation rules that are defined globally for any coupons:
   #. Coupon length is between 3 and 255 characters
 
 Any UTF8 characters are allowed (including spaces).
-
-
-.. container:: hidden
-
-   .. toctree::

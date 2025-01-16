@@ -104,7 +104,3 @@ Reward reason can be of 5 following general types.
 .. include:: /partials/incentive_types.rst
 
 .. include:: /partials/coupon_as_reward.rst
-
-.. container:: hidden
-
-   .. toctree::

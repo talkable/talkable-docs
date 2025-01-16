@@ -66,7 +66,3 @@ To decrypt a file simply call GPG on it:
    gpg file_name.asc
 
 .. _How To Use GPG to Encrypt and Sign Messages: https://www.digitalocean.com/community/tutorials/how-to-use-gpg-to-encrypt-and-sign-messages#set-up-gpg-keys
-
-.. container:: hidden
-
-   .. toctree::

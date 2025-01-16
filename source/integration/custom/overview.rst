@@ -10,15 +10,15 @@ Integration High-Level Overview
 Integrating Talkable referral marketing platform to e-commerce sites is done in
 a few quick steps by adding the below scripts to your site.
 
- .. note::
+.. note::
 
-    All design and referral campaign setup is done inside the Talkable platform,
-    then via ‘iframe’ referral campaign content is injected into the e-commerce
-    site. The below scripts also handle the collection of specific necessary user
-    data for Talkable to service the referral campaigns.
+   All design and referral campaign setup is done inside the Talkable platform,
+   then via ‘iframe’ referral campaign content is injected into the e-commerce
+   site. The below scripts also handle the collection of specific necessary user
+   data for Talkable to service the referral campaigns.
 
-    Site-specific integration scripts are found after logging in at
-    ``https://www.admin.talkable.com/sites/<YOUR-TALKABLE-SITE-ID>/integration/other``
+   Site-specific integration scripts are found after logging in at
+   ``https://www.admin.talkable.com/sites/<YOUR-TALKABLE-SITE-ID>/integration/other``
 
 .. raw:: html
 
@@ -35,14 +35,14 @@ a few quick steps by adding the below scripts to your site.
    Surface purchase detail variables as described in more detail in
    :ref:`Integration Components <integration/custom/integration_components>`.
 
- .. note::
+.. note::
 
-    If a business has both one-time purchases and subscription transactions, or
-    the business has a strictly subscription or SaaS model we recommend integrating
-    the ‘Post Purchase’ through Events. :ref:`Learn more <advanced_features/events>`.
+   If a business has both one-time purchases and subscription transactions, or
+   the business has a strictly subscription or SaaS model we recommend integrating
+   the ‘Post Purchase’ through Events. :ref:`Learn more <advanced_features/events>`.
 
-    Post Purchase step is the only step which changes for subscription business
-    model integration - other steps remain the same.
+   Post Purchase step is the only step which changes for subscription business
+   model integration - other steps remain the same.
 
 3. To host the Invite Standalone campaign, create a new HTML page with standard
    header/footer. Best practice is to create this page on ``www.your-site.com/share``
