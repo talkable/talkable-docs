@@ -4,7 +4,7 @@ require 'mkmf'
 SPHINX_BUILD = ENV['SPHINX_BUILD'] || 'sphinx-build'
 SOURCE_DIR   = 'source'
 BUILD_DIR    = 'build'
-SPHINX_OPTS  = "-b html -d #{BUILD_DIR}/doctrees #{SOURCE_DIR} #{BUILD_DIR}/html"
+SPHINX_OPTS  = "-b dirhtml -d #{BUILD_DIR}/doctrees #{SOURCE_DIR} #{BUILD_DIR}/html"
 
 task :default => :help
 task :help do
