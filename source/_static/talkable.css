@@ -32,3 +32,7 @@ body[data-theme="light"] .highlight button.copybtn.success:after {
 .headerlink {
   visibility: hidden !important;
 }
+
+.hidden {
+  display: none;
+}
