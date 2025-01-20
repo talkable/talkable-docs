@@ -31,7 +31,9 @@
       },
       customer: {
         email: '', // Required - Email of the customer who issued a purchase. Example: 'customer@example.com'
-        traffic_source: '' // The source of the traffic driven to the campaign. Example: 'facebook'
+        traffic_source: '', // The source of the traffic driven to the campaign. Example: 'facebook'
+        phone_optin: true, // To subscribe customer with phone number. Requires to pass phone number if value is true
+        sub_choice: true // To subscribe customer
       }
     };
 
