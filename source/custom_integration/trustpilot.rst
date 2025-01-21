@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Integrate Trustpilot with your Talkable system to track reviews as events within campaigns.
+  :description: Integrate Trustpilot with your Talkable system to track reviews as events within campaigns.
 
 Trustpilot
 ==========

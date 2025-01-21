@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: You can enhance your referral campaign performance by setting up the expiry date for the offer.
+  :description: You can enhance your referral campaign performance by setting up the expiry date for the offer.
 
 Offers Expiration
 #################
@@ -12,7 +12,7 @@ by specifying specific date or setting offer duration in hours.
 
 .. raw:: html
 
-   <h2>Advocate</h2>
+  <h2>Advocate</h2>
 
 - ``Advocate deadline`` - |advocate| will no longer be able to share after this date.
 - All existing |Advocate| offers are always affected if specified date is changed
@@ -25,7 +25,7 @@ by specifying specific date or setting offer duration in hours.
 
 .. raw:: html
 
-   <h2>Friend</h2>
+  <h2>Friend</h2>
 
 - ``Friend Deadline`` - |Friend| will no longer be able to claim the offer after this date.
 - ``Friend Offer Duration`` - |Friend| will no longer be able to claim the offer X

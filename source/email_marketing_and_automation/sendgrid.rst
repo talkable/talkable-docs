@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Synchronize Talkable collected emails with Sendgrid integration.
+  :description: Synchronize Talkable collected emails with Sendgrid integration.
 
 Sendgrid
 ========
