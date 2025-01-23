@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: You can integrate Talkable referral marketing platform to e-commerce sites in a few quick steps.
+  :description: You can integrate Talkable referral marketing platform to e-commerce sites in a few quick steps.
 
 Integration High-Level Overview
 ===============================
@@ -22,7 +22,7 @@ a few quick steps by adding the below scripts to your site.
 
 .. raw:: html
 
-   <h2>Integration Steps</h2>
+  <h2>Integration Steps</h2>
 
 1. Add the :ref:`Talkable Initialization Script <integration/custom/integration_components/initialization_script>`
    to your header or any template spanning every page. Surface variables for
@@ -54,7 +54,7 @@ a few quick steps by adding the below scripts to your site.
 
    .. code-block:: html
 
-      <div id="talkable-offer"></div>
+     <div id="talkable-offer"></div>
 
 4. To host the Advocate Dashboard Standalone campaign, create an additional new
    HTML page under your user accounts section behind login.
@@ -66,4 +66,4 @@ a few quick steps by adding the below scripts to your site.
 
    .. code-block:: html
 
-      <div id="talkable-offer"></div>
+     <div id="talkable-offer"></div>

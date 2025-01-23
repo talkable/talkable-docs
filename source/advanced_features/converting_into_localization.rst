@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: This is a how-to guide to help you get the most out of Localizations.
+  :description: This is a how-to guide to help you get the most out of Localizations.
 
 Converting Into Localization
 ============================
@@ -57,7 +57,7 @@ A piece that we are going to extract into Localizations is just a copy, without 
 
 .. warning::
 
-   Talkable does not allow coding up Localizations within CSS area. If you want to move some CSS property into localizations use inline <style> tag inside HTML area.
+  Talkable does not allow coding up Localizations within CSS area. If you want to move some CSS property into localizations use inline <style> tag inside HTML area.
 
 Moving Subject Line Into Localization
 -------------------------------------

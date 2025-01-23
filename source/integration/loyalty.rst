@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: You can integrate Talkable Loyalty to e-commerce sites in a few quick steps.
+  :description: You can integrate Talkable Loyalty to e-commerce sites in a few quick steps.
 
 Loyalty Integration (beta)
 ==========================
@@ -12,7 +12,7 @@ a few quick steps by adding the below scripts to your site.
 
 .. raw:: html
 
-   <h2>Integration</h2>
+  <h2>Integration</h2>
 
 1. Initialize Talkable integration library.
 
@@ -21,7 +21,7 @@ a few quick steps by adding the below scripts to your site.
 
  .. note::
 
-    Skip this step if you already have Talkable integrated on your site
+   Skip this step if you already have Talkable integrated on your site
 
 2. Add Loyalty Dashboard.
 
@@ -32,7 +32,7 @@ a few quick steps by adding the below scripts to your site.
 
    .. code-block:: html
 
-      <div id="talkable-loyalty"></div>
+     <div id="talkable-loyalty"></div>
 
 3. Add Redeem Widget.
 
@@ -41,12 +41,12 @@ a few quick steps by adding the below scripts to your site.
 
    .. code-block:: html
 
-      <div id="talkable-loyalty"></div>
+     <div id="talkable-loyalty"></div>
 
    It is recommended to add it above the discount field. Examples:
 
    .. figure:: /_static/img/loyalty/loyalty_checkout.png
-      :alt: Sample checkout
+     :alt: Sample checkout
 
 4. Define Loyalty points redemption batches.
 
@@ -59,16 +59,16 @@ a few quick steps by adding the below scripts to your site.
    It is recommended to upload 100,000 single-use coupons into every coupon list.
 
    .. figure:: /_static/img/loyalty/redemption_batches.png
-      :alt: Redemption batches
+     :alt: Redemption batches
 
  .. note::
 
-    All design and loyalty campaign setup is done inside the Talkable platform,
-    then via iframe loyalty campaign content is injected into the site.
+   All design and loyalty campaign setup is done inside the Talkable platform,
+   then via iframe loyalty campaign content is injected into the site.
 
 .. raw:: html
 
-   <h2>Requirements</h2>
+  <h2>Requirements</h2>
 
 1. User accounts. The website must support user accounts since the loyalty program is only available to logged in users.
 
@@ -82,7 +82,7 @@ a few quick steps by adding the below scripts to your site.
 
  .. toctree::
 
-    loyalty/integration_components
-    loyalty/custom_app
-    loyalty/auto_enrollment
-    loyalty/shopify_integration
+   loyalty/integration_components
+   loyalty/custom_app
+   loyalty/auto_enrollment
+   loyalty/shopify_integration

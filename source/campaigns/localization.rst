@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: You can localize your referral campaign. Use the same template with different localization.
+  :description: You can localize your referral campaign. Use the same template with different localization.
 
 Localization
 ############
@@ -14,7 +14,7 @@ Campaign localization is done using a liquid filter `localize`:
 
 .. code-block:: liquid
 
-    {{ "offer_title" | localize: 'Get [[incentives.referrer.description]]' }}
+  {{ "offer_title" | localize: 'Get [[incentives.referrer.description]]' }}
 
 After adding this filter call to the template, go to campaign page and click "Localization" from the navigation menu:
 

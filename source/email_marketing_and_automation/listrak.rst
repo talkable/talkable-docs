@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Synchronize Talkable collected emails and phone numbers with Listrak integration for email marketing and SMS rewards.
+  :description: Synchronize Talkable collected emails and phone numbers with Listrak integration for email marketing and SMS rewards.
 
 Listrak
 =======
