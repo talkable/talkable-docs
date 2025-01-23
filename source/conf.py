@@ -139,6 +139,7 @@ html_css_files = [
 html_theme_options = {
     "light_logo": "img/logo.svg",
     "dark_logo": "img/logo.svg",
+    "sidebar_hide_name": True,
     "light_css_variables": {
         "color-brand-primary": "#D36835",
         "color-brand-content": "#D36835",
