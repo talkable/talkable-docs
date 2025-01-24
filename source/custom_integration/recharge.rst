@@ -9,8 +9,8 @@ Recharge
 
 .. note::
 
-   This is a custom integration that can be implemented with extra effort. If you wish to integrate this vendor, please
-   contact your Customer Success Manager to apply it to your campaigns.
+  This is a custom integration that can be implemented with extra effort. If you wish to integrate this vendor, please
+  contact your Customer Success Manager to apply it to your campaigns.
 
 Recharge allows consumers to apply accumulated rewards towards upcoming subscription orders. Please note this is essentially ‘stacking’ of referral rewards.
 

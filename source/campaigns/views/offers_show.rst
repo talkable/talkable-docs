@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Advocate Signup/Share Page - Combination of Signup and Share forms. Shows the value proposition to Advocate and Friend — they both will receive an exclusive discount.
+  :description: Advocate Signup/Share Page - Combination of Signup and Share forms. Shows the value proposition to Advocate and Friend — they both will receive an exclusive discount.
 
 .. _advocate_signup_share_page_view:
 
@@ -15,12 +15,12 @@ First we show Advocate Signup Form. Signup is skipped when we know the advocate 
 On this page Advocate signs up by entering their email address and phone number(optional).
 
 .. image:: /_static/img/basics/advocate-signup-form.png
-   :alt: Advocate Signup Form
+  :alt: Advocate Signup Form
 
 After signup, without reloading page, Advocate Share form is shown:
 
 .. image:: /_static/img/basics/advocate-share-form.png
-   :alt: Advocate Share form
+  :alt: Advocate Share form
 
 Here |advocate| shares an offer with their |friend|\s. Explain the value proposition
 to |advocate| and |friend|, that both will receive an exclusive discount.
@@ -33,49 +33,49 @@ Available sharing methods:
 
 .. raw:: html
 
-   <h4>Email sharing example:</h4>
+  <h4>Email sharing example:</h4>
 
 |br|
 
 .. image:: /_static/img/basics/advocate-share-via-email.png
-   :alt: Advocate Share via Email Form
+  :alt: Advocate Share via Email Form
 
 Note ``Send my friend a reminder e-mail in 3 days`` checkbox — this is :ref:`friend_share_email_reminder_view`
 trigger.
 
 .. raw:: html
 
-   <h4>Facebook sharing example (simplified):</h4>
+  <h4>Facebook sharing example (simplified):</h4>
 
 .. code-block:: html
 
-   <a href="#" class="js-share-offer-via-facebook">
-     Share on Facebook
-   </a>
+  <a href="#" class="js-share-offer-via-facebook">
+    Share on Facebook
+  </a>
 
 .. raw:: html
 
-   <h4>Twitter sharing example (simplified):</h4>
+  <h4>Twitter sharing example (simplified):</h4>
 
 .. code-block:: html
 
-   <a href="{{ twitter_share_link }}">
-     Share on Twitter
-   </a>
+  <a href="{{ twitter_share_link }}">
+    Share on Twitter
+  </a>
 
 .. raw:: html
 
-   <h4>Share by link example (simplified):</h4>
+  <h4>Share by link example (simplified):</h4>
 
 .. code-block:: html
 
-   <div data-clipboard-text="{{ short_url }}"
-        data-copied-label="Copied!"
-        data-placement="top"
-        title="Click to Copy"
-        class="js-share-by-link">
-     Copy and share by link
-   </div>
+  <div data-clipboard-text="{{ short_url }}"
+       data-copied-label="Copied!"
+       data-placement="top"
+       title="Click to Copy"
+       class="js-share-by-link">
+    Copy and share by link
+  </div>
 
 - ``data-clipboard-text`` — data to be copied to a user clipboard on click.
 - ``data-copied-label`` — tooltip text after copying.
@@ -84,8 +84,8 @@ trigger.
 
 .. note::
 
-   Do not change ``name`` and ``class`` attributes, otherwise
-   functionality won’t work. `js-` class prefix means it is used in Talkable API.
+  Do not change ``name`` and ``class`` attributes, otherwise
+  functionality won’t work. `js-` class prefix means it is used in Talkable API.
 
 Related tutorials for this View:
 

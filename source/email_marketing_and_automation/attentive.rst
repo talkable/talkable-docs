@@ -9,8 +9,8 @@ Attentive
 
 .. code-block:: text
 
-   This is a custom integration that can be implemented with extra effort. If you wish to integrate this vendor,
-   please contact your Customer Success Manager to apply it to your campaigns.
+  This is a custom integration that can be implemented with extra effort. If you wish to integrate this vendor,
+  please contact your Customer Success Manager to apply it to your campaigns.
 
 Talkable converts customers into brand advocates by enabling trusted, word-of-mouth referrals. Attentive connects with customers on the most engaging channel: SMS.
 
@@ -21,7 +21,7 @@ Together, Talkable and Attentive drive personalized brand engagement and the **a
 1. Capture phone numbers through Talkable to seamlessly grow your SMS subscriber list. The integration automatically passes these numbers to your Attentive messaging flow.
 
   .. image:: /_static/img/email_marketing_and_automation/signup2.png
-      :alt: Signup
+    :alt: Signup
 
 2. Promote refer-a-friend to your SMS list to facilitate increased sharing. Mobile messages have a 99% open rate.
 
@@ -45,7 +45,7 @@ It supports next data to be synchronized from Talkable to Attentive:
 
 .. note::
 
-    For phone and phone opt-in synchronization, corresponding attributes should be configured in a Talkable campaign: :ref:`Phone number gating <advanced_features/phone_number_gating>`
+  For phone and phone opt-in synchronization, corresponding attributes should be configured in a Talkable campaign: :ref:`Phone number gating <advanced_features/phone_number_gating>`
 
 Here are the conditions when Talkable acquires phone numbers:
 
@@ -80,7 +80,7 @@ Please use the following guide to start using an app you need:
 1. Navigate into the App store:
 
   .. image:: /_static/img/email_marketing_and_automation/app_store_navigation.png
-      :alt: App store navigation
+    :alt: App store navigation
 
 2. Choose an app you need by clicking “Install”
 
@@ -90,7 +90,7 @@ instruct how to find all necessary credentials.
 4. Complete installation and enable the app:
 
   .. image:: /_static/img/email_marketing_and_automation/attentive_activate.png
-      :alt: Attentive
+    :alt: Attentive
 
 5. Test the app by pressing on the “Send sample payload” and then check if you are seeing a test request inside your ESP:
 

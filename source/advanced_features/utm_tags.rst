@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: While driving traffic to one of your campaigns, you can include a UTM Tags parameters as a URL query string. This will help to segment your reporting.
+  :description: While driving traffic to one of your campaigns, you can include a UTM Tags parameters as a URL query string. This will help to segment your reporting.
 
 UTM Tags
 ========
@@ -22,8 +22,8 @@ Example of usage:
 
 .. code-block:: text
 
-   https://example1.com/friends?refer=friends&utm_source=example_source&utm_medium=example_medium
+  https://example1.com/friends?refer=friends&utm_source=example_source&utm_medium=example_medium
 
 .. container:: hidden
 
-   .. toctree::
+  .. toctree::
