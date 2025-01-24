@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Send email to your brand Advocate when their account has been credited or a partial refund has been issued.
+  :description: Send email to your brand Advocate when their account has been credited or a partial refund has been issued.
 
 Advocate Reward Paid Email
 --------------------------
@@ -19,13 +19,13 @@ Frequently used Variables:
 - Main |cta| should point to a merchant site to start shopping ``{{ proceed_to_advocate_destination_url }}``.
 
 .. image:: /_static/img/basics/advocate-reward-paid-email-v2.png
-   :alt: Advocate Reward Paid Email
+  :alt: Advocate Reward Paid Email
 
 .. include:: /partials/developer_email_note.rst
 
 .. raw:: html
 
-   <h2>Email sending conditions</h2>
+  <h2>Email sending conditions</h2>
 
 By default is sent immediately after the reward status turns into `Paid`, but can be delayed by configuration. |br|
 

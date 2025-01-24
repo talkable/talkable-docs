@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: With the Standalone placement your Campaign will be live on any particular page of your site.
+  :description: With the Standalone placement your Campaign will be live on any particular page of your site.
 
 Standalone Placement
 ====================
@@ -20,8 +20,8 @@ Flow
 ----
 
 .. image:: /_static/img/campaign_placements/standalone.png
-   :alt: Talkable campaign flow — Standalone placement
-   :class: is-minimal
+  :alt: Talkable campaign flow — Standalone placement
+  :class: is-minimal
 
 Integration instructions
 ------------------------

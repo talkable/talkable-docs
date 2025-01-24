@@ -13,7 +13,7 @@ Overview
 This documentation provides a comprehensive guide on integrating the Google Sign-In app into your Talkable system. By enabling this app, users can sign in using their Google accounts, enhancing security and reducing login friction.
 
 .. note::
-   In case you don't have the Talkable Google Sign-In app installed, users can still log in via Google in your Campaign, but Talkable credentials will be used for the OAuth flow.
+  In case you don't have the Talkable Google Sign-In app installed, users can still log in via Google in your Campaign, but Talkable credentials will be used for the OAuth flow.
 
 Prerequisites
 -------------
@@ -85,5 +85,4 @@ Additional Resources
 - OAuth 2.0 Documentation: https://developers.google.com/identity/protocols/oauth2
 
 .. note::
-   For detailed examples and advanced usage, refer to the official Google OAuth 2.0 documentation.
-
+  For detailed examples and advanced usage, refer to the official Google OAuth 2.0 documentation.

@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Referral Webhook notifies your endpoint that your brand Advocate’s referral status has become “Approved”.
+  :description: Referral Webhook notifies your endpoint that your brand Advocate’s referral status has become “Approved”.
 
 Referral Webhook
 ================
@@ -25,7 +25,7 @@ Use cases for the Referral Webhook include:
 
 .. note::
 
-   “Approved” referral status does not guarantee that Advocate will receive a reward.
+  “Approved” referral status does not guarantee that Advocate will receive a reward.
 
 Things that can prevent Advocate or Friend from being rewarded:
 
@@ -37,25 +37,25 @@ Things that can prevent Advocate or Friend from being rewarded:
 
 .. important::
 
-   Referral Webhook keeps retrying until it gets 2xx HTTP status in response.
-   Only after that rewards associated with the referral can be paid.
+  Referral Webhook keeps retrying until it gets 2xx HTTP status in response.
+  Only after that rewards associated with the referral can be paid.
 
 .. raw:: html
 
-   <h2>When does Talkable call the Referral Webhook?</h2>
+  <h2>When does Talkable call the Referral Webhook?</h2>
 
 Talkable Referral Webhook is triggered any time an Advocate referral status has become
 “Approved” specifically for a Friend purchase or event.
 
 .. note::
 
-   Referral Webhook triggers only for Advocate rewards specifically from a Friend
-   Purchase or Friend Event (such as signup event or subscription purchase event).
-   To receive notification of both Advocate and Friend rewards use the Rewards Webhook.
+  Referral Webhook triggers only for Advocate rewards specifically from a Friend
+  Purchase or Friend Event (such as signup event or subscription purchase event).
+  To receive notification of both Advocate and Friend rewards use the Rewards Webhook.
 
 .. raw:: html
 
-   <h2>Payload parameters provided for Referral Webhook</h2>
+  <h2>Payload parameters provided for Referral Webhook</h2>
 
 The sample payload with parameters for Referral Webhook is available here: `Referral Webhook Payload <https://www.talkable.com/api-docs/index.html?urls.primaryname=webhooks%20api&urls.primaryName=Webhooks#/Referral/post_your_api_referral_web_hook_path>`_.
 

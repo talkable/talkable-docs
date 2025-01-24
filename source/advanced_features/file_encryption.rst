@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: This is a public key encryption program that has become the most popular standard for email encryption.
+  :description: This is a public key encryption program that has become the most popular standard for email encryption.
 
 File Encryption
 ===============
@@ -27,14 +27,14 @@ Here is a command to do it:
 
 .. code-block:: shell
 
-   curl https://d2jjzw81hqbuqv.cloudfront.net/integration/talkable_public_key.asc | gpg --import
+  curl https://d2jjzw81hqbuqv.cloudfront.net/integration/talkable_public_key.asc | gpg --import
 
 To check that the Talkable public key importing was done right, make sure that
 the next command is successful:
 
 .. code-block:: shell
 
-   gpg --list-keys dev@talkable.com
+  gpg --list-keys dev@talkable.com
 
 Encrypting
 ----------
@@ -43,7 +43,7 @@ To encrypt data, you can use the following syntax:
 
 .. code-block:: shell
 
-   gpg --encrypt --sign --armor -r dev@talkable.com name_of_file
+  gpg --encrypt --sign --armor -r dev@talkable.com name_of_file
 
 This encrypts data using the Talkable public key and signs it with your own
 private key to guarantee that it is coming from you. Encrypted files will have the
@@ -53,8 +53,8 @@ as well.
 
 .. note::
 
-   You should include a second ``"-r"`` recipient with your own email address if
-   you want to be able to read the encrypted message.
+  You should include a second ``"-r"`` recipient with your own email address if
+  you want to be able to read the encrypted message.
 
 Decrypting
 ----------
@@ -63,6 +63,6 @@ To decrypt a file simply call GPG on it:
 
 .. code-block:: shell
 
-   gpg file_name.asc
+  gpg file_name.asc
 
 .. _How To Use GPG to Encrypt and Sign Messages: https://www.digitalocean.com/community/tutorials/how-to-use-gpg-to-encrypt-and-sign-messages#set-up-gpg-keys

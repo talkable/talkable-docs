@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-   :description: Standard Liquid filters that are available out of box.
+  :description: Standard Liquid filters that are available out of box.
 
 Filters
 -------
@@ -16,18 +16,18 @@ Inserts the font declaration to the page.
 
 .. code-block:: text
 
-   {{ "My Font" | import_font }}
+  {{ "My Font" | import_font }}
 
 Returns:
 
 .. code-block:: css
 
-   @font-face {
-      font-family: 'My Font';
-      src: url('https://d2jjzw81hqbuqv.cloudfront.net/static_assets/files/174201/original/font.woff') format('woff'), url('https://d2jjzw81hqbuqv.cloudfront.net/static_assets/files/174202/original/font.woff2') format('woff2');
-      font-weight: normal;
-      font-style: normal;
-   }
+  @font-face {
+     font-family: 'My Font';
+     src: url('https://d2jjzw81hqbuqv.cloudfront.net/static_assets/files/174201/original/font.woff') format('woff'), url('https://d2jjzw81hqbuqv.cloudfront.net/static_assets/files/174202/original/font.woff2') format('woff2');
+     font-weight: normal;
+     font-style: normal;
+  }
 
 |hr|
 
@@ -38,7 +38,7 @@ Inserts link for an uploaded asset.
 
 .. code-block:: liquid
 
-   {{ "image.jpg" | asset_url }}
+  {{ "image.jpg" | asset_url }}
 
 Example: http://d2jjzw81hqbuqv.cloudfront.net/static_assets/files/745/original/offer-background.jpg
 
@@ -51,7 +51,7 @@ Formats plain text to have HTML formatting. E.g. replace ``\n`` with ``<br/>``.
 
 .. code-block:: text
 
-   {{ "Hello [[advocate_info.email]]\nHere is your reward." | simple_format | interpolate }}
+  {{ "Hello [[advocate_info.email]]\nHere is your reward." | simple_format | interpolate }}
 
 Returns ``Hello John<br/>Here is your reward``.
 
@@ -64,7 +64,7 @@ Encodes a string to be included in a URL.
 
 .. code-block:: text
 
-   http://example.com/?utm_campaign={{ "Campaign Name" | encode_query_argument }}
+  http://example.com/?utm_campaign={{ "Campaign Name" | encode_query_argument }}
 
 Returns ``Campaign%20Name``, so the URL will be
 ``http://example.com/?utm_campaign=Campaign%20Name``.
@@ -78,7 +78,7 @@ Updates query parameters in a URL.
 
 .. code-block:: liquid
 
-   {{ "http://example.com/?a=b&utm_source=foo" | update_query: utm_campaign: "Campaign Name", utm_source: "talkable" }}
+  {{ "http://example.com/?a=b&utm_source=foo" | update_query: utm_campaign: "Campaign Name", utm_source: "talkable" }}
 
 Returns ``http://example.com/?a=b&utm_campaign=Campaign%20Name&utm_source=talkable``.
 
@@ -91,7 +91,7 @@ This filter returns ``true`` or ``false`` for a dataset based on the probability
 
 .. code-block:: liquid
 
-   {{ 50 | probability_by: "param1", "param2", "param3" }}
+  {{ 50 | probability_by: "param1", "param2", "param3" }}
 
 ``50`` returns ``true`` in 50% cases for requested dataset. This filter provides the same result for a particular
 dataset.
@@ -102,23 +102,23 @@ Here is another example that returns ``true`` only in 10% cases for the interpol
 
 .. code-block:: liquid
 
-   {{ 10 | probability_by: advocate_info.email }}
+  {{ 10 | probability_by: advocate_info.email }}
 
 You can ommit passing any parameters and the result will be based on the Advocate offer. Also you may use ``probability`` as an alias which is a little shorter to write:
 
 .. code-block:: liquid
 
-   {{ 50 | probability }}
+  {{ 50 | probability }}
 
 This example can be used in ``Email sending condition`` of Advocate Offer Email template to send email only in 33% cases:
 
 .. code-block:: liquid
 
-   {% assign send_email = 33 | probability %}
+  {% assign send_email = 33 | probability %}
 
-   {% if send_email %}
-     true
-   {% endif %}
+  {% if send_email %}
+    true
+  {% endif %}
 
 |hr|
 
@@ -132,7 +132,7 @@ Simple example:
 
 .. code-block:: liquid
 
-   {{ "100" | rand_by: "param1", "param2" }}
+  {{ "100" | rand_by: "param1", "param2" }}
 
 Always returns ``29``.
 
@@ -140,7 +140,7 @@ Interpolation as a parameter:
 
 .. code-block:: liquid
 
-   {{ "10" | rand_by: advocate_info.email }}
+  {{ "10" | rand_by: advocate_info.email }}
 
 Always returns the same number for a specific email, between 0 and 9.
 
@@ -155,8 +155,8 @@ as an array.
 
 .. code-block:: liquid
 
-   {{ '12345678' | regexp_captures: '(....)(....)' | join: '-' }}
-   {{ 'bogdan@example.com' | regexp_captures: '^([a-z]+)\@([a-z]+)\.([a-z]+)' | json }}
+  {{ '12345678' | regexp_captures: '(....)(....)' | join: '-' }}
+  {{ 'bogdan@example.com' | regexp_captures: '^([a-z]+)\@([a-z]+)\.([a-z]+)' | json }}
 
 |hr|
 
@@ -167,34 +167,34 @@ A/B testing static text:
 
 .. code-block:: liquid
 
-   {{ "ab_test_identifier" | ab_test: "Label 1", "Label 2", "Label N" }}
+  {{ "ab_test_identifier" | ab_test: "Label 1", "Label 2", "Label N" }}
 
 A/B testing text with interpolation:
 
 .. code-block:: liquid
 
-   {{ "share_via_email_subject" | ab_test: "[[site_name]]",
-      "Your friend [[advocate_info.email]] shared this deal with you" | interpolate }}
+  {{ "share_via_email_subject" | ab_test: "[[site_name]]",
+     "Your friend [[advocate_info.email]] shared this deal with you" | interpolate }}
 
 A/B testing an asset:
 
 .. code-block:: liquid
 
-   {{ "offer_background" | ab_test: "background-green.jpg", "background-red.jpg" | asset_url }}
+  {{ "offer_background" | ab_test: "background-green.jpg", "background-red.jpg" | asset_url }}
 
 A/B testing style:
 
 .. code-block:: liquid
 
-   <body style="background-color: {{ 'offer_background' | ab_test: '#d3d3d3', '#ff0000' }}">
-     ...
-   </body>
+  <body style="background-color: {{ 'offer_background' | ab_test: '#d3d3d3', '#ff0000' }}">
+    ...
+  </body>
 
 .. code-block:: liquid
 
-   <h1 style="font-size: {{ 'title_size' | ab_test: '24px', '30px' }}">
-     Sample Title
-   </h1>
+  <h1 style="font-size: {{ 'title_size' | ab_test: '24px', '30px' }}">
+    Sample Title
+  </h1>
 
 |hr|
 
@@ -210,9 +210,9 @@ unless time zone is specified.
 
 .. code-block:: text
 
-   {{ valid_until | date_diff }}
-   {{ valid_until | date_diff: 'Apr 4, 2019' }}
-   {{ '2019-09-01 08:30:00' | date_diff: current_time }}
+  {{ valid_until | date_diff }}
+  {{ valid_until | date_diff: 'Apr 4, 2019' }}
+  {{ '2019-09-01 08:30:00' | date_diff: current_time }}
 
 |hr|
 
@@ -227,8 +227,8 @@ unless time zone is specified.
 
 .. code-block:: liquid
 
-   {{ current_time | date_greater_than: valid_until }}
-   {{ valid_until | date_greater_than: '2019-09-01 08:30:00' }}
+  {{ current_time | date_greater_than: valid_until }}
+  {{ valid_until | date_greater_than: '2019-09-01 08:30:00' }}
 
 |hr|
 
@@ -243,8 +243,8 @@ unless time zone is specified.
 
 .. code-block:: liquid
 
-   {{ current_time | date_greater_than_or_equal: valid_until }}
-   {{ valid_until | date_greater_than_or_equal: '2019-09-01 08:30:00' }}
+  {{ current_time | date_greater_than_or_equal: valid_until }}
+  {{ valid_until | date_greater_than_or_equal: '2019-09-01 08:30:00' }}
 
 |hr|
 
@@ -268,8 +268,8 @@ Available time units (can be used in plural form as well):
 
 .. code-block:: liquid
 
-   {{ valid_until | add_time: 42 }}
-   {{ valid_until | add_time: 3, 'months' }}
+  {{ valid_until | add_time: 42 }}
+  {{ valid_until | add_time: 3, 'months' }}
 
 |hr|
 
@@ -291,11 +291,11 @@ Reference to all available locales can be found in `rails-i18n documentation`_
 
 .. code-block:: liquid
 
-   {{ valid_until | format_date }}
-   {{ valid_until | format_date: format: "%Y-%m-%d" }}
-   {{ valid_until | format_date: locale: "en" }}
-   {{ valid_until | format_date: format: "%Y-%m-%d", locale: "en" }}
-   {{ current_time | format_date }}
+  {{ valid_until | format_date }}
+  {{ valid_until | format_date: format: "%Y-%m-%d" }}
+  {{ valid_until | format_date: locale: "en" }}
+  {{ valid_until | format_date: format: "%Y-%m-%d", locale: "en" }}
+  {{ current_time | format_date }}
 
 |hr|
 
@@ -310,9 +310,9 @@ Reference to all available locales can be found in `rails-i18n documentation`_
 
 .. code-block:: liquid
 
-   {{ valid_until | human_time_ago }}
-   {{ valid_until | human_time_ago: locale: "en" }}
-   {{ current_time | human_time_ago }}
+  {{ valid_until | human_time_ago }}
+  {{ valid_until | human_time_ago: locale: "en" }}
+  {{ current_time | human_time_ago }}
 
 |hr|
 
@@ -325,30 +325,30 @@ Calculate difference between two dates. By default calculates between specified 
 
 .. code-block:: text
 
-   {{ "Sun, 02 Jan 2000 10:00:00 PST" | hours_from_time: "Sat, 01 Jan 2000 10:00:00 PST" }}
-   {{ "2015-03-27 17:53" | hours_from_time: "2015-03-27 15:53" }}
+  {{ "Sun, 02 Jan 2000 10:00:00 PST" | hours_from_time: "Sat, 01 Jan 2000 10:00:00 PST" }}
+  {{ "2015-03-27 17:53" | hours_from_time: "2015-03-27 15:53" }}
 
 Next two examples is equivalent.
 
 .. code-block:: liquid
 
-   {{ friend_offer.valid_until | hours_from_time: current_time }}
-   {{ friend_offer.valid_until | hours_from_now }}
+  {{ friend_offer.valid_until | hours_from_time: current_time }}
+  {{ friend_offer.valid_until | hours_from_now }}
 
 Pretty useful example for email sending criteria to prevent sending mail when offer is about to expire.
 
 .. code-block:: liquid
 
-   {% if friend_offer.valid_until %}
-     {% assign difference = friend_offer.valid_until | hours_from_now %}
-     {% if difference > 24 %}
-       true
-     {% else %}
-       false
-     {% endif %}
-   {% else %}
-     true
-   {% endif %}
+  {% if friend_offer.valid_until %}
+    {% assign difference = friend_offer.valid_until | hours_from_now %}
+    {% if difference > 24 %}
+      true
+    {% else %}
+      false
+    {% endif %}
+  {% else %}
+    true
+  {% endif %}
 
 |hr|
 
@@ -359,7 +359,7 @@ Allows inline string interpolation using [[ ]] syntax.
 
 .. code-block:: text
 
-   {{ "Get [[incentives.click.amount | money]] Off" | interpolate }}
+  {{ "Get [[incentives.click.amount | money]] Off" | interpolate }}
 
 |hr|
 
@@ -370,7 +370,7 @@ Calculates the MD5 hash of the string.
 
 .. code-block:: liquid
 
-   {{ "foo" | md5 }}
+  {{ "foo" | md5 }}
 
 Returns ``acbd18db4cc2f85cedef654fccc4a4d8``.
 
@@ -383,7 +383,7 @@ Formats number using current currency.
 
 .. code-block:: liquid
 
-   {{ "50" | money }}
+  {{ "50" | money }}
 
 Returns ``$50.00``.
 
@@ -398,24 +398,24 @@ Available options:
 
 .. container:: ptable
 
-   ============================================================== ==============
-   Example                                                        Result
-   ============================================================== ==============
-   ``{{ "100.11" | money: precision: 0 }}``                       ``$100``
-   ``{{ "100.99" | money: precision: 0 }}``                       ``$101``
-   -------------------------------------------------------------- --------------
-   ``{{ "100.99" | money: strip_insignificant_zeros: true }}``    ``$100.99``
-   ``{{ "100.90" | money: strip_insignificant_zeros: true }}``    ``$100.9``
-   ``{{ "100.00" | money: strip_insignificant_zeros: true }}``    ``$100``
-   -------------------------------------------------------------- --------------
-   ``{{ "100" | money: unit: "€" }}``                             ``€100.00``
-   ``{{ "100" | money: unit: "" }}``                              ``100.00``
-   -------------------------------------------------------------- --------------
-   ``{{ "10049.99" | money: separator: "_" }}``                   ``$10,049_99``
-   ``{{ "10049.99" | money: delimiter: "_" }}``                   ``$10_049.99``
-   -------------------------------------------------------------- --------------
-   ``{{ "100" | money: format: "%n %u", unit: "zł" }}``           ``100.00 zł``
-   ============================================================== ==============
+  ============================================================== ==============
+  Example                                                        Result
+  ============================================================== ==============
+  ``{{ "100.11" | money: precision: 0 }}``                       ``$100``
+  ``{{ "100.99" | money: precision: 0 }}``                       ``$101``
+  -------------------------------------------------------------- --------------
+  ``{{ "100.99" | money: strip_insignificant_zeros: true }}``    ``$100.99``
+  ``{{ "100.90" | money: strip_insignificant_zeros: true }}``    ``$100.9``
+  ``{{ "100.00" | money: strip_insignificant_zeros: true }}``    ``$100``
+  -------------------------------------------------------------- --------------
+  ``{{ "100" | money: unit: "€" }}``                             ``€100.00``
+  ``{{ "100" | money: unit: "" }}``                              ``100.00``
+  -------------------------------------------------------------- --------------
+  ``{{ "10049.99" | money: separator: "_" }}``                   ``$10,049_99``
+  ``{{ "10049.99" | money: delimiter: "_" }}``                   ``$10_049.99``
+  -------------------------------------------------------------- --------------
+  ``{{ "100" | money: format: "%n %u", unit: "zł" }}``           ``100.00 zł``
+  ============================================================== ==============
 
 |hr|
 
@@ -426,7 +426,7 @@ Formats number using conversion rate for loyalty from site settings.
 
 .. code-block:: liquid
 
-   {{ "50" | points }}
+  {{ "50" | points }}
 
 Returns ``500``.
 
@@ -439,19 +439,19 @@ Available options:
 
 .. container:: ptable
 
-   ============================================================== ==============
-   Example                                                        Result
-   ============================================================== ==============
-   ``{{ "10050" | points: delimiter: "_" }}``                     ``100_500``
-   -------------------------------------------------------------- --------------
-   ``{{ "100" | points: format: "%nP" }}``                        ``1000P``
-   -------------------------------------------------------------- --------------
-   ``{{ "100" | points: convert: false }}``                       ``$100.00``
-   ``{{ "1000" | points: convert: false, delimiter: "," }}``      ``$1,000.00``
-   ``{{ "100" | points: convert: false, unit: "€" }}``            ``€100.00``
-   -------------------------------------------------------------- --------------
-   ``{{ "100" | points: percentage_discount: true }}``            ``500``
-   ============================================================== ==============
+  ============================================================== ==============
+  Example                                                        Result
+  ============================================================== ==============
+  ``{{ "10050" | points: delimiter: "_" }}``                     ``100_500``
+  -------------------------------------------------------------- --------------
+  ``{{ "100" | points: format: "%nP" }}``                        ``1000P``
+  -------------------------------------------------------------- --------------
+  ``{{ "100" | points: convert: false }}``                       ``$100.00``
+  ``{{ "1000" | points: convert: false, delimiter: "," }}``      ``$1,000.00``
+  ``{{ "100" | points: convert: false, unit: "€" }}``            ``€100.00``
+  -------------------------------------------------------------- --------------
+  ``{{ "100" | points: percentage_discount: true }}``            ``500``
+  ============================================================== ==============
 
 |hr|
 
@@ -462,7 +462,7 @@ Removes leading and trailing blank symbols from the string.
 
 .. code-block:: text
 
-   {{ "    strip me " | strip }}
+  {{ "    strip me " | strip }}
 
 Returns ``strip me``.
 
@@ -475,7 +475,7 @@ Returns the string, first removing all whitespace on both ends of the string, an
 
 .. code-block:: text
 
-   {{ "   foo   bar        baz " | squish }}
+  {{ "   foo   bar        baz " | squish }}
 
 Returns ``foo bar baz``.
 
@@ -488,7 +488,7 @@ Calculates a tweet length for the string.
 
 .. code-block:: text
 
-   {{ "wow this is a tweet http://example.com" | tweet_length }}
+  {{ "wow this is a tweet http://example.com" | tweet_length }}
 
 Returns ``43``.
 
@@ -501,8 +501,8 @@ Parses the JSON string source into a Liquid data structure.
 
 .. code-block:: liquid
 
-   {% assign var = '{"key": "value"}' | parse_json %}
-   {{ var.key }}
+  {% assign var = '{"key": "value"}' | parse_json %}
+  {{ var.key }}
 
 Returns ``value``.
 
@@ -516,15 +516,15 @@ Accepts singular (required) and plural (optional) forms.
 
 .. container:: ptable
 
-   ============================================================== ==============
-   Example                                                        Result
-   ============================================================== ==============
-   ``{{ 5 | pluralize: "point" }}``                               ``5 points``
-   ``{{ 2 | pluralize: "sheep" }}``                               ``2 sheep``
-   ``{{ 1 | pluralize: "day off" }}``                             ``1 day off``
-   ``{{ 5 | pluralize: "day off" }}``                             ``5 day offs``
-   ``{{ 0 | pluralize: "day off", "days off" }}``                 ``0 days off``
-   ============================================================== ==============
+  ============================================================== ==============
+  Example                                                        Result
+  ============================================================== ==============
+  ``{{ 5 | pluralize: "point" }}``                               ``5 points``
+  ``{{ 2 | pluralize: "sheep" }}``                               ``2 sheep``
+  ``{{ 1 | pluralize: "day off" }}``                             ``1 day off``
+  ``{{ 5 | pluralize: "day off" }}``                             ``5 day offs``
+  ``{{ 0 | pluralize: "day off", "days off" }}``                 ``0 days off``
+  ============================================================== ==============
 
 As shown in the table, simple words can be pluralized without specifying plural form.
 However, more advanced cases require explicit plural form to work correctly.
@@ -538,9 +538,9 @@ Returns channel-specific claim URL.
 
 .. code-block:: liquid
 
-   {{ "facebook" | claim_url }}
-   {{ "linkedin" | claim_url }}
-   {{ "twitter" | claim_url }}
+  {{ "facebook" | claim_url }}
+  {{ "linkedin" | claim_url }}
+  {{ "twitter" | claim_url }}
 
 |hr|
 
@@ -551,7 +551,7 @@ Group an array’s items by a given property.
 
 .. code-block:: liquid
 
-   {{ incentives | group_by: "amount" }}
+  {{ incentives | group_by: "amount" }}
 
 |hr|
 
@@ -562,9 +562,9 @@ Sort an array. Optional arguments for hashes: 1. property name 2. nils order (fi
 
 .. code-block:: liquid
 
-   {{ campaign_tags | sort }}
-   {{ incentives | sort: "amount" }}
-   {{ incentives | sort: "amount", "first" }}
+  {{ campaign_tags | sort }}
+  {{ incentives | sort: "amount" }}
+  {{ incentives | sort: "amount", "first" }}
 
 |hr|
 
@@ -575,7 +575,7 @@ Select all the objects in an array where the key has the given value.
 
 .. code-block:: liquid
 
-   {{ incentives | where: "amount", 10 }}
+  {{ incentives | where: "amount", 10 }}
 
 |hr|
 
@@ -588,16 +588,16 @@ Supports nested interpolation with `[[  ]]`
 
 .. code-block:: liquid
 
-   {{ "welcome_message" | localize }}
-   {{ "offer_title" | localize: "Get [[incentives.referrer.description]]" }}
+  {{ "welcome_message" | localize }}
+  {{ "offer_title" | localize: "Get [[incentives.referrer.description]]" }}
 
 Supports fixed variants for localization, user will be able to set localization value only from this list.
 First value will be a default value, or you can set it using ``default`` option.
 
 .. code-block:: liquid
 
-   {{ "campaign_layout" | localize: "left", "right" }}
-   {{ "header_size" | localize: "h1", "h2", "h3", "h4", default: "h2" }}
+  {{ "campaign_layout" | localize: "left", "right" }}
+  {{ "header_size" | localize: "h1", "h2", "h3", "h4", default: "h2" }}
 
 There is also boolean localization type. It has a strict requirement: exactly two variants which
 determines boolean logics. The first variant is associated with ``true``, the last one — ``false``.
@@ -606,12 +606,12 @@ option (see above for an example). Here is an example of how to use boolean loca
 
 .. code-block:: liquid
 
-   {% assign responsive_font = 'fonts_size' | localize: 'Responsive', 'Fixed', trait: 'boolean' %}
-   {% if responsive_font %}
-     Responsive
-   {% else %}
-     Fixed
-   {% endif %}
+  {% assign responsive_font = 'fonts_size' | localize: 'Responsive', 'Fixed', trait: 'boolean' %}
+  {% if responsive_font %}
+    Responsive
+  {% else %}
+    Fixed
+  {% endif %}
 
 For more information see :ref:`Localization <campaigns/localization>` page.
 
@@ -625,8 +625,8 @@ Available attributes: `red`, `green`, `blue`, `saturation`, `lightness`, `alpha`
 
 .. code-block:: text
 
-   {{ "black" | scale_color: lightness: 50 }}
-   {{ "rgb(256, 128, 0)" | scale_color: saturation: -10 }}
+  {{ "black" | scale_color: lightness: 50 }}
+  {{ "rgb(256, 128, 0)" | scale_color: saturation: -10 }}
 
 |hr|
 
@@ -645,8 +645,8 @@ Returns a new adjusted color based on the following attributes:
 
 .. code-block:: liquid
 
-   {{ "red" | adjust_color: blue: 255 }}
-   {{ "#000000" | adjust_color: alpha: -0.5 }}
+  {{ "red" | adjust_color: blue: 255 }}
+  {{ "#000000" | adjust_color: alpha: -0.5 }}
 
 |hr|
 
@@ -667,16 +667,16 @@ It returns objects with next fields:
 
 .. code-block:: liquid
 
-   {% assign leaders = "3" | leaderboard %}
-   {% for leader in leaders %}
-      <td>{{ leader.leaderboard_rank }}</td>
-      <td>{{ leader.leaderboard_count }}</td>
-   {% endfor %}
+  {% assign leaders = "3" | leaderboard %}
+  {% for leader in leaders %}
+     <td>{{ leader.leaderboard_rank }}</td>
+     <td>{{ leader.leaderboard_count }}</td>
+  {% endfor %}
 
 .. code-block:: liquid
 
-   {% assign leader = "advocate" | leaderboard %}
-   {{ leader.email }} - {{ leader.leaderboard_count }} - {{ leader.leaderboard_rank }}
+  {% assign leader = "advocate" | leaderboard %}
+  {{ leader.email }} - {{ leader.leaderboard_count }} - {{ leader.leaderboard_rank }}
 
 |hr|
 
@@ -702,13 +702,13 @@ Here is how you can embed a screenshot of your website into a campaign view (``s
 
 .. code-block:: liquid
 
-   <img src="{{ site_url | url2png }}" class="campaign-site-on-the-back" />
+  <img src="{{ site_url | url2png }}" class="campaign-site-on-the-back" />
 
 Refresh the screenshot every week:
 
 .. code-block:: liquid
 
-   <img src="{{ 'www.example.com' | url2png: ttl: 604800 }}" />
+  <img src="{{ 'www.example.com' | url2png: ttl: 604800 }}" />
 
 |hr|
 
@@ -720,7 +720,7 @@ This filter strictly follows GS1-128 specification: https://en.wikipedia.org/wik
 
 .. code-block:: liquid
 
-   {% assign barcode = "X" | barcode %}
+  {% assign barcode = "X" | barcode %}
 
 **Here is an example how to convert a coupon code into a barcode:**
 
@@ -728,27 +728,27 @@ HTML:
 
 .. code-block:: liquid
 
-   <table cellspacing="0" cellpadding="0" border="0">
-     {% assign barcode = coupon_code | barcode %}
-       <tr>
-         {% for bar in barcode %}
-           <!-- bar suppose to be true or false -->
-           <td class="barcode-line is-{{ bar }}"></td>
-         {% endfor %}
-       </tr>
-   </table>
+  <table cellspacing="0" cellpadding="0" border="0">
+    {% assign barcode = coupon_code | barcode %}
+      <tr>
+        {% for bar in barcode %}
+          <!-- bar suppose to be true or false -->
+          <td class="barcode-line is-{{ bar }}"></td>
+        {% endfor %}
+      </tr>
+  </table>
 
 SCSS:
 
 .. code-block:: scss
 
-   .barcode-line {
-     height: 50px;
-     width: 2px;
-     &.is-true {
-       background-color: black;
-     }
-   }
+  .barcode-line {
+    height: 50px;
+    width: 2px;
+    &.is-true {
+      background-color: black;
+    }
+  }
 
 .. _Standard liquid filters: https://github.com/Shopify/liquid/wiki/Liquid-for-Designers#standard-filters
 
@@ -768,12 +768,12 @@ The values are in pixels.
 
 .. code-block:: liquid
 
-   {{ coupon.code | barcode_image }}
-   {{ coupon.code | barcode_image: height: 200 }}
-   {{ coupon.code | barcode_image: xdim: 3 }}
-   {{ coupon.code | barcode_image: height: 200, xdim: 3 }}
-   {{ coupon.code | barcode_image: height: 200, xdim: 3, margin: 5 }}
-   {{ coupon.code | barcode_image: height: 200, xdim: 3, margin: 5, bg_transparent: true }}
+  {{ coupon.code | barcode_image }}
+  {{ coupon.code | barcode_image: height: 200 }}
+  {{ coupon.code | barcode_image: xdim: 3 }}
+  {{ coupon.code | barcode_image: height: 200, xdim: 3 }}
+  {{ coupon.code | barcode_image: height: 200, xdim: 3, margin: 5 }}
+  {{ coupon.code | barcode_image: height: 200, xdim: 3, margin: 5, bg_transparent: true }}
 
 Returns a URL string.
 
@@ -786,7 +786,7 @@ Converts given string into a base64 encoded string.
 
 .. code-block:: text
 
-   {{ "some string" | base64_encode }}
+  {{ "some string" | base64_encode }}
 
 Returns ``c29tZSBzdHJpbmc=``
 
@@ -799,7 +799,7 @@ Decodes given base64 encoded string.
 
 .. code-block:: liquid
 
-   {{ "c29tZSBzdHJpbmc=" | base64_decode }}
+  {{ "c29tZSBzdHJpbmc=" | base64_decode }}
 
 Returns ``some string``
 
@@ -814,18 +814,18 @@ Liquid
 
 .. code-block:: liquid
 
-   {% assign my_array = "" | new_array: "element1", "element2" %}
-   {% assign empty_array = "" | new_array %}
+  {% assign my_array = "" | new_array: "element1", "element2" %}
+  {% assign empty_array = "" | new_array %}
 
-   Array: {{ my_array | json }}
-   Empty array: {{ empty_array | json }}
+  Array: {{ my_array | json }}
+  Empty array: {{ empty_array | json }}
 
 Rendered Liquid
 
 .. code-block:: text
 
-   Array: ["element1","element2"]
-   Empty array: []
+  Array: ["element1","element2"]
+  Empty array: []
 
 |hr|
 
@@ -838,16 +838,16 @@ Liquid
 
 .. code-block:: liquid
 
-   {% assign my_array = "" | new_array %}
-   {% assign my_array = my_array | append_to_array: "element1", "element2" %}
+  {% assign my_array = "" | new_array %}
+  {% assign my_array = my_array | append_to_array: "element1", "element2" %}
 
-   Array: {{ my_array | json }}
+  Array: {{ my_array | json }}
 
 Rendered Liquid
 
 .. code-block:: text
 
-   Array: ["element1","element2"]
+  Array: ["element1","element2"]
 
 |hr|
 
@@ -860,18 +860,18 @@ Liquid
 
 .. code-block:: liquid
 
-   {% assign my_hash = "" | new_hash: key: "value", key2: 42 %}
-   {% assign empty_hash = "" | new_hash %}
+  {% assign my_hash = "" | new_hash: key: "value", key2: 42 %}
+  {% assign empty_hash = "" | new_hash %}
 
-   Hash: {{ my_hash | json }}
-   Empty hash: {{ empty_hash | json }}
+  Hash: {{ my_hash | json }}
+  Empty hash: {{ empty_hash | json }}
 
 Rendered Liquid
 
 .. code-block:: text
 
-   Hash: {"key":"value","key2":42}
-   Empty hash: {}
+  Hash: {"key":"value","key2":42}
+  Empty hash: {}
 
 |hr|
 
@@ -884,17 +884,17 @@ Liquid
 
 .. code-block:: liquid
 
-   {% assign my_hash = "" | new_hash: key: "value", key2: 42 %}
-   {% assign my_hash = my_hash | assign_key: "key2", "value2" %}
-   {% assign my_hash = my_hash | assign_key: "key3", "value3" %}
+  {% assign my_hash = "" | new_hash: key: "value", key2: 42 %}
+  {% assign my_hash = my_hash | assign_key: "key2", "value2" %}
+  {% assign my_hash = my_hash | assign_key: "key3", "value3" %}
 
-   Hash: {{ my_hash | json }}
+  Hash: {{ my_hash | json }}
 
 Rendered Liquid
 
 .. code-block:: text
 
-   Hash: {"key":"value","key2":"value2","key3":"value3"}
+  Hash: {"key":"value","key2":"value2","key3":"value3"}
 
 |hr|
 
@@ -905,7 +905,7 @@ Takes a hash and returns the array of its values.
 
 .. code-block:: liquid
 
-   {% assign incentive_configs = incentives | values %}
+  {% assign incentive_configs = incentives | values %}
 
 Returns ``[{ad incentive config}, {fr incentive config}]``
 
@@ -1043,7 +1043,7 @@ Collection of person’s events from the certain date (or for all time when ``fr
 
 .. code-block:: liquid
 
-   {{ "purchase" | events_collection: from_time: "10/14/2018" }}
+  {{ "purchase" | events_collection: from_time: "10/14/2018" }}
 
 Returns
 
@@ -1079,7 +1079,7 @@ Requires Rybbon app to be installed and enabled in order to work.
 
 .. code-block:: liquid
 
-   {{ "a9a3472f4ea858758e0cd686de8408e2" | rybbon }}
+  {{ "a9a3472f4ea858758e0cd686de8408e2" | rybbon }}
 
 Returns ``https://www.rybbon.net/redeem.php?claimcode=ee645de47765bdbede751c8c6f08a619``
 
@@ -1087,7 +1087,7 @@ Accepts custom amount of reward for Rybbon campaigns with variable denomination.
 
 .. code-block:: liquid
 
-   {{ "a9a3472f4ea858758e0cd686de8408e2" | rybbon: amount: 13.5 }}
+  {{ "a9a3472f4ea858758e0cd686de8408e2" | rybbon: amount: 13.5 }}
 
 Find more details about the integration here: :ref:`Rybbon <advanced_features/rybbon>`
 
@@ -1105,7 +1105,7 @@ Implies that there is only one funding source in the Tremendous account.
 
 .. code-block:: liquid
 
-   {{ "DEM8ULSSATK0" | tremendous }}
+  {{ "DEM8ULSSATK0" | tremendous }}
 
 Returns ``https://www.tremendous.com/rewards/payout/reward123``
 
