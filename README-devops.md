@@ -5,14 +5,17 @@ The Talkable documentation stack is a containerized system that uses Docker to s
 ## Key Features
 
 1. **Containerized Components**:
+   
    - **Nginx**: Handles HTTP requests, serves static HTML files, manages URL redirection, and dynamically serves environment-specific `robots.txt` files.
    - **Sphinx Autobuilder**: Generates static HTML files from source documentation and stores them in a persistent volume shared with Nginx.
 
 2. **Environment-Specific Behavior**:
+   
    - Configured via a `.env` file for flexibility.
    - Supports dynamic environment-specific behavior, such as serving different `robots.txt` files based on the `ENVIRONMENT` variable.
 
 3. **Efficient Architecture**:
+   
    - Deployed on Amazon AWS Virtual Private Servers (VPS) with an AWS load balancer directing user traffic to the appropriate environment.
    - Sphinx generates content on a persistent volume that Nginx serves directly.
 
@@ -26,22 +29,29 @@ The Talkable documentation stack is a containerized system that uses Docker to s
 ### Steps
 
 1. **Clone the Repository**:
+   
    ```bash
    git clone https://github.com/talkable/talkable-docs.git
    ```
 
 2. **Switch to the Appropriate Branch**:
+   
    - Use the `master` branch for production.
+   
    ```bash
    git checkout master
    ```
+   
    - Use the `staging-bastion` branch for staging.
+   
    ```bash
    git checkout staging-bastion
    ```
 
 3. **Create and Configure the `.env` File**:
+   
    - Copy `.env.template` to `.env`:
+   
      ```bash
      cp .env.template .env
      ```
@@ -51,6 +61,7 @@ The Talkable documentation stack is a containerized system that uses Docker to s
      - Leave `_HOST` variables unchanged unless domain names for staging or production servers are updated.
 
 4. **Deploy the Stack**:
+   
    ```bash
    docker-compose up -d
    ```
@@ -61,10 +72,12 @@ The Talkable documentation stack is a containerized system that uses Docker to s
 
 - The repository includes separate `robots.txt` files for each environment.
 - The correct file is dynamically selected based on the `ENVIRONMENT` variable and mapped to the container:
+  
   ```yaml
   volumes:
     - ./nginx/robots/${ENVIRONMENT}.txt:/var/www/robots.txt
   ```
+
 - Nginx serves the file at `/var/www/robots.txt` in response to `robots.txt` requests.
 
 ## Persistent Data Sharing
