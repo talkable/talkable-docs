@@ -38,15 +38,15 @@ The Talkable documentation stack is a containerized system that uses Docker to s
    
    - Use the `master` branch for production.
    
-   ```bash
-   git checkout master
-   ```
+      ```bash
+      git checkout master
+      ```
    
    - Use the `staging-bastion` branch for staging.
    
-   ```bash
-   git checkout staging-bastion
-   ```
+      ```bash
+      git checkout staging-bastion
+      ```
 
 3. **Create and Configure the `.env` File**:
    
@@ -55,7 +55,9 @@ The Talkable documentation stack is a containerized system that uses Docker to s
      ```bash
      cp .env.template .env
      ```
+   
    - Update the following variables:
+  
      - **`ENVIRONMENT`**: Set to `development`, `staging`, or `production`.
      - **`LOCAL_PORT`**: Adjust if the default port (`8080`) is already in use.
      - Leave `_HOST` variables unchanged unless domain names for staging or production servers are updated.
