@@ -7,28 +7,27 @@ services:
     container_name: sphinx
     volumes:
       - ./source:/docs/source
+      - docs_build:/docs/_build
     environment:
       - ENVIRONMENT=${ENVIRONMENT}
-      - NGINX_PORT=${NGINX_PORT}
-    command: sphinx-autobuild -b dirhtml --host 0.0.0.0 /docs/source /docs/_build
-    networks:
-      - docs_net
+      - LOCAL_PORT=${LOCAL_PORT}
+      - PRODUCTION_HOST=${PRODUCTION_HOST}
+      - STAGING_HOST=${STAGING_HOST}
+      - DEVELOPMENT_HOST=${DEVELOPMENT_HOST}
+    command: sphinx-autobuild -b dirhtml /docs/source /docs/_build
     
   nginx:
     image: nginx:1.27.3-alpine3.20
     container_name: nginx
     volumes:
+      - docs_build:/var/www/html
       - ./nginx/conf.d:/etc/nginx/conf.d
-    networks:
-      - docs_net
+      - ./nginx/robots/${ENVIRONMENT}.txt:/var/www/robots.txt
     ports:
-      - ${NGINX_PORT}:80
+      - ${LOCAL_PORT}:80
     depends_on:
       - sphinx
 
-networks:
-  docs_net:
-    name: docs_net
-    driver: bridge
-
-
+volumes:
+  docs_build:
+    driver: local

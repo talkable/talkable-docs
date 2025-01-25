@@ -1,128 +1,74 @@
-# Talkable Documentation
+## What is Talkable Documentation?
 
-## Overview
+The set of articles describing Talkable's capabilities, publicly available at [docs.talkable.com](https://docs.talkable.com).
 
-This GitHub repository represents Talkable’s documentation site, located at [docs.talkable.com](https://docs.talkable.com).
+It uses [reStructuredText](https://docutils.sourceforge.io/rst.html) as its markup language, an easy-to-read, what-you-see-is-what-you-get plaintext markup syntax. All reStructuredText formatting capabilities can be found in [The reST Quickref](https://docutils.sourceforge.io/docs/user/rst/quickref.html).
 
-The Talkable documentation uses [reStructuredText](https://docutils.sourceforge.io/rst.html) as its markup language and is built using [Sphinx](https://www.sphinx-doc.org).
+It is built using [Sphinx](https://www.sphinx-doc.org), an open-source documentation generation tool that transforms plain text files into beautifully formatted documentation. For more details, see [The Sphinx Documentation](https://www.sphinx-doc.org).
 
-For more details see [The Sphinx Documentation](https://www.sphinx-doc.org).
+## Where is it stored?
 
-## Concepts
+It's stored in a dedicated GitHub repository ([talkable-docs](https://github.com/talkable/talkable-docs)).
 
-#### reStructuredText
+The repository consists of the following branches:
+- [master](https://github.com/talkable/talkable-docs/tree/master): The main branch used to keep the most recent stable version available at [docs.talkable.com](https://docs.talkable.com).
+- [staging-bastion](https://github.com/talkable/talkable-docs/tree/staging-bastion): A staging branch used for testing by QA. It is available at [bastion-docs.talkable.com](https://bastion-docs.talkable.com).
+- Feature branches created from `master` by individual contributors/developers.
 
-An easy-to-read, what-you-see-is-what-you-get plaintext markup syntax.
-All reStructuredText formatting capabilities can be found at [The reST Quickref](https://docutils.sourceforge.io/docs/user/rst/quickref.html).
+## What is the documentation update workflow?
 
-#### Documentation Builder
+1. Pull changes from `master`.
+2. Checkout a new branch from `master`.
+3. Deploy the local/development environment.
+4. Make changes and test them locally.
+5. Commit the changes to the `staging` branch.
+6. Get the documentation tested by QA.
+7. Create a pull request to the `master` branch, providing the staging URL of the changed page in the pull request description.
+8. Merge the pull request once it passes the review.
 
-Dockerized set of Sphinx and Nginx containers. Used to build the static pages from .rst and other format files into html static pages (Sphinx) and populate tyem in form of the documentation pages (Nginx) available to the user.
+## How to deploy the local environment?
 
-#### Documentation Building Process
+0. **Install Docker**
 
-The .rst files need to be buit to static html files. That doesn't require any involvement from developers since is handled by the [sphinx-autobuild](https://github.com/sphinx-doc/sphinx-autobuild) package included in to the Documentation Builder set mentoned above.
+   Follow the [official Docker documentation](https://docs.docker.com/compose/install/).
 
-#### Changes Deployment
+1. **Navigate to the repository root directory.**
 
-The local deployment doesn't require any efforts since available instantly after the files are changed on the local machine storage. The Builder buils teh changes just after indicated the change.
-The staging and producxtion deployment are handled by the corresponding Jenkins jobs just after the changes are pushed to the proper branch (staging or master)
+   Ensure the `docker-compose.yaml` file is located there.
 
-## Environments
+2. **Create an `.env` file by copying `.env.template`.**
+   
+   Review and update the variable values if needed.
+   
+   For a **development/local environment**, all default settings should work out of the box. The only value you may need to change is `LOCAL_PORT` if `8080` is already in use on your local machine.
 
-### Local
+3. **Run the local environment deployment.**
 
-Used to make teh local changes on developer's machine before pushing them to staging environment for testing by QA.
-Deployed in form of docker container on the developer's machine.
-Code managed in the dedicated github branch created from `master` branch.
+   Run the command:
 
-### Staging
-
-Used by QA team to test the documentation before pushing it to master branch/production environment.
-Deployed in dockerised AWS infrastructure.
-Code managed in `staging-bastion` branch.
-Available under the following url `url to be provided`
-
-### Production
-
-The public version of the documentation available to the users.
-Deployed in dockerised AWS infrastructure.
-Code managed in `master` branch.
-Available under the following url `url to be provided`
-
-## Workflows
-
-### General Flow:
-
-1. Pull changes from master
-2. Checkout your new branch from master
-3. Deploy local Sphinx container
-4. Make changes, test your changes locally
-5. Commit the changes to staging branch
-6. Get the documentation tested by QA
-7. Create a Pull Request to "main" branch, providing the staging URL to the changed page in Pull Request’s description.
-8. Merge pull request once it passes the review
-
-### Builder Container Deployment
-
-0. Install Docker
-
-   Follow the [official Docker documentation](https://docs.docker.com/compose/install/)
-
-1. Navigate to the repo root directory.
-
-   Make sure `docker-compose.yaml` file is located there.
-
-2. Create `.env` file and set the value of the port you want the documentation to be available on your local machine. Use `.env.example` file as a template.
-
-   ```
-   NGINX_PORT=8080
-   ENVIRONMENT=local
-   ```
-
-   Set the port number to the value you want to use as a port number while browsing the documentation locally.
-   For teh example above you would use `http://localhost:8080`. Chose whichever free port.
-
-   Possible values for `ENVIRONMENT` variable:
-
-   - `local` for local development environment deployment
-   - `staging` for staging
-   - `production` for production
-
-3. Run the local environment deployment
-
-   Run the command to deploy the Builder
-
-   ```
+   ```bash
    docker-compose up -d
    ```
 
-4. Check the successfull deployment
+   If everything is set up correctly, the documentation will be available at [http://localhost:8080](http://localhost:8080). Make sure you use the port number defined in the `.env` file.
 
-   Try follow the link [http://localhost:8080](http://localhost:8080)
-   Make sure you use the port number define din `.env` file
-   If you've done everything right the documentation will open.
-   If it doesn't check teh Troubleshooting section
+   If the documentation does not load, check the **Troubleshooting** section.
 
-## Troubleshooting
+## How to deploy changes to production and staging?
 
-#### Can't view the documentation locally in browser
+You should not deploy it manually!
 
-1. Make sure you use correct post number and protocol.
-   The port number should equal the number you've provided in `.env` as `NGINX_PORT` value
+The deployment is handled by Jenkins jobs. 
 
-2. Check `nginx` logs:
+All you need to do is commit your changes to the corresponding branch to deploy them to the appropriate server:
+- Commit to the [staging-bastion](https://github.com/talkable/talkable-docs/tree/staging-bastion) branch => [bastion-docs.talkable.com](https://bastion-docs.talkable.com/).
+- Commit to the [master](https://github.com/talkable/talkable-docs/tree/master) branch => [docs.talkable.com](https://docs.talkable.com/).
 
-   ```shell
-   docker logs -f nginx
-   ```
+## How do I make the actual changes?
 
-3. Check `Sphinx` logs
-   ```shell
-   dcoker logs -f sphinx
-   ```
+Navigate to the [source](./source/) directory and update the files using `reStructuredText` syntax. Refer to [The reST Quickref](https://docutils.sourceforge.io/docs/user/rst/quickref.html) for syntax details.
 
-## Formatting examples
+Here are some formatting examples:
 
 ### Sections
 
@@ -164,21 +110,28 @@ Here is a reference to "talkable section": :ref:`talkable-section` which will ha
 name "Talkable Section".
 ```
 
-## Deployment
+## Troubleshooting
 
-#### Local Enviro
+#### Can't view the documentation locally in the browser?
 
-1. Switch to local branch "void" and pull the latest changes from the remote:
-   `git checkout void; git pull`
-2. Merge your branch into local branch "void":
-   `git merge YOUR_BRANCH_NAME`
-3. Push the changes to the remote branch "void":
-   `git push origin void`
+1. Ensure you are using the correct port number and protocol.
+   The port number should match the value provided in `.env` as `LOCAL_PORT`.
 
----
+2. Check `nginx` logs:
 
-See "master" branch: https://github.com/talkable/talkable-docs
+   ```bash
+   docker logs -f nginx
+   ```
 
-See "gh-pages" branch: https://github.com/talkable/talkable-docs/tree/gh-pages
+3. Check `Sphinx` logs:
 
-See GitHub Page (auto generated): https://docs.talkable.com
+   ```bash
+   docker logs -f sphinx
+   ```
+
+## Links
+
+- GitHub "staging" branch: [staging-bastion](https://github.com/talkable/talkable-docs/tree/staging-bastion)
+- Staging web server: [bastion-docs.talkable.com](https://bastion-docs.talkable.com/)
+- GitHub "production" branch: [master](https://github.com/talkable/talkable-docs/tree/master)
+- Production web server: [docs.talkable.com](https://docs.talkable.com/)
