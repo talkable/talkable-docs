@@ -42,10 +42,10 @@ The Talkable documentation stack is a containerized system that uses Docker to s
       git checkout master
       ```
    
-   - Use the `staging-bastion` branch for staging.
+   - Use the `staging` branch for staging.
    
       ```bash
-      git checkout staging-bastion
+      git checkout staging
       ```
 
 3. **Create and Configure the `.env` File**:

@@ -12,7 +12,7 @@ It's stored in a dedicated GitHub repository ([talkable-docs](https://github.com
 
 The repository consists of the following branches:
 - [master](https://github.com/talkable/talkable-docs/tree/master): The main branch used to keep the most recent stable version available at [docs.talkable.com](https://docs.talkable.com).
-- [staging-bastion](https://github.com/talkable/talkable-docs/tree/staging-bastion): A staging branch used for testing by QA. It is available at [bastion-docs.talkable.com](https://bastion-docs.talkable.com).
+- [staging](https://github.com/talkable/talkable-docs/tree/staging): A staging branch used for testing by QA. It is available at [bastion-docs.talkable.com](https://bastion-docs.talkable.com).
 - Feature branches created from `master` by individual contributors/developers.
 
 ## What is the documentation update workflow?
@@ -61,7 +61,7 @@ You should not deploy it manually!
 The deployment is handled by Jenkins jobs. 
 
 All you need to do is commit your changes to the corresponding branch to deploy them to the appropriate server:
-- Commit to the [staging-bastion](https://github.com/talkable/talkable-docs/tree/staging-bastion) branch => [bastion-docs.talkable.com](https://bastion-docs.talkable.com/).
+- Commit to the [staging](https://github.com/talkable/talkable-docs/tree/staging) branch => [bastion-docs.talkable.com](https://bastion-docs.talkable.com/).
 - Commit to the [master](https://github.com/talkable/talkable-docs/tree/master) branch => [docs.talkable.com](https://docs.talkable.com/).
 
 ## How do I make the actual changes?
@@ -131,7 +131,7 @@ name "Talkable Section".
 
 ## Links
 
-- GitHub "staging" branch: [staging-bastion](https://github.com/talkable/talkable-docs/tree/staging-bastion)
+- GitHub "staging" branch: [staging](https://github.com/talkable/talkable-docs/tree/staging)
 - Staging web server: [bastion-docs.talkable.com](https://bastion-docs.talkable.com/)
 - GitHub "production" branch: [master](https://github.com/talkable/talkable-docs/tree/master)
 - Production web server: [docs.talkable.com](https://docs.talkable.com/)
