@@ -31,7 +31,7 @@ The Talkable documentation stack is a containerized system that uses Docker to s
 1. **Clone the Repository**:
    
    ```bash
-   git clone https://github.com/talkable/talkable-docs.git
+   git clone git@github.com:talkable/talkable-docs.git
    ```
 
 2. **Switch to the Appropriate Branch**:
