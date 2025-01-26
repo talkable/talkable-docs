@@ -47,7 +47,7 @@ The repository consists of the following branches:
    Run the command:
 
    ```bash
-   docker-compose up -d
+   docker compose up -d
    ```
 
    If everything is set up correctly, the documentation will be available at [http://localhost:8080](http://localhost:8080). Make sure you use the port number defined in the `.env` file.
