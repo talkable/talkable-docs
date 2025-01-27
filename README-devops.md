@@ -65,7 +65,7 @@ The Talkable documentation stack is a containerized system that uses Docker to s
 4. **Deploy the Stack**:
    
    ```bash
-   docker compose up -d
+   docker compose up -d --build
    ```
 
 ## Environment-Specific Configuration
