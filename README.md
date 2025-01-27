@@ -11,8 +11,12 @@ It is built using [Sphinx](https://www.sphinx-doc.org), an open-source documenta
 It's stored in a dedicated GitHub repository ([talkable-docs](https://github.com/talkable/talkable-docs)).
 
 The repository consists of the following branches:
+
 - [master](https://github.com/talkable/talkable-docs/tree/master): The main branch used to keep the most recent stable version available at [docs.talkable.com](https://docs.talkable.com).
-- [staging-bastion](https://github.com/talkable/talkable-docs/tree/staging-bastion): A staging branch used for testing by QA. It is available at [bastion-docs.talkable.com](https://bastion-docs.talkable.com).
+  <<<<<<< HEAD
+- # [staging-bastion](https://github.com/talkable/talkable-docs/tree/staging-bastion): A staging branch used for testing by QA. It is available at [bastion-docs.talkable.com](https://bastion-docs.talkable.com).
+- [staging](https://github.com/talkable/talkable-docs/tree/staging): A staging branch used for testing by QA. It is available at [staging-docs.talkable.com](https://staging-docs.talkable.com).
+  > > > > > > > vo-PR-23724
 - Feature branches created from `master` by individual contributors/developers.
 
 ## What is the documentation update workflow?
@@ -34,12 +38,17 @@ The repository consists of the following branches:
 
 1. **Navigate to the repository root directory.**
 
-   Ensure the `docker-compose.yaml` file is located there.
+<<<<<<< HEAD
+Ensure the `docker-compose.yaml` file is located there.
+=======
+Ensure the `docker-compose.yml` file is located there.
+
+> > > > > > > vo-PR-23724
 
 2. **Create an `.env` file by copying `.env.template`.**
-   
+
    Review and update the variable values if needed.
-   
+
    For a **development/local environment**, all default settings should work out of the box. The only value you may need to change is `LOCAL_PORT` if `8080` is already in use on your local machine.
 
 3. **Run the local environment deployment.**
@@ -47,7 +56,11 @@ The repository consists of the following branches:
    Run the command:
 
    ```bash
+   <<<<<<< HEAD
    docker-compose up -d
+   =======
+   docker compose up -d
+   >>>>>>> vo-PR-23724
    ```
 
    If everything is set up correctly, the documentation will be available at [http://localhost:8080](http://localhost:8080). Make sure you use the port number defined in the `.env` file.
@@ -58,10 +71,14 @@ The repository consists of the following branches:
 
 You should not deploy it manually!
 
-The deployment is handled by Jenkins jobs. 
+The deployment is handled by Jenkins jobs.
 
 All you need to do is commit your changes to the corresponding branch to deploy them to the appropriate server:
-- Commit to the [staging-bastion](https://github.com/talkable/talkable-docs/tree/staging-bastion) branch => [bastion-docs.talkable.com](https://bastion-docs.talkable.com/).
+<<<<<<< HEAD
+
+- # Commit to the [staging-bastion](https://github.com/talkable/talkable-docs/tree/staging-bastion) branch => [bastion-docs.talkable.com](https://bastion-docs.talkable.com/).
+- Commit to the [staging](https://github.com/talkable/talkable-docs/tree/staging) branch => [staging-docs.talkable.com](https://staging-docs.talkable.com/).
+  > > > > > > > vo-PR-23724
 - Commit to the [master](https://github.com/talkable/talkable-docs/tree/master) branch => [docs.talkable.com](https://docs.talkable.com/).
 
 ## How do I make the actual changes?
@@ -131,7 +148,7 @@ name "Talkable Section".
 
 ## Links
 
-- GitHub "staging" branch: [staging-bastion](https://github.com/talkable/talkable-docs/tree/staging-bastion)
-- Staging web server: [bastion-docs.talkable.com](https://bastion-docs.talkable.com/)
+- GitHub "staging" branch: [staging](https://github.com/talkable/talkable-docs/tree/staging)
+- Staging web server: [staging-docs.talkable.com](https://staging-docs.talkable.com/)
 - GitHub "production" branch: [master](https://github.com/talkable/talkable-docs/tree/master)
 - Production web server: [docs.talkable.com](https://docs.talkable.com/)

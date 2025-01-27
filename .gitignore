@@ -1,8 +1,19 @@
+# IDE
 .idea
+.vscode
+
+# Local
 *.log
-
 .env
-.venv
 
+# Sphinx
 _build
+
+# Python
+.venv
 __pycache__
+
+# Ruby
+/build
+/.bundle
+Gemfile.lock

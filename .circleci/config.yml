@@ -1,0 +1,34 @@
+version: 2.1
+
+executors:
+  default:
+    docker:
+      - auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_ACCESS_TOKEN
+        image: cimg/python:3.13
+        environment:
+          ENVIRONMENT: production
+
+orbs:
+  python: circleci/python@3.0.0
+
+jobs:
+  build:
+    executor: default
+
+    steps:
+      - checkout
+
+      - python/install-packages
+
+      - run:
+          name: Build documentation
+          command: sphinx-build -nW -b dirhtml -d build/doctrees source build/html
+
+workflows:
+  workflow:
+    jobs:
+      - build:
+          context:
+            - org-global
