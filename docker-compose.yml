@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: sphinx
+    container_name: docs-sphinx-${ENVIRONMENT}
     volumes:
       - ./source:/docs/source
       - docs_build:/docs/_build
@@ -22,7 +22,7 @@ services:
 
   nginx:
     image: nginx:1.27-alpine3.20
-    container_name: nginx
+    container_name: docs-nginx-${ENVIRONMENT}
     volumes:
       - docs_build:/var/www/html
       - ./nginx/conf.d:/etc/nginx/conf.d
@@ -34,4 +34,4 @@ services:
 
 volumes:
   docs_build:
-    driver: local
+    driver: bridge
