@@ -33,7 +33,7 @@ jobs:
             else
               echo 'export ENVIRONMENT=development' >> $BASH_ENV
             fi
-            echo "ENVIRONMENT set to $ENVIRONMENT"
+            source "$BASH_ENV"
 
       - python/install-packages:
           app-dir: ~/project
