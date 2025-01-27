@@ -30,6 +30,8 @@ jobs:
               echo 'export ENVIRONMENT=staging' >> $BASH_ENV
             elif [ "$CIRCLE_BRANCH" == "master" ]; then
               echo 'export ENVIRONMENT=production' >> $BASH_ENV
+            else
+              echo 'export ENVIRONMENT=development' >> $BASH_ENV
             fi
             echo "ENVIRONMENT set to $ENVIRONMENT"
 
@@ -46,8 +48,3 @@ workflows:
       - build:
           context:
             - org-global
-          filters:
-            branches:
-              only:
-                - master
-                - staging
