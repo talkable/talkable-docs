@@ -23,7 +23,7 @@ jobs:
 
       - run:
           name: Build documentation
-          command: sphinx-build -nW -b html -d build/doctrees source build/html
+          command: sphinx-build -nW -b dirhtml -d build/doctrees source build/html
 
 workflows:
   workflow:
