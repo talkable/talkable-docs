@@ -34,7 +34,7 @@ The repository consists of the following branches:
 
 1. **Navigate to the repository root directory.**
 
-   Ensure the `docker-compose.yaml` file is located there.
+   Ensure the `docker-compose.yml` file is located there.
 
 2. **Create an `.env` file by copying `.env.template`.**
    
