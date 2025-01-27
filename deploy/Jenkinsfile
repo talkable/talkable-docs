@@ -16,7 +16,6 @@ pipeline {
     environment {
         GITHUB_ACC = credentials('talkable-bot-deploy-token')
         JENKINS_BUILD_USER_ID = ""
-//        CHANGESET_REGEXP = "^nginx/.*"
     }
     triggers {
         pollSCM('* * * * *') // Polls SCM every minute
