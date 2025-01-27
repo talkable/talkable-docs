@@ -61,6 +61,7 @@ pipeline {
 //            }
             steps {
                 script {
+                    sh 'printenv | sort'
                     withCredentials([sshUserPrivateKey(credentialsId: "${JENKINS_CRED_ID}", keyFileVariable: 'SSH_KEY', usernameVariable: 'SSH_USER')]) {
                         dockerContainerUpdate('$HOST_ENV')
                     }
@@ -75,6 +76,7 @@ pipeline {
                         }
             }
             steps {
+                sh 'printenv | sort'
                 script {
                     withCredentials([sshUserPrivateKey(credentialsId: "${JENKINS_CRED_ID}", keyFileVariable: 'SSH_KEY', usernameVariable: 'SSH_USER')]) {
                         dockerContainerUpdate('$HOST_ENV')
