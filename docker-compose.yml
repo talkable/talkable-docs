@@ -9,11 +9,16 @@ services:
       - ./source:/docs/source
       - docs_build:/docs/_build
     environment:
-      - ENVIRONMENT=${ENVIRONMENT}
-      - LOCAL_PORT=${LOCAL_PORT}
+      - ENVIRONMENT=staging
+      - LOCAL_PORT=8080
       - PRODUCTION_HOST=${PRODUCTION_HOST}
-      - STAGING_HOST=${STAGING_HOST}
+      - STAGING_HOST=docs.bastion.talkable.com
       - DEVELOPMENT_HOST=${DEVELOPMENT_HOST}
+#      - ENVIRONMENT=${ENVIRONMENT}
+#      - LOCAL_PORT=${LOCAL_PORT}
+#      - PRODUCTION_HOST=${PRODUCTION_HOST}
+#      - STAGING_HOST=${STAGING_HOST}
+#      - DEVELOPMENT_HOST=${DEVELOPMENT_HOST}
 
   nginx:
     image: nginx:1.27-alpine3.20
