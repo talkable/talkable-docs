@@ -14,7 +14,6 @@ services:
       - PRODUCTION_HOST=${PRODUCTION_HOST}
       - STAGING_HOST=${STAGING_HOST}
       - DEVELOPMENT_HOST=${DEVELOPMENT_HOST}
-    command: sphinx-autobuild -b dirhtml /docs/source /docs/_build
     
   nginx:
     image: nginx:1.27-alpine3.20
