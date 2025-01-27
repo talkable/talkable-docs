@@ -8,11 +8,17 @@ services:
     restart: unless-stopped
     networks:
       - docs-nginx
-    env_file:
-      - ./.env
+#    env_file:
+#      - ./.env
     volumes:
       - ./source:/docs/source
       - docs_build:/docs/_build
+    environment:
+      - ENVIRONMENT=${ENVIRONMENT}
+      - LOCAL_PORT=${LOCAL_PORT}
+      - PRODUCTION_HOST=${PRODUCTION_HOST}
+      - STAGING_HOST=${STAGING_HOST}
+      - DEVELOPMENT_HOST=${DEVELOPMENT_HOST}
 
   nginx:
     image: nginx:1.27.3-alpine3.20
