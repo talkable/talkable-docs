@@ -14,9 +14,24 @@ orbs:
 jobs:
   build:
     executor: default
+    environment:
+      LOCAL_PORT: 8080
+      DEVELOPMENT_HOST: localhost
+      STAGING_HOST: staging-docs.talkable.com
+      PRODUCTION_HOST: docs.talkable.com
 
     steps:
       - checkout
+
+      - run:
+          name: Set ENVIRONMENT variable
+          command: |
+            if [ "$CIRCLE_BRANCH" == "staging" ]; then
+              echo 'export ENVIRONMENT=staging' >> $BASH_ENV
+            elif [ "$CIRCLE_BRANCH" == "master" ]; then
+              echo 'export ENVIRONMENT=production' >> $BASH_ENV
+            fi
+            echo "ENVIRONMENT set to $ENVIRONMENT"
 
       - python/install-packages:
           app-dir: ~/project
@@ -31,3 +46,8 @@ workflows:
       - build:
           context:
             - org-global
+          filters:
+            branches:
+              only:
+                - master
+                - staging
