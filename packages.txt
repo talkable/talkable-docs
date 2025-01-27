@@ -1,5 +1,5 @@
 # This is a list of packages used in the framework
-# Used by the Sphinx maintainer
+# Used by the documentation maintainer
 # Add the package name here if you add some to the framework
 
 furo
