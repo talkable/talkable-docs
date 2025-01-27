@@ -16,6 +16,7 @@ pipeline {
     environment {
         GITHUB_ACC = credentials('talkable-bot-deploy-token')
         JENKINS_BUILD_USER_ID = ""
+//        CHANGESET_REGEXP = "^nginx/.*"
     }
     triggers {
         pollSCM('* * * * *') // Polls SCM every minute
@@ -49,10 +50,10 @@ pipeline {
             }
         }
         stage('Build') {
-            when {
-                beforeAgent true
-                changeset pattern: "${CHANGESET_REGEXP}", comparator: "REGEXP"
-            }
+//            when {
+//                beforeAgent true
+//                changeset pattern: "${CHANGESET_REGEXP}", comparator: "REGEXP"
+//            }
             steps {
                 script {
                     withCredentials([sshUserPrivateKey(credentialsId: "${JENKINS_CRED_ID}", keyFileVariable: 'SSH_KEY', usernameVariable: 'SSH_USER')]) {
