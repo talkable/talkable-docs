@@ -2,8 +2,16 @@
 
 // Upgrades or installs nginx containers for WordPress.
 def dockerContainerUpdate(String hostEnv) {
+    def envFile = """
+ENVIRONMENT=${env.ENVIRONMENT}
+STAGING_HOST=${env.STAGING_HOST ?: ''}
+PRODUCTION_HOST=${env.PRODUCTION_HOST ?: ''}
+LOCAL_PORT=${env.LOCAL_PORT ?: '8080'}
+"""
     sh """ssh -o StrictHostKeyChecking=no -i $SSH_KEY $SSH_USER@${hostEnv} 'cd talkable-docs/ && \
         git checkout ${BRANCH_NAME} && git branch -a && git pull origin && \
+        echo "${envFile.trim()}" > .env && \
+        cat .env && \
         docker-compose ls && docker ps && \
         docker-compose down && docker-compose up -d --remove-orphans && \
         docker-compose ls && docker ps' """
@@ -60,7 +68,6 @@ pipeline {
 //                changeset pattern: "${CHANGESET_REGEXP}", comparator: "REGEXP"
 //            }
             steps {
-                sh "printenv | sort"
                 script {
                     withCredentials([sshUserPrivateKey(credentialsId: "${JENKINS_CRED_ID}", keyFileVariable: 'SSH_KEY', usernameVariable: 'SSH_USER')]) {
                         dockerContainerUpdate('$HOST_ENV')
