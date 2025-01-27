@@ -16,6 +16,7 @@ pipeline {
     environment {
         GITHUB_ACC = credentials('talkable-bot-deploy-token')
         JENKINS_BUILD_USER_ID = ""
+        LOCAL_PORT="8080"
 //        CHANGESET_REGEXP = "^nginx/.*"
     }
     triggers {
@@ -39,9 +40,13 @@ pipeline {
                     if (env.BRANCH_NAME == 'master') {
                         env.HOST_ENV = '10.200.1.200'
                         env.JENKINS_CRED_ID = 'ssh-jenkins-to-prod1-wp-nginx'
+                        env.ENVIRONMENT="production"
+                        env.PRODUCTION_HOST="docs.talkable.com"
                     } else if (env.BRANCH_NAME == 'staging') {
                         env.HOST_ENV = '10.1.2.12'
                         env.JENKINS_CRED_ID = 'ssh-jenkins-to-bastion-wp-nginx'
+                        env.ENVIRONMENT="staging"
+                        env.STAGING_HOST="docs.bastion.talkable.com"
                     } else {
                         echo "Hello from ${BRANCH_NAME} branch! We only build the following branches of the Talkable repository: master, staging."
                         error("Non-supported branch for build")
