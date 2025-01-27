@@ -1,0 +1,5 @@
+furo
+sphinx-copybutton
+sphinx-sitemap
+sphinx-autobuild
+sphinx-favicon

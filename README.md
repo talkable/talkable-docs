@@ -11,6 +11,7 @@ It is built using [Sphinx](https://www.sphinx-doc.org), an open-source documenta
 It's stored in a dedicated GitHub repository ([talkable-docs](https://github.com/talkable/talkable-docs)).
 
 The repository consists of the following branches:
+
 - [master](https://github.com/talkable/talkable-docs/tree/master): The main branch used to keep the most recent stable version available at [docs.talkable.com](https://docs.talkable.com).
 - [staging](https://github.com/talkable/talkable-docs/tree/staging): A staging branch used for testing by QA. It is available at [docs.bastion.talkable.com](https://docs.bastion.talkable.com).
 - Feature branches created from `master` by individual contributors/developers.
@@ -34,12 +35,12 @@ The repository consists of the following branches:
 
 1. **Navigate to the repository root directory.**
 
-   Ensure the `docker-compose.yml` file is located there.
+  Ensure the `docker-compose.yml` file is located there.
 
 2. **Create an `.env` file by copying `.env.template`.**
-   
+
    Review and update the variable values if needed.
-   
+
    For a **development/local environment**, all default settings should work out of the box. The only value you may need to change is `LOCAL_PORT` if `8080` is already in use on your local machine.
 
 3. **Run the local environment deployment.**
@@ -58,7 +59,7 @@ The repository consists of the following branches:
 
 You should not deploy it manually!
 
-The deployment is handled by Jenkins jobs. 
+The deployment is handled by Jenkins jobs.
 
 All you need to do is commit your changes to the corresponding branch to deploy them to the appropriate server:
 - Commit to the [staging](https://github.com/talkable/talkable-docs/tree/staging) branch => [docs.bastion.talkable.com](https://docs.bastion.talkable.com/).
