@@ -6,37 +6,21 @@ executors:
       - auth:
           username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_ACCESS_TOKEN
-        image: cimg/python:3.12
+        image: cimg/python:3.13
+        environment:
+          ENVIRONMENT: production
 
 orbs:
-  python: circleci/python@2.1.1
+  python: circleci/python@3.0.0
 
 jobs:
   build:
     executor: default
-    environment:
-      LOCAL_PORT: 8080
-      DEVELOPMENT_HOST: localhost
-      STAGING_HOST: staging-docs.talkable.com
-      PRODUCTION_HOST: docs.talkable.com
 
     steps:
       - checkout
 
-      - run:
-          name: Set ENVIRONMENT variable
-          command: |
-            if [ "$CIRCLE_BRANCH" == "staging" ]; then
-              echo 'export ENVIRONMENT=staging' >> $BASH_ENV
-            elif [ "$CIRCLE_BRANCH" == "master" ]; then
-              echo 'export ENVIRONMENT=production' >> $BASH_ENV
-            else
-              echo 'export ENVIRONMENT=development' >> $BASH_ENV
-            fi
-            source "$BASH_ENV"
-
-      - python/install-packages:
-          app-dir: ~/project
+      - python/install-packages
 
       - run:
           name: Build documentation
