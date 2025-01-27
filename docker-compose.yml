@@ -1,6 +1,7 @@
 services:
 
   sphinx:
+    image: talkable-docs-sphinx:${BUILD_ID}
     build:
       context: .
       dockerfile: Dockerfile
