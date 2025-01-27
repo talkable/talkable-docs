@@ -18,6 +18,14 @@ body[data-theme="light"] .highlight button.copybtn.success:after {
   background: #f2f2f2 !important;
 }
 
+@media (prefers-color-scheme: light) {
+  body[data-theme="auto"] .highlight,
+  body[data-theme="auto"] .highlight button.copybtn,
+  body[data-theme="auto"] .highlight button.copybtn.success:after {
+    background: #f2f2f2 !important;
+  }
+}
+
 .highlight button.copybtn:hover {
   stroke: var(--color-link);
 }
