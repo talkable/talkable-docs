@@ -2,7 +2,7 @@
 
 // Upgrades or installs nginx containers for WordPress.
 def dockerContainerUpdate(String hostEnv) {
-    sh """ssh -o StrictHostKeyChecking=no -i $SSH_KEY $SSH_USER@${hostEnv} 'cd talkable-helm/Docker/wp-nginx && \
+    sh """ssh -o StrictHostKeyChecking=no -i $SSH_KEY $SSH_USER@${hostEnv} 'cd talkable-docs/ && \
         git checkout ${BRANCH_NAME} && git branch -a && git pull origin && \
         docker-compose ls && docker ps && \
         docker-compose down && docker-compose up -d --remove-orphans && \
