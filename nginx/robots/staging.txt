@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /
 
-Sitemap: https://staging-docs.talkable.com/sitemap.xml
+Sitemap: https://docs.bastion.talkable.com/sitemap.xml

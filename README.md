@@ -13,10 +13,7 @@ It's stored in a dedicated GitHub repository ([talkable-docs](https://github.com
 The repository consists of the following branches:
 
 - [master](https://github.com/talkable/talkable-docs/tree/master): The main branch used to keep the most recent stable version available at [docs.talkable.com](https://docs.talkable.com).
-  <<<<<<< HEAD
-- # [staging-bastion](https://github.com/talkable/talkable-docs/tree/staging-bastion): A staging branch used for testing by QA. It is available at [bastion-docs.talkable.com](https://bastion-docs.talkable.com).
-- [staging](https://github.com/talkable/talkable-docs/tree/staging): A staging branch used for testing by QA. It is available at [staging-docs.talkable.com](https://staging-docs.talkable.com).
-  > > > > > > > vo-PR-23724
+- [staging](https://github.com/talkable/talkable-docs/tree/staging): A staging branch used for testing by QA. It is available at [docs.bastion.talkable.com](https://docs.bastion.talkable.com).
 - Feature branches created from `master` by individual contributors/developers.
 
 ## What is the documentation update workflow?
@@ -38,12 +35,7 @@ The repository consists of the following branches:
 
 1. **Navigate to the repository root directory.**
 
-<<<<<<< HEAD
-Ensure the `docker-compose.yaml` file is located there.
-=======
-Ensure the `docker-compose.yml` file is located there.
-
-> > > > > > > vo-PR-23724
+  Ensure the `docker-compose.yml` file is located there.
 
 2. **Create an `.env` file by copying `.env.template`.**
 
@@ -56,11 +48,7 @@ Ensure the `docker-compose.yml` file is located there.
    Run the command:
 
    ```bash
-   <<<<<<< HEAD
-   docker-compose up -d
-   =======
    docker compose up -d
-   >>>>>>> vo-PR-23724
    ```
 
    If everything is set up correctly, the documentation will be available at [http://localhost:8080](http://localhost:8080). Make sure you use the port number defined in the `.env` file.
@@ -74,11 +62,7 @@ You should not deploy it manually!
 The deployment is handled by Jenkins jobs.
 
 All you need to do is commit your changes to the corresponding branch to deploy them to the appropriate server:
-<<<<<<< HEAD
-
-- # Commit to the [staging-bastion](https://github.com/talkable/talkable-docs/tree/staging-bastion) branch => [bastion-docs.talkable.com](https://bastion-docs.talkable.com/).
-- Commit to the [staging](https://github.com/talkable/talkable-docs/tree/staging) branch => [staging-docs.talkable.com](https://staging-docs.talkable.com/).
-  > > > > > > > vo-PR-23724
+- Commit to the [staging](https://github.com/talkable/talkable-docs/tree/staging) branch => [docs.bastion.talkable.com](https://docs.bastion.talkable.com/).
 - Commit to the [master](https://github.com/talkable/talkable-docs/tree/master) branch => [docs.talkable.com](https://docs.talkable.com/).
 
 ## How do I make the actual changes?
@@ -149,6 +133,6 @@ name "Talkable Section".
 ## Links
 
 - GitHub "staging" branch: [staging](https://github.com/talkable/talkable-docs/tree/staging)
-- Staging web server: [staging-docs.talkable.com](https://staging-docs.talkable.com/)
+- Staging web server: [docs.bastion.talkable.com](https://docs.bastion.talkable.com/)
 - GitHub "production" branch: [master](https://github.com/talkable/talkable-docs/tree/master)
 - Production web server: [docs.talkable.com](https://docs.talkable.com/)
