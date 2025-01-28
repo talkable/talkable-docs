@@ -76,9 +76,9 @@ Implement TalkableDelegate
      - (void)showFacebookShareDialogWithParams:(NSDictionary*)params completion:(void (^)())completionHandler;
      - (void)showTwitterShareDialogWithParams:(NSDictionary*)params completion:(void (^)())completionHandler;
 
-    .. note::
+   .. note::
 
-     See :ref:`Social Sharing <ios_sdk/social_sharing>` for details.
+    See :ref:`Social Sharing <ios_sdk/social_sharing>` for details.
 
 .. _ios_sdk/advanced/notifications:
 
@@ -114,18 +114,18 @@ Subscribe to notifications that Talkable SDK publish and be aware of everything 
     }
 
 Available messages:
-   - TKBLMessageOfferLoaded
-   - TKBLMessageOfferClose
-   - TKBLMessageCouponIssued
+  - TKBLMessageOfferLoaded
+  - TKBLMessageOfferClose
+  - TKBLMessageCouponIssued
 
 Contacts Import
 ---------------
 
 It is possible to import contacts from a device with the SDK, so they will be accessible at the Share page with JavaScript.
-The button at the Share page for contacts importing should have `class="js-import-contacts"` property.
+The button at the Share page for contacts importing should have ``class="js-import-contacts"`` property.
 
-Also, contacts usage description is required on iOS 10+ devices. It should be described under the `NSContactsUsageDescription` key
-in the `Info.plist` file of your app. This message will be shown when asking for contacts permissions.
+Also, contacts usage description is required on iOS 10+ devices. It should be described under the ``NSContactsUsageDescription`` key
+in the ``Info.plist`` file of your app. This message will be shown when asking for contacts permissions.
 
 .. code-block:: xml
 

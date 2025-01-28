@@ -31,8 +31,9 @@ showFacebookShareDialogWithParams:delegate:
 
 This method is called when the user clicks on the 'Facebook Share' button.
 The ``params`` dictionary contains information on the content being shared and will have the following keys:
-  -  ``TKBLOfferClaimUrlKey`` - the link URL to share
-  -  ``TKBLShareMessage`` - the message to share
+  
+-  ``TKBLOfferClaimUrlKey`` - the link URL to share
+-  ``TKBLShareMessage`` - the message to share
 
 The ``delegate`` param is a delegate object that conforms to Facebook iOS SDK ``SharingDelegate`` protocol.
 Pass this object as a ``delegate:`` param when sharing the link using FBSDK to automatically notify the Talkable SDK
