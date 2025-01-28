@@ -26,7 +26,6 @@ pipeline {
     stages {
         stage('Preparation') {
             steps {
-                sh "printenv | sort"
                 script {
                     wrap([$class: 'BuildUser']) {
                         JENKINS_BUILD_USER_ID = "${BUILD_USER_ID}"

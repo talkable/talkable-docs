@@ -84,7 +84,7 @@ ci_status() {
 }
 
 remote_ssh_exec() {
-  ssh -o StrictHostKeyChecking=no -i "$SSH_KEY" "$SSH_USER@${hostEnv}" "$@"
+  ssh -o StrictHostKeyChecking=no -i "$SSH_KEY" "$SSH_USER@$HOST_ENV" "$@"
 }
 
 deploy_docs() {
