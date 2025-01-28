@@ -10,6 +10,7 @@ Klaviyo
 With ESP apps clients can synchronize emails that Talkable acquires with their ESP. Here are the conditions when Talkable acquires emails:
 
 1. Advocate signs up and opts in for Talkable marketing emails:
+
   .. image:: /_static/img/email_marketing_and_automation/subscribe.png
     :alt: Subscribe
 
@@ -24,8 +25,8 @@ Each ESP application allows custom attributes to be included with each request. 
 2. ``{{ ip }}`` – a data object from which IP address either a signup or email gating occurred.
 3. ``{{ campaign }}`` – a data object with details about the campaign within which the email was captured.
 
-.. image:: /_static/img/email_marketing_and_automation/variables.png
-  :alt: Variables
+  .. image:: /_static/img/email_marketing_and_automation/variables.png
+    :alt: Variables
 
 Each variable is described in the “Available variables” sidebar and can be expanded to see all nested properties.
 
