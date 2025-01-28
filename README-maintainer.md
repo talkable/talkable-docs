@@ -15,7 +15,6 @@ The maintenance routine includes the following tasks:
 
 - Updating dependencies:
   - Sphinx and other Python packages
-  - Nginx container (application server)
   - Python container
 - Adding new extensions
 - Introducing Talkable-specific customizations (Python scripts)
@@ -60,16 +59,10 @@ The goal is to update `requirements.txt` with the latest versions of dependencie
 
     This starts the framework and allows you to load the documentation at http://localhost:8080.
 
-    If the documentation fails to load, check the Sphinx container logs:
+    If the documentation fails to load, check the container logs:
 
     ```bash
-    docker logs -f sphinx
-    ```
-
-    ...and the Nginx logs:
-
-    ```bash
-    docker logs -f nginx
+    docker logs -f docs-sphinx-development
     ```
 
 3. Test and freeze `requirements.txt`.
@@ -83,7 +76,7 @@ The goal is to update `requirements.txt` with the latest versions of dependencie
     Save the dependencies with the following command:
 
     ```bash
-    docker exec sphinx pip freeze > requirements.txt
+    docker exec docs-sphinx-development pip freeze > requirements.txt
     ```
 
 4. Stop the containers.
@@ -97,42 +90,6 @@ The goal is to update `requirements.txt` with the latest versions of dependencie
 5. Push the updated `requirements.txt` to GitHub.
 
     Commit and push the updated `requirements.txt` for testing and production.
-
-## Updating the Nginx Version
-
-The goal is to update the `docker-compose.yml` file with the latest Nginx image tag.
-
-1. Check the DockerHub Nginx page for newer versions: https://hub.docker.com/_/nginx.
-
-    > **Note:** 
-    >
-    > Use only Alpine-based images.
-
-2. Update the `docker-compose.yml` file with the new version tag:
-
-    ```yaml
-    image: nginx:1.27-alpine3.20
-    ```
-
-3. Deploy the updated image.
-
-    Test the new image:
-
-    ```bash
-    docker compose up -d --build
-    ```
-
-    Verify that the documentation loads at http://localhost:8080.
-
-4. Finalize the update.
-
-    Commit the updated `docker-compose.yml` to the repository for testing and production.
-
-    Stop the containers:
-
-    ```bash
-    docker compose down -v
-    ```
 
 ## Updating the Python Container
 
