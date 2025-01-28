@@ -48,7 +48,7 @@ The repository consists of the following branches:
    Run the command:
 
    ```bash
-   docker compose up -d
+   docker compose up -d --build
    ```
 
    If everything is set up correctly, the documentation will be available at [http://localhost:8080](http://localhost:8080). Make sure you use the port number defined in the `.env` file.
@@ -118,16 +118,10 @@ name "Talkable Section".
 1. Ensure you are using the correct port number and protocol.
    The port number should match the value provided in `.env` as `LOCAL_PORT`.
 
-2. Check `nginx` logs:
+2. Check logs:
 
    ```bash
-   docker logs -f nginx
-   ```
-
-3. Check `Sphinx` logs:
-
-   ```bash
-   docker logs -f sphinx
+   docker logs -f docs-sphinx-development
    ```
 
 ## Links
