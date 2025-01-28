@@ -10,7 +10,6 @@ Tremendous Integration
 Reward advocates with gift cards from various retailers provided by Tremendous.
 
 Tremendous integration consists of several parts:
-
   1. A campaign in Tremendous with the selected rewards for customers.
 
   3. A "Tremendous" application installed from Talkable App Store. This application is responsible

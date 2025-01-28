@@ -39,10 +39,9 @@ A Placement can have a set of criteria defined based on :ref:`custom properties 
 If all of the criteria are met, the placement will show a campaign.
 
 The criteria can be defined using one of the following operators:
-
-* `eq`
-* `not_eq`
-* `regex` (performs a case-insensitive match)
+  - `eq`
+  - `not_eq`
+  - `regex` (performs a case-insensitive match)
 
 .. note::
   Custom Property Criteria require integration version 5.1.4 or higher to work.
