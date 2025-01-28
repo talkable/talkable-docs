@@ -1,27 +1,31 @@
 services:
-  talkable-docs:
+  sphinx:
     build:
       context: .
       dockerfile: Dockerfile
     container_name: docs-sphinx-${ENVIRONMENT}
     restart: unless-stopped
     volumes:
-      # Sphinx
       - ./source:/docs/source
-      # Nginx
-      - ./nginx/http.d:/etc/nginx/http.d
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./nginx/robots/${ENVIRONMENT}.txt:/var/www/robots.txt
-      # Build volume to keep the docs available
-      - docs_build:/var/www/html
+      - docs_build:/docs/_build
     environment:
       - ENVIRONMENT=${ENVIRONMENT}
       - LOCAL_PORT=${LOCAL_PORT}
       - PRODUCTION_HOST=${PRODUCTION_HOST}
       - STAGING_HOST=${STAGING_HOST}
       - DEVELOPMENT_HOST=${DEVELOPMENT_HOST}
+
+  nginx:
+    image: nginx:1.27-alpine3.20
+    container_name: nginx-${ENVIRONMENT}
+    volumes:
+      - docs_build:/var/www/html
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/robots/${ENVIRONMENT}.txt:/var/www/robots.txt
     ports:
-      - ${LOCAL_PORT}:8000
+      - ${LOCAL_PORT}:80
+    depends_on:
+      - sphinx
 
 volumes:
   docs_build:

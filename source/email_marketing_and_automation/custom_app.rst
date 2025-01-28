@@ -42,9 +42,7 @@ To verify the signature, you should complete the following steps:
   Create a JSON string from the payload of the request.
 
 **2. Determine the expected signature**
-
   - Compute an hex encoded **HMAC** with the **SHA256** hash function. Use the **Webhook security key** as a key, and use the `payload_json` string as a message.
-
   - Encode a computed hash with **Base64**
 
 Your Talkable **Webhook security key** can be found in the Webhook set up page by navigating to **Menu** then **Webhooks**.

@@ -15,7 +15,6 @@ Talkable is composed of the following components:
    that spans every page. All other integration components are dependent on the Init script.
 
    **Data Capture.** The Initialization Script should pass variables for logged in users:
-
     - Email
     - Phone Number
     - First Name

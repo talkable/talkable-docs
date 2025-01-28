@@ -10,7 +10,7 @@ Specify a custom campaign tag
 By default if no campaign tag was specified, SDK uses `ios-invite` and `ios-post-purchase` tags for :ref:`Standalone <ios_sdk/integration/standalone>` and
 :ref:`Post Purchase <ios_sdk/integration/post_purchase>` campaigns. But you can explicitly specify your own tag in this way:
 
-  .. code-block:: objc
+.. code-block:: objc
 
     #import <TalkableSDK/Talkable.h>
     // ...
@@ -23,47 +23,47 @@ Implement TalkableDelegate
 
 1. Assign your `ViewController` or other object as Talkable delegate by using the following code:
 
-  .. code-block:: objc
+   .. code-block:: objc
 
     [[Talkable manager] setDelegate: yourObjectConformsToTalkableDelegateProtocol];
 
 2. Take control of presenting offers to your users. Use the next two delegate methods to prevent
    or give an instruction as to where you want that offer to be displayed:
 
-  .. code-block:: objc
+   .. code-block:: objc
 
     - (BOOL)shouldPresentTalkableOfferViewController:(UIViewController*)controller;
     - (UIViewController*)viewControllerForPresentingTalkableOfferViewController;
 
 3. Customize ViewContoller title by implementing the method below. By default, title of offer page is used.
 
-  .. code-block:: objc
+   .. code-block:: objc
 
     - (NSString*)titleForTalkableOfferViewController:(UIViewController*)controller;
 
-  .. note::
+   .. note::
 
     You can modify page title on a Talkable Site during campaign development.
 
 4. Present offers to your users by yourself by handling request url or webView after origin was created.
 
-  .. code-block:: objc
+   .. code-block:: objc
 
     - (void)didRegisterOrigin:(TKBLOriginType)type withURL:(NSURL*)url;
     - (void)didRegisterOrigin:(TKBLOriginType)type withWebView:(WKWebView*)webView;
 
-  .. note::
+   .. note::
 
     Talkable SDK assigns itself to WKWebView navigation delegate. Changing WKWebView navigation delegate
     may break some functionality so we strictly recommend not doing this.
 
 5. Manage cases where origin wasn't created or offer hasn't been presented.
 
-  .. code-block:: objc
+   .. code-block:: objc
 
     - (void)registerOrigin:(TKBLOriginType)type didFailWithError:(NSError*)error;
 
-  .. note::
+   .. note::
 
     `userInfo` may contain detailed information about the error.
 
@@ -76,7 +76,7 @@ Implement TalkableDelegate
      - (void)showFacebookShareDialogWithParams:(NSDictionary*)params completion:(void (^)())completionHandler;
      - (void)showTwitterShareDialogWithParams:(NSDictionary*)params completion:(void (^)())completionHandler;
 
-   .. note::
+    .. note::
 
      See :ref:`Social Sharing <ios_sdk/social_sharing>` for details.
 
@@ -89,7 +89,7 @@ Subscribe to notifications that Talkable SDK publish and be aware of everything 
 
 1. Receive the coupon given to your users:
 
-  .. code-block:: objc
+   .. code-block:: objc
 
     #import <TalkableSDK/Talkable.h>
     // ...
@@ -101,7 +101,7 @@ Subscribe to notifications that Talkable SDK publish and be aware of everything 
 
 2. Catch every message from presented offer:
 
-  .. code-block:: objc
+   .. code-block:: objc
 
     #import <TalkableSDK/Talkable.h>
     // ...
@@ -113,11 +113,10 @@ Subscribe to notifications that Talkable SDK publish and be aware of everything 
       }
     }
 
-  Available messages:
-
-  - TKBLMessageOfferLoaded
-  - TKBLMessageOfferClose
-  - TKBLMessageCouponIssued
+Available messages:
+   - TKBLMessageOfferLoaded
+   - TKBLMessageOfferClose
+   - TKBLMessageCouponIssued
 
 Contacts Import
 ---------------
@@ -128,7 +127,7 @@ The button at the Share page for contacts importing should have `class="js-impor
 Also, contacts usage description is required on iOS 10+ devices. It should be described under the `NSContactsUsageDescription` key
 in the `Info.plist` file of your app. This message will be shown when asking for contacts permissions.
 
-  .. code-block:: xml
+.. code-block:: xml
 
     <key>NSContactsUsageDescription</key>
     <string>Share the offer with your Friends from contacts</string>
@@ -143,7 +142,7 @@ Debugging
 
 See all debugging information in your console which can help you to understand what is going wrong:
 
-  .. code-block:: objc
+.. code-block:: objc
 
     #import <TalkableSDK/Talkable.h>
     // ...
