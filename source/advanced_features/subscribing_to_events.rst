@@ -31,9 +31,8 @@ Knowing the container `name` attribute of the iframe is `talkable-offer-iframe` 
   });
 
 Notice two arguments passed in the callback:
-
-  1. `data` object — the data passed by the iframe upon firing the event
-  2. `iframe` object — iframe’s `HTML DOM reference`_
+  - `data` object — the data passed by the iframe upon firing the event
+  - `iframe` object — iframe’s `HTML DOM reference`_
 
 .. _HTML DOM reference: https://www.w3schools.com/jsref/dom_obj_frame.asp
 
@@ -41,7 +40,6 @@ Iframe Events List
 ------------------
 
 Talkable campaigns are equipped with the following set of events:
-
   1. `offer_loaded` — Talkable iframe DOM ready event which is in fact the very first event that you can use to determine if the iframe is loaded.
   2. `responsive_iframe_height` — fires every time iframe size gets changed. You can use it to detect changes in iframe size.
      You can read more :ref:`here <responsive-views>`. Previously named as ``curebit_offer_iframe_broadcast``.
