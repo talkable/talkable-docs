@@ -1,0 +1,41 @@
+services:
+
+  sphinx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: docs-sphinx-${ENVIRONMENT}
+    networks:
+      - docs-nginx
+    volumes:
+      - ./source:/docs/source
+      - docs_build:/docs/_build
+    environment:
+      - ENVIRONMENT=${ENVIRONMENT}
+      - LOCAL_PORT=${LOCAL_PORT}
+      - PRODUCTION_HOST=${PRODUCTION_HOST}
+      - STAGING_HOST=${STAGING_HOST}
+      - DEVELOPMENT_HOST=${DEVELOPMENT_HOST}
+
+  nginx:
+    image: nginx:1.27.3-alpine3.20
+    container_name: docs-nginx-${ENVIRONMENT}
+    networks:
+      - docs-nginx
+    volumes:
+      - docs_build:/var/www/html
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/robots/${ENVIRONMENT}.txt:/var/www/robots.txt
+    ports:
+      - ${LOCAL_PORT}:80
+    depends_on:
+      - sphinx
+
+volumes:
+  docs_build:
+    driver: local
+
+networks:
+  docs-nginx:
+    name: docs-nginx
+    driver: bridge
