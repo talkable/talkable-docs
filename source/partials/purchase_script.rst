@@ -10,7 +10,7 @@
         coupon_code: '', // Coupon code that was used at checkout (pass multiple as an array). Example: 'SAVE20'
         currency_iso_code: '', // Required for multi-currency sites. Example: 'USD'
         shipping_zip: '', // Used for fraud protection by address. Example: '02222'
-        shipping_address: '' // Full address of the order, make sure to strictly follow a format: 'Apt #, Street address, City, State, ZIP, Country'
+        shipping_address: '', // Full address of the order, make sure to strictly follow a format: 'Apt #, Street address, City, State, ZIP, Country'
         segment1: '', // Segment 1: Represents custom segment (e.g., location, age group, source channel, platform, gender, interests).
         segment2: '', // Segment 2: Represents custom segment (e.g., location, age group, source channel, platform, gender, interests).
         segment3: '', // Segment 3: Represents custom segment (e.g., location, age group, source channel, platform, gender, interests).
