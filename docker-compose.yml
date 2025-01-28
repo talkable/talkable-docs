@@ -17,7 +17,7 @@ services:
 
   nginx:
     image: nginx:1.27-alpine3.20
-    container_name: nginx-${ENVIRONMENT}
+    container_name: docs-nginx-${ENVIRONMENT}
     volumes:
       - docs_build:/var/www/html
       - ./nginx/conf.d:/etc/nginx/conf.d
