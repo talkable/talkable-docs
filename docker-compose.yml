@@ -3,7 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: talkable-docs
+    container_name: docs-sphinx-${ENVIRONMENT}
+    restart: unless-stopped
     volumes:
       # Sphinx
       - ./source:/docs/source
