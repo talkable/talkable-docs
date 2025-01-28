@@ -2,7 +2,7 @@
 set -ex
 echo $SECONDS
 
-echo "env from script"
+echo "=== Environment Variables ==="
 printenv | sort
 
 TIMEFRAME_SECONDS=240
@@ -12,14 +12,14 @@ CIRCLE_CI_URL="https://app.circleci.com/pipelines/github/talkable/${PROJECT_ROOT
 TASK=$1
 
 #FUNCTIONS
-help() {
+print_help() {
   clear
   echo 'Available Commands:'
   echo '   deploy           - deploy current version of talkable'
   echo '   ci | cistatus | status   - status on CircleCI'
   echo 'Example:'
-  echo '         jenkins_deploy.sh deploy --env void --commit 05f392f72b0de6b440dc8379086a57faa2671380'
-  echo '         jenkins_deploy.sh cistatus --env void'
+  echo '         deploy.sh deploy'
+  echo '         deploy.sh cistatus'
   exit 0
 }
 
@@ -95,7 +95,7 @@ deploy_docs() {
     git branch -a
     git pull origin
     docker-compose ls
-    docker ps | grep ${PROJECT_ROOT}
+    docker ps | grep docs
     docker-compose down
     docker-compose up -d --remove-orphans
 EOF
@@ -106,20 +106,27 @@ deploy_check() {
     set -e
     cd ${PROJECT_ROOT}/
     docker-compose ls
-    docker ps | grep ${PROJECT_ROOT}
+    docker ps | grep docs
 EOF
 }
 
 case $TASK in
 ci | ci_status | ci_only | status)
-  ci_status && deploy_check
+  ci_status
+  deploy_check
   ;;
 deploy)
-  echo "Start default(Full) deploy." &&
-    ci_status && deploy_docs && deploy_check
+  echo "Starting deployment..."
+  ci_status
+  deploy_docs
+  deploy_check
+  ;;
+help|--help|-h)
+  print_help
   ;;
 *)
-  echo "Sorry no command"
+  echo "Unknown command: $TASK"
+  echo "Use '$0 --help' for usage."
   exit 1
   ;;
 esac
