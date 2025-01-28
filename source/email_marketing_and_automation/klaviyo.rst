@@ -10,7 +10,6 @@ Klaviyo
 With ESP apps clients can synchronize emails that Talkable acquires with their ESP. Here are the conditions when Talkable acquires emails:
 
 1. Advocate signs up and opts in for Talkable marketing emails:
-
   .. image:: /_static/img/email_marketing_and_automation/subscribe.png
     :alt: Subscribe
 

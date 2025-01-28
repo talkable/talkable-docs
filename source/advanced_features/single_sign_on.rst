@@ -63,7 +63,6 @@ Manual Configuration
 Uncheck the box for “Automatically Configure from Metadata”.
 
 Fill in the following fields:
-
   * IdP Issuer (Entity ID)
   * IdP SSO Target URL
   * X.509 Certificate OR Certificate Fingerprint

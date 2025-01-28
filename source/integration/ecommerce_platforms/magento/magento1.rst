@@ -53,7 +53,6 @@ integration. The extension currently supports Magento versions 1.5+
   <h2>Troubleshooting</h2>
 
 In case you cannot find Talkable extension in the sidebar try clearing cache:
-
    * In Admin Panel, go to **System** → **Cache Management**.
    * Click **Flush Magento Cache**.
    * Then click **Select All**, select action *"Refresh"* and click **Submit**.

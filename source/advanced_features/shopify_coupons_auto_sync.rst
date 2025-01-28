@@ -113,17 +113,11 @@ Shopify Price Rule Changed Email Notification
 If you modify a Price Rules on Shopify, it could make them incompatible with the coupon lists they are attached to. In order to find out about such changes as early as possible, we have a daily monitoring job that checks that Price Rules have no critical differences from respective coupon lists.
 
 Attributes that are checked in this job are the following:
-
   - `allocation_method` - must always be "across"
-
   - `usage_limit` - must always be 1
-
   - `value` - must correspond to coupon list amount
-
   - `value_type` - must correspond to coupon list type
-
   - `ends_at` - must be greater than or equal to coupon list expiration (and absent if coupon list has no expiration)
-
   - `prerequisite_subtotal_range` - must match coupon list minimum subtotal
 
 If any of these attributes differ from what they are expected to be and Talkable cannot fix that by updating a coupon list (see **Coupon list sync**), Talkable sends an email notification.

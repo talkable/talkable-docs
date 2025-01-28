@@ -44,16 +44,11 @@ This method involves including the discount code in the URL. This way, when a cu
      :class: is-minimal
 
    **Breakdown:**
-
-     - `{{ site_setup.url }}/discount/{{ coupon.code }}`: This applies the coupon code to the cart.
-
-     - `?redirect={{ site_setup.url }}`: This redirects the customer back to your store.
-
-     - `&utm_source=talkable&utm_medium={{ sharing_channel }}&utm_content={{ campaign_setup.name | encode_query_argument }}&utm_campaign={{ campaign_setup.id }}`: These are default UTM parameters used for tracking.
-
-     - `&tkbl_cvuuid={{ visitor_uuid }}&talkable_visitor_offer_id={{ friend_offer.id }}`: These parameters are specific to Talkable, to identify customer.
-
-     - `{% if coupon.code %}{% endif %}` - condition to check if we have coupon.
+    - `{{ site_setup.url }}/discount/{{ coupon.code }}`: This applies the coupon code to the cart.
+    - `?redirect={{ site_setup.url }}`: This redirects the customer back to your store.
+    - `&utm_source=talkable&utm_medium={{ sharing_channel }}&utm_content={{ campaign_setup.name | encode_query_argument }}&utm_campaign={{ campaign_setup.id }}`: These are default UTM parameters used for tracking.
+    - `&tkbl_cvuuid={{ visitor_uuid }}&talkable_visitor_offer_id={{ friend_offer.id }}`: These parameters are specific to Talkable, to identify customer.
+    - `{% if coupon.code %}{% endif %}` - condition to check if we have coupon.
 
 #. **Advocate destination URL:**
 
