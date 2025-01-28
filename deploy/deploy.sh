@@ -8,8 +8,6 @@ printenv | sort
 TIMEFRAME_SECONDS=240
 PROJECT_ROOT="talkable-docs"
 CIRCLE_CI_API_URL="https://api.github.com/repos/talkable/${PROJECT_ROOT}/commits/${GIT_COMMIT}/status"
-CIRCLE_CI_STATUS_KEY1=".statuses[]"
-CIRCLE_CI_STATUS_KEY2="failure|error"
 CIRCLE_CI_URL="https://app.circleci.com/pipelines/github/talkable/${PROJECT_ROOT}?branch="
 TASK=$1
 
@@ -116,7 +114,7 @@ case $TASK in
 ci | ci_status | ci_only | status)
   ci_status && deploy_check
   ;;
-deploydocs)
+deploy)
   echo "Start default(Full) deploy." &&
     ci_status && deploy_docs && deploy_check
   ;;

@@ -14,8 +14,8 @@ pipeline {
     }
     parameters {
         choice(name: "DEPLOY_COMMAND",
-                choices: ["deploy", "noci", "rollback", "ci_status"],
-                description: "DEPLOY - Start the default deployment\nNOCI - Start deployment without a CircleCI check\nROLLBACK - Rollback to the previous release\nCI_STATUS - Check the GitHub commit status on CircleCI")
+                choices: ["deploy", "ci_status"],
+                description: "DEPLOY - Start the default deployment\nCI_STATUS - Check the GitHub commit status on CircleCI")
     }
     options {
         buildDiscarder(logRotator(numToKeepStr: '15', daysToKeepStr: '14'))
