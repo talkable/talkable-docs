@@ -7,6 +7,7 @@ printenv | sort
 
 TIMEFRAME_SECONDS=240
 PROJECT_ROOT="talkable-docs"
+SUBPROJECT="docs"
 CIRCLE_CI_API_URL="https://api.github.com/repos/talkable/${PROJECT_ROOT}/commits/${GIT_COMMIT}/status"
 CIRCLE_CI_URL="https://app.circleci.com/pipelines/github/talkable/${PROJECT_ROOT}?branch="
 TASK=$1
@@ -95,7 +96,7 @@ deploy_docs() {
     git branch -a
     git pull origin
     docker-compose ls
-    docker ps | grep docs
+    docker ps
     docker-compose down
     docker-compose up -d --remove-orphans
 EOF
@@ -105,8 +106,8 @@ deploy_check() {
   remote_ssh_exec <<EOF
     set -e
     cd ${PROJECT_ROOT}/
-    docker-compose ls
-    docker ps | grep docs
+    docker-compose ls | grep ${SUBPROJECT}
+    docker ps | grep ${SUBPROJECT}
 EOF
 }
 
