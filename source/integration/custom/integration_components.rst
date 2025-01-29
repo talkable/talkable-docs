@@ -46,15 +46,19 @@ Talkable is composed of the following components:
 
    Create an HTML page (URL path /share) with your standard site header and footer.
    Add the Talkable Container DIV in the body. This tells Talkable where to inject content.
-   Talkable Container DIV can be changed at Placement Edit page(Do not forget to change DIV in your integration after
-   updating Container DIV)
+
+.. note::
+   The Talkable Container DIV can be changed upon request to the Talkable team.
+   The current DIV id value for each Event Category can be found on the Placements page.
 
 5. :ref:`Referral Dashboard (my account) <integration/custom/integration_components/referral_dashboard>`.
 
    Similar to the advocate landing page, create an HTML page that’s linked to from a menu in user accounts.
    Add the Talkable Container DIV in the body. This tells Talkable where to inject content.
-   Talkable Container DIV can be changed at Placement Edit page(Do not forget to change DIV in your integration after
-   updating Container DIV)
+
+.. note::
+   The Talkable Container DIV can be changed upon request to the Talkable team.
+   The current DIV id value for each Event Category can be found on the Placements page.
 
 |hr|
 

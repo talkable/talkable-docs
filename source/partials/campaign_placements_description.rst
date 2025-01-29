@@ -42,10 +42,10 @@ The criteria can be defined using one of the following operators:
   Custom Property Criteria require integration version 5.1.4 or higher to work.
 
 **Container name**.
-It is possible to update the container name from the admin panel in placements settings.
-It allows you to edit the `div` id for each event category, ensuring flexibility and customization according to your needs.
+It is possible to update the container name by requesting assistance from the Talkable team.
+The current DIV id value for each Event Category can be found on the Placements page.
 
-By default, the `div` id is:
+By default, the DIV id is:
 
 * `talkable-offer` for `affiliate_member` event category which includes: Standalone, Standalone Dashboard, Floating Widget, Gleam;
 * `talkable-post-purchase` for `purchase` event category which includes: Post Purchase;
