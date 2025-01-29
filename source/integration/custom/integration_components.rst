@@ -47,18 +47,10 @@ Talkable is composed of the following components:
    Create an HTML page (URL path /share) with your standard site header and footer.
    Add the Talkable Container DIV in the body. This tells Talkable where to inject content.
 
-.. note::
-   The Talkable Container DIV can be changed upon request to the Talkable team.
-   The current DIV id value for each Event Category can be found on the Placements page.
-
 5. :ref:`Referral Dashboard (my account) <integration/custom/integration_components/referral_dashboard>`.
 
    Similar to the advocate landing page, create an HTML page that’s linked to from a menu in user accounts.
    Add the Talkable Container DIV in the body. This tells Talkable where to inject content.
-
-.. note::
-   The Talkable Container DIV can be changed upon request to the Talkable team.
-   The current DIV id value for each Event Category can be found on the Placements page.
 
 |hr|
 
@@ -171,6 +163,10 @@ Advocate Landing Page
 Create a new HTML page with URL path (`www.your-site.com/share`) and add the Talkable Container DIV
 in the body of the page between your standard site header and footer:
 
+.. note::
+   The Talkable Container DIV can be changed upon request to the Talkable team.
+   The current DIV id value for each Event Category can be found on the Placements page.
+
 .. code-block:: html
 
   <div id="talkable-offer"></div>
@@ -203,6 +199,10 @@ Referral Dashboard
 Similar to the Advocate Landing Page, create a new HTML page with URL
 path (`www.your-site.com/referrals`) and add the Talkable Container DIV in
 the body of the page:
+
+.. note::
+   The Talkable Container DIV can be changed upon request to the Talkable team.
+   The current DIV id value for each Event Category can be found on the Placements page.
 
 .. code-block:: html
 
