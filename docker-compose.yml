@@ -1,10 +1,12 @@
 services:
+
   sphinx:
     build:
       context: .
       dockerfile: Dockerfile
     container_name: docs-sphinx-${ENVIRONMENT}
-    restart: unless-stopped
+    networks:
+      - docs-nginx
     volumes:
       - ./source:/docs/source
       - docs_build:/docs/_build
@@ -16,8 +18,10 @@ services:
       - DEVELOPMENT_HOST=${DEVELOPMENT_HOST}
 
   nginx:
-    image: nginx:1.27-alpine3.20
+    image: nginx:1.27.3-alpine3.20
     container_name: docs-nginx-${ENVIRONMENT}
+    networks:
+      - docs-nginx
     volumes:
       - docs_build:/var/www/html
       - ./nginx/conf.d:/etc/nginx/conf.d
@@ -29,3 +33,9 @@ services:
 
 volumes:
   docs_build:
+    driver: local
+
+networks:
+  docs-nginx:
+    name: docs-nginx
+    driver: bridge
