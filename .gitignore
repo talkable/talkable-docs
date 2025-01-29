@@ -8,12 +8,11 @@
 
 # Sphinx
 _build
+build
 
 # Python
 .venv
 __pycache__
-
 # Ruby
-/build
-/.bundle
+.bundle
 Gemfile.lock

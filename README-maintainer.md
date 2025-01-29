@@ -4,8 +4,7 @@ This documentation provides instructions for maintaining the Sphinx Builder **fr
 
 It outlines the routine for maintaining the framework and associated workflows.
 
-> **Note**: 
-> 
+> [!NOTE]
 > This guide does not cover updating the documentation content. 
 > Refer to [README.md](README.md) for details on updating the Talkable documentation source, which is available at [https://docs.talkable.com/](https://docs.talkable.com/).
 
@@ -67,10 +66,6 @@ The goal is to update `requirements.txt` with the latest versions of dependencie
 3. Test and freeze `requirements.txt`.
 
     Ensure everything works as expected locally. Once confirmed, update `requirements.txt` to include all installed dependencies with their versions.
-
-    > **Note:**
-    >
-    > In addition to the packages listed in [packages.txt](packages.txt), `requirements.txt` will include transitive dependencies.
 
     Save the dependencies with the following command:
 
@@ -146,26 +141,24 @@ docker compose up -d --build
 
 ### Installing Additional Packages
 
-1. Add the package to `requirements.txt`.
+Add the package to `requirements.txt`.
 
-    Append the package name to `requirements.txt` (version specification is optional at this stage).
+Append the package name to `requirements.txt` (version specification is optional at this stage).
 
-    > **Note:**
-    >
-    > Version pinning can be done later.
+> [!NOTE]
+>
+> Version pinning can be done later.
 
-2. Rebuild the container.
+Rebuild the container after modifying `requirements.txt`:
 
-    Rebuild the container after modifying `requirements.txt`:
-
-    ```bash
-    docker compose up -d --build
-    ```
+```bash
+docker compose up -d --build
+```
 
 ### Modifying Configuration Files
 
 Most changes involve editing the [./source/conf.py](./source/conf.py) file or other files in the [./source/](./source/) directory.
 
-> **Note:**
+> [!NOTE]
 >
 > Rebuilding the container is unnecessary for changes to [./source/conf.py](./source/conf.py) or [./source/](./source/). These changes are applied automatically within 1 second.
