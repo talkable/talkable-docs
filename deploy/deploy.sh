@@ -95,6 +95,8 @@ deploy_docs() {
     git checkout ${BRANCH_NAME}
     git branch -a
     git pull origin
+    docker-compose ls
+    docker ps
     docker-compose down
     docker-compose up -d --remove-orphans
 EOF
