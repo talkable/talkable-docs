@@ -31,8 +31,7 @@ The maintenance routine includes the following tasks:
 2. Create a new branch from `master`.
 
     ```bash
-    git branch new-branch
-    git checkout new-branch
+    git checkout -b new-branch
     ```
 
 3. Generate a `.env` file from the `.env.template`.
