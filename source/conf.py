@@ -108,7 +108,8 @@ pygments_style = "sphinx"
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = "furo"
+# html_theme = "furo"
+html_theme = "pydata_sphinx_theme"
 # html_style = 'talkable.css'
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -146,20 +147,20 @@ favicons = {
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ["_static"]
-html_css_files = [
-    "talkable.css",
-]
-html_theme_options = {
-    "light_logo": "img/logo.svg",
-    "dark_logo": "img/logo.svg",
-    "sidebar_hide_name": True,
-    "light_css_variables": {
-        "color-brand-primary": "#D36835",
-        "color-brand-content": "#D36835",
-        "color-brand-visited": "#D36835",
-    },
-}
+# html_static_path = ["_static"]
+# html_css_files = [
+#     "talkable.css",
+# ]
+# html_theme_options = {
+#     "light_logo": "img/logo.svg",
+#     "dark_logo": "img/logo.svg",
+#     "sidebar_hide_name": True,
+#     "light_css_variables": {
+#         "color-brand-primary": "#D36835",
+#         "color-brand-content": "#D36835",
+#         "color-brand-visited": "#D36835",
+#     },
+# }
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
