@@ -12,7 +12,7 @@ Talkable Campaign is based on interaction between ``Advocate`` and ``Friend``:
 - Advocate: person, who shares an offer with their Friend(s)
 - Friend: person, who is invited to participate in Campaign by Advocate
 
-.. image:: /_static/img/basics/sharing-process.png
+.. figure:: /_static/img/basics/sharing-process.png
   :alt: Sharing process
 
 Each step of this interaction has its own ``View`` so developer can easily
@@ -26,9 +26,8 @@ familiar with Liquid templating in Shopify.
 
 To start editing Views simply visit ``Editor`` page from the Campaign dashboard.
 
-.. raw:: html
-
-  <h2>Campaign Types and Placements</h2>
+Campaign Types and Placements
+=============================
 
 +-------------------------------+---------------------------------+
 | .. toctree::                  | .. toctree::                    |
@@ -37,9 +36,8 @@ To start editing Views simply visit ``Editor`` page from the Campaign dashboard.
 |   campaigns/campaign_types    |   campaigns/campaign_placements |
 +-------------------------------+---------------------------------+
 
-.. raw:: html
-
-  <h2>Campaign Structure</h2>
+Campaign Structure
+==================
 
 +-------------------------------+
 | .. toctree::                  |
@@ -48,9 +46,8 @@ To start editing Views simply visit ``Editor`` page from the Campaign dashboard.
 |   campaigns/views             |
 +-------------------------------+
 
-.. raw:: html
-
-  <h2>Campaign Setup & Tutorials</h2>
+Campaign Setup & tutorials
+==========================
 
 +-------------------------------+-----------------------------+
 | .. toctree::                  | .. toctree::                |
@@ -61,9 +58,8 @@ To start editing Views simply visit ``Editor`` page from the Campaign dashboard.
 |   campaigns/localization      |                             |
 +-------------------------------+-----------------------------+
 
-.. raw:: html
-
-  <h2>Designer Guide</h2>
+Designer Guide
+==============
 
 +-------------------------------+
 | .. toctree::                  |
