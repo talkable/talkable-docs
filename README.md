@@ -59,7 +59,7 @@ The repository consists of the following branches:
 
 You should not deploy it manually!
 
-The deployment is handled by Jenkins jobs.
+The deployment is handled by [Jenkins job](http://jenkins.production/view/Talkable-docs/).
 
 All you need to do is commit your changes to the corresponding branch to deploy them to the appropriate server:
 - Commit to the [staging](https://github.com/talkable/talkable-docs/tree/staging) branch => [docs.bastion.talkable.com](https://docs.bastion.talkable.com/).
