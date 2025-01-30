@@ -164,7 +164,7 @@ Create a new HTML page with URL path (`www.your-site.com/share`) and add the Tal
 in the body of the page between your standard site header and footer:
 
 .. note::
-   The Talkable Container DIV can be changed upon request to the Talkable team.
+   The Talkable Container DIV id can be changed upon request to the Talkable team.
    The current DIV id value for each Event Category can be found on the Placements page.
 
 .. code-block:: html
@@ -201,7 +201,7 @@ path (`www.your-site.com/referrals`) and add the Talkable Container DIV in
 the body of the page:
 
 .. note::
-   The Talkable Container DIV can be changed upon request to the Talkable team.
+   The Talkable Container DIV id can be changed upon request to the Talkable team.
    The current DIV id value for each Event Category can be found on the Placements page.
 
 .. code-block:: html
