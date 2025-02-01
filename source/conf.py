@@ -34,6 +34,7 @@ from _utils import baseurl
 extensions = [
     "sphinx_sitemap",
     "sphinx_copybutton",
+    "sphinx_design",
 ]
 
 sitemap_url_scheme = "{link}"
