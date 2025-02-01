@@ -44,36 +44,36 @@ To use multiple site slugs (also known as IDs) in your application, follow these
 
    .. code-block:: xml
 
-     <application>
-         ...
-         <meta-data
-             android:name="tkbl-default-site-slug"
-             android:value="{{YOUR_DEFAULT_SITE_SLUG}}" />
-         ...
-     </application>
+      <application>
+          ...
+          <meta-data
+              android:name="tkbl-default-site-slug"
+              android:value="{{YOUR_DEFAULT_SITE_SLUG}}" />
+          ...
+      </application>
 
    or by passing it through ``Talkable.initialize`` in the ``Application``:
 
    .. code-block:: java
 
-     import com.talkable.sdk.Talkable;
-     import android.app.Application;
+      import com.talkable.sdk.Talkable;
+      import android.app.Application;
 
-     public class App extends Application {
-         @Override
-         public void onCreate() {
-             super.onCreate();
-             Talkable.initialize(this, "your-default-site-slug");
-         }
-     }
+      public class App extends Application {
+          @Override
+          public void onCreate() {
+              super.onCreate();
+              Talkable.initialize(this, "your-default-site-slug");
+          }
+      }
 
    .. note::
 
-     You can set the site slug at any time after initialization in the following way:
+      You can set the site slug at any time after initialization in the following way:
 
       .. code-block:: java
 
-        Talkable.setSiteSlug("some-site-slug");
+         Talkable.setSiteSlug("some-site-slug");
 
    Make sure to add the credentials for this site inside the manifest file.
    Otherwise, an exception will be raised.
@@ -92,28 +92,28 @@ Overriding default behaviour
 
    .. code-block:: java
 
-     import com.talkable.sdk.TalkableOfferFragment;
+      import com.talkable.sdk.TalkableOfferFragment;
 
-     public class OverriddenTalkableOfferFragment extends TalkableOfferFragment {
-         @Override
-         public void copyToClipboard(String string) {
-             super.copyToClipboard(string);
+      public class OverriddenTalkableOfferFragment extends TalkableOfferFragment {
+          @Override
+          public void copyToClipboard(String string) {
+              super.copyToClipboard(string);
 
-             Toast.makeText(getActivity(), "Text copied!", Toast.LENGTH_LONG).show();
-         }
-     }
+              Toast.makeText(getActivity(), "Text copied!", Toast.LENGTH_LONG).show();
+          }
+      }
 
 2. Pass Class of an activity you want to run a fragment in and the overriden fragment to
    `Talkable.showOffer` call:
 
    .. code-block:: java
 
-     Talkable.showOffer(activity, affiliateMember, OverridenTalkableOfferFragment.class, new TalkableErrorCallback<TalkableOfferLoadException>() {
-         @Override
-         public void onError(TalkableOfferLoadException error) {
-             // Error handling. Note that it runs on non UI thread
-         }
-     });
+      Talkable.showOffer(activity, affiliateMember, OverridenTalkableOfferFragment.class, new TalkableErrorCallback<TalkableOfferLoadException>() {
+          @Override
+          public void onError(TalkableOfferLoadException error) {
+              // Error handling. Note that it runs on non UI thread
+          }
+      });
 
 .. _fragment_listener:
 
@@ -122,16 +122,16 @@ If you want to implement custom offer closing handling you should implement
 
 .. code-block:: java
 
-  import com.talkable.sdk.TalkableOfferFragment.TalkableOfferFragmentListener;
+   import com.talkable.sdk.TalkableOfferFragment.TalkableOfferFragmentListener;
 
-  public class MyActivity implements TalkableOfferFragmentListener {
-      ...
-      @Override
-      public void onOfferClosed() {
-          finish();
-      }
-      ...
-  }
+   public class MyActivity implements TalkableOfferFragmentListener {
+       ...
+       @Override
+       public void onOfferClosed() {
+           finish();
+       }
+       ...
+   }
 
 .. _using_fragment_directly:
 
@@ -150,30 +150,30 @@ To use ``TalkableOfferFragment`` directly, follow these steps:
 
 .. code-block:: java
 
-  AffiliateMember affiliateMember = new AffiliateMember();
-  ...
+   AffiliateMember affiliateMember = new AffiliateMember();
+   ...
 
-  Talkable.loadOffer(affiliateMember, new TalkableCallback<String, TalkableOfferLoadException>() {
-      // Note that it runs on non UI thread
-      @Override
-      public void onSuccess(String offerCode) {
-          TalkableOfferFragment fragment = TalkableOfferFragment.newInstance(offerCode);
-          myMethodToDisplayTalkableOfferFragment(fragment);
-      }
+   Talkable.loadOffer(affiliateMember, new TalkableCallback<String, TalkableOfferLoadException>() {
+       // Note that it runs on non UI thread
+       @Override
+       public void onSuccess(String offerCode) {
+           TalkableOfferFragment fragment = TalkableOfferFragment.newInstance(offerCode);
+           myMethodToDisplayTalkableOfferFragment(fragment);
+       }
 
-      @Override
-      public void onError(TalkableOfferLoadException error) {
-          // Error handling
-      }
-   );
+       @Override
+       public void onError(TalkableOfferLoadException error) {
+           // Error handling
+       }
+    );
 
 .. note::
 
-  Make sure to `handle configuration changes`_, as ``TalkableOfferFragment``
-  is built on top of ``WebView`` and restoring its state is up to you. If you
-  need to reinitialize a fragment, you don't need to call ``loadOffer`` again.
-  Simply store the ``offerCode`` and use it to create a new ``TalkableOfferFragment``
-  instance.
+   Make sure to `handle configuration changes`_, as ``TalkableOfferFragment``
+   is built on top of ``WebView`` and restoring its state is up to you. If you
+   need to reinitialize a fragment, you don't need to call ``loadOffer`` again.
+   Simply store the ``offerCode`` and use it to create a new ``TalkableOfferFragment``
+   instance.
 
 Native integration via API
 --------------------------
@@ -192,3 +192,7 @@ your Android application.
 .. _`handle configuration changes`: https://developer.android.com/guide/topics/resources/runtime-changes.html
 .. _`Fragment`: https://developer.android.com/guide/fragments
 .. _`Fragment Transactions`: https://developer.android.com/guide/fragments/transactions
+
+.. container:: hidden
+
+   .. toctree::

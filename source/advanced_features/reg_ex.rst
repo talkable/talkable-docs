@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Talkable allows setting up of campaign placement “Shown on” / “Hidden on” criteria in two formats: relative match and regular expression.
+   :description: Talkable allows setting up of campaign placement “Shown on” / “Hidden on” criteria in two formats: relative match and regular expression.
 
 Setting up Campaign Placement criteria
 ======================================
@@ -130,3 +130,7 @@ formats:
      * `http://site.com/test/products/one`
      * `http://stage.com/products/two`
      * `http://test.com/test/products/one/deep?utm=test`
+
+.. container:: hidden
+
+   .. toctree::

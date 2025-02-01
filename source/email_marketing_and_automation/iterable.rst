@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Synchronize Talkable collected emails with Iterable integration.
+   :description: Synchronize Talkable collected emails with Iterable integration.
 
 Iterable
 ========

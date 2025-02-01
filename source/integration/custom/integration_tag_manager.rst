@@ -53,9 +53,9 @@ Best Practices for Speed Optimization
 4. Implementing a custom domain for your integration won't directly increase its speed, but it will significantly reduce issues related to incognito mode and security policies blocking for third-party content.
 
 .. note:: 
-  If you use GTM, you can add `priority <https://support.google.com/tagmanager/answer/2772421>`_ to the tag. The higher the priority, the quicker it gets loaded.
+   If you use GTM, you can add `priority <https://support.google.com/tagmanager/answer/2772421>`_ to the tag. The higher the priority, the quicker it gets loaded.
 
-  .. image:: /_static/img/gtm-priority.png
+   .. image:: /_static/img/gtm-priority.png
 
 Alternative Approach: Direct Integration
 ----------------------------------------
@@ -100,7 +100,7 @@ If you've decided to remove the Talkable integration script from GTM, follow the
 **Important Note:** After removing the Talkable integration script from GTM, you'll need to implement the :ref:`direct integration approach <integration/custom/integration_components>` documented earlier to ensure Talkable functionality on your website.
 
 .. note::
-  Talkable doesn't recommend adding integration as tags in Google Tag Manager because of slow loading of campaigns for certain user agents as well as GTM being blocked by some Ad blockers
+   Talkable doesn't recommend adding integration as tags in Google Tag Manager because of slow loading of campaigns for certain user agents as well as GTM being blocked by some Ad blockers
 
 Helpful Links
 -------------

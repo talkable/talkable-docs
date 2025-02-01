@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: This is all about how we use cookies.
+   :description: This is all about how we use cookies.
 
 Cookies
 #######
@@ -33,40 +33,40 @@ These cookies and other technologies help us learn how well our Campaigns and Se
 We use these cookies to understand, improve, and research our Site and Services.
 
 .. list-table::
-  :widths: 30 30 30 10
-  :header-rows: 1
+   :widths: 30 30 30 10
+   :header-rows: 1
 
-  * - Cookie name
-    - Purpose
-    - Domain(s)
-    - Retention period(Days)
-  * - ``tkbl_session_id``
-    - Strictly Necessary
-    - | talkable.com
-      | shop domain
-    - 0
-  * - ``tkbl_session``
-    - Functionality
-    - | talkable.com
-      | shop domain
-    - 400
-  * - ``tkbl_cvuuid``
-    - Functionality
-    - | talkable.com
-      | shop domain
-    - 400
-  * - `multiple <https://newrelic.com/termsandconditions/cookie-policy/cookie-table>`_
-    - Analytics and Performance
-    - \*.newrelic.com
-    - 0-400
-  * - ``bugsnag*``
-    - Analytics and Performance
-    - \*.bugsnag.com
-    - 0-400
-  * - ``_ga``
-    - Analytics and Performance
-    - talkable.com
-    - 400
+   * - Cookie name
+     - Purpose
+     - Domain(s)
+     - Retention period(Days)
+   * - ``tkbl_session_id``
+     - Strictly Necessary
+     - | talkable.com
+       | shop domain
+     - 0
+   * - ``tkbl_session``
+     - Functionality
+     - | talkable.com
+       | shop domain
+     - 400
+   * - ``tkbl_cvuuid``
+     - Functionality
+     - | talkable.com
+       | shop domain
+     - 400
+   * - `multiple <https://newrelic.com/termsandconditions/cookie-policy/cookie-table>`_
+     - Analytics and Performance
+     - \*.newrelic.com
+     - 0-400
+   * - ``bugsnag*``
+     - Analytics and Performance
+     - \*.bugsnag.com
+     - 0-400
+   * - ``_ga``
+     - Analytics and Performance
+     - talkable.com
+     - 400
 
 .. _integration/custom/cookies/gdpr_and_ccpa_compliance:
 
@@ -79,7 +79,8 @@ Under GDPR and CCPA, setting such cookies does not require user consent.
 Post-consent (e.g., during signup), Talkable activates standard cookies to monitor user activities, aligning with regulatory guidelines.
 
 .. note::
-  Limitations of compliance mode seriously hinders Talkable ability to track referrals and conversions.
-  It is advised to use compliant mode only if you are legally obligated to do so.
+   Limitations of compliance mode seriously hinders Talkable ability to track referrals and conversions.
+   It is advised to use compliant mode only if you are legally obligated to do so.
 
 To enable GDPR and CCPA compliant mode, please contact your Customer Success Manager.
+

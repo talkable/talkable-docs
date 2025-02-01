@@ -11,13 +11,13 @@ on social media pages.
 To blocklist a user, first navigate to the “Blocklist” section of the Customer Service Portal:
 
 .. image:: /_static/img/advanced_features/customer_service_portal/blocklist.png
-  :width: 644 px
+   :width: 644 px
 
 Adding a user to the blocklist
 ------------------------------
 
 .. image:: /_static/img/advanced_features/customer_service_portal/adding_blocklist.png
-  :width: 436 px
+   :width: 436 px
 
 (We support adding users to a blocklist using two methods, by Email or by IP address. To add an email to the
 blocklist, just enter the email into the "Blocked emails” field and press “Save Changes”. Note that emails are
@@ -44,3 +44,7 @@ How do I UnBlocklist a user?
 If you realize that you made a mistake in Blocklisting a user who should actually be receiving rewards,
 all you have to do to take a user off the blocklist is to delete their email or IP from the list and then hit
 “Save Changes” again. It’s that easy.
+
+.. container:: hidden
+
+   .. toctree::

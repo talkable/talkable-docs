@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Send email to tell your Advocate what your referral program is about. Motivate them to share your offer.
+   :description: Send email to tell your Advocate what your referral program is about. Motivate them to share your offer.
 
 Advocate Offer Email
 --------------------
@@ -25,7 +25,7 @@ Main |cta| should point to an Advocate Signup/Share Page — ``{{ share_page_url
 
 .. raw:: html
 
-  <h2>Email sending conditions</h2>
+   <h2>Email sending conditions</h2>
 
 By default is sent immediately after the offer is created, but can be delayed by configuration.
 

@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Synchronize Talkable collected emails with WhatCounts integration.
+   :description: Synchronize Talkable collected emails with WhatCounts integration.
 
 WhatCounts
 ==========

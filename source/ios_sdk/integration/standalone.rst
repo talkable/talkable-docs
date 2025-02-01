@@ -37,3 +37,7 @@ Note that `params` are empty, in this case user will see Signup form on :ref:`Ad
     }
   };
   [[Talkable manager] registerOrigin:TKBLAffiliateMember params:params];
+
+.. container:: hidden
+
+   .. toctree::

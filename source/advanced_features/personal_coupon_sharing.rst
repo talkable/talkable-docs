@@ -1,7 +1,7 @@
 .. _advanced_features/personal_coupon_sharing:
 
 .. meta::
-  :description: By clicking on the share link each Friend sees the discount on the Friend claim page.
+   :description: By clicking on the share link each Friend sees the discount on the Friend claim page.
 
 Advocate Personal Coupon Sharing
 ================================
@@ -125,3 +125,8 @@ A: Here is a list of validation rules that are defined globally for any coupons:
   #. Coupon length is between 3 and 255 characters
 
 Any UTF8 characters are allowed (including spaces).
+
+
+.. container:: hidden
+
+   .. toctree::

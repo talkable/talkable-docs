@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: This is all about validating integration, from a checklist to testing.
+   :description: This is all about validating integration, from a checklist to testing.
 
 Validating the Integration
 ==========================
@@ -66,8 +66,8 @@ There are 5 types:
 5. :underline:`Claim by Name` displays as a floating widget button on your checkout page.
 
    .. note::
-     Claim by Name campaign has its own DIV container and can be shown along with the Floating Widget on the same page.
-     The DIV id is `talkable-claim-by-name`.
+      Claim by Name campaign has its own DIV container and can be shown along with the Floating Widget on the same page.
+      The DIV id is `talkable-claim-by-name`.
 
 -  :underline:`How to create campaigns:` Here’s a video showing you how to quickly
    create all campaigns in less than 1 minute
@@ -110,4 +110,4 @@ eligible for test mode display. Use the following image as a visual
 guideline:
 
 .. figure:: /_static/img/campaigns_dashboard.png
-  :alt: Campaigns
+   :alt: Campaigns

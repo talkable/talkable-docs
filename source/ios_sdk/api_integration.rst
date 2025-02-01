@@ -78,28 +78,28 @@ via |api_v2_share_via_social_channel|.
 
 .. code-block:: objc
 
-  MyFBSDKDelegateClass* delegate = [self myFBSDKDelegate];
-  delegate.shortUrlCode = shortUrlCode;
-  FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
-  content.contentURL = [NSURL URLWithString:[params objectForKey:[claimLinks objectForKey:TKBLShareChannelFacebook]]];
-  [FBSDKShareDialog showFromViewController:self
-                               withContent:content
-                                  delegate:delegate];
+   MyFBSDKDelegateClass* delegate = [self myFBSDKDelegate];
+   delegate.shortUrlCode = shortUrlCode;
+   FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
+   content.contentURL = [NSURL URLWithString:[params objectForKey:[claimLinks objectForKey:TKBLShareChannelFacebook]]];
+   [FBSDKShareDialog showFromViewController:self
+                                withContent:content
+                                   delegate:delegate];
 
-  // ...
+   // ...
 
-  @implementation MyFBSDKDelegateClass
+   @implementation MyFBSDKDelegateClass
 
-  @synthesize shortUrlCode;
+   @synthesize shortUrlCode;
 
-  - (void)sharer:(id)sharer didCompleteWithResults:(NSDictionary<NSString *, id> *)results {
-   if (_shortUrlCode != nil)
-      [[Talkable manager] createSocialShare:_shortUrlCode
-                                    channel:TKBLShareChannelFacebook
-                                withHandler:^(NSDictionary* response, NSError* error) {...}];
-  }
+   - (void)sharer:(id)sharer didCompleteWithResults:(NSDictionary<NSString *, id> *)results {
+    if (_shortUrlCode != nil)
+       [[Talkable manager] createSocialShare:_shortUrlCode
+                                     channel:TKBLShareChannelFacebook
+                                 withHandler:^(NSDictionary* response, NSError* error) {...}];
+   }
 
-  @end
+   @end
 
 .. raw:: html
 
@@ -107,15 +107,15 @@ via |api_v2_share_via_social_channel|.
 
 .. code-block:: objc
 
-  TWTRComposer *composer = [[TWTRComposer alloc] init];
-  [composer setText:[params objectForKey:TKBLShareMessage]];
-  [composer showFromViewController:self completion:^(TWTRComposerResult result) {
-    if (result == TWTRComposerResultDone) {
-      [[Talkable manager] createSocialShare:shortUrlCode
-                                    channel:TKBLShareChannelTwitter
-                                withHandler:^(NSDictionary* response, NSError* error) {...}];
-    }
-  }];
+   TWTRComposer *composer = [[TWTRComposer alloc] init];
+   [composer setText:[params objectForKey:TKBLShareMessage]];
+   [composer showFromViewController:self completion:^(TWTRComposerResult result) {
+     if (result == TWTRComposerResultDone) {
+       [[Talkable manager] createSocialShare:shortUrlCode
+                                     channel:TKBLShareChannelTwitter
+                                 withHandler:^(NSDictionary* response, NSError* error) {...}];
+     }
+   }];
 
 .. note::
 
@@ -141,9 +141,9 @@ Legacy social sharing
 
    .. warning::
 
-     Starting with v1.4.9, this method is deprecated and offers only limited Facebook sharing support.
-     Native sharing or custom implementation based on Facebook/Twitter SDK should be used instead.
-     See :ref:`Social Sharing <ios_sdk/social_sharing>` for details.
+      Starting with v1.4.9, this method is deprecated and offers only limited Facebook sharing support.
+      Native sharing or custom implementation based on Facebook/Twitter SDK should be used instead.
+      See :ref:`Social Sharing <ios_sdk/social_sharing>` for details.
 
 
 Email Share
@@ -193,3 +193,7 @@ to fetch the Offer.
   [[Talkable manager] retrieveOffer:shortUrlCode withHandler:^(NSDictionary* response, NSError* error) {
       NSDictionary* offerParams = [response objectForKey:TKBLOfferKey];
   }];
+
+.. container:: hidden
+
+   .. toctree::

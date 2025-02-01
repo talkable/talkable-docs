@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: This is a how-to guide to help you get the most out of Localizations.
+   :description: This is a how-to guide to help you get the most out of Localizations.
 
 Converting Into Localization
 ============================
@@ -56,7 +56,7 @@ A piece that we are going to extract into Localizations is just a copy, without 
 
 .. warning::
 
-  Talkable does not allow coding up Localizations within CSS area. If you want to move some CSS property into localizations use inline <style> tag inside HTML area.
+   Talkable does not allow coding up Localizations within CSS area. If you want to move some CSS property into localizations use inline <style> tag inside HTML area.
 
 Moving Subject Line Into Localization
 -------------------------------------
@@ -189,4 +189,8 @@ In order to chieve this AB test we need to
 
     All other nested children can be styled following this pattern.
 
-4. Once you’re done with styling it is very easy to set up an AB test, just go back to Campaign Editor and click "Add A/B test variant" link. Once a Campaign goes Live it will start rotating both variants following AB test distribution rules (50:50 by default).
+  4. Once you’re done with styling it is very easy to set up an AB test, just go back to Campaign Editor and click "Add A/B test variant" link. Once a Campaign goes Live it will start rotating both variants following AB test distribution rules (50:50 by default).
+
+.. container:: hidden
+
+   .. toctree::

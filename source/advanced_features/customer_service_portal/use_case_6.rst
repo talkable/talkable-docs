@@ -50,3 +50,7 @@ After creating the referral manually you will be taken to the newly created refe
 
 Advocate reward may be blocked due to incentive criteria, make sure to check the Advocate’s reward status as shown
 on the screenshot above.
+
+.. container:: hidden
+
+   .. toctree::

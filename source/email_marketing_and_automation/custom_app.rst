@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Custom App allows you to send Talkable data to a desired destination such as your site, ESP, CDP.
+   :description: Custom App allows you to send Talkable data to a desired destination such as your site, ESP, CDP.
 
 Custom App
 ==========
@@ -16,17 +16,17 @@ Set Up
 1. Navigate to the App store:
 
    .. image:: /_static/img/email_marketing_and_automation/app_store_step_1.png
-     :alt: App store step 1
+      :alt: App store step 1
 
    .. image:: /_static/img/email_marketing_and_automation/app_store_step_2.png
-     :alt: App store step 2
+      :alt: App store step 2
 
 2. Choose a `Custom app` and click “Install”
 3. Fill in `Endpoint URL` and `App name` fields, and enable the required actions.
 4. Complete installation and enable the app:
 
    .. image:: /_static/img/email_marketing_and_automation/custom_app.png
-     :alt: Custom App
+      :alt: Custom App
 
 Webhook Signature Verification
 ------------------------------
@@ -48,14 +48,14 @@ To verify the signature, you should complete the following steps:
 Your Talkable **Webhook security key** can be found in the Webhook set up page by navigating to **Menu** then **Webhooks**.
 
 .. image:: /_static/img/menu_webhooks_screenshot.png
-  :alt: Webhooks Menu Item
+   :alt: Webhooks Menu Item
 
 .. raw:: html
 
-  <hr>
+   <hr>
 
 .. image:: /_static/img/webhook_secret_key.png
-  :alt: Webhook Security Key
+   :alt: Webhook Security Key
 
 **3. Compare the signatures**
 
@@ -67,38 +67,38 @@ Your Talkable **Webhook security key** can be found in the Webhook set up page b
 
 .. code-block:: ruby
 
-  require 'base64'
-  require 'openssl'
-  require 'active_support/security_utils'
+   require 'base64'
+   require 'openssl'
+   require 'active_support/security_utils'
 
-  WEBHOOK_SECRET_KEY = 'my_webhook_secret'
+   WEBHOOK_SECRET_KEY = 'my_webhook_secret'
 
-  def verify_webhook(data, header_signature)
-    calculated_signature = Base64.strict_encode64(OpenSSL::HMAC.hexdigest('sha256', WEBHOOK_SECRET_KEY, data))
-    ActiveSupport::SecurityUtils.secure_compare(calculated_signature, header_signature)
-  end
+   def verify_webhook(data, header_signature)
+     calculated_signature = Base64.strict_encode64(OpenSSL::HMAC.hexdigest('sha256', WEBHOOK_SECRET_KEY, data))
+     ActiveSupport::SecurityUtils.secure_compare(calculated_signature, header_signature)
+   end
 
 *JavaScript:*
 
 .. code-block:: javascript
 
-  const crypto = require('crypto');
+   const crypto = require('crypto');
 
-  const WEBHOOK_SECRET_KEY = 'my_webhook_secret';
+   const WEBHOOK_SECRET_KEY = 'my_webhook_secret';
 
-  function verifyWebhook(data, headerSignature) {
-    // Calculate HMAC
-    const calculatedSignature = btoa(crypto
-      .createHmac('sha256', WEBHOOK_SECRET_KEY)
-      .update(data)
-      .digest('hex')
-    );
+   function verifyWebhook(data, headerSignature) {
+     // Calculate HMAC
+     const calculatedSignature = btoa(crypto
+       .createHmac('sha256', WEBHOOK_SECRET_KEY)
+       .update(data)
+       .digest('hex')
+     );
 
-    return crypto.timingSafeEqual(
-      Buffer.from(calculatedSignature, 'base64'),
-      Buffer.from(headerSignature, 'base64')
-    );
-  }
+     return crypto.timingSafeEqual(
+       Buffer.from(calculatedSignature, 'base64'),
+       Buffer.from(headerSignature, 'base64')
+     );
+   }
 
 Available actions
 -----------------
@@ -106,7 +106,7 @@ Available actions
 Each action allows custom attributes to be included. You can see allowed interpolation variables by clicking `Show available variables` button:
 
 .. image:: /_static/img/email_marketing_and_automation/variables.png
-  :alt: Variables
+   :alt: Variables
 
 Referral Create
 ...............
@@ -117,13 +117,13 @@ Triggers when a new referral is created, sending detailed information about the 
 
 .. code-block:: JSON
 
-  {
-    "site_id": "1",
-    "campaign_id": "142",
-    "referral_status": "in_progress",
-    "advocate_email": "advocate@example.com",
-    "friend_email": "friend@example.com"
-  }
+   {
+     "site_id": "1",
+     "campaign_id": "142",
+     "referral_status": "in_progress",
+     "advocate_email": "advocate@example.com",
+     "friend_email": "friend@example.com"
+   }
 
 Sync signups
 ............
@@ -134,12 +134,12 @@ This action automatically synchronizes all people whenever they sign up no matte
 
 .. code-block:: JSON
 
-  {
-    "email": "person-9eb230f8d189fca9@talkable-sample.com",
-    "email_optin": "true",
-    "phone_number": "+12025551111",
-    "phone_optin": "true"
-  }
+   {
+     "email": "person-9eb230f8d189fca9@talkable-sample.com",
+     "email_optin": "true",
+     "phone_number": "+12025551111",
+     "phone_optin": "true"
+   }
 
 Sync email opt-ins
 ..................
@@ -150,11 +150,11 @@ This action automatically synchronizes all people whenever they sign up and opt 
 
 .. code-block:: JSON
 
-  {
-    "site_id": "1",
-    "email": "person-40728a5b940e3247@talkable-sample.com",
-    "email_optin": "true"
-  }
+   {
+     "site_id": "1",
+     "email": "person-40728a5b940e3247@talkable-sample.com",
+     "email_optin": "true"
+   }
 
 Sync phone opt-ins
 ..................
@@ -165,11 +165,11 @@ This action automatically synchronizes all people whenever they sign up and opt 
 
 .. code-block:: JSON
 
-  {
-    "site_id": "1",
-    "email": "person-fa8e880e25bd47b3@talkable-sample.com",
-    "phone_number": "+12025551111"
-  }
+   {
+     "site_id": "1",
+     "email": "person-fa8e880e25bd47b3@talkable-sample.com",
+     "phone_number": "+12025551111"
+   }
 
 Sync loyalty actions
 ....................
@@ -180,10 +180,10 @@ This action automatically synchronizes all loyalty members whenever they make a 
 
 .. code-block:: JSON
 
-  {
-    "site_id": "1",
-    "email": "loyalty@talkable.com"
-  }
+   {
+     "site_id": "1",
+     "email": "loyalty@talkable.com"
+   }
 
 Sync loyalty tier transitions
 .............................
@@ -194,10 +194,10 @@ This action automatically synchronizes all loyalty members whenever their tier i
 
 .. code-block:: JSON
 
-  {
-    "site_id": "1",
-    "email": "loyalty@talkable.com"
-  }
+   {
+     "site_id": "1",
+     "email": "loyalty@talkable.com"
+   }
 
 Unsubscribe
 ...........
@@ -208,10 +208,10 @@ Whenever customers unsubscribe from Talkable emails they will also become unsubs
 
 .. code-block:: JSON
 
-  {
-    "site_id": "1",
-    "email": "person-591542c54ff21a49@talkable-sample.com"
-  }
+   {
+     "site_id": "1",
+     "email": "person-591542c54ff21a49@talkable-sample.com"
+   }
 
 Offer share
 ...........
@@ -222,10 +222,10 @@ Whenever a person shares the offer, the share information will be sent to your E
 
 .. code-block:: JSON
 
-  {
-    "site_id": "1",
-    "email": "person-591542c54ff21a49@talkable-sample.com"
-  }
+   {
+     "site_id": "1",
+     "email": "person-591542c54ff21a49@talkable-sample.com"
+   }
 
 Send reward
 ...........
@@ -236,13 +236,13 @@ This action sends the reward information to your ESP.
 
 .. code-block:: JSON
 
-  {
-    "description": "$5",
-    "amount": "5.0",
-    "coupon_code": "FR_NEW_5_OFF",
-    "reason": "click",
-    "site_id": "1"
-  }
+   {
+     "description": "$5",
+     "amount": "5.0",
+     "coupon_code": "FR_NEW_5_OFF",
+     "reason": "click",
+     "site_id": "1"
+   }
 
 Create coupon
 .............
@@ -253,11 +253,11 @@ When the quantity of available coupons drops below a Talkable threshold this act
 
 .. code-block:: JSON
 
-  {
-    "site_id": "1",
-    "coupon_code": "SAMPLE-COUPON-CODE",
-    "coupon_discount_amount": "0.0"
-  }
+   {
+     "site_id": "1",
+     "coupon_code": "SAMPLE-COUPON-CODE",
+     "coupon_discount_amount": "0.0"
+   }
 
 Event
 .....
@@ -268,16 +268,16 @@ Triggers when a new event or purchase is created.
 
 .. code-block:: JSON
 
-  {
-    "site_id": "1",
-    "type": "Event",
-    "created_at": "2024-11-25 00:00:00 -0800",
-    "event_category": "public_event",
-    "event_number": "183247241",
-    "subtotal": "100.0",
-    "currency_iso_code": "USD",
-    "email": "advocate@example.com"
-  }
+   {
+     "site_id": "1",
+     "type": "Event",
+     "created_at": "2024-11-25 00:00:00 -0800",
+     "event_category": "public_event",
+     "event_number": "183247241",
+     "subtotal": "100.0",
+     "currency_iso_code": "USD",
+     "email": "advocate@example.com"
+   }
 
 Referral status change
 ......................
@@ -288,13 +288,13 @@ This action is triggered when referral’s status changes.
 
 .. code-block:: JSON
 
-  {
-    "site_id": "1",
-    "campaign_id": "142",
-    "referral_status": "in_progress",
-    "advocate_email": "advocate@example.com",
-    "friend_email": "friend@example.com"
-  }
+   {
+     "site_id": "1",
+     "campaign_id": "142",
+     "referral_status": "in_progress",
+     "advocate_email": "advocate@example.com",
+     "friend_email": "friend@example.com"
+   }
 
 Click reward verification
 .........................
@@ -307,10 +307,10 @@ This action sends information about a Friend when they attempt claiming a reward
 
 .. code-block:: JSON
 
-  {
-    "email": "friend@example.com",
-    "site_id": "1"
-  }
+   {
+     "email": "friend@example.com",
+     "site_id": "1"
+   }
 
 
 Testing
@@ -324,7 +324,7 @@ Testing Custom app actions can be accomplished with the help of Webhook Tester, 
 4. Click **Send sample payload** near the action you want to test.
 
    .. image:: /_static/img/email_marketing_and_automation/send_sample_payload.png
-     :alt: Send sample payload
+      :alt: Send sample payload
 
 5. After you finish the implementation on your site **change Webhook Tester URL
    to the live URL** in your Custom app.
@@ -337,6 +337,6 @@ In case your servers are behind firewall, you may need to whitelist Talkable IP
 addresses so webhooks can be delivered. Pass list of these addresses to your network administrator:
 
 .. hlist::
-  :columns: 4
+   :columns: 4
 
-  .. include:: /partials/talkable_ip_list.rst
+   .. include:: /partials/talkable_ip_list.rst
