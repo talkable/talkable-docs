@@ -7,11 +7,20 @@
 API Reference
 #############
 
-Contents:
+.. grid:: 1 2 2 2
 
-.. toctree::
+   .. grid-item::
 
-   api_v2/intro
-   api_v2/flow
-   api_v2/origins
-   api_v2/referrals
+      .. toctree::
+         :maxdepth: 2 
+      
+         api_v2/intro
+    
+   .. grid-item::
+
+      .. toctree::
+         :maxdepth: 2 
+        
+         api_v2/flow
+         api_v2/origins
+         api_v2/referrals
