@@ -29,7 +29,3 @@ Talkable sent email.
    <h2>Payload parameters provided</h2>
 
 The sample payload with parameters for Unsubscribe Webhook is available here: `Unsubscribe Webhook Payload <https://www.talkable.com/api-docs/index.html?urls.primaryname=webhooks%20api&urls.primaryName=Webhooks#/Unsubscribe/post_your_api_unsubscribe_web_hook_path>`_.
-
-.. container:: hidden
-
-   .. toctree::

@@ -60,6 +60,3 @@ Here is what email statuses mean:
 - **Scheduled**: the email will be sent on a specified date.
 - **Rejected**: the email was rejected by some reason.
 
-.. container:: hidden
-
-   .. toctree::

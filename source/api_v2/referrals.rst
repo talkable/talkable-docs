@@ -15,18 +15,18 @@ The Talkable |api_v2_referrals| allows referrals to be approved or voided.
 
 **Voiding referrals after a purchase is returned or canceled:**
 
-* A company who wants to ensure an |advocate| does not receive referral Rewards
-  if the |friend| returns their purchase. To prevent the |advocate| from receiving
-  their referral reward, this company would call the Talkable |api_v2_referrals| with
-  ``{"status": "voided"}`` after the |friend| order is canceled.
+A company who wants to ensure an |advocate| does not receive referral Rewards
+if the |friend| returns their purchase. To prevent the |advocate| from receiving
+their referral reward, this company would call the Talkable |api_v2_referrals| with
+``{"status": "voided"}`` after the |friend| order is canceled.
 
 **Approving Referrals only after a specific CRM Event:**
 
-* A company who wants to approve referral rewards only after the |friend| order
-  has reached a certain state (ie, 'shipped’, or ‘no longer refundable’) can
-  control this Referral Approval with the Talkable |api_v2_referrals|. This company
-  would call the Talkable |api_v2_referrals| with ``{"status": "approved"}`` after
-  the |friend| order reaches the desired state.
+A company who wants to approve referral rewards only after the |friend| order
+has reached a certain state (ie, 'shipped’, or ‘no longer refundable’) can
+control this Referral Approval with the Talkable |api_v2_referrals|. This company
+would call the Talkable |api_v2_referrals| with ``{"status": "approved"}`` after
+the |friend| order reaches the desired state.
 
 .. note::
 

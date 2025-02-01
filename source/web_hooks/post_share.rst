@@ -8,22 +8,23 @@ Post Share Webhook
 ==================
 
 Talkable Post Share Webhook provides notification of a share event performed within a referral campaign workflow. Use cases for the Post Share Webhook include:
-  - Sending automated 'Thank You' email to an Advocate for performing a share
-  - Any event that should be triggered when a user shares
-  - Data for Business Intelligence and analytics systems
+
+- Sending automated 'Thank You' email to an Advocate for performing a share
+- Any event that should be triggered when a user shares
+- Data for Business Intelligence and analytics systems
 
 .. raw:: html
 
    <h2>When does Talkable call the Post Share Webhook?</h2>
 
 Talkable Post Share Webhook is triggered any time an |advocate| (referrer) shares offer details with a |friend| (referee) via the corresponding form provided by campaign workflow. Which includes any time:
-  - An advocate shares with a Friend via Email or any other channel from inside a referral campaign workflow
-  - An Advocate copies a share link from a referral campaign workflow share screen
+  
+- An advocate shares with a Friend via Email or any other channel from inside a referral campaign workflow
+- An Advocate copies a share link from a referral campaign workflow share screen
 
-Note: the Post Share Webhook triggers every time a share occurs. For example,
-if an Advocate shares with a Friend via email (or any channel), then shares with
-a second Friend via email (or any channel), the Post Share Webhook will be
-triggered twice.
+.. note:: 
+   
+   The Post Share Webhook triggers every time a share occurs. For example, if an Advocate shares with a Friend via email (or any channel), then shares with a second Friend via email (or any channel), the Post Share Webhook will be triggered twice.
 
 .. raw:: html
 
@@ -38,6 +39,3 @@ The sample payload with parameters for Post Share Webhook is available here: `Po
    information about the Advocate, use ``sharer_info`` property which is updated
    with the email address the Advocate has entered on the Advocate Signup/Share Page.
 
-.. container:: hidden
-
-   .. toctree::

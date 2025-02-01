@@ -119,14 +119,10 @@ As a result each Advocate may have multiple personal coupons associated with the
 **Q: What characters are allowed in the personal coupon?**
 
 A: Here is a list of validation rules that are defined globally for any coupons:
-  #. Coupon should be unique on a site level
-  #. Coupon value cannot be “SAMPLE-COUPON-CODE” (in any case)
-  #. All coupons are case insensitive, they are always normalized to uppercase and UTF8 encoding
-  #. Coupon length is between 3 and 255 characters
+  
+#. Coupon should be unique on a site level
+#. Coupon value cannot be “SAMPLE-COUPON-CODE” (in any case)
+#. All coupons are case insensitive, they are always normalized to uppercase and UTF8 encoding
+#. Coupon length is between 3 and 255 characters
 
 Any UTF8 characters are allowed (including spaces).
-
-
-.. container:: hidden
-
-   .. toctree::

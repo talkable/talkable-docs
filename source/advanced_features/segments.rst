@@ -102,7 +102,3 @@ In this example, `segment1`, `segment2`, and `segment3` attributes are passed th
 
 This approach simplifies custom data handling for customers, allowing for unified data across various methods and optimizing segmentation management without additional calls.
 
-.. container:: hidden
-
-   .. toctree::
-

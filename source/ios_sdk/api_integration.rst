@@ -193,7 +193,3 @@ to fetch the Offer.
   [[Talkable manager] retrieveOffer:shortUrlCode withHandler:^(NSDictionary* response, NSError* error) {
       NSDictionary* offerParams = [response objectForKey:TKBLOfferKey];
   }];
-
-.. container:: hidden
-
-   .. toctree::

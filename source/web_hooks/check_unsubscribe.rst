@@ -25,12 +25,12 @@ merchant side.
    If this Check Unsubscribe Webhook is used, the response JSON returned by
    merchant must contain the following fields:
 
-  .. code-block:: javascript
+   .. code-block:: javascript
 
       { "result": { "unsubscribed": true } }
 
-  The 'unsubscribed' field should have a boolean value,
-  representing unsubscribed status according to the merchant info.
+The 'unsubscribed' field should have a boolean value,
+representing unsubscribed status according to the merchant info.
 
 .. raw:: html
 
@@ -50,7 +50,3 @@ View category can be one of the following:
 * advocate_rewards_confirmation
 * advocate_rewards_paid
 * friend_rewards_paid
-
-.. container:: hidden
-
-   .. toctree::
