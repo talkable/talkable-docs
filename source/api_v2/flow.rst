@@ -50,9 +50,9 @@ This is the last step before |friend| proceeds to your site or app.
 - Edit your :ref:`Friend Claim Page <campaigns/views/offers_claim>` template or disable it for immediate redirect
 - Edit the Destination URL in *Extra* window
 
-**Important:**
+.. important::
 
-You need to pass the visitor `uuid` variable to your site via the destination URL GET parameter and store it somewhere in order to later pass it with |api_v2_origin|
+   You need to pass the visitor `uuid` variable to your site via the destination URL GET parameter and store it somewhere in order to later pass it with |api_v2_origin|
 
 Example destination URL: `http://merchant.com?tkbl_cvuuid={{visitor_uuid}}&utm_source=talkable&...`
 

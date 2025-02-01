@@ -113,12 +113,13 @@ Shopify Price Rule Changed Email Notification
 If you modify a Price Rules on Shopify, it could make them incompatible with the coupon lists they are attached to. In order to find out about such changes as early as possible, we have a daily monitoring job that checks that Price Rules have no critical differences from respective coupon lists.
 
 Attributes that are checked in this job are the following:
-  - `allocation_method` - must always be "across"
-  - `usage_limit` - must always be 1
-  - `value` - must correspond to coupon list amount
-  - `value_type` - must correspond to coupon list type
-  - `ends_at` - must be greater than or equal to coupon list expiration (and absent if coupon list has no expiration)
-  - `prerequisite_subtotal_range` - must match coupon list minimum subtotal
+  
+- `allocation_method` - must always be "across"
+- `usage_limit` - must always be 1
+- `value` - must correspond to coupon list amount
+- `value_type` - must correspond to coupon list type
+- `ends_at` - must be greater than or equal to coupon list expiration (and absent if coupon list has no expiration)
+- `prerequisite_subtotal_range` - must match coupon list minimum subtotal
 
 If any of these attributes differ from what they are expected to be and Talkable cannot fix that by updating a coupon list (see **Coupon list sync**), Talkable sends an email notification.
 
@@ -131,9 +132,8 @@ Talkable tries to keep up with the Price Rules assigned to coupon lists when/if 
 
 As long as the Price Rule is otherwise valid for a coupon list, we update the coupon list’s:
 
-**expiration date** - only if Price Rule end date is further in the future (or absent)
-
-**minimum subtotal**
+- **expiration date** - only if Price Rule end date is further in the future (or absent)
+- **minimum subtotal**
 
 .. note::
   If there are any other changes in the Price Rule that make it not suitable for a certain coupon list, we won’t sync the coupon list. In this case, a Shopify Price Rule Changed Email Notification will be delivered and action will be required to fix the issue.

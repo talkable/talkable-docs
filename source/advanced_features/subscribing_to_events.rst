@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Talkable JS integration script embeds Talkable campaign as an iframe.
+   :description: Talkable JS integration script embeds Talkable campaign as an iframe.
 
 Subscribing To Iframe Events
 ============================
@@ -31,8 +31,9 @@ Knowing the container `name` attribute of the iframe is `talkable-offer-iframe` 
   });
 
 Notice two arguments passed in the callback:
-  - `data` object — the data passed by the iframe upon firing the event
-  - `iframe` object — iframe’s `HTML DOM reference`_
+
+- `data` object — the data passed by the iframe upon firing the event
+- `iframe` object — iframe’s `HTML DOM reference`_
 
 .. _HTML DOM reference: https://www.w3schools.com/jsref/dom_obj_frame.asp
 
@@ -40,12 +41,14 @@ Iframe Events List
 ------------------
 
 Talkable campaigns are equipped with the following set of events:
-  1. `offer_loaded` — Talkable iframe DOM ready event which is in fact the very first event that you can use to determine if the iframe is loaded.
-  2. `responsive_iframe_height` — fires every time iframe size gets changed. You can use it to detect changes in iframe size.
-     You can read more :ref:`here <responsive-views>`. Previously named as ``curebit_offer_iframe_broadcast``.
-  3. `offer_close` — fires when the close button is clicked. You can use this event to determine when user closes Talkable campaign, it then disappears from the screen.
-  4. `offer_triggered` — Talkable Trigger Widget iframe fires this event when user clicks on it. You can use this event to detect when the main offer iframe is about to show up.
-  5. `coupon_issued` — fires upon issuing coupon code as a reward for sharing. You can use it to determine when the user shares and receives their reward. `data.channel` tells which sharing channel was used and `data.coupon_code` stores the coupon code value.
-  6. `share_succeeded` — fires each time |advocate| shares. `data.channel` tells which sharing channel was used for the share.
-  7. `email_gating_passed` — fires when |friend| passes email gating on :ref:`Friend Claim Page <campaigns/views/offers_claim>`.
-  8. `email_gating_failed` — fires when |friend| fails to pass email gating on :ref:`Friend Claim Page <campaigns/views/offers_claim>`.
+
+1. `offer_loaded` — Talkable iframe DOM ready event which is in fact the very first event that you can use to determine if the iframe is loaded.
+2. `responsive_iframe_height` — fires every time iframe size gets changed. You can use it to detect changes in iframe size.
+   |br|
+   You can read more :ref:`here <responsive-views>`. Previously named as ``curebit_offer_iframe_broadcast``.
+3. `offer_close` — fires when the close button is clicked. You can use this event to determine when user closes Talkable campaign, it then disappears from the screen.
+4. `offer_triggered` — Talkable Trigger Widget iframe fires this event when user clicks on it. You can use this event to detect when the main offer iframe is about to show up.
+5. `coupon_issued` — fires upon issuing coupon code as a reward for sharing. You can use it to determine when the user shares and receives their reward. `data.channel` tells which sharing channel was used and `data.coupon_code` stores the coupon code value.
+6. `share_succeeded` — fires each time |advocate| shares. `data.channel` tells which sharing channel was used for the share.
+7. `email_gating_passed` — fires when |friend| passes email gating on :ref:`Friend Claim Page <campaigns/views/offers_claim>`.
+8. `email_gating_failed` — fires when |friend| fails to pass email gating on :ref:`Friend Claim Page <campaigns/views/offers_claim>`.

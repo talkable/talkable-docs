@@ -63,8 +63,9 @@ In this setup Purchase Syncing is just ensuring that attributes passed with Java
 and notifies Talkable Integrations team in case it is not.
 
 Here is detailed explanation of this logic:
-   - Purchase Syncing tries to find Purchase in Talkable by Order Number (Shopify Purchase ID).
-   - If there is no such Purchase, the one will be registered with attributes described in `Shopify Webhook payload and Talkable Purchase attributes mapping`
-   - If such Purchase exists, Purchase Syncing compares **Email** and **Subtotal** with Shopify Webhook payload.
+   
+- Purchase Syncing tries to find Purchase in Talkable by Order Number (Shopify Purchase ID).
+- If there is no such Purchase, the one will be registered with attributes described in `Shopify Webhook payload and Talkable Purchase attributes mapping`
+- If such Purchase exists, Purchase Syncing compares **Email** and **Subtotal** with Shopify Webhook payload.
 
 In case these attributes differ, Talkable Integrations team will is notified. Otherwise, nothing happens and the existing Purchase data is kept unmodified.
