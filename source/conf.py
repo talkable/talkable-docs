@@ -34,13 +34,13 @@ from _utils import baseurl
 extensions = [
     "sphinx_sitemap",
     "sphinx_copybutton",
-    "sphinx_favicon",
+    "sphinx_design",
 ]
 
 sitemap_url_scheme = "{link}"
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ["_templates"]
+# templates_path = ["_templates"]
 
 # The suffix of source filenames.
 source_suffix = ".rst"
@@ -108,8 +108,11 @@ pygments_style = "sphinx"
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = "furo"
+# html_theme = "furo"
+# html_theme = "pydata_sphinx_theme"
+html_theme = "sphinx_book_theme"
 # html_style = 'talkable.css'
+html_css_files = ["talkable.css"]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -123,42 +126,37 @@ html_show_sourcelink = False
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = ""
+html_title = "Talkable Documentation"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 # html_short_title = None
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-# html_logo = None
+html_logo = "_static/img/logo.svg"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-# html_favicon = None
-
-favicons = {
-    "rel": "icon",
-    "href": "img/favicon.ico",
-    "type": "image/vnd.microsoft.icon",
-}
+html_favicon = "_static/img/favicon.ico"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
-html_css_files = [
-    "talkable.css",
-]
+# html_css_files = [
+#     "talkable.css",
+# ]
 html_theme_options = {
-    "light_logo": "img/logo.svg",
-    "dark_logo": "img/logo.svg",
-    "sidebar_hide_name": True,
-    "light_css_variables": {
-        "color-brand-primary": "#D36835",
-        "color-brand-content": "#D36835",
-        "color-brand-visited": "#D36835",
-    },
+    # "light_logo": "img/logo.svg",
+    # "dark_logo": "img/logo.svg",
+    # "sidebar_hide_name": True,
+    # "light_css_variables": {
+    #     "color-brand-primary": "#D36835",
+    #     "color-brand-content": "#D36835",
+    #     "color-brand-visited": "#D36835",
+    # },
+    "use_download_button": False,
 }
 
 # Add any extra paths that contain custom files (such as robots.txt or
