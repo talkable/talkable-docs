@@ -29,41 +29,65 @@ To start editing Views simply visit ``Editor`` page from the Campaign dashboard.
 Campaign Types and Placements
 =============================
 
-+-------------------------------+---------------------------------+
-| .. toctree::                  | .. toctree::                    |
-|   :maxdepth: 2                |   :maxdepth: 2                  |
-|                               |                                 |
-|   campaigns/campaign_types    |   campaigns/campaign_placements |
-+-------------------------------+---------------------------------+
+.. grid:: 1 2 2 2
+
+    .. grid-item::
+
+        .. toctree::
+          :maxdepth: 2 
+        
+          campaigns/campaign_types
+        
+    .. grid-item::
+
+        
+        .. toctree::
+          :maxdepth: 2 
+        
+          campaigns/campaign_placements
 
 Campaign Structure
 ==================
 
-+-------------------------------+
-| .. toctree::                  |
-|   :maxdepth: 2                |
-|                               |
-|   campaigns/views             |
-+-------------------------------+
+.. grid:: 1 2 2 2
+
+    .. grid-item::
+
+        .. toctree::
+          :maxdepth: 2 
+        
+          campaigns/views
 
 Campaign Setup & tutorials
 ==========================
 
-+-------------------------------+-----------------------------+
-| .. toctree::                  | .. toctree::                |
-|   :maxdepth: 2                |   :maxdepth: 2              |
-|                               |                             |
-|   campaigns/tutorials         |   campaigns/editor          |
-|   campaigns/offers_expiration |                             |
-|   campaigns/localization      |                             |
-+-------------------------------+-----------------------------+
+.. grid:: 1 2 2 2
+
+    .. grid-item::
+
+        .. toctree::
+          :maxdepth: 2 
+        
+          campaigns/tutorials
+          campaigns/offers_expiration
+          campaigns/localization
+    
+    .. grid-item::
+
+        .. toctree::
+          :maxdepth: 2 
+        
+          campaigns/editor
 
 Designer Guide
 ==============
 
-+-------------------------------+
-| .. toctree::                  |
-|   :maxdepth: 2                |
-|                               |
-|   campaigns/designer          |
-+-------------------------------+
+.. grid:: 1 2 2 2
+
+    .. grid-item::
+
+        .. toctree::
+          :maxdepth: 2 
+        
+          campaigns/designer
+

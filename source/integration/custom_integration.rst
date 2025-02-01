@@ -36,12 +36,28 @@ Standard Integration
 
      custom/overview
 
-Contents:
 
-.. toctree::
+.. raw:: html
 
-   custom/integration_components
-   custom/validating_integration
-   verify
-   custom/cookies
-   custom/questions
+   <h2 class="mts">Contents:</h2>
+
+.. grid:: 1 2 2 2
+
+   .. grid-item::
+
+      .. toctree::
+         :maxdepth: 2 
+      
+         custom/integration_components
+         verify
+    
+   .. grid-item::
+
+      .. toctree::
+         :maxdepth: 2 
+        
+         custom/validating_integration
+         custom/cookies
+         custom/questions   
+   
+   
