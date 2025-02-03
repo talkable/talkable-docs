@@ -72,13 +72,13 @@ Implement TalkableDelegate
 
    .. code-block:: objc
 
-     - (void)showFacebookShareDialogWithParams:(NSDictionary*)params delegate:(id)delegate;
-     - (void)showFacebookShareDialogWithParams:(NSDictionary*)params completion:(void (^)())completionHandler;
-     - (void)showTwitterShareDialogWithParams:(NSDictionary*)params completion:(void (^)())completionHandler;
+      - (void)showFacebookShareDialogWithParams:(NSDictionary*)params delegate:(id)delegate;
+      - (void)showFacebookShareDialogWithParams:(NSDictionary*)params completion:(void (^)())completionHandler;
+      - (void)showTwitterShareDialogWithParams:(NSDictionary*)params completion:(void (^)())completionHandler;
 
    .. note::
 
-    See :ref:`Social Sharing <ios_sdk/social_sharing>` for details.
+      See :ref:`Social Sharing <ios_sdk/social_sharing>` for details.
 
 .. _ios_sdk/advanced/notifications:
 

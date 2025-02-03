@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Learn how to manually set up loyalty Shopify integration.
+   :description: Learn how to manually set up loyalty Shopify integration.
 
 Shopify Integration
 ===================
@@ -30,6 +30,7 @@ Manual integration
 6.  In your Shopify Admin create resources for loyalty dashboard page:
 
     1.  Create a loyalty dashboard page section:
+    
         * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Sections**
         * Click “Add a new section“
         * Create a new Liquid section called `talkable-loyalty-dashboard.liquid`
@@ -37,9 +38,9 @@ Manual integration
 
           .. code-block:: html
 
-            {% if shop.customer_accounts_enabled %}
-              <div id="talkable-loyalty"></div>
-            {% endif %}
+             {% if shop.customer_accounts_enabled %}
+               <div id="talkable-loyalty"></div>
+             {% endif %}
 
         * Optionally, update the schema name to anything meaningful, for example, “Loyalty dashboard“
         * Click “Save”
@@ -53,20 +54,20 @@ Manual integration
 
           .. code-block:: JSON
 
-            {
-              "sections": {
-                "main": {
-                  "type": "talkable-loyalty-dashboard"
-                }
-              }
-            }
+             {
+               "sections": {
+                 "main": {
+                   "type": "talkable-loyalty-dashboard"
+                 }
+               }
+             }
 
           .. important::
-            The name of the section should be the same as the one you used
-            in the previous step when naming your section file.
+             The name of the section should be the same as the one you used
+             in the previous step when naming your section file.
 
           .. important::
-            If your main section is disabled, remove the row that does it.
+             If your main section is disabled, remove the row that does it.
 
     3.  Create a page:
         
@@ -79,7 +80,7 @@ Manual integration
 
 .. raw:: html
 
-  <h2>Requirements</h2>
+   <h2>Requirements</h2>
 
 User accounts. The website must support user accounts since the loyalty program is only available to logged in users.
 
@@ -102,9 +103,9 @@ you need to do the following:
 
       .. code-block:: html
 
-        {% if shop.customer_accounts_enabled %}
-          <div id="talkable-loyalty"></div>
-        {% endif %}
+         {% if shop.customer_accounts_enabled %}
+           <div id="talkable-loyalty"></div>
+         {% endif %}
 
       If there were any customizations in the `templates/page.talkable-loyalty-dashboard.liquid`, add them as well
 
@@ -120,14 +121,17 @@ you need to do the following:
 
       .. code-block:: JSON
 
-        {
-          "sections": {
-            "main": {
-              "type": "talkable-loyalty-dashboard"
-            }
-          }
-        }
+         {
+           "sections": {
+             "main": {
+               "type": "talkable-loyalty-dashboard"
+             }
+           }
+         }
 
       .. important::
-        - The name of the section should be the same as the one you used in the previous step when naming your section file.
-        - If your main section is disabled, remove the row that does it.
+         The name of the section should be the same as the one you used
+         in the previous step when naming your section file.
+
+      .. important::
+         If your main section is disabled, remove the row that does it.

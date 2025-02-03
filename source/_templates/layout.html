@@ -1,48 +1,15 @@
-{% extends "basic/layout.html" %}
-{% block relbar1 %}{% endblock %}
-{% block relbar2 %}{% endblock %}
-{% block sidebarlogo %}{% endblock %}
-{% block sidebar2 %}{% endblock %}
+{% extends "!layout.html" %}
 
-{%- block doctype -%}
-  <!DOCTYPE html>
-{%- endblock -%}
-
-{%- block extrahead -%}
-  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-  <link href="{{ pathto("_static/pygments-github.css", 1) }}" rel="stylesheet">
-  <link href="{{ pathto("_static/img/favicon.ico", 1) }}" rel="shortcut icon" />
-{%- endblock -%}
-
-{# put the sidebar before the body #}
-{%- block sidebar1 %}
-  {% block rootrellink %}
-    <div class="header">
-      <a href="{{ pathto(master_doc) }}" class="header-logo">Talkable docs</a>
-      {%- block sidebarsearch %}
-        {%- if pagename != "search" and builder != "singlehtml" %}
-          <form class="search-form" action="{{ pathto('search') }}" method="get">
-            <input type="text" class="textfield search-form-field" name="q" placeholder="Search docs" />
-            <input type="submit" class="button search-form-button" value="Search" />
-            <input type="hidden" name="check_keywords" value="yes" />
-            <input type="hidden" name="area" value="default" />
-          </form>
-        {%- endif %}
-      {%- endblock %}
-      <div class="header-disclaimer">
-        Visit
-        <a href="https://www.talkable.com" target="_blank">www.talkable.com</a>
-      </div>
-    </div> <!-- /.header -->
-  {% endblock %}
-
-  <div class="content-container content clearfix">
-    {%- block sidebartoc %}
-      <div class="nav">
-        {{ toctree(maxdepth=3) }}
-      </div>
-    {%- endblock %}
+{# Set the title and sitename divider to '|' and hide 'no title' if the page has no title #}
+{% block htmltitle %}
+  {% if title == "&lt;no title&gt;" %}
+    <title>{{ docstitle|e }}</title>
+  {% else %}
+    <title>{{ title|striptags|e }} | {{ docstitle|e }}</title>
+  {% endif %}
 {% endblock %}
+
+{# Google Tag Manager injection #}
 
 {%- block footer %}
   </div> <!-- /.content-container -->
