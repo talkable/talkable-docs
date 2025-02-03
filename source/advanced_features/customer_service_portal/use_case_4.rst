@@ -54,4 +54,4 @@ flagged/blocked ones. We see that the blocked reason in this case is “Matching
 
 .. container:: hidden
 
-  .. toctree::
+   .. toctree::

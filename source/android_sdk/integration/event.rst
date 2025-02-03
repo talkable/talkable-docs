@@ -10,12 +10,12 @@ An Event has two required properties: event category and event number. Please re
 
 .. code-block:: java
 
-  String eventNumber = "ev123789"; //must be unique for given category
-  String eventCategory = "subscription_purchased";
+     String eventNumber = "ev123789"; //must be unique for given category
+     String eventCategory = "subscription_purchased";
 
-  Event event = new Event(eventNumber, eventCategory);
+     Event event = new Event(eventNumber, eventCategory);
 
-  TalkableApi.createOrigin(event, new Callback2<Origin, Offer>() {...});
+     TalkableApi.createOrigin(event, new Callback2<Origin, Offer>() {...});
 
 If you have a Talkable offer configured for this event, the Talkable campaign screen will be displayed as a result of calling the ``createOrigin`` method.
 
@@ -27,19 +27,19 @@ Customer data can be added to the registered event. Custom properties passed wit
 
 .. code-block:: java
 
-  String email = "advocate@example.com";
-  String firstName = "John";
-  String lastName = "Smith";
-  HashMap<String, String> customProperties = new HashMap<String, String>();
-  customProperties.put("property_key", "property_value");
-  Customer customer = new Customer(null, firstName, lastName, email, customProperties);
+     String email = "advocate@example.com";
+     String firstName = "John";
+     String lastName = "Smith";
+     HashMap<String, String> customProperties = new HashMap<String, String>();
+     customProperties.put("property_key", "property_value");
+     Customer customer = new Customer(null, firstName, lastName, email, customProperties);
 
-  String eventNumber = "ev123789";
-  String eventCategory = "subscription_purchased";
+     String eventNumber = "ev123789";
+     String eventCategory = "subscription_purchased";
 
-  Event event = new Event(eventNumber, eventCategory);
-  event.setCustomer(customer);
+     Event event = new Event(eventNumber, eventCategory);
+     event.setCustomer(customer);
 
-  TalkableApi.createOrigin(event, new Callback2<Origin, Offer>() {...});
+     TalkableApi.createOrigin(event, new Callback2<Origin, Offer>() {...});
 
 Please refer to the :ref:`Integrating Events <advanced_features/events>` page to learn more about event-based campaigns.

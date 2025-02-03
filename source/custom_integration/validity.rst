@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Integrate Validity with your Talkable system for additional email validation within campaigns.
+   :description: Integrate Validity with your Talkable system for additional email validation within campaigns.
 
 Validity
 ========
