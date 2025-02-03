@@ -110,7 +110,6 @@ Each action allows custom attributes to be included. You can see allowed interpo
 .. image:: /_static/img/email_marketing_and_automation/variables.png
    :alt: Variables
 
-
 Sync signups
 ............
 
