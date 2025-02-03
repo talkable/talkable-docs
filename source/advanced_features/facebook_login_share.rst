@@ -20,8 +20,8 @@ Prerequisites
 
 Before you begin, ensure you have the following:
 
-   - Access to the Facebook Developer Console.
-   - A Facebook App ID.
+- Access to the Facebook Developer Console.
+- A Facebook App ID.
 
 Integration Steps
 -----------------
@@ -59,8 +59,10 @@ Creating a Facebook App ID
    - Go to the App Dashboard.
    - Click on "Create App" and select the appropriate permissions for your app.
    - Add Valid OAuth Redirect URIs, including:
-      - `https://www.talkable.com`
-      - Your custom domain, if applicable.
+
+     - `https://www.talkable.com`
+     - Your custom domain, if applicable.
+   
    - Save and copy the generated App ID.
 
 Error Handling

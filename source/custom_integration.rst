@@ -4,10 +4,8 @@
 Custom Integration
 ##################
 
-Contents:
-
 .. toctree::
-
+   
    custom_integration/crowdtwist
    custom_integration/chatgpt
    custom_integration/validity

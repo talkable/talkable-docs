@@ -2,8 +2,8 @@
 # Used by the documentation maintainer
 # Add the package name here if you add some to the framework
 
-furo
 sphinx-copybutton
 sphinx-sitemap
 sphinx-autobuild
-sphinx-favicon
+sphinx-book-theme
+sphinx-design

@@ -7,10 +7,21 @@
 E-commerce Platforms
 ####################
 
-Contents:
+.. grid:: 1 2 2 2
 
-.. toctree::
-    ecommerce_platforms/bigcommerce
-    ecommerce_platforms/demandware
-    ecommerce_platforms/shopify
-    ecommerce_platforms/magento
+   .. grid-item::
+
+      .. toctree::
+         :maxdepth: 2 
+      
+         ecommerce_platforms/demandware
+         ecommerce_platforms/shopify
+    
+   .. grid-item::
+
+      .. toctree::
+         :maxdepth: 2 
+        
+         ecommerce_platforms/bigcommerce
+         ecommerce_platforms/magento
+         

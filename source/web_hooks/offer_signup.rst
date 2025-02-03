@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Advocate Signup Webhook notifies your endpoint of an Advocate signup forms submission.
+   :description: Advocate Signup Webhook notifies your endpoint of an Advocate signup forms submission.
 
 Advocate Signup Webhook
 =======================
@@ -19,7 +19,7 @@ Use cases for the Advocate Signup Webhook include:
 
 .. raw:: html
 
-  <h2>When does Talkable call the Advocate Signup Webhook?</h2>
+   <h2>When does Talkable call the Advocate Signup Webhook?</h2>
 
 Talkable Signup Webhook is triggered any time an Advocate Signup Form is
 submitted. The Advocate Signup Form is the standard Name & Email (with optional
@@ -29,11 +29,11 @@ and sharing an offer with Friends.
 Advocate Signup Form example:
 
 .. image:: /_static/img/advocate_signup_form_webhook.png
-  :alt: Advocate Signup Form,
-  :class: is-minimal
+   :alt: Advocate Signup Form,
+   :class: is-minimal
 
 .. raw:: html
 
-  <h2>Payload parameters provided for Advocate Signup Webhook</h2>
+   <h2>Payload parameters provided for Advocate Signup Webhook</h2>
 
 The sample payload with parameters for Advocate Signup Webhook is available here: `Advocate Signup Webhook Payload <https://www.talkable.com/api-docs/index.html?urls.primaryname=webhooks%20api&urls.primaryName=Webhooks#/Advocate%20Signup/post_your_api_advocate_signup_web_hook_path>`_.

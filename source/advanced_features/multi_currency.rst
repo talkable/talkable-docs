@@ -67,9 +67,9 @@ with the currency pre-selected:
 Currency can also be provided directly in any of the following function calls,
 overriding the `authenticate_customer` data:
 
-  - `register_affiliate`
-  - `register_purchase`
-  - `register_event`
+- `register_affiliate`
+- `register_purchase`
+- `register_event`
 
 For example:
 
@@ -143,7 +143,7 @@ discounts in their familiar currency, enhancing transparency and trust during in
 
 For example:
 
-* A fixed discount of **$10 USD** will display as **€9 EUR** if the conversion rate at the time of checkout is 1 USD = 0.9 EUR.
+   A fixed discount of **$10 USD** will display as **€9 EUR** if the conversion rate at the time of checkout is 1 USD = 0.9 EUR.
 
 Shopify performs this conversion dynamically based on the customer's selected currency, simplifying the shopping
 experience for international buyers. For more details, refer to Shopify's guide on
