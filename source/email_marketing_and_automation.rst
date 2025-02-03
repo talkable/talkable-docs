@@ -7,7 +7,7 @@
 Email Marketing & Automation
 ############################
 
-With these tools, Talkable synchronizes all people who opt-in for Talkable marketing communication during signup. This way you will keep all your emails in one place in an automated way.
+With these tools, Talkable synchronizes everyone who opts in for Talkable marketing communications during signup, allowing you to manage all your emails in one place automatically.
 
 .. raw:: html
 
