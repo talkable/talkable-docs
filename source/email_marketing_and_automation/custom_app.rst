@@ -37,7 +37,7 @@ Talkable generates the signature using a `Base64 <https://en.wikipedia.org/wiki/
 
 To verify the signature, you should complete the following steps:
 
-1. Prepare the `payload_json **string`
+1. Prepare the `payload_json` string
 
    Create a JSON string from the payload of the request.
 
