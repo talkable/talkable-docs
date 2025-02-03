@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Talkable can be white-labeled so that links and URLs will point to your domain. Nobody will know how you created your referral program.
+   :description: Talkable can be white-labeled so that links and URLs will point to your domain. Nobody will know how you created your referral program.
 
 White-labeling
 ==============
@@ -134,13 +134,13 @@ To avoid that, you either need to:
 
   .. code-block::
 
-    v=spf1 include:mailgun.org include:_spf.google.com include:mail.zendesk.com include:_spf.salesforce.com ~all
+     v=spf1 include:mailgun.org include:_spf.google.com include:mail.zendesk.com include:_spf.salesforce.com ~all
 
 .. container:: hidden
 
-  .. toctree::
+   .. toctree::
 
-     white_labeling/aws_route53
-     white_labeling/shopify
-     white_labeling/godaddy
-     white_labeling/cloudflare
+      white_labeling/aws_route53
+      white_labeling/shopify
+      white_labeling/godaddy
+      white_labeling/cloudflare

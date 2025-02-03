@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Integrate ChatGPT with your Talkable system to generate AI-driven text for various use cases like AD notes.
+   :description: Integrate ChatGPT with your Talkable system to generate AI-driven text for various use cases like AD notes.
 
 ChatGPT
 =======

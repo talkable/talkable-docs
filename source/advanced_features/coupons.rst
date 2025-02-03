@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: You can reward Advocate and their Friend with coupons. Talkable supports both one-time-use coupons as well as multi-use coupons.
+   :description: You can reward Advocate and their Friend with coupons. Talkable supports both one-time-use coupons as well as multi-use coupons.
 
 Coupons
 =======
@@ -35,7 +35,7 @@ There are several steps that need to be taken for this scenario:
 
 .. raw:: html
 
-  <h2>REST API to Create Coupons</h2>
+   <h2>REST API to Create Coupons</h2>
 
 Talkable can create coupons via a webhook using your REST API endpoint.
 Read :ref:`Create Coupon Webhook Documentation <web_hooks/create_coupon>` for implementation details.
@@ -47,7 +47,7 @@ Read :ref:`Shopify coupon auto-sync documentation <advanced_features/shopify_cou
 
 .. container:: hidden
 
-  .. toctree::
+   .. toctree::
 
 Requirements
 ------------
@@ -59,18 +59,18 @@ Only the following characters are allowed in a coupon code:
 
 .. code-block:: text
 
-  A-Z 0-9 - _ / . % : * + @ & #
+   A-Z 0-9 - _ / . % : * + @ & #
 
 .. note::
-  Spaces are forbidden.
+   Spaces are forbidden.
 
 Try to avoid ambiguous characters. This simple solution generates a string of easily readable characters for activation codes.
 We do not want people confusing 8 with B, 1 with I, 0 with O, L with 1, etc.
 
 .. code-block:: ruby
 
-  # Generates a random string from a set of easily readable characters
-  def generate_activation_code(size = 6)
-    charset = ["2", "3", "4", "6", "7", "9", "A", "C", "D", "E", "F", "G", "H", "J", "K", "M", "N", "P", "Q", "R", "T", "V", "W", "X", "Y", "Z"]
-    (0...size).map { charset[rand(charset.size)] }.join
-  end
+   # Generates a random string from a set of easily readable characters
+   def generate_activation_code(size = 6)
+     charset = ["2", "3", "4", "6", "7", "9", "A", "C", "D", "E", "F", "G", "H", "J", "K", "M", "N", "P", "Q", "R", "T", "V", "W", "X", "Y", "Z"]
+     (0...size).map { charset[rand(charset.size)] }.join
+   end

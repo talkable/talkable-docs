@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Event Webhook lets you know when a purchase was made.
+   :description: Event Webhook lets you know when a purchase was made.
 
 Event Webhook
 =============
@@ -19,7 +19,7 @@ Use cases for the Event Webhook include:
 
 .. raw:: html
 
-  <h2>When does Talkable call the Event Webhook?</h2>
+   <h2>When does Talkable call the Event Webhook?</h2>
 
 Talkable calls the Event Webhook any time an Event or a Purchase
 is registered either via :ref:`the front-end Talkable integration <advanced_features/events>`
@@ -27,11 +27,11 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
 
 .. raw:: html
 
-  <h2>Payload parameters provided</h2>
+   <h2>Payload parameters provided</h2>
 
 The sample payload with parameters for Event Webhook is available here: `Event Webhook Payload <https://www.talkable.com/api-docs/index.html?urls.primaryname=webhooks%20api&urls.primaryName=Webhooks#/Event/post_your_api_event_web_hook_path>`_.
 
 
 .. container:: hidden
 
-  .. toctree::
+   .. toctree::

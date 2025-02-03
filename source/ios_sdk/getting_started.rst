@@ -36,9 +36,9 @@ Alternatively, you can add Talkable SDK directly to a `Package.swift` manifest:
 
   .. code-block:: swift
 
-    dependencies: [
-        .package(url: "https://github.com/talkable/ios-sdk.git", .upToNextMajor(from: "1.5.1"))
-    ]
+      dependencies: [
+          .package(url: "https://github.com/talkable/ios-sdk.git", .upToNextMajor(from: "1.5.1"))
+      ]
 
 CocoaPods
 `````````

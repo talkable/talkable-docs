@@ -14,6 +14,6 @@ The SDK is installed and setup. Now you can integrate Standalone or/and Post Pur
 
    .. toctree::
 
-     Standalone Campaign <integration/standalone>
-     Post Purchase Campaign <integration/post_purchase>
-     Custom Events <integration/event>
+      Standalone Campaign <integration/standalone>
+      Post Purchase Campaign <integration/post_purchase>
+      Custom Events <integration/event>
