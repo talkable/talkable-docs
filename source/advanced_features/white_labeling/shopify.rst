@@ -1,14 +1,18 @@
 .. _advanced_features/white_labeling/shopify:
 
 .. meta::
-  :description: Learn how to add DNS records in Shopify to enable white-labeling.
+   :description: Learn how to add DNS records in Shopify to enable white-labeling.
 
 Adding DNS records in Shopify
 =============================
 
 .. note::
-  - The instructions below use `subdomain.example.com` as an example of a custom domain where `example.com` is your domain.
-  - This instruction applies to domains that are transferred to Shopify or registered there in the first place. Third-party domains connected to Shopify should be managed in respective domain registries.
+   The instructions below use `subdomain.example.com` as an example of a custom domain where `example.com` is your domain.
+
+.. note::
+   This instruction applies to domains that are transferred to Shopify
+   or registered there in the first place.
+   Third-party domains connected to Shopify should be managed in respective domain registries.
 
 For delegated setup,
 
