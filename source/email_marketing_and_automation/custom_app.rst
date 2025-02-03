@@ -244,13 +244,13 @@ This action automatically synchronizes all created referrals.
 
 .. code-block:: JSON
 
-  {
-    "site_id": "1",
-    "campaign_id": "142",
-    "referral_status": "in_progress",
-    "advocate_email": "advocate@example.com",
-    "friend_email": "friend@example.com"
-  }
+   {
+     "site_id": "1",
+     "campaign_id": "142",
+     "referral_status": "in_progress",
+     "advocate_email": "advocate@example.com",
+     "friend_email": "friend@example.com"
+   }
 
 Referral status change
 ......................
@@ -294,10 +294,10 @@ This action automatically synchronizes all loyalty actions performed by loyalty 
 
 .. code-block:: JSON
 
-  {
-    "site_id": "1",
-    "email": "loyalty@talkable.com"
-  }
+   {
+     "site_id": "1",
+     "email": "loyalty@talkable.com"
+   }
 
 Sync loyalty tier transitions
 .............................
@@ -308,10 +308,10 @@ This action automatically synchronizes all tier transitions of loyalty members w
 
 .. code-block:: JSON
 
-  {
-    "site_id": "1",
-    "email": "loyalty@talkable.com"
-  }
+   {
+     "site_id": "1",
+     "email": "loyalty@talkable.com"
+   }
 
 
 Testing
