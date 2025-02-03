@@ -146,7 +146,6 @@ Add the package to `requirements.txt`.
 Append the package name to `requirements.txt` (version specification is optional at this stage).
 
 > [!NOTE]
->
 > Version pinning can be done later.
 
 Rebuild the container after modifying `requirements.txt`:
@@ -160,5 +159,4 @@ docker compose up -d --build
 Most changes involve editing the [./source/conf.py](./source/conf.py) file or other files in the [./source/](./source/) directory.
 
 > [!NOTE]
->
 > Rebuilding the container is unnecessary for changes to [./source/conf.py](./source/conf.py) or [./source/](./source/). These changes are applied automatically within 1 second.
