@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Tracking referrals feature lets you track each referral.
+   :description: Tracking referrals feature lets you track each referral.
 
 Referral Tracking Methods
 #########################
@@ -25,7 +25,7 @@ The list of tracking methods by their priority:
 
 .. raw:: html
 
-  <h2>Manually Generated</h2>
+   <h2>Manually Generated</h2>
 
 - Only applies when the referral is made from Talkable admin pages.
 - Has the top priority because it forces the referral to be made without
@@ -33,14 +33,14 @@ The list of tracking methods by their priority:
 
 .. raw:: html
 
-  <h2>Force Manually Generated</h2>
+   <h2>Force Manually Generated</h2>
 
 - Only applies when the referral is made from Talkable admin pages.
 - This is a Manually Generated Referral with skipped all fraud policy rules and incentive criterias.
 
 .. raw:: html
 
-  <h2>Sticky Advocate</h2>
+   <h2>Sticky Advocate</h2>
 
 - Only available for sites that have this feature enabled in the site settings.
 - Designed for case where a single person can only be referred once, so that
@@ -54,7 +54,7 @@ The list of tracking methods by their priority:
 
 .. raw:: html
 
-  <h2>Coupon</h2>
+   <h2>Coupon</h2>
 
 - Friend used the coupon code he received through a Friend offer.
 - Only applies to campaigns that are giving a single use coupon as a reward to a
@@ -62,13 +62,13 @@ The list of tracking methods by their priority:
 
 .. raw:: html
 
-  <h2>Cookie</h2>
+   <h2>Cookie</h2>
 
 - Friend used the same browser session as when clicking the referral link.
 
 .. raw:: html
 
-  <h2>Web Cookie</h2>
+   <h2>Web Cookie</h2>
 
 - Only applies to the iOS/Android Mobile SDKs.
 - Friend used the same browser session as when clicking the referral link.
@@ -78,21 +78,21 @@ The list of tracking methods by their priority:
 
 .. raw:: html
 
-  <h2>Gated Email</h2>
+   <h2>Gated Email</h2>
 
 - Friend used the same email address as they entered on the claim page.
 - Only applies to campaigns that have Friend Signup feature enabled.
 
 .. raw:: html
 
-  <h2>Share Email</h2>
+   <h2>Share Email</h2>
 
 - Friend used the same email address in the Friend Share Email.
 - Only applies to offers shared by Email channel.
 
 .. raw:: html
 
-  <h2>IP Address</h2>
+   <h2>IP Address</h2>
 
 - Friend used the same IP address as when clicking the referral link.
 - Time limit: only applies when a Friend made a purchase or event within 1 hour
@@ -102,7 +102,7 @@ The list of tracking methods by their priority:
 
 .. raw:: html
 
-  <h2>Event Chain</h2>
+   <h2>Event Chain</h2>
 
 - Friend was already referred before and this is his subsequent event. In this
   case, this event is automatically attributed to the same Advocate as the

@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: With the Post Purchase placement, your Campaign will show up automatically as a popup once the customer made a successful purchase on your site.
+   :description: With the Post Purchase placement, your Campaign will show up automatically as a popup once the customer made a successful purchase on your site.
 
 Post Purchase Placement
 =======================
@@ -17,8 +17,8 @@ Flow
 ----
 
 .. image:: /_static/img/campaign_placements/pp.png
-  :alt: Talkable campaign flow — Post Purchase placement
-  :class: is-minimal
+   :alt: Talkable campaign flow — Post Purchase placement
+   :class: is-minimal
 
 Integration instructions
 ------------------------

@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Reward advocates with gift cards provided by Tremendous.
+   :description: Reward advocates with gift cards provided by Tremendous.
 
 Tremendous Integration
 ######################
@@ -21,18 +21,18 @@ Tremendous integration consists of several parts:
      - An Advocate Referral Incentive with "Tremendous" reward type
 
        .. image:: /_static/img/advanced_features/tremendous_incentive.png
-         :width: 400
-         :alt: Creating a Tremendous Advocate Referral incentive
+          :width: 400
+          :alt: Creating a Tremendous Advocate Referral incentive
 
      - A :ref:`"tremendous" Liquid filter<tremendous_filter>` used in Reward Paid Email Page.
        The filter generates a claim link within the specified Tremendous campaign.
 
        .. code-block:: html
 
-         <!-- An example of the claim link leading to Tremendous -->
-         <a href="{{ 'KBBYF5Q64BL4' | tremendous }}" target="_blank" title="{{ cta_text }}">
-           {{ cta_text }}
-         </a>
+          <!-- An example of the claim link leading to Tremendous -->
+          <a href="{{ 'KBBYF5Q64BL4' | tremendous }}" target="_blank" title="{{ cta_text }}">
+            {{ cta_text }}
+          </a>
 
 **Contact us**
 

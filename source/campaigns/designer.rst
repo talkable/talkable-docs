@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: That’s where the beauty of your referral campaign is.
+   :description: That’s where the beauty of your referral campaign is.
 
 Designer
 ========
@@ -13,7 +13,7 @@ Web view size
 Canvas size should be equal to a main container width of your site:
 
 .. image:: /_static/img/liquid/designer/image1.png
-  :alt: Page canvas size
+   :alt: Page canvas size
 
 For mobile screens most common width is 320px, but we also support fluid
 width with possibility to set it to 100% to support mobile devices and
@@ -26,7 +26,7 @@ cause it integrates right to the checkout page after user makes a
 purchase (most common size is 800x500px):
 
 .. image:: /_static/img/liquid/designer/image2.png
-  :alt: Advocate Signup/Share Page like a modal
+   :alt: Advocate Signup/Share Page like a modal
 
 .. note:: Overlay cannot be customized.
 
@@ -35,7 +35,7 @@ entirely. Commonly this view looks like a modal window with customer
 site loaded on the back:
 
 .. image:: /_static/img/liquid/designer/image3.png
-  :alt: Friend Claim Page
+   :alt: Friend Claim Page
 
 Most common modal size is 800x500px.
 
@@ -47,7 +47,7 @@ Email size
 Ideally email width is 480px for content:
 
 .. image:: /_static/img/liquid/designer/email-width.png
-  :alt: Email size
+   :alt: Email size
 
 Fonts
 -----
@@ -62,7 +62,7 @@ Also, for emails copy should be placed always on top of solid background
 color, not image:
 
 .. image:: /_static/img/liquid/designer/image5.png
-  :alt: Solid color VS image
+   :alt: Solid color VS image
 
 There are many options for embedding custom fonts, here are most popular
 and solid ones:
@@ -70,7 +70,7 @@ and solid ones:
 1. Purchase web-compatible font on https://www.myfonts.com
 
 .. image:: /_static/img/liquid/designer/image6.png
-  :alt: myfonts.com
+   :alt: myfonts.com
 
 2. Purchase on https://fonts.adobe.com
 

@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Two powerful instruments, Page-Views and Email-Views, let you control nearly every step of the refer-a-friend campaign. You won’t miss the moment of your success.
+   :description: Two powerful instruments, Page-Views and Email-Views, let you control nearly every step of the refer-a-friend campaign. You won’t miss the moment of your success.
 
 Views
 =====
@@ -12,7 +12,7 @@ step of the refer-a-friend campaign. Such page or email is called a View. You ca
 control appearance of each View by visiting Appearance:
 
 .. image:: /_static/img/campaign/subnav.png
-  :alt: Campaign Appearance
+   :alt: Campaign Appearance
 
 |br|
 |br|
@@ -47,11 +47,11 @@ After pre-validation Talkable campaign level validation kicks in:
 
 .. toctree::
 
-  views/offers_show
-  views/notifier_offers_email
-  views/notifier_offers_share_via_email
-  views/notifier_offers_share_via_email_reminder
-  views/offers_claim
-  views/advocate_rewards_confirmation
-  views/advocate_rewards_paid
-  views/friend_rewards_paid
+   views/offers_show
+   views/notifier_offers_email
+   views/notifier_offers_share_via_email
+   views/notifier_offers_share_via_email_reminder
+   views/offers_claim
+   views/advocate_rewards_confirmation
+   views/advocate_rewards_paid
+   views/friend_rewards_paid

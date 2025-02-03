@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Loyalty Dashboard Placement is a Placement for Loyalty Campaigns.
+   :description: Loyalty Dashboard Placement is a Placement for Loyalty Campaigns.
 
 Loyalty Dashboard Placement
 ===========================
@@ -10,7 +10,7 @@ Loyalty Dashboard Placement
 You can create Loyalty Campaigns and place them on a standalone page on your site. With the Loyalty Dashboard Placement your Campaign will show up on any particular page of your site following rules specified in the placement.
 
 .. note::
-  Customers need to be authenticated in order to view their Loyalty Dashboard. This means that `email` has to be present in the `authenticate_customer` call of the :ref:`Talkable Initialization Script <integration/loyalty/integration_components/initialization_script>`.
+   Customers need to be authenticated in order to view their Loyalty Dashboard. This means that `email` has to be present in the `authenticate_customer` call of the :ref:`Talkable Initialization Script <integration/loyalty/integration_components/initialization_script>`.
 
 It is a good practice to use `https://[your-site]/loyalty` URL for this new page and add a link accessible from any page that makes sense considering your website configuration. Most common uses are links in the user accounts section, or from the user accounts menu.
 

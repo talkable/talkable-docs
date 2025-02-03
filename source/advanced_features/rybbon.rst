@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Integrate Rybbon with your Talkable system to generate gift claim links and manage campaign-specific rewards.
+   :description: Integrate Rybbon with your Talkable system to generate gift claim links and manage campaign-specific rewards.
 
 Rybbon
 ======
@@ -13,7 +13,7 @@ Overview
 This documentation provides a guide on integrating the Rybbon campaign with your Talkable system. By enabling this feature, you can generate gift claim links for users and customize reward amounts based on campaign settings.
 
 .. note::
-  Rybbon app must be installed and enabled for this integration to work.
+   Rybbon app must be installed and enabled for this integration to work.
 
 Functionality
 -------------
@@ -29,7 +29,7 @@ Example Usage
 
    .. code-block:: liquid
 
-     {{ "a9a3472f4ea858758e0cd686de8408e2" | rybbon }}
+      {{ "a9a3472f4ea858758e0cd686de8408e2" | rybbon }}
 
    This returns a link similar to:
    `https://www.rybbon.net/redeem.php?claimcode=ee645de47765bdbede751c8c6f08a619`
@@ -40,7 +40,7 @@ Allows setting a custom reward amount for Rybbon campaigns with variable denomin
 
 .. code-block:: liquid
 
-  {{ "a9a3472f4ea858758e0cd686de8408e2" | rybbon: amount: 13.5 }}
+   {{ "a9a3472f4ea858758e0cd686de8408e2" | rybbon: amount: 13.5 }}
 
 Limitations
 -----------
