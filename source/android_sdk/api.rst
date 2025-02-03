@@ -39,10 +39,12 @@ You need to build `Origin` to create. There are three subclasses of this class. 
 Hierarchy
 .........
 
-* `Origin` (Abstract)
-    * `AffiliateMember`
-    * `Event`
-        * `Purchase`
+*   `Origin` (Abstract)
+    
+    *   `AffiliateMember`
+    *   `Event`
+    
+        *   `Purchase`
 
 Building Origin
 ...............

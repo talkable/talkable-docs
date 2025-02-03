@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Instant reward campaign lets you reward your brand Advocate immediately — right after a referral link to a Friend was sent.
+   :description: Instant reward campaign lets you reward your brand Advocate immediately — right after a referral link to a Friend was sent.
 
 Advocate Signup/Share Page
 --------------------------

@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: The custom properties variable allows you to transfer any custom data to Talkable as a collection of key-value pairs.
+   :description: The custom properties variable allows you to transfer any custom data to Talkable as a collection of key-value pairs.
 
 Pass Custom User Data
 =====================
@@ -17,7 +17,7 @@ across all Campaign Views.
 
 .. raw:: html
 
-  <h2>How to set</h2>
+   <h2>How to set</h2>
 
 **Initialization script**
 
@@ -57,29 +57,29 @@ The properties you add to the initialization script will be automatically passed
 
 .. note::
 
-  The values you pass in the ``custom_properties`` have to be JSON Key-Value pairs themselves,
-  meaning that complex nested data structures cannot be passed through.
-  Property names (e.g. ``eye_color``) can contain lowercase letters, numbers and ``_`` only and cannot begin with a number.
+    The values you pass in the ``custom_properties`` have to be JSON Key-Value pairs themselves,
+    meaning that complex nested data structures cannot be passed through.
+    Property names (e.g. ``eye_color``) can contain lowercase letters, numbers and ``_`` only and cannot begin with a number.
 
 .. raw:: html
 
-  <h2>How to use</h2>
+   <h2>How to use</h2>
 
 To access ``custom_properties`` in Talkable, use:
 
 .. code-block:: liquid
 
-  {{ advocate_custom_properties }}
-  {{ friend_custom_properties }}
-  {{ member_info.custom_properties }}
+   {{ advocate_custom_properties }}
+   {{ friend_custom_properties }}
+   {{ member_info.custom_properties }}
 
 Key-Value pairs can be referenced calling the desired data key, such as:
 
 .. code-block:: liquid
 
-  {{ advocate_custom_properties.eye_color }}
+   {{ advocate_custom_properties.eye_color }}
 
 .. note::
 
-  Any ``custom_properties`` data passed through is tied to the |advocate|, |friend|, or |loyalty_member|.
-  If Talkable receives a custom property that was previously defined for the user, the property gets overwritten with a new value.
+    Any ``custom_properties`` data passed through is tied to the |advocate|, |friend|, or |loyalty_member|.
+    If Talkable receives a custom property that was previously defined for the user, the property gets overwritten with a new value.

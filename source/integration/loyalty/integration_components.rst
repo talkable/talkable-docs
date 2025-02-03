@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Find the components of what Talkable is composed.
+   :description: Find the components of what Talkable is composed.
 
 Integration Components
 ======================
@@ -15,12 +15,13 @@ Talkable Loyalty is composed of the following components:
    that spans every page. All other integration components are dependent on the Init script.
 
    **Data Capture.** The Initialization Script should pass variables for logged in users:
-    - Email
-    - Phone Number
-    - First Name
-    - Last Name
-    - Custom Properties
-    - Customer ID
+    
+   - Email
+   - Phone Number
+   - First Name
+   - Last Name
+   - Custom Properties
+   - Customer ID
 
 2. :ref:`Talkable Container DIV`
 
@@ -43,19 +44,19 @@ script.
 
 .. code-block:: html
 
-  <!-- Begin Talkable integration code -->
-  <script async src="https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/<YOUR-TALKABLE-SITE-ID>.min.js"></script>
-  <script>
-    window._talkableq = window._talkableq || [];
-    window._talkableq.unshift(['init', { site_id: '<YOUR-TALKABLE-SITE-ID>' }]);
+   <!-- Begin Talkable integration code -->
+   <script async src="https://d2jjzw81hqbuqv.cloudfront.net/integration/clients/<YOUR-TALKABLE-SITE-ID>.min.js"></script>
+   <script>
+     window._talkableq = window._talkableq || [];
+     window._talkableq.unshift(['init', { site_id: '<YOUR-TALKABLE-SITE-ID>' }]);
 
-    window._talkableq.push(['authenticate_customer', {
-      email: '', // required, loyalty program is only available to logged in users. Example: 'customer@example.com'
-      phone_number: '' // Optional, pass when available. Example: '+12025551111'
-      customer_id: '11111' // Optional, Customer ID inside your system
-    }]);
-  </script>
-  <!-- End Talkable integration code -->
+     window._talkableq.push(['authenticate_customer', {
+       email: '', // required, loyalty program is only available to logged in users. Example: 'customer@example.com'
+       phone_number: '' // Optional, pass when available. Example: '+12025551111'
+       customer_id: '11111' // Optional, Customer ID inside your system
+     }]);
+   </script>
+   <!-- End Talkable integration code -->
 
 Initialization Script Notes
 ---------------------------
@@ -65,7 +66,7 @@ Initialization Script Notes
    here:
 
    .. figure:: /_static/img/site_id.png
-     :alt: Site ID
+      :alt: Site ID
 
 2. **Variables.** Use your dynamic variables to pass user details.
 
@@ -80,13 +81,13 @@ Add the following Talkable Container DIV in the body of every page where you wan
 
 .. code-block:: html
 
-  <div id="talkable-loyalty"></div>
+   <div id="talkable-loyalty"></div>
 
 The `Talkable Initialization Script <Initialization Script_>`_ must be present in your head template in order for the Loyalty Dashboard to work. The placement of the DIV tag is important since it's going to determine where the campaign will be rendered.
 
 .. note::
-  The same DIV tag is used for both Loyalty Dashboard and Loyalty Redeem Widget.
-  You can find more info about where to place the DIV tag in :ref:`Loyalty Dashboard Placement <campaigns/campaign_placements/loyalty_dashboard>` and :ref:`Loyalty Widget Placement <campaigns/campaign_placements/loyalty_widget>`.
+   The same DIV tag is used for both Loyalty Dashboard and Loyalty Redeem Widget.
+   You can find more info about where to place the DIV tag in :ref:`Loyalty Dashboard Placement <campaigns/campaign_placements/loyalty_dashboard>` and :ref:`Loyalty Widget Placement <campaigns/campaign_placements/loyalty_widget>`.
 
 Loyalty Dashboard Notes
 -----------------------
@@ -110,12 +111,12 @@ use the following code:
 
 .. code-block:: html
 
-  <script>
-    window._talkableq.push(['register_loyalty_action', {
-      rule_identifier: '', // required, can be found in Campaign Rules -> Loyalty action configurations -> "identifier" field
-      traffic_source: '' // optional
-    }]);
-  </script>
+   <script>
+     window._talkableq.push(['register_loyalty_action', {
+       rule_identifier: '', // required, can be found in Campaign Rules -> Loyalty action configurations -> "identifier" field
+       traffic_source: '' // optional
+     }]);
+   </script>
 
 Loyalty Actions Notes
 ---------------------

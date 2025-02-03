@@ -2,17 +2,17 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: The Magento 2 Integration Extension is available to download in the Magento Marketplace. The extension supports all versions of Magento 2.0 or higher.
+   :description: The Magento 2 Integration Extension is available to download in the Magento Marketplace. The extension supports all versions of Magento 2.0 or higher.
 
 Magento 2.x Integration
 =======================
 
 .. note::
 
-  To get started, you must have an account created with Talkable, and a Magento Marketplace account.
-  If you do not have a Magento Marketplace account configured, follow
-  `these steps <https://docs.magento.com/user-guide/magento/magento-marketplace.html#marketplace-credentials>`_
-  to connect one to your Magento store.
+   To get started, you must have an account created with Talkable, and a Magento Marketplace account.
+   If you do not have a Magento Marketplace account configured, follow
+   `these steps <https://docs.magento.com/user-guide/magento/magento-marketplace.html#marketplace-credentials>`_
+   to connect one to your Magento store.
 
 The `Magento 2 Integration Extension`_ is available to download in the Magento Marketplace.
 The extension supports all versions of Magento 2.0 or higher.
@@ -24,8 +24,8 @@ Installation
 
 .. note::
 
-  Installation via Composer requires an IT administrator with SSH access to the server where Magento 2 is hosted.
-  To install the Talkable extension, you’ll need to execute four commands.
+   Installation via Composer requires an IT administrator with SSH access to the server where Magento 2 is hosted.
+   To install the Talkable extension, you’ll need to execute four commands.
 
 1. Visit the Magento Marketplace and get the `Talkable extension`_.
 
@@ -36,40 +36,38 @@ Installation
 
 3. Run the following command to access the latest version of the Talkable extension.
     
-.. code-block:: bash
+   .. code-block:: bash
 
-  composer require talkable/magento2-integration
+      composer require talkable/magento2-integration
 
 4. Run the following command to enable the Talkable extension you just downloaded:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-  php bin/magento module:enable Talkable_Integration --clear-static-content
+      php bin/magento module:enable Talkable_Integration --clear-static-content
 
-You should see the following output:
-  
-.. code-block::
+   You should see the following output:
 
-  The following modules have been enabled:
-  - Talkable_Integration
+      The following modules have been enabled:
+      - Talkable_Integration
 
-  To make sure that the enabled modules are properly registered, run 'setup:upgrade'.
-  Cache cleared successfully.
-  Generated classes cleared successfully.
-  Please run the 'setup:di:compile' command to generate classes.
-  Generated static view files cleared successfully.
+      To make sure that the enabled modules are properly registered, run 'setup:upgrade'.
+      Cache cleared successfully.
+      Generated classes cleared successfully.
+      Please run the 'setup:di:compile' command to generate classes.
+      Generated static view files cleared successfully.
 
 5. As displayed in the sample output, you must now enable any additional modules. Run the following command to enable them:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-  php bin/magento setup:upgrade
+      php bin/magento setup:upgrade
 
 6. To ensure that the CSS and JS on your Magento 2 store continues to work properly, you’ll need to run a static content deploy command.
 
-.. code-block:: bash
+   .. code-block:: bash
 
-  php bin/magento setup:static-content:deploy -f
+      php bin/magento setup:static-content:deploy -f
 
 7. Installation via Composer is complete! You can now return to the Magento admin dashboard from your browser.
 
@@ -81,12 +79,12 @@ Accessing Talkable Configuration
 1. To access Talkable extension settings, navigate to **Stores** → **Configuration** in
    your Magento admin panel.
 
-.. image:: /_static/img/magento2/access1.jpg
+   .. image:: /_static/img/magento2/access1.jpg
 
 2. Then select **Talkable** → **Talkable Configuration** from the list of available configurations.
    If you have multiple stores, select the desired Store View you want to change the settings for.
 
-.. image:: /_static/img/magento2/access2.jpg
+   .. image:: /_static/img/magento2/access2.jpg
 
 |page_break|
 
@@ -109,19 +107,19 @@ to your Talkable account.
 
 .. warning::
 
-  Only change this setting if you need to connect your store to a different site in the Talkable dashboard.
-  An incorrect value will prevent your campaigns from showing.
+   Only change this setting if you need to connect your store to a different site in the Talkable dashboard.
+   An incorrect value will prevent your campaigns from showing.
 
-  Changing the Site ID will invalidate the full page cache. Magento will display a warning message with
-  a link to the Cache Management page. Please follow this link and refresh the invalidated cache types.
+   Changing the Site ID will invalidate the full page cache. Magento will display a warning message with
+   a link to the Cache Management page. Please follow this link and refresh the invalidated cache types.
 
-.. image:: /_static/img/magento2/cache.jpg
+   .. image:: /_static/img/magento2/cache.jpg
 
 .. note::
 
-  You need to paste the Site ID from your Talkable Site Dashboard into this field.
+   You need to paste the Site ID from your Talkable Site Dashboard into this field.
 
-.. image:: /_static/img/magento2/configure3.jpg
+   .. image:: /_static/img/magento2/configure3.jpg
 
 |page_break|
 
@@ -147,8 +145,8 @@ Default values correspond to default placements in Talkable.
 
 .. warning::
 
-  Only change these settings if you have configured custom placements for these campaign types
-  in your Talkable dashboard. Incorrect values will prevent your Standalone or Dashboard campaign from showing.
+   Only change these settings if you have configured custom placements for these campaign types
+   in your Talkable dashboard. Incorrect values will prevent your Standalone or Dashboard campaign from showing.
 
 .. image:: /_static/img/magento2/configure6.jpg
 

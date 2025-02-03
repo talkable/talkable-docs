@@ -48,3 +48,4 @@ Let’s also expand fraud filters section to check the details:
 
 This looks like a valid referral. Let’s move on to
 :ref:`Use case #2 <advanced_features/customer_service_portal/use_case_2>`.
+

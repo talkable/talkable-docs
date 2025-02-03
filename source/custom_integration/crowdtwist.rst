@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Integrate store credit rewards using CrowdTwist API with Talkable.
+   :description: Integrate store credit rewards using CrowdTwist API with Talkable.
 
 CrowdTwist
 ==========

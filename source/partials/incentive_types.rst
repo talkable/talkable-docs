@@ -1,6 +1,6 @@
 .. raw:: html
 
-  <h2>Incentive types</h2>
+   <h2>Incentive types</h2>
 
 Incentives can be of 3 following general types.
 
