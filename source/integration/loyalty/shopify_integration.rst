@@ -30,6 +30,7 @@ Manual integration
 6.  In your Shopify Admin create resources for loyalty dashboard page:
 
     1.  Create a loyalty dashboard page section:
+    
         * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Sections**
         * Click “Add a new section“
         * Create a new Liquid section called `talkable-loyalty-dashboard.liquid`
