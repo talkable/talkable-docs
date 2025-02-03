@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Synchronize emails and customer fields collected with Talkable to Cheetah for email marketing and automation.
+   :description: Synchronize emails and customer fields collected with Talkable to Cheetah for email marketing and automation.
 
 Cheetah
 =======

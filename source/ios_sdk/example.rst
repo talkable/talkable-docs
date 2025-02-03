@@ -12,4 +12,4 @@ If you have any questions, don’t hesitate to email us at support@talkable.com.
 
 .. container:: hidden
 
-  .. toctree::
+   .. toctree::

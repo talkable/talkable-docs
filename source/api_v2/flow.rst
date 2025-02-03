@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: This flow helps to integrate with Talkable via API for a default store or service.
+   :description: This flow helps to integrate with Talkable via API for a default store or service.
 
 Referral Program via API
 ========================
@@ -19,7 +19,7 @@ Each of these steps can be done individually or all together to achieve API inte
 
 .. note::
 
-  Offers created via API are not marked as shown and thus are not counted towards advocate impressions.
+   Offers created via API are not marked as shown and thus are not counted towards advocate impressions.
 
 Initial Origin
 --------------

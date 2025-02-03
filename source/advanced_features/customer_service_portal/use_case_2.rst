@@ -62,4 +62,4 @@ Here is what email statuses mean:
 
 .. container:: hidden
 
-  .. toctree::
+   .. toctree::

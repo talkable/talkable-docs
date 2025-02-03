@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Talkable supports working with multiple currencies within the same site.
+   :description: Talkable supports working with multiple currencies within the same site.
 
 Multi-currency
 ==============
@@ -15,8 +15,9 @@ rewards based on the preferred currency. Every purchase and/or event should have
 The dashboard and reports can be filtered by currencies, and the values can be converted to a currency of your choice.
 
 .. note::
-  Please contact your Customer Success Manager to enable multi-currency. Note that in this mode,
-  the integration should pass currency data with every purchase.
+
+   Please contact your Customer Success Manager to enable multi-currency. Note that in this mode,
+   the integration should pass currency data with every purchase.
 
 Passing currency with the purchase or event
 -------------------------------------------
@@ -58,34 +59,35 @@ with the currency pre-selected:
 
 .. code-block:: javascript
 
-  _talkableq.push(['authenticate_customer', {
-    email: '',
-    currency: 'AUD' // Currency should be an international 3-letter code as defined by the ISO 4217 standard
-  }]);
+   _talkableq.push(['authenticate_customer', {
+     email: '',
+     currency: 'AUD' // Currency should be an international 3-letter code as defined by the ISO 4217 standard
+   }]);
 
 Currency can also be provided directly in any of the following function calls,
 overriding the `authenticate_customer` data:
 
-- `register_affiliate`
-- `register_purchase`
-- `register_event`
+  - `register_affiliate`
+  - `register_purchase`
+  - `register_event`
 
 For example:
 
 .. code-block:: javascript
 
-  var _purchase_data = {
-    purchase: {
-      order_number: '',
-      subtotal: '',
-      currency_iso_code: 'AUD' // currency of the purchase
-    },
-    currency: 'AUD', // preferred currency of the person, used to show suitable incentive information in the campaign
-  };
-  _talkableq.push(['register_purchase', _purchase_data]);
+   var _purchase_data = {
+     purchase: {
+       order_number: '',
+       subtotal: '',
+       currency_iso_code: 'AUD' // currency of the purchase
+     },
+     currency: 'AUD', // preferred currency of the person, used to show suitable incentive information in the campaign
+   };
+   _talkableq.push(['register_purchase', _purchase_data]);
 
 .. note::
-  Passing `currency` is available in integration version 5.2.1 or higher.
+
+   Passing `currency` is available in integration version 5.2.1 or higher.
 
 Currencies on dashboard
 -----------------------
@@ -98,9 +100,10 @@ Dashboard tiles have two helpful configuration options for multi-currency setup:
 .. image:: /_static/img/advanced_features/multi_currency_dashboard_tile.png
 
 .. note::
-  Conversion rate for a specific currency is actualized daily (data taken from
-  `open exchange rates <https://openexchangerates.org>`_) and cached for the accuracy of historical data.
-  So a purchase amount is converted according to its creation date's conversion rate.
+
+   Conversion rate for a specific currency is actualized daily (data taken from
+   `open exchange rates <https://openexchangerates.org>`_) and cached for the accuracy of historical data.
+   So a purchase amount is converted according to its creation date's conversion rate.
 
 Currencies in reports
 ---------------------
@@ -117,7 +120,8 @@ Available options in **Metrics Aggregation Report**:
   :width: 300
 
 .. note::
-  If a currency to convert to is not specified, the site currency is used for conversion.
+
+   If a currency to convert to is not specified, the site currency is used for conversion.
 
 Available options in **Purchases** and **Events** reports:
 
@@ -125,9 +129,10 @@ Available options in **Purchases** and **Events** reports:
 * select a currency to convert the amounts to
 
 .. note::
-  The options list in the currency filter consists of all the currencies passed to Talkable
-  along with the purchases/events. If you can't find a currency in the list, it means Talkable never received
-  a purchase/event with such currency.
+
+   The options list in the currency filter consists of all the currencies passed to Talkable
+   along with the purchases/events. If you can't find a currency in the list, it means Talkable never received
+   a purchase/event with such currency.
 
 Shopify discounts
 -----------------
@@ -155,4 +160,4 @@ This adjustment process minimizes manual updates for merchants and prevents disc
 
 .. note::
 
-  Our product uses **own exchange rates**, which are updated automatically every 24 hours
+    Our product uses **own exchange rates**, which are updated automatically every 24 hours
