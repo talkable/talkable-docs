@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Talkable fully supports the SAML v2.0 standard, making it easy to add more security and convenience to your Talkable program.
+   :description: Talkable fully supports the SAML v2.0 standard, making it easy to add more security and convenience to your Talkable program.
 
 Single Sign-On (SSO)
 ====================
@@ -25,19 +25,19 @@ Here is some basic terminology to help you in this guide:
 
 .. container:: ptable
 
-  ======================== =========================================================================================
-  Parameter                Description
-  ======================== =========================================================================================
-  Identity Provider (IdP)  The software/service that verifies the identity of your users. For example, Okta, OneLogin,
-                           Active Directory, etc.
-  Service Provider (SP)    Talkable.
-  Metadata URL             URL for the provider’s metadata. Both the IdP and the SP should have a Metadata URL.
-  Issuer (Entity ID)       A unique string that identifies the provider issuing a SAML request. According to the SAML
-                           specification, the string should be a URL, though not all providers respect this.
-                           Not required by all providers.
-  Consumer URL             The Talkable (SP) URL that will receive SAML requests from your IdP.
-  IdP SSO Target URL       The IdP URL that will receive SAML requests from Talkable (the SP).
-  ======================== =========================================================================================
+   ======================== =========================================================================================
+   Parameter                Description
+   ======================== =========================================================================================
+   Identity Provider (IdP)  The software/service that verifies the identity of your users. For example, Okta, OneLogin,
+                            Active Directory, etc.
+   Service Provider (SP)    Talkable.
+   Metadata URL             URL for the provider’s metadata. Both the IdP and the SP should have a Metadata URL.
+   Issuer (Entity ID)       A unique string that identifies the provider issuing a SAML request. According to the SAML
+                            specification, the string should be a URL, though not all providers respect this.
+                            Not required by all providers.
+   Consumer URL             The Talkable (SP) URL that will receive SAML requests from your IdP.
+   IdP SSO Target URL       The IdP URL that will receive SAML requests from Talkable (the SP).
+   ======================== =========================================================================================
 
 Automatic Configuration
 -----------------------
@@ -60,16 +60,17 @@ If automatic configuration is not supported by your IdP, then try manual configu
 Manual Configuration
 --------------------
 
-Uncheck the box for “Automatically Configure from Metadata”.
+1. Uncheck the box for “Automatically Configure from Metadata”.
 
-Fill in the following fields:
+2. Fill in the following fields:
 
-  * IdP Issuer (Entity ID)
-  * IdP SSO Target URL
-  * X.509 Certificate OR Certificate Fingerprint
-    (Talkable will automatically generate the fingerprint if the full X.509 certificate is provided)
+   * IdP Issuer (Entity ID)
+   * IdP SSO Target URL
+   * X.509 Certificate OR Certificate Fingerprint
+     |br|
+     (Talkable will automatically generate the fingerprint if the full X.509 certificate is provided)
 
-Save the settings.
+3. Save the settings.
 
 Testing Single Sign-On
 ----------------------
@@ -78,7 +79,7 @@ Once you've configured SSO, you can test it as followed:
 
 .. raw:: html
 
-  <h4>IdP-initiated SSO</h4>
+   <h4>IdP-initiated SSO</h4>
 
 1. Log out of Talkable
 2. Log in to your IdP (e.g. Okta, OneLogin, etc.)
@@ -86,13 +87,10 @@ Once you've configured SSO, you can test it as followed:
 
 .. raw:: html
 
-  <h4>SP-initiated SSO</h4>
+   <h4>SP-initiated SSO</h4>
 
 1. Log out of Talkable
 2. Visit the SP-Initiated SSO URL (provided on the SSO configuration page in Talkable)
 
    .. image:: /_static/img/advanced_features/sso_sp_initiated_url.png
 
-.. container:: hidden
-
-  .. toctree::

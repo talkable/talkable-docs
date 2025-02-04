@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Talkable has an Android framework enabling you to use Talkable in Android apps.
+   :description: Talkable has an Android framework enabling you to use Talkable in Android apps.
 
 Talkable Android SDK
 ####################
@@ -21,14 +21,31 @@ can use the following Talkable capabilities:
 
 - Track sales via the App and reward Advocate if a sale was driven through someone’s claim link
 
-Contents:
+.. raw:: html
 
-.. toctree::
+   <h2 class="mts">Contents:</h2>
 
-  android_sdk/getting_started
-  android_sdk/integration
-  android_sdk/advanced
-  android_sdk/api
-  android_sdk/custom_deep_linking
-  android_sdk/testing
-  android_sdk/upgrade
+.. grid:: 1 2 2 2
+
+   .. grid-item::
+
+      .. toctree::
+         :maxdepth: 2 
+      
+         android_sdk/getting_started
+         android_sdk/integration
+         android_sdk/advanced
+    
+   .. grid-item::
+
+      .. toctree::
+         :maxdepth: 2 
+        
+         android_sdk/api
+         android_sdk/custom_deep_linking
+         android_sdk/testing
+      
+      .. toctree::
+         :maxdepth: 1
+
+         android_sdk/upgrade

@@ -65,7 +65,3 @@ flow and show the :ref:`Advocate Share Form <campaigns/views/offers_show>`.
       }
   });
   ...
-
-.. container:: hidden
-
-  .. toctree::

@@ -12,8 +12,8 @@ The SDK is installed and configured. Now you can integrate Standalone and/or Pos
 
 .. container:: hidden
 
-  .. toctree::
+   .. toctree::
 
-    Standalone Campaign <integration/standalone>
-    Post Purchase Campaign <integration/post_purchase>
-    Custom Events <integration/event>
+      Standalone Campaign <integration/standalone>
+      Post Purchase Campaign <integration/post_purchase>
+      Custom Events <integration/event>

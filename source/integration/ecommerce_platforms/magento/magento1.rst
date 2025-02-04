@@ -2,17 +2,17 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: A Magento Talkable extension is available for easy integration. The extension supports Magento versions 1.5+
+   :description: A Magento Talkable extension is available for easy integration. The extension supports Magento versions 1.5+
 
 Magento 1.x Integration
 =======================
 .. warning::
 
-  Magento 1 is not supported from July 1st, 2020.
+   Magento 1 is not supported from July 1st, 2020.
 
 .. note::
 
-  You must have Talkable account in order to get started
+   You must have Talkable account in order to get started
 
 A `Magento Talkable extension`_ is available for easy
 integration. The extension currently supports Magento versions 1.5+
@@ -50,12 +50,12 @@ integration. The extension currently supports Magento versions 1.5+
 
 .. raw:: html
 
-  <h2>Troubleshooting</h2>
+   <h2>Troubleshooting</h2>
 
 In case you cannot find Talkable extension in the sidebar try clearing cache:
 
-   * In Admin Panel, go to **System** → **Cache Management**.
-   * Click **Flush Magento Cache**.
-   * Then click **Select All**, select action *"Refresh"* and click **Submit**.
+* In Admin Panel, go to **System** → **Cache Management**.
+* Click **Flush Magento Cache**.
+* Then click **Select All**, select action *"Refresh"* and click **Submit**.
 
 .. _Magento Talkable extension: https://github.com/talkable/talkable-magento/releases/latest

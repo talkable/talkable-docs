@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Sometimes you need only one email to remind a Friend about your offer — just check on the checkbox on the Advocate Signup/Share Page.
+   :description: Sometimes you need only one email to remind a Friend about your offer — just check on the checkbox on the Advocate Signup/Share Page.
 
 .. _friend_share_email_reminder_view:
 
@@ -21,18 +21,18 @@ particular email.
 |br|
 
 .. image:: /_static/img/basics/friend-share-email-reminder.png
-  :alt: Friend Share Email Reminder
+   :alt: Friend Share Email Reminder
 
 .. include:: /partials/developer_email_note.rst
 
 .. raw:: html
 
-  <h2>Email sending conditions</h2>
+   <h2>Email sending conditions</h2>
 
 By default the email is sent in 72 hours after the offer is shared.
 
-1. Main email sending criteria (unable to change):
+Main email sending criteria (unable to change):
 
-  - If |friend| offer is active
-  - Recipient (|friend|) was not referred by this offer yet
-  - Current offer is the last one shared with the recipient (if were delayed few reminders Talkable sends the last one)
+-  If |friend| offer is active
+-  Recipient (|friend|) was not referred by this offer yet
+-  Current offer is the last one shared with the recipient (if were delayed few reminders Talkable sends the last one)

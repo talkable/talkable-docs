@@ -2,14 +2,14 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Learn all the ins and outs of integration. It’s easier than it seems.
+   :description: Learn all the ins and outs of integration. It’s easier than it seems.
 
 Standard Integration
 ####################
 
 .. raw:: html
 
-  <h2 class="mts">Integration High Level Overview</h2>
+   <h2 class="mts">Integration High Level Overview</h2>
 
 1. Add the :ref:`Talkable Initialization Script <integration/custom/integration_components/initialization_script>`
    to your header or any template spanning every page.
@@ -34,14 +34,30 @@ Standard Integration
 
   .. toctree::
 
-    custom/overview
+     custom/overview
 
-Contents:
 
-.. toctree::
+.. raw:: html
 
-  custom/integration_components
-  custom/validating_integration
-  verify
-  custom/cookies
-  custom/questions
+   <h2 class="mts">Contents:</h2>
+
+.. grid:: 1 2 2 2
+
+   .. grid-item::
+
+      .. toctree::
+         :maxdepth: 2 
+      
+         custom/integration_components
+         verify
+    
+   .. grid-item::
+
+      .. toctree::
+         :maxdepth: 2 
+        
+         custom/validating_integration
+         custom/cookies
+         custom/questions   
+   
+   

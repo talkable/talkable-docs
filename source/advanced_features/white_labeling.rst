@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Talkable can be white-labeled so that links and URLs will point to your domain. Nobody will know how you created your referral program.
+   :description: Talkable can be white-labeled so that links and URLs will point to your domain. Nobody will know how you created your referral program.
 
 White-labeling
 ==============
@@ -45,7 +45,7 @@ Custom Email and Web domains can be configured in **Site Settings** → **Custom
    Click "Check DNS status" on Talkable custom domain settings to see the updated status of your domain
    (it could take up to 24 hours for the records to propagate).
 
-.. image:: /_static/img/advanced_features/custom_domain_missing_records.png
+   .. image:: /_static/img/advanced_features/custom_domain_missing_records.png
 
 .. _delegated-vs-self-managed:
 
@@ -134,13 +134,13 @@ To avoid that, you either need to:
 
   .. code-block::
 
-    v=spf1 include:mailgun.org include:_spf.google.com include:mail.zendesk.com include:_spf.salesforce.com ~all
+     v=spf1 include:mailgun.org include:_spf.google.com include:mail.zendesk.com include:_spf.salesforce.com ~all
 
 .. container:: hidden
 
-  .. toctree::
+   .. toctree::
 
-     white_labeling/aws_route53
-     white_labeling/shopify
-     white_labeling/godaddy
-     white_labeling/cloudflare
+      white_labeling/aws_route53
+      white_labeling/shopify
+      white_labeling/godaddy
+      white_labeling/cloudflare

@@ -6,10 +6,12 @@ executors:
       - auth:
           username: $DOCKERHUB_USERNAME
           password: $DOCKERHUB_ACCESS_TOKEN
-        image: cimg/python:3.12
+        image: cimg/python:3.13
+        environment:
+          ENVIRONMENT: production
 
 orbs:
-  python: circleci/python@2.1.1
+  python: circleci/python@3.0.0
 
 jobs:
   build:
@@ -18,12 +20,11 @@ jobs:
     steps:
       - checkout
 
-      - python/install-packages:
-          app-dir: ~/project
+      - python/install-packages
 
       - run:
           name: Build documentation
-          command: sphinx-build -nW -b html -d build/doctrees source build/html
+          command: sphinx-build -nW -b dirhtml -d build/doctrees source build/html
 
 workflows:
   workflow:
@@ -31,8 +32,3 @@ workflows:
       - build:
           context:
             - org-global
-          filters:
-            branches:
-              ignore:
-                - gh-pages
-                - /.*-gh-pages/

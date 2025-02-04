@@ -52,6 +52,3 @@ flagged/blocked ones. We see that the blocked reason in this case is “Matching
 
 .. image:: /_static/img/advanced_features/customer_service_portal/marked_as_fraud.jpg
 
-.. container:: hidden
-
-  .. toctree::

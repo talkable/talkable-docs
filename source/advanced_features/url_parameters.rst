@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Talkable allows overriding some of the parameters right through URL query string.
+   :description: Talkable allows overriding some of the parameters right through URL query string.
 
 Using URL Parameters
 ====================
@@ -20,15 +20,11 @@ the page where Talkable campaign is integrated: http://example.com/share:
 
 .. code-block:: html
 
-  http://example.com/share?email=advocate%40example.com
+   http://example.com/share?email=advocate%40example.com
 
 Location parameters have higher priority than explicit parameters passed in the
 integration.
 
 .. note::
 
-  Don’t forget to escape URL parameters with URI parameter encoder.
-
-.. container:: hidden
-
-  .. toctree::
+   Don’t forget to escape URL parameters with URI parameter encoder.

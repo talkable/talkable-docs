@@ -27,13 +27,13 @@ showFacebookShareDialogWithParams:delegate:
 
 .. code-block:: objc
 
-  - (void)showFacebookShareDialogWithParams:(NSDictionary*)params delegate:(id)delegate;
+   - (void)showFacebookShareDialogWithParams:(NSDictionary*)params delegate:(id)delegate;
 
 This method is called when the user clicks on the 'Facebook Share' button.
 The ``params`` dictionary contains information on the content being shared and will have the following keys:
-
-   * ``TKBLOfferClaimUrlKey`` - the link URL to share
-   * ``TKBLShareMessage`` - the message to share
+  
+-  ``TKBLOfferClaimUrlKey`` - the link URL to share
+-  ``TKBLShareMessage`` - the message to share
 
 The ``delegate`` param is a delegate object that conforms to Facebook iOS SDK ``SharingDelegate`` protocol.
 Pass this object as a ``delegate:`` param when sharing the link using FBSDK to automatically notify the Talkable SDK
@@ -45,13 +45,13 @@ Example
 
 .. code-block:: objc
 
-  - (void)showFacebookShareDialogWithParams:(NSDictionary *)params delegate:(id)delegate {
-       FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
-       content.contentURL = [NSURL URLWithString:[params objectForKey:TKBLOfferClaimUrlKey]];
-       [FBSDKShareDialog showFromViewController:self
-                                    withContent:content
-                                       delegate:delegate];
-   }
+   - (void)showFacebookShareDialogWithParams:(NSDictionary *)params delegate:(id)delegate {
+        FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
+        content.contentURL = [NSURL URLWithString:[params objectForKey:TKBLOfferClaimUrlKey]];
+        [FBSDKShareDialog showFromViewController:self
+                                     withContent:content
+                                        delegate:delegate];
+    }
 
 
 showFacebookShareDialogWithParams:completionHandler:
@@ -59,7 +59,7 @@ showFacebookShareDialogWithParams:completionHandler:
 
 .. code-block:: objc
 
-  - (void)showFacebookShareDialogWithParams:(NSDictionary*)params completion:(void (^)())completionHandler;
+   - (void)showFacebookShareDialogWithParams:(NSDictionary*)params completion:(void (^)())completionHandler;
 
 This method is also called when the user clicks on the 'Facebook Share' button, but instead of ``delegate`` param it
 provides the ``completionHandler`` block that should be called when sharing is completed successfully. Use
@@ -72,28 +72,28 @@ Example
 
 .. code-block:: objc
 
-  - (void)showFacebookShareDialogWithParams:(NSDictionary *)params completion:(void (^)())completionHandler {
-      MyFBSDKDelegateClass* delegate = [self myFBSDKDelegate];
-      delegate.talkableCompletionHandler = completionHandler;
-      FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
-      content.contentURL = [NSURL URLWithString:[params objectForKey:TKBLOfferClaimUrlKey]];
-      [FBSDKShareDialog showFromViewController:self
-                                   withContent:content
-                                      delegate:delegate];
-  }
+   - (void)showFacebookShareDialogWithParams:(NSDictionary *)params completion:(void (^)())completionHandler {
+       MyFBSDKDelegateClass* delegate = [self myFBSDKDelegate];
+       delegate.talkableCompletionHandler = completionHandler;
+       FBSDKShareLinkContent *content = [[FBSDKShareLinkContent alloc] init];
+       content.contentURL = [NSURL URLWithString:[params objectForKey:TKBLOfferClaimUrlKey]];
+       [FBSDKShareDialog showFromViewController:self
+                                    withContent:content
+                                       delegate:delegate];
+   }
 
-  // ...
+   // ...
 
-  @implementation MyFBSDKDelegateClass
+   @implementation MyFBSDKDelegateClass
 
-  @synthesize talkableCompletionHandler;
+   @synthesize talkableCompletionHandler;
 
-  - (void)sharer:(id)sharer didCompleteWithResults:(NSDictionary<NSString *, id> *)results {
-   if ((_talkableCompletionHandler) != nil)
-     _talkableCompletionHandler();
-  }
+   - (void)sharer:(id)sharer didCompleteWithResults:(NSDictionary<NSString *, id> *)results {
+    if ((_talkableCompletionHandler) != nil)
+      _talkableCompletionHandler();
+   }
 
-  @end
+   @end
 
 
 showTwitterShareDialogWithParams:completionHandler:
@@ -101,7 +101,7 @@ showTwitterShareDialogWithParams:completionHandler:
 
 .. code-block:: objc
 
-  - (void)showTwitterShareDialogWithParams:(NSDictionary*)params completion:(void (^)())completionHandler;
+   - (void)showTwitterShareDialogWithParams:(NSDictionary*)params completion:(void (^)())completionHandler;
 
 This method is called when the user clicks on the Twitter Share button. The ``params`` and ``completionHandler``
 attributes are analogous to the previous method.
@@ -111,17 +111,17 @@ Example
 
 .. code-block:: objc
 
-  - (void)showTwitterShareDialogWithParams:(NSDictionary *)params completion:(void (^)())completionHandler {
-     TWTRComposer *composer = [[TWTRComposer alloc] init];
+   - (void)showTwitterShareDialogWithParams:(NSDictionary *)params completion:(void (^)())completionHandler {
+      TWTRComposer *composer = [[TWTRComposer alloc] init];
 
-     [composer setText:[params objectForKey:TKBLShareMessage]];
+      [composer setText:[params objectForKey:TKBLShareMessage]];
 
-     [composer showFromViewController:self completion:^(TWTRComposerResult result) {
-         if (result == TWTRComposerResultDone) {
-              completionHandler();
-         }
-     }];
-  }
+      [composer showFromViewController:self completion:^(TWTRComposerResult result) {
+          if (result == TWTRComposerResultDone) {
+               completionHandler();
+          }
+      }];
+   }
 
 Legacy Sharing using Social.framework
 -------------------------------------
@@ -141,10 +141,10 @@ to ensure a seamless transition to new implementations.
 
 .. note::
 
-  Talkable iOS SDK v1.4.9 features improved support of legacy Facebook sharing via Social.framework. If you are having trouble
-  with your current implementation, please upgrade to the latest version. Note that we can only try to provide the best
-  transitioning experience, and this fallback should not be regarded as a permanent solution. We encourage developers to switch
-  to delegate methods for social sharing.
+   Talkable iOS SDK v1.4.9 features improved support of legacy Facebook sharing via Social.framework. If you are having trouble
+   with your current implementation, please upgrade to the latest version. Note that we can only try to provide the best
+   transitioning experience, and this fallback should not be regarded as a permanent solution. We encourage developers to switch
+   to delegate methods for social sharing.
 
 Social Sharing from a native campaign
 -------------------------------------

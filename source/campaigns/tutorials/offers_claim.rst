@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Email gating lets you get a referred Friend’s email — just ask for it in exchange for a reward.
+   :description: Email gating lets you get a referred Friend’s email — just ask for it in exchange for a reward.
 
 Friend Claim Page
 -----------------
@@ -19,7 +19,7 @@ field, submit button, and "signup for latest news" checkbox.
 First of all, turn on email gating in Restricted settings:
 
 .. image:: /_static/img/liquid/gating/image1.png
-  :alt:
+   :alt:
 
 **Basic Setup**
 
@@ -27,8 +27,8 @@ First of all, turn on email gating in Restricted settings:
 
 **Advanced Setup**
 
-1. 'Click to copy' functionality for coupon code
-2. 'Sign up for news' checkbox
-3. Email validation messages
+1. `Click to copy` functionality for coupon code
+2. `Sign up for news` checkbox
+3. `Email validation` messages
 
 .. include:: /samples/liquid/offers_claim/email_gating_advanced.rst

@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: While driving traffic to one of your campaigns, you can include a traffic source parameter as a URL query string. This will help to segment your reporting.
+   :description: While driving traffic to one of your campaigns, you can include a traffic source parameter as a URL query string. This will help to segment your reporting.
 
 Segments
 ========
@@ -20,32 +20,32 @@ criteria in there:
 
 .. code-block:: html
 
-  {% assign available_items = "sku1,sku2" | split: "," %}
-  {% assign user_items = advocate_origin.products | map: "product_id" %}
-  {% assign result = false %}
+   {% assign available_items = "sku1,sku2" | split: "," %}
+   {% assign user_items = advocate_origin.products | map: "product_id" %}
+   {% assign result = false %}
 
-  {% for available_item in available_items %}
-    {% for user_item in user_items %}
-      {% if user_item == available_item %}
-        {% assign result = true %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
+   {% for available_item in available_items %}
+     {% for user_item in user_items %}
+       {% if user_item == available_item %}
+         {% assign result = true %}
+         {% break %}
+       {% endif %}
+     {% endfor %}
+   {% endfor %}
 
-  {{ result }}
+   {{ result }}
 
 Now only those customers who purchased a product with SKU of "SKU_GOES_HERE" will see a Campaign.
 The Campaign won’t show for any other product purchased.
 
 .. note::
 
-  In order to use this Campaign Join Criteria you need to make sure that the SKU numbers are passed
-  throught the integration first of all. To do that you need to go into Reports
-  (top header navigation) → Purchases → Click on "Details" link of any purchase and make sure there is "Product Id"
-  column with a valid "Product ID" value in place.
-  If there is no such column or it is blank you cannot use this feature unless you pass the following instructions
-  :ref:`Including Product Items <advanced_features/product_items>`.
+   In order to use this Campaign Join Criteria you need to make sure that the SKU numbers are passed
+   throught the integration first of all. To do that you need to go into Reports
+   (top header navigation) → Purchases → Click on "Details" link of any purchase and make sure there is "Product Id"
+   column with a valid "Product ID" value in place.
+   If there is no such column or it is blank you cannot use this feature unless you pass the following instructions
+   :ref:`Including Product Items <advanced_features/product_items>`.
 
 Please |contact_us| if you have any questions.
 
@@ -82,26 +82,23 @@ Example of usage with `register_purchase`:
 
 Example of usage with `authenticate_customer`:
 
-.. code-block:: javascript
+ .. code-block:: javascript
 
-  window._talkableq.push(['authenticate_customer', {
-    email: '', // Email of the customer. Example: 'customer@example.com'
-    first_name: '', // First name of the customer. Example: 'John'
-    last_name: '', // Last name of the customer. Example: 'Doe'
-    traffic_source: '', // The source of the traffic driven to the campaign. Example: 'facebook'
-    segment1: '', // Custom segment (e.g., location, age group, source channel, platform, gender, interests).
-    segment2: '', // Custom segment (e.g., location, age group, source channel, platform, gender, interests).
-    segment3: '' // Custom segment (e.g., location, age group, source channel, platform, gender, interests).
-  }]);
+       window._talkableq.push(['authenticate_customer', {
+         email: '', // Email of the customer. Example: 'customer@example.com'
+         first_name: '', // First name of the customer. Example: 'John'
+         last_name: '', // Last name of the customer. Example: 'Doe'
+         traffic_source: '', // The source of the traffic driven to the campaign. Example: 'facebook'
+         segment1: '', // Custom segment (e.g., location, age group, source channel, platform, gender, interests).
+         segment2: '', // Custom segment (e.g., location, age group, source channel, platform, gender, interests).
+         segment3: '' // Custom segment (e.g., location, age group, source channel, platform, gender, interests).
+       }]);
 
 In this example, `segment1`, `segment2`, and `segment3` attributes are passed through `authenticate_customer` to enable segmentation without requiring an Origin creation.
 
 .. note::
 
-  Segments can also be passed in `register_affiliate`, `register_purchase`, and `register_event`, providing flexibility for different integration scenarios.
+   Segments can also be passed in `register_affiliate`, `register_purchase`, and `register_event`, providing flexibility for different integration scenarios.
 
 This approach simplifies custom data handling for customers, allowing for unified data across various methods and optimizing segmentation management without additional calls.
 
-.. container:: hidden
-
-  .. toctree::

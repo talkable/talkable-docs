@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Learn how to use Custom app to receive data about loyalty events.
+   :description: Learn how to use Custom app to receive data about loyalty events.
 
 Custom App for Loyalty
 ======================
@@ -38,15 +38,15 @@ To determine which loyalty action triggered the Custom App, use `{{ action.ident
 * when loyalty member gains or loses points due to a manual points adjustment, the Action Identifier is *"manual_adjustment"*;
 * when loyalty member earns points according to loyalty action configurations, the Action Identifier varies based on the action configuration type:
 
-   * *"optin"* for "Loyalty join";
-   * *"event"* for "Purchase points" and "Event points";
-   * *"referral"* for "Refer a friend";
-   * for a custom type, the Identifier is taken straight from the action configuration "Identifier" field.
+  * *"optin"* for "Loyalty join";
+  * *"event"* for "Purchase points" and "Event points";
+  * *"referral"* for "Refer a friend";
+  * for a custom type, the Identifier is taken straight from the action configuration "Identifier" field.
 
 `{{ action.rule }}` contains details about the action configuration that is responsible for a particular points collection.
 
 .. note::
-  `{{ action.rule }}` is optional for *"manual_adjustment"* actions and always blank for *"redeem"* actions.
+   `{{ action.rule }}` is optional for *"manual_adjustment"* actions and always blank for *"redeem"* actions.
 
 To see the full list of available variables, click "Show available variables" on the Custom App action configuration page.
 

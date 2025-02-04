@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Talkable has an iOS framework enabling you to use Talkable in iOS apps
+   :description: Talkable has an iOS framework enabling you to use Talkable in iOS apps
 
 Talkable iOS SDK
 ################
@@ -20,14 +20,31 @@ Talkable has an iOS framework enabling you to use Talkable in iOS Apps. Once int
 
 - Track sales via the App and reward Advocate if a sale was driven thourgh someone’s claim link
 
-Contents:
+.. raw:: html
 
-.. toctree::
+   <h2 class="mts">Contents:</h2>
 
-  ios_sdk/getting_started
-  ios_sdk/integration
-  ios_sdk/social_sharing
-  ios_sdk/api_integration
-  ios_sdk/advanced
-  ios_sdk/custom_deep_linking
-  ios_sdk/example
+.. grid:: 1 2 2 2
+
+   .. grid-item::
+
+      .. toctree::
+         :maxdepth: 2 
+      
+         ios_sdk/getting_started
+         ios_sdk/integration
+         ios_sdk/social_sharing
+         ios_sdk/api_integration
+    
+   .. grid-item::
+
+      .. toctree::
+         :maxdepth: 2 
+        
+         ios_sdk/advanced
+         ios_sdk/custom_deep_linking
+         ios_sdk/example
+
+
+   
+   

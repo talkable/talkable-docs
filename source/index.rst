@@ -6,84 +6,75 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Talkable campaigns, features and integration docs for referral program launch and settings.
+   :description: Talkable campaigns, features and integration docs for referral program launch and settings.
 
-Talkable Basics
-===============
+.. grid:: 1 2 2 2
 
-+------------------------------------+--------------------------------+
-| .. toctree::                       | .. toctree::                   |
-|   :maxdepth: 2                     |   :maxdepth: 2                 |
-|                                    |                                |
-|   campaigns                        |   advanced_features            |
-+------------------------------------+--------------------------------+
+    .. grid-item::
 
-|br|
+        .. raw:: html
 
-Talkable JS Integration
-=======================
+          <h3>Talkable Basics</h3>
 
-This section comes with full documentation for Talkable integration into E-Commerce store as well as into any SaaS product.
+        .. toctree::
+          :maxdepth: 2 
+        
+          campaigns
+          advanced_features
+        
+        .. raw:: html
 
-+------------------------------------+------------------------------------+
-| .. toctree::                       | .. toctree::                       |
-|   :maxdepth: 2                     |   :maxdepth: 2                     |
-|                                    |                                    |
-|   integration/custom_integration   |   integration/loyalty              |
-|                                    |                                    |
-|                                    |   integration/ecommerce_platforms  |
-+------------------------------------+------------------------------------+
+          <h3>Custom Integration</h3>
 
-.. raw:: html
+        .. toctree::
+          :maxdepth: 2 
+        
+          custom_integration
 
-  <p>&nbsp;</p>
+    .. grid-item::
 
-Email Marketing & Automation
-============================
+        .. raw:: html
 
-With these apps Talkable synchronizes all people who opt in for Talkable email marketing during signup. This way you will keep all your emails in one place in an automated way.
+          <h3>Email Marketing & Automation</h3>
 
-+-----------------------------------+
-| .. toctree::                      |
-|   :maxdepth: 2                    |
-|                                   |
-|   email_marketing_and_automation  |
-+-----------------------------------+
+        .. toctree::
+          :maxdepth: 2 
+        
+          email_marketing_and_automation
 
-Custom Integration
-==================
+        .. raw:: html
 
-+-----------------------+
-| .. toctree::          |
-|   :maxdepth: 2        |
-|                       |
-|   custom_integration  |
-+-----------------------+
+          <h3>JS Integration</h3>
 
-Talkable Back-end Integration
-=============================
+        .. toctree::
+          :maxdepth: 2 
+        
+          integration/custom_integration
+          integration/loyalty
+          integration/ecommerce_platforms 
+        
 
-Follow one of these sections in case you need to get or send data from/to Talkable.
+    .. grid-item::
 
-+--------------------+--------------------+
-| .. toctree::       | .. toctree::       |
-|   :maxdepth: 2     |   :maxdepth: 2     |
-|                    |                    |
-|   api_v2           |   web_hooks        |
-+--------------------+--------------------+
+        .. raw:: html
 
-.. raw:: html
+          <h3>Back-end Integration</h3>
 
-  <p>&nbsp;</p>
+        .. toctree::
+          :maxdepth: 2 
+        
+          api_v2
+          web_hooks
 
-Talkable For Mobile
-===================
+    .. grid-item::
 
-Follow our instructions on how to integrate Talkable into your native mobile app.
+        .. raw:: html
 
-+--------------------+--------------------+
-| .. toctree::       | .. toctree::       |
-|   :maxdepth: 2     |   :maxdepth: 2     |
-|                    |                    |
-|   ios_sdk          |   android_sdk      |
-+--------------------+--------------------+
+          <h3>For Mobile</h3>
+
+        .. toctree::
+          :maxdepth: 2 
+        
+          ios_sdk
+          android_sdk
+

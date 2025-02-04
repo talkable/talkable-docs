@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Send an invite email to a Friend showing their special share link. Make the email looks personal — just like it's written for them.
+   :description: Send an invite email to a Friend showing their special share link. Make the email looks personal — just like it's written for them.
 
 .. _friend_share_email_view:
 
@@ -23,16 +23,16 @@ Frequently used Variables:
 |br|
 
 .. image:: /_static/img/basics/friend-share-email.png
-  :alt: Friend Share Email
+   :alt: Friend Share Email
 
 .. include:: /partials/developer_email_note.rst
 
 .. raw:: html
 
-  <h2>Email sending conditions</h2>
+   <h2>Email sending conditions</h2>
 
 By default is sent immediately after the offer is shared, but can be delayed by configuration.
 
 1. Main email sending criteria (unable to change):
 
-  - Only one email for recipient with the same offer (if |advocate| shares twice with one |friend| Talkable sends only one share email)
+   1. Only one email for recipient with the same offer (if |advocate| shares twice with one |friend| Talkable sends only one share email)

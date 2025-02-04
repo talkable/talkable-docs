@@ -25,7 +25,7 @@ Installing from Xcode:
 1. Add a package by selecting **File** → **Add Packages…** in Xcode’s menu bar.
 2. Search for the Talkable SDK using the repo's URL:
 
-  .. code-block:: bash
+   .. code-block:: bash
 
     https://github.com/talkable/ios-sdk.git
 
@@ -34,18 +34,18 @@ Installing from Xcode:
 
 Alternatively, you can add Talkable SDK directly to a `Package.swift` manifest:
 
-  .. code-block:: swift
+.. code-block:: swift
 
-    dependencies: [
-        .package(url: "https://github.com/talkable/ios-sdk.git", .upToNextMajor(from: "1.5.1"))
-    ]
+      dependencies: [
+          .package(url: "https://github.com/talkable/ios-sdk.git", .upToNextMajor(from: "1.5.1"))
+      ]
 
 CocoaPods
 `````````
 
 To integrate Talkable SDK into your Xcode project using CocoaPods, specify it in your `Podfile`_:
 
-  .. code-block:: ruby
+.. code-block:: ruby
 
     pod 'TalkableSDK', '~> 1.5.1'
 
@@ -67,13 +67,13 @@ Step 2: Configuration
 
 1. Initialize Talkable SDK in your `application:didFinishLaunchingWithOptions:` method, like so:
 
-  .. code-block:: objc
+   .. code-block:: objc
 
     #import <TalkableSDK/Talkable.h>
     // ...
     [[Talkable manager] setApiKey:@"YOUR_TALKABLE_PUBLIC_API_KEY" andSiteId:@"YOUR_SITE_ID"];
 
-  .. note::
+   .. note::
 
     You can locate your credentials inside Talkable site:
 
@@ -83,9 +83,9 @@ Step 2: Configuration
 
 2. Register URL scheme for Talkable:
 
-  - Defines `tkbl-YOUR-SITE-ID` as URL Scheme in your Info.plist file:
+   - Defines `tkbl-YOUR-SITE-ID` as URL Scheme in your Info.plist file:
 
-    .. code-block:: xml
+     .. code-block:: xml
 
       <key>CFBundleURLTypes</key>
       <array>
@@ -97,10 +97,9 @@ Step 2: Configuration
         </dict>
       </array>
 
-  - Add `tkbl-YOUR-SITE-ID` scheme to the list of schemes that are queried within application.
-    Also add `fb-messenger`, `fbauth2`, `whatsapp` schemes if you are going to utilize these sharing channels:
+   - Add `tkbl-YOUR-SITE-ID` scheme to the list of schemes that are queried within application. Also add `fb-messenger`, `fbauth2`, `whatsapp` schemes if you are going to utilize these sharing channels:
 
-    .. code-block:: xml
+     .. code-block:: xml
 
       <key>LSApplicationQueriesSchemes</key>
       <array>
@@ -110,7 +109,7 @@ Step 2: Configuration
         <string>whatsapp</string>
       </array>
 
-  .. note::
+   .. note::
 
     Please replace `YOUR-SITE-ID` with your actual Site ID.
     Make sure to keep `tkbl-` prefix in the `<string>` value. For example,
@@ -118,7 +117,7 @@ Step 2: Configuration
 
 3. Add following lines to `application:openURL:options:`
 
-  .. code-block:: objc
+   .. code-block:: objc
 
     #import <TalkableSDK/Talkable.h>
     // ...

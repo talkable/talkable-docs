@@ -1,0 +1,86 @@
+#!/usr/bin/env groovy
+
+pipeline {
+    agent {
+        label "staging"
+    }
+    environment {
+        GITHUB_ACC = credentials('talkable-bot-deploy-token')
+        JENKINS_BUILD_USER_ID = ""
+        LOCAL_PORT="8080"
+    }
+    triggers {
+        pollSCM('* * * * *') // Polls SCM every minute
+    }
+    parameters {
+        choice(name: "DEPLOY_COMMAND",
+                choices: ["deploy", "ci_status"],
+                description: "DEPLOY - Start the default deployment\nCI_STATUS - Check the GitHub commit status on CircleCI")
+    }
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '15', daysToKeepStr: '14'))
+        disableConcurrentBuilds()
+        parallelsAlwaysFailFast()
+        ansiColor('xterm')
+    }
+    stages {
+        stage('Preparation') {
+            steps {
+                script {
+                    wrap([$class: 'BuildUser']) {
+                        JENKINS_BUILD_USER_ID = "${BUILD_USER_ID}"
+                        currentBuild.displayName = "${JOB_BASE_NAME}-${BUILD_NUMBER}"
+                        currentBuild.description = "Build by ${JENKINS_BUILD_USER_ID}"
+                    }
+                    if (env.BRANCH_NAME == 'master') {
+                        env.HOST_ENV = '10.200.1.200'
+                        env.JENKINS_CRED_ID = 'ssh-jenkins-to-prod1-wp-nginx'
+                        env.ENVIRONMENT="production"
+                        env.PRODUCTION_HOST="docs.talkable.com"
+                    } else if (env.BRANCH_NAME == 'staging') {
+                        env.HOST_ENV = '10.1.2.12'
+                        env.JENKINS_CRED_ID = 'ssh-jenkins-to-bastion-wp-nginx'
+                        env.ENVIRONMENT="staging"
+                        env.STAGING_HOST="docs.bastion.talkable.com"
+                    } else {
+                        echo "Hello from ${BRANCH_NAME} branch! We only build the following branches of the Talkable repository: master, staging."
+                        error("Non-supported branch for build")
+                    }
+                }
+            }
+        }
+        stage('Build') {
+            steps {
+                script {
+                    withCredentials([sshUserPrivateKey(credentialsId: "${JENKINS_CRED_ID}", keyFileVariable: 'SSH_KEY', usernameVariable: 'SSH_USER')]) {
+                        sh "$WORKSPACE/deploy/deploy.sh ${DEPLOY_COMMAND}"
+                    }
+                }
+            }
+        }
+    }
+    post {
+        success {
+            echo 'Build was a success'
+        }
+        failure {
+            echo 'Build failed'
+        }
+        unstable {
+            echo 'Build is unstable'
+        }
+        aborted {
+            echo 'Build was aborted'
+        }
+        cleanup {
+            echo 'Performing cleanup'
+            cleanWs cleanWhenFailure: false,
+                    cleanWhenUnstable: true,
+                    cleanWhenAborted: true,
+                    cleanWhenNotBuilt: true,
+                    cleanWhenSuccess: true,
+                    deleteDirs: true,
+                    notFailBuild: true
+        }
+    }
+}

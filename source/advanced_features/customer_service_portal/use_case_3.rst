@@ -69,12 +69,11 @@ Here is how to detect self-referrals in case you’ve got an email/call from a c
 1. Enter the customer’s email address in the Person Lookup.
 2. Review the “Referrals” tab and look for a “self-referral” alert:
 
-.. image:: /_static/img/advanced_features/customer_service_portal/self_referral.jpg
+   .. image:: /_static/img/advanced_features/customer_service_portal/self_referral.jpg
 
-3. Inspect the customer’s email address to see if it’s the same or similar to the Friends; you  can also inspect inside
-the referral details the IP address and cookie to see if they match:
+3. Inspect the customer’s email address to see if it’s the same or similar to the Friends; you  can also inspect inside the referral details the IP address and cookie to see if they match:
 
-.. image:: /_static/img/advanced_features/customer_service_portal/fraud_settings.jpg
+   .. image:: /_static/img/advanced_features/customer_service_portal/fraud_settings.jpg
 
 4. If it’s not obvious why the customer was flagged for self-referral (meaning that none of these three items matched),
    then you should click “Details” to dive deeper.
@@ -84,7 +83,7 @@ the referral details the IP address and cookie to see if they match:
    share as an Advocate and click on the share link as a Friend), and lastly, there’s a matching combination of IP address
    and user agent - meaning the Advocate and Friend were using the same device and IP address, in combination.
 
-.. image:: /_static/img/advanced_features/customer_service_portal/blocked_reasons.jpg
+   .. image:: /_static/img/advanced_features/customer_service_portal/blocked_reasons.jpg
 
 Cross referrals
 ---------------
@@ -95,6 +94,3 @@ in an attempt to get both the Advocate and Friend rewards.
 
 We identify this in the same way as described above.
 
-.. container:: hidden
-
-  .. toctree::
