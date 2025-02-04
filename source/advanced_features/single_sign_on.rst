@@ -60,16 +60,17 @@ If automatic configuration is not supported by your IdP, then try manual configu
 Manual Configuration
 --------------------
 
-Uncheck the box for “Automatically Configure from Metadata”.
+1. Uncheck the box for “Automatically Configure from Metadata”.
 
-Fill in the following fields:
+2. Fill in the following fields:
 
-  * IdP Issuer (Entity ID)
-  * IdP SSO Target URL
-  * X.509 Certificate OR Certificate Fingerprint
-    (Talkable will automatically generate the fingerprint if the full X.509 certificate is provided)
+   * IdP Issuer (Entity ID)
+   * IdP SSO Target URL
+   * X.509 Certificate OR Certificate Fingerprint
+     |br|
+     (Talkable will automatically generate the fingerprint if the full X.509 certificate is provided)
 
-Save the settings.
+3. Save the settings.
 
 Testing Single Sign-On
 ----------------------
@@ -93,6 +94,3 @@ Once you've configured SSO, you can test it as followed:
 
    .. image:: /_static/img/advanced_features/sso_sp_initiated_url.png
 
-.. container:: hidden
-
-   .. toctree::

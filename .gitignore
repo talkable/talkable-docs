@@ -1,7 +1,19 @@
-/build
-/.bundle
-Gemfile.lock
-source/_static/test
-.pivotalrc
+# IDE
 .idea
+.vscode
+
+# Local
 *.log
+.env
+
+# Sphinx
+_build
+build
+
+# Python
+.venv
+__pycache__
+
+# Ruby
+.bundle
+Gemfile.lock

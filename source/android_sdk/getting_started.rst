@@ -113,7 +113,7 @@ Installation
 Here is an example of ``AndroidManifest.xml`` file (with ``"demo-site"`` site
 ID) you should setup after steps above:
 
-  .. code-block:: xml
+.. code-block:: xml
 
      <?xml version="1.0" encoding="utf-8"?>
      <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -162,7 +162,3 @@ Requirements
 The SDK supports Android 4.1 and later.
 
 .. _`Talkable SDK framework`: https://talkable-downloads.s3.amazonaws.com/android-sdk/talkable-sdk.aar
-
-.. container:: hidden
-
-   .. toctree::

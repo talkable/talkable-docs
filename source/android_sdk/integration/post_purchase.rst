@@ -58,7 +58,3 @@ Here is an example of a Purchase capturing, this action should be triggered on t
    If Post Purchase campaign does not show up when testing make sure you have it Live
    on the Campaigns listing with `android-post-purchase` tag or the tag you specified
    in `setCampaignTag`.
-
-.. container:: hidden
-
-   .. toctree::

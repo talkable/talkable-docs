@@ -45,6 +45,3 @@ If you realize that you made a mistake in Blocklisting a user who should actuall
 all you have to do to take a user off the blocklist is to delete their email or IP from the list and then hit
 “Save Changes” again. It’s that easy.
 
-.. container:: hidden
-
-   .. toctree::

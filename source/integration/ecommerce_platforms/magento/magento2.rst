@@ -35,41 +35,39 @@ Installation
    This guide shows example outputs for Terminal, but these steps can be modified for any command line tool of your choice.
 
 3. Run the following command to access the latest version of the Talkable extension.
+    
+   .. code-block:: bash
 
-    .. code-block:: bash
-
-       composer require talkable/magento2-integration
+      composer require talkable/magento2-integration
 
 4. Run the following command to enable the Talkable extension you just downloaded:
 
-    .. code-block:: bash
+   .. code-block:: bash
 
-       php bin/magento module:enable Talkable_Integration --clear-static-content
+      php bin/magento module:enable Talkable_Integration --clear-static-content
 
    You should see the following output:
 
-    .. code-block::
+      The following modules have been enabled:
+      - Talkable_Integration
 
-        The following modules have been enabled:
-        - Talkable_Integration
-
-        To make sure that the enabled modules are properly registered, run 'setup:upgrade'.
-        Cache cleared successfully.
-        Generated classes cleared successfully.
-        Please run the 'setup:di:compile' command to generate classes.
-        Generated static view files cleared successfully.
+      To make sure that the enabled modules are properly registered, run 'setup:upgrade'.
+      Cache cleared successfully.
+      Generated classes cleared successfully.
+      Please run the 'setup:di:compile' command to generate classes.
+      Generated static view files cleared successfully.
 
 5. As displayed in the sample output, you must now enable any additional modules. Run the following command to enable them:
 
-    .. code-block:: bash
+   .. code-block:: bash
 
-        php bin/magento setup:upgrade
+      php bin/magento setup:upgrade
 
 6. To ensure that the CSS and JS on your Magento 2 store continues to work properly, you’ll need to run a static content deploy command.
 
-    .. code-block:: bash
+   .. code-block:: bash
 
-        php bin/magento setup:static-content:deploy -f
+      php bin/magento setup:static-content:deploy -f
 
 7. Installation via Composer is complete! You can now return to the Magento admin dashboard from your browser.
 
@@ -94,8 +92,8 @@ Configuring Talkable Extension
 ------------------------------
 
 The extension configuration screen consists of three sections: Integration_, Campaigns_ and `Page URLs`_.
-
-   .. image:: /_static/img/magento2/configure1.jpg
+   
+.. image:: /_static/img/magento2/configure1.jpg
 
 |page_break|
 
@@ -104,8 +102,8 @@ Integration
 
 The Integration section allows you to change the Talkable Site ID, which is used to connect your store
 to your Talkable account.
-
-   .. image:: /_static/img/magento2/configure2.jpg
+   
+.. image:: /_static/img/magento2/configure2.jpg
 
 .. warning::
 

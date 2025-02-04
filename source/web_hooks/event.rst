@@ -30,8 +30,3 @@ or using the :ref:`Talkable backend API <api_v2/origins>`.
    <h2>Payload parameters provided</h2>
 
 The sample payload with parameters for Event Webhook is available here: `Event Webhook Payload <https://www.talkable.com/api-docs/index.html?urls.primaryname=webhooks%20api&urls.primaryName=Webhooks#/Event/post_your_api_event_web_hook_path>`_.
-
-
-.. container:: hidden
-
-   .. toctree::

@@ -36,7 +36,3 @@ will be applied only if debug is set to `true`.
 .. warning::
 
    Debug mode must be turned off for release builds. Leaving it enabled will break the referral cycle and expose you to fraud.
-
-.. container:: hidden
-
-   .. toctree::

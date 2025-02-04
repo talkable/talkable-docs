@@ -16,13 +16,10 @@ and ``error.getMessage()`` respectively.
 
 Here is a list of possible error codes from ``TalkableOfferLoadException`` with descriptions:
 
-   ``NETWORK_ERROR``: General network error
-
-   ``API_ERROR``: Talkable API unavailable
-
-   ``REQUEST_ERROR``: Bad request
-
-   ``CAMPAIGN_ERROR``: Campaign not found
+- ``NETWORK_ERROR``: General network error
+- ``API_ERROR``: Talkable API unavailable
+- ``REQUEST_ERROR``: Bad request
+- ``CAMPAIGN_ERROR``: Campaign not found
 
 Using multiple site slugs
 -------------------------
@@ -192,7 +189,3 @@ your Android application.
 .. _`handle configuration changes`: https://developer.android.com/guide/topics/resources/runtime-changes.html
 .. _`Fragment`: https://developer.android.com/guide/fragments
 .. _`Fragment Transactions`: https://developer.android.com/guide/fragments/transactions
-
-.. container:: hidden
-
-   .. toctree::

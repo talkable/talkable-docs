@@ -16,19 +16,14 @@ control appearance of each View by visiting Appearance:
 
 |br|
 |br|
-Understanding Page-Views is easy, just go through the glossary and learn who lands on
-what Page-View and where. Email-Views are more tricky in terms of understanding when
-they are sent. All Email-Views must go through a pre-validation step before they are
-sent:
+Understanding Page-Views is easy, just go through the glossary and learn who lands on what Page-View and where. Email-Views are more tricky in terms of understanding when they are sent. All Email-Views must go through a pre-validation step before they are sent:
 
-\1. Check if the Campaign View is in use (controlled inside Campaign Rules). Otherwise
-the email will never be sent.
+1. Check if the Campaign View is in use (controlled inside Campaign Rules). Otherwise the email will never be sent.
 
-.. image:: /_static/img/campaign/rules-views.png
+   .. image:: /_static/img/campaign/rules-views.png
 
-|br|
-2. Is the recipient email in a valid email format (i.e. Talkable mail servers can deliver an email to a real recipient)? If so, we move on to campaign specific rules
-to determine whether or not the email should be sent (see `Email sending conditions` section inside each Email-View).
+
+2. Is the recipient email in a valid email format (i.e. Talkable mail servers can deliver an email to a real recipient)? If so, we move on to campaign specific rules to determine whether or not the email should be sent (see `Email sending conditions` section inside each Email-View).
 
 After pre-validation Talkable campaign level validation kicks in:
 

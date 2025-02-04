@@ -28,7 +28,3 @@ integration.
 .. note::
 
    Don’t forget to escape URL parameters with URI parameter encoder.
-
-.. container:: hidden
-
-  .. toctree::

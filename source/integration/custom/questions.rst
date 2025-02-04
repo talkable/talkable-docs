@@ -24,7 +24,7 @@ F.A.Q.
 
 .. _integration/custom/questions/post_purchase_capture:
 
-**1.) Does the post purchase script need to capture all purchases or
+**1.  Does the post purchase script need to capture all purchases or
 just Talkable purchases?**
 
 The post purchase script needs to capture all purchases. This not only
@@ -37,7 +37,7 @@ along with other sales related metrics.
 
 .. _integration/custom/questions/how_does_referral_tracking_work:
 
-**2.) How does referral tracking work?**
+**2. How does referral tracking work?**
 
 Talkable automatically handles all referral tracking, so there’s nothing
 special you need to do as a developer. Talkable tracks referrals by at
@@ -49,7 +49,7 @@ referral.
 
 .. _integration/custom/questions/what_does_the_talkable_integration_do:
 
-**3.) What does the Talkable integration do?**
+**3. What does the Talkable integration do?**
 
 -  Displays Refer-A-Friend content inside a Talkable generated iframe
    either as an overlay or inline
@@ -69,7 +69,7 @@ referral.
 
 .. _integration/custom/questions/talkable_know_where_to_display_content:
 
-**4.) How does Talkable know where to display content?**
+**4. How does Talkable know where to display content?**
 
 -  "Placements" refer to areas of your website where referral content
    should display. These rules are defined inside of the Placements
@@ -102,7 +102,7 @@ referral.
 
 .. _integration/custom/questions/complete_integration:
 
-**5.) What work do I, as a developer, need to do to complete
+**5. What work do I, as a developer, need to do to complete
 integration?**
 
 -  Surface variables, plug into integration script, and copy into the
@@ -121,7 +121,7 @@ integration?**
 
 .. _integration/custom/questions/rewarding_process_work:
 
-**6.) How does the rewarding process work?**
+**6. How does the rewarding process work?**
 
 Referring Advocate Reward payout is configurable, it can be triggered
 automatically based on any grace period delay, through API call when
@@ -166,6 +166,6 @@ action.
 
 .. _integration/custom/questions/verify_success:
 
-**7.) How do I verify success?**
+**7. How do I verify success?**
 
 Refer to the section titled :ref:`Validating the Integration <integration/custom/validating_integration>`.

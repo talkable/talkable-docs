@@ -51,9 +51,9 @@ coupon list for a campaign:
 2. Proceed to **Rules** then scroll down to **Incentives** section where
    incentives for both Advocate and Friend can be configured
 
-.. image:: /_static/img/advocate_referral_incentive.png
-   :alt: Edit Referral Incentives
-   :class: is-minimal
+   .. image:: /_static/img/advocate_referral_incentive.png
+      :alt: Edit Referral Incentives
+      :class: is-minimal
 
 3. Inside the Referral Incentive Editor choose the **Coupon code type: Single-use**
    then select an existing Coupon list or create a new coupon list by clicking
@@ -81,7 +81,3 @@ Create Coupon Webhook can now be set up.
    <h2>Payload parameters provided by Create Coupon Webhook</h2>
 
 The sample payload with parameters for Create Coupon Webhook is available here: `Create Coupon Webhook Payload <https://www.talkable.com/api-docs/index.html?urls.primaryname=webhooks%20api&urls.primaryName=Webhooks#/Create%20Coupon/post_your_api_create_coupon_web_hook_path>`_.
-
-.. container:: hidden
-
-   .. toctree::

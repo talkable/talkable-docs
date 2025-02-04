@@ -45,10 +45,6 @@ Shopify coupon auto-sync
 
 Read :ref:`Shopify coupon auto-sync documentation <advanced_features/shopify_coupons_auto_sync>` for details.
 
-.. container:: hidden
-
-   .. toctree::
-
 Requirements
 ------------
 

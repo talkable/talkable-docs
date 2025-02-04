@@ -133,13 +133,13 @@ Read Contacts permission is optional from this version.
 In case you used ``import_contacts`` callback, you have to define ``READ_CONTACTS``
 permission inside the manifest:
 
-   .. code-block:: xml
+.. code-block:: xml
 
-      <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        package="com.android.app.myapp" >
-        <uses-permission android:name="android.permission.READ_CONTACTS" />
-        ...
-      </manifest>
+    <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.app.myapp" >
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    ...
+    </manifest>
 
 0.4.1
 -----
@@ -283,7 +283,3 @@ Look in :ref:`installation section <main_activity_setup>` for more detailed info
 -----
 
 It’s initial release, nothing to do.
-
-.. container:: hidden
-
-   .. toctree::

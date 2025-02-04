@@ -13,7 +13,7 @@ Create visitor
 It’s the simplest method. You don’t need anything to create `Visitor`.
 But you can do anything you need with just create one.
 
-  .. code-block:: java
+.. code-block:: java
 
     import com.talkable.sdk.TalkableApi;
 
@@ -39,10 +39,12 @@ You need to build `Origin` to create. There are three subclasses of this class. 
 Hierarchy
 .........
 
-    * `Origin` (Abstract)
-        * `AffiliateMember`
-        * `Event`
-            * `Purchase`
+*   `Origin` (Abstract)
+    
+    *   `AffiliateMember`
+    *   `Event`
+    
+        *   `Purchase`
 
 Building Origin
 ...............
@@ -218,19 +220,15 @@ Use the ``createSocialShare`` method to track a social share.
 
 .. code-block:: java
 
-   SharingChannel channel = SharingChannel.FACEBOOK; // required
-   SocialOfferShare share = new SocialOfferShare(offer, channel);
-   TalkableApi.createSocialShare(share, new Callback2<SocialOfferShare, Reward>() {
-       @Override
-       public void onSuccess(SocialOfferShare createdShare, Reward reward) {
-           // Process success
-       }
-       @Override
-       public void onError(ApiError e) {
-           // Process error
-       }
-   });
-
-.. container:: hidden
-
-   .. toctree::
+  SharingChannel channel = SharingChannel.FACEBOOK; // required
+  SocialOfferShare share = new SocialOfferShare(offer, channel);
+  TalkableApi.createSocialShare(share, new Callback2<SocialOfferShare, Reward>() {
+      @Override
+      public void onSuccess(SocialOfferShare createdShare, Reward reward) {
+          // Process success
+      }
+      @Override
+      public void onError(ApiError e) {
+          // Process error
+      }
+  });

@@ -35,4 +35,4 @@ By default is sent immediately after the offer is shared, but can be delayed by 
 
 1. Main email sending criteria (unable to change):
 
-  - Only one email for recipient with the same offer (if |advocate| shares twice with one |friend| Talkable sends only one share email)
+   1. Only one email for recipient with the same offer (if |advocate| shares twice with one |friend| Talkable sends only one share email)

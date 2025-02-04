@@ -12,7 +12,7 @@ Talkable Campaign is based on interaction between ``Advocate`` and ``Friend``:
 - Advocate: person, who shares an offer with their Friend(s)
 - Friend: person, who is invited to participate in Campaign by Advocate
 
-.. image:: /_static/img/basics/sharing-process.png
+.. figure:: /_static/img/basics/sharing-process.png
   :alt: Sharing process
 
 Each step of this interaction has its own ``View`` so developer can easily
@@ -26,48 +26,68 @@ familiar with Liquid templating in Shopify.
 
 To start editing Views simply visit ``Editor`` page from the Campaign dashboard.
 
-.. raw:: html
+Campaign Types and Placements
+=============================
 
-  <h2>Campaign Types and Placements</h2>
+.. grid:: 1 2 2 2
 
-+-------------------------------+---------------------------------+
-| .. toctree::                  | .. toctree::                    |
-|   :maxdepth: 2                |   :maxdepth: 2                  |
-|                               |                                 |
-|   campaigns/campaign_types    |   campaigns/campaign_placements |
-+-------------------------------+---------------------------------+
+    .. grid-item::
 
-.. raw:: html
+        .. toctree::
+          :maxdepth: 2 
+        
+          campaigns/campaign_types
+        
+    .. grid-item::
 
-  <h2>Campaign Structure</h2>
+        
+        .. toctree::
+          :maxdepth: 2 
+        
+          campaigns/campaign_placements
 
-+-------------------------------+-----------------------------+
-| .. toctree::                  |                             |
-|   :maxdepth: 2                |                             |
-|                               |                             |
-|   campaigns/views             |                             |
-+-------------------------------+-----------------------------+
+Campaign Structure
+==================
 
-.. raw:: html
+.. grid:: 1 2 2 2
 
-  <h2>Campaign Setup & Tutorials</h2>
+    .. grid-item::
 
-+-------------------------------+-----------------------------+
-| .. toctree::                  | .. toctree::                |
-|   :maxdepth: 2                |   :maxdepth: 2              |
-|                               |                             |
-|   campaigns/tutorials         |   campaigns/editor          |
-|   campaigns/offers_expiration |                             |
-|   campaigns/localization      |                             |
-+-------------------------------+-----------------------------+
+        .. toctree::
+          :maxdepth: 2 
+        
+          campaigns/views
 
-.. raw:: html
+Campaign Setup & tutorials
+==========================
 
-  <h2>Designer Guide</h2>
+.. grid:: 1 2 2 2
 
-+-------------------------------+-----------------------------+
-| .. toctree::                  |                             |
-|   :maxdepth: 2                |                             |
-|                               |                             |
-|   campaigns/designer          |                             |
-+-------------------------------+-----------------------------+
+    .. grid-item::
+
+        .. toctree::
+          :maxdepth: 2 
+        
+          campaigns/tutorials
+          campaigns/offers_expiration
+          campaigns/localization
+    
+    .. grid-item::
+
+        .. toctree::
+          :maxdepth: 2 
+        
+          campaigns/editor
+
+Designer Guide
+==============
+
+.. grid:: 1 2 2 2
+
+    .. grid-item::
+
+        .. toctree::
+          :maxdepth: 2 
+        
+          campaigns/designer
+

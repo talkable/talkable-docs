@@ -60,9 +60,9 @@ To configure incentives:
 2. Proceed to **Rules** then scroll down to **Incentives** section where
    incentives for both Advocates and Friends can be set-up
 
-.. image:: /_static/img/advocate_referral_incentive.png
-   :alt: Edit Referral Incentives,
-   :class: is-minimal
+   .. image:: /_static/img/advocate_referral_incentive.png
+      :alt: Edit Referral Incentives,
+      :class: is-minimal
 
 3. Configure the incentives as desired inside the Referral Incentive Editor.
    To configure Incentive types other than Coupon Codes, please contact your
@@ -104,7 +104,3 @@ Reward reason can be of 5 following general types.
 .. include:: /partials/incentive_types.rst
 
 .. include:: /partials/coupon_as_reward.rst
-
-.. container:: hidden
-
-   .. toctree::

@@ -37,31 +37,30 @@ Talkable generates the signature using a `Base64 <https://en.wikipedia.org/wiki/
 
 To verify the signature, you should complete the following steps:
 
-**1. Prepare the** `payload_json` **string**
+1. Prepare the `payload_json` string
 
-  Create a JSON string from the payload of the request.
+   Create a JSON string from the payload of the request.
 
-**2. Determine the expected signature**
+2. Determine the expected signature
+  
+   - Compute an hex encoded **HMAC** with the **SHA256** hash function. Use the **Webhook security key** as a key, and use the `payload_json` string as a message.
+   - Encode a computed hash with **Base64**
 
-  - Compute an hex encoded **HMAC** with the **SHA256** hash function. Use the **Webhook security key** as a key, and use the `payload_json` string as a message.
+   Your Talkable **Webhook security key** can be found in the Webhook set up page by navigating to **Menu** then **Webhooks**.
 
-  - Encode a computed hash with **Base64**
+   .. image:: /_static/img/menu_webhooks_screenshot.png
+      :alt: Webhooks Menu Item
 
-Your Talkable **Webhook security key** can be found in the Webhook set up page by navigating to **Menu** then **Webhooks**.
+   .. raw:: html
 
-.. image:: /_static/img/menu_webhooks_screenshot.png
-   :alt: Webhooks Menu Item
+      <hr>
 
-.. raw:: html
+   .. image:: /_static/img/webhook_secret_key.png
+      :alt: Webhook Security Key
 
-   <hr>
+3. Compare the signatures
 
-.. image:: /_static/img/webhook_secret_key.png
-   :alt: Webhook Security Key
-
-**3. Compare the signatures**
-
-  Compare the signature from the header with your calculated signature.
+   Compare the signature from the header with your calculated signature.
 
 **Examples:**
 

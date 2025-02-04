@@ -19,9 +19,9 @@ a few quick steps by adding the below scripts to your site.
    Add the :ref:`Talkable Initialization Script <integration/loyalty/integration_components/initialization_script>`
    to your header or any template spanning every page.
 
- .. note::
+.. note::
 
-    Skip this step if you already have Talkable integrated on your site
+   Skip this step if you already have Talkable integrated on your site
 
 2. Add Loyalty Dashboard.
 
@@ -61,10 +61,10 @@ a few quick steps by adding the below scripts to your site.
    .. figure:: /_static/img/loyalty/redemption_batches.png
       :alt: Redemption batches
 
- .. note::
+.. note::
 
-    All design and loyalty campaign setup is done inside the Talkable platform,
-    then via iframe loyalty campaign content is injected into the site.
+   All design and loyalty campaign setup is done inside the Talkable platform,
+   then via iframe loyalty campaign content is injected into the site.
 
 .. raw:: html
 

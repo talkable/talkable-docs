@@ -31,8 +31,8 @@ particular email.
 
 By default the email is sent in 72 hours after the offer is shared.
 
-1. Main email sending criteria (unable to change):
+Main email sending criteria (unable to change):
 
-  - If |friend| offer is active
-  - Recipient (|friend|) was not referred by this offer yet
-  - Current offer is the last one shared with the recipient (if were delayed few reminders Talkable sends the last one)
+-  If |friend| offer is active
+-  Recipient (|friend|) was not referred by this offer yet
+-  Current offer is the last one shared with the recipient (if were delayed few reminders Talkable sends the last one)

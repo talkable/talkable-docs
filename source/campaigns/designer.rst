@@ -69,8 +69,8 @@ and solid ones:
 
 1. Purchase web-compatible font on https://www.myfonts.com
 
-.. image:: /_static/img/liquid/designer/image6.png
-   :alt: myfonts.com
+   .. image:: /_static/img/liquid/designer/image6.png
+      :alt: myfonts.com
 
 2. Purchase on https://fonts.adobe.com
 
