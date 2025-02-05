@@ -8,6 +8,17 @@
 .. meta::
    :description: Talkable campaigns, features and integration docs for referral program launch and settings.
 
+.. raw:: html
+
+   <div style="visibility: hidden; height: 0; overflow: hidden;">
+
+Main
+====
+
+.. raw:: html
+
+   </div>
+
 .. grid:: 1 2 2 2
 
     .. grid-item::
