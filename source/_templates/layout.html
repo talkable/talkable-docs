@@ -2,11 +2,7 @@
 
 {# Set the title and sitename divider to '|' and hide 'no title' if the page has no title #}
 {% block htmltitle %}
-  {% if title == "&lt;no title&gt;" %}
-    <title>{{ docstitle|e }}</title>
-  {% else %}
-    <title>{{ title|striptags|e }} | {{ docstitle|e }}</title>
-  {% endif %}
+  <title>{{ title|striptags|e }} | {{ docstitle|e }}</title>
 {% endblock %}
 
 {# Google Tag Manager injection #}

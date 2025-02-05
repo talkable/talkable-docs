@@ -19,7 +19,7 @@ With these tools, Talkable synchronizes everyone who opts in for Talkable market
 
       .. toctree::
          :maxdepth: 1
-
+      
          email_marketing_and_automation/bluecore
          email_marketing_and_automation/braze
          email_marketing_and_automation/cordial
@@ -28,13 +28,13 @@ With these tools, Talkable synchronizes everyone who opts in for Talkable market
          email_marketing_and_automation/klaviyo
          email_marketing_and_automation/yotpo
          email_marketing_and_automation/ometria
-
-
+         
+    
    .. grid-item::
 
       .. toctree::
          :maxdepth: 1
-
+        
          email_marketing_and_automation/oracle_bronto
          email_marketing_and_automation/omnisend
          email_marketing_and_automation/mailchimp
@@ -44,7 +44,7 @@ With these tools, Talkable synchronizes everyone who opts in for Talkable market
          email_marketing_and_automation/getresponse
          email_marketing_and_automation/targetbay
          email_marketing_and_automation/emarsys
-
+   
    .. grid-item::
 
       .. toctree::

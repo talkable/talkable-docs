@@ -146,7 +146,10 @@ Add the package to `requirements.txt`.
 Append the package name to `requirements.txt` (version specification is optional at this stage).
 
 > [!NOTE]
+<<<<<<< HEAD
 >
+=======
+>>>>>>> enver-PR-23855-url-redirect-improvement
 > Version pinning can be done later.
 
 Rebuild the container after modifying `requirements.txt`:
