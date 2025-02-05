@@ -5,5 +5,11 @@
 sphinx-copybutton
 sphinx-sitemap
 sphinx-autobuild
-sphinx-book-theme
 sphinx-design
+
+# sphinx-book-theme
+pydata-sphinx-theme==0.15.4
+# Book theme version has been hardcoded due to the navbar issue starting from PyData v0.16
+# Read more here https://github.com/pydata/pydata-sphinx-theme/issues/2067
+# Please make sure the issue has been fixed before bumping teh version
+
