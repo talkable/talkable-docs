@@ -1,4 +1,4 @@
-.. _integration/ecommerce_platforms/demandware:
+.. _integration/ecommerce_platforms/sfcc:
 .. include:: /partials/common.rst
 
 .. meta::

@@ -7,8 +7,8 @@ RUN python3 -m pip install -r requirements.txt
 
 CMD if [ "$ENVIRONMENT" = "development" ]; then \
         echo "Running Sphinx in Development mode"; \
-        sphinx-autobuild -b dirhtml /docs/source /docs/_build; \
+        sphinx-autobuild --builder dirhtml /docs/source /docs/_build; \
     else \
         echo "Running Sphinx in Staging/Production mode"; \
-        sphinx-build -b dirhtml -a -E /docs/source /docs/_build; \
+        sphinx-build --builder dirhtml --write-all --fresh-env /docs/source /docs/_build; \
     fi
