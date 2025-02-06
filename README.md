@@ -113,7 +113,7 @@ name "Talkable Section".
 
 ## Redirects
 
-> **!IMPORTANT**
+> [!IMPORTANT]
 > Please update the redirect rules if you change the file name, file path, or delete a file.
 
 Redirects are implemented using the [sphinx-reredirects](https://documatt.com/sphinx-reredirects/) extension. For setup instructions, refer to the [usage 
