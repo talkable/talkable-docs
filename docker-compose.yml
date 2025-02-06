@@ -9,7 +9,7 @@ services:
       - docs-nginx
     volumes:
       - ./source:/docs/source
-      - docs_build:/docs/_build
+      - ./docs_build:/docs/_build
     environment:
       - ENVIRONMENT=${ENVIRONMENT}
       - LOCAL_PORT=${LOCAL_PORT}
@@ -23,7 +23,7 @@ services:
     networks:
       - docs-nginx
     volumes:
-      - docs_build:/var/www/html
+      - ./docs_build:/var/www/html
       - ./nginx/conf.d:/etc/nginx/conf.d
       - ./nginx/robots/${ENVIRONMENT}.txt:/var/www/robots.txt
     ports:
