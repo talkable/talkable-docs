@@ -14,7 +14,7 @@ E-commerce Platforms
       .. toctree::
          :maxdepth: 2 
       
-         ecommerce_platforms/demandware
+         ecommerce_platforms/sfcc
          ecommerce_platforms/shopify
     
    .. grid-item::

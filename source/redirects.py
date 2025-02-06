@@ -6,6 +6,7 @@ redirects = {
      "api_v2/refunds": "../../api_v2/intro/",
      "api_v2/visitors": "../../api_v2/intro/",
      "campaigns/views/affiliate_members_new": "../../../campaigns/views/offers_show/",
+     "integration/ecommerce_platforms/demandware": "../../../integration/ecommerce_platforms/sfcc/",
      "payment_solutions":"../custom_integration/recharge/",
      "payment_solutions/recharge": "../../custom_integration/recharge/",
 }
