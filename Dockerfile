@@ -10,5 +10,5 @@ CMD if [ "$ENVIRONMENT" = "development" ]; then \
         sphinx-autobuild -b dirhtml /docs/source /docs/_build; \
     else \
         echo "Running Sphinx in Staging/Production mode"; \
-        sphinx-build -b dirhtml /docs/source /docs/_build; \
+        sphinx-build -b dirhtml -a -E /docs/source /docs/_build; \
     fi
