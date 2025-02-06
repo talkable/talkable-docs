@@ -25,7 +25,7 @@ Main
 
         .. raw:: html
 
-          <h3>Talkable Basics2</h3>
+          <h3>Talkable Basics</h3>
 
         .. toctree::
           :maxdepth: 2 
