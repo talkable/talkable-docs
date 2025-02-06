@@ -47,6 +47,24 @@ The criteria can be defined using one of the following operators:
 .. note::
   Custom Property Criteria require integration version 5.1.4 or higher to work.
 
+Container Name
+--------------
+
+It is possible to update the container name by requesting assistance from the Talkable team.
+The current DIV id value for each Event Category can be found on the Placements page.
+
+By default, the DIV id is:
+
+* `talkable-offer` for `affiliate_member` event category which includes: Standalone, Standalone Dashboard, Floating Widget, Gleam;
+* `talkable-post-purchase` for `purchase` event category which includes: Post Purchase;
+* `talkable-claim-by-name` for `claim_by_name_popup` event category which includes: Claim By Name;
+* `talkable-email-capture-offer` for `email_capture_popup` event category which includes: Conversion Popup;
+* `talkable-loyalty` for `loyalty_dashboard` and `loyalty_widget` event categories which include: Loyalty Dashboard and Loyalty Widget.
+
+.. note::
+   Container name changes require integration version 5.3.0 or higher to work.
+
+|hr|
 
 Referral Placements
 ~~~~~~~~~~~~~~~~~~~

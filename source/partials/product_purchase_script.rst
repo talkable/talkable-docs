@@ -31,7 +31,9 @@
       },
       customer: {
         email: '', // Required - Email of the customer who issued a purchase. Example: 'customer@example.com'
-        traffic_source: '' // The source of the traffic driven to the campaign. Example: 'facebook'
+        traffic_source: '', // The source of the traffic driven to the campaign. Example: 'facebook'
+        phone_optin: false, // Indicates whether the customer has provided consent for phone opt-in. The value should be boolean. If set to true, a valid phone number must be provided.
+        email_optin: false // Indicates whether the customer has provided consent for email opt-in. The value should be boolean.
       }
     };
 
