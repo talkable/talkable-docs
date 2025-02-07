@@ -5,7 +5,7 @@
    :description: Integrate BHN Rewards (formerly Rybbon) with your Talkable system to generate gift claim links and manage campaign-specific rewards.
 
 BHN Rewards (formerly Rybbon)
-============================
+=============================
 
 Overview
 --------
