@@ -25,21 +25,21 @@ Main
 
         .. raw:: html
 
-          <h3>Talkable Basics</h3>
+          <h3>Talkable Basics333</h3>
 
         .. toctree::
-          :maxdepth: 2 
-        
+          :maxdepth: 2
+
           campaigns
           advanced_features
-        
+
         .. raw:: html
 
           <h3>Custom Integration</h3>
 
         .. toctree::
-          :maxdepth: 2 
-        
+          :maxdepth: 2
+
           custom_integration
 
     .. grid-item::
@@ -49,8 +49,8 @@ Main
           <h3>Email Marketing & Automation</h3>
 
         .. toctree::
-          :maxdepth: 2 
-        
+          :maxdepth: 2
+
           email_marketing_and_automation
 
         .. raw:: html
@@ -58,12 +58,12 @@ Main
           <h3>JS Integration</h3>
 
         .. toctree::
-          :maxdepth: 2 
-        
+          :maxdepth: 2
+
           integration/custom_integration
           integration/loyalty
-          integration/ecommerce_platforms 
-        
+          integration/ecommerce_platforms
+
 
     .. grid-item::
 
@@ -72,8 +72,8 @@ Main
           <h3>Back-end Integration</h3>
 
         .. toctree::
-          :maxdepth: 2 
-        
+          :maxdepth: 2
+
           api_v2
           web_hooks
 
@@ -84,8 +84,8 @@ Main
           <h3>For Mobile</h3>
 
         .. toctree::
-          :maxdepth: 2 
-        
+          :maxdepth: 2
+
           ios_sdk
           android_sdk
 
