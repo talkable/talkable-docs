@@ -95,9 +95,10 @@ deploy_docs() {
     git checkout ${BRANCH_NAME}
     git branch -a
     git pull origin
-    docker-compose ls
+    docker compose ls
     docker ps
-    docker-compose up -d --build --remove-orphans --force-recreate
+    docker compose restart
+    docker compose up -d --build --remove-orphans
 EOF
 }
 
@@ -105,7 +106,7 @@ deploy_check() {
   remote_ssh_exec <<EOF
     set -e
     cd ${PROJECT_ROOT}/
-    docker-compose ls | grep ${SUBPROJECT}
+    docker compose ls | grep ${SUBPROJECT}
     docker ps | grep ${SUBPROJECT}
 EOF
 }
