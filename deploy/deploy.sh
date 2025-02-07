@@ -97,7 +97,7 @@ deploy_docs() {
     git pull origin
     docker-compose ls
     docker ps
-    docker-compose up -d --build --remove-orphans
+    docker-compose up -d --build --remove-orphans --force-recreate
 EOF
 }
 
