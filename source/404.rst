@@ -1,0 +1,16 @@
+:orphan:
+:no-search:
+
+.. include:: /partials/common.rst
+
+.. meta::
+   :description: Page not found
+
+Oops!
+=====
+
+.. raw:: html
+
+   <h2>The page you're looking for can't be found.</h2>
+
+It might have been moved or never existed.
