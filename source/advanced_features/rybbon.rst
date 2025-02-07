@@ -18,14 +18,14 @@ This documentation provides a guide on integrating the BHN Rewards (formerly Ryb
 Functionality
 -------------
 
-The BHN Rewards (formerly Rybbon) integration allows you to make a claim request within the scope of a specific campaign key and returns a gift claim link.
+The BHN Rewards integration allows you to make a claim request within the scope of a specific campaign key and returns a gift claim link.
 
 Example Usage
 -------------
 
 1. **Generating a Gift Claim Link**
 
-   Takes a campaign key of a BHN Rewards (formerly Rybbon) Talkable campaign to generate a claim link.
+   Takes a campaign key of a BHN Rewards Talkable campaign to generate a claim link.
 
    .. code-block:: liquid
 
@@ -34,9 +34,9 @@ Example Usage
    This returns a link similar to:
    `https://www.rybbon.net/redeem.php?claimcode=ee645de47765bdbede751c8c6f08a619`
 
-2. **Custom Reward Amount for BHN Rewards (formerly Rybbon) Campaigns**
+2. **Custom Reward Amount for BHN Rewards Campaigns**
 
-   Allows setting a custom reward amount for BHN Rewards (formerly Rybbon) campaigns with variable denomination. The minimum amount conforms to specific BHN Rewards (formerly Rybbon) gift card restrictions, and the maximum is 50.
+   Allows setting a custom reward amount for BHN Rewards campaigns with variable denomination. The minimum amount conforms to specific BHN Rewards gift card restrictions, and the maximum is 50.
 
    .. code-block:: liquid
 
@@ -45,7 +45,7 @@ Example Usage
 Limitations
 -----------
 
-- Minimum and maximum reward amounts vary based on the specific BHN Rewards (formerly Rybbon) gift card settings.
+- Minimum and maximum reward amounts vary based on the specific BHN Rewards gift card settings.
 - Custom reward amounts must not exceed the maximum value of 50.
 
 **Contact us**
