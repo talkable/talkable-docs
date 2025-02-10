@@ -1,10 +1,13 @@
+server_tokens off;
+
 server {
     listen 80;
     server_name _;
 
     root /var/www/html; 
     index index.html;
-
+    error_page 404 =404 /404/;
+    
     # Basic security headers
     add_header X-Frame-Options "SAMEORIGIN";
     add_header X-Content-Type-Options "nosniff";
@@ -66,5 +69,11 @@ server {
         }
 
         try_files $uri $uri/ =404;
+    }
+
+    # This location handles direct requests to the /404/ page by returning a 404 error.
+    location /404/ {
+        internal;
+        try_files /404/index.html =404;
     }
 }

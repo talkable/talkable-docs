@@ -10,7 +10,7 @@ pipeline {
         LOCAL_PORT="8080"
     }
     triggers {
-        pollSCM('* * * * *') // Polls SCM every minute
+        pollSCM('* 10-17 * * 1,2,3,4')
     }
     parameters {
         choice(name: "DEPLOY_COMMAND",

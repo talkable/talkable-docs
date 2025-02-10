@@ -111,6 +111,26 @@ Here is a reference to "talkable section": :ref:`talkable-section` which will ha
 name "Talkable Section".
 ```
 
+## Redirects
+
+> [!IMPORTANT]
+> Please update the redirect rules if you change the file name, file path, or delete a file.
+
+Redirects are implemented using the [sphinx-reredirects](https://documatt.com/sphinx-reredirects/) extension. For setup instructions, refer to the [usage 
+guide](https://documatt.com/sphinx-reredirects/usage.html).
+
+To add a redirect rule, you need to update the rules in the `[./redirects.py]` file.
+
+**Example:**
+
+- Redirecting a subdirectory to another location:
+
+  `/payment_solutions/recharge/` => `/custom_integration/recharge/`
+  
+  ```python
+      "payment_solutions/recharge": "../../custom_integration/recharge/"
+  ```
+
 ## Troubleshooting
 
 #### Can't view the documentation locally in the browser?
