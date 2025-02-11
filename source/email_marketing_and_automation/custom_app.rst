@@ -42,7 +42,7 @@ To verify the signature, you should complete the following steps:
    Create a JSON string from the payload of the request.
 
 2. Determine the expected signature
-  
+
    - Compute an hex encoded **HMAC** with the **SHA256** hash function. Use the **Webhook security key** as a key, and use the `payload_json` string as a message.
    - Encode a computed hash with **Base64**
 
@@ -312,7 +312,6 @@ This action automatically synchronizes all tier transitions of loyalty members w
      "site_id": "1",
      "email": "loyalty@talkable.com"
    }
-
 
 Testing
 -------
