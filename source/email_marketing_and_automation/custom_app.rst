@@ -313,7 +313,6 @@ This action automatically synchronizes all tier transitions of loyalty members w
      "email": "loyalty@talkable.com"
    }
 
-
 Testing
 -------
 
