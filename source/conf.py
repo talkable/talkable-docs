@@ -22,6 +22,7 @@ sys.path.insert(0, os.path.abspath("."))
 
 # Import Talkable custom code
 from _utils import baseurl
+from redirects import redirects
 
 # -- General configuration ------------------------------------------------
 
@@ -35,6 +36,7 @@ extensions = [
     "sphinx_sitemap",
     "sphinx_copybutton",
     "sphinx_design",
+    'sphinx_reredirects',
 ]
 
 sitemap_url_scheme = "{link}"
@@ -221,3 +223,8 @@ man_pages = [(master_doc, "talkable", "Talkable Documentation", [author], 1)]
 
 # If true, show URL addresses after external links.
 # man_show_urls = False
+
+sitemap_excludes = [
+    "search/",
+    "404/",
+]
