@@ -30,6 +30,7 @@ pipeline {
         stage('Preparation') {
             steps {
                 script {
+                    JENKINS_BUILD_CAUSE = "${currentBuild.buildCauses.shortDescription}"
                     wrap([$class: 'BuildUser']) {
                         JENKINS_BUILD_USER_ID = "${BUILD_USER_ID}"
                         currentBuild.displayName = "${JOB_BASE_NAME}-${BUILD_NUMBER}"
