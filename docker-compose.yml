@@ -26,6 +26,7 @@ services:
       - docs_build:/var/www/html
       - ./nginx/templates:/etc/nginx/templates
       - ./nginx/robots/${ENVIRONMENT}.txt:/var/www/robots.txt
+      - ./nginx/redirects.conf:/etc/nginx/redirects.conf
     ports:
       - ${LOCAL_PORT}:80
     
