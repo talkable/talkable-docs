@@ -116,20 +116,19 @@ name "Talkable Section".
 > [!IMPORTANT]
 > Please update the redirect rules if you change the file name, file path, or delete a file.
 
-Redirects are implemented using the [sphinx-reredirects](https://documatt.com/sphinx-reredirects/) extension. For setup instructions, refer to the [usage 
-guide](https://documatt.com/sphinx-reredirects/usage.html).
+Redirects are implemented using the Nginx `rewrite` rules stored in [./nginx/redirects.conf](./nginx/redirects.conf) file.
 
-To add a redirect rule, you need to update the rules in the `[./redirects.py]` file.
+After changing that file reload nginx to get the rules applied.
 
-**Example:**
+```bash
+docker container restart docs-nginx-development 
+```
 
-- Redirecting a subdirectory to another location:
-
-  `/payment_solutions/recharge/` => `/custom_integration/recharge/`
-  
-  ```python
-      "payment_solutions/recharge": "../../custom_integration/recharge/"
-  ```
+> [!TIP]
+> 
+> - Use ChatGPT to adjust existing or add new rules. Ask for `nginx redirection rules`.
+>
+> - Avoid creating the rules by operating on something except paths (like protocols and hostnames). The best way is to manipulate paths only.
 
 ## Troubleshooting
 
