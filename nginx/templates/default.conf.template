@@ -33,6 +33,8 @@ server {
     absolute_redirect off;
     port_in_redirect on;
 
+    include /etc/nginx/redirects.conf;
+
     # Serve static assets with long cache
     location ~* \.(?:css|js|jpe?g|png|gif|ico|svg|woff2?|ttf|eot|otf|webp)$ {
         expires 1y;
