@@ -1089,7 +1089,7 @@ Accepts custom amount of reward for BHN Rewards (formerly Rybbon) campaigns with
 
    {{ "a9a3472f4ea858758e0cd686de8408e2" | rybbon: amount: 13.5 }}
 
-Find more details about the integration here: :ref:`BHN Rewards (formerly Rybbon) <advanced_features/rybbon>`
+Find more details about the integration here: :ref:`BHN Rewards (formerly Rybbon) <advanced_features/bhnrewards>`
 
 |hr|
 
