@@ -1,10 +1,13 @@
+server_tokens off;
+
 server {
     listen 80;
     server_name _;
 
     root /var/www/html; 
     index index.html;
-
+    error_page 404 =404 /404/;
+    
     # Basic security headers
     add_header X-Frame-Options "SAMEORIGIN";
     add_header X-Content-Type-Options "nosniff";
@@ -29,6 +32,8 @@ server {
     # Helps preserve the port in redirects when not on 80/443
     absolute_redirect off;
     port_in_redirect on;
+
+    include /etc/nginx/redirects.conf;
 
     # Serve static assets with long cache
     location ~* \.(?:css|js|jpe?g|png|gif|ico|svg|woff2?|ttf|eot|otf|webp)$ {
@@ -66,5 +71,11 @@ server {
         }
 
         try_files $uri $uri/ =404;
+    }
+
+    # This location handles direct requests to the /404/ page by returning a 404 error.
+    location /404/ {
+        internal;
+        try_files /404/index.html =404;
     }
 }

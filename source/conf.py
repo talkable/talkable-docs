@@ -221,3 +221,8 @@ man_pages = [(master_doc, "talkable", "Talkable Documentation", [author], 1)]
 
 # If true, show URL addresses after external links.
 # man_show_urls = False
+
+sitemap_excludes = [
+    "search/",
+    "404/",
+]

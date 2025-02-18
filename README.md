@@ -35,7 +35,7 @@ The repository consists of the following branches:
 
 1. **Navigate to the repository root directory.**
 
-  Ensure the `docker-compose.yml` file is located there.
+   Ensure the `docker-compose.yml` file is located there.
 
 2. **Create an `.env` file by copying `.env.template`.**
 
@@ -110,6 +110,23 @@ Talkable Subsubsection
 Here is a reference to "talkable section": :ref:`talkable-section` which will have the
 name "Talkable Section".
 ```
+
+## Redirects
+
+> [!IMPORTANT]
+> Please update the redirect rules if you change the file name, file path, or delete a file.
+
+Redirects are implemented using the Nginx `rewrite` rules stored in [./nginx/redirects.conf](./nginx/redirects.conf) file.
+
+After changing that file reload nginx to get the rules applied.
+
+```bash
+docker container restart docs-nginx-development 
+```
+
+> [!TIP]
+> 
+> Avoid creating rules that manipulate anything other than paths (such as protocols and hostnames). The best approach is to modify paths only.
 
 ## Troubleshooting
 
