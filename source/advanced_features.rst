@@ -117,7 +117,7 @@ each with links to integration details.
     advanced_features/segments
     advanced_features/subscribing_to_events
     advanced_features/reg_ex
-    advanced_features/rybbon
+    advanced_features/bhnrewards
     advanced_features/url_parameters
     advanced_features/utm_tags
     advanced_features/white_labeling
