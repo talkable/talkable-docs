@@ -35,7 +35,7 @@ The repository consists of the following branches:
 
 1. **Navigate to the repository root directory.**
 
-  Ensure the `docker-compose.yml` file is located there.
+   Ensure the `docker-compose.yml` file is located there.
 
 2. **Create an `.env` file by copying `.env.template`.**
 
@@ -126,9 +126,13 @@ docker container restart docs-nginx-development
 
 > [!TIP]
 > 
+<<<<<<< HEAD
 > - Use ChatGPT to adjust existing or add new rules. Ask for `nginx redirection rules`.
 >
 > - Avoid creating the rules by operating on something except paths (like protocols and hostnames). The best way is to manipulate paths only.
+=======
+> Avoid creating rules that manipulate anything other than paths (such as protocols and hostnames). The best approach is to modify paths only.
+>>>>>>> vo-PR-23725
 
 ## Troubleshooting
 

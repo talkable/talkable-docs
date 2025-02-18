@@ -1,4 +1,4 @@
-.. _advanced_features/rybbon:
+.. _advanced_features/bhnrewards:
 .. include:: /partials/common.rst
 
 .. meta::
