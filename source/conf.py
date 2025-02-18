@@ -22,7 +22,6 @@ sys.path.insert(0, os.path.abspath("."))
 
 # Import Talkable custom code
 from _utils import baseurl
-from redirects import redirects
 
 # -- General configuration ------------------------------------------------
 
@@ -36,7 +35,6 @@ extensions = [
     "sphinx_sitemap",
     "sphinx_copybutton",
     "sphinx_design",
-    'sphinx_reredirects',
 ]
 
 sitemap_url_scheme = "{link}"

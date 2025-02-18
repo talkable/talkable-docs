@@ -35,7 +35,7 @@ The repository consists of the following branches:
 
 1. **Navigate to the repository root directory.**
 
-  Ensure the `docker-compose.yml` file is located there.
+   Ensure the `docker-compose.yml` file is located there.
 
 2. **Create an `.env` file by copying `.env.template`.**
 
@@ -116,20 +116,17 @@ name "Talkable Section".
 > [!IMPORTANT]
 > Please update the redirect rules if you change the file name, file path, or delete a file.
 
-Redirects are implemented using the [sphinx-reredirects](https://documatt.com/sphinx-reredirects/) extension. For setup instructions, refer to the [usage 
-guide](https://documatt.com/sphinx-reredirects/usage.html).
+Redirects are implemented using the Nginx `rewrite` rules stored in [./nginx/redirects.conf](./nginx/redirects.conf) file.
 
-To add a redirect rule, you need to update the rules in the `[./redirects.py]` file.
+After changing that file reload nginx to get the rules applied.
 
-**Example:**
+```bash
+docker container restart docs-nginx-development 
+```
 
-- Redirecting a subdirectory to another location:
-
-  `/payment_solutions/recharge/` => `/custom_integration/recharge/`
-  
-  ```python
-      "payment_solutions/recharge": "../../custom_integration/recharge/"
-  ```
+> [!TIP]
+> 
+> Avoid creating rules that manipulate anything other than paths (such as protocols and hostnames). The best approach is to modify paths only.
 
 ## Troubleshooting
 
