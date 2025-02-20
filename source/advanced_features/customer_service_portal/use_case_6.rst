@@ -39,14 +39,14 @@ with this information:
    campaign will appear immediately.
 5. Press “Create Referral” button.
 
-.. image:: /_static/img/advanced_features/customer_service_portal/create_referral.jpg
+.. image:: /_static/img/advanced_features/customer_service_portal/create_referral.png
 
 Viewing the results of the manually created referral
 ----------------------------------------------------
 
 After creating the referral manually you will be taken to the newly created referral details page:
 
-.. image:: /_static/img/advanced_features/customer_service_portal/advocate_reward.jpg
+.. image:: /_static/img/advanced_features/customer_service_portal/advocate_reward.png
 
 Advocate reward may be blocked due to incentive criteria, make sure to check the Advocate’s reward status as shown
 on the screenshot above.

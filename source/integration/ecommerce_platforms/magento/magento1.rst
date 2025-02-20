@@ -46,7 +46,7 @@ integration. The extension currently supports Magento versions 1.5+
 
 5. Go back to Talkable Integration page and click "Verify Integration" button:
 
-   .. image:: /_static/img/magento/magento-flow-4.jpg
+   .. image:: /_static/img/magento/magento-flow-4.png
 
 .. raw:: html
 

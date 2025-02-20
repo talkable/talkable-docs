@@ -29,7 +29,7 @@ Here are the steps we’re going to take:
 Referral details
 ----------------
 
-.. image:: /_static/img/advanced_features/customer_service_portal/click_to_referral_details.jpg
+.. image:: /_static/img/advanced_features/customer_service_portal/click_to_referral_details.png
 
 (Notice that the screen is divided into 2 main sections. The bottom section has 7 tabs referencing additional
 sections. We’ll get to those later. For now, we’re interested in “Referrals” and want to scroll down to find Levi,
