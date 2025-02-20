@@ -1073,9 +1073,9 @@ Returns
 rybbon
 ......
 
-Takes a campaign key of a Rybbon Talkable campaign.
+Takes a campaign key of a BHN Rewards (formerly Rybbon) Talkable campaign.
 Makes a claim request within the scope of the given campaign and returns a gift claim link.
-Requires Rybbon app to be installed and enabled in order to work.
+Requires BHN Rewards (formerly Rybbon) app to be installed and enabled in order to work.
 
 .. code-block:: liquid
 
@@ -1083,13 +1083,13 @@ Requires Rybbon app to be installed and enabled in order to work.
 
 Returns ``https://www.rybbon.net/redeem.php?claimcode=ee645de47765bdbede751c8c6f08a619``
 
-Accepts custom amount of reward for Rybbon campaigns with variable denomination. The minimum amount conforms to each specific Rybbon gift card restrictions. The maximum amount is 50.
+Accepts custom amount of reward for BHN Rewards (formerly Rybbon) campaigns with variable denomination. The minimum amount conforms to each specific Rybbon gift card restrictions. The maximum amount is 50.
 
 .. code-block:: liquid
 
    {{ "a9a3472f4ea858758e0cd686de8408e2" | rybbon: amount: 13.5 }}
 
-Find more details about the integration here: :ref:`Rybbon <advanced_features/rybbon>`
+Find more details about the integration here: :ref:`BHN Rewards (formerly Rybbon) <advanced_features/bhnrewards>`
 
 |hr|
 
