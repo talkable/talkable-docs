@@ -22,7 +22,7 @@ To find (2) Advocate’s participating campaign:
 2. Navigate to “Offers” tab to see the participating campaigns.
 3. Remember the Advocate’s Email and Campaign for Part 2.
 
-.. image:: /_static/img/advanced_features/customer_service_portal/offers.jpg
+.. image:: /_static/img/advanced_features/customer_service_portal/offers.png
 
 Creating the referral
 ---------------------
