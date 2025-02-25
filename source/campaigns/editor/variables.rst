@@ -22,7 +22,7 @@ navigation:
 
 |br|
 
-Each Variable is represented with Name, Liquid notation, Value:
+Each Variable is represented with Name and Value:
 
 .. image:: /_static/img/editor/vars-variable.png
    :alt: Variables: variable
@@ -115,24 +115,18 @@ Personal data for |advocate|.
 
 |br|
 
-{{ coupon_code }}
+{{ coupon }}
 -----------------
 
 **Available in**: Friend Claim Page, Advocate Redemption Email, Advocate Reward
 Paid Email |br|
 **Type**: ``String``
 
-Coupon Code is given to a person as a Reward based on Incentive (condition of
+Coupon is given to a person as a Reward based on Incentive (condition of
 giving out the Reward).
 
-When you want to use this Variable always keep in mind who you want to
-show it to because it has a scope:
-
-* for Views which name starts with |advocate| it means Advocate Coupon Code
-* for Views which name starts with |friend| it means Friend Coupon Code
-
-.. image:: /_static/img/editor/vars-friend-coupon-code.png
-   :alt: Variables: friend coupon code
+.. image:: /_static/img/editor/vars-friend-coupon.png
+   :alt: Variables: friend coupon
 
 |br|
 
