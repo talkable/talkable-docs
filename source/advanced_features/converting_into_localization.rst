@@ -147,10 +147,8 @@ In addition to localizing Images, Colors, and static copy Talkable allows you to
 An example can be to create an AB test for Equal Emphasis (all 3 sharing channels look visually equal) vs. Email Emphasis where email sharing form stands out:
 
 .. image:: /_static/img/advanced_features/share_page_equal_emphasis.png
-  :height: 250 px
 
 .. image:: /_static/img/advanced_features/share_page_email_emphasis.png
-  :height: 250 px
 
 In order to chieve this AB test we need to:
 

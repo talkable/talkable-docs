@@ -20,7 +20,7 @@ Setting can be found inside ``Campaign → Rules → Extra section`` for both Ad
 
 Inside the campaign, you can change the default setting for the consent checkbox.
 
-.. image:: /_static/img/advanced_features/phone_number_campaign_settings.jpg
+.. image:: /_static/img/advanced_features/phone_number_campaign_settings.png
 
 Synchronization with ESPs
 -------------------------

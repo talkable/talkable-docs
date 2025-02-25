@@ -114,14 +114,14 @@ Available options in **Metrics Aggregation Report**:
 
 * segmentation by currencies
 * filter by the currency of the purchase/event
-* select a currency to convert the amounts to
+* select specific segment currency
 
 .. image:: /_static/img/advanced_features/multi_currency_mar.png
   :width: 300
 
 .. note::
 
-   If a currency to convert to is not specified, the site currency is used for conversion.
+   Leave 'Reporting Currency' blank to convert every metric to site's default currency unless segmentation by currency is selected.
 
 Available options in **Purchases** and **Events** reports:
 

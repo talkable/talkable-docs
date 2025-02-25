@@ -47,7 +47,7 @@ Please use the following guide to start using an app you need:
 3. Fill in all necessary fields. You can use tips on the right that instruct how to find all necessary credentials.
 4. Complete installation and enable the app:
 
-   .. image:: /_static/img/email_marketing_and_automation/hubspot.jpg
+   .. image:: /_static/img/email_marketing_and_automation/hubspot.png
       :alt: hubspot
 
 5. Test the app by pressing on the “Send sample payload” and then check if you are seeing a test request inside your ESP:

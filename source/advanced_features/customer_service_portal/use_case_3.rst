@@ -7,7 +7,7 @@ Use case #3: |br| Who should get the reward?
 Talkable does not issue a reward in all referral cases. There may be numerous reasons why a reward is not issued to
 an Advocate or Friend. The easiest way to find out the reward status is by visiting the Referrals tab:
 
-.. image:: /_static/img/advanced_features/customer_service_portal/referrals.jpg
+.. image:: /_static/img/advanced_features/customer_service_portal/referrals.png
 
 Navigating to each referral ‘Details’ page we can find out the status for each reward. Reason near the reward
 status explains why the reward was not given.
@@ -73,7 +73,7 @@ Here is how to detect self-referrals in case you’ve got an email/call from a c
 
 3. Inspect the customer’s email address to see if it’s the same or similar to the Friends; you  can also inspect inside the referral details the IP address and cookie to see if they match:
 
-   .. image:: /_static/img/advanced_features/customer_service_portal/fraud_settings.jpg
+   .. image:: /_static/img/advanced_features/customer_service_portal/fraud_settings.png
 
 4. If it’s not obvious why the customer was flagged for self-referral (meaning that none of these three items matched),
    then you should click “Details” to dive deeper.
