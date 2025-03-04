@@ -183,5 +183,5 @@ Please modify the front-end using this pseudo code example:
 
 .. _Talkable Public Key: https://d2jjzw81hqbuqv.cloudfront.net/integration/talkable_public_key.pem
 .. _Bouncy Castle Library: https://www.bouncycastle.org
-.. _Bouncy Castle Latest Releases: http://git.bouncycastle.org/latest_releases.html
+.. _Bouncy Castle Latest Releases: https://www.bouncycastle.org/download/bouncy-castle-java/#latest
 .. _Optimal Asymmetric Encryption Padding (OAEP): https://en.wikipedia.org/wiki/Optimal_asymmetric_encryption_padding

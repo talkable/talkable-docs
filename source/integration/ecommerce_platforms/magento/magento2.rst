@@ -7,15 +7,14 @@
 Magento 2.x Integration
 =======================
 
+The Magento 2.x Integration is **temporarily unavailable**.
+
 .. note::
 
    To get started, you must have an account created with Talkable, and a Magento Marketplace account.
    If you do not have a Magento Marketplace account configured, follow
    `these steps <https://docs.magento.com/user-guide/magento/magento-marketplace.html#marketplace-credentials>`_
    to connect one to your Magento store.
-
-The `Magento 2 Integration Extension`_ is available to download in the Magento Marketplace.
-The extension supports all versions of Magento 2.0 or higher.
 
 |page_break|
 
@@ -27,7 +26,7 @@ Installation
    Installation via Composer requires an IT administrator with SSH access to the server where Magento 2 is hosted.
    To install the Talkable extension, you’ll need to execute four commands.
 
-1. Visit the Magento Marketplace and get the `Talkable extension`_.
+1. Visit the Magento Marketplace and get the Talkable extension.
 
    .. image:: /_static/img/magento2/install.jpg
 
@@ -150,6 +149,4 @@ Default values correspond to default placements in Talkable.
 
 .. image:: /_static/img/magento2/configure6.jpg
 
-.. _Talkable extension:
-.. _Magento 2 Integration Extension: https://commercemarketplace.adobe.com/talkable-magento2-integration.html
 .. _Magento Extensions Guide: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/extensions.html
