@@ -130,6 +130,7 @@ please follow the instructions below.
              If your main section is disabled, remove the row that does it.
 
     3.  Create a page:
+
         * Exit theme editor if it was opened
         * Go to **Online Store** → **Pages**
         * Click “Add page“
