@@ -14,9 +14,9 @@ Automatic integration
 
 .. note::
 
-    If you have previously integrated with Talkable, make sure you remove the manual
-    Talkable integration script located in the Additional Content & Scripts section before
-    you start the Automatic integration process. See `Manual integration`_ for details.
+   If you have previously integrated with Talkable, make sure you remove the manual
+   Talkable integration script located in the Additional Content & Scripts section before
+   you start the Automatic integration process. See `Manual integration`_ for details.
 
 1. Contact sales@talkable.com to learn about our pricing and set up an account with Talkable
 
@@ -31,10 +31,17 @@ Automatic integration
 
    .. note::
 
-    Post Purchase campaign is located at the “Thank you” page after Checkout.
+      Post Purchase campaign is located at the “Thank you” page after Checkout.
 
-    To check how Standalone Campaign looks visit */pages/share* or */pages/invite* links of your store.
-    You can edit these links in Administrative panel of your store.
+      To check how Standalone Campaign looks visit */pages/share* or */pages/invite* links of your store.
+      You can edit these links in Administrative panel of your store.
+
+   .. important::
+
+      If you are managing the Shopify theme code using a `Shopify Github integration`_,
+      make sure to pull the changes to the theme made by the automatic integration to avoid
+      resetting them with a commit. The theme updates are described in the
+      :ref:`Manual integration instructions<integration/ecommerce_platforms/shopify/manual_integration>`.
 
 .. _integration/ecommerce_platforms/shopify/manual_integration:
 
@@ -56,7 +63,7 @@ please follow the instructions below.
 7.  In your Shopify Admin, add the integration to your layout:
 
     1.  Create a snippet:
-        
+
         * Go to **Online Store** → **Themes**
         * Click **Actions** ("..." button) → **Edit code**
         * Go to **Snippets**
@@ -71,7 +78,7 @@ please follow the instructions below.
         * Click “Save”
 
     2.  Render the snippet in the layout:
-        
+
         * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Layout**
         * Open `theme.liquid` file
         * Before closing `</head>` paste the following code:
@@ -83,9 +90,9 @@ please follow the instructions below.
         * Click “Save”
 
 8.  In your Shopify Admin, create resources for referral share page:
-    
+
     1.  Create a share page section:
-    
+
         * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Sections**
         * Click “Add a new section“
         * Create a new Liquid section called `talkable-campaign.liquid`
@@ -104,7 +111,7 @@ please follow the instructions below.
         * Click “Save”
 
     2.  Create a share page template:
-        
+
         * Go to **Templates**
         * Click “Add a new template“
         * Create a new JSON template of type `page` called `talkable` (`page.talkable.json`)
@@ -122,7 +129,7 @@ please follow the instructions below.
              If your main section is disabled, remove the row that does it.
 
     3.  Create a page:
-        
+
         * Exit theme editor if it was opened
         * Go to **Online Store** → **Pages**
         * Click “Add page“
@@ -131,9 +138,9 @@ please follow the instructions below.
         * Click “Save”
 
 9.  In your Shopify Admin, create resources for referral dashboard page:
-    
+
     1.  Create a dashboard page section:
-    
+
         * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Sections**
         * Click “Add a new section“
         * Create a new Liquid section called `talkable-dashboard.liquid`
@@ -153,7 +160,7 @@ please follow the instructions below.
         * Click “Save”
 
     2.  Create a dashboard page template:
-        
+
         * Go to **Templates**
         * Click “Add a new template“
         * Create a new JSON template of type `page` called `dashboard.talkable` (`page.dashboard.talkable.json`)
@@ -177,7 +184,7 @@ please follow the instructions below.
              If your main section is disabled, remove the row that does it.
 
     3.  Create a page:
-        
+
         * Exit theme editor if it was opened
         * Go to **Online Store** → **Pages**
         * Click “Add page“
@@ -186,7 +193,7 @@ please follow the instructions below.
         * Click “Save” (Customer accounts must be enabled in **Settings** → **Checkout**)
 
 10. In your Shopify Admin, add a post-purchase script:
-    
+
     * Go to **Settings** → **Checkout**
     * Scroll down to **Order status page**
     * Paste the following code into **Additional scripts** field:
@@ -198,6 +205,12 @@ please follow the instructions below.
     * Click “Save”.
 
 11. Verify your integration using :ref:`Verifying Integration instructions <integration/verify>`.
+
+.. important::
+
+   If you are managing the Shopify theme code using a `Shopify Github integration`_,
+   make sure to pull the changes to the theme made by the automatic integration to avoid
+   resetting them with a commit.
 
 For Shopify vintage themes
 ..........................
@@ -212,9 +225,9 @@ please follow the instructions below.
 5. After successful installation you will be redirected back to Talkable
 6. Click “Integrate manually“
 7.  In your Shopify Admin, add the integration to your layout:
-    
+
     1.  Create a snippet:
-        
+
         * Go to **Online Store** → **Themes**
         * Click **Actions** ("..." button) → **Edit code**
         * Go to **Snippets**
@@ -229,7 +242,7 @@ please follow the instructions below.
         * Click “Save”
 
     2.  Render the snippet in the layout:
-        
+
         * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Layout**
         * Open `theme.liquid` file
         * Before closing `</head>` paste the following code:
@@ -241,9 +254,9 @@ please follow the instructions below.
         * Click “Save”
 
 8.  In your Shopify Admin, create resources for referral share page:
-    
+
     1.  Create a share page template:
-        
+
         * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Templates**
         * Click “Add a new template“
         * Create a new Liquid template of type `page` called `talkable` (`page.talkable.liquid`)
@@ -256,7 +269,7 @@ please follow the instructions below.
         * Click “Save”
 
     2.  Create a page:
-        
+
         * Exit theme editor if it was opened
         * Go to **Online Store** → **Pages**
         * Click “Add page“
@@ -265,9 +278,9 @@ please follow the instructions below.
         * Click “Save”
 
 9.  In your Shopify Admin, create resources for referral dashboard page:
-    
+
     1.  Create a dashboard page template:
-    
+
         * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Templates**
         * Click “Add a new template“
         * Create a new Liquid template of type `page` called `dashboard.talkable` (`page.dashboard.talkable.liquid`)
@@ -295,7 +308,7 @@ please follow the instructions below.
         * Click “Save” (Customer accounts must be enabled in **Settings** → **Checkout**)
 
 10. In your Shopify Admin, add a post-purchase script:
-    
+
     * Go to **Settings** → **Checkout**
     * Scroll down to **Order status page**
     * Paste the following code into **Additional scripts** field:
@@ -312,6 +325,11 @@ please follow the instructions below.
 
       <span class="a">https://123test.myshopify.com</span>
 
+.. important::
+
+   If you are managing the Shopify theme code using a `Shopify Github integration`_,
+   make sure to pull the changes to the theme made by the automatic integration to avoid
+   resetting them with a commit.
 
 .. _integration/ecommerce_platforms/shopify/manual_integration_theme_migration:
 
@@ -325,7 +343,7 @@ you need to do the following:
 
     1. If you have a `templates/page.talkable.liquid` file, store its content elsewhere and delete the file
     2.  Create a share page section:
-        
+
         * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Sections**
         * Click “Add a new section“
         * Create a new Liquid section called `talkable-campaign.liquid`
@@ -341,7 +359,7 @@ you need to do the following:
         * Click “Save”
 
     3.  Create a share page template:
-        
+
         * Go to **Templates**
         * Click “Add a new template“
         * Create a new JSON template of type `page` called `talkable` (`page.talkable.json`)
@@ -359,10 +377,10 @@ you need to do the following:
              If your main section is disabled, remove the row that does it.
 
 2.  Dashboard page migration:
-    
+
     1. If you have a `templates/page.talkable-dashboard.liquid` file, store its content elsewhere and delete the file
     2.  Create a dashboard page section:
-        
+
         * In the theme code editor (**Online Store** → **Themes** → **Edit code**), go to **Sections**
         * Click “Add a new section“
         * Create a new Liquid section called `talkable-dashboard.liquid`
@@ -384,7 +402,7 @@ you need to do the following:
         * Click “Save”
 
     3.  Create a dashboard page template:
-        
+
         * Go to **Templates**
         * Click “Add a new template“
         * Create a new JSON template of type `page` called `dashboard.talkable` (`page.dashboard.talkable.json`)
@@ -407,6 +425,14 @@ you need to do the following:
           .. important::
              If your main section is disabled, remove the row that does it.
 
+.. important::
+
+   If you are managing the Shopify theme code using a `Shopify Github integration`_,
+   make sure to pull the changes to the theme made by the automatic integration to avoid
+   resetting them with a commit.
+
 **Contact us**
 
 Also Talkable provides integration for Shopify Plus. Interested in setting this up? Contact your CSM or get in touch `here <https://lp.talkable.com/lets-talk-referral>`_.
+
+.. _Shopify Github integration: https://shopify.dev/docs/storefronts/themes/tools/github
