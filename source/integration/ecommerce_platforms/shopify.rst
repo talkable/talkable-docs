@@ -38,8 +38,7 @@ Automatic integration
 
    .. important::
 
-      If you are managing the Shopify theme code using a
-      :ref:`Shopify Github integration<https://shopify.dev/docs/storefronts/themes/tools/github>`,
+      If you are managing the Shopify theme code using a `Shopify Github integration`_,
       make sure to pull the changes to the theme made by the automatic integration to avoid
       resetting them with a commit. The theme updates are described in the
       :ref:`Manual integration instructions<integration/ecommerce_platforms/shopify/manual_integration>`.
@@ -209,8 +208,7 @@ please follow the instructions below.
 
 .. important::
 
-   If you are managing the Shopify theme code using a
-   :ref:`Shopify Github integration<https://shopify.dev/docs/storefronts/themes/tools/github>`,
+   If you are managing the Shopify theme code using a `Shopify Github integration`_,
    make sure to pull the changes to the theme made by the automatic integration to avoid
    resetting them with a commit.
 
@@ -329,8 +327,7 @@ please follow the instructions below.
 
 .. important::
 
-   If you are managing the Shopify theme code using a
-   :ref:`Shopify Github integration<https://shopify.dev/docs/storefronts/themes/tools/github>`,
+   If you are managing the Shopify theme code using a `Shopify Github integration`_,
    make sure to pull the changes to the theme made by the automatic integration to avoid
    resetting them with a commit.
 
@@ -430,11 +427,12 @@ you need to do the following:
 
 .. important::
 
-   If you are managing the Shopify theme code using a
-   :ref:`Shopify Github integration<https://shopify.dev/docs/storefronts/themes/tools/github>`,
+   If you are managing the Shopify theme code using a `Shopify Github integration`_,
    make sure to pull the changes to the theme made by the automatic integration to avoid
    resetting them with a commit.
 
 **Contact us**
 
 Also Talkable provides integration for Shopify Plus. Interested in setting this up? Contact your CSM or get in touch `here <https://lp.talkable.com/lets-talk-referral>`_.
+
+.. _Shopify Github integration: https://shopify.dev/docs/storefronts/themes/tools/github
