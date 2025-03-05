@@ -20,6 +20,7 @@ services:
   nginx:
     image: nginx:1.27-alpine3.21
     container_name: docs-nginx-${ENVIRONMENT}
+    restart: unless-stopped
     networks:
       - docs-nginx
     volumes:
