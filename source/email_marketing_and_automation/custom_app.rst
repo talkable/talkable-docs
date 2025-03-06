@@ -5,7 +5,10 @@
    :description: Custom App allows you to send Talkable data to a desired destination such as your site, ESP, CDP.
 
 Custom App
-~~~~~~~~~~
+==========
+
+Overview of the Custom App
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Custom App is a powerful solution that enables seamless data transfer from Talkable to various external systems, such as: your website, Email Service Providers (ESP), Customer Data Platforms (CDP).
 
