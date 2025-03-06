@@ -55,6 +55,20 @@ The repository consists of the following branches:
 
    If the documentation does not load, check the **Troubleshooting** section.
 
+## How to remove the local environment
+
+1. Stop the containers and remove the volumes
+
+   ```bash
+   docker compose down -v
+   ```
+
+2. Remove the built and downloaded images
+
+   ```bash
+   docker system prune -af
+   ```
+
 ## How to deploy changes to production and staging?
 
 You should not deploy it manually!
