@@ -60,7 +60,7 @@ Main
         .. toctree::
           :maxdepth: 2 
         
-          integration/standard_integration
+          integration/custom_integration
           integration/loyalty
           integration/ecommerce_platforms 
         
