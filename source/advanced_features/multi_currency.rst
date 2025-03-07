@@ -27,7 +27,7 @@ Currency is required to be specified if multi-currency mode is enabled for a sit
 Please pass the currency using the `currency_iso_code` argument to the `register_purchase` function.
 The code must be in `ISO 4217 format <https://www.iso.org/iso-4217-currency-codes.html>`_, e.g. "USD".
 
-:ref:`More on the integration of purchases <integration/custom/integration_components/post_purchase_script>`
+:ref:`More on the integration of purchases <integration/standard_integration/integration_components/post_purchase_script>`
 
 Incentives for different currencies
 -----------------------------------

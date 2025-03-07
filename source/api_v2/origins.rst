@@ -14,7 +14,7 @@ off-site transactions, or other off-site events.
 
 .. note::
 
-   The :ref:`standard front-end <integration/custom/overview>` Talkable
+   The :ref:`standard front-end <integration/standard_integration/overview>` Talkable
    integration will capture all one-time purchases happening on the client
    e-commerce site, but will not on its own capture purchases or CRM events
    happening on the backend. To do this, the |api_v2_origins| must be utilized to
@@ -32,8 +32,8 @@ subscription payments. This company would like to reward |advocate| users
 (referrers) with a reward after their |friend| has been a member for three
 billing cycles.
 
-* Talkable’s :ref:`standard front-end <integration/custom/overview>`
-  integration captures the initial ‘on-site’ payment.
+* Talkable's :ref:`standard front-end <integration/standard_integration/overview>`
+  integration captures the initial 'on-site' payment.
 
 * For Talkable to reward the |Advocate| after the third billing cycle of the
   |friend| subscription, the Company must pass the subsequent subscription
@@ -46,8 +46,8 @@ company would like to reward |advocate| users (referrers) with a reward after
 their |friend| has purchased a product in the brick and mortar store, or
 attended an in-person appointment.
 
-* Talkable’s :ref:`standard front-end <integration/custom/overview>`
-  integration captures an initial ‘on-site’ signup event if there is one.
+* Talkable's :ref:`standard front-end <integration/standard_integration/overview>`
+  integration captures an initial 'on-site' signup event if there is one.
 
 * For Talkable to reward the |advocate| after the in-person |friend| store
   purchase, or appointment attendance, the Company must pass the in-store
@@ -62,8 +62,8 @@ by performing an initial ‘on-site’ sign-up event. This company would like to
 reward |advocate| users (referrers) with a reward after their |friend|
 application is approved.
 
-* Talkable’s :ref:`standard front-end <integration/custom/overview>`
-  integration captures the initial ‘on-site’ application sign-up event.
+* Talkable's :ref:`standard front-end <integration/standard_integration/overview>`
+  integration captures the initial 'on-site' application sign-up event.
 
 * In order for Talkable to reward the |advocate| after the |friend|
   application approval, the Company must pass the approval data to Talkable’s
