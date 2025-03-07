@@ -25,7 +25,7 @@ Tremendous integration consists of several parts:
         :width: 400
         :alt: Creating a Tremendous Advocate Referral incentive
 
-   - A :ref:`"tremendous" Liquid filter<tremendous_filter>` used in Reward Paid Email Page.
+   - A :ref:`"tremendous" Liquid filter <liquid_filter_tremendous>` used in Reward Paid Email Page.
       
      The filter generates a claim link within the specified Tremendous campaign.
 
