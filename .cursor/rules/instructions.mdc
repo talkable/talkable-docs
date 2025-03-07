@@ -1,0 +1,8 @@
+---
+description: Instruction specific to certain operations.
+globs: 
+alwaysApply: true
+---
+## File structure changes
+
+If you rename the files or directories, you have to change the corresponding references that refer to those files. But never change the content of the files. Only references have to be changed to reflect the new file structure.
