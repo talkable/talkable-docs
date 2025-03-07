@@ -1,4 +1,4 @@
-.. _integration/custom/cookies:
+.. _integration/standard_integration/cookies:
 .. include:: /partials/common.rst
 
 .. meta::
@@ -68,7 +68,7 @@ We use these cookies to understand, improve, and research our Site and Services.
      - talkable.com
      - 400
 
-.. _integration/custom/cookies/gdpr_and_ccpa_compliance:
+.. _integration/standard_integration/cookies/gdpr_and_ccpa_compliance:
 
 GDPR and CCPA compliance
 ------------------------

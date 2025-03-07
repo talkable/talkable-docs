@@ -1,18 +1,18 @@
-.. _integration/custom/integration_tag_manager:
+.. _integration/standard_integration/integration_tag_manager:
 .. include:: /partials/common.rst
 
 Integrating with a Tag Manager
 ==============================
 
 -  :underline:`Initialization Script in a Tag Manager:` Place the
-   :ref:`Initialization Script <integration/custom/integration_components/initialization_script>`
+   :ref:`Initialization Script <integration/standard_integration/integration_components/initialization_script>`
    in a tag that is
    visible in the head template on all pages.
 
 -  :underline:`Post Purchase Integration in a Tag Manager:` Since the post
    purchase integration on the checkout confirmation page requires the
-   Init script to work, you’re welcome to combine the :ref:`Initialization Script <integration/custom/integration_components/initialization_script>`
-   + :ref:`Post Purchase Script <integration/custom/integration_components/post_purchase_script>`
+   Init script to work, you're welcome to combine the :ref:`Initialization Script <integration/standard_integration/integration_components/initialization_script>`
+   + :ref:`Post Purchase Script <integration/standard_integration/integration_components/post_purchase_script>`
    script into a
    single tag for the checkout confirmation page. In fact this is
    recommended for Google Tag Manager, when combining the place the
@@ -60,7 +60,7 @@ Best Practices for Speed Optimization
 Alternative Approach: Direct Integration
 ----------------------------------------
 
-To mitigate these potential issues, you can integrate Talkable directly into your web pages without using GTM. Here's a step-by-step guide on :ref:`Custom Integration <integration/custom/integration_components>`.
+To mitigate these potential issues, you can integrate Talkable directly into your web pages without using GTM. Here's a step-by-step guide on :ref:`Custom Integration <integration/standard_integration/integration_components>`.
 
 **Benefits of Direct Integration:**
 
@@ -97,7 +97,7 @@ If you've decided to remove the Talkable integration script from GTM, follow the
 3. Click on the tag to open its details.
 4. Click the "Delete" button to remove the Talkable integration tag.
 
-**Important Note:** After removing the Talkable integration script from GTM, you'll need to implement the :ref:`direct integration approach <integration/custom/integration_components>` documented earlier to ensure Talkable functionality on your website.
+**Important Note:** After removing the Talkable integration script from GTM, you'll need to implement the :ref:`direct integration approach <integration/standard_integration/integration_components>` documented earlier to ensure Talkable functionality on your website.
 
 .. note::
    Talkable doesn't recommend adding integration as tags in Google Tag Manager because of slow loading of campaigns for certain user agents as well as GTM being blocked by some Ad blockers
