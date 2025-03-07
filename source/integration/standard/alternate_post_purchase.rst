@@ -1,4 +1,4 @@
-.. _integration/custom/alternate_post_purchase:
+.. _integration/standard/alternate_post_purchase:
 .. include:: /partials/common.rst
 
 Alternate Post Purchase Script for cart line item passing

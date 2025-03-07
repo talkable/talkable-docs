@@ -1,4 +1,4 @@
-.. _integration/custom/integration_components:
+.. _integration/standard/integration_components:
 .. include:: /partials/common.rst
 
 .. meta::
@@ -9,7 +9,7 @@ Integration Components
 
 Talkable is composed of the following components:
 
-1. :ref:`Initialization Script <integration/custom/integration_components/initialization_script>`
+1. :ref:`Initialization Script <integration/standard/integration_components/initialization_script>`
 
    **Script Location.** The Initialization script should be placed in the head template or some template
    that spans every page. All other integration components are dependent on the Init script.
@@ -21,7 +21,7 @@ Talkable is composed of the following components:
    - First Name
    - Last Name
 
-2. :ref:`Post Purchase Script <integration/custom/integration_components/post_purchase_script>`
+2. :ref:`Post Purchase Script <integration/standard/integration_components/post_purchase_script>`
 
    **Script Location.** The Post Purchase script should be placed on the checkout confirmation page.
 
@@ -42,19 +42,19 @@ Talkable is composed of the following components:
 3. In case your business has one-time purchases and subscription model, or you are in SaaS
    business we recommend integrating through Events. :ref:`Learn more <advanced_features/events>`.
 
-4. :ref:`Advocate Landing Page <integration/custom/integration_components/advocate_landing_page>`.
+4. :ref:`Advocate Landing Page <integration/standard/integration_components/advocate_landing_page>`.
 
    Create an HTML page (URL path /share) with your standard site header and footer.
    Add the Talkable Container DIV in the body. This tells Talkable where to inject content.
 
-5. :ref:`Referral Dashboard (my account) <integration/custom/integration_components/referral_dashboard>`.
+5. :ref:`Referral Dashboard (my account) <integration/standard/integration_components/referral_dashboard>`.
 
    Similar to the advocate landing page, create an HTML page that’s linked to from a menu in user accounts.
    Add the Talkable Container DIV in the body. This tells Talkable where to inject content.
 
 |hr|
 
-.. _integration/custom/integration_components/initialization_script:
+.. _integration/standard/integration_components/initialization_script:
 
 Initialization Script
 ~~~~~~~~~~~~~~~~~~~~~
@@ -112,7 +112,7 @@ Initialization Script Notes
 
 |hr|
 
-.. _integration/custom/integration_components/post_purchase_script:
+.. _integration/standard/integration_components/post_purchase_script:
 
 Post Purchase Script
 ~~~~~~~~~~~~~~~~~~~~
@@ -142,7 +142,7 @@ Post Purchase Script Notes
    enabled so that the user returns to the checkout confirmation page to
    allow the post purchase script to run.
 
-5. If you’re using a tag manager :ref:`click here <integration/custom/integration_tag_manager>`.
+5. If you’re using a tag manager :ref:`click here <integration/standard/integration_tag_manager>`.
 
 6. If you need to pass shopping cart line items, to see the alternate
    post purchase integration script :ref:`click here <advanced_features/product_items>`.
@@ -155,7 +155,7 @@ Post Purchase Script Notes
 
    All PII params support data encryption. Find more about :ref:`Params Encryption <advanced_features/params_encryption>`.
 
-.. _integration/custom/integration_components/advocate_landing_page:
+.. _integration/standard/integration_components/advocate_landing_page:
 
 Advocate Landing Page
 ~~~~~~~~~~~~~~~~~~~~~
@@ -191,7 +191,7 @@ Advocate Landing Page Notes
 
 |hr|
 
-.. _integration/custom/integration_components/referral_dashboard:
+.. _integration/standard/integration_components/referral_dashboard:
 
 Referral Dashboard
 ~~~~~~~~~~~~~~~~~~
@@ -211,7 +211,7 @@ the body of the page:
 Referral Dashboard Notes
 ------------------------
 
-1. The :ref:`Talkable Initialization Script <integration/custom/integration_components/initialization_script>` must be present in your head
+1. The :ref:`Talkable Initialization Script <integration/standard/integration_components/initialization_script>` must be present in your head
    template in order for the referral dashboard to work
 
 2. Talkable will inject referral content where Talkable Container

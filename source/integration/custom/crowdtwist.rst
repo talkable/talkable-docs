@@ -1,4 +1,4 @@
-.. _custom_integration/crowdtwist:
+.. _integration/custom/crowdtwist:
 .. include:: /partials/common.rst
 
 .. meta::

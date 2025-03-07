@@ -8,7 +8,7 @@ Integrating Events
 ==================
 
 In addition to running a referral campaign around regular
-:ref:`purchases <integration/custom/integration_components/post_purchase_script>`,
+:ref:`purchases <integration/standard/integration_components/post_purchase_script>`,
 Talkable also supports custom events that can be split into multiple categories and be used to set up advanced campaign rules.
 
 An example of such integration can be a subscription-based business that also supports
@@ -47,7 +47,7 @@ can be found in the Reports → Events section of your Talkable Dashboard. Here 
 
 .. note::
 
-   Please make sure you've added :ref:`Talkable Initialization Script <integration/custom/integration_components/initialization_script>` to your header or any template spanning every page.
+   Please make sure you've added :ref:`Talkable Initialization Script <integration/standard/integration_components/initialization_script>` to your header or any template spanning every page.
 
 One-time purchases should go under the “purchase” event category. You can find all purchases
 in the Reports → Purchases section of your Talkable Dashboard. Here is an example:
