@@ -379,6 +379,28 @@ Returns channel-specific claim URL.
 
 |hr|
 
+class\_names
+............
+
+Helps conditionally add CSS classes.
+Returns string of class names built from arguments.
+
+.. container:: ptable
+
+   ============================================================== ==============
+   Example                                                        Result
+   ============================================================== ==============
+   ``{{ 42 | class_names: "song" }}``                             ``42 song``
+   ``{{ "song" | class_names: play: true }}``                     ``song play``
+   ``{{ "" | class_names: song: true, play: false }}``            ``song``
+   ``{{ "" | class_names: "song", "play" }}``                     ``song play``
+   ``{{ "" | class_names: "song", nil, false, play: true }}``     ``song play``
+   ``{{ "" | class_names: "song", play: true }}``                 ``song play``
+   ``{{ "" | class_names: "song", play: false }}``                ``song``
+   ============================================================== ==============
+
+|hr|
+
 date\_diff
 ..........
 
