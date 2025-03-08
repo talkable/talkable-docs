@@ -1,4 +1,4 @@
-.. _integration/custom/validating_integration:
+.. _integration/standard/validating_integration:
 .. include:: /partials/common.rst
 
 .. meta::
@@ -15,7 +15,7 @@ Talkable campaigns. Campaigns must be enabled for visual display (see
 examples below on how to enable campaigns). Note that enabling campaigns
 on production will allow your customers to see referral content. If you
 want to limit visual display, or want to validate on your production
-site without customers seeing visual display, then see the :ref:`Test Mode Display <integration/custom/validating_integration/test_mode_display>`
+site without customers seeing visual display, then see the :ref:`Test Mode Display <integration/standard/validating_integration/test_mode_display>`
 section below.
 
 Validation Checklist
@@ -77,7 +77,7 @@ There are 5 types:
    campaigns (ignore any warnings for now and note the site display placement)
    https://youtu.be/HgR6WQYeASg
 
-.. _integration/custom/validating_integration/test_mode_display:
+.. _integration/standard/validating_integration/test_mode_display:
 
 Test Mode Display
 .................

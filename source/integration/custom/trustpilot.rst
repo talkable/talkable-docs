@@ -1,4 +1,4 @@
-.. _custom_integration/trustpilot:
+.. _integration/custom/trustpilot:
 .. include:: /partials/common.rst
 
 .. meta::
