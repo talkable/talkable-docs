@@ -1,0 +1,9 @@
+---
+description: Instructions for the specific operations with the content of the documentation.
+globs: 
+alwaysApply: false
+---
+## Documentation Source Syntax
+
+- Follow the restructured format syntax while building the content of the files.
+- Add newlines after headers, before lists and paragraphes
