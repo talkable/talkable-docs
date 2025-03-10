@@ -1,4 +1,4 @@
-.. _custom_integration/recharge:
+.. _integration/custom/recharge:
 .. include:: /partials/common.rst
 
 .. meta::

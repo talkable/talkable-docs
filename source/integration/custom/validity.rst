@@ -1,4 +1,4 @@
-.. _custom_integration/validity:
+.. _integration/custom/validity:
 .. include:: /partials/common.rst
 
 .. meta::

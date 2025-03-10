@@ -1,4 +1,4 @@
-.. _integration/custom/overview:
+.. _integration/standard/overview:
 .. include:: /partials/common.rst
 
 .. meta::
@@ -24,16 +24,16 @@ a few quick steps by adding the below scripts to your site.
 
    <h2>Integration Steps</h2>
 
-1. Add the :ref:`Talkable Initialization Script <integration/custom/integration_components/initialization_script>`
+1. Add the :ref:`Talkable Initialization Script <integration/standard/integration_components/initialization_script>`
    to your header or any template spanning every page. Surface variables for
    email and name if the user is logged in.
 
-2. Add the :ref:`Talkable Post Purchase Script <integration/custom/integration_components/post_purchase_script>`
+2. Add the :ref:`Talkable Post Purchase Script <integration/standard/integration_components/post_purchase_script>`
    to your checkout confirmation page to pass purchase details to Talkable for
    all purchases.
 
    Surface purchase detail variables as described in more detail in
-   :ref:`Integration Components <integration/custom/integration_components>`.
+   :ref:`Integration Components <integration/standard/integration_components>`.
 
    .. note::
 
@@ -50,7 +50,7 @@ a few quick steps by adding the below scripts to your site.
    The Invite Standalone campaign will be your landing page to drive traffic to
    from marketing email and other onsite and offsite locations to refer friends.
    Copy & paste the Talkable container DIV element into the body as seen in
-   :ref:`Integration Components <integration/custom/integration_components>`.
+   :ref:`Integration Components <integration/standard/integration_components>`.
 
    .. code-block:: html
 
@@ -62,7 +62,7 @@ a few quick steps by adding the below scripts to your site.
    This Advocate Dashboard Standalone page allows Advocates to view referral
    details for the friends they’ve shared with. Copy & paste the Talkable container
    DIV element into the body as seen in
-   :ref:`Integration Components <integration/custom/integration_components>`.
+   :ref:`Integration Components <integration/standard/integration_components>`.
 
    .. code-block:: html
 

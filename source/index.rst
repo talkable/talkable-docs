@@ -40,7 +40,7 @@ Main
         .. toctree::
           :maxdepth: 2 
         
-          custom_integration
+          integration/custom
 
     .. grid-item::
 
@@ -60,7 +60,7 @@ Main
         .. toctree::
           :maxdepth: 2 
         
-          integration/custom_integration
+          integration/standard
           integration/loyalty
           integration/ecommerce_platforms 
         
