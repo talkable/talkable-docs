@@ -36,7 +36,6 @@ Standard Integration
 
      standard/overview
 
-
 .. raw:: html
 
    <h2 class="mts">Contents:</h2>
@@ -58,6 +57,4 @@ Standard Integration
         
          standard/validating_integration
          standard/cookies
-         standard/questions   
-   
-   
+         standard/questions
