@@ -1,4 +1,4 @@
-.. _custom_integration/chatgpt:
+.. _integration/custom/chatgpt:
 .. include:: /partials/common.rst
 
 .. meta::

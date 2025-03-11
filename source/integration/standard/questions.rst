@@ -1,4 +1,4 @@
-.. _integration/custom/questions:
+.. _integration/standard/questions:
 .. include:: /partials/common.rst
 
 .. meta::
@@ -8,21 +8,21 @@ F.A.Q.
 ======
 
 1. :ref:`Does the post purchase script need to capture all purchases or just
-   Talkable purchases? <integration/custom/questions/post_purchase_capture>`
+   Talkable purchases? <integration/standard/questions/post_purchase_capture>`
 
-2. :ref:`How does referral tracking work? <integration/custom/questions/how_does_referral_tracking_work>`
+2. :ref:`How does referral tracking work? <integration/standard/questions/how_does_referral_tracking_work>`
 
-3. :ref:`What does the Talkable integration do? <integration/custom/questions/what_does_the_talkable_integration_do>`
+3. :ref:`What does the Talkable integration do? <integration/standard/questions/what_does_the_talkable_integration_do>`
 
-4. :ref:`How does Talkable know where to display content? <integration/custom/questions/talkable_know_where_to_display_content>`
+4. :ref:`How does Talkable know where to display content? <integration/standard/questions/talkable_know_where_to_display_content>`
 
-5. :ref:`What do I, as a developer, need to do to complete integration? <integration/custom/questions/complete_integration>`
+5. :ref:`What do I, as a developer, need to do to complete integration? <integration/standard/questions/complete_integration>`
 
-6. :ref:`How does the rewarding process work? <integration/custom/questions/rewarding_process_work>`
+6. :ref:`How does the rewarding process work? <integration/standard/questions/rewarding_process_work>`
 
-7. :ref:`How do I verify success? <integration/custom/questions/verify_success>`
+7. :ref:`How do I verify success? <integration/standard/questions/verify_success>`
 
-.. _integration/custom/questions/post_purchase_capture:
+.. _integration/standard/questions/post_purchase_capture:
 
 **1.  Does the post purchase script need to capture all purchases or
 just Talkable purchases?**
@@ -35,7 +35,7 @@ purchase is captured. Talkable also reports on referral related sales
 metrics to display what % of total sales referrals is responsible for
 along with other sales related metrics.
 
-.. _integration/custom/questions/how_does_referral_tracking_work:
+.. _integration/standard/questions/how_does_referral_tracking_work:
 
 **2. How does referral tracking work?**
 
@@ -47,7 +47,7 @@ platform is unable to surface coupon code as a parameter to pass at
 checkout, then that’s fine as Talkable will still be able to track the
 referral.
 
-.. _integration/custom/questions/what_does_the_talkable_integration_do:
+.. _integration/standard/questions/what_does_the_talkable_integration_do:
 
 **3. What does the Talkable integration do?**
 
@@ -67,7 +67,7 @@ referral.
 
    -  Sends referral p2p and reward emails on your behalf
 
-.. _integration/custom/questions/talkable_know_where_to_display_content:
+.. _integration/standard/questions/talkable_know_where_to_display_content:
 
 **4. How does Talkable know where to display content?**
 
@@ -100,7 +100,7 @@ referral.
 
    -  Referral Dashboard Campaign: URL ending in "/referrals"
 
-.. _integration/custom/questions/complete_integration:
+.. _integration/standard/questions/complete_integration:
 
 **5. What work do I, as a developer, need to do to complete
 integration?**
@@ -119,7 +119,7 @@ integration?**
 -  (optional) DNS configuration for referral link and email sending
    subdomain white labeling (ask your Talkable contact to enable this)
 
-.. _integration/custom/questions/rewarding_process_work:
+.. _integration/standard/questions/rewarding_process_work:
 
 **6. How does the rewarding process work?**
 
@@ -164,8 +164,8 @@ to a pending referral, we’ll gracefully ignore, and any order# we
 recognize as related to a pending referral, we’ll take the appropriate
 action.
 
-.. _integration/custom/questions/verify_success:
+.. _integration/standard/questions/verify_success:
 
 **7. How do I verify success?**
 
-Refer to the section titled :ref:`Validating the Integration <integration/custom/validating_integration>`.
+Refer to the section titled :ref:`Validating the Integration <integration/standard/validating_integration>`.

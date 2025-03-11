@@ -8,7 +8,7 @@ Event Webhook
 =============
 
 The Talkable Event Webhook notifies your endpoint that an :ref:`Event <advanced_features/events>`
-or a :ref:`Purchase <integration/custom/integration_components/post_purchase_script>` has been
+or a :ref:`Purchase <integration/standard/integration_components/post_purchase_script>` has been
 registered with Talkable.
 
 Use cases for the Event Webhook include:

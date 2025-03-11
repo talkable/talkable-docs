@@ -1,4 +1,4 @@
-.. _custom_integration/salesforce:
+.. _integration/custom/salesforce:
 .. include:: /partials/common.rst
 
 .. meta::

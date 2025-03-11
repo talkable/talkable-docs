@@ -40,7 +40,7 @@ Troubleshooting
 ~~~~~~~~~~~~~~~
 
 In case you are not seeing the verification popup please make sure the
-:ref:`init script <integration/custom/integration_components/initialization_script>` (non-platform integration only)
+:ref:`init script <integration/standard/integration_components/initialization_script>` (non-platform integration only)
 is installed on the page. You may do so by making right click |br|
 (Chrome) → Inspect Element → Inside Elements tab press Cmd+F (Ctrl+F on Windows) and
 search for `d2jj` → make sure the init script matches the one provided inside your
