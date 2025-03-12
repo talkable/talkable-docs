@@ -83,7 +83,7 @@ Once you enabled “Inline Widget”, ask client to add the following code for t
 
 .. code-block:: html
 
-   <div id=’talkable-claim-by-name’></div>
+   <div id="talkable-claim-by-name"></div>
 
 Without adding this code, the campaign won’t be visible.
 
@@ -100,7 +100,7 @@ If Shopify theme uses shopping cart as a dynamic widget, you can integrate Claim
 
 .. code-block:: html
 
-   <div id=’talkable-claim-by-name’></div>
+   <div id="talkable-claim-by-name"></div>
 
 Interactions with the personal name-share link
 ----------------------------------------------
