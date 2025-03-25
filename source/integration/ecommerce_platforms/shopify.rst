@@ -434,7 +434,6 @@ you need to do the following:
 .. note::
    Also Talkable provides integration for Shopify Plus.
 
-
-.. include:: /partials/contact_us.rst
+Also Talkable provides integration for Shopify Plus. Interested in setting this up? Contact your CSM or get in touch `here <https://talkable.com/lets-talk-referral>`_.
 
 .. _Shopify Github integration: https://shopify.dev/docs/storefronts/themes/tools/github

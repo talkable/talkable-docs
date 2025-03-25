@@ -82,4 +82,6 @@ Additional Resources
 
 .. note:: For detailed examples and advanced usage, refer to the official Facebook documentation.
 
-.. include:: /partials/contact_us.rst
+**Contact us**
+
+Interested in setting this up? Contact your CSM or get in touch `here <https://talkable.com/lets-talk-referral>`_.

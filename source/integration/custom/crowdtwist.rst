@@ -9,4 +9,6 @@ CrowdTwist
 
 With this integration, Talkable enables store credit rewards through the CrowdTwist platform, allowing for custom incentives and campaign tagging.
 
-.. include:: /partials/contact_us.rst
+**Contact us**
+
+Interested in setting this up? Contact your CSM or get in touch `here <https://talkable.com/lets-talk-referral>`_.

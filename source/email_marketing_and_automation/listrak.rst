@@ -15,4 +15,6 @@ Talkable offers seamless integration with Listrak to enhance your marketing and 
 2. **Listrak SMS**
    Talkable syncs phone numbers to Listrak and enables the setup of reward SMS messages for campaigns, enhancing customer engagement through direct messaging.
 
-.. include:: /partials/contact_us.rst
+**Contact us**
+
+Interested in setting this up? Contact your CSM or get in touch `here <https://talkable.com/lets-talk-referral>`_.

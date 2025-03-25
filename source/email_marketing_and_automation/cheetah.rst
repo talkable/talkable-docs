@@ -9,4 +9,6 @@ Cheetah
 
 With this integration, Talkable syncs email opt-ins and customer fields to Cheetah, facilitating seamless email marketing and customer data management.
 
-.. include:: /partials/contact_us.rst
+**Contact us**
+
+Interested in setting this up? Contact your CSM or get in touch `here <https://talkable.com/lets-talk-referral>`_.

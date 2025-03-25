@@ -9,4 +9,6 @@ SheerID Integration
 
 With SheerID and Talkable integration, you can verify your customers' eligibility for your referral program and offer exclusive discounts and deals tailored for teachers, students, military personnel, nurses, and more.
 
-.. include:: /partials/contact_us.rst
+**Contact us**
+
+Interested in setting this up? Contact your CSM or get in touch `here <https://talkable.com/lets-talk-referral>`_.

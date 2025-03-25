@@ -41,4 +41,6 @@ To check your Magento version, navigate to your store's admin panel. The version
      magento/magento1
      magento/magento2
 
-.. include:: /partials/contact_us.rst
+**Contact us**
+
+Interested in setting this up? Contact your CSM or get in touch `here <https://talkable.com/lets-talk-referral>`_.

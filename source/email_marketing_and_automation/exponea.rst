@@ -9,4 +9,6 @@ Exponea
 
 With this integration, Talkable syncs email opt-ins to Exponea, supporting enhanced customer data management for targeted email marketing campaigns.
 
-.. include:: /partials/contact_us.rst
+**Contact us**
+
+Interested in setting this up? Contact your CSM or get in touch `here <https://talkable.com/lets-talk-referral>`_.

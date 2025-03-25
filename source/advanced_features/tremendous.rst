@@ -36,4 +36,6 @@ Tremendous integration consists of several parts:
        {{ cta_text }}
        </a>
 
-.. include:: /partials/contact_us.rst
+**Contact us**
+
+Interested in setting this up? Contact your CSM or get in touch `here <https://talkable.com/lets-talk-referral>`_.
