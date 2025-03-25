@@ -198,3 +198,4 @@ See available Webhooks on the navigation sidebar.
       Unsubscribe <web_hooks/unsubscribe>
       Check Unsubscribe <web_hooks/check_unsubscribe>
       Event <web_hooks/event>
+      Migration from Webhooks to Custom App <web_hooks/migration_to_custom_app>
