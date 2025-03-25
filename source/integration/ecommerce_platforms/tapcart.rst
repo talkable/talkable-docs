@@ -109,7 +109,7 @@ The integration automatically tracks all referral activities and properly attrib
 Support and Resources
 ---------------------
 
-Interested in setting this up? Contact your CSM or get in touch `here <https://talkable.com/lets-talk-referral>`_.
+Interested in setting this up? Contact your CSM or get in touch `here <https://lp.talkable.com/lets-talk-referral>`_.
 
 .. note::
    The integration automatically tracks referral conversions and attributes them to the appropriate users.
