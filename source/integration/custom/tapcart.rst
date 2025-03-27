@@ -11,6 +11,4 @@ The integration with Tapcart enables mobile app-based referral programs that lev
 
 Through Tapcart's Contact Sharing feature, you can integrate with Talkable. Contact Sharing incentivizes consumers (via gift cards or discounts) to share referral-based offerings through their preferred social platform or directly with SMS contacts on their device. The integration focuses on utilizing key elements of social proof to increase consumer engagement and spending with your brand.
 
-**Contact us**
-
-Interested in setting this up? Contact your CSM or get in touch `here <https://talkable.com/lets-talk-referral>`_.
+.. include:: /partials/contact_us.rst

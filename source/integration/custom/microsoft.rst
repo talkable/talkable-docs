@@ -14,6 +14,4 @@ With this integration, Talkable pushes relevant customer data to Microsoft Dynam
 - **Data Push**: Customer data collected through Talkable is automatically pushed to Microsoft Dynamics CRM, ensuring your CRM contains the latest information.
 - **Status Sync**: Any status changes made in Microsoft Dynamics CRM are synced back to Talkable, ensuring your campaigns are always up to date.
 
-**Contact us**
-
-Interested in setting this up? Contact your CSM or get in touch `here <https://talkable.com/lets-talk-referral>`_.
+.. include:: /partials/contact_us.rst

@@ -9,6 +9,4 @@ Validity
 
 With this integration, Talkable performs additional validation on email addresses using the Validity service. This helps maintain accurate and clean customer data and adds an extra layer of security to your Campaign.
 
-**Contact us**
-
-Interested in setting this up? Contact your CSM or get in touch `here <https://talkable.com/lets-talk-referral>`_.
+.. include:: /partials/contact_us.rst
