@@ -19,8 +19,8 @@ Each of these steps can be done individually or all together to achieve API inte
 
 .. note::
 
-   For accounts created after March 2025, API requests automatically generate an Activity,
-   whereas accounts created before March 2025 don’t track Activity when making API calls,
+   For accounts created after April 2025, API requests automatically generate an Activity,
+   whereas accounts created before April 2025 don’t track Activity when making API calls,
    meaning offers aren’t marked as shown and won’t contribute to advocate impression counts.
 
    If needed, please contact your Talkable account manager to migrate your account to the new logic.
