@@ -9,6 +9,6 @@ Braze
 
 With this integration, Talkable syncs email opt-ins to Braze, enabling efficient customer data management for targeted email marketing campaigns.
 
-**Contact us**
+The integration with Braze enables you to sync your Talkable referral program data with your Braze account.
 
-Interested in setting this up? Contact your CSM or get in touch `here <https://talkable.com/lets-talk-referral>`_.
+.. include:: /partials/contact_us.rst

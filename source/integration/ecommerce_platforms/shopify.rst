@@ -431,8 +431,10 @@ you need to do the following:
    make sure to pull the changes to the theme made by the automatic integration to avoid
    resetting them with a commit.
 
-**Contact us**
+.. note::
+   Also Talkable provides integration for Shopify Plus.
 
-Also Talkable provides integration for Shopify Plus. Interested in setting this up? Contact your CSM or get in touch `here <https://talkable.com/lets-talk-referral>`_.
+
+.. include:: /partials/contact_us.rst
 
 .. _Shopify Github integration: https://shopify.dev/docs/storefronts/themes/tools/github

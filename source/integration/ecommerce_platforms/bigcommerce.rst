@@ -9,6 +9,4 @@ BigCommerce
 
 The BigCommerce integration allows seamless synchronization of coupons between Talkable and BigCommerce stores, facilitating automated coupon management. Once set up, this integration enables efficient management of marketing campaigns with coupon distribution synced to BigCommerce.
 
-**Contact us**
-
-Interested in setting this up? Contact your CSM or get in touch `here <https://talkable.com/lets-talk-referral>`_.
+.. include:: /partials/contact_us.rst

@@ -9,6 +9,4 @@ Omnisend
 
 With this integration, Talkable syncs email opt-ins to Omnisend, enabling streamlined customer data management for email marketing.
 
-**Contact us**
-
-Interested in setting this up? Contact your CSM or get in touch `here <https://talkable.com/lets-talk-referral>`_.
+.. include:: /partials/contact_us.rst
