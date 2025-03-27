@@ -16,7 +16,6 @@ E-commerce Platforms
       
          ecommerce_platforms/sfcc
          ecommerce_platforms/shopify
-         ecommerce_platforms/tapcart
     
    .. grid-item::
 
