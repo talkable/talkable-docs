@@ -35,6 +35,4 @@ Talkable integration with Recharge enables next use cases:
 
    Once the Advocate receives a reward, they will be shown a Gleam widget that will be showing the coupon code as well as a notice that the coupon would be automatically applied to the ongoing subscription if the advocate has the one. The discount is still available for use on regular Shopify flow, but once used it won’t be applied to the subscription of the customer.
 
-**Contact us**
-
-Interested in setting this up? Contact your CSM or get in touch `here <https://lp.talkable.com/lets-talk-referral>`_.
+.. include:: /partials/contact_us.rst

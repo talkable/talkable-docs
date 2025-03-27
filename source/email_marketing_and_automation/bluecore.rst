@@ -9,6 +9,4 @@ Bluecore
 
 With this integration, Talkable syncs email opt-ins to Bluecore, facilitating efficient customer data management for targeted email marketing campaigns.
 
-**Contact us**
-
-Interested in setting this up? Contact your CSM or get in touch `here <https://lp.talkable.com/lets-talk-referral>`_.
+.. include:: /partials/contact_us.rst
