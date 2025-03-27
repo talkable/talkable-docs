@@ -9,6 +9,4 @@ ChatGPT
 
 With this integration, Talkable utilizes OpenAI's ChatGPT API to generate custom AI-driven text for Advocate's sharing message or other campaign-specific purposes.
 
-Through ChatGPT's API, you can integrate with Talkable. This integration allows you to leverage AI-powered conversations to enhance your referral program experience.
-
 .. include:: /partials/contact_us.rst
