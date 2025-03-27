@@ -11,4 +11,4 @@ With this integration, Talkable utilizes OpenAI's ChatGPT API to generate custom
 
 Through ChatGPT's API, you can integrate with Talkable. This integration allows you to leverage AI-powered conversations to enhance your referral program experience.
 
-Interested in setting this up? Contact your CSM or get in touch `here <https://talkable.com/lets-talk-referral>`_.
+.. include:: /partials/contact_us.rst

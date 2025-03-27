@@ -55,6 +55,4 @@ Please use the following guide to start using an app you need:
    .. image:: /_static/img/email_marketing_and_automation/send_sample_payload.png
       :alt: Send sample payload
 
-**Contact us**
-
-Interested in setting this up? Contact your CSM or get in touch `here <https://talkable.com/lets-talk-referral>`_.
+.. include:: /partials/contact_us.rst
