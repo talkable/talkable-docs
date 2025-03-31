@@ -41,3 +41,7 @@ body[data-theme="light"] .highlight button.copybtn.success:after {
 dd {
   margin-inline-start: 20px;
 }
+
+.bd-toc-nav {
+  word-break: break-word;
+}
