@@ -9,6 +9,4 @@ Trustpilot
 
 With this integration, Talkable tracks reviews as events in campaigns using Trustpilot's webhook functionality, allowing reviews to be recorded and utilized in marketing efforts.
 
-**Contact us**
-
-Interested in setting this up? Contact your CSM or get in touch `here <https://lp.talkable.com/lets-talk-referral>`_.
+.. include:: /partials/contact_us.rst
