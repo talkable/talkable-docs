@@ -45,13 +45,6 @@ Webhooks vs Custom App
 |                           |                              | rules and conditions                     |
 +---------------------------+------------------------------+------------------------------------------+
 
-Why Migrate to Custom App?
---------------------------
-
-   - **Simplified Integration**: Manage all event handling in one place instead of setting up multiple webhooks.
-   - **Enhanced Security**: :ref:`Custom App <email_marketing_and_automation/custom_app>` verifies request authenticity using HMAC-SHA256.
-   - **Custom Payloads**: Define and modify event data dynamically without changing webhook implementations.
-
 Transition from Webhooks to Custom App
 --------------------------------------
 

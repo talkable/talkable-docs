@@ -24,7 +24,7 @@ Each Webhook in Talkable is defined with an HTTP URL to deliver Webhook data
 
    Talkable now provides a more flexible and powerful way to handle events with the Custom App.
    We strongly recommend :ref:`migrating your existing Webhooks to Custom App<web_hooks/migration_to_custom_app>`
-   to take advantage of centralized configuration, customizable payloads, and enhanced testing and error handling.
+   to take advantage of centralized configuration, customizable payloads, and greater overall flexibility.
 
 .. raw:: html
 
