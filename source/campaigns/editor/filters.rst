@@ -910,11 +910,12 @@ qr\_code
 
 Converts a string into a QR code image in SVG format.
 
-.. code-block:: liquid
+.. Can't use liquid because Sphinx doesn't have a built-in lexer for Liquid
+.. code-block:: jinja
 
    {{ "https://talkable.com" | qr_code }}
    {{ coupon.code | qr_code }}
-   {{ "Scan me\!" | qr_code: xdim: 8 }}
+   {{ "Scan me!" | qr_code: xdim: 8 }}
 
 It may take the following arguments:
 
