@@ -7,24 +7,21 @@
 Custom App
 ==========
 
-Overview of the Custom App
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Overview
+~~~~~~~~
 
 Custom App is a powerful solution that enables seamless data transfer from Talkable to various external systems, such as: your website, Email Service Providers (ESP), Customer Data Platforms (CDP).
 
-Unlike traditional webhooks, which require setting up multiple individual endpoints for different event types, Custom App provides a centralized way to manage and control data flows in a more flexible and secure manner.
+Unlike traditional webhooks, which require setting up multiple individual endpoints for different event types, Custom App provides a centralized way to manage and control data flows in a more flexible manner.
 
-:ref:`Learn more about Migration from Webhooks to Custom App <web_hooks/migration_to_custom_app>`
+:ref:`Migration from Webhooks to Custom App <web_hooks/migration_to_custom_app>`
 
-Primary Features of Custom App
-------------------------------
+Key Features
+------------
 
 - **Event-Based Data Synchronization**: Automatically sends customer-related event data to a specified endpoint, ensuring real-time updates and accurate tracking.
 - **Centralized Configuration**: Allows users to configure multiple event actions within a single interface instead of managing separate webhook URLs.
-- **Enhanced Security**: Utilizes HMAC-SHA256 signature verification, ensuring data integrity and preventing unauthorized access.
 - **Customizable Payloads**: Supports additional attributes and interpolation variables, allowing for flexible data structures.
-- **Error Handling and Logging**: Provides detailed logs and status tracking, making it easier to troubleshoot and monitor data transmissions.
-- **Simplified Testing**: Enables users to test event actions directly within the Talkable UI before deploying changes to production.
 
 Set Up
 ~~~~~~
