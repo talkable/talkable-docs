@@ -20,6 +20,12 @@ https://en.wikipedia.org/wiki/Webhook
 Each Webhook in Talkable is defined with an HTTP URL to deliver Webhook data
 (aka payload). This URL should be defined and implemented on the client’s site.
 
+.. note::
+
+   Talkable now provides a more flexible and powerful way to handle events with the Custom App.
+   We strongly recommend :ref:`migrating your existing Webhooks to Custom App<web_hooks/migration_to_custom_app>`
+   to take advantage of centralized configuration, customizable payloads, and greater overall flexibility.
+
 .. raw:: html
 
    <h2>Available Webhooks</h2>
@@ -198,3 +204,4 @@ See available Webhooks on the navigation sidebar.
       Unsubscribe <web_hooks/unsubscribe>
       Check Unsubscribe <web_hooks/check_unsubscribe>
       Event <web_hooks/event>
+      Migration from Webhooks to Custom App <web_hooks/migration_to_custom_app>
