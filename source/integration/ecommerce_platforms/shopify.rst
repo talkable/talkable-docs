@@ -4,8 +4,8 @@
 .. meta::
    :description: Here’s how you can integrate Talkable Shopify app with your store.
 
-Shopify Integration
-===================
+Shopify
+=======
 
 .. _integration/ecommerce_platforms/shopify/automatic_integration:
 
