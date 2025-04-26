@@ -1,3 +1,5 @@
+# Talkable Documentation
+
 ## What is Talkable Documentation?
 
 The set of articles describing Talkable's capabilities, publicly available at [docs.talkable.com](https://docs.talkable.com).
