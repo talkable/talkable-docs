@@ -12,55 +12,47 @@ Talkable offers free extension for Magento 2.4 which allows you to integrate and
 Prerequisites
 -------------
 
-1.  Magento 2.4
+1. Magento 2.4
 
-    .. warning::
+   .. warning::
 
       Magento 1.x is no longer supported. If you are currently using Magento 1.x, we recommend upgrading to Magento 2.4 to use the Talkable extension.
 
-    To check your Magento version, navigate to your store's admin panel. The version number will be listed in the page footer.
+   To check your Magento version, navigate to your store's admin panel. The version number will be listed in the page footer.
 
-    * For Magento 1.x:
-
-      .. image:: /_static/img/magento/version.png
-
-    * For Magento 2.x:
-
-      .. image:: /_static/img/magento2/version.png
+   .. image:: /_static/img/magento2/version.png
 
 2.  Talkable account
 
-3.  Magento Marketplace account (optional)
+3.  Adobe Commerce account
 
-    .. note::
-      
-      This account is required only if you plan to install the extension from the Adobe Commerce Marketplace. If you prefer to install it directly from the command line on your server, this account is not necessary.
-
-    If you do not have a Magento Marketplace account configured, follow 
-    `these steps <https://experienceleague.adobe.com/en/docs/commerce-admin/start/commerce-account/commerce-account-create>`_ 
-    to connect one to your Magento store.
+    If you do not have an Adobe Commerce account configured, follow 
+    `these steps <https://experienceleague.adobe.com/en/docs/commerce-admin/start/commerce-account/commerce-account-create>`_.
 
 
 Installation
 ------------
 
-From the Adobe Commerce Marketplace
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-1. Visit the Magento Marketplace and get the Talkable extension.
-
-   .. image:: /_static/img/magento2/install.jpg
-
-
-From the command line
-~~~~~~~~~~~~~~~~~~~~~
-
 .. note::
 
    Installation via Composer requires an IT administrator with SSH access to the server where Magento 2 is hosted.
 
-2. Log in to your Magento 2 server and navigate to the root directory of your Magento app from your command line tool.
-   This guide shows example outputs for Terminal, but these steps can be modified for any command line tool of your choice.
+1. Get the Talkable extension
+
+   Visit the Adobe Commerce Marketplace and get the Talkable extension.
+   https://commercemarketplace.adobe.com/talkable-magento2-integration.html
+
+   .. image:: /_static/img/magento2/install.jpg
+
+|br|
+
+2. Open the terminal and navigate to the root directory of your Magento app.
+
+   Usually it's ``/var/www/html/``.
+
+   .. code-block:: bash
+
+      cd /var/www/html/
 
 3. Run the following command to access the latest version of the Talkable extension.
     
@@ -109,20 +101,17 @@ Accessing Talkable Configuration
    .. image:: /_static/img/magento2/access1.jpg
 
 2. Then select **Talkable** → **Talkable Configuration** from the list of available configurations.
+   
    If you have multiple stores, select the desired Store View you want to change the settings for.
 
    .. image:: /_static/img/magento2/access2.jpg
 
-|page_break|
-
 Configuring Talkable Extension
 ------------------------------
 
-The extension configuration screen consists of three sections: Integration_, Campaigns_ and `Page URLs`_.
+Expand `Integration`, `Campaigns` and `Page URLs` sections to see all available configuration options.
    
 .. image:: /_static/img/magento2/configure1.jpg
-
-|page_break|
 
 Integration
 ~~~~~~~~~~~
@@ -137,18 +126,21 @@ to your Talkable account.
    Only change this setting if you need to connect your store to a different site in the Talkable dashboard.
    An incorrect value will prevent your campaigns from showing.
 
-   Changing the Site ID will invalidate the full page cache. Magento will display a warning message with
-   a link to the Cache Management page. Please follow this link and refresh the invalidated cache types.
+You need to paste the Site ID from your Talkable Site Dashboard into this field.
 
-   .. image:: /_static/img/magento2/cache.jpg
+.. image:: /_static/img/magento2/configure3.jpg
 
-.. note::
+|br|
+Changing the Site ID will invalidate the full page cache. Magento will display a warning message with a link to the Cache Management page.
 
-   You need to paste the Site ID from your Talkable Site Dashboard into this field.
+You would need to follow ``Cache Management`` link and refresh the invalidated cache types.
 
-   .. image:: /_static/img/magento2/configure3.jpg
+.. image:: /_static/img/magento2/flush-cache.png
 
-|page_break|
+|br|
+As a result you should see the config status as ``Enabled``.
+
+.. image:: /_static/img/magento2/flush-cache-successful.png
 
 Campaigns
 ~~~~~~~~~
@@ -158,8 +150,6 @@ For example, if you don’t have Standalone or Advocate Dashboard campaigns conf
 you can disable these campaigns in extension config, so the corresponding pages are not accessible.
 
 .. image:: /_static/img/magento2/configure4.jpg
-
-|page_break|
 
 Page URLs
 ~~~~~~~~~
@@ -177,4 +167,4 @@ Default values correspond to default placements in Talkable.
 
 .. image:: /_static/img/magento2/configure6.jpg
 
-.. _Magento Extensions Guide: https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/extensions.html
+.. _Magento Extensions Guide: https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/tutorials/extensions
