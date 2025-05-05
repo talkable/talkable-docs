@@ -142,14 +142,10 @@ docker container restart docs-nginx-development
 ```
 
 > [!TIP]
-> 
-<<<<<<< HEAD
+>
 > - Use ChatGPT to adjust existing or add new rules. Ask for `nginx redirection rules`.
 >
 > - Avoid creating the rules by operating on something except paths (like protocols and hostnames). The best way is to manipulate paths only.
-=======
-> Avoid creating rules that manipulate anything other than paths (such as protocols and hostnames). The best approach is to modify paths only.
->>>>>>> vo-PR-23725
 
 ## Troubleshooting
 
