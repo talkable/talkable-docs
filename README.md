@@ -1,3 +1,5 @@
+# Talkable Documentation
+
 ## What is Talkable Documentation?
 
 The set of articles describing Talkable's capabilities, publicly available at [docs.talkable.com](https://docs.talkable.com).
@@ -76,6 +78,7 @@ You should not deploy it manually!
 The deployment is handled by [Jenkins job](http://jenkins.production/view/Talkable-docs/).
 
 All you need to do is commit your changes to the corresponding branch to deploy them to the appropriate server:
+
 - Commit to the [staging](https://github.com/talkable/talkable-docs/tree/staging) branch => [docs.bastion.talkable.com](https://docs.bastion.talkable.com/).
 - Commit to the [master](https://github.com/talkable/talkable-docs/tree/master) branch => [docs.talkable.com](https://docs.talkable.com/).
 
@@ -150,7 +153,7 @@ docker container restart docs-nginx-development
 
 ## Troubleshooting
 
-#### Can't view the documentation locally in the browser?
+### Can't view the documentation locally in the browser?
 
 1. Ensure you are using the correct port number and protocol.
    The port number should match the value provided in `.env` as `LOCAL_PORT`.
