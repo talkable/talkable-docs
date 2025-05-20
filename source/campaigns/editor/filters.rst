@@ -910,8 +910,7 @@ qr\_code
 
 Converts a string into a QR code image in SVG format.
 
-.. Can't use liquid because Sphinx doesn't have a built-in lexer for Liquid
-.. code-block:: jinja
+.. code-block:: liquid
 
    {{ "https://talkable.com" | qr_code }}
    {{ coupon.code | qr_code }}
