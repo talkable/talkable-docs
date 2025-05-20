@@ -912,7 +912,7 @@ Converts a string into a QR code image in SVG format.
 
 .. code-block:: liquid
 
-   {{ link | qr_code }}
+   {{ "https://talkable.com" | qr_code }}
    {{ coupon.code | qr_code }}
    {{ "Scanme" | qr_code: xdim: 8 }}
 
