@@ -905,6 +905,33 @@ This example can be used in ``Email sending condition`` of Advocate Offer Email 
 
 |hr|
 
+qr\_code
+........
+
+Converts a string into a QR code image in SVG format.
+
+.. code-block:: liquid
+
+   {{ "https://talkable.com" | qr_code }}
+   {{ coupon.code | qr_code }}
+   {{ "Scanme" | qr_code: xdim: 8 }}
+
+It may take the following arguments:
+
+* ``xdim`` - the width of the narrowest bar in a barcode. Thicker bars are multiples of the xdim. Default value is ``4``.
+
+This filter generates a QR code that can be used to encode URLs, text, or coupon codes. The QR code is returned as an SVG image that can be directly embedded in HTML.
+
+**Example usage in HTML:**
+
+.. code-block:: liquid
+
+   <div class="qr-code-container">
+     {{ coupon.code | qr_code: xdim: 6 }}
+   </div>
+
+|hr|
+
 rand\_by
 ........
 
