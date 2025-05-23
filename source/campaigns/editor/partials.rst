@@ -25,6 +25,16 @@ To add a new Liquid partial, follow these steps:
 
    .. image:: /_static/img/editor/partial-modal.png
 
+Default Partials
+================
+
+Talkable provides a set of default partials that can be used in your templates.
+These partials are pre-defined snippets of code that can be included in your main templates without the need to create them from scratch,
+each partial has description with detailed information about its purpose and usage.
+
+.. image:: /_static/img/editor/partials-default.png
+
+
 Including a Partial in a Main Template
 ======================================
 
