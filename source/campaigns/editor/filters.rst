@@ -402,7 +402,7 @@ Returns string of class names built from arguments.
 |hr|
 
 color\_to\_hex
-............
+..............
 
 Converts color string to hexadecimal format.
 If a color with an alpha channel is provided, then the alpha channel is excluded from the output.
@@ -421,7 +421,7 @@ If a color with an alpha channel is provided, then the alpha channel is excluded
 |hr|
 
 color\_to\_rgb
-............
+..............
 
 Converts color string to RGB format.
 If a color with an alpha channel is provided, then the alpha channel is excluded from the output.
@@ -650,7 +650,7 @@ Returns:
 |hr|
 
 is\_color\_dark
-............
+...............
 
 Determines if a color is visually dark based on its luminance
 
@@ -668,7 +668,7 @@ Determines if a color is visually dark based on its luminance
 |hr|
 
 is\_color\_light
-............
+................
 
 Determines if a color is visually light based on its luminance
 
