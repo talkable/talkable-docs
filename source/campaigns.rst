@@ -16,7 +16,7 @@ Talkable Campaign is based on interaction between ``Advocate`` and ``Friend``:
   :alt: Sharing process
 
 Each step of this interaction has its own ``View`` so developer can easily
-change every singe step and customize its appearance and functionality based on
+change every single step and customize its appearance and functionality based on
 campaign requirements.
 
 We use |liquid| as a View template engine to provide a simple and quick way
