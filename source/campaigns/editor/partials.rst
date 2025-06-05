@@ -34,7 +34,6 @@ each partial has description with detailed information about its purpose and usa
 
 .. image:: /_static/img/editor/partials-default.png
 
-
 Including a Partial in a Main Template
 ======================================
 
