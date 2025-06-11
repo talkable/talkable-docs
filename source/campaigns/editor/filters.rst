@@ -401,6 +401,44 @@ Returns string of class names built from arguments.
 
 |hr|
 
+color\_to\_hex
+..............
+
+Converts color string to hexadecimal format.
+If a color with an alpha channel is provided, then the alpha channel is excluded from the output.
+
+.. container:: ptable
+
+   ================================================= ==============
+   Example                                           Result
+   ================================================= ==============
+   ``{{ "red" | color_to_hex }}``                    ``#ff0000``
+   ``{{ "#fefefe" | color_to_hex }}``                ``#fefefe``
+   ``{{ "rgb(255, 0, 255)" | color_to_hex }}``       ``#ff00ff``
+   ``{{ "rgba(255, 0, 255, 0.1)" | color_to_hex }}`` ``#ff00ff``
+   ================================================= ==============
+
+|hr|
+
+color\_to\_rgb
+..............
+
+Converts color string to RGB format.
+If a color with an alpha channel is provided, then the alpha channel is excluded from the output.
+
+.. container:: ptable
+
+   ================================================= ======================
+   Example                                           Result
+   ================================================= ======================
+   ``{{ "red" | color_to_rgb }}``                    ``rgb(255, 0, 0)``
+   ``{{ "#fefefe" | color_to_rgb }}``                ``rgb(254, 254, 254)``
+   ``{{ "rgb(255, 0, 255)" | color_to_rgb }}``       ``rgb(255, 0, 255)``
+   ``{{ "rgba(255, 0, 255, 0.1)" | color_to_rgb }}`` ``rgb(255, 0, 255)``
+   ================================================= ======================
+
+|hr|
+
 date\_diff
 ..........
 
@@ -608,6 +646,42 @@ Returns:
       font-weight: normal;
       font-style: normal;
    }
+
+|hr|
+
+is\_color\_dark
+...............
+
+Determines if a color is visually dark based on its luminance
+
+.. container:: ptable
+
+   ================================= =========
+   Example                           Result
+   ================================= =========
+   ``{{ "pink" | is_color_dark }}``  ``false``
+   ``{{ "red" | is_color_dark }}``   ``true``
+   ``{{ "white" | is_color_dark }}`` ``false``
+   ``{{ "black" | is_color_dark }}`` ``true``
+   ================================= =========
+
+|hr|
+
+is\_color\_light
+................
+
+Determines if a color is visually light based on its luminance
+
+.. container:: ptable
+
+   ================================== =========
+   Example                            Result
+   ================================== =========
+   ``{{ "pink" | is_color_light }}``  ``true``
+   ``{{ "red" | is_color_light }}``   ``false``
+   ``{{ "white" | is_color_light }}`` ``true``
+   ``{{ "black" | is_color_light }}`` ``false``
+   ================================== =========
 
 |hr|
 
