@@ -85,6 +85,13 @@ The list of tracking methods by their priority:
 
 .. raw:: html
 
+   <h2>Phone Number</h2>
+
+- Friend used the same phone number as they entered on the claim page.
+- Only applies to campaigns that have Friend Signup feature enabled.
+
+.. raw:: html
+
    <h2>Share Email</h2>
 
 - Friend used the same email address in the Friend Share Email.
