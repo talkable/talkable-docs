@@ -1067,6 +1067,41 @@ Find more details about the integration here: :ref:`BHN Rewards (formerly Rybbon
 
 |hr|
 
+save\_wallet
+............
+
+Validates and caches the wallet template. This filter should be used on "Talkable wallet for iphone"
+and "Talkable wallet for android" pages, passing a hash object with the wallet template. Optionally,
+you can pass a card type to the filter. Currently, only ``Wallets::ReferralCard`` (default, used for Apple)
+and ``Wallets::GoogleReferralCard`` (for Android) are supported.
+
+Example for Apple Wallet:
+
+.. code-block:: liquid
+
+   {% assign wallet = "" | new_hash %}
+
+   {% assign wallet = wallet | assign_key: "barcodes", apple_wallet_barcodes %}
+   {% assign wallet = wallet | assign_key: "header_fields", apple_wallet_header_fields %}
+
+   {{ wallet | save_wallet }}
+
+Example for Android Wallet:
+
+.. code-block:: liquid
+
+   {% assign wallet = "" | new_hash %}
+
+   {% assign wallet = wallet | assign_key: "barcode", google_wallet_barcode %}
+   {% assign wallet = wallet | assign_key: "primary_fields", google_wallet_primary_fields %}
+
+   {{ wallet | save_wallet: card_type: 'Wallets::GoogleReferralCard' }}
+
+Required and allowed fields for each card type should be checked in the respective documentation:
+
+* `Apple Wallet <https://developer.apple.com/documentation/walletpasses/pass>`_
+* `Google Wallet <https://developers.google.com/wallet/generic/overview/how-classes-objects-work#objects>`_
+
 scale\_color
 ............
 
