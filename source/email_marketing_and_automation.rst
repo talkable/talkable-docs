@@ -25,6 +25,7 @@ With these tools, Talkable synchronizes everyone who opts in for Talkable market
          email_marketing_and_automation/cordial
          email_marketing_and_automation/createsend
          email_marketing_and_automation/cheetah
+         email_marketing_and_automation/dotdigital
          email_marketing_and_automation/klaviyo
          email_marketing_and_automation/yotpo
          email_marketing_and_automation/ometria
