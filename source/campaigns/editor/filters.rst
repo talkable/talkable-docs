@@ -574,6 +574,20 @@ Group an array’s items by a given property.
 
 |hr|
 
+hmac\_sha256
+............
+
+Generate an HMAC authentication code as a hex-encoded string using SHA256 algorithm.
+
+By default, the site's API key is used as secret, unless specified otherwise.
+
+.. code-block:: text
+
+   {{ "a string" | hmac_sha256 }}
+   {{ "a string" | hmac_sha256: "a different secret" }}
+
+|hr|
+
 hours\_from\_time
 .................
 
