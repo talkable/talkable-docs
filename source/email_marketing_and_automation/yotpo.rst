@@ -8,7 +8,7 @@ Yotpo
 =====
 
 Loyalty & Referrals
----------
+-------------------
 
 Yotpo Loyalty & Referrals is a comprehensive customer loyalty platform that helps businesses create loyalty programs with points and rewards, manage VIP tiers, and track customer engagement.
 
@@ -37,7 +37,7 @@ The integration uses webhooks to automatically sync this data in real-time, ensu
 Loyalty data usage
 ~~~~~~~~~~~~~~~~~~
 
-New data that synced from Yotpo can be accesed through person custom properties:
+New data that synced from Yotpo can be accessed through person custom properties:
 
 Available Yotpo loyalty variables:
 
