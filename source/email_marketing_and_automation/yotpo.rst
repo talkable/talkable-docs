@@ -8,7 +8,7 @@ Yotpo
 =====
 
 Loyalty & Referrals
----------
+-------------------
 
 Yotpo Loyalty & Referrals is a comprehensive customer loyalty platform that helps businesses create loyalty programs with points and rewards, manage VIP tiers, and track customer engagement.
 
