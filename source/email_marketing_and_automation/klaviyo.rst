@@ -44,7 +44,7 @@ Please use the following guide to start using an app you need:
      :alt: App store step 2
 
 2. Choose an app you need by clicking “Install”
-3. Сonfirm the app installation in Klaviyo
+3. Confirm the app installation in Klaviyo
 4. Complete installation in Talkable and enable the app:
 
    .. image:: /_static/img/email_marketing_and_automation/klaviyo.png
