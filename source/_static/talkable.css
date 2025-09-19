@@ -45,3 +45,7 @@ dd {
 .bd-toc-nav {
   word-break: break-word;
 }
+
+img {
+  object-fit: contain;
+}

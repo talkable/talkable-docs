@@ -27,6 +27,7 @@ Each ESP application allows custom attributes to be included with each request. 
 
    .. image:: /_static/img/email_marketing_and_automation/variables.png
      :alt: Variables
+     :scale: 50%
 
 Each variable is described in the “Available variables” sidebar and can be expanded to see all nested properties.
 
@@ -39,13 +40,15 @@ Please use the following guide to start using an app you need:
 
    .. image:: /_static/img/email_marketing_and_automation/app_store_step_1.png
      :alt: App store step 1
+     :width: 595
 
    .. image:: /_static/img/email_marketing_and_automation/app_store_step_2.png
      :alt: App store step 2
+     :scale: 50%
 
 2. Choose an app you need by clicking “Install”
-3. Fill in all necessary fields. You can use tips on the right that instruct how to find all necessary credentials.
-4. Complete installation and enable the app:
+3. Confirm the app installation in Klaviyo
+4. Complete installation in Talkable and enable the app:
 
    .. image:: /_static/img/email_marketing_and_automation/klaviyo.png
      :alt: klaviyo
@@ -54,5 +57,6 @@ Please use the following guide to start using an app you need:
 
    .. image:: /_static/img/email_marketing_and_automation/send_sample_payload.png
      :alt: Send sample payload
+     :scale: 50%
 
 .. include:: /partials/contact_us.rst
