@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: With Klaviyo app clients can synchronize emails that Talkable collected.
+   :description: With Klaviyo app clients can synchronize emails that Talkable collected.
 
 Klaviyo
 =======
@@ -12,12 +12,12 @@ With ESP apps clients can synchronize emails that Talkable acquires with their E
 1. Advocate signs up and opts in for Talkable marketing emails:
 
    .. image:: /_static/img/email_marketing_and_automation/subscribe.png
-     :alt: Subscribe
+      :alt: Subscribe
 
 2. A friend passes email gating and opts in for Talkable marketing emails:
 
    .. image:: /_static/img/email_marketing_and_automation/signup.png
-     :alt: Signup
+      :alt: Signup
 
 Each ESP application allows custom attributes to be included with each request. The following interpolation variables are allowed:
 
@@ -26,8 +26,8 @@ Each ESP application allows custom attributes to be included with each request. 
 3. ``{{ campaign }}`` – a data object with details about the campaign within which the email was captured.
 
    .. image:: /_static/img/email_marketing_and_automation/variables.png
-     :alt: Variables
-     :scale: 50%
+      :alt: Variables
+      :scale: 50%
 
 Each variable is described in the “Available variables” sidebar and can be expanded to see all nested properties.
 
@@ -39,24 +39,24 @@ Please use the following guide to start using an app you need:
 1. Navigate into the App store:
 
    .. image:: /_static/img/email_marketing_and_automation/app_store_step_1.png
-     :alt: App store step 1
-     :width: 595
+      :alt: App store step 1
+      :width: 595
 
    .. image:: /_static/img/email_marketing_and_automation/app_store_step_2.png
-     :alt: App store step 2
-     :scale: 50%
+      :alt: App store step 2
+      :scale: 50%
 
 2. Choose an app you need by clicking “Install”
 3. Confirm the app installation in Klaviyo
 4. Complete installation in Talkable and enable the app:
 
    .. image:: /_static/img/email_marketing_and_automation/klaviyo.png
-     :alt: klaviyo
+      :alt: klaviyo
 
 5. Test the app by pressing on the “Send sample payload” and then check if you are seeing a test request inside your ESP:
 
    .. image:: /_static/img/email_marketing_and_automation/send_sample_payload.png
-     :alt: Send sample payload
-     :scale: 50%
+      :alt: Send sample payload
+      :scale: 50%
 
 .. include:: /partials/contact_us.rst
