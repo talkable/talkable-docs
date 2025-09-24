@@ -19,9 +19,6 @@ Together, Talkable and Attentive drive personalized brand engagement and the **a
 
 1. Capture phone numbers through Talkable to seamlessly grow your SMS subscriber list. The integration automatically passes these numbers to your Attentive messaging flow.
 
-   .. image:: /_static/img/email_marketing_and_automation/signup2.png
-      :alt: Signup
-
 2. Promote refer-a-friend to your SMS list to facilitate increased sharing. Mobile messages have a 99% open rate.
 
    **Sample SMS triggered post-purchase:**
@@ -50,15 +47,15 @@ Here are the conditions when Talkable acquires phone numbers:
 
 1. Advocate signs up, provides phone number and opts in for Talkable marketing text messages:
 
-   .. image:: /_static/img/email_marketing_and_automation/phone_gating_ad.png
+   .. image:: /_static/img/email_marketing_and_automation/signup_advocate_sms.png
       :alt: Subscribe
       :scale: 50%
 
 2. Friend passes phone gating and opts in for Talkable marketing text messages:
 
-   .. image:: /_static/img/email_marketing_and_automation/phone_gating_fr.png
+   .. image:: /_static/img/email_marketing_and_automation/signup_friend_sms.png
       :alt: Signup
-      :scale: 50%
+      :width: 337
 
 Each ESP application allows custom attributes to be included with each request. The following interpolation variables are allowed:
 
