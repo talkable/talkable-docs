@@ -11,13 +11,15 @@ With ESP apps clients can synchronize emails that Talkable acquires with their E
 
 1.  Advocate signs up and opts in for Talkable marketing emails:
 
-    .. image:: /_static/img/email_marketing_and_automation/subscribe.png
+    .. image:: /_static/img/email_marketing_and_automation/signup_advocate.png
        :alt: Subscribe
+       :scale: 50%
 
 2.  A friend passes email gating and opts in for Talkable marketing emails:
 
-    .. image:: /_static/img/email_marketing_and_automation/signup.png
+    .. image:: /_static/img/email_marketing_and_automation/signup_friend.png
        :alt: Signup
+       :width: 430
 
 Each ESP application allows custom attributes to be included with each request. The following interpolation variables are allowed:
 

@@ -17,13 +17,15 @@ Here are the conditions when Talkable acquires emails and phone numbers:
 
 1. Advocate signs up and opts in for Talkable marketing emails:
 
-   .. image:: /_static/img/email_marketing_and_automation/subscribe.png
+   .. image:: /_static/img/email_marketing_and_automation/signup_advocate.png
       :alt: Subscribe
+      :scale: 50%
 
 2. A friend passes email gating and opts in for Talkable marketing emails:
 
-   .. image:: /_static/img/email_marketing_and_automation/signup.png
+   .. image:: /_static/img/email_marketing_and_automation/signup_friend.png
       :alt: Signup
+      :width: 430
 
 3. Phone numbers are captured when users opt in for SMS communications during the referral process.
 
