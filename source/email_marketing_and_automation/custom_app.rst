@@ -30,9 +30,11 @@ Set Up
 
    .. image:: /_static/img/email_marketing_and_automation/app_store_step_1.png
       :alt: App store step 1
+      :width: 595
 
    .. image:: /_static/img/email_marketing_and_automation/app_store_step_2.png
       :alt: App store step 2
+      :scale: 50%
 
 2. Choose a `Custom app` and click “Install”
 3. Fill in `Endpoint URL` and `App name` fields, and enable the required actions.
@@ -121,6 +123,7 @@ Each action allows custom attributes to be included. You can see allowed interpo
 
 .. image:: /_static/img/email_marketing_and_automation/variables.png
    :alt: Variables
+   :scale: 50%
 
 Sync signups
 ------------
@@ -338,6 +341,7 @@ Testing Custom app actions can be accomplished with the help of Webhook Tester, 
 
    .. image:: /_static/img/email_marketing_and_automation/send_sample_payload.png
       :alt: Send sample payload
+      :scale: 50%
 
 5. After you finish the implementation on your site **change Webhook Tester URL
    to the live URL** in your Custom app.

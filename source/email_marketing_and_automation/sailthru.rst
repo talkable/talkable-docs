@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: With Sailthru app clients can synchronize emails that Talkable collected.
+   :description: With Sailthru app clients can synchronize emails that Talkable collected.
 
 Sailthru
 ========
@@ -11,13 +11,15 @@ With ESP apps clients can synchronize emails that Talkable acquires with their E
 
 1. Advocate signs up and opts in for Talkable marketing emails:
 
-   .. image:: /_static/img/email_marketing_and_automation/subscribe.png
-     :alt: Subscribe
+   .. image:: /_static/img/email_marketing_and_automation/signup_advocate.png
+      :alt: Subscribe
+      :scale: 50%
 
 2. A friend passes email gating and opts in for Talkable marketing emails:
 
-   .. image:: /_static/img/email_marketing_and_automation/signup.png
-     :alt: Signup
+   .. image:: /_static/img/email_marketing_and_automation/signup_friend.png
+      :alt: Signup
+      :width: 430
 
 Each ESP application allows custom attributes to be included with each request. The following interpolation variables are allowed:
 
@@ -26,7 +28,8 @@ Each ESP application allows custom attributes to be included with each request. 
 3. ``{{ campaign }}`` – a data object with details about the campaign within which the email was captured.
 
 .. image:: /_static/img/email_marketing_and_automation/variables.png
-  :alt: Variables
+   :alt: Variables
+   :scale: 50%
 
 Each variable is described in the “Available variables” sidebar and can be expanded to see all nested properties.
 
@@ -38,21 +41,24 @@ Please use the following guide to start using an app you need:
 1. Navigate into the App store:
 
    .. image:: /_static/img/email_marketing_and_automation/app_store_step_1.png
-       :alt: App store step 1
+      :alt: App store step 1
+      :width: 595
 
    .. image:: /_static/img/email_marketing_and_automation/app_store_step_2.png
-       :alt: App store step 2
+      :alt: App store step 2
+      :scale: 50%
 
 2. Choose an app you need by clicking “Install”
 3. Fill in all necessary fields. You can use tips on the right that instruct how to find all necessary credentials.
 4. Complete installation and enable the app:
 
    .. image:: /_static/img/email_marketing_and_automation/sailthru.png
-       :alt: Sailthru
+      :alt: Sailthru
 
 5. Test the app by pressing on the “Send sample payload” and then check if you are seeing a test request inside your ESP:
 
    .. image:: /_static/img/email_marketing_and_automation/send_sample_payload.png
-     :alt: Send sample payload
+      :alt: Send sample payload
+      :scale: 50%
 
 .. include:: /partials/contact_us.rst
