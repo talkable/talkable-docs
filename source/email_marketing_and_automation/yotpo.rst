@@ -2,7 +2,7 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: Synchronize customer loyalty data from Yotpo Loyalty & Referrals platform with Talkable integration.
+   :description: Synchronize customer loyalty data from Yotpo Loyalty & Referrals platform with Talkable integration.
 
 Yotpo
 =====
@@ -57,8 +57,13 @@ Please use the following guide to start using the Yotpo integration:
 
 1. Navigate into the App store:
 
-   .. image:: /_static/img/email_marketing_and_automation/app_store_navigation.png
-      :alt: App store navigation
+   .. image:: /_static/img/email_marketing_and_automation/app_store_step_1.png
+      :alt: App store step 1
+      :width: 595
+
+   .. image:: /_static/img/email_marketing_and_automation/app_store_step_2.png
+      :alt: App store step 2
+      :scale: 50%
 
 2. Choose "Yotpo Loyalty & Referrals" by clicking "Install"
 

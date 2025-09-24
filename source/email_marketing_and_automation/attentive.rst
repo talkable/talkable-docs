@@ -2,14 +2,14 @@
 .. include:: /partials/common.rst
 
 .. meta::
-  :description: With Attentive app clients can synchronize mobile numbers that Talkable collected.
+   :description: With Attentive app clients can synchronize mobile numbers that Talkable collected.
 
 Attentive
 =========
 
 .. tip::
 
-  This is a custom integration that can be implemented with extra effort. If you wish to integrate this vendor, please contact your Customer Success Manager to apply it to your campaigns.
+   This is a custom integration that can be implemented with extra effort. If you wish to integrate this vendor, please contact your Customer Success Manager to apply it to your campaigns.
 
 Talkable converts customers into brand advocates by enabling trusted, word-of-mouth referrals. Attentive connects with customers on the most engaging channel: SMS.
 
@@ -44,19 +44,21 @@ It supports next data to be synchronized from Talkable to Attentive:
 
 .. note::
 
-    For phone and phone opt-in synchronization, corresponding attributes should be configured in a Talkable campaign: :ref:`Phone number gating <advanced_features/phone_number_gating>`
+   For phone and phone opt-in synchronization, corresponding attributes should be configured in a Talkable campaign: :ref:`Phone number gating <advanced_features/phone_number_gating>`
 
 Here are the conditions when Talkable acquires phone numbers:
 
 1. Advocate signs up, provides phone number and opts in for Talkable marketing text messages:
 
    .. image:: /_static/img/email_marketing_and_automation/phone_gating_ad.png
-     :alt: Subscribe
+      :alt: Subscribe
+      :scale: 50%
 
 2. Friend passes phone gating and opts in for Talkable marketing text messages:
 
    .. image:: /_static/img/email_marketing_and_automation/phone_gating_fr.png
-     :alt: Signup
+      :alt: Signup
+      :scale: 50%
 
 Each ESP application allows custom attributes to be included with each request. The following interpolation variables are allowed:
 
@@ -66,8 +68,9 @@ Each ESP application allows custom attributes to be included with each request. 
 
 3. ``{{ campaign }}`` – a data object with details about the campaign within which the phone was captured.
 
-.. image:: /_static/img/email_marketing_and_automation/attentive_variables.png
-  :alt: Variables
+.. image:: /_static/img/email_marketing_and_automation/variables.png
+   :alt: Variables
+   :scale: 50%
 
 Each variable is described in the “Available variables” sidebar and can be expanded to see all nested properties.
 
@@ -78,8 +81,13 @@ Please use the following guide to start using an app you need:
 
 1. Navigate into the App store:
 
-   .. image:: /_static/img/email_marketing_and_automation/app_store_navigation.png
-      :alt: App store navigation
+   .. image:: /_static/img/email_marketing_and_automation/app_store_step_1.png
+      :alt: App store step 1
+      :width: 595
+
+   .. image:: /_static/img/email_marketing_and_automation/app_store_step_2.png
+      :alt: App store step 2
+      :scale: 50%
 
 2. Choose an app you need by clicking “Install”
 
@@ -92,7 +100,8 @@ Please use the following guide to start using an app you need:
 
 5. Test the app by pressing on the “Send sample payload” and then check if you are seeing a test request inside your ESP:
 
-   .. image:: /_static/img/email_marketing_and_automation/attentive_send_sample.png
-    :alt: Attentive send sample
+   .. image:: /_static/img/email_marketing_and_automation/send_sample_payload.png
+      :alt: Send sample payload
+      :scale: 50%
 
 .. include:: /partials/contact_us.rst
