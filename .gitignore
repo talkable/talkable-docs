@@ -17,3 +17,5 @@ __pycache__
 # Ruby
 .bundle
 Gemfile.lock
+
+agent_*.md

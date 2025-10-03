@@ -1,0 +1,14 @@
+[project]
+name = "talkable-docs"
+version = "0.1.0"
+description = "Talkable Public Documentation"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "sphinx-copybutton",
+    "sphinx-sitemap",
+    "sphinx-autobuild",
+    "sphinx-design",
+    "sphinx-book-theme",
+    "pydata-sphinx-theme==0.15.4",
+]
