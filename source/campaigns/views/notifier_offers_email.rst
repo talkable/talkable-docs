@@ -17,7 +17,7 @@ Main |cta| should point to an Advocate Signup/Share Page — ``{{ share_page_url
 
 |br|
 
-.. image:: /_static/img/basics/advocate-offer-email.png
+.. image:: _static/img/basics/advocate-offer-email.png
 
 |br|
 

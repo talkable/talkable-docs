@@ -39,7 +39,7 @@ This method involves including the discount code in the URL. This way, when a cu
        &tkbl_cvuuid={{ visitor_uuid }}
        &talkable_visitor_offer_id={{ friend_offer.id }}
 
-   .. image:: /_static/img/shopify/auto_apply/friend_destination_url.png
+   .. image:: _static/img/shopify/auto_apply/friend_destination_url.png
       :alt: Friend destination url
       :class: is-minimal
 
@@ -63,7 +63,7 @@ This method involves including the discount code in the URL. This way, when a cu
        {% endif %}
        tkbl_cvuuid={{ visitor_uuid }}
 
-   .. image:: /_static/img/shopify/auto_apply/advocate_destination_url.png
+   .. image:: _static/img/shopify/auto_apply/advocate_destination_url.png
       :alt: Advocate destination url
       :class: is-minimal
 

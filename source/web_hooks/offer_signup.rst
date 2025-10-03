@@ -28,7 +28,7 @@ and sharing an offer with Friends.
 
 Advocate Signup Form example:
 
-.. image:: /_static/img/advocate_signup_form_webhook.png
+.. image:: _static/img/advocate_signup_form_webhook.png
    :alt: Advocate Signup Form,
    :class: is-minimal
 

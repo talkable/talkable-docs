@@ -25,10 +25,10 @@ Adding DNS records in Cloudflare
    Note: Unlike some other platforms, Cloudfront does not allow multiple values in NS record.
    Instead, you'll need to add multiple NS records with the same name and different values.
 
-   .. image:: /_static/img/advanced_features/custom_domain_cloudfront_add_record.png
+   .. image:: _static/img/advanced_features/custom_domain_cloudfront_add_record.png
 
 #. Save the changes.
 
    Example of properly added `NS` records:
 
-   .. image:: /_static/img/advanced_features/custom_domain_cloudfront_success.png
+   .. image:: _static/img/advanced_features/custom_domain_cloudfront_success.png

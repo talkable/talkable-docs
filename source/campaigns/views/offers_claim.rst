@@ -24,7 +24,7 @@ Frequently used Variables:
 
 |br|
 
-.. image:: /_static/img/basics/friend-claim-page.png
+.. image:: _static/img/basics/friend-claim-page.png
    :alt: Friend Claim Page
 
 .. code-block:: liquid

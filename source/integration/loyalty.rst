@@ -45,7 +45,7 @@ a few quick steps by adding the below scripts to your site.
 
    It is recommended to add it above the discount field. Examples:
 
-   .. figure:: /_static/img/loyalty/loyalty_checkout.png
+   .. figure:: _static/img/loyalty/loyalty_checkout.png
       :alt: Sample checkout
 
 4. Define Loyalty points redemption batches.
@@ -58,7 +58,7 @@ a few quick steps by adding the below scripts to your site.
 
    It is recommended to upload 100,000 single-use coupons into every coupon list.
 
-   .. figure:: /_static/img/loyalty/redemption_batches.png
+   .. figure:: _static/img/loyalty/redemption_batches.png
       :alt: Redemption batches
 
 .. note::

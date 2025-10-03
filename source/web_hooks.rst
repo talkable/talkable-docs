@@ -34,7 +34,7 @@ Below is a user experience flow showing when Talkable Webhooks are called.
 For more details concerning specific Talkable Webhooks, click the appropriate
 Webhook type in the left-hand menu.
 
-.. image:: /_static/img/flowchart_webhooks_1.png
+.. image:: _static/img/flowchart_webhooks_1.png
    :alt: Webhooks Flowchart
    :class: is-minimal
 
@@ -48,7 +48,7 @@ Webhook type in the left-hand menu.
 
    <h2>Set Up</h2>
 
-.. image:: /_static/img/menu_webhooks_screenshot.png
+.. image:: _static/img/menu_webhooks_screenshot.png
    :alt: Webhooks Menu Item
    :class: is-minimal
 

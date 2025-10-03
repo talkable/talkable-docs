@@ -21,7 +21,7 @@ Tremendous integration consists of several parts:
 
    - An Advocate Referral Incentive with "Tremendous" reward type
 
-     .. image:: /_static/img/advanced_features/tremendous_incentive.png
+     .. image:: _static/img/advanced_features/tremendous_incentive.png
         :width: 400
         :alt: Creating a Tremendous Advocate Referral incentive
 

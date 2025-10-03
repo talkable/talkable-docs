@@ -46,14 +46,14 @@ Automatic configuration via metadata exchange is by far the easiest way to set u
 SAML SSO. Simply check the box for “Automatically Configure from Metadata” and
 provide the Metadata URL for your IdP.
 
-.. image:: /_static/img/advanced_features/sso_automatic_configuration.png
+.. image:: _static/img/advanced_features/sso_automatic_configuration.png
 
 Leave all other fields blank, and save the settings.
 
 Your IdP may require Talkable’s metadata URL. You can copy Talkable's (SP)
 metadata URL by clicking on the metadata link:
 
-.. image:: /_static/img/advanced_features/sso_metadata.png
+.. image:: _static/img/advanced_features/sso_metadata.png
 
 If automatic configuration is not supported by your IdP, then try manual configuration.
 
@@ -92,5 +92,5 @@ Once you've configured SSO, you can test it as followed:
 1. Log out of Talkable
 2. Visit the SP-Initiated SSO URL (provided on the SSO configuration page in Talkable)
 
-   .. image:: /_static/img/advanced_features/sso_sp_initiated_url.png
+   .. image:: _static/img/advanced_features/sso_sp_initiated_url.png
 

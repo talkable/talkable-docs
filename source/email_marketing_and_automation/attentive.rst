@@ -47,13 +47,13 @@ Here are the conditions when Talkable acquires phone numbers:
 
 1. Advocate signs up, provides phone number and opts in for Talkable marketing text messages:
 
-   .. image:: /_static/img/email_marketing_and_automation/signup_advocate_sms.png
+   .. image:: _static/img/email_marketing_and_automation/signup_advocate_sms.png
       :alt: Subscribe
       :scale: 50%
 
 2. Friend passes phone gating and opts in for Talkable marketing text messages:
 
-   .. image:: /_static/img/email_marketing_and_automation/signup_friend_sms.png
+   .. image:: _static/img/email_marketing_and_automation/signup_friend_sms.png
       :alt: Signup
       :width: 337
 
@@ -65,7 +65,7 @@ Each ESP application allows custom attributes to be included with each request. 
 
 3. ``{{ campaign }}`` – a data object with details about the campaign within which the phone was captured.
 
-.. image:: /_static/img/email_marketing_and_automation/variables.png
+.. image:: _static/img/email_marketing_and_automation/variables.png
    :alt: Variables
    :scale: 50%
 
@@ -78,11 +78,11 @@ Please use the following guide to start using an app you need:
 
 1. Navigate into the App store:
 
-   .. image:: /_static/img/email_marketing_and_automation/app_store_step_1.png
+   .. image:: _static/img/email_marketing_and_automation/app_store_step_1.png
       :alt: App store step 1
       :width: 595
 
-   .. image:: /_static/img/email_marketing_and_automation/app_store_step_2.png
+   .. image:: _static/img/email_marketing_and_automation/app_store_step_2.png
       :alt: App store step 2
       :scale: 50%
 
@@ -92,12 +92,12 @@ Please use the following guide to start using an app you need:
 
 4. Complete installation and enable the app:
 
-   .. image:: /_static/img/email_marketing_and_automation/attentive_activate.png
+   .. image:: _static/img/email_marketing_and_automation/attentive_activate.png
       :alt: Attentive
 
 5. Test the app by pressing on the “Send sample payload” and then check if you are seeing a test request inside your ESP:
 
-   .. image:: /_static/img/email_marketing_and_automation/send_sample_payload.png
+   .. image:: _static/img/email_marketing_and_automation/send_sample_payload.png
       :alt: Send sample payload
       :scale: 50%
 

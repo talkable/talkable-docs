@@ -19,7 +19,7 @@ Good practice is to use `https://[your-site]/.../share` URL for this new page an
 Flow
 ----
 
-.. image:: /_static/img/campaign_placements/standalone.png
+.. image:: _static/img/campaign_placements/standalone.png
    :alt: Talkable campaign flow — Standalone placement
    :class: is-minimal
 

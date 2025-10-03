@@ -22,7 +22,7 @@ Frequently used Variables:
 
 |br|
 
-.. image:: /_static/img/basics/friend-share-email.png
+.. image:: _static/img/basics/friend-share-email.png
    :alt: Friend Share Email
 
 .. include:: partials/developer_email_note.rst

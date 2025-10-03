@@ -18,7 +18,7 @@ Frequently used Variables:
 - To show Reward Coupon Code use ``{{ coupon_code }}``.
 - Main |cta| should point to a merchant site to start shopping ``{{ proceed_to_advocate_destination_url }}``.
 
-.. image:: /_static/img/basics/advocate-reward-paid-email-v2.png
+.. image:: _static/img/basics/advocate-reward-paid-email-v2.png
    :alt: Advocate Reward Paid Email
 
 .. include:: partials/developer_email_note.rst

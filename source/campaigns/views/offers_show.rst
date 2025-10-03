@@ -14,12 +14,12 @@ Combining the Signup and Share page brings a smoother experience to our customer
 First we show Advocate Signup Form. Signup is skipped when we know the advocate or Email gating for advocate is disabled (by default - enabled).
 On this page Advocate signs up by entering their email address and phone number(optional).
 
-.. image:: /_static/img/basics/advocate-signup-form.png
+.. image:: _static/img/basics/advocate-signup-form.png
    :alt: Advocate Signup Form
 
 After signup, without reloading page, Advocate Share form is shown:
 
-.. image:: /_static/img/basics/advocate-share-form.png
+.. image:: _static/img/basics/advocate-share-form.png
    :alt: Advocate Share form
 
 Here |advocate| shares an offer with their |friend|\s. Explain the value proposition
@@ -37,7 +37,7 @@ Available sharing methods:
 
 |br|
 
-.. image:: /_static/img/basics/advocate-share-via-email.png
+.. image:: _static/img/basics/advocate-share-via-email.png
    :alt: Advocate Share via Email Form
 
 Note ``Send my friend a reminder e-mail in 3 days`` checkbox — this is :ref:`friend_share_email_reminder_view`

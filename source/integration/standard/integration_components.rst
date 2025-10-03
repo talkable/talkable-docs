@@ -100,7 +100,7 @@ Initialization Script Notes
    platform where Site ID is displayed on your Dashboard and URL as seen
    here:
 
-   .. figure:: /_static/img/site_id.png
+   .. figure:: _static/img/site_id.png
       :alt: Site ID
 
 2. **Variables.** Use your dynamic variables to pass user details {email,
@@ -186,7 +186,7 @@ Advocate Landing Page Notes
    you intend to use via
    `https://www.admin.talkable.com/sites/<YOUR-TALKABLE-SITE-ID>/placements:`
 
-   .. figure:: /_static/img/placement_edit.png
+   .. figure:: _static/img/placement_edit.png
       :alt: Placement Edit
 
 |hr|

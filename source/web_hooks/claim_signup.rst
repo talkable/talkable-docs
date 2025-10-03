@@ -28,7 +28,7 @@ a share from an Advocate, and before receiving their discount code.
 
 Friend Email Gating form example:
 
-.. image:: /_static/img/friend_email_gating_form.png
+.. image:: _static/img/friend_email_gating_form.png
    :alt: Friend Email Gating Form
    :class: is-minimal
 

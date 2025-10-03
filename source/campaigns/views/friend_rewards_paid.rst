@@ -26,7 +26,7 @@ Frequently used Variables:
 
 |br|
 
-.. image:: /_static/img/basics/friend-claim-email.png
+.. image:: _static/img/basics/friend-claim-email.png
    :alt: Friend Claim Email
 
 |br|

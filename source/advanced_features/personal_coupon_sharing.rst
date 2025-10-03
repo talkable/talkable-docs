@@ -27,7 +27,7 @@ At Talkable Advocates can invite Friends in two ways:
    name: “John Smith” even with spaces. Advocates don’t have to visit
    a website to share, they already remember their personal coupon.
 
-.. image:: /_static/img/advanced_features/personal_coupon_sharing.png
+.. image:: _static/img/advanced_features/personal_coupon_sharing.png
 
 
 Setup

@@ -16,7 +16,7 @@ show up automatically as a popup once the customer made a successful purchase on
 Flow
 ----
 
-.. image:: /_static/img/campaign_placements/pp.png
+.. image:: _static/img/campaign_placements/pp.png
    :alt: Talkable campaign flow — Post Purchase placement
    :class: is-minimal
 

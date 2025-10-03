@@ -24,7 +24,7 @@ developers:
 
 |br|
 
-.. image:: /_static/img/editor/editor.png
+.. image:: _static/img/editor/editor.png
    :alt: Campaign Editor
 
 .. container:: hidden

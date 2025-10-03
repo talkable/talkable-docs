@@ -2,7 +2,7 @@ Campaign Placements are the places (pages) on your site where the Campaigns are 
 
 The list of all Campaign Placements can be found by going to the All Site Settings page from the header Menu (top right corner) and choosing the Placements section:
 
-.. image:: /_static/img/campaign_placements/path.png
+.. image:: _static/img/campaign_placements/path.png
 
 Managing Placements
 -------------------

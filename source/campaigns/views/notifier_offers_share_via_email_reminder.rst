@@ -20,7 +20,7 @@ particular email.
 
 |br|
 
-.. image:: /_static/img/basics/friend-share-email-reminder.png
+.. image:: _static/img/basics/friend-share-email-reminder.png
    :alt: Friend Share Email Reminder
 
 .. include:: partials/developer_email_note.rst

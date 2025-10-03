@@ -12,7 +12,7 @@ Phone number feature allows you to collect customers' phone numbers inside your 
 You can set the phone number as a required field for customers to join the campaign or get a reward.
 Setting can be found inside ``Campaign → Rules → Extra section`` for both Advocate and Friend.
 
-.. image:: /_static/img/advanced_features/phone_number_gating_for_advocate.png
+.. image:: _static/img/advanced_features/phone_number_gating_for_advocate.png
 
 .. note::
 
@@ -20,7 +20,7 @@ Setting can be found inside ``Campaign → Rules → Extra section`` for both Ad
 
 Inside the campaign, you can change the default setting for the consent checkbox.
 
-.. image:: /_static/img/advanced_features/phone_number_campaign_settings.png
+.. image:: _static/img/advanced_features/phone_number_campaign_settings.png
 
 Synchronization with ESPs
 -------------------------
@@ -35,4 +35,4 @@ Currently, a phone number can be used for the next apps:
 
 Sample configuration
 
-.. image:: /_static/img/advanced_features/phone_number_sync_appstore.png
+.. image:: _static/img/advanced_features/phone_number_sync_appstore.png

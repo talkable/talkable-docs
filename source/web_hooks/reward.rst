@@ -60,7 +60,7 @@ To configure incentives:
 2. Proceed to **Rules** then scroll down to **Incentives** section where
    incentives for both Advocates and Friends can be set-up
 
-   .. image:: /_static/img/advocate_referral_incentive.png
+   .. image:: _static/img/advocate_referral_incentive.png
       :alt: Edit Referral Incentives,
       :class: is-minimal
 

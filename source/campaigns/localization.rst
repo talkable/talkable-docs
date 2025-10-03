@@ -18,7 +18,7 @@ Campaign localization is done using a liquid filter `localize`:
 
 You can add this filter in the Campaign Editor section under HTML & CSS, and it will appear in the Copy tab:
 
-.. image:: /_static/img/campaign-localization.png
+.. image:: _static/img/campaign-localization.png
 
 Any campaign that uses view with `localize` call have this data appeared.
 Now you are able to change the default value to something else like `Obten {{incentives.referrer.description}}` (Spanish)
@@ -32,4 +32,4 @@ Campaign Localization is copied when campaign is copied, so you are able to use 
 
 Campaigns with phone input have country automatically detected based on user IP:
 
-.. image:: /_static/img/phone-input.png
+.. image:: _static/img/phone-input.png

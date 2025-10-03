@@ -13,7 +13,7 @@ Deep linking services provide a special referral link that can be given to Advoc
 
 To use deep linking with Talkable campaigns, simply use your deep link URL as your Talkable Site URL.
 
-.. image:: /_static/img/deep_linking/site_url.png
+.. image:: _static/img/deep_linking/site_url.png
 
 .. note::
 

@@ -16,15 +16,15 @@ Few benefits you get out of using Localizations:
 
 1. Visit Campaign Editor:
 
-   .. image:: /_static/img/advanced_features/campaign_navigation.png
+   .. image:: _static/img/advanced_features/campaign_navigation.png
 
 2. Swith to HTML & CSS editor:
 
-   .. image:: /_static/img/advanced_features/campaign_navigation_html_css_editor.png
+   .. image:: _static/img/advanced_features/campaign_navigation_html_css_editor.png
 
 3. Find a View you would like to convert a static copy at:
 
-   .. image:: /_static/img/advanced_features/campaign_view_navigation.png
+   .. image:: _static/img/advanced_features/campaign_view_navigation.png
 
 4. Find a copy that you’d like to convert into a Localization. You can hit `Cmd+F` (`Ctrl+F` on Windows) to search within HTML area.
 
@@ -46,7 +46,7 @@ Few benefits you get out of using Localizations:
 
 5. Go back to Editor to see newly created Localization:
 
-   .. image:: /_static/img/advanced_features/campaign_localization_sidebar.png
+   .. image:: _static/img/advanced_features/campaign_localization_sidebar.png
 
 .. raw:: html
 
@@ -68,7 +68,7 @@ Subject line is unique because its default value is set on the Advocate Signup/S
 
 1. Create Subject Line as a Localization on the Advocate Signup/Share Page, provide its default value, it will be used inside `value` attribute of the "subject" form field:
 
-   .. image:: /_static/img/advanced_features/subject_line_setup_inside_share_page.png
+   .. image:: _static/img/advanced_features/subject_line_setup_inside_share_page.png
 
    .. code-block:: html
 
@@ -78,7 +78,7 @@ Subject line is unique because its default value is set on the Advocate Signup/S
 
 2. Navigate to Friend Share email → Extra fields to see Email Subject field:
 
-   .. image:: /_static/img/advanced_features/campaign_editor_subject.png
+   .. image:: _static/img/advanced_features/campaign_editor_subject.png
 
 3. Put the following code in there:
 
@@ -99,7 +99,7 @@ Another example would be localizing font color of a headline, all copy at once, 
 
 1. Navigate to HTML & CSS editor of the View you want to add a color Localization on:
 
-   .. image:: /_static/img/advanced_features/campaign_navigation_html_css_editor.png
+   .. image:: _static/img/advanced_features/campaign_navigation_html_css_editor.png
 
 2. At the very bottom of the HTML area add ``<style></style>`` tag with CSS that will override default styling of the element you want to localize:
 
@@ -114,7 +114,7 @@ Another example would be localizing font color of a headline, all copy at once, 
 
 3. New Color Localization appears under "Color" tab inside Campaign Editor:
 
-   .. image:: /_static/img/advanced_features/editor_colors_tab.png
+   .. image:: _static/img/advanced_features/editor_colors_tab.png
 
 Image As Localization
 ---------------------
@@ -123,7 +123,7 @@ Localizing Image asset can be handy if you want to AB test it. Here is how to do
 
 1. Navigate to HTML & CSS editor of the View you want to add a color Localization on:
 
-   .. image:: /_static/img/advanced_features/campaign_navigation_html_css_editor.png
+   .. image:: _static/img/advanced_features/campaign_navigation_html_css_editor.png
 
 2. Inside HTML area find an image you want to localize. An image can be either within CSS or within HTML area (`<img />`, inline styles, etc.). If the image is set within CSS you need to extract it into HTML area using inline styles:
 
@@ -137,7 +137,7 @@ Localizing Image asset can be handy if you want to AB test it. Here is how to do
 
 3. Now we can see newly created Image Localization under "Images" tab:
 
-   .. image:: /_static/img/advanced_features/editor_images_tab.png
+   .. image:: _static/img/advanced_features/editor_images_tab.png
 
 Custom Option (Configuration) Localization
 ------------------------------------------
@@ -146,9 +146,9 @@ In addition to localizing Images, Colors, and static copy Talkable allows you to
 
 An example can be to create an AB test for Equal Emphasis (all 3 sharing channels look visually equal) vs. Email Emphasis where email sharing form stands out:
 
-.. image:: /_static/img/advanced_features/share_page_equal_emphasis.png
+.. image:: _static/img/advanced_features/share_page_equal_emphasis.png
 
-.. image:: /_static/img/advanced_features/share_page_email_emphasis.png
+.. image:: _static/img/advanced_features/share_page_email_emphasis.png
 
 In order to chieve this AB test we need to:
 
@@ -166,7 +166,7 @@ In order to chieve this AB test we need to:
 
 2. Now inside Campaign Editor we can see newly created Configuration Localization:
 
-   .. image:: /_static/img/advanced_features/editor_configuration_tab.png
+   .. image:: _static/img/advanced_features/editor_configuration_tab.png
 
 3. Let’s switch back to HTML & CSS editor and start applying CSS styling to both layouts. Knowing their final classes inside HTML: `class="container is-equal-emphasis"` and `class="container is-email-emphasis"` we can easily style both layouts inside CSS area like so (SCSS is also allowed and is shown as an example for code simplicity):
 

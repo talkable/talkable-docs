@@ -22,7 +22,7 @@ Custom Email and Web domains can be configured in **Site Settings** → **Custom
    both web and email domains will be configured and will share the same domain name.
    This can be changed in the following step.
 
-   .. image:: /_static/img/advanced_features/custom_domain_settings.png
+   .. image:: _static/img/advanced_features/custom_domain_settings.png
 
 #. Choose a **domain name** you want to use for white-labeling.
    Please note that it should be a sub-domain of a domain you control.
@@ -45,7 +45,7 @@ Custom Email and Web domains can be configured in **Site Settings** → **Custom
    Click "Check DNS status" on Talkable custom domain settings to see the updated status of your domain
    (it could take up to 24 hours for the records to propagate).
 
-   .. image:: /_static/img/advanced_features/custom_domain_missing_records.png
+   .. image:: _static/img/advanced_features/custom_domain_missing_records.png
 
 .. _delegated-vs-self-managed:
 
@@ -65,7 +65,7 @@ Talkable offers two options for custom domain management:
 
   Example:
 
-  .. image:: /_static/img/advanced_features/custom_domain_ns.png
+  .. image:: _static/img/advanced_features/custom_domain_ns.png
 
 * **Self-managed**
 
@@ -87,7 +87,7 @@ Talkable offers two options for custom domain management:
 
   Example of DNS records required for a self-managed custom email domain:
 
-  .. image:: /_static/img/advanced_features/custom_email_domain_records.png
+  .. image:: _static/img/advanced_features/custom_email_domain_records.png
 
 .. _adding-dns-records:
 

@@ -17,13 +17,13 @@ Here are the conditions when Talkable acquires emails and phone numbers:
 
 1. Advocate signs up and opts in for Talkable marketing emails:
 
-   .. image:: /_static/img/email_marketing_and_automation/signup_advocate.png
+   .. image:: _static/img/email_marketing_and_automation/signup_advocate.png
       :alt: Subscribe
       :scale: 50%
 
 2. A friend passes email gating and opts in for Talkable marketing emails:
 
-   .. image:: /_static/img/email_marketing_and_automation/signup_friend.png
+   .. image:: _static/img/email_marketing_and_automation/signup_friend.png
       :alt: Signup
       :width: 430
 
@@ -38,11 +38,11 @@ Please use the following guide to start using the Dotdigital app:
 
 1. Navigate into the App store:
 
-   .. image:: /_static/img/email_marketing_and_automation/app_store_step_1.png
+   .. image:: _static/img/email_marketing_and_automation/app_store_step_1.png
       :alt: App store step 1
       :width: 595
 
-   .. image:: /_static/img/email_marketing_and_automation/app_store_step_2.png
+   .. image:: _static/img/email_marketing_and_automation/app_store_step_2.png
       :alt: App store step 2
       :scale: 50%
 
@@ -61,7 +61,7 @@ Please use the following guide to start using the Dotdigital app:
 
 4. Complete installation and enable the app:
 
-   .. image:: /_static/img/email_marketing_and_automation/dotdigital.png
+   .. image:: _static/img/email_marketing_and_automation/dotdigital.png
       :alt: dotdigital
 
 Dotdigital application allows data fields to be included with each contact import. By default, Talkable sets the following data fields:
@@ -71,7 +71,7 @@ Dotdigital application allows data fields to be included with each contact impor
 
 You can add custom data fields by modifying the payload of an app action.
 
-.. image:: /_static/img/email_marketing_and_automation/dotdigital_payload.png
+.. image:: _static/img/email_marketing_and_automation/dotdigital_payload.png
    :alt: dotdigital payload
    :scale: 50%
 

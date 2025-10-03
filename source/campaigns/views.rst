@@ -11,7 +11,7 @@ Understanding Page-Views is easy, just go through the glossary and learn who lan
 
 1. Check if the Campaign View is in use (controlled inside Campaign Editor). Otherwise the email will never be sent.
 
-   .. image:: /_static/img/campaign/rules-views.png
+   .. image:: _static/img/campaign/rules-views.png
 
 
 2. Is the recipient email in a valid email format (i.e. Talkable mail servers can deliver an email to a real recipient)? If so, we move on to campaign specific rules to determine whether or not the email should be sent (see `Email sending conditions` section inside each Email-View).

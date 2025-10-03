@@ -51,7 +51,7 @@ coupon list for a campaign:
 2. Proceed to **Rules** then scroll down to **Incentives** section where
    incentives for both Advocate and Friend can be configured
 
-   .. image:: /_static/img/advocate_referral_incentive.png
+   .. image:: _static/img/advocate_referral_incentive.png
       :alt: Edit Referral Incentives
       :class: is-minimal
 

@@ -20,7 +20,7 @@ Prerequisites
 
    To check your Magento version, navigate to your store's admin panel. The version number will be listed in the page footer.
 
-   .. image:: /_static/img/magento2/version.png
+   .. image:: _static/img/magento2/version.png
 
 2.  Talkable account
 
@@ -42,7 +42,7 @@ Installation
    Visit the Adobe Commerce Marketplace and get the Talkable extension.
    https://commercemarketplace.adobe.com/talkable-magento2-integration.html
 
-   .. image:: /_static/img/magento2/install.jpg
+   .. image:: _static/img/magento2/install.jpg
 
 |br|
 
@@ -98,20 +98,20 @@ Accessing Talkable Configuration
 1. To access Talkable extension settings, navigate to **Stores** → **Configuration** in
    your Magento admin panel.
 
-   .. image:: /_static/img/magento2/access1.jpg
+   .. image:: _static/img/magento2/access1.jpg
 
 2. Then select **Talkable** → **Talkable Configuration** from the list of available configurations.
    
    If you have multiple stores, select the desired Store View you want to change the settings for.
 
-   .. image:: /_static/img/magento2/access2.jpg
+   .. image:: _static/img/magento2/access2.jpg
 
 Configuring Talkable Extension
 ------------------------------
 
 Expand `Integration`, `Campaigns` and `Page URLs` sections to see all available configuration options.
    
-.. image:: /_static/img/magento2/configure1.jpg
+.. image:: _static/img/magento2/configure1.jpg
 
 Integration
 ~~~~~~~~~~~
@@ -119,7 +119,7 @@ Integration
 The Integration section allows you to change the Talkable Site ID, which is used to connect your store
 to your Talkable account.
    
-.. image:: /_static/img/magento2/configure2.jpg
+.. image:: _static/img/magento2/configure2.jpg
 
 .. warning::
 
@@ -128,19 +128,19 @@ to your Talkable account.
 
 You need to paste the Site ID from your Talkable Site Dashboard into this field.
 
-.. image:: /_static/img/magento2/configure3.jpg
+.. image:: _static/img/magento2/configure3.jpg
 
 |br|
 Changing the Site ID will invalidate the full page cache. Magento will display a warning message with a link to the Cache Management page.
 
 You would need to follow ``Cache Management`` link and refresh the invalidated cache types.
 
-.. image:: /_static/img/magento2/flush-cache.png
+.. image:: _static/img/magento2/flush-cache.png
 
 |br|
 As a result you should see the config status as ``Enabled``.
 
-.. image:: /_static/img/magento2/flush-cache-successful.png
+.. image:: _static/img/magento2/flush-cache-successful.png
 
 Campaigns
 ~~~~~~~~~
@@ -149,7 +149,7 @@ The Campaigns section allows you to enable or disable different types of campaig
 For example, if you don’t have Standalone or Advocate Dashboard campaigns configured in Talkable,
 you can disable these campaigns in extension config, so the corresponding pages are not accessible.
 
-.. image:: /_static/img/magento2/configure4.jpg
+.. image:: _static/img/magento2/configure4.jpg
 
 Page URLs
 ~~~~~~~~~
@@ -158,13 +158,13 @@ The Page URLs section allows you to change paths to the Standalone Share and Adv
 The paths must match the placements you have configured in Talkable for this campaign type.
 Default values correspond to default placements in Talkable.
 
-.. image:: /_static/img/magento2/configure5.jpg
+.. image:: _static/img/magento2/configure5.jpg
 
 .. warning::
 
    Only change these settings if you have configured custom placements for these campaign types
    in your Talkable dashboard. Incorrect values will prevent your Standalone or Dashboard campaign from showing.
 
-.. image:: /_static/img/magento2/configure6.jpg
+.. image:: _static/img/magento2/configure6.jpg
 
 .. _Magento Extensions Guide: https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/tutorials/extensions

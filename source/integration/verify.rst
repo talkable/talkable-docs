@@ -14,13 +14,13 @@ After installing Talkable, you should verify that the integration is working:
    with a secret URL parameter like so: |br| `https://www.site.com/?tkbl_verify_integration=true`.
    As a result you should see:
 
-   .. image:: /_static/img/integration_check_affiliate_member_success.png
+   .. image:: _static/img/integration_check_affiliate_member_success.png
 
 2. Issue a test purchase. Order subtotal should be > 0, |br|
    email should be `integration@talkable.com`. Preferably include a coupon code so we
    can verify it gets passed as well. As a result you should see:
 
-   .. image:: /_static/img/integration_check_purchase_success.png
+   .. image:: _static/img/integration_check_purchase_success.png
 
    Talkable verification dialog only appears to you, it will not be shown to anyone else.
    All purchases with `integration@talkable.com` email will not be recorded inside Talkable.
@@ -51,7 +51,7 @@ not appear on the screen, make sure a request is was passed to Talkable.
 To do that open |br| Network tab (Chrome) → refresh the page → inside Search bar look
 up for "create.html". Make sure you see something like:
 
-.. image:: /_static/img/chrome_network_tab.png
+.. image:: _static/img/chrome_network_tab.png
 
 If the request is coming through but you are still not seeing the verification
 popup please contact Talkable support: support@talkable.com.

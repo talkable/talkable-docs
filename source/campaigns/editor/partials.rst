@@ -23,7 +23,7 @@ To add a new Liquid partial, follow these steps:
    - **Type**: Select the type of content you want to include in your partial. This can be either `HTML` or `CSS`. The content of the partial will be rendered as HTML or CSS based on the type you select.
    - **Insert to current position**: This option will insert the partial at the current cursor position in the editor.
 
-   .. image:: /_static/img/editor/partial-modal.png
+   .. image:: _static/img/editor/partial-modal.png
 
 Default Partials
 ================
@@ -32,7 +32,7 @@ Talkable provides a set of default partials that can be used in your templates.
 These partials are pre-defined snippets of code that can be included in your main templates without the need to create them from scratch,
 each partial has description with detailed information about its purpose and usage.
 
-.. image:: /_static/img/editor/partials-default.png
+.. image:: _static/img/editor/partials-default.png
 
 Including a Partial in a Main Template
 ======================================

@@ -28,11 +28,11 @@ Set Up
 
 1. Navigate to the App store:
 
-   .. image:: /_static/img/email_marketing_and_automation/app_store_step_1.png
+   .. image:: _static/img/email_marketing_and_automation/app_store_step_1.png
       :alt: App store step 1
       :width: 595
 
-   .. image:: /_static/img/email_marketing_and_automation/app_store_step_2.png
+   .. image:: _static/img/email_marketing_and_automation/app_store_step_2.png
       :alt: App store step 2
       :scale: 50%
 
@@ -40,7 +40,7 @@ Set Up
 3. Fill in `Endpoint URL` and `App name` fields, and enable the required actions.
 4. Complete installation and enable the app:
 
-   .. image:: /_static/img/email_marketing_and_automation/custom_app.png
+   .. image:: _static/img/email_marketing_and_automation/custom_app.png
       :alt: Custom App
 
 Webhook Signature Verification
@@ -63,14 +63,14 @@ To verify the signature, you should complete the following steps:
 
    Your Talkable **Webhook security key** can be found in the Webhook set up page by navigating to **Menu** then **Webhooks**.
 
-   .. image:: /_static/img/menu_webhooks_screenshot.png
+   .. image:: _static/img/menu_webhooks_screenshot.png
       :alt: Webhooks Menu Item
 
    .. raw:: html
 
       <hr>
 
-   .. image:: /_static/img/webhook_secret_key.png
+   .. image:: _static/img/webhook_secret_key.png
       :alt: Webhook Security Key
 
 3. Compare the signatures
@@ -121,7 +121,7 @@ Available actions
 
 Each action allows custom attributes to be included. You can see allowed interpolation variables by clicking `Show available variables` button:
 
-.. image:: /_static/img/email_marketing_and_automation/variables.png
+.. image:: _static/img/email_marketing_and_automation/variables.png
    :alt: Variables
    :scale: 50%
 
@@ -339,7 +339,7 @@ Testing Custom app actions can be accomplished with the help of Webhook Tester, 
 3. Paste your Webhook Tester URL into **Endpoint URL** field and save.
 4. Click **Send sample payload** near the action you want to test.
 
-   .. image:: /_static/img/email_marketing_and_automation/send_sample_payload.png
+   .. image:: _static/img/email_marketing_and_automation/send_sample_payload.png
       :alt: Send sample payload
       :scale: 50%
 

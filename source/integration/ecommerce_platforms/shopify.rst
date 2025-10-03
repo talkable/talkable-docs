@@ -104,7 +104,7 @@ please follow the instructions below.
 
         * Optionally, update the schema name to anything meaningful, for example, “Referral campaign“
 
-          .. image:: /_static/img/shopify/editor_section.png
+          .. image:: _static/img/shopify/editor_section.png
              :alt: Shopify editor - talkable-campaign section
              :class: is-minimal
 
@@ -117,7 +117,7 @@ please follow the instructions below.
         * Create a new JSON template of type `page` called `talkable` (`page.talkable.json`)
         * Change the type of the main section to `talkable-campaign`
 
-          .. image:: /_static/img/shopify/editor_template.png
+          .. image:: _static/img/shopify/editor_template.png
              :alt: Shopify editor - Talkable page section
              :class: is-minimal
 
@@ -365,7 +365,7 @@ you need to do the following:
         * Create a new JSON template of type `page` called `talkable` (`page.talkable.json`)
         * Change the type of the main section to `talkable-campaign`
 
-          .. image:: /_static/img/shopify/editor_template.png
+          .. image:: _static/img/shopify/editor_template.png
              :alt: Shopify editor - Talkable page section
              :class: is-minimal
 
