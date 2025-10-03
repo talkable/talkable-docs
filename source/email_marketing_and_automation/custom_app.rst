@@ -1,5 +1,5 @@
 .. _email_marketing_and_automation/custom_app:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Custom App allows you to send Talkable data to a desired destination such as your site, ESP, CDP.
@@ -356,4 +356,4 @@ addresses so webhooks can be delivered. Pass list of these addresses to your net
 .. hlist::
    :columns: 4
 
-   .. include:: /partials/talkable_ip_list.rst
+   .. include:: partials/talkable_ip_list.rst

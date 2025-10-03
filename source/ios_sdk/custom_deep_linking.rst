@@ -1,5 +1,5 @@
 .. _ios_sdk/custom_deep_linking:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 Integration with Third Party Deep Linking Services
 ==================================================

@@ -1,5 +1,5 @@
 .. _android_sdk/getting_started:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 Getting Started
 ===============

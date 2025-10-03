@@ -1,5 +1,5 @@
 .. _campaigns/views/notifier_offers_email:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Send email to tell your Advocate what your referral program is about. Motivate them to share your offer.
@@ -21,7 +21,7 @@ Main |cta| should point to an Advocate Signup/Share Page — ``{{ share_page_url
 
 |br|
 
-.. include:: /partials/developer_email_note.rst
+.. include:: partials/developer_email_note.rst
 
 .. raw:: html
 

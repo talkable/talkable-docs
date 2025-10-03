@@ -1,5 +1,5 @@
 .. _integration/loyalty/integration_components:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Find the components of what Talkable is composed.

@@ -1,5 +1,5 @@
 .. _campaigns/tutorials:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: This tutorial will show you how to create, launch, and track your referral program.

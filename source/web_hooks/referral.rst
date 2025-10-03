@@ -1,5 +1,5 @@
 .. _web_hooks/referral:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Referral Webhook notifies your endpoint that your brand Advocate’s referral status has become “Approved”.
@@ -59,6 +59,6 @@ Talkable Referral Webhook is triggered any time an Advocate referral status has 
 
 The sample payload with parameters for Referral Webhook is available here: `Referral Webhook Payload <https://www.talkable.com/api-docs/index.html?urls.primaryname=webhooks%20api&urls.primaryName=Webhooks#/Referral/post_your_api_referral_web_hook_path>`_.
 
-.. include:: /partials/coupon_as_reward.rst
+.. include:: partials/coupon_as_reward.rst
 
-.. include:: /partials/incentive_types.rst
+.. include:: partials/incentive_types.rst

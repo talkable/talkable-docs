@@ -1,5 +1,5 @@
 .. _integration/standard/cookies:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: This is all about how we use cookies.

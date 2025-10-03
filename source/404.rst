@@ -1,7 +1,7 @@
 :orphan:
 :no-search:
 
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Page not found

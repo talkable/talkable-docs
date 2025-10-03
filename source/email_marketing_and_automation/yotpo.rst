@@ -1,5 +1,5 @@
 .. _email_marketing_and_automation/yotpo:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Synchronize customer loyalty data from Yotpo Loyalty & Referrals platform with Talkable integration.
@@ -82,4 +82,4 @@ Please use the following guide to start using the Yotpo integration:
 
 5. Test the integration by making a points adjustment in your Yotpo dashboard and verify the data appears in Talkable customer profiles.
 
-.. include:: /partials/contact_us.rst
+.. include:: partials/contact_us.rst

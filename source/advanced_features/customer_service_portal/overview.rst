@@ -1,5 +1,5 @@
 .. _advanced_features/customer_service_portal/overview:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 Overview
 ========

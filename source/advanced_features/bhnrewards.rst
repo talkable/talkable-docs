@@ -1,5 +1,5 @@
 .. _advanced_features/bhnrewards:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Integrate BHN Rewards (formerly Rybbon) with your Talkable system to generate gift claim links and manage campaign-specific rewards.
@@ -48,4 +48,4 @@ Limitations
 - Minimum and maximum reward amounts vary based on the specific BHN Rewards gift card settings.
 - Custom reward amounts must not exceed the maximum value of 50.
 
-.. include:: /partials/contact_us.rst
+.. include:: partials/contact_us.rst

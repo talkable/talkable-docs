@@ -1,5 +1,5 @@
 .. _integration/standard/integration_tag_manager:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 Integrating with a Tag Manager
 ==============================

@@ -1,5 +1,5 @@
 .. _integration/loyalty/custom_app:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Learn how to use Custom app to receive data about loyalty events.

@@ -1,5 +1,5 @@
 .. _android_sdk/testing:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 Testing
 =======

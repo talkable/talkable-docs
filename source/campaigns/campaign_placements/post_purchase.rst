@@ -1,5 +1,5 @@
 .. _campaigns/campaign_placements/post_purchase:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: With the Post Purchase placement, your Campaign will show up automatically as a popup once the customer made a successful purchase on your site.

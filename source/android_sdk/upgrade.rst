@@ -1,5 +1,5 @@
 .. _android_sdk/upgrade:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 Upgrade
 =======

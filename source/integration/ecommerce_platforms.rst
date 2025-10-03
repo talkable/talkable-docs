@@ -1,5 +1,5 @@
 .. _integration/ecommerce_platforms:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: E-commerce Platforms include all Talkable integration.

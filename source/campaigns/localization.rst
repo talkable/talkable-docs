@@ -1,5 +1,5 @@
 .. _campaigns/localization:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: You can localize your referral campaign. Use the same template with different localization.

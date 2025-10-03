@@ -1,5 +1,5 @@
 .. _email_marketing_and_automation/sailthru:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: With Sailthru app clients can synchronize emails that Talkable collected.
@@ -61,4 +61,4 @@ Please use the following guide to start using an app you need:
       :alt: Send sample payload
       :scale: 50%
 
-.. include:: /partials/contact_us.rst
+.. include:: partials/contact_us.rst

@@ -1,5 +1,5 @@
 .. _advanced_features/customer_service_portal/use_case_3:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 Use case #3: |br| Who should get the reward?
 ============================================

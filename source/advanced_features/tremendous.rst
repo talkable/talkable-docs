@@ -1,5 +1,5 @@
 .. _advanced_features/tremendous:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Reward advocates with gift cards provided by Tremendous.
@@ -36,4 +36,4 @@ Tremendous integration consists of several parts:
        {{ cta_text }}
        </a>
 
-.. include:: /partials/contact_us.rst
+.. include:: partials/contact_us.rst

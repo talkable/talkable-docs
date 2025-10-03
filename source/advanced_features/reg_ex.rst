@@ -1,5 +1,5 @@
 .. _advanced_features/reg_ex:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Talkable allows setting up of campaign placement “Shown on” / “Hidden on” criteria in two formats: relative match and regular expression.

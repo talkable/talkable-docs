@@ -1,5 +1,5 @@
 .. _advanced_features/product_items:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: You can also add product-specific tracking to Talkable’s campaign. This will let your customers share specific items they purchased.
@@ -13,7 +13,7 @@ Customer shares with products have higher click through and conversion rates.
 
 Below is an example with product items passed along with purchase data (notice FOR loop):
 
-.. include:: /partials/product_purchase_script.rst
+.. include:: partials/product_purchase_script.rst
 
 .. note::
 

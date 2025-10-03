@@ -1,5 +1,5 @@
 .. _email_marketing_and_automation/dotdigital:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: With Dotdigital app clients can synchronize emails and phone numbers that Talkable collected, as well as manage email unsubscribes.
@@ -91,4 +91,4 @@ Dotdigital is a leading customer experience and data platform that helps marketi
 
 For more information about Dotdigital's features and capabilities, visit `dotdigital.com <https://dotdigital.com/>`_.
 
-.. include:: /partials/contact_us.rst 
+.. include:: partials/contact_us.rst 

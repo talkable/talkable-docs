@@ -1,5 +1,5 @@
 .. _ios_sdk/social_sharing:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 Social Sharing
 ==============

@@ -1,5 +1,5 @@
 .. _advanced_features/customer_service_portal/use_case_5:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 Use case #5: |br| Blocklisting a user
 =====================================

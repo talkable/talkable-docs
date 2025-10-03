@@ -1,5 +1,5 @@
 .. _advanced_features/report_password_protection:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: To protect sensitive information, all exported reports are password protected by default.

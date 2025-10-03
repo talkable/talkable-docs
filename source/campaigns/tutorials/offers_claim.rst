@@ -1,5 +1,5 @@
 .. _campaigns/tutorials/offers_claim:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Email gating lets you get a referred Friend’s email — just ask for it in exchange for a reward.
@@ -18,7 +18,7 @@ field, submit button, and "signup for latest news" checkbox.
 
 **Basic Setup**
 
-.. include:: /samples/liquid/offers_claim/email_gating_basic.rst
+.. include:: samples/liquid/offers_claim/email_gating_basic.rst
 
 **Advanced Setup**
 
@@ -26,4 +26,4 @@ field, submit button, and "signup for latest news" checkbox.
 2. `Sign up for news` checkbox
 3. `Email validation` messages
 
-.. include:: /samples/liquid/offers_claim/email_gating_advanced.rst
+.. include:: samples/liquid/offers_claim/email_gating_advanced.rst

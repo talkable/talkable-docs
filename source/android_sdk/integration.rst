@@ -1,5 +1,5 @@
 .. _android_sdk/integration:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 Integration
 ===========

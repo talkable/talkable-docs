@@ -1,5 +1,5 @@
 .. _campaigns/editor/partials:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
   :description: Partials are used to make components from Liquid code and reuse them in different places.

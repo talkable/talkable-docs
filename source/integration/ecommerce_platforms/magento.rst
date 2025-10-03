@@ -1,5 +1,5 @@
 .. _integration/ecommerce_platforms/magento:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Seamlessly integrate Talkable's referral marketing platform with your Magento 2.x store. Get a powerful, customizable solution to drive customer acquisition and boost sales.

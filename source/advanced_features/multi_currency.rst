@@ -1,5 +1,5 @@
 .. _advanced_features/multi_currency:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Talkable supports working with multiple currencies within the same site.

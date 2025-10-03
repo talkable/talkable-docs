@@ -1,5 +1,5 @@
 .. _campaigns/views/friend_rewards_paid:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: It`s good to give thanks to a Friend. Send a reward via email, and remind them about it later on.
@@ -38,7 +38,7 @@ Frequently used Variables:
    Coupon code: {{ coupon_code }}
    <a href="{{ proceed_to_merchant_path }}">Shop now</a>
 
-.. include:: /partials/developer_email_note.rst
+.. include:: partials/developer_email_note.rst
 
 .. raw:: html
 

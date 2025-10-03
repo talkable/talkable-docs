@@ -1,5 +1,5 @@
 .. _advanced_features/facebook_login_share:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Integrate Facebook Login & Share with your Talkable system for enhanced user authentication and social sharing. Follow our step-by-step guide to enable the app, configure Facebook App IDs, and streamline users login and sharing processes.
@@ -82,4 +82,4 @@ Additional Resources
 
 .. note:: For detailed examples and advanced usage, refer to the official Facebook documentation.
 
-.. include:: /partials/contact_us.rst
+.. include:: partials/contact_us.rst

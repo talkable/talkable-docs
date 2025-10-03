@@ -1,5 +1,5 @@
 .. _integration/standard/questions:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: This is a collection of your Frequently Asked Questions (FAQs). If your question isn’t in this list, just ask us.

@@ -1,5 +1,5 @@
 .. _web_hooks/claim_signup:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Friend Email Gating Webhook notifies your endpoint that Friend email gating form was submitted.

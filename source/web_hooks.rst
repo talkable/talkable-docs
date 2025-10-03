@@ -1,5 +1,5 @@
 .. _web_hooks:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Webhooks are triggered by events on Talkable’s site.
@@ -175,7 +175,7 @@ addresses so webhooks can be delivered. Pass list of these addresses to your net
 .. hlist::
    :columns: 4
 
-   .. include:: /partials/talkable_ip_list.rst
+   .. include:: partials/talkable_ip_list.rst
 
 .. raw:: html
 

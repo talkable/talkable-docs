@@ -1,5 +1,5 @@
 .. email_marketing_and_automation:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: With these tools, Talkable synchronizes everyone who opts in for Talkable marketing communications during signup, allowing you to manage all your emails in one place automatically.

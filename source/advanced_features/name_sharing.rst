@@ -1,5 +1,5 @@
 .. _advanced_features/name_sharing:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Talkable allows the Advocates to share referral offers by their names.

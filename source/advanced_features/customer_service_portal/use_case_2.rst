@@ -1,5 +1,5 @@
 .. _advanced_features/customer_service_portal/use_case_2:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 Use case #2: |br| Where is Advocate reward?
 ===========================================

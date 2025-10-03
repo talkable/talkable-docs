@@ -1,5 +1,5 @@
 .. _integration/custom:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 Custom Integration
 ##################

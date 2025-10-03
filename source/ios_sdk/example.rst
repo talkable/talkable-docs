@@ -1,5 +1,5 @@
 .. _ios_sdk/example:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 Example
 =======

@@ -1,5 +1,5 @@
 .. _campaigns/views/offers_show:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Advocate Signup/Share Page - Combination of Signup and Share forms. Shows the value proposition to Advocate and Friend — they both will receive an exclusive discount.

@@ -1,5 +1,5 @@
 .. _campaigns/campaign_types:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Motivate customers to share your products with their Friends from anywhere on your site.

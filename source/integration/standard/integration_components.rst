@@ -1,5 +1,5 @@
 .. _integration/standard/integration_components:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Find the components of what Talkable is composed.
@@ -123,7 +123,7 @@ be passed as strings. A Number can be passed for `subtotal`, however, if
 using any calculation, you’re responsible for ensuring that some number is
 passed where division by zero or `null` value does not occur.
 
-.. include:: /partials/purchase_script.rst
+.. include:: partials/purchase_script.rst
 
 Post Purchase Script Notes
 --------------------------

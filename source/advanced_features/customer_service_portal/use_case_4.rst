@@ -1,5 +1,5 @@
 .. _advanced_features/customer_service_portal/use_case_4:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 Use case #4: |br| Did my Friend get an email?
 =============================================

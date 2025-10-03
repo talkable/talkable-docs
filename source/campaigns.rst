@@ -1,5 +1,5 @@
 .. _campaigns:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Talkable Campaign is based on interaction between Advocate and Friend. Each step of this interaction has its own View so developer can easily change every single step and customize its appearance and functionality.

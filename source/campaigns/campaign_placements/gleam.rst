@@ -1,5 +1,5 @@
 .. _campaigns/campaign_placements/gleam:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Gleam Placement is a special Placement for Reward Gleam type of Campaign.

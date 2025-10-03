@@ -1,5 +1,5 @@
 .. _integration/custom/recharge:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
   :description: With Recharge app Talkable clients allow consumers to apply accumulated rewards towards upcoming subscription orders.
@@ -35,4 +35,4 @@ Talkable integration with Recharge enables next use cases:
 
    Once the Advocate receives a reward, they will be shown a Gleam widget that will be showing the coupon code as well as a notice that the coupon would be automatically applied to the ongoing subscription if the advocate has the one. The discount is still available for use on regular Shopify flow, but once used it won’t be applied to the subscription of the customer.
 
-.. include:: /partials/contact_us.rst
+.. include:: partials/contact_us.rst

@@ -1,5 +1,5 @@
 .. _advanced_features/phone_number_gating:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Phone number feature allows you to collect customers' phone numbers inside your campaigns and use them for promotions.

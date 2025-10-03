@@ -1,5 +1,5 @@
 .. _web_hooks/reward:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: Reward Webhook notifies your endpoint that a reward is ready to be given, or it has been already given.
@@ -101,6 +101,6 @@ Reward reason can be of 5 following general types.
 * **referrer** — Advocate reward for eligible referral purchase by Friend
 * **referred** — Friend reward for eligible referral purchase by themselves
 
-.. include:: /partials/incentive_types.rst
+.. include:: partials/incentive_types.rst
 
-.. include:: /partials/coupon_as_reward.rst
+.. include:: partials/coupon_as_reward.rst

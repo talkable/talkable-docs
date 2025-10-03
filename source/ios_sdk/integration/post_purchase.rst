@@ -1,5 +1,5 @@
 .. _ios_sdk/integration/post_purchase:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 Post Purchase Campaign
 ======================

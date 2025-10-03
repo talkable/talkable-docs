@@ -1,5 +1,5 @@
 .. _campaigns/campaign_placements/standalone:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 .. meta::
    :description: With the Standalone placement your Campaign will be live on any particular page of your site.

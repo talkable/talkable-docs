@@ -1,5 +1,5 @@
 .. _ios_sdk/integration/standalone:
-.. include:: /partials/common.rst
+.. include:: partials/common.rst
 
 Standalone Campaign
 ===================
