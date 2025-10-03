@@ -5,7 +5,7 @@ This documentation provides instructions for maintaining the Sphinx Builder **fr
 It outlines the routine for maintaining the framework and associated workflows.
 
 > [!NOTE]
-> This guide does not cover updating the documentation content. 
+> This guide does not cover updating the documentation content.
 > Refer to [README.md](README.md) for details on updating the Talkable documentation source, which is available at [https://docs.talkable.com/](https://docs.talkable.com/).
 
 ## Scope
@@ -55,7 +55,7 @@ The goal is to update `requirements.txt` with the latest versions of dependencie
     docker compose up -d --build
     ```
 
-    This starts the framework and allows you to load the documentation at http://localhost:8080.
+    This starts the framework and allows you to load the documentation at <http://localhost:8080>.
 
     If the documentation fails to load, check the container logs:
 
@@ -89,7 +89,7 @@ The goal is to update `requirements.txt` with the latest versions of dependencie
 
 The Sphinx framework uses a Python Docker image from DockerHub.
 
-1. Check for the latest Python image on DockerHub: https://hub.docker.com/_/python.
+1. Check for the latest Python image on DockerHub: <https://hub.docker.com/_/python>.
 
 2. Update the image name in the [Dockerfile](./Dockerfile):
 
@@ -105,7 +105,7 @@ The Sphinx framework uses a Python Docker image from DockerHub.
     docker compose up -d --build
     ```
 
-    Confirm that the documentation loads at http://localhost:8080.
+    Confirm that the documentation loads at <http://localhost:8080>.
 
 4. Finalize the update.
 
@@ -123,9 +123,9 @@ Sphinx is a highly customizable documentation framework. You can extend its func
 
 Here are some resources:
 
-- https://sphinx-extensions.readthedocs.io/en/latest/
-- https://www.sphinx-doc.org/en/master/development/index.html
-- https://github.com/sphinx-contrib
+- <https://sphinx-extensions.readthedocs.io/en/latest/>
+- <https://www.sphinx-doc.org/en/master/development/index.html>
+- <https://github.com/sphinx-contrib>
 
 To add extensions, follow these steps:
 
