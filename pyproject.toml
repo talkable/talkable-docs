@@ -11,4 +11,13 @@ dependencies = [
     "sphinx-design",
     "sphinx-book-theme",
     "pydata-sphinx-theme==0.15.4",
+    "mkdocs-material>=9.6.21",
+]
+
+[dependency-groups]
+dev = [
+    "beautifulsoup4>=4.14.2",
+    "html-to-markdown>=1.16.0",
+    "playwright>=1.55.0",
+    "pytest>=8.4.2",
 ]
