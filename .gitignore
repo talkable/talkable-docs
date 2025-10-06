@@ -10,6 +10,11 @@
 _build
 build
 
+# Mkdocs
+site
+# Remove after the migration is complete
+docs
+
 # Python
 .venv
 __pycache__
