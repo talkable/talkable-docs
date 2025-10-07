@@ -1,5 +1,5 @@
 .. _advanced_features/passing_custom_data:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: The custom properties variable allows you to transfer any custom data to Talkable as a collection of key-value pairs.

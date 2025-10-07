@@ -1,5 +1,5 @@
 .. _advanced_features/params_encryption:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: It is possible to encrypt Advocate, Friend, and Loyalty member emails on back-end if you want to provide additional security.

@@ -3,7 +3,7 @@
 * **email** — email of the person that got reward
 * **person** — parameters describing the person that got reward
 
-  .. include:: partials/person_fields.rst
+  .. include:: /partials/person_fields.rst
   .. Dear developer, please don't forget to add a substitution block for |person|
   .. in the documentation file, where this partial is included
 
@@ -12,4 +12,4 @@
 * **reward_coupon_code** — Coupon code received by person as a reward (present if incentive equals `discount_coupon`)
 * **origin** — contains data about the event that issued an offer
 
-  .. include:: partials/origin_fields.rst
+  .. include:: /partials/origin_fields.rst

@@ -1,5 +1,5 @@
 .. _ios_sdk/api_integration:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 Native Integration via API
 ==========================

@@ -1,5 +1,5 @@
 .. _advanced_features/events:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: In addition to regular referral campaigns, Talkable also supports custom events that can be split into multiple categories.

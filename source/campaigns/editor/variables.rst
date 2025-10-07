@@ -1,5 +1,5 @@
 .. _campaigns/editor/variables:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: Variables show you dynamic data such as Campaign tag, Advocate info, etc.
@@ -17,14 +17,14 @@ All Variables are enclosed into ``{{ }}`` which means
 Each Campaign View has its own set of Variables located inside Editor
 navigation:
 
-.. image:: _static/img/editor/vars-menu-item.png
+.. image:: /_static/img/editor/vars-menu-item.png
    :alt: Variables: menu item
 
 |br|
 
 Each Variable is represented with Name and Value:
 
-.. image:: _static/img/editor/vars-variable.png
+.. image:: /_static/img/editor/vars-variable.png
    :alt: Variables: variable
 
 * Name describes meaning of the Variable
@@ -125,7 +125,7 @@ Paid Email |br|
 Coupon is given to a person as a Reward based on Incentive (condition of
 giving out the Reward).
 
-.. image:: _static/img/editor/vars-friend-coupon.png
+.. image:: /_static/img/editor/vars-friend-coupon.png
    :alt: Variables: friend coupon
 
 |br|
@@ -136,7 +136,7 @@ Make sure Incentives are correct:
   enough coupons and they are valid in terms of uniqueness and validity
 * If its ``multi-use`` Coupon Code, make sure it has a correct value
 
-.. image:: _static/img/editor/vars-coupon-list.png
+.. image:: /_static/img/editor/vars-coupon-list.png
    :alt: Variables: coupon list
 
 |hr|

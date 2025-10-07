@@ -1,5 +1,5 @@
 .. _email_marketing_and_automation/yotpo:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: Synchronize customer loyalty data from Yotpo Loyalty & Referrals platform with Talkable integration.
@@ -57,17 +57,17 @@ Please use the following guide to start using the Yotpo integration:
 
 1. Navigate into the App store:
 
-   .. image:: _static/img/email_marketing_and_automation/app_store_step_1.png
+   .. image:: /_static/img/email_marketing_and_automation/app_store_step_1.png
       :alt: App store step 1
       :width: 595
 
-   .. image:: _static/img/email_marketing_and_automation/app_store_step_2.png
+   .. image:: /_static/img/email_marketing_and_automation/app_store_step_2.png
       :alt: App store step 2
       :scale: 50%
 
 2. Choose "Yotpo Loyalty & Referrals" by clicking "Install"
 
-   .. image:: _static/img/email_marketing_and_automation/yotpo.png
+   .. image:: /_static/img/email_marketing_and_automation/yotpo.png
       :alt: Yotpo Loyalty & Referrals at App Store index page
 
 3. You will be redirected to Yotpo for OAuth authorization:
@@ -82,4 +82,4 @@ Please use the following guide to start using the Yotpo integration:
 
 5. Test the integration by making a points adjustment in your Yotpo dashboard and verify the data appears in Talkable customer profiles.
 
-.. include:: partials/contact_us.rst
+.. include:: /partials/contact_us.rst

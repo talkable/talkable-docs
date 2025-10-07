@@ -1,5 +1,5 @@
 .. _integration/standard/integration_components:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: Find the components of what Talkable is composed.
@@ -100,7 +100,7 @@ Initialization Script Notes
    platform where Site ID is displayed on your Dashboard and URL as seen
    here:
 
-   .. figure:: _static/img/site_id.png
+   .. image:: /_static/img/site_id.png
       :alt: Site ID
 
 2. **Variables.** Use your dynamic variables to pass user details {email,
@@ -123,7 +123,7 @@ be passed as strings. A Number can be passed for `subtotal`, however, if
 using any calculation, you’re responsible for ensuring that some number is
 passed where division by zero or `null` value does not occur.
 
-.. include:: partials/purchase_script.rst
+.. include:: /partials/purchase_script.rst
 
 Post Purchase Script Notes
 --------------------------
@@ -186,7 +186,7 @@ Advocate Landing Page Notes
    you intend to use via
    `https://www.admin.talkable.com/sites/<YOUR-TALKABLE-SITE-ID>/placements:`
 
-   .. figure:: _static/img/placement_edit.png
+   .. image:: /_static/img/placement_edit.png
       :alt: Placement Edit
 
 |hr|

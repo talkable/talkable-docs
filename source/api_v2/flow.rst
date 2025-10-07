@@ -1,5 +1,5 @@
 .. _api_v2/flow:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: This flow helps to integrate with Talkable via API for a default store or service.

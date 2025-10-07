@@ -1,5 +1,5 @@
 .. _campaigns/views/notifier_offers_share_via_email_reminder:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: Sometimes you need only one email to remind a Friend about your offer — just check on the checkbox on the Advocate Signup/Share Page.
@@ -20,10 +20,10 @@ particular email.
 
 |br|
 
-.. image:: _static/img/basics/friend-share-email-reminder.png
+.. image:: /_static/img/basics/friend-share-email-reminder.png
    :alt: Friend Share Email Reminder
 
-.. include:: partials/developer_email_note.rst
+.. include:: /partials/developer_email_note.rst
 
 .. raw:: html
 

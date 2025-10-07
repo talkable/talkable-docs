@@ -1,5 +1,5 @@
 .. _campaigns/campaign_placements/loyalty_dashboard:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: Loyalty Dashboard Placement is a Placement for Loyalty Campaigns.

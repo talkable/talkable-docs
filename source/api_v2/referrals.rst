@@ -1,5 +1,5 @@
 .. _api_v2/referrals:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: The Talkable Referrals API allows referrals to be approved or to be voided.

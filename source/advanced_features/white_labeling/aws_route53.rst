@@ -27,4 +27,4 @@ Adding DNS records in AWS Route53
 
 #. Click "Create records" once you are ready.
 
-.. image:: _static/img/advanced_features/custom_domain_aws.png
+.. image:: /_static/img/advanced_features/custom_domain_aws.png

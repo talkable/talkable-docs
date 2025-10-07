@@ -1,5 +1,5 @@
 .. _api_v2/origins:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: The Talkable Origins API allows the registration of “off-site” or “backend” purchases, or CRM events. That means they can be used in the referral flow.

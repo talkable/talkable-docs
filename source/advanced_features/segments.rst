@@ -1,5 +1,5 @@
 .. _advanced_features/segments:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: While driving traffic to one of your campaigns, you can include a traffic source parameter as a URL query string. This will help to segment your reporting.
@@ -78,7 +78,7 @@ These segments offer flexibility in categorizing purchases based on different cu
 
 Example of usage with `register_purchase`:
 
-.. include:: partials/purchase_script.rst
+.. include:: /partials/purchase_script.rst
 
 Example of usage with `authenticate_customer`:
 

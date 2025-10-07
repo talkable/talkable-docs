@@ -1,5 +1,5 @@
 .. _integration/standard:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: Learn all the ins and outs of integration. It’s easier than it seems.

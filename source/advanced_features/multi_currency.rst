@@ -1,5 +1,5 @@
 .. _advanced_features/multi_currency:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: Talkable supports working with multiple currencies within the same site.
@@ -41,7 +41,7 @@ In multi-currency mode, the following incentive details can be configured per cu
 A reward for an Advocate or a Friend will be issued based on their preferred currency. If none specified,
 the main site currency will be used.
 
-.. image:: _static/img/advanced_features/multi_currency_incentive.png
+.. image:: /_static/img/advanced_features/multi_currency_incentive.png
 
 Preferred currency
 ------------------
@@ -49,7 +49,7 @@ Preferred currency
 Talkable allows storing an Advocate's or Friend's preferred currency. The selected currency can be accessed in |liquid|
 in the `[[ preferred_currency ]]` variable.
 
-.. image:: _static/img/advanced_features/multi_currency_advocate_offer.png
+.. image:: /_static/img/advanced_features/multi_currency_advocate_offer.png
 
 Passing visitor's preferred currency
 ....................................
@@ -97,7 +97,7 @@ Dashboard tiles have two helpful configuration options for multi-currency setup:
 * filter events by currencies ("Segment Currency")
 * convert all amounts to one currency ("Reporting Currency")
 
-.. image:: _static/img/advanced_features/multi_currency_dashboard_tile.png
+.. image:: /_static/img/advanced_features/multi_currency_dashboard_tile.png
 
 .. note::
 
@@ -116,7 +116,7 @@ Available options in **Metrics Aggregation Report**:
 * filter by the currency of the purchase/event
 * select specific segment currency
 
-.. image:: _static/img/advanced_features/multi_currency_mar.png
+.. image:: /_static/img/advanced_features/multi_currency_mar.png
   :width: 300
 
 .. note::

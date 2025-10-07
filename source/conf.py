@@ -12,16 +12,13 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys
 import os
+import sys
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath("."))
-
-# Import Talkable custom code
-from _utils import baseurl
 
 # -- General configuration ------------------------------------------------
 
@@ -211,7 +208,7 @@ htmlhelp_basename = "Talkabledoc"
 
 # The URL which points to the root of the HTML documentation.
 # It is used to indicate the location of document like canonical_url.
-html_baseurl = baseurl
+html_baseurl = os.getenv("BASE_URL", "https://docs.talkable.com")
 
 # -- Options for manual page output ---------------------------------------
 

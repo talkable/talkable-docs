@@ -1,5 +1,5 @@
 .. _web_hooks/migration_to_custom_app:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: Migration from Webhooks to Custom App.

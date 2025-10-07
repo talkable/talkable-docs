@@ -1,5 +1,5 @@
 .. _advanced_features/name_sharing:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: Talkable allows the Advocates to share referral offers by their names.
@@ -71,12 +71,12 @@ the different offers and only one Claim by Name campaign, which will serve all t
 
 In the rules of the Claim by Name campaign there is an option to make the floating widget inline. This can be done in the Rules of the campaign:
 
-.. image:: _static/img/advanced_features/name_sharing_inline_widget_1.png
+.. image:: /_static/img/advanced_features/name_sharing_inline_widget_1.png
    :alt: Inline widget option
 
 After that the campaign will be embedded in the page:
 
-.. image:: _static/img/advanced_features/name_sharing_inline_widget_2.png
+.. image:: /_static/img/advanced_features/name_sharing_inline_widget_2.png
    :alt: Inline widget
 
 Once you enabled “Inline Widget”, ask client to add the following code for the inline campaign (container):

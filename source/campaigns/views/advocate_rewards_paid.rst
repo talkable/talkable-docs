@@ -1,5 +1,5 @@
 .. _campaigns/views/notifier_rewards_paid:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: Send email to your brand Advocate when their account has been credited or a partial refund has been issued.
@@ -18,10 +18,10 @@ Frequently used Variables:
 - To show Reward Coupon Code use ``{{ coupon_code }}``.
 - Main |cta| should point to a merchant site to start shopping ``{{ proceed_to_advocate_destination_url }}``.
 
-.. image:: _static/img/basics/advocate-reward-paid-email-v2.png
+.. image:: /_static/img/basics/advocate-reward-paid-email-v2.png
    :alt: Advocate Reward Paid Email
 
-.. include:: partials/developer_email_note.rst
+.. include:: /partials/developer_email_note.rst
 
 .. raw:: html
 

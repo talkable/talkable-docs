@@ -1,5 +1,5 @@
 .. _integration/ecommerce_platforms/shopify:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: Here’s how you can integrate Talkable Shopify app with your store.
@@ -71,9 +71,9 @@ please follow the instructions below.
         * Create a new snippet called `talkable-partial`
         * In the newly created file, add the following code:
 
-          .. include:: samples/ecommerce/platform/shopify_init_script.rst
+          .. include:: /samples/ecommerce/platform/shopify_init_script.rst
 
-          .. include:: partials/note_sample_code.rst
+          .. include:: /partials/note_sample_code.rst
 
         * Click “Save”
 
@@ -104,7 +104,7 @@ please follow the instructions below.
 
         * Optionally, update the schema name to anything meaningful, for example, “Referral campaign“
 
-          .. image:: _static/img/shopify/editor_section.png
+          .. image:: /_static/img/shopify/editor_section.png
              :alt: Shopify editor - talkable-campaign section
              :class: is-minimal
 
@@ -117,7 +117,7 @@ please follow the instructions below.
         * Create a new JSON template of type `page` called `talkable` (`page.talkable.json`)
         * Change the type of the main section to `talkable-campaign`
 
-          .. image:: _static/img/shopify/editor_template.png
+          .. image:: /_static/img/shopify/editor_template.png
              :alt: Shopify editor - Talkable page section
              :class: is-minimal
 
@@ -198,9 +198,9 @@ please follow the instructions below.
     * Scroll down to **Order status page**
     * Paste the following code into **Additional scripts** field:
 
-      .. include:: samples/ecommerce/platform/shopify.rst
+      .. include:: /samples/ecommerce/platform/shopify.rst
 
-      .. include:: partials/note_sample_code.rst
+      .. include:: /partials/note_sample_code.rst
 
     * Click “Save”.
 
@@ -235,9 +235,9 @@ please follow the instructions below.
         * Create a new snippet called `talkable-partial`
         * In the newly created file, add the following code:
 
-          .. include:: samples/ecommerce/platform/shopify_init_script.rst
+          .. include:: /samples/ecommerce/platform/shopify_init_script.rst
 
-          .. include:: partials/note_sample_code.rst
+          .. include:: /partials/note_sample_code.rst
 
         * Click “Save”
 
@@ -313,9 +313,9 @@ please follow the instructions below.
     * Scroll down to **Order status page**
     * Paste the following code into **Additional scripts** field:
 
-      .. include:: samples/ecommerce/platform/shopify.rst
+      .. include:: /samples/ecommerce/platform/shopify.rst
 
-      .. include:: partials/note_sample_code.rst
+      .. include:: /partials/note_sample_code.rst
 
     * Click “Save”.
 
@@ -365,7 +365,7 @@ you need to do the following:
         * Create a new JSON template of type `page` called `talkable` (`page.talkable.json`)
         * Change the type of the main section to `talkable-campaign`
 
-          .. image:: _static/img/shopify/editor_template.png
+          .. image:: /_static/img/shopify/editor_template.png
              :alt: Shopify editor - Talkable page section
              :class: is-minimal
 
@@ -435,6 +435,6 @@ you need to do the following:
    Also Talkable provides integration for Shopify Plus.
 
 
-.. include:: partials/contact_us.rst
+.. include:: /partials/contact_us.rst
 
 .. _Shopify Github integration: https://shopify.dev/docs/storefronts/themes/tools/github

@@ -1,5 +1,5 @@
 .. _advanced_features/customer_service_portal/use_case_5:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 Use case #5: |br| Blocklisting a user
 =====================================
@@ -10,13 +10,13 @@ on social media pages.
 
 To blocklist a user, first navigate to the “Blocklist” section of the Customer Service Portal:
 
-.. image:: _static/img/advanced_features/customer_service_portal/blocklist.png
+.. image:: /_static/img/advanced_features/customer_service_portal/blocklist.png
    :width: 644 px
 
 Adding a user to the blocklist
 ------------------------------
 
-.. image:: _static/img/advanced_features/customer_service_portal/adding_blocklist.png
+.. image:: /_static/img/advanced_features/customer_service_portal/adding_blocklist.png
    :width: 436 px
 
 (We support adding users to a blocklist using two methods, by Email or by IP address. To add an email to the
@@ -25,11 +25,11 @@ not separated by comma, but are new line delimited.)
 
 We also have additional features that enable you to disqualify more IP addresses or emails.
 
-.. image:: _static/img/advanced_features/customer_service_portal/ip_address.jpg
+.. image:: /_static/img/advanced_features/customer_service_portal/ip_address.jpg
 
 (You can add a single IP address or an entire range of IP addresses.)
 
-.. image:: _static/img/advanced_features/customer_service_portal/wildcard_emails.jpg
+.. image:: /_static/img/advanced_features/customer_service_portal/wildcard_emails.jpg
 
 (We can also blocklist by subnet mask - in this case please ask a Talkable rep for more details.)
 

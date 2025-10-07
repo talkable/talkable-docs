@@ -1,5 +1,5 @@
 .. _advanced_features/customer_service_portal:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: Customer Service Portal

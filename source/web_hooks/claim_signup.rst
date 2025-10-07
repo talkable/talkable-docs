@@ -1,5 +1,5 @@
 .. _web_hooks/claim_signup:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: Friend Email Gating Webhook notifies your endpoint that Friend email gating form was submitted.
@@ -28,7 +28,7 @@ a share from an Advocate, and before receiving their discount code.
 
 Friend Email Gating form example:
 
-.. image:: _static/img/friend_email_gating_form.png
+.. image:: /_static/img/friend_email_gating_form.png
    :alt: Friend Email Gating Form
    :class: is-minimal
 

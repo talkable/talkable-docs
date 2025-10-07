@@ -1,5 +1,5 @@
 .. _campaigns/views/notifier_offers_share_via_email:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: Send an invite email to a Friend showing their special share link. Make the email looks personal — just like it's written for them.
@@ -22,10 +22,10 @@ Frequently used Variables:
 
 |br|
 
-.. image:: _static/img/basics/friend-share-email.png
+.. image:: /_static/img/basics/friend-share-email.png
    :alt: Friend Share Email
 
-.. include:: partials/developer_email_note.rst
+.. include:: /partials/developer_email_note.rst
 
 .. raw:: html
 

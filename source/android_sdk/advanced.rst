@@ -1,5 +1,5 @@
 .. _android_sdk/advanced:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 Advanced Usage
 ==============

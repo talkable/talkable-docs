@@ -1,5 +1,5 @@
 .. _integration/loyalty:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: You can integrate Talkable Loyalty to e-commerce sites in a few quick steps.
@@ -45,7 +45,7 @@ a few quick steps by adding the below scripts to your site.
 
    It is recommended to add it above the discount field. Examples:
 
-   .. figure:: _static/img/loyalty/loyalty_checkout.png
+   .. image:: /_static/img/loyalty/loyalty_checkout.png
       :alt: Sample checkout
 
 4. Define Loyalty points redemption batches.
@@ -58,7 +58,7 @@ a few quick steps by adding the below scripts to your site.
 
    It is recommended to upload 100,000 single-use coupons into every coupon list.
 
-   .. figure:: _static/img/loyalty/redemption_batches.png
+   .. image:: /_static/img/loyalty/redemption_batches.png
       :alt: Redemption batches
 
 .. note::

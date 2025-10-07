@@ -1,5 +1,5 @@
 .. _advanced_features/utm_tags:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: While driving traffic to one of your campaigns, you can include a UTM Tags parameters as a URL query string. This will help to segment your reporting.

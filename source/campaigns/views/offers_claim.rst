@@ -1,5 +1,5 @@
 .. _campaigns/views/offers_claim:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: Tell a Friend that every link they share will be rewarded.
@@ -24,7 +24,7 @@ Frequently used Variables:
 
 |br|
 
-.. image:: _static/img/basics/friend-claim-page.png
+.. image:: /_static/img/basics/friend-claim-page.png
    :alt: Friend Claim Page
 
 .. code-block:: liquid

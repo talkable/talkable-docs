@@ -1,5 +1,5 @@
 .. _integration/loyalty/shopify_integration:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: Learn how to manually set up loyalty Shopify integration.

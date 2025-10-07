@@ -1,5 +1,5 @@
 .. _android_sdk:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: Talkable has an Android framework enabling you to use Talkable in Android apps.

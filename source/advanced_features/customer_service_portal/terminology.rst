@@ -1,5 +1,5 @@
 .. _advanced_features/customer_service_portal/terminology:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 Terminology
 ===========

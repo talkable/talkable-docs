@@ -1,1 +1,0 @@
-from .baseurl import baseurl

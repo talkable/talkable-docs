@@ -1,5 +1,5 @@
 .. _android_sdk/api:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 API
 ===

@@ -1,5 +1,5 @@
 .. _advanced_features/customer_service_portal/overview:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 Overview
 ========
@@ -9,7 +9,7 @@ Logging In
 
 Once you are logged into your Talkable account, navigate to the Customer Service Portal in the top navigation.
 
-.. image:: _static/img/advanced_features/customer_service_portal/navigation_bar.png
+.. image:: /_static/img/advanced_features/customer_service_portal/navigation_bar.png
 
 Navigating to the Customer Service Portal
 -----------------------------------------
@@ -29,5 +29,5 @@ To see more personal details, select a user from the list.
 
 Example of Customer Service Portal person lookup:
 
-.. image:: _static/img/advanced_features/customer_service_portal/person_lookup.png
+.. image:: /_static/img/advanced_features/customer_service_portal/person_lookup.png
 

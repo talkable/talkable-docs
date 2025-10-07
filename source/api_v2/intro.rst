@@ -1,5 +1,5 @@
 .. _api_v2/intro:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: The Talkable API is built on HTTP. Our API is RESTful, returns JSON, and responds with standard HTTP response codes to indicate errors.
@@ -21,19 +21,19 @@ https://www.talkable.com/api-docs/
 
 Click **Authorize** to log in with the `API key <Authentication_>`_:
 
-.. image:: _static/img/swagger/authorize1.png
+.. image:: /_static/img/swagger/authorize1.png
    :alt: Authorize step 1
    :class: is-minimal
 
 Enter the `API key <Authentication_>`_ and click **Authorize** again:
 
-.. image:: _static/img/swagger/authorize2.png
+.. image:: /_static/img/swagger/authorize2.png
    :alt: Authorize step 2
    :class: is-minimal
 
 Click **Close**. The Authorize lock icon changes to locked:
 
-.. image:: _static/img/swagger/authorize3.png
+.. image:: /_static/img/swagger/authorize3.png
    :alt: Authorize step 3
    :class: is-minimal
    :width: 156 px
@@ -46,7 +46,7 @@ For details about the API call, expand the API method for each call. To issue an
 API call from the Talkable API user interface, click **Try it out** for any
 method. Edit the Example Values in the request body and click **Execute**.
 
-.. image:: _static/img/swagger/actions.png
+.. image:: /_static/img/swagger/actions.png
    :alt: Actions
    :class: is-minimal
 

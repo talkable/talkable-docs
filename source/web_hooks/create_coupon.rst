@@ -1,5 +1,5 @@
 .. _web_hooks/create_coupon:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: Create Coupon Webhook enables automatic coupon creation. That means you are no longer need to upload coupon lists into the Talkable platform manually.
@@ -51,7 +51,7 @@ coupon list for a campaign:
 2. Proceed to **Rules** then scroll down to **Incentives** section where
    incentives for both Advocate and Friend can be configured
 
-   .. image:: _static/img/advocate_referral_incentive.png
+   .. image:: /_static/img/advocate_referral_incentive.png
       :alt: Edit Referral Incentives
       :class: is-minimal
 

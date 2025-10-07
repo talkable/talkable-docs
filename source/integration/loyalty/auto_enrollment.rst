@@ -1,5 +1,5 @@
 .. _integration/loyalty/auto_enrollment:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 .. meta::
    :description: Find out how to auto-enroll loyalty members.

@@ -1,5 +1,5 @@
 .. _android_sdk/custom_deep_linking:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 Integration with Third Party Deep Linking Services
 ==================================================
@@ -21,7 +21,7 @@ and opened for the first time, show them personalized messages, and more.
 
 To use deep linking with Talkable campaigns, simply use your deep link URL as your Talkable Site URL.
 
-.. image:: _static/img/deep_linking/site_url.png
+.. image:: /_static/img/deep_linking/site_url.png
 
 .. note::
 

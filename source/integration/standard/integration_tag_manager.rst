@@ -1,5 +1,5 @@
 .. _integration/standard/integration_tag_manager:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 Integrating with a Tag Manager
 ==============================
@@ -55,7 +55,7 @@ Best Practices for Speed Optimization
 .. note:: 
    If you use GTM, you can add `priority <https://support.google.com/tagmanager/answer/2772421>`_ to the tag. The higher the priority, the quicker it gets loaded.
 
-   .. image:: _static/img/gtm-priority.png
+   .. image:: /_static/img/gtm-priority.png
 
 Alternative Approach: Direct Integration
 ----------------------------------------

@@ -1,5 +1,5 @@
 .. _android_sdk/integration/event:
-.. include:: partials/common.rst
+.. include:: /partials/common.rst
 
 Custom Events
 =============
