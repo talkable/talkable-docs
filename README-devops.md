@@ -63,7 +63,7 @@ The Talkable documentation stack is a containerized system that uses Docker to s
      cp .env.template .env
      ```
 
-- Update the following variables:
+   - Update the following variables:
        - **`ENVIRONMENT`**: Set to `staging`, `production`, or `local`. Falls back to `production` if no value provided.
        - **`LOCAL_PORT`**: Adjust if the default port (`8080`) is already in use.
   

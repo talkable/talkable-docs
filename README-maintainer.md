@@ -109,11 +109,13 @@ The Sphinx framework uses Python Docker images from DockerHub for both local dev
 2. Update the image name in both Dockerfiles:
 
    In [Dockerfile-local](./Dockerfile-local):
+
    ```dockerfile
    FROM python:3.12-alpine3.22
    ```
 
    In [Dockerfile-prod](./Dockerfile-prod):
+
    ```dockerfile
    FROM python:3.12-alpine3.22 AS builder
    ```
@@ -200,6 +202,7 @@ docker compose --profile local up -d --build
 ### Currently Used Extensions
 
 The documentation currently uses these Sphinx extensions:
+
 - `sphinx_sitemap` - Generates sitemap.xml for SEO
 - `sphinx_copybutton` - Adds copy buttons to code blocks
 - `sphinx_design` - Provides advanced layout components like cards, grids, and tabs

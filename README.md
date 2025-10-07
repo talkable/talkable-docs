@@ -92,6 +92,7 @@ All you need to do is commit your changes to the corresponding branch to deploy 
 Navigate to the [source](./source/) directory and update the files using `reStructuredText` syntax. Refer to [The reST Quickref](https://docutils.sourceforge.io/docs/user/rst/quickref.html) for syntax details.
 
 The documentation uses the following Sphinx extensions:
+
 - `sphinx_sitemap` for generating sitemaps
 - `sphinx_copybutton` for copy buttons on code blocks
 - `sphinx_design` for advanced layout components
@@ -180,6 +181,7 @@ docker compose restart docs-local
 ### Environment Configuration
 
 The documentation automatically configures its base URL based on the `ENVIRONMENT` variable:
+
 - `production`: `https://docs.talkable.com/`
 - `staging`: `https://docs.bastion.talkable.com/`
 - `local`: `http://localhost:{LOCAL_PORT}/`
