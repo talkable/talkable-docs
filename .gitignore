@@ -17,7 +17,6 @@ docs
 # Python
 .venv
 __pycache__
-
 # Ruby
 .bundle
 Gemfile.lock
