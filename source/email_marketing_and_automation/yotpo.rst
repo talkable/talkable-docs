@@ -34,24 +34,8 @@ Here are the conditions when Talkable receives loyalty data:
 
 The integration uses webhooks to automatically sync this data in real-time, ensuring your Talkable campaigns always have the most up-to-date loyalty information.
 
-Loyalty data usage
-~~~~~~~~~~~~~~~~~~
-
-New data that synced from Yotpo can be accessed through person custom properties:
-
-Available Yotpo loyalty variables:
-
-* yotpo.points_earned
-* yotpo.point_balance
-* yotpo.total_redemptions
-* yotpo.total_points_redeemed
-* yotpo.vip_tier_name
-* yotpo.successfull_referales
-* yotpo.referrales_made_and_clicked
-* yotpo.is_referred_by_other_customer
-
 Integration Setup
-~~~~~~~~~~~~~~~~~
+-----------------
 
 Please use the following guide to start using the Yotpo integration:
 
@@ -81,5 +65,77 @@ Please use the following guide to start using the Yotpo integration:
    The integration will automatically configure with your Yotpo store credentials. Enable the "Sync Loyalty Data" action and then enable the app itself.
 
 5. Test the integration by making a points adjustment in your Yotpo dashboard and verify the data appears in Talkable customer profiles.
+
+Loyalty data usage
+------------------
+
+New data that synced from Yotpo can be accessed through person custom properties:
+
+Available Yotpo loyalty variables:
+
+* yotpo.points_earned
+* yotpo.point_balance
+* yotpo.total_redemptions
+* yotpo.total_points_redeemed
+* yotpo.vip_tier_name
+* yotpo.successfull_referales
+* yotpo.referrales_made_and_clicked
+* yotpo.is_referred_by_other_customer
+
+You can inspect these custom properties in the People report:
+
+   .. image:: /_static/img/email_marketing_and_automation/yotpo_custom_properties.png
+      :alt: Yotpo Loyalty & Referrals person custom properties in People report
+
+Yotpo Loyalty data & Incentives
+................................  
+
+These custom properties can be used in incentive criteria.  
+In the example below, we restrict the **Advocate Referral Incentive** to the Gold tier only:
+
+
+1. Edit **Advocate Referral Incentive**:
+
+   .. image:: /_static/img/email_marketing_and_automation/yotpo_incentive_edit.png
+      :alt: Using Yotpo Loyalty & Referrals person custom properties in Incentive criteria
+
+2. Navigate to **Advanced Settings** and fill in the **Incentive criteria** field with the following code:
+
+   .. code-block:: liquid
+
+      {% if advocate_info.custom_properties.yotpo.vip_tier_name == "Gold Tier" %}
+        true
+      {% else %}
+        Should have Gold Tier
+      {% endif %}   
+
+   .. image:: /_static/img/email_marketing_and_automation/yotpo_incentive_criteria.png
+      :alt: Using Yotpo Loyalty & Referrals person custom properties in Incentive criteria
+
+3. Learn more about incentive criteria on :ref:`Incentive Criteria <campaigns/tutorials/incentive_criteria>` page.
+
+Yotpo Loyalty data & Campaign editor
+....................................
+
+These custom properties can also be used in campaigns.  
+In the example below, we'll display the customer's loyalty points in the header of the Apple Wallet pass:
+
+1. Navigate to the campaign Easy Editor and open the **Talkable wallet for iPhone** view:
+
+   .. image:: /_static/img/email_marketing_and_automation/yotpo_wallet_view.png
+      :alt: Using Yotpo Loyalty & Referrals person custom properties in campaign easy editor
+
+2. Update the **Apple Wallet header field label** localization with **REFERRALS | POINTS**, and set the **Apple Wallet header field value** to the following code:
+   
+   .. code-block:: liquid
+
+      {{ referrals_count_by_status.total | default: 0 }} | {{  custom_properties.yotpo.point_balance | default: 0 }}
+
+3. In the preview, you'll see that the wallet header now displays Points in addition to Referrals:
+
+   .. image:: /_static/img/email_marketing_and_automation/yotpo_wallet_points.png
+      :alt: Using Yotpo Loyalty & Referrals person custom properties in campaign easy editor
+
+4. Learn more about the campaign editor on the :ref:`Editor <campaigns/editor>` page.   
 
 .. include:: /partials/contact_us.rst
