@@ -1,5 +1,8 @@
 # Step 1: Build static content with Sphinx using the same approach as Dockerfile-sphinx
-FROM python:3.12-alpine3.22 as builder
+FROM python:3.12-alpine3.22 AS builder
+
+ARG BASE_URL=https://docs.talkable.com/
+ENV BASE_URL=${BASE_URL}
 
 # Install UV
 RUN pip install uv

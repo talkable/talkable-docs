@@ -22,6 +22,7 @@ services:
       dockerfile: Dockerfile-prod
       args:
         ENVIRONMENT: ${ENVIRONMENT}
+        BASE_URL: ${BASE_URL}
     container_name: docs-prod
     restart: unless-stopped
     profiles:
