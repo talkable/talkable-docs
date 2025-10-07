@@ -55,13 +55,13 @@ The goal is to update `pyproject.toml` with the latest versions of dependencies.
 
     ```bash
     uv add package-name  # For new packages
-    uv sync --upgrade    # To upgrade existing packages
+    uv lock --upgrade    # To upgrade existing packages
     ```
 
 2. Build the local development container.
 
     ```bash
-    docker compose --profile local up -d --build
+    docker compose -f docker-compose-local.yml up -d --build
     ```
 
     This starts the local development environment with live reloading and allows you to load the documentation at <http://localhost:8080>.
@@ -69,7 +69,7 @@ The goal is to update `pyproject.toml` with the latest versions of dependencies.
     If the documentation fails to load, check the container logs:
 
     ```bash
-    docker compose logs -f docs-local
+    docker compose -f docker-compose-local.yml logs -f sphinx
     ```
 
 3. Test production build.
@@ -77,7 +77,7 @@ The goal is to update `pyproject.toml` with the latest versions of dependencies.
     Test the production build process to ensure compatibility:
 
     ```bash
-    docker compose --profile prod build --no-cache
+    docker compose -f docker-compose.yml build --no-cache
     ```
 
 4. Test and lock dependencies.
@@ -88,12 +88,14 @@ The goal is to update `pyproject.toml` with the latest versions of dependencies.
     uv lock --upgrade
     ```
 
+    This command respects existing version constraints in `pyproject.toml` while upgrading to the latest compatible versions.
+
 5. Stop the containers.
 
     Once the documentation is fully functional, stop the containers:
 
     ```bash
-    docker compose down -v
+    docker compose -f docker-compose-local.yml down -v
     ```
 
 6. Push the updated `pyproject.toml` and `uv.lock` to GitHub.
@@ -114,28 +116,34 @@ The Sphinx framework uses Python Docker images from DockerHub for both local dev
    FROM python:3.12-alpine3.22
    ```
 
-   In [Dockerfile-prod](./Dockerfile-prod):
+   In [Dockerfile](./Dockerfile):
 
    ```dockerfile
    FROM python:3.12-alpine3.22 AS builder
    ```
 
-3. Test the deployment.
+    In [Dockerfile](./Dockerfile):
 
-    Deploy the local development container to verify the updates:
-
-    ```bash
-    docker compose --profile local up -d --build
+    ```dockerfile
+    FROM python:3.12-alpine3.22 AS builder
     ```
 
-    Confirm that the documentation loads at <http://localhost:8080>.
+3. Test the deployment.
+
+     Deploy the local development container to verify the updates:
+
+     ```bash
+     docker compose -f docker-compose-local.yml up -d --build
+     ```
+
+     Confirm that the documentation loads at <http://localhost:8080>.
 
 4. Test production build.
 
     Test the production build process:
 
     ```bash
-    docker compose --profile prod build --no-cache
+    docker compose -f docker-compose.yml build --no-cache
     ```
 
 5. Finalize the update.
@@ -145,7 +153,7 @@ The Sphinx framework uses Python Docker images from DockerHub for both local dev
     Stop the containers:
 
     ```bash
-    docker compose down -v
+    docker compose -f docker-compose-local.yml down -v
     ```
 
 ## Updating the Nginx Container
@@ -154,7 +162,7 @@ The production deployment uses Nginx to serve static content.
 
 1. Check for the latest Nginx image on DockerHub: <https://hub.docker.com/_/nginx>.
 
-2. Update the image name in [Dockerfile-prod](./Dockerfile-prod):
+2. Update the image name in [Dockerfile](./Dockerfile):
 
    ```dockerfile
    FROM nginx:1.29-alpine3.22
@@ -163,13 +171,23 @@ The production deployment uses Nginx to serve static content.
 3. Test the production build:
 
    ```bash
-   docker compose --profile prod build --no-cache
-   docker compose --profile prod up -d --force-recreate
+   docker compose -f docker-compose.yml build --no-cache
+   docker compose -f docker-compose.yml up -d --force-recreate
    ```
 
 4. Finalize the update.
 
-   Commit the updated `Dockerfile-prod` to the repository for testing and production.
+   Commit the updated `Dockerfile` to the repository for testing and production.
+
+   Stop the containers:
+
+   ```bash
+   docker compose -f docker-compose.yml down -v
+   ```
+
+5. Finalize the update.
+
+   Commit the updated `Dockerfile` to the repository for testing and production.
 
    Stop the containers:
 
@@ -196,7 +214,7 @@ To add extensions, follow these steps:
 Start by deploying the local development container:
 
 ```bash
-docker compose --profile local up -d --build
+docker compose -f docker-compose-local.yml up -d --build
 ```
 
 ### Currently Used Extensions
@@ -221,14 +239,14 @@ uv add package-name
 Rebuild the container after adding the package:
 
 ```bash
-docker compose --profile local up -d --build
+docker compose -f docker-compose-local.yml up -d --build
 ```
 
 For production deployment, test with:
 
 ```bash
-docker compose --profile prod build --no-cache
-docker compose --profile prod up -d --force-recreate
+docker compose -f docker-compose.yml build --no-cache
+docker compose -f docker-compose.yml up -d --force-recreate
 ```
 
 ### Modifying Configuration Files
@@ -243,5 +261,6 @@ Most changes involve editing the [./source/conf.py](./source/conf.py) file or ot
 - **[./source/conf.py](./source/conf.py)**: Main Sphinx configuration file
 - **[./source/_utils/baseurl.py](./source/_utils/baseurl.py)**: Handles environment-specific base URL configuration
 - **[./pyproject.toml](./pyproject.toml)**: Python dependencies and project metadata
-- **[./docker-compose.yml](./docker-compose.yml)**: Container orchestration configuration
+- **[./docker-compose.yml](./docker-compose.yml)**: Production container orchestration configuration
+- **[./docker-compose-local.yml](./docker-compose-local.yml)**: Local development container orchestration configuration
 - **[./nginx/templates/default.conf.template](./nginx/templates/default.conf.template)**: Nginx configuration for production deployments
