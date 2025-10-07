@@ -24,7 +24,9 @@ jobs:
 
       - run:
           name: Build documentation
-          command: uv run sphinx-build -nW -b dirhtml -d build/doctrees -aE /docs/source /docs/_build
+          command: uv run sphinx-build -nW -b dirhtml -d build/doctrees source build/html
+#          command: uv run sphinx-build --builder dirhtml --write-all --fresh-env /docs/source /docs/_build
+
 
 workflows:
   workflow:
