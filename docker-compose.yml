@@ -1,5 +1,6 @@
 services:
   sphinx:
+    platform: linux/arm64/v8
     build:
       context: .
       dockerfile: Dockerfile-local
@@ -15,19 +16,17 @@ services:
       - ${LOCAL_PORT}:8000
 
   nginx:
+    platform: linux/arm64/v8
     build:
       context: .
       dockerfile: Dockerfile-prod
+      args:
+        ENVIRONMENT: ${ENVIRONMENT}
     container_name: docs-prod
     restart: unless-stopped
     profiles:
       - prod
     environment:
       - BASE_URL
-    volumes:
-      - ./source:/docs/source
-      - ./nginx/templates:/etc/nginx/templates
-      - ./nginx/robots/${ENVIRONMENT}.txt:/var/www/robots.txt
-      - ./nginx/redirects.conf:/etc/nginx/redirects.conf
     ports:
       - ${LOCAL_PORT}:80
