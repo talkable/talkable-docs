@@ -97,8 +97,8 @@ deploy_docs() {
     git pull origin
     docker-compose ls
     docker ps
-    docker-compose restart
-    docker-compose up -d --build --remove-orphans
+    docker-compose --build --no-cache
+    docker-compose up -d --force-recreate
 EOF
 }
 
