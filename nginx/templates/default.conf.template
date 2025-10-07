@@ -35,9 +35,9 @@ server {
 
     include /etc/nginx/redirects.conf;
 
-    # Serve robots.txt from a specific file
+    # Serve robots.txt dynamically based on environment variable
     location = /robots.txt {
-        alias /var/www/robots.txt;
+        alias /var/www/${ENVIRONMENT}.txt;
         access_log off;
         log_not_found off;
     }

@@ -4,12 +4,12 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-local
+      args:
+        ENVIRONMENT: ${ENVIRONMENT}
     container_name: docs-local
     restart: unless-stopped
     profiles:
       - local
-    environment:
-      - BASE_URL
     volumes:
       - ./source:/docs/source
     ports:
@@ -22,12 +22,9 @@ services:
       dockerfile: Dockerfile-prod
       args:
         ENVIRONMENT: ${ENVIRONMENT}
-        BASE_URL: ${BASE_URL}
     container_name: docs-prod
     restart: unless-stopped
     profiles:
       - prod
-    environment:
-      - BASE_URL
     ports:
       - ${LOCAL_PORT}:80

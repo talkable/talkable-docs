@@ -1,5 +1,8 @@
 FROM python:3.12-alpine3.22
 
+ARG ENVIRONMENT
+ENV ENVIRONMENT=${ENVIRONMENT:-production}
+
 # Install UV
 RUN pip install uv
 

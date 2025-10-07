@@ -1,8 +1,8 @@
 # Step 1: Build static content with Sphinx using the same approach as Dockerfile-sphinx
 FROM python:3.12-alpine3.22 AS builder
 
-ARG BASE_URL=https://docs.talkable.com/
-ENV BASE_URL=${BASE_URL}
+ARG ENVIRONMENT
+ENV ENVIRONMENT=${ENVIRONMENT:-production}
 
 # Install UV
 RUN pip install uv
@@ -23,8 +23,8 @@ RUN uv run sphinx-build --builder dirhtml --write-all --fresh-env /docs/source /
 # Step 2: Nginx image with static content
 FROM nginx:1.29-alpine3.22
 
-ARG ENVIRONMENT=production
-ENV ENVIRONMENT=${ENVIRONMENT}
+ARG ENVIRONMENT
+ENV ENVIRONMENT=${ENVIRONMENT:-production}
 
 # Copy nginx configuration
 COPY nginx/templates /etc/nginx/templates
@@ -32,7 +32,6 @@ COPY nginx/redirects.conf /etc/nginx/redirects.conf
 
 # Copy robots.txt files
 COPY nginx/robots/ /var/www/
-RUN cp /var/www/${ENVIRONMENT}.txt /var/www/robots.txt
 
 # Copy built static content from builder
 COPY --from=builder /docs/_build/ /var/www/html/
