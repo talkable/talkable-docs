@@ -1,191 +1,261 @@
 # Talkable Documentation
 
-## What is Talkable Documentation?
+## Overview
 
-The set of articles describing Talkable's capabilities, publicly available at [docs.talkable.com](https://docs.talkable.com).
+This repository contains the Talkable documentation - a comprehensive set of articles describing Talkable's capabilities, publicly available at [docs.talkable.com](https://docs.talkable.com).
 
-It uses [reStructuredText](https://docutils.sourceforge.io/rst.html) as its markup language, an easy-to-read, what-you-see-is-what-you-get plaintext markup syntax. All reStructuredText formatting capabilities can be found in [The reST Quickref](https://docutils.sourceforge.io/docs/user/rst/quickref.html).
+The documentation is built using [Sphinx](https://www.sphinx-doc.org) with [reStructuredText](https://docutils.sourceforge.io/rst.html) markup and the `sphinx_book_theme`.
 
-It is built using [Sphinx](https://www.sphinx-doc.org) with the `sphinx_book_theme`, an open-source documentation generation tool that transforms plain text files into beautifully formatted documentation. For more details, see [The Sphinx Documentation](https://www.sphinx-doc.org).
+## Quick Start for Contributors
 
-## Where is it stored?
+### Prerequisites
 
-It's stored in a dedicated GitHub repository ([talkable-docs](https://github.com/talkable/talkable-docs)).
+- **Docker** and **Docker Compose** installed on your local machine
+  - Follow the [official Docker documentation](https://docs.docker.com/compose/install/)
 
-The repository consists of the following branches:
+### One-Command Setup
 
-- [master](https://github.com/talkable/talkable-docs/tree/master): The main branch used to keep the most recent stable version available at [docs.talkable.com](https://docs.talkable.com).
-- [staging](https://github.com/talkable/talkable-docs/tree/staging): A staging branch used for testing by QA. It is available at [docs.bastion.talkable.com](https://docs.bastion.talkable.com).
-- Feature branches created from `master` by individual contributors/developers.
+```bash
+# Clone the repository
+git clone git@github.com:talkable/talkable-docs.git
+cd talkable-docs
 
-## What is the documentation update workflow?
+# Setup and start development server
+make start
+```
 
-1. Pull changes from `master`.
-2. Checkout a new branch from `master`.
-3. Deploy the local/development environment.
-4. Make changes and test them locally.
-5. Commit the changes to the `staging` branch.
-6. Get the documentation tested by QA.
-7. Create a pull request to the `master` branch, providing the staging URL of the changed page in the pull request description.
-8. Merge the pull request once it passes the review.
+That's it! Your local documentation will be available at `http://localhost:8080`.
 
-## How to deploy the local environment?
+## Development Workflow
 
-0. **Install Docker**
+### 1. Initial Setup
 
-   Follow the [official Docker documentation](https://docs.docker.com/compose/install/).
+```bash
+# Create .env file from template (if needed)
+make setup
 
-   Note: Both Docker and Docker Compose are required for local development.
+# Verify configuration
+make help
 
-1. **Navigate to the repository root directory.**
+# Start development server
+make up
+```
 
-   Ensure the `docker-compose.yml` file is located there.
+### 2. Daily Development
 
-2. **Create an `.env` file by copying `.env.template`.**
+```bash
+# Start server
+make up
 
-   Review and update the variable values if needed.
+# Check server status
+make status
 
-   For a **development/local environment**, all default settings should work out of the box. The only value you may need to change is `LOCAL_PORT` if `8080` is already in use on your local machine. The `BASE_URL` is automatically determined based on the `ENVIRONMENT` setting.
+# View live logs
+make logs
 
-3. **Run the local environment deployment.**
+# Stop server
+make down
 
-   Run the command:
+# Complete cleanup
+make clean
+```
 
-   ```bash
-   docker compose --profile local up -d --build
-   ```
+### 3. Making Changes
 
-   > [!NOTE]
-   > Docker Compose uses profiles to manage different environments. If no profile is specified, `docker compose` does nothing. Always include `--profile local` for local development.
+1. Navigate to the [`source`](./source/) directory
+2. Edit files using [reStructuredText](https://docutils.sourceforge.io/docs/user/rst/quickref.html) syntax
+3. Changes are automatically reflected in your browser (live reload)
 
-   If everything is set up correctly, the documentation will be available at [http://localhost:8080](http://localhost:8080). Make sure you use the port number defined in the `.env` file.
+### 4. Contribution Process
 
-   If the documentation does not load, check the **Troubleshooting** section.
+1. Pull latest changes from `master`
+2. Create a new branch from `master`
+3. Make and test your changes locally
+4. Commit changes to the `staging` branch
+5. Create a pull request to `master` with staging URL
+6. Get QA approval and merge
 
-## How to remove the local environment
+## Project Structure
 
-1. Stop the containers and remove the volumes
+```bash
+talkable-docs/
+├── source/                 # Documentation source files
+│   ├── _static/           # Static assets (CSS, images, PDFs)
+│   ├── _templates/        # HTML templates
+│   ├── advanced_features/ # Advanced feature documentation
+│   ├── api_v2/           # API documentation
+│   ├── campaigns/        # Campaign documentation
+│   ├── integration/      # Integration guides
+│   └── *.rst             # Main documentation files
+├── nginx/                 # Nginx configuration
+├── deploy/               # Deployment scripts
+├── docker-compose.yml    # Production Docker configuration
+├── docker-compose-local.yml # Local development configuration
+├── Makefile              # Development commands
+├── .env.template         # Environment variables template
+└── pyproject.toml        # Python dependencies
+```
 
-   ```bash
-   docker compose down -v
-   ```
+## Available Commands
 
-2. Remove the built and downloaded images
+The Makefile provides all necessary commands for local development:
 
-   ```bash
-   docker system prune -af
-   ```
+```bash
+make help        # Show all available commands
+make setup       # Create .env file from template
+make up          # Start local development server
+make down        # Stop local development server
+make clean       # Remove containers and clean up residuals
+make logs        # View development server logs
+make status      # Check container status
+make start       # Quick setup and start (alias for setup + up)
+make stop        # Quick stop and cleanup (alias for down + clean)
+```
 
-## How to deploy changes to production and staging?
+## Writing Documentation
 
-You should not deploy it manually!
+### reStructuredText Basics
 
-The deployment is handled by [Jenkins job](http://jenkins.production/view/Talkable-docs/).
+The documentation uses reStructuredText syntax. Key conventions:
 
-All you need to do is commit your changes to the corresponding branch to deploy them to the appropriate server:
-
-- Commit to the [staging](https://github.com/talkable/talkable-docs/tree/staging) branch => [docs.bastion.talkable.com](https://docs.bastion.talkable.com/).
-- Commit to the [master](https://github.com/talkable/talkable-docs/tree/master) branch => [docs.talkable.com](https://docs.talkable.com/).
-
-## How do I make the actual changes?
-
-Navigate to the [source](./source/) directory and update the files using `reStructuredText` syntax. Refer to [The reST Quickref](https://docutils.sourceforge.io/docs/user/rst/quickref.html) for syntax details.
-
-The documentation uses the following Sphinx extensions:
-
-- `sphinx_sitemap` for generating sitemaps
-- `sphinx_copybutton` for copy buttons on code blocks
-- `sphinx_design` for advanced layout components
-
-Here are some formatting examples:
-
-### Sections
-
-Section headings are very flexible in reST. We use the following convention in the Talkable documentation:
-
-- `#` for module headings
-- `=` for sections
-- `-` for subsections
-- `.` for subsubsections
-
-### Cross-referencing
-
-Sections that may be cross-referenced across the documentation should be marked with a reference.
-To mark a section use `.. _ref-name:` before the section heading.
-The section can then be linked with `` :ref:`ref-name` ``. These are unique references across the entire documentation.
-
-For example:
+#### Section Headings
 
 ```rst
-.. _talkable-module:
-
-Talkable Module
-###############
-
-This is the module documentation.
-
-.. _talkable-section:
-
-Talkable Section
+# Module Heading
 ================
 
-Talkable Subsection
--------------------
+= Section Heading
+----------------
 
-Talkable Subsubsection
-......................
+- Subsection Heading
+~~~~~~~~~~~~~~~~~~~
 
-Here is a reference to "talkable section": :ref:`talkable-section` which will have the
-name "Talkable Section".
+. Subsubsection Heading
+.......................
 ```
+
+#### Cross-References
+
+```rst
+.. _reference-name:
+
+Section Title
+=============
+
+Here's a reference to the section: :ref:`reference-name`
+```
+
+### Sphinx Extensions
+
+- `sphinx_sitemap` - Generates sitemaps
+- `sphinx_copybutton` - Adds copy buttons to code blocks
+- `sphinx_design` - Advanced layout components
+
+### Code Blocks
+
+```rst
+.. code-block:: python
+
+   def example_function():
+       return "Hello, World!"
+```
+
+## Environment Configuration
+
+### .env File
+
+The `.env` file controls your local development environment:
+
+```bash
+# Port for local development server
+LOCAL_PORT=8080
+
+# Environment type (local, staging, production)
+ENVIRONMENT=local
+```
+
+### Environment-Specific Behavior
+
+- **local**: `http://localhost:{LOCAL_PORT}/`
+- **staging**: `https://docs.bastion.talkable.com/`
+- **production**: `https://docs.talkable.com/`
 
 ## Redirects
 
 > [!IMPORTANT]
-> Please update the redirect rules if you change the file name, file path, or delete a file.
+> Update redirect rules when changing file names, paths, or deleting files.
 
-Redirects are implemented using the Nginx `rewrite` rules stored in [./nginx/redirects.conf](./nginx/redirects.conf) file.
-
-After changing that file restart the local container to get the rules applied.
+Redirects are managed in [`./nginx/redirects.conf`](./nginx/redirects.conf). After changes:
 
 ```bash
-docker compose restart docs-local 
+# Restart local container to apply changes
+docker compose restart docs-local
 ```
 
-> [!TIP]
->
-> Avoid creating rules that manipulate anything other than paths (such as protocols and hostnames). The best approach is to modify paths only.
+## Deployment
+
+### Local Development
+
+Use the Makefile commands for all local operations:
+
+```bash
+make up      # Deploy locally
+make clean   # Remove local deployment
+```
+
+### Production & Staging
+
+**Do not deploy manually!** Deployment is handled automatically:
+
+- **staging** branch → [docs.bastion.talkable.com](https://docs.bastion.talkable.com/)
+- **master** branch → [docs.talkable.com](https://docs.talkable.com/)
+
+Simply commit to the appropriate branch to trigger deployment.
 
 ## Troubleshooting
 
-### Can't view the documentation locally in the browser?
+### Common Issues
 
-1. Ensure you are using the correct port number and protocol.
-   The port number should match the value provided in `.env` as `LOCAL_PORT`.
+#### Documentation Not Loading
 
-2. Check logs:
+1. **Check port**: Ensure you're using the correct port from your `.env` file
+2. **Check container status**: `make status`
+3. **View logs**: `make logs` (shows real-time server logs)
 
-   ```bash
-   docker compose logs -f docs-local
-   ```
+#### Port Already in Use
 
-## Links
+Edit your `.env` file and change `LOCAL_PORT` to an available port:
 
-- GitHub "staging" branch: [staging](https://github.com/talkable/talkable-docs/tree/staging)
-- Staging web server: [docs.bastion.talkable.com](https://docs.bastion.talkable.com/)
-- GitHub "production" branch: [master](https://github.com/talkable/talkable-docs/tree/master)
-- Production web server: [docs.talkable.com](https://docs.talkable.com/)
+```bash
+LOCAL_PORT=8081
+```
 
-## Additional Information
+#### Complete Reset
 
-### Environment Configuration
+If you encounter persistent issues:
 
-The documentation automatically configures its base URL based on the `ENVIRONMENT` variable:
+```bash
+make clean    # Remove everything
+make setup    # Reset environment
+make up       # Start fresh
+```
 
-- `production`: `https://docs.talkable.com/`
-- `staging`: `https://docs.bastion.talkable.com/`
-- `local`: `http://localhost:{LOCAL_PORT}/`
+### Getting Help
 
-### Theme and Styling
+- Run `make help` for available commands
+- Check the [GitHub repository](https://github.com/talkable/talkable-docs) for issues
+- Review the [reStructuredText Quickref](https://docutils.sourceforge.io/docs/user/rst/quickref.html) for syntax help
 
-The documentation uses the `sphinx_book_theme` with custom styling defined in `source/_static/talkable.css`. The Talkable logo and favicon are located in `source/_static/img/`.
+## Additional Resources
+
+- [Sphinx Documentation](https://www.sphinx-doc.org)
+- [reStructuredText Quickref](https://docutils.sourceforge.io/docs/user/rst/quickref.html)
+- [sphinx_book_theme Documentation](https://sphinx-book-theme.readthedocs.io)
+
+## Repository Links
+
+- **GitHub Repository**: [talkable-docs](https://github.com/talkable/talkable-docs)
+- **Staging Branch**: [staging](https://github.com/talkable/talkable-docs/tree/staging)
+- **Master Branch**: [master](https://github.com/talkable/talkable-docs/tree/master)
+- **Staging Site**: [docs.bastion.talkable.com](https://docs.bastion.talkable.com/)
+- **Production Site**: [docs.talkable.com](https://docs.talkable.com/)

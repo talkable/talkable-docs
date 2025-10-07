@@ -8,15 +8,15 @@ The Talkable documentation stack is a containerized system that uses Docker to s
 
 1. **Containerized Components**:
 
-   - **Sphinx (Local Development)**: Uses `sphinx-autobuild` with live reloading for local development, serving on port 8000.
-   - **Nginx (Production)**: Handles HTTP requests, serves static HTML files, manages URL redirection, and dynamically serves environment-specific `robots.txt` files.
-   - **Multi-stage Build**: Uses a builder stage with Python/UV to generate static HTML files from source documentation, then copies them to the Nginx stage for serving.
+   - **Sphinx (Local Development)**: Uses `docker-compose-local.yml` with `sphinx-autobuild` for live reloading, serving on port 8000. Mounts source directory for real-time updates.
+   - **Nginx (Production)**: Uses `docker-compose.yml` with multi-stage build to serve static HTML files, manage URL redirection, and dynamically serve environment-specific `robots.txt` files.
+   - **Multi-stage Build**: Production builds use a builder stage with Python/UV to generate static HTML files, then copies them to the Nginx stage for serving.
 
 2. **Environment-Specific Behavior**:
 
    - Configured via a `.env` file for flexibility.
    - Supports dynamic environment-specific behavior, such as serving different `robots.txt` files based on the `ENVIRONMENT` variable.
-   - Uses Docker Compose profiles to manage different deployment scenarios (`local` for development, `prod` for staging/production).
+   - Uses separate Docker Compose files for different deployment scenarios (`docker-compose-local.yml` for development, `docker-compose.yml` for staging/production).
    - `ENVIRONMENT` variable is used for all deployments including local development, with fallback to `production` if not specified.
 
 3. **Efficient Architecture**:
@@ -72,18 +72,15 @@ The Talkable documentation stack is a containerized system that uses Docker to s
    For local development:
 
    ```bash
-   docker compose --profile local up -d --build
+   docker compose -f docker-compose-local.yml up -d --build
    ```
 
-    For production or staging deployment:
+   For production or staging deployment:
 
-    ```bash
-    docker compose --profile prod build --no-cache
-    docker compose --profile prod up -d --force-recreate
-    ```
-
-   > [!NOTE]
-   > Docker Compose profiles are required. Without specifying a profile, no containers will be started.
+   ```bash
+   docker compose -f docker-compose.yml build --no-cache
+   docker compose -f docker-compose.yml up -d --force-recreate
+   ```
 
 ## Environment-Specific Configuration
 
@@ -104,14 +101,16 @@ The Talkable documentation stack is a containerized system that uses Docker to s
 
 ## Build Process and Data Management
 
-- **Multi-stage Build**:
+- **Multi-stage Build (Production Only)**:
 
   - Builder stage uses Python 3.12 with `uv` to generate static HTML files from source documentation using `sphinx-build`.
   - Generated files are copied to the Nginx stage during the build process.
   - No runtime content generation required.
+  - Local development uses single-stage build with live reloading capabilities.
 
 - **Dependency Management**:
   - Uses `uv` for fast Python dependency management.
   - Dependencies are defined in `pyproject.toml` and locked in `uv.lock`.
   - Build arguments pass `ENVIRONMENT` variable to the build process.
-  - Local development uses `sphinx-autobuild` for live reloading capabilities.
+  - Local development uses `Dockerfile-local` with `sphinx-autobuild` for live reloading and source volume mounting.
+  - Production uses `Dockerfile` with multi-stage build for optimized static content generation.
