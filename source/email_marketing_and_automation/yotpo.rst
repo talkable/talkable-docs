@@ -102,6 +102,7 @@ In the example below, we restrict the **Advocate Referral Incentive** to the Gol
 2. Navigate to **Advanced Settings** and fill in the **Incentive criteria** field with the following code:
 
    .. code-block:: liquid
+      :force:
 
       {% if advocate_info.custom_properties.yotpo.vip_tier_name == "Gold Tier" %}
         true
@@ -128,6 +129,7 @@ In the example below, we'll display the customer's loyalty points in the header 
 2. Update the **Apple Wallet header field label** localization with **REFERRALS | POINTS**, and set the **Apple Wallet header field value** to the following code:
    
    .. code-block:: liquid
+      :force:
 
       {{ referrals_count_by_status.total | default: 0 }} | {{  custom_properties.yotpo.point_balance | default: 0 }}
 
