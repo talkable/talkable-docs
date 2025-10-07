@@ -22,4 +22,4 @@ Link to Talkable cartridge on AppExchange:
 |br|
 `<https://appexchange.salesforce.com/appxListingDetail?listingId=a0N4V00000JdkctUAB>`_
 
-Link to download integration documentation: `Integration Guide </_static/talkable-integration-guide.pdf>`_
+Link to download integration documentation: `Integration Guide <_static/talkable-integration-guide.pdf>`_
