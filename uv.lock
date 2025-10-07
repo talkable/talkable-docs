@@ -524,7 +524,7 @@ requires-dist = [
     { name = "sphinx-autobuild" },
     { name = "sphinx-book-theme" },
     { name = "sphinx-copybutton" },
-    { name = "sphinx-design", specifier = ">=0.6.1" },
+    { name = "sphinx-design" },
     { name = "sphinx-sitemap" },
 ]
 
