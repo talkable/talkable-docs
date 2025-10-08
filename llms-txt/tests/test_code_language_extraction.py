@@ -2,7 +2,7 @@
 Tests for code language extraction functionality in MarkdownConverter.
 """
 
-from markdown_converter import MarkdownConverter
+from talkable_llm_txt import MarkdownConverter
 
 
 class TestCodeLanguageExtraction:

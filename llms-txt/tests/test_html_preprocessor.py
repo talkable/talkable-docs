@@ -1,4 +1,4 @@
-from html_preprocessor import HTMLPreprocessor
+from talkable_llm_txt import HTMLPreprocessor
 
 
 class TestHTMLPreprocessor:

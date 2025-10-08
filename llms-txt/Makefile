@@ -5,8 +5,9 @@
 help: ## Show this help message
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
-install: ## Install dependencies via uv
+install: ## Install dependencies via uv and install package in editable mode
 	uv sync
+	uv pip install -e .
 
 fmt: ## Format Python code with ruff
 	uv run ruff format .
@@ -19,7 +20,7 @@ lint-fix: ## Auto-fix linting issues and format code
 	uv run ruff format .
 
 test: ## Run tests with pytest
-	PYTHONPATH=. uv run pytest
+	uv run pytest
 
 check: lint-fix test ## Run all checks (lint-fix + test)
 

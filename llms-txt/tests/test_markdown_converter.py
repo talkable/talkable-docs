@@ -5,7 +5,7 @@ This module tests the conversion of HTML strings to markdown
 format using the html-to-markdown library.
 """
 
-from markdown_converter import MarkdownConverter
+from talkable_llm_txt import MarkdownConverter
 
 
 class TestMarkdownConverter:
@@ -277,7 +277,6 @@ class TestMarkdownConverter:
 
     def test_heading_style_configuration(self):
         """Test that heading style configuration works correctly."""
-        from markdown_converter import MarkdownConverter
 
         # Test ATX style (default)
         converter_atx = MarkdownConverter(heading_style="atx")

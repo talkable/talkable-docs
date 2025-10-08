@@ -1,9 +1,6 @@
 import asyncio
 
-from html_preprocessor import HTMLPreprocessor
-from markdown_converter import MarkdownConverter
-from playwright_fetcher import PlaywrightFetcher
-from sitemap_processor import SitemapProcessor
+from . import HTMLPreprocessor, MarkdownConverter, PlaywrightFetcher, SitemapProcessor
 
 # Configuration
 MAX_URLS_TO_PROCESS = 10  # Hardcoded parameter to control how many URLs to process
