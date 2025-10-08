@@ -65,7 +65,7 @@ Initialization Script Notes
    platform where Site ID is displayed on your Dashboard and URL as seen
    here:
 
-   .. figure:: /_static/img/site_id.png
+   .. image:: /_static/img/site_id.png
       :alt: Site ID
 
 2. **Variables.** Use your dynamic variables to pass user details.

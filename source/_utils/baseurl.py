@@ -1,15 +1,14 @@
 import os
 
-local_port = os.getenv("LOCAL_PORT")
-environment = os.getenv("ENVIRONMENT")
-production_host = os.getenv("PRODUCTION_HOST")
-staging_host = os.getenv("STAGING_HOST")
-development_host = os.getenv("DEVELOPMENT_HOST")
 
-baseurl_json = {
-    "development": f"http://{development_host}:{local_port}/",
-    "staging": f"https://{staging_host}/",
-    "production": f"https://{production_host}/",
-}
+def get_baseurl() -> str:
+    environment = os.getenv("ENVIRONMENT", "production")
+    local_port = os.getenv("LOCAL_PORT", "8080")
 
-baseurl = baseurl_json.get(environment)
+    urls = {
+        "production": "https://docs.talkable.com/",
+        "staging": "https://docs.bastion.talkable.com/",
+        "local": f"http://localhost:{local_port}/",
+    }
+
+    return urls.get(environment, urls["production"])
