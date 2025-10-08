@@ -5,9 +5,10 @@
 help: ## Show this help message
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
-install: ## Install dependencies via uv and install package in editable mode
+install: ## Install dependencies via uv, install package in editable mode, and install Playwright browsers with system dependencies
 	uv sync
 	uv pip install -e .
+	uv run playwright install --with-deps chromium
 
 fmt: ## Format Python code with ruff
 	uv run ruff format .
