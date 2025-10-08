@@ -278,21 +278,21 @@ class TestMarkdownConverter:
     def test_heading_style_configuration(self):
         """Test that heading style configuration works correctly."""
         from markdown_converter import MarkdownConverter
-        
+
         # Test ATX style (default)
         converter_atx = MarkdownConverter(heading_style="atx")
         html = "<article><h1>Title</h1><h2>Section</h2></article>"
         markdown_atx = converter_atx.convert_article(html)
-        
+
         assert "# Title" in markdown_atx
         assert "## Section" in markdown_atx
         assert "Title\n====" not in markdown_atx
         assert "Section\n----" not in markdown_atx
-        
+
         # Test underlined style
         converter_underlined = MarkdownConverter(heading_style="underlined")
         markdown_underlined = converter_underlined.convert_article(html)
-        
+
         assert "Title\n====" in markdown_underlined
         assert "Section\n----" in markdown_underlined
         assert "# Title" not in markdown_underlined

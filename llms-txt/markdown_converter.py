@@ -19,9 +19,9 @@ class MarkdownConverter:
     (as strings) to clean, structured markdown using the html-to-markdown
     library with configurable heading styles.
     """
-    
-    HIGHLIGHT_PREFIX = 'highlight-'
-    ADMONITION_CLASS = 'admonition'
+
+    HIGHLIGHT_PREFIX = "highlight-"
+    ADMONITION_CLASS = "admonition"
 
     def __init__(
         self,
@@ -57,22 +57,22 @@ class MarkdownConverter:
         """Extract value after prefix from first matching class"""
         for class_name in classes:
             if class_name.startswith(prefix):
-                return class_name.replace(prefix, '')
-        return ''
+                return class_name.replace(prefix, "")
+        return ""
 
     def _div_converter(self, *, tag: Tag, text: str, **kwargs) -> str:
         """Handle div elements - both admonitions and code blocks"""
         classes = self._get_classes(tag)
-        
+
         # Check if this is an admonition
         admonition_type = self._extract_admonition_type(classes)
         if admonition_type:
             return self._admonition_converter(tag=tag, text=text, **kwargs)
-        
+
         # Check if this is a syntax-highlighted code block
         if self._has_class_prefix(classes, self.HIGHLIGHT_PREFIX):
             return self._code_block_converter(tag=tag, text=text, **kwargs)
-        
+
         # Fallback to default behavior
         return text
 
@@ -129,16 +129,16 @@ class MarkdownConverter:
         """Handle syntax-highlighted code blocks with language extraction"""
         classes = self._get_classes(tag)
         language = self._extract_class_prefix_value(classes, self.HIGHLIGHT_PREFIX)
-        
+
         # Extract code content from nested pre element
-        pre_tag = tag.find('pre')
+        pre_tag = tag.find("pre")
         if pre_tag:
             code_content = pre_tag.get_text().strip()
         else:
             # Fallback to tag text content
             code_content = tag.get_text().strip()
-        
-        return f'```{language}\n{code_content}\n```'
+
+        return f"```{language}\n{code_content}\n```"
 
     def convert_article(self, article_html: str) -> str:
         """

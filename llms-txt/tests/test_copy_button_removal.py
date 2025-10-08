@@ -1,4 +1,3 @@
-import pytest
 from bs4 import BeautifulSoup
 from html_preprocessor import HTMLPreprocessor
 
@@ -23,9 +22,9 @@ class TestCopyButtonRemoval:
         """
         soup = BeautifulSoup(html, "html.parser")
         article = soup.find("article")
-        
+
         self.preprocessor._remove_copy_buttons(article)
-        
+
         copy_buttons = article.find_all("button", class_="copybtn")
         assert len(copy_buttons) == 0
 
@@ -46,9 +45,9 @@ class TestCopyButtonRemoval:
         """
         soup = BeautifulSoup(html, "html.parser")
         article = soup.find("article")
-        
+
         self.preprocessor._remove_copy_buttons(article)
-        
+
         copy_buttons = article.find_all("button", class_="copybtn")
         assert len(copy_buttons) == 0
 
@@ -65,13 +64,15 @@ class TestCopyButtonRemoval:
         """
         soup = BeautifulSoup(html, "html.parser")
         article = soup.find("article")
-        
+
         self.preprocessor._remove_copy_buttons(article)
-        
+
         copy_buttons = article.find_all("button", class_="copybtn")
         assert len(copy_buttons) == 0
-        
-        other_buttons = article.find_all("button", class_=lambda x: x and "copybtn" not in str(x))
+
+        other_buttons = article.find_all(
+            "button", class_=lambda x: x and "copybtn" not in str(x)
+        )
         assert len(other_buttons) == 2
 
     def test_preserve_other_elements(self):
@@ -91,20 +92,19 @@ class TestCopyButtonRemoval:
         """
         soup = BeautifulSoup(html, "html.parser")
         article = soup.find("article")
-        
+
         original_h1 = article.find("h1")
-        original_p = article.find("p")
         original_div = article.find("div", class_="highlight")
         original_pre = article.find("pre")
-        
+
         self.preprocessor._remove_copy_buttons(article)
-        
+
         # Check that other elements are preserved
         assert article.find("h1") == original_h1
         assert len(article.find_all("p")) == 2
         assert article.find("div", class_="highlight") == original_div
         assert article.find("pre") == original_pre
-        
+
         # Check that copy button is removed
         copy_buttons = article.find_all("button", class_="copybtn")
         assert len(copy_buttons) == 0
@@ -120,11 +120,11 @@ class TestCopyButtonRemoval:
         """
         soup = BeautifulSoup(html, "html.parser")
         article = soup.find("article")
-        
+
         original_content = str(article)
-        
+
         self.preprocessor._remove_copy_buttons(article)
-        
+
         # Content should remain unchanged
         assert str(article) == original_content
 
@@ -145,9 +145,9 @@ class TestCopyButtonRemoval:
         """
         soup = BeautifulSoup(html, "html.parser")
         article = soup.find("article")
-        
+
         self.preprocessor._remove_copy_buttons(article)
-        
+
         copy_buttons = article.find_all("button", class_="copybtn")
         assert len(copy_buttons) == 0
 
@@ -172,12 +172,12 @@ class TestCopyButtonRemoval:
         """
         soup = BeautifulSoup(html, "html.parser")
         article = soup.find("article")
-        
+
         self.preprocessor._remove_copy_buttons(article)
-        
+
         copy_buttons = article.find_all("button", class_="copybtn")
         assert len(copy_buttons) == 0
-        
+
         # Check that the highlight div and pre are preserved
         assert article.find("div", class_="highlight") is not None
         assert article.find("pre") is not None
@@ -194,18 +194,18 @@ class TestCopyButtonRemoval:
         </article>
         """
         result = self.preprocessor.extract_article(html)
-        
+
         assert result is not None
-        
+
         result_soup = BeautifulSoup(result, "html.parser")
-        
+
         # Both header links and copy buttons should be removed
         header_links = result_soup.find_all("a", class_="headerlink")
         copy_buttons = result_soup.find_all("button", class_="copybtn")
-        
+
         assert len(header_links) == 0
         assert len(copy_buttons) == 0
-        
+
         # Other content should be preserved
         assert result_soup.find("h1") is not None
         assert result_soup.find("p") is not None
@@ -215,10 +215,10 @@ class TestCopyButtonRemoval:
         html = "<article></article>"
         soup = BeautifulSoup(html, "html.parser")
         article = soup.find("article")
-        
+
         # Should not raise any errors
         self.preprocessor._remove_copy_buttons(article)
-        
+
         copy_buttons = article.find_all("button", class_="copybtn")
         assert len(copy_buttons) == 0
 
@@ -240,12 +240,12 @@ class TestCopyButtonRemoval:
         """
         soup = BeautifulSoup(html, "html.parser")
         article = soup.find("article")
-        
+
         self.preprocessor._remove_copy_buttons(article)
-        
+
         copy_buttons = article.find_all("button", class_="copybtn")
         assert len(copy_buttons) == 0
-        
+
         # Nested structure should be preserved
         assert article.find("div", class_="content") is not None
         assert article.find("div", class_="code-block") is not None
