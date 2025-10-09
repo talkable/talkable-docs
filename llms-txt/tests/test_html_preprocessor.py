@@ -274,3 +274,149 @@ class TestHTMLPreprocessor:
         assert original_results == expected_original
         # Processed should have additional fields
         assert len(processed[0]) > len(original_results[0])
+
+    def test_remove_images_with_alt_text(self):
+        """Test that images with alt text are replaced with simple placeholder."""
+        processor = HTMLPreprocessor(images=False)
+        html = """
+        <html>
+            <body>
+                <article>
+                    <h1>Article with Images</h1>
+                    <img src="test.jpg" alt="A test image">
+                    <p>Some content</p>
+                </article>
+            </body>
+        </html>
+        """
+        result = processor.extract_article(html)
+
+        assert result is not None
+        assert "[Image]" in result
+        assert "<img" not in result
+
+    def test_remove_images_without_alt_text(self):
+        """Test that images without alt text are replaced with generic placeholder."""
+        processor = HTMLPreprocessor(images=False)
+        html = """
+        <html>
+            <body>
+                <article>
+                    <h1>Article with Images</h1>
+                    <img src="test.jpg">
+                    <p>Some content</p>
+                </article>
+            </body>
+        </html>
+        """
+        result = processor.extract_article(html)
+
+        assert result is not None
+        assert "[Image]" in result
+        assert "<img" not in result
+
+    def test_remove_images_with_empty_alt_text(self):
+        """Test that images with empty alt text are replaced with generic placeholder."""
+        processor = HTMLPreprocessor(images=False)
+        html = """
+        <html>
+            <body>
+                <article>
+                    <h1>Article with Images</h1>
+                    <img src="test.jpg" alt="">
+                    <p>Some content</p>
+                </article>
+            </body>
+        </html>
+        """
+        result = processor.extract_article(html)
+
+        assert result is not None
+        assert "[Image]" in result
+        assert "<img" not in result
+
+    def test_keep_images_enabled(self):
+        """Test that images are preserved when images=True."""
+        processor = HTMLPreprocessor(images=True)
+        html = """
+        <html>
+            <body>
+                <article>
+                    <h1>Article with Images</h1>
+                    <img src="test.jpg" alt="A test image">
+                    <p>Some content</p>
+                </article>
+            </body>
+        </html>
+        """
+        result = processor.extract_article(html)
+
+        assert result is not None
+        assert "<img" in result
+        assert 'src="test.jpg"' in result
+        assert 'alt="A test image"' in result
+        assert "[Image:" not in result
+
+    def test_keep_images_default_behavior(self):
+        """Test that default behavior (images=False) removes images."""
+        processor = HTMLPreprocessor()  # Default images=False
+        html = """
+        <html>
+            <body>
+                <article>
+                    <h1>Article with Images</h1>
+                    <img src="test.jpg" alt="A test image">
+                    <p>Some content</p>
+                </article>
+            </body>
+        </html>
+        """
+        result = processor.extract_article(html)
+
+        assert result is not None
+        assert "[Image]" in result
+        assert "<img" not in result
+
+    def test_multiple_images_mixed_alt_text(self):
+        """Test handling multiple images with different alt text scenarios."""
+        processor = HTMLPreprocessor(images=False)
+        html = """
+        <html>
+            <body>
+                <article>
+                    <h1>Article with Multiple Images</h1>
+                    <img src="image1.jpg" alt="First image">
+                    <img src="image2.jpg">
+                    <img src="image3.jpg" alt="">
+                    <p>Content between images</p>
+                    <img src="image4.jpg" alt="Fourth image">
+                </article>
+            </body>
+        </html>
+        """
+        result = processor.extract_article(html)
+
+        assert result is not None
+        assert "[Image]" in result
+        assert "[Image]" in result
+        # Should have 4 image placeholders total
+        assert result.count("[Image]") == 4  # Four total placeholders
+        # All images become simple placeholders
+
+    def test_images_with_special_characters_in_alt(self):
+        """Test that images with special characters are replaced with simple placeholder."""
+        processor = HTMLPreprocessor(images=False)
+        html = """
+        <html>
+            <body>
+                <article>
+                    <img src="test.jpg" alt="Image with &quot;quotes&quot; and &amp; symbols">
+                </article>
+            </body>
+        </html>
+        """
+        result = processor.extract_article(html)
+
+        assert result is not None
+        assert "[Image]" in result; assert "[Image:" not in result  # Should not include alt text
+        assert "<img" not in result

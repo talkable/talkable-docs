@@ -16,6 +16,16 @@ class HTMLPreprocessor:
     fetched by Playwright, providing clean content for markdown conversion.
     """
 
+    def __init__(self, images: bool = False):
+        """
+        Initialize the HTML preprocessor.
+
+        Args:
+            images: If True, keep images as-is. If False, replace with placeholder descriptions.
+                   Default is False (images replaced with descriptions).
+        """
+        self.images = images
+
     def extract_article(self, html: Optional[str]) -> Optional[str]:
         """
         Extract article element from Playwright-rendered HTML.
@@ -47,6 +57,7 @@ class HTMLPreprocessor:
         """
         self._remove_header_links(article)
         self._remove_copy_buttons(article)
+        self._remove_images(article)
 
     def _remove_header_links(self, article: Optional[Tag]) -> None:
         """
@@ -73,6 +84,19 @@ class HTMLPreprocessor:
         copy_buttons = article.find_all("button", class_="copybtn")
         for button in copy_buttons:
             button.decompose()
+
+    def _remove_images(self, article: Optional[Tag]) -> None:
+        """
+        Replace images with placeholder or keep them as-is.
+
+        Args:
+            article: BeautifulSoup article element (can be None)
+        """
+        if not article or self.images:
+            return
+
+        for img in article.find_all("img"):
+            img.replace_with("[Image]")
 
     def process_urls(self, results: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """
