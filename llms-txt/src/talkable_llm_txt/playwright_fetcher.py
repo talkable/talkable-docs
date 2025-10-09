@@ -1,7 +1,12 @@
 import asyncio
+from contextlib import asynccontextmanager
 from typing import Any, Dict, List, Literal, Optional
 
-from playwright.async_api import BrowserContext, async_playwright
+from playwright.async_api import (
+    BrowserContext,
+    TimeoutError as PlaywrightTimeoutError,
+    async_playwright,
+)
 
 
 class PlaywrightFetcher:
@@ -11,12 +16,7 @@ class PlaywrightFetcher:
     DEFAULT_WAIT_UNTIL: Literal["commit", "domcontentloaded", "load", "networkidle"] = (
         "domcontentloaded"
     )
-    BLOCKED_RESOURCE_TYPES = {"image", "media"}
-    BLOCKED_FILE_PATTERNS = [
-        "**/*.{png,jpg,jpeg,gif,svg,webp}",
-        "**/*.{mp4,webm,mp3,wav}",
-        "**/*.{pdf,doc,docx,xls,xlsx}",
-    ]
+    BLOCKED_RESOURCE_TYPES = {"image", "media", "font"}
 
     def __init__(
         self,
@@ -25,30 +25,27 @@ class PlaywrightFetcher:
         wait_until: Optional[
             Literal["commit", "domcontentloaded", "load", "networkidle"]
         ] = None,
+        batch_size: int = 50,
     ):
         self.max_concurrent = max_concurrent or self.DEFAULT_MAX_CONCURRENT
         self.timeout = timeout or self.DEFAULT_TIMEOUT
         self.wait_until = wait_until or self.DEFAULT_WAIT_UNTIL
+        self.batch_size = batch_size
         self.semaphore = asyncio.Semaphore(self.max_concurrent)
 
-    def _create_result_dict(self, url: str, **kwargs) -> Dict[str, Any]:
+    def _create_result(
+        self, url: str, html=None, status=None, error=None
+    ) -> Dict[str, Any]:
         """Create a consistent result dictionary"""
-        return {"url": url, "html": None, "status": None, "error": None, **kwargs}
+        return {"url": url, "html": html, "status": status, "error": error}
 
-    def _create_error_result(self, url: str, error: str) -> Dict[str, Any]:
-        """Create an error result dictionary"""
-        return self._create_result_dict(url, error=error)
+    def _handle_request_failed(self, request, page_url: str) -> None:
+        """Simplified requestfailed event handling following documentation best practices"""
+        print(f"Request failed: {request.url}")
 
-    async def fetch_urls(self, urls: List[str]) -> List[Dict[str, Any]]:
-        """
-        Fetch HTML content for multiple URLs using single browser with context pool
-
-        Args:
-            urls: List of URLs to fetch
-
-        Returns:
-            List of dictionaries containing url, html, and status/error info
-        """
+    @asynccontextmanager
+    async def _browser_context(self):
+        """Context manager for browser lifecycle with proper cleanup"""
         async with async_playwright() as p:
             browser = await p.chromium.launch()
             context = None
@@ -56,15 +53,43 @@ class PlaywrightFetcher:
                 context = await browser.new_context()
                 await self._setup_resource_blocking(context)
 
-                tasks = [self._fetch_single_url(context, url) for url in urls]
-                results = await asyncio.gather(*tasks, return_exceptions=True)
+                # Add error handling for context
+                context.on(
+                    "weberror",
+                    lambda web_error: print(f"Context error: {web_error.error}"),
+                )
 
-                return self._process_results(results, urls)
-
+                yield context
             finally:
                 if context:
+                    # Clean up routes before closing
+                    await context.unroute_all()
                     await context.close()
                 await browser.close()
+
+    async def fetch_urls(self, urls: List[str]) -> List[Dict[str, Any]]:
+        """
+        Fetch HTML content for multiple URLs using batch processing
+
+        Args:
+            urls: List of URLs to fetch
+
+        Returns:
+            List of dictionaries containing url, html, and status/error info
+        """
+        all_results = []
+
+        # Process URLs in batches to manage memory
+        for i in range(0, len(urls), self.batch_size):
+            batch = urls[i : i + self.batch_size]
+
+            async with self._browser_context() as context:
+                tasks = [self._fetch_single_url(context, url) for url in batch]
+                batch_results = await asyncio.gather(*tasks, return_exceptions=True)
+                processed_batch = self._process_results(batch_results, batch)
+                all_results.extend(processed_batch)
+
+        return all_results
 
     def _process_results(self, results: List, urls: List[str]) -> List[Dict[str, Any]]:
         """Process and normalize results from asyncio.gather"""
@@ -72,32 +97,22 @@ class PlaywrightFetcher:
         for i, result in enumerate(results):
             if isinstance(result, Exception):
                 processed_results.append(
-                    self._create_error_result(urls[i], str(result))
+                    self._create_result(urls[i], error=str(result))
                 )
             else:
                 processed_results.append(result)
         return processed_results
 
     async def _setup_resource_blocking(self, context: BrowserContext) -> None:
-        """Setup unified resource blocking with single routing mechanism"""
-        await context.route("**/*", self._block_resources)
+        """Setup simplified resource blocking with single route handler"""
 
-    async def _block_resources(self, route) -> None:
-        """Unified resource blocking logic - eliminates duplication"""
-        request = route.request
-        resource_type = request.resource_type
-        url = request.url
+        async def handle_route(route):
+            if route.request.resource_type in self.BLOCKED_RESOURCE_TYPES:
+                await route.abort()
+            else:
+                await route.continue_()
 
-        # Check file patterns first (more specific)
-        if any(pattern in url for pattern in self.BLOCKED_FILE_PATTERNS):
-            await route.abort()
-            return
-
-        # Check resource types
-        if resource_type in self.BLOCKED_RESOURCE_TYPES:
-            await route.abort()
-        else:
-            await route.continue_()
+        await context.route("**/*", handle_route)
 
     async def _fetch_single_url(
         self, context: BrowserContext, url: str
@@ -115,6 +130,10 @@ class PlaywrightFetcher:
         async with self.semaphore:
             page = await context.new_page()
 
+            # Add error event handlers for monitoring
+            page.on("pageerror", lambda exc: print(f"Page error for {url}: {exc}"))
+            page.on("requestfailed", lambda req: self._handle_request_failed(req, url))
+
             try:
                 # Use configured timeout and wait_until
                 response = await page.goto(
@@ -125,14 +144,14 @@ class PlaywrightFetcher:
 
                 if response:
                     html = await page.content()
-                    return self._create_result_dict(
-                        url, html=html, status=response.status
-                    )
+                    return self._create_result(url, html=html, status=response.status)
                 else:
-                    return self._create_error_result(url, "No response received")
+                    return self._create_result(url, error="No response received")
 
+            except PlaywrightTimeoutError:
+                return self._create_result(url, error=f"Timeout after {self.timeout}ms")
             except Exception as e:
-                return self._create_error_result(url, str(e))
+                return self._create_result(url, error=str(e))
 
             finally:
                 await page.close()
@@ -148,7 +167,7 @@ class PlaywrightFetcher:
             Dictionary with url, html, status, and error information
         """
         results = await self.fetch_urls([url])
-        return results[0] if results else self._create_error_result(url, "No results")
+        return results[0] if results else self._create_result(url, error="No results")
 
     def get_stats(self, results: List[Dict[str, Any]]) -> Dict[str, Any]:
         """

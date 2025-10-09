@@ -34,10 +34,12 @@ async def main():
     for result in processed_results:
         if result.get("has_article") and result.get("article"):
             markdown_content = converter.convert_article(result["article"])
-            markdown_results.append({
-                "url": result["url"],
-                "markdown": markdown_content,
-            })
+            markdown_results.append(
+                {
+                    "url": result["url"],
+                    "markdown": markdown_content,
+                }
+            )
 
     # Display final markdown results
     print(f"\n{'=' * 80}")
