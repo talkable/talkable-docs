@@ -1,6 +1,7 @@
 {
   "gitignore": true,
   "ignores": [
-    "**/output/**"
+    "**/output/**",
+    "**/agent_*.md"
   ]
 }
