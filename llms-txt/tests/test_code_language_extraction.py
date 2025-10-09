@@ -207,10 +207,13 @@ end</pre>
         soup = BeautifulSoup(html, "html.parser")
         tag = soup.find("div")
 
-        result = converter._code_block_converter(tag=tag, text="test code")
-
-        assert "```python" in result
-        assert "test code" in result
+        # Add type guard
+        if tag is not None:
+            result = converter._code_block_converter(tag=tag, text="test code")
+            assert "```python" in result
+            assert "test code" in result
+        else:
+            assert False, "Failed to find div element in test HTML"
 
     def test_language_extraction_edge_cases(self):
         """Test edge cases in language extraction."""

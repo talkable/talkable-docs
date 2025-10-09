@@ -2,6 +2,7 @@ import logging
 from typing import Any, Dict, List, Optional
 
 from bs4 import BeautifulSoup
+from bs4.element import Tag
 
 # Module-level logger following official Python documentation best practices
 logger = logging.getLogger(__name__)
@@ -15,17 +16,17 @@ class HTMLPreprocessor:
     fetched by Playwright, providing clean content for markdown conversion.
     """
 
-    def extract_article(self, html: str) -> Optional[str]:
+    def extract_article(self, html: Optional[str]) -> Optional[str]:
         """
         Extract article element from Playwright-rendered HTML.
 
         Args:
-            html: HTML content from PlaywrightFetcher
+            html: HTML content from PlaywrightFetcher (can be None)
 
         Returns:
             Article HTML as string, or None if no article element found
         """
-        if not html or not html.strip():
+        if html is None or not html.strip():
             return None
 
         soup = BeautifulSoup(html, "html.parser")
@@ -47,24 +48,28 @@ class HTMLPreprocessor:
         self._remove_header_links(article)
         self._remove_copy_buttons(article)
 
-    def _remove_header_links(self, article):
+    def _remove_header_links(self, article: Optional[Tag]) -> None:
         """
         Remove all headerlink anchor elements from article.
 
         Args:
-            article: BeautifulSoup article element
+            article: BeautifulSoup article element (can be None)
         """
+        if not article:
+            return
         header_links = article.find_all("a", class_="headerlink")
         for link in header_links:
             link.decompose()
 
-    def _remove_copy_buttons(self, article):
+    def _remove_copy_buttons(self, article: Optional[Tag]) -> None:
         """
         Remove all copy button elements from article.
 
         Args:
-            article: BeautifulSoup article element
+            article: BeautifulSoup article element (can be None)
         """
+        if not article:
+            return
         copy_buttons = article.find_all("button", class_="copybtn")
         for button in copy_buttons:
             button.decompose()

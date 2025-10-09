@@ -5,8 +5,10 @@ from typing import Any, Dict, List, Literal, Optional
 
 from playwright.async_api import (
     BrowserContext,
-    TimeoutError as PlaywrightTimeoutError,
     async_playwright,
+)
+from playwright.async_api import (
+    TimeoutError as PlaywrightTimeoutError,
 )
 
 # Module-level logger following official Python documentation best practices

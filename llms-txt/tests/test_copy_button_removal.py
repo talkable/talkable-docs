@@ -23,6 +23,8 @@ class TestCopyButtonRemoval:
         soup = BeautifulSoup(html, "html.parser")
         article = soup.find("article")
 
+        # Add type guard
+        assert article is not None, "Failed to find article element in test HTML"
         self.preprocessor._remove_copy_buttons(article)
 
         copy_buttons = article.find_all("button", class_="copybtn")
@@ -46,6 +48,8 @@ class TestCopyButtonRemoval:
         soup = BeautifulSoup(html, "html.parser")
         article = soup.find("article")
 
+        # Add type guard
+        assert article is not None, "Failed to find article element in test HTML"
         self.preprocessor._remove_copy_buttons(article)
 
         copy_buttons = article.find_all("button", class_="copybtn")
@@ -65,13 +69,15 @@ class TestCopyButtonRemoval:
         soup = BeautifulSoup(html, "html.parser")
         article = soup.find("article")
 
+        # Add type guard
+        assert article is not None, "Failed to find article element in test HTML"
         self.preprocessor._remove_copy_buttons(article)
 
         copy_buttons = article.find_all("button", class_="copybtn")
         assert len(copy_buttons) == 0
 
         other_buttons = article.find_all(
-            "button", class_=lambda x: x and "copybtn" not in str(x)
+            "button", class_=lambda x: x is not None and "copybtn" not in str(x)
         )
         assert len(other_buttons) == 2
 
@@ -93,6 +99,8 @@ class TestCopyButtonRemoval:
         soup = BeautifulSoup(html, "html.parser")
         article = soup.find("article")
 
+        # Add type guard
+        assert article is not None, "Failed to find article element in test HTML"
         original_h1 = article.find("h1")
         original_div = article.find("div", class_="highlight")
         original_pre = article.find("pre")
@@ -121,6 +129,8 @@ class TestCopyButtonRemoval:
         soup = BeautifulSoup(html, "html.parser")
         article = soup.find("article")
 
+        # Add type guard
+        assert article is not None, "Failed to find article element in test HTML"
         original_content = str(article)
 
         self.preprocessor._remove_copy_buttons(article)
@@ -146,6 +156,8 @@ class TestCopyButtonRemoval:
         soup = BeautifulSoup(html, "html.parser")
         article = soup.find("article")
 
+        # Add type guard
+        assert article is not None, "Failed to find article element in test HTML"
         self.preprocessor._remove_copy_buttons(article)
 
         copy_buttons = article.find_all("button", class_="copybtn")
@@ -173,6 +185,8 @@ class TestCopyButtonRemoval:
         soup = BeautifulSoup(html, "html.parser")
         article = soup.find("article")
 
+        # Add type guard
+        assert article is not None, "Failed to find article element in test HTML"
         self.preprocessor._remove_copy_buttons(article)
 
         copy_buttons = article.find_all("button", class_="copybtn")
@@ -216,6 +230,8 @@ class TestCopyButtonRemoval:
         soup = BeautifulSoup(html, "html.parser")
         article = soup.find("article")
 
+        # Add type guard
+        assert article is not None, "Failed to find article element in test HTML"
         # Should not raise any errors
         self.preprocessor._remove_copy_buttons(article)
 
@@ -241,6 +257,8 @@ class TestCopyButtonRemoval:
         soup = BeautifulSoup(html, "html.parser")
         article = soup.find("article")
 
+        # Add type guard
+        assert article is not None, "Failed to find article element in test HTML"
         self.preprocessor._remove_copy_buttons(article)
 
         copy_buttons = article.find_all("button", class_="copybtn")
