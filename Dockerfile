@@ -1,14 +1,42 @@
-FROM python:3.13-alpine3.22
+# Step 1: Build static content with Sphinx using the same approach as Dockerfile-sphinx
+FROM python:3.12-alpine3.22 AS builder
 
-# Install dependencies
+ARG ENVIRONMENT
+ENV ENVIRONMENT=${ENVIRONMENT:-production}
+
+# Install UV
+RUN pip install uv
+
+# Set working directory
 WORKDIR /docs
-ADD requirements.txt /docs
-RUN python3 -m pip install -r requirements.txt
 
-CMD if [ "$ENVIRONMENT" = "development" ]; then \
-        echo "Running Sphinx in Development mode"; \
-        sphinx-autobuild --builder dirhtml /docs/source /docs/_build; \
-    else \
-        echo "Running Sphinx in Staging/Production mode"; \
-        sphinx-build --builder dirhtml --write-all --fresh-env /docs/source /docs/_build; \
-    fi
+# Copy project files
+COPY pyproject.toml uv.lock ./
+
+# Install dependencies using UV
+RUN uv sync --frozen
+
+# Copy source files and build static content
+COPY source/ ./source/
+RUN uv run sphinx-build --builder dirhtml --write-all --fresh-env /docs/source /docs/_build
+
+# Step 2: Nginx image with static content
+FROM nginx:1.29-alpine3.22
+
+ARG ENVIRONMENT
+ENV ENVIRONMENT=${ENVIRONMENT:-production}
+
+# Copy nginx configuration
+COPY nginx/templates /etc/nginx/templates
+COPY nginx/redirects.conf /etc/nginx/redirects.conf
+
+# Copy robots.txt files
+COPY nginx/robots/ /var/www/
+
+# Copy built static content from builder
+COPY --from=builder /docs/_build/ /var/www/html/
+
+# Expose port 80
+EXPOSE 80
+
+# Use the default CMD from the nginx base image

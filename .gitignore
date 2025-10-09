@@ -1,6 +1,5 @@
 # IDE
 .idea
-.vscode
 
 # Local
 *.log
@@ -10,10 +9,16 @@
 _build
 build
 
+# Mkdocs
+site
+# Remove after the migration is complete
+docs
+
 # Python
 .venv
 __pycache__
-
 # Ruby
 .bundle
 Gemfile.lock
+
+agent_*.md
