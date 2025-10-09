@@ -1,4 +1,4 @@
-.PHONY: help install fmt lint lint-fix test check clean
+.PHONY: help install fmt lint lint-fix typecheck typecheck-watch test check clean
 
 .DEFAULT_GOAL := help
 
@@ -20,10 +20,16 @@ lint-fix: ## Auto-fix linting issues and format code
 	uv run ruff check --fix .
 	uv run ruff format .
 
+typecheck: ## Run Pyright type checking (PyLance equivalent)
+	uv run pyright
+
+typecheck-watch: ## Run Pyright in watch mode for continuous checking
+	uv run pyright --watch
+
 test: ## Run tests with pytest
 	uv run pytest
 
-check: lint-fix test ## Run all checks (lint-fix + test)
+check: lint-fix typecheck test ## Run all checks (lint-fix + typecheck + test)
 
 clean: ## Clean build artifacts and cache files
 	rm -rf .venv
@@ -34,3 +40,4 @@ clean: ## Clean build artifacts and cache files
 	find . -type f -name "*.pyc" -delete
 	find . -type d -name .pytest_cache -delete
 	find . -type d -name .ruff_cache -delete
+	find . -type d -name .pyright_cache -delete

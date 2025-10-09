@@ -418,5 +418,6 @@ class TestHTMLPreprocessor:
         result = processor.extract_article(html)
 
         assert result is not None
-        assert "[Image]" in result; assert "[Image:" not in result  # Should not include alt text
+        assert "[Image]" in result
+        assert "[Image:" not in result  # Should not include alt text
         assert "<img" not in result

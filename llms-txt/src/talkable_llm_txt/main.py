@@ -37,7 +37,9 @@ async def main():
     results = await fetcher.fetch_urls(urls_to_fetch)
 
     # Process HTML to extract articles
-    preprocessor = HTMLPreprocessor()
+    # Extract base URL from sitemap URL for link processing
+    base_url = "http://localhost:8080"  # Extract from sitemap URL dynamically
+    preprocessor = HTMLPreprocessor(base_url=base_url)
     processed_results = preprocessor.process_urls(results)
 
     # Convert articles to markdown

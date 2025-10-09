@@ -4,6 +4,12 @@ from typing import Any, Dict, List, Optional
 from bs4 import BeautifulSoup
 from bs4.element import Tag
 
+try:
+    from .url_processor import LinkProcessor
+except ImportError:
+    # Fallback for when url_processor is not yet available
+    LinkProcessor = None
+
 # Module-level logger following official Python documentation best practices
 logger = logging.getLogger(__name__)
 
@@ -16,15 +22,20 @@ class HTMLPreprocessor:
     fetched by Playwright, providing clean content for markdown conversion.
     """
 
-    def __init__(self, images: bool = False):
+    def __init__(self, images: bool = False, base_url: Optional[str] = None):
         """
         Initialize the HTML preprocessor.
 
         Args:
             images: If True, keep images as-is. If False, replace with placeholder descriptions.
                    Default is False (images replaced with descriptions).
+            base_url: Base URL for normalizing relative links to point to markdown files.
+                     If provided, internal links will be converted to .md file URLs.
         """
         self.images = images
+        self.link_processor = (
+            LinkProcessor(base_url) if base_url and LinkProcessor else None
+        )
 
     def extract_article(self, html: Optional[str]) -> Optional[str]:
         """
@@ -58,6 +69,7 @@ class HTMLPreprocessor:
         self._remove_header_links(article)
         self._remove_copy_buttons(article)
         self._remove_images(article)
+        self._process_links(article)
 
     def _remove_header_links(self, article: Optional[Tag]) -> None:
         """
@@ -97,6 +109,23 @@ class HTMLPreprocessor:
 
         for img in article.find_all("img"):
             img.replace_with("[Image]")
+
+    def _process_links(self, article: Optional[Tag]) -> None:
+        """
+        Process all links using the LinkProcessor to convert to markdown file URLs.
+
+        Args:
+            article: BeautifulSoup article element (can be None)
+        """
+        if not article or not self.link_processor:
+            return
+
+        for link in article.find_all("a", href=True):
+            href = str(link["href"])  # Convert _AttributeValue to string
+            processed_href = self.link_processor.process_link(href)
+
+            if processed_href:
+                link["href"] = processed_href
 
     def process_urls(self, results: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """
