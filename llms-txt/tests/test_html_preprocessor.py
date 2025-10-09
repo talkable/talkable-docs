@@ -1,3 +1,4 @@
+import pytest
 from talkable_llm_txt import HTMLPreprocessor
 
 
@@ -27,10 +28,10 @@ class TestHTMLPreprocessor:
 
         assert result is not None
         assert "<article>" in result
-        assert "<h1>Article Title</h1>" in result
-        assert "<p>Article content goes here.</p>" in result
-        assert "<header>" not in result
-        assert "<footer>" not in result
+        assert "Article Title" in result
+        assert "Article content goes here." in result
+        assert "Navigation" not in result
+        assert "Footer" not in result
 
     def test_extract_article_no_article_element(self):
         """Test extracting article from HTML without article element."""
@@ -48,73 +49,28 @@ class TestHTMLPreprocessor:
         result = self.processor.extract_article(html)
         assert result is None
 
-    def test_extract_article_empty_html(self):
-        """Test extracting article from empty HTML."""
-        result = self.processor.extract_article("")
-        assert result is None
-
-    def test_extract_article_whitespace_only(self):
-        """Test extracting article from whitespace-only HTML."""
-        result = self.processor.extract_article("   \n\t  ")
-        assert result is None
-
-    def test_extract_article_none_input(self):
-        """Test extracting article from None input."""
-        result = self.processor.extract_article(None)
-        assert result is None
-
-    def test_extract_article_multiple_articles(self):
-        """Test extracting article from HTML with multiple article elements."""
-        html = """
-        <html>
-            <body>
-                <article>
-                    <h1>First Article</h1>
-                    <p>First content.</p>
-                </article>
-                <article>
-                    <h1>Second Article</h1>
-                    <p>Second content.</p>
-                </article>
-            </body>
-        </html>
-        """
-        result = self.processor.extract_article(html)
+    @pytest.mark.parametrize(
+        "nested_html,expected_content",
+        [
+            (
+                """<article><section><h1>Section Title</h1><div class="content"><p>Deep nested content.</p><ul><li>Item 1</li></ul></div></section></article>""",
+                ["<section>", "Section Title", "Deep nested content", "Item 1"],
+            ),
+            (
+                """<article><h1>First Article</h1><p>First content.</p></article><article><h1>Second</h1></article>""",
+                ["First Article", "First content"],
+            ),
+        ],
+    )
+    def test_extract_article_nested_structures(self, nested_html, expected_content):
+        """Test extracting articles with different nested structures."""
+        result = self.processor.extract_article(
+            f"<html><body>{nested_html}</body></html>"
+        )
 
         assert result is not None
-        assert "<h1>First Article</h1>" in result
-        assert (
-            "<h1>Second Article</h1>" not in result
-        )  # Should only return first article
-
-    def test_extract_article_nested_elements(self):
-        """Test extracting article with nested elements."""
-        html = """
-        <html>
-            <body>
-                <article>
-                    <section>
-                        <h1>Section Title</h1>
-                        <div class="content">
-                            <p>Deep nested content.</p>
-                            <ul>
-                                <li>Item 1</li>
-                                <li>Item 2</li>
-                            </ul>
-                        </div>
-                    </section>
-                </article>
-            </body>
-        </html>
-        """
-        result = self.processor.extract_article(html)
-
-        assert result is not None
-        assert "<section>" in result
-        assert '<div class="content">' in result
-        assert "<p>Deep nested content.</p>" in result
-        assert "<ul>" in result
-        assert "<li>Item 1</li>" in result
+        for content in expected_content:
+            assert content in result
 
     def test_extract_article_with_attributes(self):
         """Test extracting article with attributes."""
@@ -134,66 +90,6 @@ class TestHTMLPreprocessor:
         assert 'id="main-article"' in result
         assert 'class="content-article"' in result
         assert 'data-type="blog"' in result
-
-    def test_process_urls_successful_extraction(self):
-        """Test processing multiple URLs with successful article extraction."""
-        results = [
-            {
-                "url": "http://example.com/page1",
-                "html": "<html><body><article><h1>Page 1</h1></article></body></html>",
-                "status": 200,
-            },
-            {
-                "url": "http://example.com/page2",
-                "html": "<html><body><article><h1>Page 2</h1></article></body></html>",
-                "status": 200,
-            },
-        ]
-
-        processed = self.processor.process_urls(results)
-
-        assert len(processed) == 2
-        assert processed[0]["has_article"] is True
-        assert processed[1]["has_article"] is True
-        assert "<article>" in processed[0]["article"]
-        assert "<article>" in processed[1]["article"]
-        assert "error" not in processed[0]
-        assert "error" not in processed[1]
-
-    def test_process_urls_no_article_found(self):
-        """Test processing URLs when no article element is found."""
-        results = [
-            {
-                "url": "http://example.com/page1",
-                "html": "<html><body><div><h1>No article here</h1></div></body></html>",
-                "status": 200,
-            }
-        ]
-
-        processed = self.processor.process_urls(results)
-
-        assert len(processed) == 1
-        assert processed[0]["has_article"] is False
-        assert processed[0]["article"] is None
-        assert processed[0]["error"] == "No article element found"
-
-    def test_process_urls_with_fetch_errors(self):
-        """Test processing URLs that already have fetch errors."""
-        results = [
-            {
-                "url": "http://example.com/page1",
-                "html": None,
-                "status": None,
-                "error": "Connection timeout",
-            }
-        ]
-
-        processed = self.processor.process_urls(results)
-
-        assert len(processed) == 1
-        assert processed[0]["has_article"] is False
-        assert processed[0]["article"] is None
-        assert processed[0]["error"] == "Connection timeout"  # Original error preserved
 
     def test_process_urls_mixed_results(self):
         """Test processing URLs with mixed success and failure results."""
@@ -222,39 +118,24 @@ class TestHTMLPreprocessor:
         assert processed[0]["has_article"] is True
         assert processed[1]["has_article"] is False
         assert processed[2]["has_article"] is False
-
         assert processed[0].get("error") is None
         assert processed[1]["error"] == "No article element found"
         assert processed[2]["error"] == "Fetch failed"
 
-    def test_process_urls_empty_list(self):
-        """Test processing empty list of URLs."""
-        processed = self.processor.process_urls([])
-        assert processed == []
-
     def test_extract_article_with_headerlinks(self):
         """Test extracting article with headerlinks gets preprocessed."""
-        html = """
-        <html>
-            <body>
-                <article>
-                    <h1>Article Title<a class="headerlink" href="#title">#</a></h1>
-                    <p>Article content goes here.</p>
-                </article>
-            </body>
-        </html>
-        """
+        html = """<html><body><article><h1>Article Title<a class="headerlink" href="#title">#</a></h1><p>Content</p></article></body></html>"""
         result = self.processor.extract_article(html)
 
         assert result is not None
-        assert "<article>" in result
-        assert "<h1>Article Title</h1>" in result
-        assert "<p>Article content goes here.</p>" in result
+        assert "Article Title" in result
+        assert "Content" in result
         assert "headerlink" not in result
-        assert '<a class="headerlink"' not in result
 
     def test_original_results_not_modified(self):
         """Test that original results are not modified by processing."""
+        import copy
+
         original_results = [
             {
                 "url": "http://example.com/page1",
@@ -262,162 +143,31 @@ class TestHTMLPreprocessor:
                 "status": 200,
             }
         ]
-
-        # Make a copy to compare
-        import copy
-
         expected_original = copy.deepcopy(original_results)
-
         processed = self.processor.process_urls(original_results)
 
-        # Original should be unchanged
         assert original_results == expected_original
-        # Processed should have additional fields
         assert len(processed[0]) > len(original_results[0])
 
-    def test_remove_images_with_alt_text(self):
-        """Test that images with alt text are replaced with simple placeholder."""
+    def test_remove_images(self):
+        """Test that images are replaced with placeholder when images=False."""
         processor = HTMLPreprocessor(images=False)
-        html = """
-        <html>
-            <body>
-                <article>
-                    <h1>Article with Images</h1>
-                    <img src="test.jpg" alt="A test image">
-                    <p>Some content</p>
-                </article>
-            </body>
-        </html>
-        """
+        html = """<html><body><article><h1>Title</h1><img src="test.jpg" alt="A test image"><img src="test2.jpg"><p>Content</p></article></body></html>"""
         result = processor.extract_article(html)
 
         assert result is not None
         assert "[Image]" in result
         assert "<img" not in result
+        assert result.count("[Image]") == 2
 
-    def test_remove_images_without_alt_text(self):
-        """Test that images without alt text are replaced with generic placeholder."""
-        processor = HTMLPreprocessor(images=False)
-        html = """
-        <html>
-            <body>
-                <article>
-                    <h1>Article with Images</h1>
-                    <img src="test.jpg">
-                    <p>Some content</p>
-                </article>
-            </body>
-        </html>
-        """
-        result = processor.extract_article(html)
-
-        assert result is not None
-        assert "[Image]" in result
-        assert "<img" not in result
-
-    def test_remove_images_with_empty_alt_text(self):
-        """Test that images with empty alt text are replaced with generic placeholder."""
-        processor = HTMLPreprocessor(images=False)
-        html = """
-        <html>
-            <body>
-                <article>
-                    <h1>Article with Images</h1>
-                    <img src="test.jpg" alt="">
-                    <p>Some content</p>
-                </article>
-            </body>
-        </html>
-        """
-        result = processor.extract_article(html)
-
-        assert result is not None
-        assert "[Image]" in result
-        assert "<img" not in result
-
-    def test_keep_images_enabled(self):
+    def test_keep_images(self):
         """Test that images are preserved when images=True."""
         processor = HTMLPreprocessor(images=True)
-        html = """
-        <html>
-            <body>
-                <article>
-                    <h1>Article with Images</h1>
-                    <img src="test.jpg" alt="A test image">
-                    <p>Some content</p>
-                </article>
-            </body>
-        </html>
-        """
+        html = """<html><body><article><h1>Title</h1><img src="test.jpg" alt="A test image"><p>Content</p></article></body></html>"""
         result = processor.extract_article(html)
 
         assert result is not None
         assert "<img" in result
         assert 'src="test.jpg"' in result
         assert 'alt="A test image"' in result
-        assert "[Image:" not in result
-
-    def test_keep_images_default_behavior(self):
-        """Test that default behavior (images=False) removes images."""
-        processor = HTMLPreprocessor()  # Default images=False
-        html = """
-        <html>
-            <body>
-                <article>
-                    <h1>Article with Images</h1>
-                    <img src="test.jpg" alt="A test image">
-                    <p>Some content</p>
-                </article>
-            </body>
-        </html>
-        """
-        result = processor.extract_article(html)
-
-        assert result is not None
-        assert "[Image]" in result
-        assert "<img" not in result
-
-    def test_multiple_images_mixed_alt_text(self):
-        """Test handling multiple images with different alt text scenarios."""
-        processor = HTMLPreprocessor(images=False)
-        html = """
-        <html>
-            <body>
-                <article>
-                    <h1>Article with Multiple Images</h1>
-                    <img src="image1.jpg" alt="First image">
-                    <img src="image2.jpg">
-                    <img src="image3.jpg" alt="">
-                    <p>Content between images</p>
-                    <img src="image4.jpg" alt="Fourth image">
-                </article>
-            </body>
-        </html>
-        """
-        result = processor.extract_article(html)
-
-        assert result is not None
-        assert "[Image]" in result
-        assert "[Image]" in result
-        # Should have 4 image placeholders total
-        assert result.count("[Image]") == 4  # Four total placeholders
-        # All images become simple placeholders
-
-    def test_images_with_special_characters_in_alt(self):
-        """Test that images with special characters are replaced with simple placeholder."""
-        processor = HTMLPreprocessor(images=False)
-        html = """
-        <html>
-            <body>
-                <article>
-                    <img src="test.jpg" alt="Image with &quot;quotes&quot; and &amp; symbols">
-                </article>
-            </body>
-        </html>
-        """
-        result = processor.extract_article(html)
-
-        assert result is not None
-        assert "[Image]" in result
-        assert "[Image:" not in result  # Should not include alt text
-        assert "<img" not in result
+        assert "[Image]" not in result

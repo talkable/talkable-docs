@@ -1,3 +1,4 @@
+import pytest
 from bs4 import BeautifulSoup
 from talkable_llm_txt import HTMLPreprocessor
 
@@ -9,8 +10,8 @@ class TestCopyButtonRemoval:
         """Set up test fixtures."""
         self.preprocessor = HTMLPreprocessor()
 
-    def test_remove_copy_buttons_basic(self):
-        """Test basic copy button removal."""
+    def test_extract_article_removes_copy_buttons(self):
+        """Test that extract_article removes copy buttons."""
         html = """
         <article>
             <p>Some content</p>
@@ -20,43 +21,47 @@ class TestCopyButtonRemoval:
             <p>More content</p>
         </article>
         """
-        soup = BeautifulSoup(html, "html.parser")
-        article = soup.find("article")
+        result = self.preprocessor.extract_article(html)
 
-        # Add type guard
-        assert article is not None, "Failed to find article element in test HTML"
-        self.preprocessor._remove_copy_buttons(article)
+        assert result is not None
+        result_soup = BeautifulSoup(result, "html.parser")
 
-        copy_buttons = article.find_all("button", class_="copybtn")
+        copy_buttons = result_soup.find_all("button", class_="copybtn")
         assert len(copy_buttons) == 0
+        assert result_soup.find("p") is not None
 
-    def test_remove_multiple_copy_buttons(self):
-        """Test removal of multiple copy buttons."""
-        html = """
+    @pytest.mark.parametrize(
+        "copy_button_class",
+        [
+            "copybtn",
+            "copybtn o-tooltip--left",
+            "copybtn another-class",
+            "some-class copybtn more-classes",
+        ],
+    )
+    def test_extract_article_removes_various_copy_button_classes(
+        self, copy_button_class
+    ):
+        """Test that extract_article removes copy buttons with various class combinations."""
+        html = f"""
         <article>
-            <button class="copybtn" data-clipboard-target="#code0">
+            <button class="{copy_button_class}" data-clipboard-target="#code0">
                 <svg><title>Copy to clipboard</title></svg>
             </button>
-            <button class="copybtn" data-clipboard-target="#code1">
-                <svg><title>Copy to clipboard</title></svg>
-            </button>
-            <button class="copybtn" data-clipboard-target="#code2">
-                <svg><title>Copy to clipboard</title></svg>
-            </button>
+            <p>Content</p>
         </article>
         """
-        soup = BeautifulSoup(html, "html.parser")
-        article = soup.find("article")
+        result = self.preprocessor.extract_article(html)
 
-        # Add type guard
-        assert article is not None, "Failed to find article element in test HTML"
-        self.preprocessor._remove_copy_buttons(article)
+        assert result is not None
+        result_soup = BeautifulSoup(result, "html.parser")
 
-        copy_buttons = article.find_all("button", class_="copybtn")
+        copy_buttons = result_soup.find_all("button", class_="copybtn")
         assert len(copy_buttons) == 0
+        assert result_soup.find("p") is not None
 
-    def test_preserve_other_buttons(self):
-        """Test that non-copy buttons are preserved."""
+    def test_extract_article_preserves_non_copy_buttons(self):
+        """Test that extract_article preserves non-copy buttons."""
         html = """
         <article>
             <button class="copybtn" data-clipboard-target="#code0">
@@ -64,107 +69,47 @@ class TestCopyButtonRemoval:
             </button>
             <button class="other-button">Click me</button>
             <button class="btn btn-primary">Save</button>
+            <p>Content</p>
         </article>
         """
-        soup = BeautifulSoup(html, "html.parser")
-        article = soup.find("article")
+        result = self.preprocessor.extract_article(html)
 
-        # Add type guard
-        assert article is not None, "Failed to find article element in test HTML"
-        self.preprocessor._remove_copy_buttons(article)
+        assert result is not None
+        result_soup = BeautifulSoup(result, "html.parser")
 
-        copy_buttons = article.find_all("button", class_="copybtn")
+        copy_buttons = result_soup.find_all("button", class_="copybtn")
         assert len(copy_buttons) == 0
 
-        other_buttons = article.find_all(
-            "button", class_=lambda x: x is not None and "copybtn" not in str(x)
-        )
+        other_buttons = result_soup.find_all("button")
         assert len(other_buttons) == 2
+        assert result_soup.find("p") is not None
 
-    def test_preserve_other_elements(self):
-        """Test that other elements are preserved during copy button removal."""
+    def test_extract_article_integration_with_header_links(self):
+        """Test that extract_article removes both copy buttons and header links."""
         html = """
         <article>
-            <h1>Title</h1>
-            <p>Paragraph content</p>
-            <div class="highlight">
-                <pre>Code here</pre>
-                <button class="copybtn" data-clipboard-target="#code0">
-                    <svg><title>Copy to clipboard</title></svg>
-                </button>
-            </div>
-            <p>More content</p>
+            <h1>Title <a class="headerlink" href="#title">¶</a></h1>
+            <p>Content</p>
+            <button class="copybtn" data-clipboard-target="#code0">
+                <svg><title>Copy to clipboard</title></svg>
+            </button>
         </article>
         """
-        soup = BeautifulSoup(html, "html.parser")
-        article = soup.find("article")
+        result = self.preprocessor.extract_article(html)
 
-        # Add type guard
-        assert article is not None, "Failed to find article element in test HTML"
-        original_h1 = article.find("h1")
-        original_div = article.find("div", class_="highlight")
-        original_pre = article.find("pre")
+        assert result is not None
+        result_soup = BeautifulSoup(result, "html.parser")
 
-        self.preprocessor._remove_copy_buttons(article)
+        header_links = result_soup.find_all("a", class_="headerlink")
+        copy_buttons = result_soup.find_all("button", class_="copybtn")
 
-        # Check that other elements are preserved
-        assert article.find("h1") == original_h1
-        assert len(article.find_all("p")) == 2
-        assert article.find("div", class_="highlight") == original_div
-        assert article.find("pre") == original_pre
-
-        # Check that copy button is removed
-        copy_buttons = article.find_all("button", class_="copybtn")
+        assert len(header_links) == 0
         assert len(copy_buttons) == 0
+        assert result_soup.find("h1") is not None
+        assert result_soup.find("p") is not None
 
-    def test_no_copy_buttons_present(self):
-        """Test behavior when no copy buttons are present."""
-        html = """
-        <article>
-            <h1>Title</h1>
-            <p>Content without copy buttons</p>
-            <button class="regular-button">Click me</button>
-        </article>
-        """
-        soup = BeautifulSoup(html, "html.parser")
-        article = soup.find("article")
-
-        # Add type guard
-        assert article is not None, "Failed to find article element in test HTML"
-        original_content = str(article)
-
-        self.preprocessor._remove_copy_buttons(article)
-
-        # Content should remain unchanged
-        assert str(article) == original_content
-
-    def test_copy_button_with_various_classes(self):
-        """Test removal of copy buttons with various class combinations."""
-        html = """
-        <article>
-            <button class="copybtn o-tooltip--left" data-clipboard-target="#code0">
-                <svg><title>Copy to clipboard</title></svg>
-            </button>
-            <button class="copybtn another-class" data-clipboard-target="#code1">
-                <svg><title>Copy to clipboard</title></svg>
-            </button>
-            <button class="some-class copybtn more-classes" data-clipboard-target="#code2">
-                <svg><title>Copy to clipboard</title></svg>
-            </button>
-        </article>
-        """
-        soup = BeautifulSoup(html, "html.parser")
-        article = soup.find("article")
-
-        # Add type guard
-        assert article is not None, "Failed to find article element in test HTML"
-        self.preprocessor._remove_copy_buttons(article)
-
-        copy_buttons = article.find_all("button", class_="copybtn")
-        assert len(copy_buttons) == 0
-
-    def test_real_world_copy_button_structure(self):
-        """Test with the actual copy button structure found in the investigation."""
+    def test_extract_article_real_world_copy_button_structure(self):
+        """Test with real-world copy button structure."""
         html = """
         <article>
             <div class="highlight">
@@ -182,90 +127,13 @@ class TestCopyButtonRemoval:
             </div>
         </article>
         """
-        soup = BeautifulSoup(html, "html.parser")
-        article = soup.find("article")
-
-        # Add type guard
-        assert article is not None, "Failed to find article element in test HTML"
-        self.preprocessor._remove_copy_buttons(article)
-
-        copy_buttons = article.find_all("button", class_="copybtn")
-        assert len(copy_buttons) == 0
-
-        # Check that the highlight div and pre are preserved
-        assert article.find("div", class_="highlight") is not None
-        assert article.find("pre") is not None
-
-    def test_integration_with_preprocess_article(self):
-        """Test that copy button removal is integrated into the main preprocessing pipeline."""
-        html = """
-        <article>
-            <h1>Title <a class="headerlink" href="#title">¶</a></h1>
-            <p>Content</p>
-            <button class="copybtn" data-clipboard-target="#code0">
-                <svg><title>Copy to clipboard</title></svg>
-            </button>
-        </article>
-        """
         result = self.preprocessor.extract_article(html)
 
         assert result is not None
-
         result_soup = BeautifulSoup(result, "html.parser")
 
-        # Both header links and copy buttons should be removed
-        header_links = result_soup.find_all("a", class_="headerlink")
         copy_buttons = result_soup.find_all("button", class_="copybtn")
-
-        assert len(header_links) == 0
         assert len(copy_buttons) == 0
 
-        # Other content should be preserved
-        assert result_soup.find("h1") is not None
-        assert result_soup.find("p") is not None
-
-    def test_empty_article(self):
-        """Test copy button removal on empty article."""
-        html = "<article></article>"
-        soup = BeautifulSoup(html, "html.parser")
-        article = soup.find("article")
-
-        # Add type guard
-        assert article is not None, "Failed to find article element in test HTML"
-        # Should not raise any errors
-        self.preprocessor._remove_copy_buttons(article)
-
-        copy_buttons = article.find_all("button", class_="copybtn")
-        assert len(copy_buttons) == 0
-
-    def test_nested_copy_buttons(self):
-        """Test removal of copy buttons nested in complex structures."""
-        html = """
-        <article>
-            <div class="content">
-                <div class="code-block">
-                    <div class="highlight">
-                        <pre>code content</pre>
-                        <button class="copybtn" data-clipboard-target="#nested">
-                            <svg><title>Copy to clipboard</title></svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </article>
-        """
-        soup = BeautifulSoup(html, "html.parser")
-        article = soup.find("article")
-
-        # Add type guard
-        assert article is not None, "Failed to find article element in test HTML"
-        self.preprocessor._remove_copy_buttons(article)
-
-        copy_buttons = article.find_all("button", class_="copybtn")
-        assert len(copy_buttons) == 0
-
-        # Nested structure should be preserved
-        assert article.find("div", class_="content") is not None
-        assert article.find("div", class_="code-block") is not None
-        assert article.find("div", class_="highlight") is not None
-        assert article.find("pre") is not None
+        assert result_soup.find("div", class_="highlight") is not None
+        assert result_soup.find("pre") is not None

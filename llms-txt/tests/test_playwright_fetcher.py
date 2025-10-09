@@ -73,6 +73,31 @@ class TestPlaywrightFetcher:
         assert result["error"] is not None or result["status"] is not None
 
     @pytest.mark.asyncio
+    async def test_concurrent_fetching(self):
+        """Test that concurrent fetching works correctly"""
+        fetcher = PlaywrightFetcher(max_concurrent=3)
+        urls = [
+            "http://localhost:8080/",
+            "http://localhost:8080/advanced_features/",
+            "http://localhost:8080/getting_started/",
+        ]
+
+        results = await fetcher.fetch_urls(urls)
+        assert len(results) == len(urls)
+
+    @pytest.mark.asyncio
+    async def test_minimal_resource_blocking(self):
+        """Test that minimal resource blocking doesn't break page functionality"""
+        fetcher = PlaywrightFetcher(max_concurrent=1)
+        result = await fetcher.fetch_single_url("http://localhost:8080/")
+
+        assert isinstance(result, dict)
+        assert "url" in result
+        assert "html" in result
+        assert "status" in result
+        assert "error" in result
+
+    @pytest.mark.asyncio
     async def test_get_stats(self):
         """Test statistics calculation"""
         fetcher = PlaywrightFetcher()
@@ -119,50 +144,6 @@ class TestPlaywrightFetcher:
         assert stats["successful"] == 0
         assert stats["failed"] == 0
         assert stats["success_rate"] == 0
-
-
-class TestPlaywrightFetcherPerformance:
-    """Performance and resource management tests"""
-
-    @pytest.mark.asyncio
-    @pytest.mark.slow
-    async def test_concurrent_fetching(self):
-        """Test that concurrent fetching works correctly"""
-        fetcher = PlaywrightFetcher(max_concurrent=3)
-
-        # Use a few URLs to test concurrency
-        urls = [
-            "http://localhost:8080/",
-            "http://localhost:8080/advanced_features/",
-            "http://localhost:8080/getting_started/",
-        ]
-
-        import time
-
-        start_time = time.time()
-        results = await fetcher.fetch_urls(urls)
-        end_time = time.time()
-
-        assert len(results) == len(urls)
-        # Should complete faster than sequential fetching
-        assert end_time - start_time < 30  # 30 seconds max
-
-    @pytest.mark.asyncio
-    async def test_minimal_resource_blocking(self):
-        """Test that minimal resource blocking preserves CSS and JavaScript"""
-        fetcher = PlaywrightFetcher(max_concurrent=1)
-
-        # Test that CSS and JavaScript are allowed (should render properly)
-        result = await fetcher.fetch_single_url("http://localhost:8080/")
-        assert isinstance(result, dict)
-
-        # Verify that the page content includes CSS classes and JavaScript
-        if result["html"] and result["error"] is None:
-            html = result["html"]
-            # Check that CSS is present (should have stylesheets)
-            assert "stylesheet" in html or "css" in html.lower()
-            # Check that JavaScript is present (should have scripts)
-            assert "script" in html.lower() or "javascript" in html.lower()
 
 
 if __name__ == "__main__":

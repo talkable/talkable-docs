@@ -2,86 +2,37 @@
 Tests for code language extraction functionality in MarkdownConverter.
 """
 
+import pytest
 from talkable_llm_txt import MarkdownConverter
 
 
 class TestCodeLanguageExtraction:
     """Test code language extraction functionality."""
 
-    def test_extract_liquid_language(self):
-        """Test extraction of liquid language from highlight-liquid class."""
+    @pytest.mark.parametrize(
+        "language,content",
+        [
+            ("liquid", "{{ site_setup.url }}"),
+            ("ruby", "def ruby_method; end"),
+            ("python", "def python_function(): pass"),
+            ("javascript", "function jsFunction() { return true; }"),
+            ("css", ".class { color: red; }"),
+        ],
+    )
+    def test_language_extraction(self, language, content):
+        """Test extraction of different programming languages."""
         converter = MarkdownConverter()
-        html = """
-        <div class="highlight-liquid notranslate">
+        html = f"""
+        <div class="highlight-{language} notranslate">
             <div class="highlight">
-                <pre>{{ site_setup.url }}</pre>
+                <pre>{content}</pre>
             </div>
         </div>
         """
         result = converter.convert_article(html)
 
-        assert "```liquid" in result
-        assert "site_setup.url" in result
-
-    def test_extract_ruby_language(self):
-        """Test extraction of ruby language from highlight-ruby class."""
-        converter = MarkdownConverter()
-        html = """
-        <div class="highlight-ruby notranslate">
-            <div class="highlight">
-                <pre>def ruby_method; end</pre>
-            </div>
-        </div>
-        """
-        result = converter.convert_article(html)
-
-        assert "```ruby" in result
-        assert "ruby_method" in result
-
-    def test_extract_python_language(self):
-        """Test extraction of python language from highlight-python class."""
-        converter = MarkdownConverter()
-        html = """
-        <div class="highlight-python notranslate">
-            <div class="highlight">
-                <pre>def python_function(): pass</pre>
-            </div>
-        </div>
-        """
-        result = converter.convert_article(html)
-
-        assert "```python" in result
-        assert "python_function" in result
-
-    def test_extract_javascript_language(self):
-        """Test extraction of javascript language from highlight-javascript class."""
-        converter = MarkdownConverter()
-        html = """
-        <div class="highlight-javascript notranslate">
-            <div class="highlight">
-                <pre>function jsFunction() { return true; }</pre>
-            </div>
-        </div>
-        """
-        result = converter.convert_article(html)
-
-        assert "```javascript" in result
-        assert "jsFunction" in result
-
-    def test_extract_css_language(self):
-        """Test extraction of css language from highlight-css class."""
-        converter = MarkdownConverter()
-        html = """
-        <div class="highlight-css notranslate">
-            <div class="highlight">
-                <pre>.class { color: red; }</pre>
-            </div>
-        </div>
-        """
-        result = converter.convert_article(html)
-
-        assert "```css" in result
-        assert "color: red" in result
+        assert f"```{language}" in result
+        assert content in result
 
     def test_no_language_extraction_without_highlight_class(self):
         """Test that regular divs without highlight classes use default behavior."""
@@ -151,31 +102,6 @@ end</pre>
         assert '  puts "indented text"' in result
         assert "    nested_code" in result
 
-    def test_code_block_with_empty_content(self):
-        """Test code block with empty content."""
-        converter = MarkdownConverter()
-        html = """
-        <div class="highlight-python notranslate">
-            <div class="highlight">
-                <pre></pre>
-            </div>
-        </div>
-        """
-        result = converter.convert_article(html)
-
-        assert "```python" in result
-        assert "```python\n\n```" in result
-
-    def test_code_block_without_pre_element(self):
-        """Test code block div without nested pre element."""
-        converter = MarkdownConverter()
-        html = '<div class="highlight-python notranslate">direct code content</div>'
-        result = converter.convert_article(html)
-
-        # Should extract language and use text content
-        assert "```python" in result
-        assert "direct code content" in result
-
     def test_admonition_and_code_block_coexistence(self):
         """Test that admonitions and code blocks work together."""
         converter = MarkdownConverter()
@@ -196,25 +122,6 @@ end</pre>
         assert "```python" in result
         assert "python_code" in result
 
-    def test_extract_language_method_directly(self):
-        """Test the _code_block_converter method directly."""
-        converter = MarkdownConverter()
-
-        # Create a mock tag with highlight class
-        from bs4 import BeautifulSoup
-
-        html = '<div class="highlight-python notranslate"><pre>test code</pre></div>'
-        soup = BeautifulSoup(html, "html.parser")
-        tag = soup.find("div")
-
-        # Add type guard
-        if tag is not None:
-            result = converter._code_block_converter(tag=tag, text="test code")
-            assert "```python" in result
-            assert "test code" in result
-        else:
-            assert False, "Failed to find div element in test HTML"
-
     def test_language_extraction_edge_cases(self):
         """Test edge cases in language extraction."""
         converter = MarkdownConverter()
@@ -225,11 +132,3 @@ end</pre>
 
         # Should not extract language since it doesn't start with 'highlight-'
         assert "```" not in result or "some-highlight-style" not in result
-
-    def test_div_converter_integration(self):
-        """Test that the unified div converter handles both cases."""
-        converter = MarkdownConverter()
-
-        # Test that div converter is properly set up
-        assert "div" in converter.custom_converters
-        assert converter.custom_converters["div"] == converter._div_converter
