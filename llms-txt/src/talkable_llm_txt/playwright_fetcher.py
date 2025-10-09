@@ -1,4 +1,5 @@
 import asyncio
+import logging
 from contextlib import asynccontextmanager
 from typing import Any, Dict, List, Literal, Optional
 
@@ -7,6 +8,9 @@ from playwright.async_api import (
     TimeoutError as PlaywrightTimeoutError,
     async_playwright,
 )
+
+# Module-level logger following official Python documentation best practices
+logger = logging.getLogger(__name__)
 
 
 class PlaywrightFetcher:
@@ -41,7 +45,7 @@ class PlaywrightFetcher:
 
     def _handle_request_failed(self, request, page_url: str) -> None:
         """Simplified requestfailed event handling following documentation best practices"""
-        print(f"Request failed: {request.url}")
+        logger.warning(f"Request failed: {request.url}")
 
     @asynccontextmanager
     async def _browser_context(self):
@@ -56,7 +60,7 @@ class PlaywrightFetcher:
                 # Add error handling for context
                 context.on(
                     "weberror",
-                    lambda web_error: print(f"Context error: {web_error.error}"),
+                    lambda web_error: logger.error(f"Context error: {web_error.error}"),
                 )
 
                 yield context
@@ -131,7 +135,9 @@ class PlaywrightFetcher:
             page = await context.new_page()
 
             # Add error event handlers for monitoring
-            page.on("pageerror", lambda exc: print(f"Page error for {url}: {exc}"))
+            page.on(
+                "pageerror", lambda exc: logger.error(f"Page error for {url}: {exc}")
+            )
             page.on("requestfailed", lambda req: self._handle_request_failed(req, url))
 
             try:

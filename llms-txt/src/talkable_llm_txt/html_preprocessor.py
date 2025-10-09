@@ -1,6 +1,10 @@
+import logging
 from typing import Any, Dict, List, Optional
 
 from bs4 import BeautifulSoup
+
+# Module-level logger following official Python documentation best practices
+logger = logging.getLogger(__name__)
 
 
 class HTMLPreprocessor:

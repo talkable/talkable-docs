@@ -1,9 +1,13 @@
+import logging
 import time
 import xml.etree.ElementTree as ET
 from typing import Dict, List, Optional, Tuple
 from urllib.parse import urlparse
 
 import requests
+
+# Module-level logger following official Python documentation best practices
+logger = logging.getLogger(__name__)
 
 
 class SitemapProcessor:
@@ -107,7 +111,7 @@ class SitemapProcessor:
 
     def _log_error(self, message: str) -> None:
         """Centralized error logging"""
-        print(message)  # Could be replaced with proper logging
+        logger.info(message)  # Replaced with proper logging
 
     def _extract_path(self, url: str) -> str:
         """Extract path from full URL, removing query parameters"""

@@ -5,10 +5,14 @@ This module provides the MarkdownConverter class for converting BeautifulSoup
 article objects to clean markdown format using the html-to-markdown library.
 """
 
+import logging
 from typing import List, Literal
 
 from bs4.element import Tag
 from html_to_markdown import convert_to_markdown
+
+# Module-level logger following official Python documentation best practices
+logger = logging.getLogger(__name__)
 
 
 class MarkdownConverter:

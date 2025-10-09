@@ -1,22 +1,30 @@
 import asyncio
+import logging
 
 from . import HTMLPreprocessor, MarkdownConverter, PlaywrightFetcher, SitemapProcessor
+from .logging_config import setup_logging
+
+# Module-level logger following official Python documentation best practices
+logger = logging.getLogger(__name__)
 
 # Configuration
 MAX_URLS_TO_PROCESS = 10  # Hardcoded parameter to control how many URLs to process
 
 
 async def main():
+    # Setup logging first
+    setup_logging()
+
     # Process sitemap to get URLs
-    print("Processing sitemap...")
+    logger.info("Processing sitemap...")
     processor = SitemapProcessor("http://localhost:8080/sitemap.xml")
-    print(f"Found {len(processor.processed_urls)} URLs")
+    logger.info(f"Found {len(processor.processed_urls)} URLs")
 
     # Get URLs to process (limited by MAX_URLS_TO_PROCESS)
     urls_to_fetch = [
         entry["url"] for entry in processor.processed_urls[:MAX_URLS_TO_PROCESS]
     ]
-    print(f"Processing first {len(urls_to_fetch)} URLs...")
+    logger.info(f"Processing first {len(urls_to_fetch)} URLs...")
 
     # Fetch HTML content
     fetcher = PlaywrightFetcher(max_concurrent=3)
@@ -42,24 +50,27 @@ async def main():
             )
 
     # Display final markdown results
-    print(f"\n{'=' * 80}")
-    print(f"MARKDOWN CONVERSION RESULTS ({len(markdown_results)} articles)")
-    print(f"{'=' * 80}")
+    logger.info("")
+    logger.info(f"{'=' * 80}")
+    logger.info(f"MARKDOWN CONVERSION RESULTS ({len(markdown_results)} articles)")
+    logger.info(f"{'=' * 80}")
 
     for i, result in enumerate(markdown_results, 1):
-        print(f"\n{i}. URL: {result['url']}")
-        print(f"{'-' * 60}")
-        print(result["markdown"])
-        print(f"{'-' * 60}")
+        logger.info("")
+        logger.info(f"{i}. URL: {result['url']}")
+        logger.info(f"{'-' * 60}")
+        logger.info(result["markdown"])
+        logger.info(f"{'-' * 60}")
 
     # Show summary
-    print(f"\n{'=' * 80}")
-    print("SUMMARY")
-    print(f"{'=' * 80}")
-    print(f"Total URLs processed: {len(urls_to_fetch)}")
-    print(f"Successfully converted to markdown: {len(markdown_results)}")
+    logger.info("")
+    logger.info(f"{'=' * 80}")
+    logger.info("SUMMARY")
+    logger.info(f"{'=' * 80}")
+    logger.info(f"Total URLs processed: {len(urls_to_fetch)}")
+    logger.info(f"Successfully converted to markdown: {len(markdown_results)}")
     if len(urls_to_fetch) > 0:
-        print(
+        logger.info(
             f"Success rate: {(len(markdown_results) / len(urls_to_fetch) * 100):.1f}%"
         )
 
