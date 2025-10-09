@@ -11,11 +11,14 @@ import os
 import sys
 
 
-def setup_logging():
+def setup_logging(level: str = "INFO"):
     """Configure logging for both terminal and Docker environments.
 
     Detects if running in Docker and adjusts formatting accordingly.
-    Uses stdout for Docker compatibility and supports LOG_LEVEL environment variable.
+    Uses stdout for Docker compatibility and accepts log level parameter.
+
+    Args:
+        level: Logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
 
     Returns:
         logging.Logger: Configured root logger instance
@@ -23,8 +26,11 @@ def setup_logging():
     # Detect Docker environment
     is_docker = os.path.exists("/.dockerenv") or os.environ.get("DOCKER_CONTAINER")
 
-    # Get log level from environment, default to INFO
-    level = os.environ.get("LOG_LEVEL", "INFO").upper()
+    # Use provided level, fallback to environment variable, then default to INFO
+    if level:
+        level = level.upper()
+    else:
+        level = os.environ.get("LOG_LEVEL", "INFO").upper()
 
     # Validate log level
     valid_levels = ["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]

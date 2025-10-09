@@ -13,16 +13,23 @@ logger = logging.getLogger(__name__)
 class SitemapProcessor:
     # PEP 8 compliant constants
     SITEMAP_NAMESPACE = {"sitemap": "http://www.sitemaps.org/schemas/sitemap/0.9"}
-    DEFAULT_TIMEOUT = 30
-    DEFAULT_RETRIES = 3
     BACKOFF_BASE = 2
-    USER_AGENT = "Mozilla/5.0 (compatible; SitemapProcessor/1.0)"
 
-    def __init__(self, sitemap_url: str, auto_process: bool = True):
+    def __init__(
+        self,
+        sitemap_url: str,
+        timeout: int = 30,
+        retries: int = 3,
+        user_agent: str = "Mozilla/5.0 (compatible; SitemapProcessor/1.0)",
+        auto_process: bool = True,
+    ):
         self.sitemap_url = self._validate_sitemap_url(sitemap_url)
+        self.timeout = timeout
+        self.retries = retries
+        self.user_agent = user_agent
         self._processed_urls: List[Dict[str, str]] = []
         self.session = requests.Session()
-        self.session.headers.update({"User-Agent": self.USER_AGENT})
+        self.session.headers.update({"User-Agent": self.user_agent})
 
         # Process sitemap immediately after initialization if requested
         if auto_process:
@@ -87,10 +94,10 @@ class SitemapProcessor:
 
     def _fetch_sitemap(self, url: str, retries: Optional[int] = None) -> Optional[str]:
         """Fetch sitemap XML with error handling and retries"""
-        retries = retries or self.DEFAULT_RETRIES
+        retries = retries or self.retries
         for attempt in range(retries):
             try:
-                response = self.session.get(url, timeout=self.DEFAULT_TIMEOUT)
+                response = self.session.get(url, timeout=self.timeout)
                 response.raise_for_status()
                 return response.text
             except requests.exceptions.RequestException as e:

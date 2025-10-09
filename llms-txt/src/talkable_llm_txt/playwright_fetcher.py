@@ -1,7 +1,7 @@
 import asyncio
 import logging
 from contextlib import asynccontextmanager
-from typing import Any, Dict, List, Literal, Optional
+from typing import Any, Dict, List, Literal, Optional, Set
 
 from playwright.async_api import (
     BrowserContext,
@@ -32,11 +32,15 @@ class PlaywrightFetcher:
             Literal["commit", "domcontentloaded", "load", "networkidle"]
         ] = None,
         batch_size: int = 50,
+        blocked_resource_types: Optional[Set[str]] = None,
     ):
         self.max_concurrent = max_concurrent or self.DEFAULT_MAX_CONCURRENT
         self.timeout = timeout or self.DEFAULT_TIMEOUT
         self.wait_until = wait_until or self.DEFAULT_WAIT_UNTIL
         self.batch_size = batch_size
+        self.blocked_resource_types = (
+            blocked_resource_types or self.BLOCKED_RESOURCE_TYPES
+        )
         self.semaphore = asyncio.Semaphore(self.max_concurrent)
 
     def _create_result(
@@ -113,7 +117,7 @@ class PlaywrightFetcher:
         """Setup simplified resource blocking with single route handler"""
 
         async def handle_route(route):
-            if route.request.resource_type in self.BLOCKED_RESOURCE_TYPES:
+            if route.request.resource_type in self.blocked_resource_types:
                 await route.abort()
             else:
                 await route.continue_()

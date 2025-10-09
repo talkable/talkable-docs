@@ -1,5 +1,6 @@
 import asyncio
 import logging
+from urllib.parse import urlparse
 
 from talkable_llm_txt import (
     FileWriter,
@@ -8,42 +9,69 @@ from talkable_llm_txt import (
     PlaywrightFetcher,
     SitemapProcessor,
 )
+from talkable_llm_txt.config import Settings
 from talkable_llm_txt.logging_config import setup_logging
 
 # Module-level logger following official Python documentation best practices
 logger = logging.getLogger(__name__)
 
-# Configuration
-MAX_URLS_TO_PROCESS = 10  # Hardcoded parameter to control how many URLs to process
-
 
 async def main():
-    # Setup logging first
-    setup_logging()
+    """Main application entry point with configuration management."""
+
+    # Load configuration from TOML file
+    try:
+        config = Settings.load_from_toml()
+        logger.info("Configuration loaded from config.toml")
+    except FileNotFoundError as e:
+        logger.error(f"Configuration file not found: {e}")
+        raise
+    except ValueError as e:
+        logger.error(f"Configuration error: {e}")
+        raise
+
+    # Setup logging with configuration
+    logging_config = config.get_logging_config()
+    setup_logging(level=logging_config["level"])
 
     # Process sitemap to get URLs
     logger.info("Processing sitemap...")
-    processor = SitemapProcessor("http://localhost:8080/sitemap.xml")
+    sitemap_config = config.get_sitemap_processor_config()
+    processor = SitemapProcessor(sitemap_url=config.sitemap.url, **sitemap_config)
     logger.info(f"Found {len(processor.processed_urls)} URLs")
 
-    # Get URLs to process (limited by MAX_URLS_TO_PROCESS)
-    urls_to_fetch = [
-        entry["url"] for entry in processor.processed_urls[:MAX_URLS_TO_PROCESS]
-    ]
-    logger.info(f"Processing first {len(urls_to_fetch)} URLs...")
+    # Get URLs to process (limited by configuration or all if None)
+    if config.processing.max_urls_to_process is None:
+        # Process all URLs found in sitemap
+        urls_to_fetch = [entry["url"] for entry in processor.processed_urls]
+        logger.info(f"Processing all {len(urls_to_fetch)} URLs found in sitemap...")
+    else:
+        # Process limited number of URLs
+        urls_to_fetch = [
+            entry["url"]
+            for entry in processor.processed_urls[
+                : config.processing.max_urls_to_process
+            ]
+        ]
+        logger.info(f"Processing first {len(urls_to_fetch)} URLs...")
 
     # Fetch HTML content
-    fetcher = PlaywrightFetcher(max_concurrent=3)
+    fetcher_config = config.get_playwright_fetcher_config()
+    fetcher = PlaywrightFetcher(**fetcher_config)
     results = await fetcher.fetch_urls(urls_to_fetch)
 
     # Process HTML to extract articles
     # Extract base URL from sitemap URL for link processing
-    base_url = "http://localhost:8080"  # Extract from sitemap URL dynamically
-    preprocessor = HTMLPreprocessor(base_url=base_url)
+    parsed_url = urlparse(config.sitemap.url)
+    base_url = f"{parsed_url.scheme}://{parsed_url.netloc}"
+
+    preprocessor_config = config.get_html_preprocessor_config()
+    preprocessor = HTMLPreprocessor(base_url=base_url, **preprocessor_config)
     processed_results = preprocessor.process_urls(results)
 
     # Convert articles to markdown
-    converter = MarkdownConverter()
+    converter_config = config.get_markdown_converter_config()
+    converter = MarkdownConverter(**converter_config)
 
     # Collect articles that have content and convert to markdown
     markdown_results = []
@@ -58,7 +86,8 @@ async def main():
             )
 
     # Save markdown files to local drive
-    file_writer = FileWriter("output")
+    file_writer_config = config.get_file_writer_config()
+    file_writer = FileWriter(**file_writer_config)
     saved_files = []
 
     for result in markdown_results:

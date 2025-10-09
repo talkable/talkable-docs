@@ -1,0 +1,149 @@
+# =============================================================================
+# LLMs TXT Configuration File
+# =============================================================================
+# This file contains all configuration parameters for the talkable-llm-txt
+# application. Parameters are organized by functional groups for clarity.
+#
+# Required parameters must be provided, optional parameters use defaults.
+# =============================================================================
+
+# =============================================================================
+# CORE SETTINGS
+# =============================================================================
+
+[sitemap]
+# URL of the sitemap to process (required)
+# This is the primary source for discovering documentation URLs
+# Example: "http://localhost:8080/sitemap.xml"
+# Required: true
+url = ""
+
+[output]
+# Directory where markdown files will be saved (optional)
+# Files are organized in subdirectories matching the URL structure
+# Default: "output"
+# Required: false
+# dir = 
+
+# =============================================================================
+# PROCESSING SETTINGS
+# =============================================================================
+
+[processing]
+# Maximum number of URLs to process from the sitemap (optional)
+# Limits the total number of URLs processed to control execution time
+# If not specified, processes ALL URLs found in the sitemap
+# Range: 1+ (no maximum limit)
+# Default: None (process all URLs)
+# Required: false
+# max_urls_to_process = 
+
+# Maximum concurrent requests for fetching URLs (optional)
+# Controls how many URLs are fetched simultaneously
+# Higher values improve performance but increase memory usage
+# Range: 1-10
+# Default: 3
+# Required: false
+# max_concurrent_requests = 
+
+# Number of URLs to process in each batch (optional)
+# Controls memory usage by processing URLs in batches
+# Higher values use more memory but may be slightly faster
+# Range: 1-200
+# Default: 50
+# Required: false
+# batch_size = 
+
+# Timeout for individual URL requests in milliseconds (optional)
+# How long to wait for each URL to load before timing out
+# Range: 1000-300000 (1 second to 5 minutes)
+# Default: 30000
+# Required: false
+# request_timeout = 
+
+# =============================================================================
+# CONTENT PROCESSING SETTINGS
+# =============================================================================
+
+[content]
+# Whether to keep images in the markdown output (optional)
+# If false, images are replaced with "[Image]" placeholders
+# If true, images are preserved as-is in the markdown
+# Default: false
+# Required: false
+# keep_images = 
+
+# Markdown heading style to use (optional)
+# Controls how headings are formatted in the output markdown
+# Options: "atx" (# Heading), "atx_closed" (# Heading #), "underlined" (Heading\n===)
+# Default: "atx"
+# Required: false
+# heading_style = 
+
+# =============================================================================
+# PERFORMANCE SETTINGS
+# =============================================================================
+
+[performance]
+# Page load wait condition (optional)
+# Determines when Playwright considers a page fully loaded
+# Options: "commit", "domcontentloaded", "load", "networkidle"
+# - "commit": Wait for document commit
+# - "domcontentloaded": Wait for DOM to be ready (fastest)
+# - "load": Wait for all resources to load
+# - "networkidle": Wait for network activity to cease (slowest)
+# Default: "domcontentloaded"
+# Required: false
+# wait_until = 
+
+# Resource types to block during page loading (optional)
+# Comma-separated list of resource types to block to improve performance
+# Common options: "image", "media", "font", "stylesheet", "script"
+# Empty string means no blocking
+# Default: "image,media,font"
+# Required: false
+# blocked_resource_types = 
+
+# =============================================================================
+# SITEMAP FETCHING SETTINGS
+# =============================================================================
+
+[sitemap_fetching]
+# Timeout for sitemap HTTP requests in seconds (optional)
+# How long to wait for sitemap XML to be fetched
+# Range: 1-300 (1 second to 5 minutes)
+# Default: 30
+# Required: false
+# timeout = 
+
+# Number of retry attempts for failed sitemap requests (optional)
+# How many times to retry fetching the sitemap on failure
+# Uses exponential backoff between retries
+# Range: 0-10
+# Default: 3
+# Required: false
+# retries = 
+
+# User agent string for HTTP requests (optional)
+# Identifies the client when making HTTP requests
+# Some servers may block certain user agents
+# Default: "Mozilla/5.0 (compatible; SitemapProcessor/1.0)"
+# Required: false
+# user_agent = 
+
+# =============================================================================
+# LOGGING SETTINGS
+# =============================================================================
+
+[logging]
+# Logging level for application output (optional)
+# Controls the verbosity of log messages
+# Options: "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"
+# - DEBUG: Detailed information for debugging
+# - INFO: General information about program execution
+# - WARNING: Warning messages about potential issues
+# - ERROR: Error messages that don't stop execution
+# - CRITICAL: Serious errors that may stop execution
+# Default: "INFO"
+# Required: false
+# level =
