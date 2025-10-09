@@ -65,19 +65,6 @@ async def main():
         filepath = file_writer.save_markdown(result["url"], result["markdown"])
         saved_files.append(filepath)
 
-    # Display final markdown results
-    logger.info("")
-    logger.info(f"{'=' * 80}")
-    logger.info(f"MARKDOWN CONVERSION RESULTS ({len(markdown_results)} articles)")
-    logger.info(f"{'=' * 80}")
-
-    for i, result in enumerate(markdown_results, 1):
-        logger.info("")
-        logger.info(f"{i}. URL: {result['url']}")
-        logger.info(f"{'-' * 60}")
-        logger.info(result["markdown"])
-        logger.info(f"{'-' * 60}")
-
     # Show summary
     logger.info("")
     logger.info(f"{'=' * 80}")
