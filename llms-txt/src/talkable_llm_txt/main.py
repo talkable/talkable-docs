@@ -1,8 +1,14 @@
 import asyncio
 import logging
 
-from . import HTMLPreprocessor, MarkdownConverter, PlaywrightFetcher, SitemapProcessor
-from .logging_config import setup_logging
+from talkable_llm_txt import (
+    FileWriter,
+    HTMLPreprocessor,
+    MarkdownConverter,
+    PlaywrightFetcher,
+    SitemapProcessor,
+)
+from talkable_llm_txt.logging_config import setup_logging
 
 # Module-level logger following official Python documentation best practices
 logger = logging.getLogger(__name__)
@@ -49,6 +55,14 @@ async def main():
                 }
             )
 
+    # Save markdown files to local drive
+    file_writer = FileWriter("output")
+    saved_files = []
+
+    for result in markdown_results:
+        filepath = file_writer.save_markdown(result["url"], result["markdown"])
+        saved_files.append(filepath)
+
     # Display final markdown results
     logger.info("")
     logger.info(f"{'=' * 80}")
@@ -69,6 +83,7 @@ async def main():
     logger.info(f"{'=' * 80}")
     logger.info(f"Total URLs processed: {len(urls_to_fetch)}")
     logger.info(f"Successfully converted to markdown: {len(markdown_results)}")
+    logger.info(f"Files saved to disk: {len(saved_files)}")
     if len(urls_to_fetch) > 0:
         logger.info(
             f"Success rate: {(len(markdown_results) / len(urls_to_fetch) * 100):.1f}%"
