@@ -82,24 +82,39 @@ Available Yotpo loyalty variables:
 * yotpo.referrales_made_and_clicked
 * yotpo.is_referred_by_other_customer
 
-You can inspect these custom properties in the People report:
+Tracking Loyalty-Driven Referral Performance
+............................................
 
-   .. image:: /_static/img/email_marketing_and_automation/yotpo_custom_properties.png
+You can track referral performance using the provided Yotpo Loyalty variables to identify which customers generate the most referrals and use these insights to optimize your campaigns.  
+These custom properties can be viewed within the **People** report details:
+
+1. Navigate to the **People** report, select the desired date range and filters, generate the report, and click the **Details** link for the customer you're interested in.
+
+   .. image:: /_static/img/email_marketing_and_automation/yotpo_people_report_index.png
       :alt: Yotpo Loyalty & Referrals person custom properties in People report
 
-Yotpo Loyalty data & Incentives
-................................  
+2. Scroll to the **Custom Properties** section and review the following values:
 
-These custom properties can be used in incentive criteria.  
-In the example below, we restrict the **Advocate Referral Incentive** to the Gold tier only:
+   .. image:: /_static/img/email_marketing_and_automation/yotpo_people_report_details.png
+      :alt: Yotpo Loyalty & Referrals person custom properties in People report
 
+Exclusive Referral Rewards for customers
+........................................
 
-1. Edit **Advocate Referral Incentive**:
+Yotpo custom properties allow you to configure referral rewards that vary by their values.
+Lets create better reward for **Gold Tier** advocates in the example below:
 
-   .. image:: /_static/img/email_marketing_and_automation/yotpo_incentive_edit.png
+1. Open the **Rules** page of the desired campaign and navigate to the **Incentives** section.
+
+   .. image:: /_static/img/email_marketing_and_automation/yotpo_incentive_index.png
       :alt: Using Yotpo Loyalty & Referrals person custom properties in Incentive criteria
 
-2. Navigate to **Advanced Settings** and fill in the **Incentive criteria** field with the following code:
+2. Create a new **Advocate Referral Incentive** with the desired reward amount.
+
+   .. image:: /_static/img/email_marketing_and_automation/yotpo_incentive_create.png
+      :alt: Using Yotpo Loyalty & Referrals person custom properties in Incentive criteria
+
+3. Go to **Advanced Settings**, and fill in **Incentive Criteria** fields with the following code:
 
    .. code-block:: liquid
       :force:
@@ -113,31 +128,38 @@ In the example below, we restrict the **Advocate Referral Incentive** to the Gol
    .. image:: /_static/img/email_marketing_and_automation/yotpo_incentive_criteria.png
       :alt: Using Yotpo Loyalty & Referrals person custom properties in Incentive criteria
 
-3. Learn more about incentive criteria on :ref:`Incentive Criteria <campaigns/tutorials/incentive_criteria>` page.
+4. Learn more about incentive criteria on :ref:`Incentive Criteria <campaigns/tutorials/incentive_criteria>` page.
 
-Yotpo Loyalty data & Campaign editor
-....................................
+Yotpo Points in Talkable Wallet
+...............................
 
-These custom properties can also be used in campaigns.  
-In the example below, we'll display the customer's loyalty points in the header of the Apple Wallet pass:
+You can use Yotpo custom properties to display customer's loyalty points alongside their referral rewards directly in the Talkable Wallet.  
+This gives customers a unified view of both referral and loyalty activity in one place.
 
-1. Navigate to the campaign Easy Editor and open the **Talkable wallet for iPhone** view:
+In the example below, we'll show how to display the customer's Yotpo points balance in the header of the Apple Wallet pass:
+
+1. Navigate to the **Editor** of the desired campaign:
+
+   .. image:: /_static/img/email_marketing_and_automation/yotpo_wallet_editor.png
+      :alt: Using Yotpo Loyalty & Referrals person custom properties in campaign easy editor
+
+2. Open the **Talkable wallet for iPhone** view, on the right part of the screen you can see Apple pass preview:
 
    .. image:: /_static/img/email_marketing_and_automation/yotpo_wallet_view.png
       :alt: Using Yotpo Loyalty & Referrals person custom properties in campaign easy editor
 
-2. Update the **Apple Wallet header field label** localization with **REFERRALS | POINTS**, and set the **Apple Wallet header field value** to the following code:
+3. Update the **Apple Wallet header field label** localization with **REFERRALS | POINTS**, and set the **Apple Wallet header field value** to the following code:
    
    .. code-block:: liquid
       :force:
 
       {{ referrals_count_by_status.total | default: 0 }} | {{  custom_properties.yotpo.point_balance | default: 0 }}
 
-3. In the preview, you'll see that the wallet header now displays Points in addition to Referrals:
+4. In the preview, you'll see that the wallet header now displays Points in addition to Referrals:
 
    .. image:: /_static/img/email_marketing_and_automation/yotpo_wallet_points.png
       :alt: Using Yotpo Loyalty & Referrals person custom properties in campaign easy editor
 
-4. Learn more about the campaign editor on the :ref:`Editor <campaigns/editor>` page.   
+5. Learn more about the campaign editor on the :ref:`Editor <campaigns/editor>` page.   
 
 .. include:: /partials/contact_us.rst
