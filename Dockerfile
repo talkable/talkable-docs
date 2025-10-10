@@ -36,6 +36,11 @@ COPY nginx/robots/ /var/www/
 # Copy built static content from builder
 COPY --from=builder /docs/_build/ /var/www/html/
 
+# Generate deployment UUID file
+RUN apk add --no-cache util-linux \
+    && uuidgen > /var/www/html/deployment-uuid.txt \
+    && chmod 644 /var/www/html/deployment-uuid.txt
+
 # Expose port 80
 EXPOSE 80
 
