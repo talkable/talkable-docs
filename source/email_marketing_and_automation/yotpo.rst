@@ -80,7 +80,6 @@ Available Yotpo loyalty variables:
 * yotpo.vip_tier_name
 * yotpo.successfull_referales
 * yotpo.referrales_made_and_clicked
-* yotpo.is_referred_by_other_customer
 
 Tracking Loyalty-Driven Referral Performance
 ............................................
