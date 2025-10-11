@@ -22,8 +22,11 @@ Adding DNS records in Cloudflare
    (e.g. `subdomain` if you want to add a record for `subdomain.example.com`).
 
 #. Copy the DNS record value from the Talkable custom domain settings into the "Value" field.
-   Note: Unlike some other platforms, Cloudfront does not allow multiple values in NS record.
-   Instead, you'll need to add multiple NS records with the same name and different values.
+   
+   .. note::
+
+      Unlike some other platforms, Cloudfront does not allow multiple values in NS record.
+      Instead, you'll need to add multiple NS records with the same name and different values.
 
    .. image:: /_static/img/advanced_features/custom_domain_cloudfront_add_record.png
 
