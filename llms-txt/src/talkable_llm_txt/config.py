@@ -198,9 +198,9 @@ class Settings(BaseSettings):
         super().__init__(**kwargs)
 
     @classmethod
-    def load_from_toml(cls, config_file: str = "config.toml") -> "Settings":
+    def create(cls, config_file: str = "config.toml") -> "Settings":
         """
-        Load settings from TOML configuration file.
+        Factory method that loads configuration from TOML file.
 
         Args:
             config_file: Path to the TOML configuration file
@@ -223,7 +223,9 @@ class Settings(BaseSettings):
             with open(config_path, "r", encoding="utf-8") as f:
                 config_data = toml.load(f)
 
-            return cls(**config_data)
+            # Create settings instance
+            config = cls(**config_data)
+            return config
         except Exception as e:
             raise ValueError(f"Error loading configuration from {config_file}: {e}")
 
