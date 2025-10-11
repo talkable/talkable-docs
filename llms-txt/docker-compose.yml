@@ -1,0 +1,30 @@
+services:
+  # Python application that generates markdown files
+  app:
+    build: .
+    container_name: talkable-llm-txt
+    volumes:
+      - markdown-data:/app/output
+    restart: unless-stopped
+
+  # Nginx server to serve markdown files
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    container_name: talkable-llm-txt-nginx
+    ports:
+      - "8081:80"
+    volumes:
+      - markdown-data:/usr/share/nginx/html/markdown:ro
+    depends_on:
+      - app
+
+volumes:
+  markdown-data:
+    driver: local
+
+networks:
+  default:
+    name: talkable-llm-txt-network
+    driver: bridge
