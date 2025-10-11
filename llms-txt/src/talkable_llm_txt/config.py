@@ -136,6 +136,28 @@ class SitemapFetchingConfig(BaseModel):
     )
 
 
+class MonitoringConfig(BaseModel):
+    """Monitoring configuration settings."""
+
+    enabled: bool = Field(
+        default=True,
+        description="Enable scheduled monitoring for documentation changes (enabled by default)",
+    )
+
+    check_url: str = Field(
+        default="",
+        description="URL to monitor for changes (typically main documentation page)",
+    )
+
+    check_interval_minutes: int = Field(
+        default=60, ge=1, le=1440, description="Interval in minutes between checks"
+    )
+
+    etag_cache_file: str = Field(
+        default="etag_cache.json", description="File to store ETag cache"
+    )
+
+
 class LoggingConfig(BaseModel):
     """Logging configuration settings."""
 
@@ -168,6 +190,7 @@ class Settings(BaseSettings):
     sitemap_fetching: SitemapFetchingConfig = Field(
         description="Sitemap fetching configuration"
     )
+    monitoring: MonitoringConfig = Field(description="Monitoring configuration")
     logging: LoggingConfig = Field(description="Logging configuration")
 
     def __init__(self, **kwargs):
@@ -244,4 +267,13 @@ class Settings(BaseSettings):
         """Get configuration for logging."""
         return {
             "level": self.logging.level,
+        }
+
+    def get_monitoring_config(self) -> dict:
+        """Get configuration for monitoring."""
+        return {
+            "enabled": self.monitoring.enabled,
+            "check_url": self.monitoring.check_url,
+            "check_interval_minutes": self.monitoring.check_interval_minutes,
+            "etag_cache_file": self.monitoring.etag_cache_file,
         }

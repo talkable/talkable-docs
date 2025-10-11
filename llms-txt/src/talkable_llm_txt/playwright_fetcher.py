@@ -51,7 +51,7 @@ class PlaywrightFetcher:
 
     def _handle_request_failed(self, request, page_url: str) -> None:
         """Simplified requestfailed event handling following documentation best practices"""
-        logger.warning(f"Request failed: {request.url}")
+        logger.debug(f"Request failed: {request.url}")
 
     @asynccontextmanager
     async def _browser_context(self):

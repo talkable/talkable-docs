@@ -14,9 +14,9 @@
 [sitemap]
 # URL of the sitemap to process (required)
 # This is the primary source for discovering documentation URLs
-# Example: "http://localhost:8080/sitemap.xml"
+# Example: "https://docs.talkable.com/sitemap.xml"
 # Required: true
-url = ""
+url = "https://docs.talkable.com/sitemap.xml"
 
 [output]
 # Directory where markdown files will be saved (optional)
@@ -130,6 +130,39 @@ url = ""
 # Default: "Mozilla/5.0 (compatible; SitemapProcessor/1.0)"
 # Required: false
 # user_agent = 
+
+# =============================================================================
+# MONITORING SETTINGS
+# =============================================================================
+
+[monitoring]
+# Enable scheduled monitoring for documentation changes (optional)
+# When enabled, the application will run as a scheduler that periodically
+# checks for documentation changes and triggers regeneration when needed
+# Default: true
+# Required: false
+# enabled = 
+
+# URL to monitor for changes (optional)
+# Typically the main documentation page or sitemap URL
+# This URL will be checked for changes using ETag headers
+# If not specified, will use the sitemap URL as default
+# Default: "" (uses sitemap URL)
+# Required: false
+# check_url = 
+
+# Interval in minutes between checks (optional)
+# How often to check the documentation URL for changes
+# Range: 1-1440 (1 minute to 24 hours)
+# Default: 60
+# Required: false
+# check_interval_minutes = 
+
+# File to store ETag cache (optional)
+# JSON file that stores ETag values for change detection
+# Default: "etag_cache.json"
+# Required: false
+# etag_cache_file = 
 
 # =============================================================================
 # LOGGING SETTINGS

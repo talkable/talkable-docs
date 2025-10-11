@@ -29,6 +29,12 @@ typecheck-watch: ## Run Pyright in watch mode for continuous checking
 test: ## Run tests with pytest
 	uv run pytest
 
+run: ## Run the documentation processor (monitoring enabled by default)
+	uv run python -m talkable_llm_txt
+
+monitor: ## Run the documentation scheduler (alias for run command)
+	uv run python -m talkable_llm_txt
+
 check: lint-fix typecheck test ## Run all checks (lint-fix + typecheck + test)
 
 clean: ## Clean build artifacts and cache files
