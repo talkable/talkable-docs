@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+*agent_*.md
+
+output
+
+config.toml
+
+# ETag cache files
+etag_cache.json
