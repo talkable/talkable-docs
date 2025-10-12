@@ -6,8 +6,8 @@ following the single responsibility principle and separation of concerns.
 """
 
 from abc import ABC, abstractmethod
-from urllib.parse import urlparse, urlunparse, urljoin
 from typing import Optional
+from urllib.parse import urljoin, urlparse, urlunparse
 
 
 class URLProcessor(ABC):
@@ -73,16 +73,14 @@ class MarkdownFileConverter(URLProcessor):
         path = path + ".md"
 
         # Reconstruct URL with new path, preserving other components
-        return urlunparse(
-            (
-                parsed.scheme,
-                parsed.netloc,
-                path,
-                parsed.params,
-                parsed.query,
-                parsed.fragment,  # Preserve #anchor
-            )
-        )
+        return urlunparse((
+            parsed.scheme,
+            parsed.netloc,
+            path,
+            parsed.params,
+            parsed.query,
+            parsed.fragment,  # Preserve #anchor
+        ))
 
 
 class LinkProcessor:

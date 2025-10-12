@@ -6,7 +6,8 @@ with TOML file support. All application parameters are defined here with
 proper validation and defaults.
 """
 
-from typing import Literal, Set, Optional
+from typing import Literal, Optional, Set
+
 from pydantic import BaseModel, Field, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -212,8 +213,9 @@ class Settings(BaseSettings):
             FileNotFoundError: If config file doesn't exist
             ValueError: If config file is invalid
         """
-        import toml
         from pathlib import Path
+
+        import toml
 
         config_path = Path(config_file)
         if not config_path.exists():

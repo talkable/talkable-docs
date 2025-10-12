@@ -86,12 +86,10 @@ async def run_pipeline():
     for result in processed_results:
         if result.get("has_article") and result.get("article"):
             markdown_content = converter.convert_article(result["article"])
-            markdown_results.append(
-                {
-                    "url": result["url"],
-                    "markdown": markdown_content,
-                }
-            )
+            markdown_results.append({
+                "url": result["url"],
+                "markdown": markdown_content,
+            })
 
     # Save markdown files to local drive
     file_writer_config = app_config.get_file_writer_config()

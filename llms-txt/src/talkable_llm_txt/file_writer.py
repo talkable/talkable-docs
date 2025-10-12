@@ -1,7 +1,7 @@
 import logging
 import re
 from pathlib import Path
-from urllib.parse import urlparse, unquote
+from urllib.parse import unquote, urlparse
 
 # Module-level logger following official Python documentation best practices
 logger = logging.getLogger(__name__)

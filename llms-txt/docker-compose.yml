@@ -14,7 +14,7 @@ services:
     ports:
       - ${NGINX_PORT}:80
     volumes:
-      - ./nginx/default.conf.template:/etc/nginx/templates
+      - ./nginx/templates/:/etc/nginx/templates/
       - markdown-data:/usr/share/nginx/html:ro
     depends_on:
       - app

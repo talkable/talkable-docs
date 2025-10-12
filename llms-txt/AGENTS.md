@@ -7,6 +7,7 @@
 Processes sitemaps to discover documentation URLs, fetches HTML content using Playwright (JavaScript-rendered pages), extracts articles, converts to clean Markdown, and saves locally. Configurable via TOML file.
 
 **Key Features:**
+
 - **Dual Mode**: One-time processing OR scheduled monitoring
 - **ETag Change Detection**: Efficient monitoring using HTTP ETag headers
 - **Concurrent Processing**: High-performance parallel URL fetching (1-10 simultaneous)
@@ -16,6 +17,7 @@ Processes sitemaps to discover documentation URLs, fetches HTML content using Pl
 ## Architecture
 
 **Modular pipeline components:**
+
 - **Settings** (`config.py`): Pydantic-based configuration with TOML support
 - **SitemapProcessor** (`sitemap_processor.py`): XML sitemap parsing with retry logic
 - **PlaywrightFetcher** (`playwright_fetcher.py`): Async HTML fetching with JS rendering
@@ -28,15 +30,18 @@ Processes sitemaps to discover documentation URLs, fetches HTML content using Pl
 ## Entry Points & Execution Flow
 
 ### **Main Entry Point** (`main.py`)
+
 Two execution modes controlled by configuration:
 
 1. **One-time Pipeline**: Process sitemap → fetch URLs → extract → convert → save
 2. **Scheduled Monitoring**: Run scheduler → periodic ETag checks → trigger pipeline on changes
 
 ### **Package Entry Point** (`__main__.py`)
+
 Run with `python -m talkable_llm_txt`
 
 ### **Application Flow**
+
 1. `initialize_app()` - Setup module-level config and logging
 2. Load configuration from `config.toml`
 3. Based on monitoring setting: run pipeline once OR start scheduler
@@ -44,7 +49,7 @@ Run with `python -m talkable_llm_txt`
 
 ## Project Structure
 
-```
+```bash
 src/talkable_llm_txt/
 ├── __init__.py              # Package exports
 ├── __main__.py              # Package entry point
@@ -65,6 +70,7 @@ tests/                      # Test suite (unit, integration, slow)
 ## Configuration System
 
 **config.toml groups:**
+
 - **Core**: Sitemap URL, output directory
 - **Processing**: URL limits, concurrency, batch size, timeouts
 - **Content**: Image handling, heading styles
@@ -74,6 +80,7 @@ tests/                      # Test suite (unit, integration, slow)
 - **Logging**: Log levels and output
 
 **Key features:**
+
 - Monitoring enable/disable control
 - ETag-based change detection with persistent cache
 - Flexible scheduling intervals
@@ -82,6 +89,7 @@ tests/                      # Test suite (unit, integration, slow)
 ## Development Environment
 
 **Setup:**
+
 - **Package Manager**: `uv` for Python dependency management
 - **Python Version**: 3.12+
 - **Key Dependencies**: APScheduler, BeautifulSoup4, html-to-markdown, Playwright, Pydantic-Settings, requests, toml
@@ -89,6 +97,7 @@ tests/                      # Test suite (unit, integration, slow)
 - **Code Quality**: ruff (linting/formatting), Pyright (type checking)
 
 **Architecture Patterns:**
+
 - **Module-Level State**: Application-wide config and logging variables
 - **Async/Await**: Full async pipeline for concurrency
 - **Type Safety**: Comprehensive type hints with Pyright
@@ -102,7 +111,7 @@ make install                    # Install deps, package, Playwright browsers
 
 # Configuration
 cp config.toml.template config.toml
-vim config.toml                # Edit sitemap URL and settings
+nano config.toml                # Edit sitemap URL and settings
 
 # Development
 make test                      # Run tests
@@ -112,18 +121,20 @@ make check                     # Run all checks
 
 # Execution
 make run                       # Start application (monitoring mode by default)
-python -m talkable_llm_txt     # Direct execution
+uv run talkable_llm_txt     # Direct execution
 ```
 
 ## Usage Examples
 
 **One-time processing:**
+
 ```bash
 # Set monitoring.enabled = false in config.toml
 python -m talkable_llm_txt
 ```
 
 **Scheduled monitoring:**
+
 ```bash
 # Set monitoring.enabled = true in config.toml (default)
 python -m talkable_llm_txt
@@ -140,12 +151,14 @@ python -m talkable_llm_txt
 ## Recent Architecture Changes
 
 **Module-Level State Management:**
+
 - `config` and `logger` are module-level variables
 - Clean function signatures (no parameter passing for shared state)
 - `initialize_app()` handles centralized setup
 - Type casting ensures static type checking
 
 **Configuration Separation:**
+
 - `Settings.create()` handles pure configuration loading
 - Logging setup happens independently after config loading
 - Clear separation of concerns
@@ -153,6 +166,7 @@ python -m talkable_llm_txt
 ## Extensibility
 
 **Extension points:**
+
 - Custom processors for different documentation formats
 - Alternative fetchers for various web technologies
 - Specialized markdown converters
