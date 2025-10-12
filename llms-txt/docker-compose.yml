@@ -1,29 +1,28 @@
 services:
   # Python application that generates markdown files
-  app:
+  docs-llms-txt:
+    platform: linux/arm64/v8
     build: .
-    container_name: talkable-llm-txt
-    volumes:
-      - markdown-data:/app/output
+    container_name: docs-llms-txt
     restart: unless-stopped
+    volumes:
+      - docs_llms_txt:/app/output
 
   # Nginx server to serve markdown files
-  nginx:
+  docs-llms-txt-nginx:
+    platform: linux/arm64/v8
     image: nginx:1.29-alpine3.22
-    container_name: talkable-llm-txt-nginx
+    container_name: docs-llms-txt-nginx
+    restart: unless-stopped
     ports:
-      - ${NGINX_PORT}:80
+      - ${LOCAL_PORT}:80
     volumes:
       - ./nginx/templates/:/etc/nginx/templates/
-      - markdown-data:/usr/share/nginx/html:ro
+      - docs_llms_txt:/usr/share/nginx/html:ro
     depends_on:
-      - app
+      - docs-llms-txt
 
 volumes:
-  markdown-data:
+  docs_llms_txt:
+    name: docs_llms_txt
     driver: local
-
-networks:
-  default:
-    name: talkable-llm-txt-network
-    driver: bridge

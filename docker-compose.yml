@@ -1,12 +1,12 @@
 services:
-  nginx:
+  docs-nginx:
     platform: linux/arm64/v8
     build:
       context: .
       dockerfile: Dockerfile
       args:
         ENVIRONMENT: ${ENVIRONMENT}
-    container_name: docs-${ENVIRONMENT}
+    container_name: docs-nginx-${ENVIRONMENT}
     restart: unless-stopped
     ports:
       - ${LOCAL_PORT}:80
