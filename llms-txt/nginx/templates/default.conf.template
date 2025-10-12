@@ -2,32 +2,23 @@ server {
     listen 80;
     server_name localhost;
     
-    # Essential MIME type
-    types {
-        text/markdown  md;
-        text/plain     txt;
-    }
-    
     # Serve llms.txt
     location = /llms.txt {
         alias /usr/share/nginx/html/md/index.md;
         add_header Content-Type "text/plain; charset=utf-8" always;
     }
     
-    # Serve markdown files
+    # Serve markdown files with custom MIME type
     location ~* \.md$ {
         root /usr/share/nginx/html/md;
-        add_header Content-Type "text/markdown; charset=utf-8" always;
+        types {
+            text/markdown md;
+        }
     }
     
-    # Directory listing
+    # Default location - prioritize HTML files, use standard directory fallback
     location / {
         autoindex on;
         try_files $uri $uri/ =404;
-    }
-    
-    # Directory fallback
-    location ~* /$ {
-        try_files $uri $uri/index.md =404;
     }
 }

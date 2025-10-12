@@ -35,6 +35,20 @@ server {
 
     include /etc/nginx/redirects.conf;
 
+    # Serve llms.txt
+    location = /llms.txt {
+        alias /var/www/html/md/index.md;
+        add_header Content-Type "text/plain; charset=utf-8" always;
+    }
+    
+    # Serve markdown files
+    location ~* \.md$ {
+        root /var/www/html/md;
+        types {
+            text/markdown md;
+        }
+    }
+
     # Serve robots.txt dynamically based on environment variable
     location = /robots.txt {
         alias /var/www/${ENVIRONMENT}.txt;
