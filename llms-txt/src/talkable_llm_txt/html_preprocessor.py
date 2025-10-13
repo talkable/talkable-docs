@@ -37,12 +37,15 @@ class HTMLPreprocessor:
             LinkProcessor(base_url) if base_url and LinkProcessor else None
         )
 
-    def extract_article(self, html: Optional[str]) -> Optional[str]:
+    def extract_article(
+        self, html: Optional[str], current_page_url: Optional[str] = None
+    ) -> Optional[str]:
         """
         Extract article element from Playwright-rendered HTML.
 
         Args:
             html: HTML content from PlaywrightFetcher (can be None)
+            current_page_url: Current page URL to provide context for relative links
 
         Returns:
             Article HTML as string, or None if no article element found
@@ -55,21 +58,22 @@ class HTMLPreprocessor:
 
         if article:
             # Apply preprocessing to the article
-            self._preprocess_article(article)
+            self._preprocess_article(article, current_page_url)
             return str(article)
         return None
 
-    def _preprocess_article(self, article):
+    def _preprocess_article(self, article, current_page_url: Optional[str] = None):
         """
         Apply preprocessing steps to article content.
 
         Args:
             article: BeautifulSoup article element to preprocess
+            current_page_url: Current page URL to provide context for relative links
         """
         self._remove_header_links(article)
         self._remove_copy_buttons(article)
         self._remove_images(article)
-        self._process_links(article)
+        self._process_links(article, current_page_url)
 
     def _remove_header_links(self, article: Optional[Tag]) -> None:
         """
@@ -110,19 +114,22 @@ class HTMLPreprocessor:
         for img in article.find_all("img"):
             img.replace_with("[Image]")
 
-    def _process_links(self, article: Optional[Tag]) -> None:
+    def _process_links(
+        self, article: Optional[Tag], current_page_url: Optional[str] = None
+    ) -> None:
         """
         Process all links using the LinkProcessor to convert to markdown file URLs.
 
         Args:
             article: BeautifulSoup article element (can be None)
+            current_page_url: Current page URL to provide context for relative links
         """
         if not article or not self.link_processor:
             return
 
         for link in article.find_all("a", href=True):
             href = str(link["href"])  # Convert _AttributeValue to string
-            processed_href = self.link_processor.process_link(href)
+            processed_href = self.link_processor.process_link(href, current_page_url)
 
             if processed_href:
                 link["href"] = processed_href
@@ -143,7 +150,7 @@ class HTMLPreprocessor:
             processed_result = result.copy()
 
             if result.get("html") and not result.get("error"):
-                article_html = self.extract_article(result["html"])
+                article_html = self.extract_article(result["html"], result.get("url"))
                 if article_html:
                     processed_result["article"] = article_html
                     processed_result["has_article"] = True

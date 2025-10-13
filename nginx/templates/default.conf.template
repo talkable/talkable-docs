@@ -31,7 +31,8 @@ server {
     image/svg+xml
     font/ttf
     font/woff
-    font/woff2;
+    font/woff2
+    text/markdown;
 
     # Helps preserve the port in redirects when not on 80/443
     absolute_redirect off;
@@ -43,6 +44,15 @@ server {
     location = /llms.txt {
         alias /var/www/md/index.md;
         charset utf-8;
+    }
+    
+    # Serve llms-full.txt
+    location = /llms-full.txt {
+        alias /var/www/md/llms-full.txt;
+        charset utf-8;
+        types {
+            text/markdown txt;
+        }
     }
     
     # Serve markdown files

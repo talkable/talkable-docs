@@ -384,6 +384,7 @@ class Settings(BaseSettings):
     def get_llm_full_text_config(self) -> dict:
         """Get configuration for LLM full text writer."""
         return {
+            "output_dir": self.core.output_dir,
             "filename": self.llm_full_text.filename,
             "include_source_urls": self.llm_full_text.include_source_urls,
             "base_url": self.core.base_url,

@@ -138,9 +138,10 @@ class TestLinkProcessor:
         assert result == "http://localhost:8080/terminology.md#reward"
 
     def test_skip_external_link(self):
-        """Test that external links are skipped"""
+        """Test that external links with different domains are skipped"""
         href = "https://example.com/page"
         result = self.processor.process_link(href)
+        # External links with different domains should be skipped
         assert result is None
 
     def test_skip_mailto_link(self):
@@ -165,6 +166,19 @@ class TestLinkProcessor:
         """Test that anchor-only links are skipped"""
         href = "#section"
         result = self.processor.process_link(href)
+        assert result is None
+
+    def test_domain_correction_same_port_different_host(self):
+        """Test that URLs with same port but different host get corrected"""
+        href = "http://192.168.11.4:8080/page"
+        result = self.processor.process_link(href)
+        assert result == "http://localhost:8080/page.md"
+
+    def test_domain_correction_different_port_no_change(self):
+        """Test that URLs with different ports are skipped"""
+        href = "http://192.168.11.4:3000/page"
+        result = self.processor.process_link(href)
+        # URLs with different ports should be skipped
         assert result is None
 
     def test_skip_empty_link(self):
