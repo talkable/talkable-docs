@@ -1,11 +1,37 @@
+x-common-config: &common-config
+  platform: linux/arm64/v8
+  restart: unless-stopped
+
+x-sphinx-build: &sphinx-build
+  context: ./sphinx
+  dockerfile: Dockerfile
+
+x-llms-build: &llms-build
+  context: ./llms-txt
+  dockerfile: Dockerfile
+
+x-sphinx-env: &sphinx-env
+  BASE_URL: ${BASE_URL}
+
+x-llms-env: &llms-env
+  LLMS_TXT_CORE__OUTPUT_DIR: "/var/www/md"
+  LLMS_TXT_CORE__BASE_URL: ${BASE_URL}
+
+x-sphinx-volumes: &sphinx-volumes
+  - docs_www:/var/www
+  - ./source:/docs/source
+
+x-llms-volumes: &llms-volumes
+  - docs_www:/var/www
+  - ./llms-txt/src:/app/src
+
 services:
   nginx:
+    <<: *common-config
     image: nginx:1.29-alpine3.22
-    platform: linux/arm64/v8
     environment:
       ENVIRONMENT: ${ENVIRONMENT}
     container_name: docs-nginx-${ENVIRONMENT}
-    restart: unless-stopped
     ports:
       - ${LOCAL_PORT}:80
     volumes:
@@ -15,52 +41,41 @@ services:
       - ./nginx/redirects.conf:/etc/nginx/redirects.conf
 
   sphinx-init:
-    platform: linux/arm64/v8
+    <<: *common-config
     build:
-      context: ./sphinx
-      dockerfile: Dockerfile
+      <<: *sphinx-build
       args:
         MODE: "init"
-    container_name: docs-sphinx-init-${ENVIRONMENT}
     environment:
-      BASE_URL: ${BASE_URL}
-    volumes:
-      - docs_www:/var/www
-      - ./source:/docs/source
+      <<: *sphinx-env
+    volumes: *sphinx-volumes
     restart: "no"
+    container_name: docs-sphinx-init-${ENVIRONMENT}
 
   sphinx-builder:
-    platform: linux/arm64/v8
+    <<: *common-config
     build:
-      context: ./sphinx
-      dockerfile: Dockerfile
+      <<: *sphinx-build
       args:
         MODE: "builder"
-    container_name: docs-sphinx-builder-${ENVIRONMENT}
     environment:
-      BASE_URL: ${BASE_URL}
-    volumes:
-      - docs_www:/var/www
-      - ./source:/docs/source
-    restart: unless-stopped
+      <<: *sphinx-env
+    volumes: *sphinx-volumes
+    container_name: docs-sphinx-builder-${ENVIRONMENT}
     profiles: ["local"]
     depends_on:
       sphinx-init:
         condition: service_completed_successfully
 
   llms-txt-init:
-    platform: linux/arm64/v8
+    <<: *common-config
     build:
-      context: ./llms-txt
-      dockerfile: Dockerfile
-    container_name: docs-llms-txt-init-${ENVIRONMENT}
+      <<: *llms-build
     environment:
-      LLMS_TXT_CORE__OUTPUT_DIR: "/var/www/md"
-      LLMS_TXT_CORE__BASE_URL: ${BASE_URL}
-    volumes:
-      - docs_www:/var/www
-      - ./llms-txt/src:/app/src
+      <<: *llms-env
+    volumes: *llms-volumes
     restart: "no"
+    container_name: docs-llms-txt-init-${ENVIRONMENT}
     depends_on:
       sphinx-init:
         condition: service_completed_successfully
@@ -68,19 +83,14 @@ services:
         condition: service_started
 
   llms-txt-builder:
-    platform: linux/arm64/v8
+    <<: *common-config
     build:
-      context: ./llms-txt
-      dockerfile: Dockerfile
-    container_name: docs-llms-txt-builder-${ENVIRONMENT}
+      <<: *llms-build
     environment:
-      LLMS_TXT_CORE__OUTPUT_DIR: "/var/www/md"
-      LLMS_TXT_CORE__BASE_URL: ${BASE_URL}
+      <<: *llms-env
       LLMS_TXT_MONITORING__ENABLED: "true"
-    volumes:
-      - docs_www:/var/www
-      - ./llms-txt/src:/app/src
-    restart: unless-stopped
+    volumes: *llms-volumes
+    container_name: docs-llms-txt-builder-${ENVIRONMENT}
     profiles: ["local"]
     depends_on:
       llms-txt-init:
