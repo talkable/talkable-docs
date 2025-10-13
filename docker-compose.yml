@@ -14,17 +14,39 @@ services:
       - ./nginx/robots:/var/www/robots
       - ./nginx/redirects.conf:/etc/nginx/redirects.conf
 
-  docs-sphinx:
+  docs-sphinx-init:
     platform: linux/arm64/v8
     build:
       context: ./sphinx
       dockerfile: Dockerfile
       args:
-        ENVIRONMENT: ${ENVIRONMENT}
-    container_name: docs-sphinx-${ENVIRONMENT}
+        MODE: "init"
+    container_name: docs-sphinx-init-${ENVIRONMENT}
+    environment:
+      ENVIRONMENT: ${ENVIRONMENT}
     volumes:
       - docs_www:/var/www
       - ./source:/docs/source
+    restart: "no"
+
+  docs-sphinx-builder:
+    platform: linux/arm64/v8
+    build:
+      context: ./sphinx
+      dockerfile: Dockerfile
+      args:
+        MODE: "builder"
+    container_name: docs-sphinx-builder-${ENVIRONMENT}
+    environment:
+      ENVIRONMENT: ${ENVIRONMENT}
+    volumes:
+      - docs_www:/var/www
+      - ./source:/docs/source
+    restart: unless-stopped
+    profiles: ["local"]
+    depends_on:
+      docs-sphinx-init:
+        condition: service_completed_successfully
 
   docs-llms-txt:
     platform: linux/arm64/v8
@@ -38,7 +60,10 @@ services:
       - ./llms-txt/config.toml:/app/config.toml
       - ./llms-txt/src:/app/src
     depends_on:
-      - docs-nginx
+      docs-sphinx-init:
+        condition: service_completed_successfully
+      docs-nginx:
+        condition: service_started
 
 volumes:
   docs_www:
