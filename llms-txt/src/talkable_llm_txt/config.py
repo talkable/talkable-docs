@@ -179,6 +179,32 @@ class MonitoringConfig(BaseModel):
     )
 
 
+class LLMFullTextConfig(BaseModel):
+    """LLM full text file configuration settings."""
+
+    enabled: bool = Field(
+        default=True,
+        description="Enable generation of aggregated LLM full text file",
+    )
+
+    filename: str = Field(
+        default="llms-full.txt",
+        description="Name of the aggregated LLM full text file",
+    )
+
+    include_source_urls: bool = Field(
+        default=True,
+        description="Include source URLs for each document in the full text file",
+    )
+
+    document_separator_style: Literal[
+        "html_comments", "markdown_headers", "custom_delimiters"
+    ] = Field(
+        default="html_comments",
+        description="Style of document separators in the full text file",
+    )
+
+
 class LoggingConfig(BaseModel):
     """Logging configuration settings."""
 
@@ -223,6 +249,9 @@ class Settings(BaseSettings):
     )
     monitoring: MonitoringConfig = Field(
         default_factory=MonitoringConfig, description="Monitoring configuration"
+    )
+    llm_full_text: LLMFullTextConfig = Field(
+        default_factory=LLMFullTextConfig, description="LLM full text configuration"
     )
     logging: LoggingConfig = Field(
         default_factory=LoggingConfig, description="Logging configuration"
@@ -351,6 +380,18 @@ class Settings(BaseSettings):
         sources.append(init_settings)
 
         return tuple(sources)
+
+    def get_llm_full_text_config(self) -> dict:
+        """Get configuration for LLM full text writer."""
+        return {
+            "filename": self.llm_full_text.filename,
+            "include_source_urls": self.llm_full_text.include_source_urls,
+            "base_url": self.core.base_url,
+        }
+
+    def is_llm_full_text_enabled(self) -> bool:
+        """Check if LLM full text generation is enabled."""
+        return self.llm_full_text.enabled
 
     def get_monitoring_config(self) -> dict:
         """Get configuration for monitoring."""

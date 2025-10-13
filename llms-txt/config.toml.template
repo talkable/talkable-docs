@@ -194,6 +194,45 @@ base_url = "https://docs.talkable.com"
 # etag_cache_file = 
 
 # =============================================================================
+# LLM FULL TEXT SETTINGS
+# =============================================================================
+
+[llm_full_text]
+# Enable generation of aggregated LLM full text file (optional)
+# When enabled, creates a single file containing all converted markdown content
+# This is useful for LLM training and consumption
+# Default: true
+# Required: false
+# Environment Variable: LLMS_TXT_LLM_FULL_TEXT__ENABLED
+# enabled = 
+
+# Name of the aggregated LLM full text file (optional)
+# The filename for the consolidated markdown file
+# Default: "llms-full.txt"
+# Required: false
+# Environment Variable: LLMS_TXT_LLM_FULL_TEXT__FILENAME
+# filename = 
+
+# Include source URLs for each document in the full text file (optional)
+# When true, each document section includes a link to the source markdown file
+# This helps with content attribution and debugging
+# Default: true
+# Required: false
+# Environment Variable: LLMS_TXT_LLM_FULL_TEXT__INCLUDE_SOURCE_URLS
+# include_source_urls = 
+
+# Style of document separators in the full text file (optional)
+# Controls how document boundaries are marked in the aggregated file
+# Options: "html_comments", "markdown_headers", "custom_delimiters"
+# - "html_comments": Uses HTML comment markers (recommended)
+# - "markdown_headers": Uses markdown headers for separation
+# - "custom_delimiters": Uses custom delimiter characters
+# Default: "html_comments"
+# Required: false
+# Environment Variable: LLMS_TXT_LLM_FULL_TEXT__DOCUMENT_SEPARATOR_STYLE
+# document_separator_style = 
+
+# =============================================================================
 # LOGGING SETTINGS
 # =============================================================================
 

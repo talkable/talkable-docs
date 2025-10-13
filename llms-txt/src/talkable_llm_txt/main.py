@@ -8,6 +8,7 @@ from apscheduler.triggers.interval import IntervalTrigger
 from talkable_llm_txt import (
     FileWriter,
     HTMLPreprocessor,
+    LLMFullTextWriter,
     MarkdownConverter,
     PlaywrightFetcher,
     SitemapProcessor,
@@ -80,6 +81,13 @@ async def run_pipeline():
     file_writer_config = app_config.get_file_writer_config()
     file_writer = FileWriter(**file_writer_config)
 
+    # Initialize LLM full text writer if enabled
+    llm_full_text_writer = None
+    if app_config.is_llm_full_text_enabled():
+        llm_full_text_config = app_config.get_llm_full_text_config()
+        llm_full_text_writer = LLMFullTextWriter(**llm_full_text_config)
+        app_logger.info("LLM full text generation enabled")
+
     # Process URLs in batches with end-to-end processing
     batch_size = app_config.processing.batch_size
     total_batches = (len(urls_to_fetch) + batch_size - 1) // batch_size
@@ -88,6 +96,7 @@ async def run_pipeline():
     total_processed = 0
     total_converted = 0
     total_saved = 0
+    total_added_to_full_text = 0
 
     app_logger.info(
         f"Processing {len(urls_to_fetch)} URLs in {total_batches} batches of {batch_size}..."
@@ -123,9 +132,28 @@ async def run_pipeline():
 
                 # Save immediately
                 try:
-                    file_writer.save_markdown(result["url"], markdown_content)
+                    saved_filepath = file_writer.save_markdown(
+                        result["url"], markdown_content
+                    )
                     total_saved += 1
                     batch_saved += 1
+
+                    # Add to LLM full text if enabled
+                    if llm_full_text_writer:
+                        try:
+                            # Get relative filepath for source URL generation
+                            relative_filepath = saved_filepath.relative_to(
+                                file_writer.output_dir
+                            )
+                            llm_full_text_writer.add_document(
+                                result["url"], markdown_content, relative_filepath
+                            )
+                            total_added_to_full_text += 1
+                        except Exception as e:
+                            app_logger.error(
+                                f"Failed to add {result['url']} to LLM full text: {e}"
+                            )
+
                 except Exception as e:
                     app_logger.error(f"Failed to save {result['url']}: {e}")
 
@@ -136,6 +164,16 @@ async def run_pipeline():
             f"{batch_saved}/{len(batch_urls)} saved"
         )
 
+    # Finalize LLM full text file if enabled
+    if llm_full_text_writer:
+        try:
+            llm_full_text_writer.finalize()
+            app_logger.info(
+                f"LLM full text file generated with {total_added_to_full_text} documents"
+            )
+        except Exception as e:
+            app_logger.error(f"Failed to finalize LLM full text file: {e}")
+
     # Show final summary
     app_logger.info("")
     app_logger.info(f"{'=' * 80}")
@@ -144,6 +182,8 @@ async def run_pipeline():
     app_logger.info(f"Total URLs processed: {total_processed}")
     app_logger.info(f"Successfully converted to markdown: {total_converted}")
     app_logger.info(f"Files saved to disk: {total_saved}")
+    if llm_full_text_writer:
+        app_logger.info(f"Documents added to LLM full text: {total_added_to_full_text}")
     if total_processed > 0:
         app_logger.info(
             f"Success rate: {(total_converted / total_processed * 100):.1f}%"
