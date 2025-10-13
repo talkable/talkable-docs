@@ -1,5 +1,5 @@
 services:
-  docs-nginx:
+  nginx:
     image: nginx:1.29-alpine3.22
     platform: linux/arm64/v8
     environment:
@@ -9,13 +9,12 @@ services:
     ports:
       - ${LOCAL_PORT}:80
     volumes:
-      - docs_html:/var/www/html
-      - docs_md:/var/www/md
+      - docs_www:/var/www
       - ./nginx/robots:/var/www/robots
       - ./nginx/templates:/etc/nginx/templates
       - ./nginx/redirects.conf:/etc/nginx/redirects.conf
 
-  docs-sphinx-init:
+  sphinx-init:
     platform: linux/arm64/v8
     build:
       context: ./sphinx
@@ -24,13 +23,13 @@ services:
         MODE: "init"
     container_name: docs-sphinx-init-${ENVIRONMENT}
     environment:
-      ENVIRONMENT: ${ENVIRONMENT}
+      BASE_URL: ${BASE_URL}
     volumes:
-      - docs_html:/var/www
+      - docs_www:/var/www
       - ./source:/docs/source
     restart: "no"
 
-  docs-sphinx-builder:
+  sphinx-builder:
     platform: linux/arm64/v8
     build:
       context: ./sphinx
@@ -39,37 +38,55 @@ services:
         MODE: "builder"
     container_name: docs-sphinx-builder-${ENVIRONMENT}
     environment:
-      ENVIRONMENT: ${ENVIRONMENT}
+      BASE_URL: ${BASE_URL}
     volumes:
-      - docs_html:/var/www
+      - docs_www:/var/www
       - ./source:/docs/source
     restart: unless-stopped
     profiles: ["local"]
     depends_on:
-      docs-sphinx-init:
+      sphinx-init:
         condition: service_completed_successfully
 
-  docs-llms-txt:
+  llms-txt-init:
     platform: linux/arm64/v8
     build:
       context: ./llms-txt
       dockerfile: Dockerfile
-    container_name: docs-llms-txt-${ENVIRONMENT}
-    restart: unless-stopped
+    container_name: docs-llms-txt-init-${ENVIRONMENT}
+    environment:
+      LLMS_TXT_OUTPUT__DIR: "/var/www/md"
+      LLMS_TXT_CORE__BASE_URL: ${BASE_URL}
     volumes:
-      - docs_md:/app/output
-      - ./llms-txt/config.toml:/app/config.toml
+      - docs_www:/var/www
       - ./llms-txt/src:/app/src
+    restart: "no"
     depends_on:
-      docs-sphinx-init:
+      sphinx-init:
         condition: service_completed_successfully
-      docs-nginx:
+      nginx:
         condition: service_started
 
+  llms-txt-builder:
+    platform: linux/arm64/v8
+    build:
+      context: ./llms-txt
+      dockerfile: Dockerfile
+    container_name: docs-llms-txt-builder-${ENVIRONMENT}
+    environment:
+      LLMS_TXT_OUTPUT__DIR: "/var/www/md"
+      LLMS_TXT_CORE__BASE_URL: ${BASE_URL}
+      LLMS_TXT_MONITORING__ENABLED: "true"
+    volumes:
+      - docs_www:/var/www
+      - ./llms-txt/src:/app/src
+    restart: unless-stopped
+    profiles: ["local"]
+    depends_on:
+      llms-txt-init:
+        condition: service_completed_successfully
+
 volumes:
-  docs_html:
-    name: docs_html
-    driver: local
-  docs_md:
-    name: docs_md
+  docs_www:
+    name: docs_www
     driver: local

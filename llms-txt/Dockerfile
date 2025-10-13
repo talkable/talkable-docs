@@ -21,4 +21,5 @@ RUN PLAYWRIGHT_BROWSERS_PATH=/app/ms-playwright uv run python -m playwright inst
 
 ENV PLAYWRIGHT_BROWSERS_PATH=/app/ms-playwright
 
-CMD ["uv", "run", "python", "-m", "talkable_llm_txt"]
+# Runtime command - run once for init, monitor for builder
+CMD ["uv", "run", "talkable-llm-txt"]

@@ -14,7 +14,7 @@ class TestEnvironmentVariables:
         env_vars_to_clear = [
             "LLMS_TXT_MONITORING__ENABLED",
             "LLMS_TXT_PROCESSING__MAX_CONCURRENT_REQUESTS",
-            "LLMS_TXT_OUTPUT__DIR",
+            "LLMS_TXT_CORE__OUTPUT_DIR",
         ]
         for var in env_vars_to_clear:
             os.environ.pop(var, None)
@@ -42,12 +42,12 @@ class TestEnvironmentVariables:
         assert settings.processing.max_concurrent_requests == 8
 
     def test_output_dir_env_override(self):
-        """Test output.dir can be overridden."""
+        """Test core.output_dir can be overridden."""
         # Set environment variable
-        os.environ["LLMS_TXT_OUTPUT__DIR"] = "/tmp/custom-output"
+        os.environ["LLMS_TXT_CORE__OUTPUT_DIR"] = "/tmp/custom-output"
 
         # Load settings
         settings = Settings.create("config.toml.template")
 
         # Check that env var overrides TOML default
-        assert settings.output.dir == "/tmp/custom-output"
+        assert settings.core.output_dir == "/tmp/custom-output"

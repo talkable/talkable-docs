@@ -17,28 +17,43 @@ from pydantic_settings import (
 from pydantic_settings.sources import TomlConfigSettingsSource
 
 
-class SitemapConfig(BaseModel):
-    """Sitemap configuration settings."""
+class CoreConfig(BaseModel):
+    """Core configuration settings combining base URL, sitemap, and output."""
 
-    url: str = Field(description="URL of the sitemap to process")
+    # Base URL (mandatory)
+    base_url: str = Field(description="Base URL of the documentation site")
 
-    @field_validator("url", mode="after")
-    @classmethod
-    def validate_sitemap_url(cls, v: str) -> str:
-        """Validate sitemap URL format."""
-        if not v.startswith(("http://", "https://")):
-            raise ValueError("Sitemap URL must start with http:// or https://")
-        if not v.strip():
-            raise ValueError("Sitemap URL cannot be empty")
-        return v
+    # Sitemap URL (optional - defaults to {base_url}/sitemap.xml)
+    sitemap_url: Optional[str] = Field(
+        default=None,
+        description="URL of the sitemap to process. If not provided, will be generated as {base_url}/sitemap.xml",
+    )
 
-
-class OutputConfig(BaseModel):
-    """Output configuration settings."""
-
-    dir: str = Field(
+    # Output directory (existing - moved here)
+    output_dir: str = Field(
         default="output", description="Directory where markdown files will be saved"
     )
+
+    @field_validator("base_url", mode="after")
+    @classmethod
+    def validate_base_url(cls, v: str) -> str:
+        """Validate base URL format."""
+        if not v.startswith(("http://", "https://")):
+            raise ValueError("Base URL must start with http:// or https://")
+        return v.rstrip("/")
+
+    @field_validator("sitemap_url", mode="after")
+    @classmethod
+    def validate_sitemap_url(cls, v: Optional[str]) -> Optional[str]:
+        """Validate sitemap URL format if provided."""
+        if v is not None and v.strip():
+            if not v.startswith(("http://", "https://")):
+                raise ValueError("Sitemap URL must start with http:// or https://")
+        return v
+
+    def get_effective_sitemap_url(self) -> str:
+        """Get the effective sitemap URL (provided or derived from base URL)."""
+        return self.sitemap_url or f"{self.base_url}/sitemap.xml"
 
 
 class ProcessingConfig(BaseModel):
@@ -51,14 +66,14 @@ class ProcessingConfig(BaseModel):
     )
 
     max_concurrent_requests: int = Field(
-        default=3,
+        default=5,
         ge=1,
         le=10,
         description="Maximum concurrent requests for fetching URLs",
     )
 
     batch_size: int = Field(
-        default=50, ge=1, le=200, description="Number of URLs to process in each batch"
+        default=10, ge=1, le=200, description="Number of URLs to process in each batch"
     )
 
     request_timeout: int = Field(
@@ -192,16 +207,26 @@ class Settings(BaseSettings):
     )
 
     # Configuration groups
-    sitemap: SitemapConfig = Field(description="Sitemap configuration")
-    output: OutputConfig = Field(description="Output configuration")
-    processing: ProcessingConfig = Field(description="Processing configuration")
-    content: ContentConfig = Field(description="Content configuration")
-    performance: PerformanceConfig = Field(description="Performance configuration")
-    sitemap_fetching: SitemapFetchingConfig = Field(
-        description="Sitemap fetching configuration"
+    core: CoreConfig = Field(description="Core configuration")
+    processing: ProcessingConfig = Field(
+        default_factory=ProcessingConfig, description="Processing configuration"
     )
-    monitoring: MonitoringConfig = Field(description="Monitoring configuration")
-    logging: LoggingConfig = Field(description="Logging configuration")
+    content: ContentConfig = Field(
+        default_factory=ContentConfig, description="Content configuration"
+    )
+    performance: PerformanceConfig = Field(
+        default_factory=PerformanceConfig, description="Performance configuration"
+    )
+    sitemap_fetching: SitemapFetchingConfig = Field(
+        default_factory=SitemapFetchingConfig,
+        description="Sitemap fetching configuration",
+    )
+    monitoring: MonitoringConfig = Field(
+        default_factory=MonitoringConfig, description="Monitoring configuration"
+    )
+    logging: LoggingConfig = Field(
+        default_factory=LoggingConfig, description="Logging configuration"
+    )
 
     def __init__(self, **kwargs):
         """Initialize settings with config file support."""
@@ -213,36 +238,47 @@ class Settings(BaseSettings):
         Factory method that loads configuration from TOML file with environment variable overrides.
 
         Args:
-            config_file: Path to the TOML configuration file
+            config_file: Path to the TOML configuration file (optional)
 
         Returns:
-            Settings instance loaded from the configuration file with env var overrides
+            Settings instance loaded from the configuration file with env var overrides.
+            If config file doesn't exist, uses defaults and environment variables.
 
         Raises:
-            FileNotFoundError: If config file doesn't exist
-            ValueError: If config file is invalid
+            ValueError: If required configuration fields are missing from all sources
         """
-        from pathlib import Path
+        from pydantic import ValidationError
 
-        config_path = Path(config_file)
-        if not config_path.exists():
-            raise FileNotFoundError(f"Configuration file not found: {config_file}")
+        # Update the model config to use the specified config file
+        # Pydantic will handle missing files gracefully
+        cls.model_config["toml_file"] = config_file
 
-        # Validate TOML syntax but let Pydantic handle the actual loading
         try:
-            import toml
-
-            with open(config_path, "r", encoding="utf-8") as f:
-                toml.load(f)  # Validate TOML syntax
-
-            # Update the model config to use the specified config file
-            cls.model_config["toml_file"] = config_file
-
-            # Create settings instance - Pydantic will load TOML and apply env var overrides
+            # Create settings instance - Pydantic will load TOML if it exists,
+            # and apply environment variable overrides, then fall back to defaults
             config = cls()
             return config
-        except Exception as e:
-            raise ValueError(f"Error loading configuration from {config_file}: {e}")
+        except ValidationError as e:
+            # Extract missing required fields for better error message
+            missing_fields = []
+            for error in e.errors():
+                if error["type"] == "missing":
+                    # Get the field path as a string
+                    field_path = ".".join(str(loc) for loc in error["loc"])
+                    missing_fields.append(field_path)
+
+            if missing_fields:
+                raise ValueError(
+                    f"Missing required configuration fields: {', '.join(missing_fields)}. "
+                    f"Please provide these via:\n"
+                    f"  1. Environment variables (with LLMS_TXT_ prefix)\n"
+                    f"  2. Config file: {config_file}\n"
+                    f"  3. Command line arguments\n\n"
+                    f"Example environment variables:\n"
+                    f"  export LLMS_TXT_CORE__BASE_URL='https://docs.example.com'\n"
+                    f"  export LLMS_TXT_CORE__SITEMAP_URL='https://docs.example.com/sitemap.xml'"
+                ) from e
+            raise
 
     def get_playwright_fetcher_config(self) -> dict:
         """Get configuration for PlaywrightFetcher."""
@@ -277,7 +313,7 @@ class Settings(BaseSettings):
     def get_file_writer_config(self) -> dict:
         """Get configuration for FileWriter."""
         return {
-            "output_dir": self.output.dir,
+            "output_dir": self.core.output_dir,
         }
 
     def get_logging_config(self) -> dict:

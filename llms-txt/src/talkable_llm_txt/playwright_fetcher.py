@@ -31,7 +31,7 @@ class PlaywrightFetcher:
         wait_until: Optional[
             Literal["commit", "domcontentloaded", "load", "networkidle"]
         ] = None,
-        batch_size: int = 50,
+        batch_size: int = 10,
         blocked_resource_types: Optional[Set[str]] = None,
     ):
         self.max_concurrent = max_concurrent or self.DEFAULT_MAX_CONCURRENT

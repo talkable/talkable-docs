@@ -4,26 +4,51 @@
 # This file contains all configuration parameters for the talkable-llm-txt
 # application. Parameters are organized by functional groups for clarity.
 #
+# Environment Variable Override Pattern:
+# LLMS_TXT_<SECTION>__<SETTING>=<value>
+# Example: LLMS_TXT_CORE__BASE_URL="https://docs.example.com"
+#
 # Required parameters must be provided, optional parameters use defaults.
+# =============================================================================
+
+# =============================================================================
+# MIGRATION GUIDE
+# =============================================================================
+# If upgrading from a previous version:
+# 1. Replace [sitemap] and [output] sections with [core] section
+# 2. Update environment variables:
+#    - LLMS_TXT_SITEMAP__URL → LLMS_TXT_CORE__SITEMAP_URL
+#    - LLMS_TXT_OUTPUT__DIR → LLMS_TXT_CORE__OUTPUT_DIR
+#    - Add LLMS_TXT_CORE__BASE_URL (required)
 # =============================================================================
 
 # =============================================================================
 # CORE SETTINGS
 # =============================================================================
 
-[sitemap]
-# URL of the sitemap to process (required)
+[core]
+# Base URL of the documentation site (required)
+# This is the main URL for the documentation site, used to generate sitemap URL
+# and normalize relative links in the documentation.
+# Example: "https://docs.talkable.com"
+# Required: true
+# Environment Variable: LLMS_TXT_CORE__BASE_URL
+base_url = "https://docs.talkable.com"
+
+# URL of the sitemap to process (optional)
+# If not provided, will be generated as: {base_url}/sitemap.xml
 # This is the primary source for discovering documentation URLs
 # Example: "https://docs.talkable.com/sitemap.xml"
-# Required: true
-url = "https://docs.talkable.com/sitemap.xml"
+# Required: false
+# Environment Variable: LLMS_TXT_CORE__SITEMAP_URL
+# sitemap_url = ""
 
-[output]
 # Directory where markdown files will be saved (optional)
 # Files are organized in subdirectories matching the URL structure
 # Default: "output"
 # Required: false
-# dir = 
+# Environment Variable: LLMS_TXT_CORE__OUTPUT_DIR
+# output_dir = "" 
 
 # =============================================================================
 # PROCESSING SETTINGS
@@ -36,22 +61,25 @@ url = "https://docs.talkable.com/sitemap.xml"
 # Range: 1+ (no maximum limit)
 # Default: None (process all URLs)
 # Required: false
+# Environment Variable: LLMS_TXT_PROCESSING__MAX_URLS_TO_PROCESS
 # max_urls_to_process = 
 
 # Maximum concurrent requests for fetching URLs (optional)
 # Controls how many URLs are fetched simultaneously
 # Higher values improve performance but increase memory usage
 # Range: 1-10
-# Default: 3
+# Default: 5
 # Required: false
+# Environment Variable: LLMS_TXT_PROCESSING__MAX_CONCURRENT_REQUESTS
 # max_concurrent_requests = 
 
 # Number of URLs to process in each batch (optional)
 # Controls memory usage by processing URLs in batches
 # Higher values use more memory but may be slightly faster
 # Range: 1-200
-# Default: 50
+# Default: 10
 # Required: false
+# Environment Variable: LLMS_TXT_PROCESSING__BATCH_SIZE
 # batch_size = 
 
 # Timeout for individual URL requests in milliseconds (optional)
@@ -59,6 +87,7 @@ url = "https://docs.talkable.com/sitemap.xml"
 # Range: 1000-300000 (1 second to 5 minutes)
 # Default: 30000
 # Required: false
+# Environment Variable: LLMS_TXT_PROCESSING__REQUEST_TIMEOUT
 # request_timeout = 
 
 # =============================================================================
@@ -71,6 +100,7 @@ url = "https://docs.talkable.com/sitemap.xml"
 # If true, images are preserved as-is in the markdown
 # Default: false
 # Required: false
+# Environment Variable: LLMS_TXT_CONTENT__KEEP_IMAGES
 # keep_images = 
 
 # Markdown heading style to use (optional)
@@ -78,6 +108,7 @@ url = "https://docs.talkable.com/sitemap.xml"
 # Options: "atx" (# Heading), "atx_closed" (# Heading #), "underlined" (Heading\n===)
 # Default: "atx"
 # Required: false
+# Environment Variable: LLMS_TXT_CONTENT__HEADING_STYLE
 # heading_style = 
 
 # =============================================================================
@@ -94,6 +125,7 @@ url = "https://docs.talkable.com/sitemap.xml"
 # - "networkidle": Wait for network activity to cease (slowest)
 # Default: "domcontentloaded"
 # Required: false
+# Environment Variable: LLMS_TXT_PERFORMANCE__WAIT_UNTIL
 # wait_until = 
 
 # Resource types to block during page loading (optional)
@@ -102,6 +134,7 @@ url = "https://docs.talkable.com/sitemap.xml"
 # Empty string means no blocking
 # Default: "image,media,font"
 # Required: false
+# Environment Variable: LLMS_TXT_PERFORMANCE__BLOCKED_RESOURCE_TYPES
 # blocked_resource_types = 
 
 # =============================================================================
@@ -114,6 +147,7 @@ url = "https://docs.talkable.com/sitemap.xml"
 # Range: 1-300 (1 second to 5 minutes)
 # Default: 30
 # Required: false
+# Environment Variable: LLMS_TXT_SITEMAP_FETCHING__TIMEOUT
 # timeout = 
 
 # Number of retry attempts for failed sitemap requests (optional)
@@ -122,6 +156,7 @@ url = "https://docs.talkable.com/sitemap.xml"
 # Range: 0-10
 # Default: 3
 # Required: false
+# Environment Variable: LLMS_TXT_SITEMAP_FETCHING__RETRIES
 # retries = 
 
 # User agent string for HTTP requests (optional)
@@ -129,6 +164,7 @@ url = "https://docs.talkable.com/sitemap.xml"
 # Some servers may block certain user agents
 # Default: "Mozilla/5.0 (compatible; SitemapProcessor/1.0)"
 # Required: false
+# Environment Variable: LLMS_TXT_SITEMAP_FETCHING__USER_AGENT
 # user_agent = 
 
 # =============================================================================
@@ -141,6 +177,7 @@ url = "https://docs.talkable.com/sitemap.xml"
 # checks for documentation changes and triggers regeneration when needed
 # Default: false
 # Required: false
+# Environment Variable: LLMS_TXT_MONITORING__ENABLED
 # enabled = 
 
 # URL to monitor for changes (optional)
@@ -149,6 +186,7 @@ url = "https://docs.talkable.com/sitemap.xml"
 # If not specified, will use the sitemap URL as default
 # Default: "" (uses sitemap URL)
 # Required: false
+# Environment Variable: LLMS_TXT_MONITORING__CHECK_URL
 # check_url = 
 
 # Interval in minutes between checks (optional)
@@ -156,12 +194,14 @@ url = "https://docs.talkable.com/sitemap.xml"
 # Range: 1-1440 (1 minute to 24 hours)
 # Default: 1
 # Required: false
+# Environment Variable: LLMS_TXT_MONITORING__CHECK_INTERVAL_MINUTES
 # check_interval_minutes = 
 
 # File to store ETag cache (optional)
 # JSON file that stores ETag values for change detection
 # Default: "etag_cache.json"
 # Required: false
+# Environment Variable: LLMS_TXT_MONITORING__ETAG_CACHE_FILE
 # etag_cache_file = 
 
 # =============================================================================
@@ -179,4 +219,5 @@ url = "https://docs.talkable.com/sitemap.xml"
 # - CRITICAL: Serious errors that may stop execution
 # Default: "INFO"
 # Required: false
+# Environment Variable: LLMS_TXT_LOGGING__LEVEL
 # level =

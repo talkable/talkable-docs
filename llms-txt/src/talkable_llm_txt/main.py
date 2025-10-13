@@ -1,7 +1,6 @@
 import asyncio
 import logging
 import signal
-from urllib.parse import urlparse
 
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.interval import IntervalTrigger
@@ -45,7 +44,9 @@ async def run_pipeline():
     # Process sitemap to get URLs
     app_logger.info("Processing sitemap...")
     sitemap_config = app_config.get_sitemap_processor_config()
-    processor = SitemapProcessor(sitemap_url=app_config.sitemap.url, **sitemap_config)
+    processor = SitemapProcessor(
+        sitemap_url=app_config.core.get_effective_sitemap_url(), **sitemap_config
+    )
     app_logger.info(f"Found {len(processor.processed_urls)} URLs")
 
     # Get URLs to process (limited by configuration or all if None)
@@ -67,12 +68,11 @@ async def run_pipeline():
     fetcher_config = app_config.get_playwright_fetcher_config()
     fetcher = PlaywrightFetcher(**fetcher_config)
 
-    # Extract base URL from sitemap URL for link processing
-    parsed_url = urlparse(app_config.sitemap.url)
-    base_url = f"{parsed_url.scheme}://{parsed_url.netloc}"
-
+    # Use base URL from core configuration for link processing
     preprocessor_config = app_config.get_html_preprocessor_config()
-    preprocessor = HTMLPreprocessor(base_url=base_url, **preprocessor_config)
+    preprocessor = HTMLPreprocessor(
+        base_url=app_config.core.base_url, **preprocessor_config
+    )
 
     converter_config = app_config.get_markdown_converter_config()
     converter = MarkdownConverter(**converter_config)
@@ -180,7 +180,9 @@ async def run_scheduler():
     monitoring_config = app_config.get_monitoring_config()
 
     # Use sitemap URL as default if no monitoring URL is configured
-    monitor_url = monitoring_config["check_url"] or app_config.sitemap.url
+    monitor_url = (
+        monitoring_config["check_url"] or app_config.core.get_effective_sitemap_url()
+    )
 
     app_logger.info("Starting documentation scheduler...")
     app_logger.info(f"Monitoring URL: {monitor_url}")
