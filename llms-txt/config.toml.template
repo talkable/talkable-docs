@@ -12,17 +12,6 @@
 # =============================================================================
 
 # =============================================================================
-# MIGRATION GUIDE
-# =============================================================================
-# If upgrading from a previous version:
-# 1. Replace [sitemap] and [output] sections with [core] section
-# 2. Update environment variables:
-#    - LLMS_TXT_SITEMAP__URL → LLMS_TXT_CORE__SITEMAP_URL
-#    - LLMS_TXT_OUTPUT__DIR → LLMS_TXT_CORE__OUTPUT_DIR
-#    - Add LLMS_TXT_CORE__BASE_URL (required)
-# =============================================================================
-
-# =============================================================================
 # CORE SETTINGS
 # =============================================================================
 
@@ -68,7 +57,7 @@ base_url = "https://docs.talkable.com"
 # Controls how many URLs are fetched simultaneously
 # Higher values improve performance but increase memory usage
 # Range: 1-10
-# Default: 5
+# Default: 3
 # Required: false
 # Environment Variable: LLMS_TXT_PROCESSING__MAX_CONCURRENT_REQUESTS
 # max_concurrent_requests = 
