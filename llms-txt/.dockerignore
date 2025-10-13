@@ -1,9 +1,0 @@
-.git
-__pycache__/
-*.pyc
-tests/
-*.md
-.envrc
-Makefile
-etag_cache.json
-nginx/

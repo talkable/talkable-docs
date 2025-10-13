@@ -16,10 +16,6 @@ COPY pyproject.toml uv.lock ./
 RUN pip install --no-cache-dir uv && \
     uv sync --locked --no-dev
 
-# Copy application code
-COPY src/ ./src/
-COPY config.toml ./
-
 # Install Playwright browsers
 RUN PLAYWRIGHT_BROWSERS_PATH=/app/ms-playwright uv run python -m playwright install --with-deps chromium
 

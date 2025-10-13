@@ -37,13 +37,13 @@ server {
 
     # Serve llms.txt
     location = /llms.txt {
-        alias /var/www/html/md/index.md;
+        alias /var/www/md/index.md;
         add_header Content-Type "text/plain; charset=utf-8" always;
     }
     
     # Serve markdown files
     location ~* \.md$ {
-        root /var/www/html/md;
+        root /var/www/md;
         types {
             text/markdown md;
         }
@@ -51,7 +51,7 @@ server {
 
     # Serve robots.txt dynamically based on environment variable
     location = /robots.txt {
-        alias /var/www/${ENVIRONMENT}.txt;
+        alias /var/www/robots/${ENVIRONMENT}.txt;
         access_log off;
         log_not_found off;
     }

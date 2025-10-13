@@ -23,7 +23,7 @@ url = "https://docs.talkable.com/sitemap.xml"
 # Files are organized in subdirectories matching the URL structure
 # Default: "output"
 # Required: false
-# dir = 
+dir = "/var/www/md"
 
 # =============================================================================
 # PROCESSING SETTINGS

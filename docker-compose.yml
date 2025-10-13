@@ -1,17 +1,30 @@
 services:
   docs-nginx:
+    image: nginx:1.29-alpine3.22
     platform: linux/arm64/v8
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args:
-        ENVIRONMENT: ${ENVIRONMENT}
+    environment:
+      ENVIRONMENT: ${ENVIRONMENT}
     container_name: docs-nginx-${ENVIRONMENT}
     restart: unless-stopped
     ports:
       - ${LOCAL_PORT}:80
     volumes:
-      - docs_llms_txt:/var/www/html/md:ro
+      - docs_www:/var/www
+      - ./nginx/templates:/etc/nginx/templates
+      - ./nginx/robots:/var/www/robots
+      - ./nginx/redirects.conf:/etc/nginx/redirects.conf
+
+  docs-sphinx:
+    platform: linux/arm64/v8
+    build:
+      context: ./sphinx
+      dockerfile: Dockerfile
+      args:
+        ENVIRONMENT: ${ENVIRONMENT}
+    container_name: docs-sphinx-${ENVIRONMENT}
+    volumes:
+      - docs_www:/var/www
+      - ./source:/docs/source
 
   docs-llms-txt:
     platform: linux/arm64/v8
@@ -21,11 +34,13 @@ services:
     container_name: docs-llms-txt-${ENVIRONMENT}
     restart: unless-stopped
     volumes:
-      - docs_llms_txt:/app/output
+      - docs_www:/var/www
+      - ./llms-txt/config.toml:/app/config.toml
+      - ./llms-txt/src:/app/src
     depends_on:
       - docs-nginx
 
 volumes:
-  docs_llms_txt:
-    name: docs_llms_txt
+  docs_www:
+    name: docs_www
     driver: local
