@@ -9,7 +9,12 @@ proper validation and defaults.
 from typing import Literal, Optional, Set
 
 from pydantic import BaseModel, Field, field_validator
-from pydantic_settings import BaseSettings, SettingsConfigDict
+from pydantic_settings import (
+    BaseSettings,
+    PydanticBaseSettingsSource,
+    SettingsConfigDict,
+)
+from pydantic_settings.sources import TomlConfigSettingsSource
 
 
 class SitemapConfig(BaseModel):
@@ -141,8 +146,8 @@ class MonitoringConfig(BaseModel):
     """Monitoring configuration settings."""
 
     enabled: bool = Field(
-        default=True,
-        description="Enable scheduled monitoring for documentation changes (enabled by default)",
+        default=False,
+        description="Enable scheduled monitoring for documentation changes (disabled by default)",
     )
 
     check_url: str = Field(
@@ -151,7 +156,7 @@ class MonitoringConfig(BaseModel):
     )
 
     check_interval_minutes: int = Field(
-        default=60, ge=1, le=1440, description="Interval in minutes between checks"
+        default=1, ge=1, le=1440, description="Interval in minutes between checks"
     )
 
     etag_cache_file: str = Field(
@@ -173,13 +178,17 @@ class Settings(BaseSettings):
 
     This class loads configuration from config.toml file and provides
     centralized access to all application parameters with validation.
+    Environment variables with LLMS_TXT_ prefix can override TOML values.
     """
 
     model_config = SettingsConfigDict(
+        toml_file="config.toml",  # Specify TOML file in config
         env_file=None,  # Disable .env file loading
         env_nested_delimiter="__",
+        env_prefix="LLMS_TXT_",
         case_sensitive=False,
         extra="forbid",  # Reject extra fields
+        nested_model_default_partial_update=True,  # Better nested field handling
     )
 
     # Configuration groups
@@ -201,13 +210,13 @@ class Settings(BaseSettings):
     @classmethod
     def create(cls, config_file: str = "config.toml") -> "Settings":
         """
-        Factory method that loads configuration from TOML file.
+        Factory method that loads configuration from TOML file with environment variable overrides.
 
         Args:
             config_file: Path to the TOML configuration file
 
         Returns:
-            Settings instance loaded from the configuration file
+            Settings instance loaded from the configuration file with env var overrides
 
         Raises:
             FileNotFoundError: If config file doesn't exist
@@ -215,18 +224,22 @@ class Settings(BaseSettings):
         """
         from pathlib import Path
 
-        import toml
-
         config_path = Path(config_file)
         if not config_path.exists():
             raise FileNotFoundError(f"Configuration file not found: {config_file}")
 
+        # Validate TOML syntax but let Pydantic handle the actual loading
         try:
-            with open(config_path, "r", encoding="utf-8") as f:
-                config_data = toml.load(f)
+            import toml
 
-            # Create settings instance
-            config = cls(**config_data)
+            with open(config_path, "r", encoding="utf-8") as f:
+                toml.load(f)  # Validate TOML syntax
+
+            # Update the model config to use the specified config file
+            cls.model_config["toml_file"] = config_file
+
+            # Create settings instance - Pydantic will load TOML and apply env var overrides
+            config = cls()
             return config
         except Exception as e:
             raise ValueError(f"Error loading configuration from {config_file}: {e}")
@@ -272,6 +285,36 @@ class Settings(BaseSettings):
         return {
             "level": self.logging.level,
         }
+
+    @classmethod
+    def settings_customise_sources(
+        cls,
+        settings_cls: type[BaseSettings],
+        init_settings: PydanticBaseSettingsSource,
+        env_settings: PydanticBaseSettingsSource,
+        dotenv_settings: PydanticBaseSettingsSource,
+        file_secret_settings: PydanticBaseSettingsSource,
+    ) -> tuple[PydanticBaseSettingsSource, ...]:
+        """
+        Customize source priority: Environment variables override TOML file.
+        Environment variables have highest priority, then TOML file, then init args.
+        """
+        from pathlib import Path
+
+        toml_file = settings_cls.model_config.get("toml_file", "config.toml")
+        sources = []
+
+        # Highest priority: Environment variables (override TOML values)
+        sources.append(env_settings)
+
+        # Medium priority: TOML configuration file
+        if isinstance(toml_file, (str, Path)) and Path(toml_file).exists():
+            sources.append(TomlConfigSettingsSource(settings_cls, str(toml_file)))
+
+        # Lowest priority: Initialization arguments
+        sources.append(init_settings)
+
+        return tuple(sources)
 
     def get_monitoring_config(self) -> dict:
         """Get configuration for monitoring."""

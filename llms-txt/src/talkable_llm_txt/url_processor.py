@@ -73,14 +73,16 @@ class MarkdownFileConverter(URLProcessor):
         path = path + ".md"
 
         # Reconstruct URL with new path, preserving other components
-        return urlunparse((
-            parsed.scheme,
-            parsed.netloc,
-            path,
-            parsed.params,
-            parsed.query,
-            parsed.fragment,  # Preserve #anchor
-        ))
+        return urlunparse(
+            (
+                parsed.scheme,
+                parsed.netloc,
+                path,
+                parsed.params,
+                parsed.query,
+                parsed.fragment,  # Preserve #anchor
+            )
+        )
 
 
 class LinkProcessor:

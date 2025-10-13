@@ -9,9 +9,10 @@ services:
     ports:
       - ${LOCAL_PORT}:80
     volumes:
-      - docs_www:/var/www
-      - ./nginx/templates:/etc/nginx/templates
+      - docs_html:/var/www/html
+      - docs_md:/var/www/md
       - ./nginx/robots:/var/www/robots
+      - ./nginx/templates:/etc/nginx/templates
       - ./nginx/redirects.conf:/etc/nginx/redirects.conf
 
   docs-sphinx-init:
@@ -25,7 +26,7 @@ services:
     environment:
       ENVIRONMENT: ${ENVIRONMENT}
     volumes:
-      - docs_www:/var/www
+      - docs_html:/var/www
       - ./source:/docs/source
     restart: "no"
 
@@ -40,7 +41,7 @@ services:
     environment:
       ENVIRONMENT: ${ENVIRONMENT}
     volumes:
-      - docs_www:/var/www
+      - docs_html:/var/www
       - ./source:/docs/source
     restart: unless-stopped
     profiles: ["local"]
@@ -56,7 +57,7 @@ services:
     container_name: docs-llms-txt-${ENVIRONMENT}
     restart: unless-stopped
     volumes:
-      - docs_www:/var/www
+      - docs_md:/app/output
       - ./llms-txt/config.toml:/app/config.toml
       - ./llms-txt/src:/app/src
     depends_on:
@@ -66,6 +67,9 @@ services:
         condition: service_started
 
 volumes:
-  docs_www:
-    name: docs_www
+  docs_html:
+    name: docs_html
+    driver: local
+  docs_md:
+    name: docs_md
     driver: local

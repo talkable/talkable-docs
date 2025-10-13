@@ -23,7 +23,7 @@ url = "https://docs.talkable.com/sitemap.xml"
 # Files are organized in subdirectories matching the URL structure
 # Default: "output"
 # Required: false
-dir = "/var/www/md"
+# dir = 
 
 # =============================================================================
 # PROCESSING SETTINGS
@@ -139,7 +139,7 @@ dir = "/var/www/md"
 # Enable scheduled monitoring for documentation changes (optional)
 # When enabled, the application will run as a scheduler that periodically
 # checks for documentation changes and triggers regeneration when needed
-# Default: true
+# Default: false
 # Required: false
 # enabled = 
 
@@ -154,7 +154,7 @@ dir = "/var/www/md"
 # Interval in minutes between checks (optional)
 # How often to check the documentation URL for changes
 # Range: 1-1440 (1 minute to 24 hours)
-# Default: 60
+# Default: 1
 # Required: false
 # check_interval_minutes = 
 

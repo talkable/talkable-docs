@@ -63,54 +63,90 @@ async def run_pipeline():
         ]
         app_logger.info(f"Processing first {len(urls_to_fetch)} URLs...")
 
-    # Fetch HTML content
+    # Initialize components once for reuse across batches
     fetcher_config = app_config.get_playwright_fetcher_config()
     fetcher = PlaywrightFetcher(**fetcher_config)
-    results = await fetcher.fetch_urls(urls_to_fetch)
 
-    # Process HTML to extract articles
     # Extract base URL from sitemap URL for link processing
     parsed_url = urlparse(app_config.sitemap.url)
     base_url = f"{parsed_url.scheme}://{parsed_url.netloc}"
 
     preprocessor_config = app_config.get_html_preprocessor_config()
     preprocessor = HTMLPreprocessor(base_url=base_url, **preprocessor_config)
-    processed_results = preprocessor.process_urls(results)
 
-    # Convert articles to markdown
     converter_config = app_config.get_markdown_converter_config()
     converter = MarkdownConverter(**converter_config)
 
-    # Collect articles that have content and convert to markdown
-    markdown_results = []
-    for result in processed_results:
-        if result.get("has_article") and result.get("article"):
-            markdown_content = converter.convert_article(result["article"])
-            markdown_results.append({
-                "url": result["url"],
-                "markdown": markdown_content,
-            })
-
-    # Save markdown files to local drive
     file_writer_config = app_config.get_file_writer_config()
     file_writer = FileWriter(**file_writer_config)
-    saved_files = []
 
-    for result in markdown_results:
-        filepath = file_writer.save_markdown(result["url"], result["markdown"])
-        saved_files.append(filepath)
+    # Process URLs in batches with end-to-end processing
+    batch_size = app_config.processing.batch_size
+    total_batches = (len(urls_to_fetch) + batch_size - 1) // batch_size
 
-    # Show summary
+    # Track cumulative statistics
+    total_processed = 0
+    total_converted = 0
+    total_saved = 0
+
+    app_logger.info(
+        f"Processing {len(urls_to_fetch)} URLs in {total_batches} batches of {batch_size}..."
+    )
+
+    for batch_num in range(total_batches):
+        start_idx = batch_num * batch_size
+        end_idx = min(start_idx + batch_size, len(urls_to_fetch))
+        batch_urls = urls_to_fetch[start_idx:end_idx]
+
+        app_logger.info(
+            f"Processing batch {batch_num + 1}/{total_batches} ({len(batch_urls)} URLs)..."
+        )
+
+        # Fetch HTML content for this batch
+        batch_results = await fetcher.fetch_urls(batch_urls)
+
+        # Process HTML to extract articles for this batch
+        batch_processed_results = preprocessor.process_urls(batch_results)
+
+        # Convert articles to markdown and save immediately for this batch
+        batch_converted = 0
+        batch_saved = 0
+
+        for result in batch_processed_results:
+            total_processed += 1
+
+            if result.get("has_article") and result.get("article"):
+                # Convert to markdown
+                markdown_content = converter.convert_article(result["article"])
+                total_converted += 1
+                batch_converted += 1
+
+                # Save immediately
+                try:
+                    file_writer.save_markdown(result["url"], markdown_content)
+                    total_saved += 1
+                    batch_saved += 1
+                except Exception as e:
+                    app_logger.error(f"Failed to save {result['url']}: {e}")
+
+        # Log batch completion
+        app_logger.info(
+            f"Batch {batch_num + 1} completed: "
+            f"{batch_converted}/{len(batch_urls)} converted, "
+            f"{batch_saved}/{len(batch_urls)} saved"
+        )
+
+    # Show final summary
     app_logger.info("")
     app_logger.info(f"{'=' * 80}")
-    app_logger.info("SUMMARY")
+    app_logger.info("FINAL SUMMARY")
     app_logger.info(f"{'=' * 80}")
-    app_logger.info(f"Total URLs processed: {len(urls_to_fetch)}")
-    app_logger.info(f"Successfully converted to markdown: {len(markdown_results)}")
-    app_logger.info(f"Files saved to disk: {len(saved_files)}")
-    if len(urls_to_fetch) > 0:
+    app_logger.info(f"Total URLs processed: {total_processed}")
+    app_logger.info(f"Successfully converted to markdown: {total_converted}")
+    app_logger.info(f"Files saved to disk: {total_saved}")
+    if total_processed > 0:
         app_logger.info(
-            f"Success rate: {(len(markdown_results) / len(urls_to_fetch) * 100):.1f}%"
+            f"Success rate: {(total_converted / total_processed * 100):.1f}%"
         )
 
 
