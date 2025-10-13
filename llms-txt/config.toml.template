@@ -57,7 +57,7 @@ base_url = "https://docs.talkable.com"
 # Controls how many URLs are fetched simultaneously
 # Higher values improve performance but increase memory usage
 # Range: 1-10
-# Default: 3
+# Default: 5
 # Required: false
 # Environment Variable: LLMS_TXT_PROCESSING__MAX_CONCURRENT_REQUESTS
 # max_concurrent_requests = 
