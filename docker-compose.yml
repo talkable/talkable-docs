@@ -55,7 +55,7 @@ services:
       dockerfile: Dockerfile
     container_name: docs-llms-txt-init-${ENVIRONMENT}
     environment:
-      LLMS_TXT_OUTPUT__DIR: "/var/www/md"
+      LLMS_TXT_CORE__OUTPUT_DIR: "/var/www/md"
       LLMS_TXT_CORE__BASE_URL: ${BASE_URL}
     volumes:
       - docs_www:/var/www
@@ -74,7 +74,7 @@ services:
       dockerfile: Dockerfile
     container_name: docs-llms-txt-builder-${ENVIRONMENT}
     environment:
-      LLMS_TXT_OUTPUT__DIR: "/var/www/md"
+      LLMS_TXT_CORE__OUTPUT_DIR: "/var/www/md"
       LLMS_TXT_CORE__BASE_URL: ${BASE_URL}
       LLMS_TXT_MONITORING__ENABLED: "true"
     volumes:

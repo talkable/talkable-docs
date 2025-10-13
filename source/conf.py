@@ -208,7 +208,8 @@ htmlhelp_basename = "Talkabledoc"
 
 # The URL which points to the root of the HTML documentation.
 # It is used to indicate the location of document like canonical_url.
-html_baseurl = os.getenv("BASE_URL", "http://docs.talkable.com").strip("/")
+base_url = os.getenv("BASE_URL", "http://docs.talkable.com").rstrip("/")
+html_baseurl = f"{base_url}/"
 
 # -- Options for manual page output ---------------------------------------
 
