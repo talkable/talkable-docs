@@ -11,7 +11,7 @@ check-env:
 		echo "📋 To create the .env file:"; \
 		echo "   cp .env.template .env"; \
 		echo ""; \
-		echo "⚙️  Then edit .env and configure:"; \
+		echo "⚙️ Then edit .env and configure:"; \
 		echo "   - LOCAL_PORT (default: 8080)"; \
 		echo "   - ENVIRONMENT (local/staging/production)"; \
 		echo "   - BASE_URL (your local IP:port for local dev)"; \
