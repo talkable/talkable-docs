@@ -17,7 +17,7 @@ jobs:
   build:
     executor:
       name: default
-    working_directory: ~/project/sphinx  # Set working directory to sphinx folder
+    working_directory: ~/project/sphinx
 
     steps:
       - checkout:
