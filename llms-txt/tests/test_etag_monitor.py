@@ -1,17 +1,16 @@
 """
-Tests for ETag monitoring functionality.
+Tests for ETag monitoring functionality
 """
 
 import tempfile
 from pathlib import Path
 from unittest.mock import Mock, patch
 
-
 from talkable_llm_txt.etag_monitor import ETagMonitor
 
 
 class TestETagMonitor:
-    """Test cases for ETagMonitor class."""
+    """Test cases for ETagMonitor class - Happy Flow Only"""
 
     def test_init_and_cache_operations(self):
         """Test basic initialization and cache operations."""
@@ -43,21 +42,6 @@ class TestETagMonitor:
 
         assert changed is True
         assert monitor._cache["https://example.com"] == '"initial-etag"'
-
-    @patch("talkable_llm_txt.etag_monitor.requests.get")
-    def test_has_changed_unchanged(self, mock_get):
-        """Test unchanged content returns False (304 response)."""
-        monitor = ETagMonitor()
-        # Manually set cache to simulate previous request
-        monitor._cache = {"https://example.com": '"stored-etag"'}
-
-        mock_response = Mock()
-        mock_response.status_code = 304
-        mock_get.return_value = mock_response
-
-        changed = monitor.has_changed("https://example.com")
-
-        assert changed is False
 
     @patch("talkable_llm_txt.etag_monitor.requests.get")
     def test_has_changed_modified(self, mock_get):

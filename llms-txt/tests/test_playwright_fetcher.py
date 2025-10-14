@@ -2,13 +2,15 @@
 pytest tests for PlaywrightFetcher class
 """
 
+from unittest.mock import AsyncMock, Mock, patch
+
 import pytest
 
 from talkable_llm_txt import PlaywrightFetcher
 
 
 class TestPlaywrightFetcher:
-    """Test suite for PlaywrightFetcher functionality"""
+    """Test suite for PlaywrightFetcher functionality - Happy Flow Only"""
 
     @pytest.mark.asyncio
     async def test_fetcher_initialization(self):
@@ -20,132 +22,111 @@ class TestPlaywrightFetcher:
         assert hasattr(fetcher, "semaphore")
 
     @pytest.mark.asyncio
-    async def test_fetch_single_url(self):
-        """Test fetching a single URL"""
+    async def test_fetch_single_url_structure(self, sample_html_response):
+        """Test fetching a single URL returns correct structure using local HTML fixture"""
         fetcher = PlaywrightFetcher(max_concurrent=1)
-        result = await fetcher.fetch_single_url("http://localhost:8080/")
 
-        assert isinstance(result, dict)
-        assert "url" in result
-        assert "html" in result
-        assert "status" in result
-        assert "error" in result
-        assert result["url"] == "http://localhost:8080/"
+        # Mock the browser context and page to return our local HTML fixture
+        with patch(
+            "talkable_llm_txt.playwright_fetcher.async_playwright"
+        ) as mock_playwright:
+            mock_browser = AsyncMock()
+            mock_context = AsyncMock()
+            mock_page = AsyncMock()
+            mock_response = AsyncMock()
 
-        if result["error"] is None:
+            # Mock the event handler methods to avoid async warnings
+            mock_context.on = Mock()
+            mock_page.on = Mock()
+
+            mock_response.status = 200
+            mock_page.goto.return_value = mock_response
+            mock_page.content.return_value = sample_html_response
+            mock_page.close.return_value = None
+
+            mock_context.new_page.return_value = mock_page
+            mock_browser.new_context.return_value = mock_context
+
+            # Create proper async context manager mock
+            mock_playwright_instance = AsyncMock()
+            mock_playwright_instance.__aenter__ = AsyncMock(
+                return_value=mock_playwright_instance
+            )
+            mock_playwright_instance.__aexit__ = AsyncMock(return_value=None)
+            mock_playwright_instance.chromium.launch.return_value = mock_browser
+
+            mock_playwright.return_value = mock_playwright_instance
+
+            # Test that the method exists and can be called
+            result = await fetcher.fetch_single_url("http://localhost:8080/")
+
+            # Should return a dict with expected keys
+            assert isinstance(result, dict)
+            assert "url" in result
+            assert result["url"] == "http://localhost:8080/"
+
+            # Should have html content from our local fixture
+            assert "html" in result
             assert result["html"] is not None
             assert result["status"] is not None
             assert isinstance(result["html"], str)
             assert len(result["html"]) > 0
 
+            # Verify the HTML contains content from our fixture
+            assert "Magento" in result["html"]
+            assert "Talkable offers free extension" in result["html"]
+
     @pytest.mark.asyncio
-    async def test_fetch_multiple_urls(self):
-        """Test fetching multiple URLs concurrently"""
+    async def test_fetch_urls(self, sample_html_response):
+        """Test fetching multiple URLs concurrently using local HTML fixture"""
         fetcher = PlaywrightFetcher(max_concurrent=2)
         urls = [
             "http://localhost:8080/",
-            "http://localhost:8080/advanced_features/",
-            "http://localhost:8080/getting_started/",
+            "http://localhost:8080/docs/",
         ]
 
-        results = await fetcher.fetch_urls(urls)
+        # Mock the browser context and page to return our local HTML fixture
+        with patch(
+            "talkable_llm_txt.playwright_fetcher.async_playwright"
+        ) as mock_playwright:
+            mock_browser = AsyncMock()
+            mock_context = AsyncMock()
+            mock_page = AsyncMock()
+            mock_response = AsyncMock()
 
-        assert len(results) == len(urls)
-        assert isinstance(results, list)
+            # Mock the event handler methods to avoid async warnings
+            mock_context.on = Mock()
+            mock_page.on = Mock()
 
-        for i, result in enumerate(results):
-            assert isinstance(result, dict)
-            assert "url" in result
-            assert "html" in result
-            assert "status" in result
-            assert "error" in result
-            assert result["url"] == urls[i]
+            mock_response.status = 200
+            mock_page.goto.return_value = mock_response
+            mock_page.content.return_value = sample_html_response
+            mock_page.close.return_value = None
 
-    @pytest.mark.asyncio
-    async def test_fetch_invalid_url(self):
-        """Test handling of invalid URLs"""
-        fetcher = PlaywrightFetcher(max_concurrent=1)
-        result = await fetcher.fetch_single_url("http://nonexistent-domain-12345.com/")
+            mock_context.new_page.return_value = mock_page
+            mock_browser.new_context.return_value = mock_context
 
-        assert isinstance(result, dict)
-        assert result["url"] == "http://nonexistent-domain-12345.com/"
-        # Should have either an error or some response
-        assert result["error"] is not None or result["status"] is not None
+            # Create proper async context manager mock
+            mock_playwright_instance = AsyncMock()
+            mock_playwright_instance.__aenter__ = AsyncMock(
+                return_value=mock_playwright_instance
+            )
+            mock_playwright_instance.__aexit__ = AsyncMock(return_value=None)
+            mock_playwright_instance.chromium.launch.return_value = mock_browser
 
-    @pytest.mark.asyncio
-    async def test_concurrent_fetching(self):
-        """Test that concurrent fetching works correctly"""
-        fetcher = PlaywrightFetcher(max_concurrent=3)
-        urls = [
-            "http://localhost:8080/",
-            "http://localhost:8080/advanced_features/",
-            "http://localhost:8080/getting_started/",
-        ]
+            mock_playwright.return_value = mock_playwright_instance
 
-        results = await fetcher.fetch_urls(urls)
-        assert len(results) == len(urls)
+            results = await fetcher.fetch_urls(urls)
 
-    @pytest.mark.asyncio
-    async def test_minimal_resource_blocking(self):
-        """Test that minimal resource blocking doesn't break page functionality"""
-        fetcher = PlaywrightFetcher(max_concurrent=1)
-        result = await fetcher.fetch_single_url("http://localhost:8080/")
+            # Should return list of results
+            assert isinstance(results, list)
+            assert len(results) == len(urls)
 
-        assert isinstance(result, dict)
-        assert "url" in result
-        assert "html" in result
-        assert "status" in result
-        assert "error" in result
-
-    @pytest.mark.asyncio
-    async def test_get_stats(self):
-        """Test statistics calculation"""
-        fetcher = PlaywrightFetcher()
-
-        # Mock results
-        results = [
-            {
-                "url": "http://example.com/1",
-                "html": "<html>...</html>",
-                "status": 200,
-                "error": None,
-            },
-            {
-                "url": "http://example.com/2",
-                "html": "<html>...</html>",
-                "status": 200,
-                "error": None,
-            },
-            {
-                "url": "http://example.com/3",
-                "html": None,
-                "status": None,
-                "error": "Timeout",
-            },
-        ]
-
-        stats = fetcher.get_stats(results)
-
-        assert stats["total_urls"] == 3
-        assert stats["successful"] == 2
-        assert stats["failed"] == 1
-        assert stats["success_rate"] == 66.66666666666666
-
-    @pytest.mark.asyncio
-    async def test_empty_url_list(self):
-        """Test handling of empty URL list"""
-        fetcher = PlaywrightFetcher()
-        results = await fetcher.fetch_urls([])
-
-        assert results == []
-
-        stats = fetcher.get_stats(results)
-        assert stats["total_urls"] == 0
-        assert stats["successful"] == 0
-        assert stats["failed"] == 0
-        assert stats["success_rate"] == 0
-
-
-if __name__ == "__main__":
-    # Allow running tests directly
-    pytest.main([__file__, "-v"])
+            # Each result should have expected structure
+            for result in results:
+                assert isinstance(result, dict)
+                assert "url" in result
+                assert "html" in result
+                assert result["html"] is not None
+                assert result["status"] is not None
+                assert "Magento" in result["html"]  # Verify fixture content

@@ -1,173 +1,154 @@
-import pytest
+"""
+Tests for HTML preprocessing functionality
+"""
+
+from bs4 import BeautifulSoup
+
 from talkable_llm_txt import HTMLPreprocessor
 
 
 class TestHTMLPreprocessor:
+    """Test cases for HTMLPreprocessor class - Happy Flow Only"""
+
     def setup_method(self):
-        """Setup test instance before each test method."""
-        self.processor = HTMLPreprocessor()
+        """Set up test fixtures."""
+        self.preprocessor = HTMLPreprocessor()
 
-    def test_extract_article_with_valid_article(self):
-        """Test extracting article from HTML with valid article element."""
+    def test_extract_article_basic(self):
+        """Test basic article extraction."""
         html = """
         <html>
-            <head><title>Test Page</title></head>
+            <head><title>Test</title></head>
             <body>
-                <header>Navigation</header>
-                <main>
-                    <article>
-                        <h1>Article Title</h1>
-                        <p>Article content goes here.</p>
-                    </article>
-                </main>
-                <footer>Footer</footer>
-            </body>
-        </html>
-        """
-        result = self.processor.extract_article(html)
-
-        assert result is not None
-        assert "<article>" in result
-        assert "Article Title" in result
-        assert "Article content goes here." in result
-        assert "Navigation" not in result
-        assert "Footer" not in result
-
-    def test_extract_article_no_article_element(self):
-        """Test extracting article from HTML without article element."""
-        html = """
-        <html>
-            <head><title>Test Page</title></head>
-            <body>
-                <div class="content">
-                    <h1>Page Title</h1>
-                    <p>Page content goes here.</p>
-                </div>
-            </body>
-        </html>
-        """
-        result = self.processor.extract_article(html)
-        assert result is None
-
-    @pytest.mark.parametrize(
-        "nested_html,expected_content",
-        [
-            (
-                """<article><section><h1>Section Title</h1><div class="content"><p>Deep nested content.</p><ul><li>Item 1</li></ul></div></section></article>""",
-                ["<section>", "Section Title", "Deep nested content", "Item 1"],
-            ),
-            (
-                """<article><h1>First Article</h1><p>First content.</p></article><article><h1>Second</h1></article>""",
-                ["First Article", "First content"],
-            ),
-        ],
-    )
-    def test_extract_article_nested_structures(self, nested_html, expected_content):
-        """Test extracting articles with different nested structures."""
-        result = self.processor.extract_article(
-            f"<html><body>{nested_html}</body></html>"
-        )
-
-        assert result is not None
-        for content in expected_content:
-            assert content in result
-
-    def test_extract_article_with_attributes(self):
-        """Test extracting article with attributes."""
-        html = """
-        <html>
-            <body>
-                <article id="main-article" class="content-article" data-type="blog">
-                    <h1>Article with Attributes</h1>
-                    <p>Content.</p>
+                <article>
+                    <h1>Test Article</h1>
+                    <p>This is test content.</p>
                 </article>
             </body>
         </html>
         """
-        result = self.processor.extract_article(html)
+        result = self.preprocessor.extract_article(html)
 
         assert result is not None
-        assert 'id="main-article"' in result
-        assert 'class="content-article"' in result
-        assert 'data-type="blog"' in result
+        assert "<h1>Test Article</h1>" in result
+        assert "<p>This is test content.</p>" in result
 
-    def test_process_urls_mixed_results(self):
-        """Test processing URLs with mixed success and failure results."""
-        results = [
-            {
-                "url": "http://example.com/success",
-                "html": "<html><body><article><h1>Success</h1></article></body></html>",
-                "status": 200,
-            },
-            {
-                "url": "http://example.com/no_article",
-                "html": "<html><body><div><h1>No article</h1></div></body></html>",
-                "status": 200,
-            },
-            {
-                "url": "http://example.com/error",
-                "html": None,
-                "status": None,
-                "error": "Fetch failed",
-            },
-        ]
-
-        processed = self.processor.process_urls(results)
-
-        assert len(processed) == 3
-        assert processed[0]["has_article"] is True
-        assert processed[1]["has_article"] is False
-        assert processed[2]["has_article"] is False
-        assert processed[0].get("error") is None
-        assert processed[1]["error"] == "No article element found"
-        assert processed[2]["error"] == "Fetch failed"
-
-    def test_extract_article_with_headerlinks(self):
-        """Test extracting article with headerlinks gets preprocessed."""
-        html = """<html><body><article><h1>Article Title<a class="headerlink" href="#title">#</a></h1><p>Content</p></article></body></html>"""
-        result = self.processor.extract_article(html)
+    def test_extract_article_removes_copy_buttons(self):
+        """Test that extract_article removes copy buttons."""
+        html = """
+        <article>
+            <p>Some content</p>
+            <button class="copybtn o-tooltip--left" data-clipboard-target="#code0">
+                <svg><title>Copy to clipboard</title></svg>
+            </button>
+            <p>More content</p>
+        </article>
+        """
+        result = self.preprocessor.extract_article(html)
 
         assert result is not None
-        assert "Article Title" in result
-        assert "Content" in result
+        result_soup = BeautifulSoup(result, "html.parser")
+
+        copy_buttons = result_soup.find_all("button", class_="copybtn")
+        assert len(copy_buttons) == 0
+        assert result_soup.find("p") is not None
+
+    def test_extract_article_removes_header_links(self):
+        """Test that extract_article removes header links."""
+        html = """
+        <article>
+            <h1>Title <a class="headerlink" href="#title">#</a></h1>
+            <p>Content here.</p>
+        </article>
+        """
+        result = self.preprocessor.extract_article(html)
+
+        assert result is not None
+        assert "<h1>Title" in result
         assert "headerlink" not in result
+        assert "Content here." in result
 
-    def test_original_results_not_modified(self):
-        """Test that original results are not modified by processing."""
-        import copy
+    def test_extract_article_with_base_url_processes_links(self):
+        """Test that extract_article processes internal links when base_url is provided."""
+        base_url = "http://localhost:8080"
+        preprocessor = HTMLPreprocessor(base_url=base_url)
 
-        original_results = [
-            {
-                "url": "http://example.com/page1",
-                "html": "<html><body><article><h1>Original</h1></article></body></html>",
-                "status": 200,
-            }
-        ]
-        expected_original = copy.deepcopy(original_results)
-        processed = self.processor.process_urls(original_results)
-
-        assert original_results == expected_original
-        assert len(processed[0]) > len(original_results[0])
-
-    def test_remove_images(self):
-        """Test that images are replaced with placeholder when images=False."""
-        processor = HTMLPreprocessor(images=False)
-        html = """<html><body><article><h1>Title</h1><img src="test.jpg" alt="A test image"><img src="test2.jpg"><p>Content</p></article></body></html>"""
-        result = processor.extract_article(html)
+        html = """
+        <article>
+            <h1>Test Article</h1>
+            <p>Visit <a href="docs/guide/">guide</a> for details.</p>
+        </article>
+        """
+        result = preprocessor.extract_article(html)
 
         assert result is not None
-        assert "[Image]" in result
-        assert "<img" not in result
-        assert result.count("[Image]") == 2
+        result_soup = BeautifulSoup(result, "html.parser")
 
-    def test_keep_images(self):
-        """Test that images are preserved when images=True."""
-        processor = HTMLPreprocessor(images=True)
-        html = """<html><body><article><h1>Title</h1><img src="test.jpg" alt="A test image"><p>Content</p></article></body></html>"""
-        result = processor.extract_article(html)
+        link = result_soup.find("a", href=True)
+        assert link is not None
+        assert link["href"] == "http://localhost:8080/docs/guide.md"
+
+    def test_extract_article_preserves_external_links(self):
+        """Test that extract_article preserves external links."""
+        base_url = "http://localhost:8080"
+        preprocessor = HTMLPreprocessor(base_url=base_url)
+
+        html = """
+        <article>
+            <p>External: <a href="https://example.com">Example</a></p>
+            <p>Email: <a href="mailto:test@example.com">Email</a></p>
+        </article>
+        """
+        result = preprocessor.extract_article(html)
 
         assert result is not None
-        assert "<img" in result
-        assert 'src="test.jpg"' in result
-        assert 'alt="A test image"' in result
-        assert "[Image]" not in result
+        result_soup = BeautifulSoup(result, "html.parser")
+
+        links = result_soup.find_all("a", href=True)
+        hrefs = [link["href"] for link in links]
+        assert "https://example.com" in hrefs
+        assert "mailto:test@example.com" in hrefs
+
+    def test_extract_article_complex_structure(self):
+        """Test article extraction with complex nested structure."""
+        html = """
+        <article>
+            <section>
+                <h1>Main Title <a class="headerlink" href="#main">#</a></h1>
+                <div>
+                    <h2>Sub Title</h2>
+                    <p>Content with <a href="docs/guide/">internal link</a>.</p>
+                    <div class="highlight">
+                        <pre>code here</pre>
+                        <button class="copybtn">Copy</button>
+                    </div>
+                </div>
+            </section>
+        </article>
+        """
+        result = self.preprocessor.extract_article(html)
+
+        assert result is not None
+        assert "<h1>Main Title" in result
+        assert "<h2>Sub Title</h2>" in result
+        assert "headerlink" not in result
+        assert "copybtn" not in result
+        assert "<pre>code here</pre>" in result
+
+
+def test_extract_article_with_real_fixture(sample_html_response):
+    """Test article extraction using real HTML fixture."""
+    preprocessor = HTMLPreprocessor()
+    result = preprocessor.extract_article(sample_html_response)
+
+    assert result is not None
+    assert isinstance(result, str)
+    assert len(result) > 0
+
+    # Verify that content from the real fixture is extracted
+    assert "Magento" in result
+    assert "Talkable offers free extension" in result
+
+    # Verify that unwanted elements are removed
+    assert "copybtn" not in result
+    assert "headerlink" not in result

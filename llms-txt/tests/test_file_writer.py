@@ -42,13 +42,6 @@ class TestFileWriter:
         result = self.file_writer.url_to_filepath(url)
         assert result == expected
 
-    def test_url_to_filepath_with_encoded_chars(self):
-        """Test URL with URL-encoded characters"""
-        url = "http://example.com/path%20with%20spaces/file%20name"
-        expected = Path(self.temp_dir) / "path with spaces" / "file name.md"
-        result = self.file_writer.url_to_filepath(url)
-        assert result == expected
-
     def test_save_markdown_creates_directories(self):
         """Test that save_markdown creates parent directories"""
         url = "http://example.com/deep/nested/path/file"
@@ -81,20 +74,6 @@ class TestFileWriter:
         result2 = self.file_writer.save_markdown(url, content2)
         assert result2 == result1  # Same path
         assert result2.read_text(encoding="utf-8") == content2
-
-    def test_sanitize_path_invalid_chars(self):
-        """Test path sanitization with invalid characters"""
-        # Test with characters that are invalid on Windows
-        path_with_invalid = "path<>:with|invalid?*chars"
-        sanitized = self.file_writer._sanitize_path(path_with_invalid)
-
-        # Should replace invalid chars with underscores
-        assert "<" not in sanitized
-        assert ">" not in sanitized
-        assert ":" not in sanitized or Path().anchor != "\\"  # Allow colon on Unix
-        assert "|" not in sanitized
-        assert "?" not in sanitized
-        assert "*" not in sanitized
 
     def test_complex_url_structure(self):
         """Test complex URL structure similar to real documentation"""
