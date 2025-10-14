@@ -15,16 +15,19 @@ orbs:
 
 jobs:
   build:
-    executor: default
+    executor:
+      name: default
+    working_directory: ~/project/sphinx  # Set working directory to sphinx folder
 
     steps:
-      - checkout
+      - checkout:
+          path: ~/project
 
       - python/install-packages
 
       - run:
           name: Build documentation
-          command: uv run sphinx-build -nW -b dirhtml -d build/doctrees source build/html
+          command: uv run sphinx-build -nW -b dirhtml -d build/doctrees ../source build/html
 
 workflows:
   workflow:
