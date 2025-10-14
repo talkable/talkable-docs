@@ -9,16 +9,22 @@
 _build
 build
 
-# Mkdocs
-site
-# Remove after the migration is complete
-docs
-
 # Python
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
 .venv
-__pycache__
+
+# Python linters and formatters
+.ruff*
+*_cache
+
 # Ruby
 .bundle
 Gemfile.lock
 
+# AI agents
 agent_*.md
