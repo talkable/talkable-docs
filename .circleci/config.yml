@@ -15,8 +15,7 @@ orbs:
 
 jobs:
   build:
-    executor:
-      name: default
+    executor: default
     working_directory: ~/project/sphinx
 
     steps:
