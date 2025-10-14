@@ -30,7 +30,7 @@ This guide explains the deployment architecture and procedures for the Talkable 
 - Built using Docker image from `sphinx/Dockerfile`
 - Container exits after successful build
 
-### 2.3 LLMTXT Builder
+### 2.3 LLMS-TXT Builder
 
 **Role**: Converts HTML documentation into markdown format optimized for AI/LLM consumption.
 
@@ -113,40 +113,27 @@ BASE_URL=https://docs.talkable.com/
 - Ensure `BASE_URL` is accessible from the deployment environment
 - Double-check `ENVIRONMENT` value matches the deployment target
 
-### 5.2 Deployment Steps
+### Deploy Using Deployment Script
 
-**Step-by-Step Deployment Process** (identical for staging and production):
+Identical for staging and production
 
-1. **Deploy Using Deployment Script**:
+> [!NOTE]
+> While the deployment script and installation approach are identical for both environments, they use different Git branches:
+>
+> - **Production**: Uses the `master` branch
+> - **Staging**: Uses the `staging` branch
 
-   ```bash
-   ./deploy/deploy.sh deploy
-   ```
+```bash
+./deploy/deploy.sh deploy
+```
 
-   This script automatically:
-   - Checks CI status for successful builds
-   - SSHs to the target environment
-   - Pulls latest code changes
-   - Builds Docker images with `--no-cache`
-   - Starts services with `docker up -d --force-recreate`
+This script automatically:
 
-2. **Alternative Manual Deployment**:
-
-   ```bash
-   # SSH to target server
-   ssh user@server
-   
-   # Navigate to project directory
-   cd talkable-docs/
-   
-   # Pull latest changes
-   git checkout main
-   git pull origin main
-   
-   # Build and start services
-   docker build --no-cache
-   docker up -d --force-recreate
-   ```
+- Checks CI status for successful builds
+- SSHs to the target environment
+- Pulls latest code changes
+- Builds Docker images with `--no-cache`
+- Starts services with `docker up -d --force-recreate`
 
 **Verification Steps**:
 
