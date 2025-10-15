@@ -236,12 +236,14 @@ docker logs -f docs-llms-txt-local
 
 **Solution**: The Sphinx builder is configured with the `-a` flag to disable incremental builds and force complete rebuilds.
 
-**Reference**: 
+**Reference**:
+
 - GitHub Issue: [sphinx-sitemap #62](https://github.com/jdillard/sphinx-sitemap/pull/62)
 - Fixed in sphinx-sitemap v2.5.1 (August 2023)
 - Official sphinx-autobuild recommendation: Use `-a` flag during development
 
-**Current Status**: 
+**Current Status**:
+
 - ✅ sphinx-sitemap v2.8.0 installed (above problematic version)
 - ✅ `-a` flag implemented in Dockerfile for local development
 - ✅ Production builds use `--fresh-env` for complete rebuilds
