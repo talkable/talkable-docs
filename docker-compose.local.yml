@@ -4,6 +4,7 @@ services:
 
   llms-txt:
     restart: unless-stopped
+    network_mode: "host"
     depends_on:
       sphinx:
         condition: service_started
