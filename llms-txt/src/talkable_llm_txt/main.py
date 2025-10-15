@@ -72,7 +72,7 @@ async def run_pipeline():
     # Use base URL from core configuration for link processing
     preprocessor_config = app_config.get_html_preprocessor_config()
     preprocessor = HTMLPreprocessor(
-        base_url=app_config.core.base_url, **preprocessor_config
+        base_url=app_config.core.get_base_url_str(), **preprocessor_config
     )
 
     converter_config = app_config.get_markdown_converter_config()

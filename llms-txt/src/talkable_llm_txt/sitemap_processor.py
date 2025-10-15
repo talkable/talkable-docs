@@ -1,10 +1,10 @@
 import logging
 import time
-import xml.etree.ElementTree as ET
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional
 from urllib.parse import urlparse
 
 import requests
+from bs4 import BeautifulSoup
 
 # Module-level logger following official Python documentation best practices
 logger = logging.getLogger(__name__)
@@ -12,7 +12,6 @@ logger = logging.getLogger(__name__)
 
 class SitemapProcessor:
     # PEP 8 compliant constants
-    SITEMAP_NAMESPACE = {"sitemap": "http://www.sitemaps.org/schemas/sitemap/0.9"}
     BACKOFF_BASE = 2
 
     def __init__(
@@ -48,49 +47,33 @@ class SitemapProcessor:
         ]
 
     def _fetch_all_urls(self) -> List[str]:
-        """Fetch all URLs from sitemap, handling sitemap indexes"""
+        """Fetch all URLs from sitemap"""
         sitemap_content = self._fetch_sitemap(self.sitemap_url)
         if not sitemap_content:
             return []
 
-        urls, sitemap_urls = self._parse_xml_content(sitemap_content)
+        return self._parse_xml_content(sitemap_content)
 
-        if sitemap_urls:
-            # This is a sitemap index - fetch all child sitemaps
-            return self._fetch_child_sitemaps(sitemap_urls)
-        else:
-            # This is a regular sitemap
-            return urls
-
-    def _fetch_child_sitemaps(self, sitemap_urls: List[str]) -> List[str]:
-        """Fetch and parse all child sitemaps"""
-        all_urls = []
-        for sitemap_url in sitemap_urls:
-            child_content = self._fetch_sitemap(sitemap_url)
-            if child_content:
-                urls, _ = self._parse_xml_content(child_content)
-                all_urls.extend(urls)
-        return all_urls
-
-    def _parse_xml_content(self, xml_content: str) -> Tuple[List[str], List[str]]:
-        """Parse XML content and return (urls, sitemap_urls)"""
+    def _parse_xml_content(self, xml_content: str) -> List[str]:
+        """Parse XML content and return URLs using BeautifulSoup"""
         try:
-            root = ET.fromstring(xml_content)
-            urls = self._extract_urls_from_elements(root, ".//sitemap:url")
-            sitemap_urls = self._extract_urls_from_elements(root, ".//sitemap:sitemap")
-            return urls, sitemap_urls
-        except ET.ParseError as e:
-            self._log_error(f"XML parsing error: {e}")
-            return [], []
+            soup = BeautifulSoup(xml_content, "lxml-xml")
 
-    def _extract_urls_from_elements(self, root: ET.Element, xpath: str) -> List[str]:
-        """Extract URLs from XML elements using XPath"""
-        urls = []
-        for elem in root.findall(xpath, self.SITEMAP_NAMESPACE):
-            loc = elem.find("sitemap:loc", self.SITEMAP_NAMESPACE)
-            if loc is not None and loc.text:
-                urls.append(loc.text)
-        return urls
+            # Find all <loc> elements regardless of parent structure
+            # This handles both regular sitemaps (<url><loc>) and sitemap indexes (<sitemap><loc>)
+            loc_elements = soup.find_all("loc")
+
+            # Extract text content from each <loc> element
+            urls = [
+                loc.get_text(strip=True)
+                for loc in loc_elements
+                if loc.get_text(strip=True)
+            ]
+
+            return urls
+        except Exception as e:
+            self._log_error(f"BeautifulSoup parsing error: {e}")
+            return []
 
     def _fetch_sitemap(self, url: str, retries: Optional[int] = None) -> Optional[str]:
         """Fetch sitemap XML with error handling and retries"""

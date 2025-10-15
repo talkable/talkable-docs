@@ -55,7 +55,7 @@ class PlaywrightFetcher:
 
     @asynccontextmanager
     async def _browser_context(self):
-        """Context manager for browser lifecycle with proper cleanup"""
+        """Context manager for browser lifecycle with proper cleanup using Playwright's native pattern"""
         async with async_playwright() as p:
             browser = await p.chromium.launch()
             context = None
@@ -75,11 +75,11 @@ class PlaywrightFetcher:
                     # Clean up routes before closing
                     await context.unroute_all()
                     await context.close()
-                await browser.close()
+                # Browser will be automatically closed when exiting the async_playwright context
 
     async def fetch_urls(self, urls: List[str]) -> List[Dict[str, Any]]:
         """
-        Fetch HTML content for multiple URLs using batch processing
+        Fetch HTML content for multiple URLs using batch processing with Playwright's native context manager
 
         Args:
             urls: List of URLs to fetch
@@ -89,11 +89,11 @@ class PlaywrightFetcher:
         """
         all_results = []
 
-        # Process URLs in batches to manage memory
-        for i in range(0, len(urls), self.batch_size):
-            batch = urls[i : i + self.batch_size]
-
-            async with self._browser_context() as context:
+        # Use Playwright's native context manager for proper resource management
+        async with self._browser_context() as context:
+            # Process URLs in batches to manage memory
+            for i in range(0, len(urls), self.batch_size):
+                batch = urls[i : i + self.batch_size]
                 tasks = [self._fetch_single_url(context, url) for url in batch]
                 batch_results = await asyncio.gather(*tasks, return_exceptions=True)
                 processed_batch = self._process_results(batch_results, batch)
@@ -180,26 +180,3 @@ class PlaywrightFetcher:
         """
         results = await self.fetch_urls([url])
         return results[0] if results else self._create_result(url, error="No results")
-
-    def get_stats(self, results: List[Dict[str, Any]]) -> Dict[str, Any]:
-        """
-        Get statistics about the fetching results
-
-        Args:
-            results: List of fetch results
-
-        Returns:
-            Dictionary with success/failure statistics
-        """
-        total = len(results)
-        successful = sum(
-            1 for r in results if r.get("html") is not None and r.get("error") is None
-        )
-        failed = total - successful
-
-        return {
-            "total_urls": total,
-            "successful": successful,
-            "failed": failed,
-            "success_rate": (successful / total * 100) if total > 0 else 0,
-        }

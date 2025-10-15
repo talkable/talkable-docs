@@ -47,24 +47,3 @@ class TestSitemapProcessor:
             assert isinstance(entry["path"], str)
             assert entry["url"].startswith("http")
             assert len(entry["path"]) > 0
-
-    @patch("requests.Session.get")
-    def test_sitemap_index_processing(
-        self, mock_get, mock_sitemap_index_response, mock_child_sitemap_response
-    ):
-        """Test processing sitemap index with child sitemaps"""
-        # Set up mock to return different responses for different calls
-        # Need to provide responses for both child sitemaps
-        mock_get.side_effect = [
-            mock_sitemap_index_response,  # First call gets the sitemap index
-            mock_child_sitemap_response,  # Second call gets first child sitemap
-            mock_child_sitemap_response,  # Third call gets second child sitemap
-        ]
-
-        processor = SitemapProcessor("http://localhost:8080/sitemap.xml")
-
-        # Should have URLs from child sitemap
-        assert len(processor.processed_urls) > 0
-        urls = [entry["url"] for entry in processor.processed_urls]
-        assert any("docs/guide" in url for url in urls)
-        assert any("docs/api" in url for url in urls)

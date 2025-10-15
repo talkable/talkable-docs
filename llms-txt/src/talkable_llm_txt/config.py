@@ -8,7 +8,7 @@ proper validation and defaults.
 
 from typing import Literal, Optional, Set
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, HttpUrl, field_validator
 from pydantic_settings import (
     BaseSettings,
     PydanticBaseSettingsSource,
@@ -21,10 +21,10 @@ class CoreConfig(BaseModel):
     """Core configuration settings combining base URL, sitemap, and output."""
 
     # Base URL (mandatory)
-    base_url: str = Field(description="Base URL of the documentation site")
+    base_url: HttpUrl = Field(description="Base URL of the documentation site")
 
     # Sitemap URL (optional - defaults to {base_url}/sitemap.xml)
-    sitemap_url: Optional[str] = Field(
+    sitemap_url: Optional[HttpUrl] = Field(
         default=None,
         description="URL of the sitemap to process. If not provided, will be generated as {base_url}/sitemap.xml",
     )
@@ -34,26 +34,15 @@ class CoreConfig(BaseModel):
         default="output", description="Directory where markdown files will be saved"
     )
 
-    @field_validator("base_url", mode="after")
-    @classmethod
-    def validate_base_url(cls, v: str) -> str:
-        """Validate base URL format."""
-        if not v.startswith(("http://", "https://")):
-            raise ValueError("Base URL must start with http:// or https://")
-        return v.rstrip("/")
-
-    @field_validator("sitemap_url", mode="after")
-    @classmethod
-    def validate_sitemap_url(cls, v: Optional[str]) -> Optional[str]:
-        """Validate sitemap URL format if provided."""
-        if v is not None and v.strip():
-            if not v.startswith(("http://", "https://")):
-                raise ValueError("Sitemap URL must start with http:// or https://")
-        return v
-
     def get_effective_sitemap_url(self) -> str:
         """Get the effective sitemap URL (provided or derived from base URL)."""
-        return self.sitemap_url or f"{self.base_url}/sitemap.xml"
+        if self.sitemap_url:
+            return str(self.sitemap_url)
+        return f"{self.get_base_url_str()}/sitemap.xml"
+
+    def get_base_url_str(self) -> str:
+        """Get base URL as string."""
+        return str(self.base_url).rstrip("/")
 
 
 class ProcessingConfig(BaseModel):
@@ -387,7 +376,7 @@ class Settings(BaseSettings):
             "output_dir": self.core.output_dir,
             "filename": self.llm_full_text.filename,
             "include_source_urls": self.llm_full_text.include_source_urls,
-            "base_url": self.core.base_url,
+            "base_url": self.core.get_base_url_str(),
         }
 
     def is_llm_full_text_enabled(self) -> bool:

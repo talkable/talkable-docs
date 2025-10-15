@@ -37,13 +37,19 @@ monitor: ## Run the documentation scheduler (alias for run command)
 
 check: lint-fix typecheck test ## Run all checks (lint-fix + typecheck + test)
 
+.PHONY: clean
 clean: ## Clean build artifacts and cache files
-	rm -rf .venv
-	rm -rf dist/
+	find . -name '*.pyc' -exec rm -f {} +
+	find . -name '*.pyo' -exec rm -f {} +
+	find . -name '*~' -exec rm -f {} +
+	find . -name '__pycache__' -type d -exec rm -rf {} +
+	rm -rf .coverage
+	rm -rf .venv/
 	rm -rf build/
+	rm -rf dist/
 	rm -rf *.egg-info/
-	find . -type d -name __pycache__ -delete
-	find . -type f -name "*.pyc" -delete
-	find . -type d -name .pytest_cache -delete
-	find . -type d -name .ruff_cache -delete
-	find . -type d -name .pyright_cache -delete
+	rm -rf .pytest_cache/
+	rm -rf .ruff_cache/
+	rm -rf .pyright_cache/
+	rm -rf output/
+	rm -f etag_cache.json
