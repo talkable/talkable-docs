@@ -87,4 +87,4 @@ Here is an example of how to create and use a Liquid partial:
 By following these steps, you can efficiently manage reusable components within your Liquid templates, enhancing both modularity and maintainability.
 
 .. seealso::
-  - `Liquid Partials documentation <https://shopify.github.io/liquid/tags/template/#render>`_
+  `Liquid Partials documentation <https://shopify.github.io/liquid/tags/template/#render>`_

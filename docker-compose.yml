@@ -1,12 +1,58 @@
+x-common-config: &common-config
+  platform: linux/arm64/v8
+
 services:
   nginx:
-    platform: linux/arm64/v8
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args:
-        ENVIRONMENT: ${ENVIRONMENT}
-    container_name: docs-${ENVIRONMENT}
+    <<: *common-config
     restart: unless-stopped
+    image: nginx:1.29-alpine3.22
+    environment:
+      ENVIRONMENT: ${ENVIRONMENT}
+    container_name: docs-nginx-${ENVIRONMENT}
     ports:
       - ${LOCAL_PORT}:80
+    volumes:
+      - docs_www:/var/www
+      - ./nginx/robots:/var/www/robots
+      - ./nginx/templates:/etc/nginx/templates
+      - ./nginx/redirects.conf:/etc/nginx/redirects.conf
+
+  sphinx:
+    <<: *common-config
+    restart: "no"
+    build:
+      context: ./sphinx
+      dockerfile: Dockerfile
+    environment:
+      ENVIRONMENT: ${ENVIRONMENT}
+      BASE_URL: ${BASE_URL}
+    volumes:
+      - docs_www:/var/www
+      - ./source:/docs/source
+    container_name: docs-sphinx-${ENVIRONMENT}
+    
+
+  llms-txt:
+    <<: *common-config
+    restart: "no"
+    build:
+      context: ./llms-txt
+      dockerfile: Dockerfile
+    environment:
+      ENVIRONMENT: ${ENVIRONMENT}
+      LLMS_TXT_CORE__OUTPUT_DIR: "/var/www/md"
+      LLMS_TXT_CORE__BASE_URL: ${BASE_URL}
+    volumes:
+      - docs_www:/var/www
+      - ./llms-txt/src:/app/src
+    container_name: docs-llms-txt-${ENVIRONMENT}
+    depends_on:
+      sphinx:
+        condition: service_completed_successfully
+      nginx:
+        condition: service_started
+
+volumes:
+  docs_www:
+    name: docs_www
+    driver: local

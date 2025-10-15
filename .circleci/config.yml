@@ -11,20 +11,22 @@ executors:
           ENVIRONMENT: production
 
 orbs:
-  python: circleci/python@3.2
+  python: circleci/python@3.3
 
 jobs:
   build:
     executor: default
+    working_directory: ~/project/sphinx
 
     steps:
-      - checkout
+      - checkout:
+          path: ~/project
 
       - python/install-packages
 
       - run:
           name: Build documentation
-          command: uv run sphinx-build -nW -b dirhtml -d build/doctrees source build/html
+          command: uv run sphinx-build -nW -b dirhtml -d build/doctrees ../source build/html
 
 workflows:
   workflow:
