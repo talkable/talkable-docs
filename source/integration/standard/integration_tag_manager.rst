@@ -53,9 +53,10 @@ Best Practices for Speed Optimization
 4. Implementing a custom domain for your integration won't directly increase its speed, but it will significantly reduce issues related to incognito mode and security policies blocking for third-party content.
 
 .. note:: 
+
    If you use GTM, you can add `priority <https://support.google.com/tagmanager/answer/2772421>`_ to the tag. The higher the priority, the quicker it gets loaded.
 
-   .. image:: /_static/img/gtm-priority.png
+.. image:: /_static/img/gtm-priority.png
 
 Alternative Approach: Direct Integration
 ----------------------------------------

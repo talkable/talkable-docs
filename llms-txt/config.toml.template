@@ -1,0 +1,259 @@
+# =============================================================================
+# LLMs TXT Configuration File
+# =============================================================================
+# This file contains all configuration parameters for the talkable-llm-txt
+# application. Parameters are organized by functional groups for clarity.
+#
+# Environment Variable Override Pattern:
+# LLMS_TXT_<SECTION>__<SETTING>=<value>
+# Example: LLMS_TXT_CORE__BASE_URL="https://docs.example.com"
+#
+# Required parameters must be provided, optional parameters use defaults.
+# =============================================================================
+
+# =============================================================================
+# CORE SETTINGS
+# =============================================================================
+
+[core]
+# Base URL of the documentation site (required)
+# This is the main URL for the documentation site, used to generate sitemap URL
+# and normalize relative links in the documentation.
+# Example: "https://docs.talkable.com"
+# Required: true
+# Environment Variable: LLMS_TXT_CORE__BASE_URL
+base_url = "https://docs.talkable.com"
+
+# URL of the sitemap to process (optional)
+# If not provided, will be generated as: {base_url}/sitemap.xml
+# This is the primary source for discovering documentation URLs
+# Example: "https://docs.talkable.com/sitemap.xml"
+# Required: false
+# Environment Variable: LLMS_TXT_CORE__SITEMAP_URL
+# sitemap_url = ""
+
+# Directory where markdown files will be saved (optional)
+# Files are organized in subdirectories matching the URL structure
+# Default: "output"
+# Required: false
+# Environment Variable: LLMS_TXT_CORE__OUTPUT_DIR
+# output_dir = ""
+
+# File to monitor for changes using ETag headers (optional)
+# This file should be regenerated when documentation is rebuilt
+# Default: "searchindex.js" (optimal for Sphinx documentation)
+# Other options: "objects.inv", "globalcontext.json", or any custom file
+# Required: false
+# Environment Variable: LLMS_TXT_CORE__MONITORING_FILE
+# monitoring_file = "" 
+
+# =============================================================================
+# PROCESSING SETTINGS
+# =============================================================================
+
+[processing]
+# Maximum number of URLs to process from the sitemap (optional)
+# Limits the total number of URLs processed to control execution time
+# If not specified, processes ALL URLs found in the sitemap
+# Range: 1+ (no maximum limit)
+# Default: None (process all URLs)
+# Required: false
+# Environment Variable: LLMS_TXT_PROCESSING__MAX_URLS_TO_PROCESS
+# max_urls_to_process = 
+
+# Maximum concurrent requests for fetching URLs (optional)
+# Controls how many URLs are fetched simultaneously
+# Higher values improve performance but increase memory usage
+# Range: 1-10
+# Default: 5
+# Required: false
+# Environment Variable: LLMS_TXT_PROCESSING__MAX_CONCURRENT_REQUESTS
+# max_concurrent_requests = 
+
+# Number of URLs to process in each batch (optional)
+# Controls memory usage by processing URLs in batches
+# Higher values use more memory but may be slightly faster
+# Range: 1-200
+# Default: 10
+# Required: false
+# Environment Variable: LLMS_TXT_PROCESSING__BATCH_SIZE
+# batch_size = 
+
+# Timeout for individual URL requests in milliseconds (optional)
+# How long to wait for each URL to load before timing out
+# Range: 1000-300000 (1 second to 5 minutes)
+# Default: 30000
+# Required: false
+# Environment Variable: LLMS_TXT_PROCESSING__REQUEST_TIMEOUT
+# request_timeout = 
+
+# =============================================================================
+# CONTENT PROCESSING SETTINGS
+# =============================================================================
+
+[content]
+# Whether to keep images in the markdown output (optional)
+# If false, images are replaced with "[Image]" placeholders
+# If true, images are preserved as-is in the markdown
+# Default: false
+# Required: false
+# Environment Variable: LLMS_TXT_CONTENT__KEEP_IMAGES
+# keep_images = 
+
+# Markdown heading style to use (optional)
+# Controls how headings are formatted in the output markdown
+# Options: "atx" (# Heading), "atx_closed" (# Heading #), "underlined" (Heading\n===)
+# Default: "atx"
+# Required: false
+# Environment Variable: LLMS_TXT_CONTENT__HEADING_STYLE
+# heading_style = 
+
+# =============================================================================
+# PERFORMANCE SETTINGS
+# =============================================================================
+
+[performance]
+# Page load wait condition (optional)
+# Determines when Playwright considers a page fully loaded
+# Options: "commit", "domcontentloaded", "load", "networkidle"
+# - "commit": Wait for document commit
+# - "domcontentloaded": Wait for DOM to be ready (fastest)
+# - "load": Wait for all resources to load
+# - "networkidle": Wait for network activity to cease (slowest)
+# Default: "domcontentloaded"
+# Required: false
+# Environment Variable: LLMS_TXT_PERFORMANCE__WAIT_UNTIL
+# wait_until = 
+
+# Resource types to block during page loading (optional)
+# Comma-separated list of resource types to block to improve performance
+# Common options: "image", "media", "font", "stylesheet", "script"
+# Empty string means no blocking
+# Default: "image,media,font"
+# Required: false
+# Environment Variable: LLMS_TXT_PERFORMANCE__BLOCKED_RESOURCE_TYPES
+# blocked_resource_types = 
+
+# =============================================================================
+# SITEMAP FETCHING SETTINGS
+# =============================================================================
+
+[sitemap_fetching]
+# Timeout for sitemap HTTP requests in seconds (optional)
+# How long to wait for sitemap XML to be fetched
+# Range: 1-300 (1 second to 5 minutes)
+# Default: 30
+# Required: false
+# Environment Variable: LLMS_TXT_SITEMAP_FETCHING__TIMEOUT
+# timeout = 
+
+# Number of retry attempts for failed sitemap requests (optional)
+# How many times to retry fetching the sitemap on failure
+# Uses exponential backoff between retries
+# Range: 0-10
+# Default: 3
+# Required: false
+# Environment Variable: LLMS_TXT_SITEMAP_FETCHING__RETRIES
+# retries = 
+
+# User agent string for HTTP requests (optional)
+# Identifies the client when making HTTP requests
+# Some servers may block certain user agents
+# Default: "Mozilla/5.0 (compatible; SitemapProcessor/1.0)"
+# Required: false
+# Environment Variable: LLMS_TXT_SITEMAP_FETCHING__USER_AGENT
+# user_agent = 
+
+# =============================================================================
+# MONITORING SETTINGS
+# =============================================================================
+
+[monitoring]
+# Enable scheduled monitoring for documentation changes (optional)
+# When enabled, the application will run as a scheduler that periodically
+# checks for documentation changes and triggers regeneration when needed
+# Default: false
+# Required: false
+# Environment Variable: LLMS_TXT_MONITORING__ENABLED
+# enabled = 
+
+# URL to monitor for changes (optional)
+# Any file that changes when documentation is rebuilt (e.g., searchindex.js, objects.inv)
+# This URL will be checked for changes using ETag headers
+# If not specified, will use the monitoring file (default: searchindex.js)
+# Default: "" (uses monitoring file)
+# Required: false
+# Environment Variable: LLMS_TXT_MONITORING__CHECK_URL
+# check_url = 
+
+# Interval in minutes between checks (optional)
+# How often to check the documentation URL for changes
+# Range: 1-1440 (1 minute to 24 hours)
+# Default: 1
+# Required: false
+# Environment Variable: LLMS_TXT_MONITORING__CHECK_INTERVAL_MINUTES
+# check_interval_minutes = 
+
+# File to store ETag cache (optional)
+# JSON file that stores ETag values for change detection
+# Default: "etag_cache.json"
+# Required: false
+# Environment Variable: LLMS_TXT_MONITORING__ETAG_CACHE_FILE
+# etag_cache_file = 
+
+# =============================================================================
+# LLM FULL TEXT SETTINGS
+# =============================================================================
+
+[llm_full_text]
+# Enable generation of aggregated LLM full text file (optional)
+# When enabled, creates a single file containing all converted markdown content
+# This is useful for LLM training and consumption
+# Default: true
+# Required: false
+# Environment Variable: LLMS_TXT_LLM_FULL_TEXT__ENABLED
+# enabled = 
+
+# Name of the aggregated LLM full text file (optional)
+# The filename for the consolidated markdown file
+# Default: "llms-full.txt"
+# Required: false
+# Environment Variable: LLMS_TXT_LLM_FULL_TEXT__FILENAME
+# filename = 
+
+# Include source URLs for each document in the full text file (optional)
+# When true, each document section includes a link to the source markdown file
+# This helps with content attribution and debugging
+# Default: true
+# Required: false
+# Environment Variable: LLMS_TXT_LLM_FULL_TEXT__INCLUDE_SOURCE_URLS
+# include_source_urls = 
+
+# Style of document separators in the full text file (optional)
+# Controls how document boundaries are marked in the aggregated file
+# Options: "html_comments", "markdown_headers", "custom_delimiters"
+# - "html_comments": Uses HTML comment markers (recommended)
+# - "markdown_headers": Uses markdown headers for separation
+# - "custom_delimiters": Uses custom delimiter characters
+# Default: "html_comments"
+# Required: false
+# Environment Variable: LLMS_TXT_LLM_FULL_TEXT__DOCUMENT_SEPARATOR_STYLE
+# document_separator_style = 
+
+# =============================================================================
+# LOGGING SETTINGS
+# =============================================================================
+
+[logging]
+# Logging level for application output (optional)
+# Controls the verbosity of log messages
+# Options: "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"
+# - DEBUG: Detailed information for debugging
+# - INFO: General information about program execution
+# - WARNING: Warning messages about potential issues
+# - ERROR: Error messages that don't stop execution
+# - CRITICAL: Serious errors that may stop execution
+# Default: "INFO"
+# Required: false
+# Environment Variable: LLMS_TXT_LOGGING__LEVEL
+# level =

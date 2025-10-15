@@ -19,7 +19,6 @@ import sys
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath("."))
-from _utils import get_baseurl
 
 # -- General configuration ------------------------------------------------
 
@@ -110,7 +109,7 @@ pygments_style = "sphinx"
 # html_theme = "pydata_sphinx_theme"
 html_theme = "sphinx_book_theme"
 # html_style = 'talkable.css'
-html_css_files = ["talkable.css"]
+# html_css_files = ["talkable.css"]
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -209,7 +208,8 @@ htmlhelp_basename = "Talkabledoc"
 
 # The URL which points to the root of the HTML documentation.
 # It is used to indicate the location of document like canonical_url.
-html_baseurl = get_baseurl()
+base_url = os.getenv("BASE_URL", "http://docs.talkable.com").rstrip("/")
+html_baseurl = f"{base_url}/"
 
 # -- Options for manual page output ---------------------------------------
 

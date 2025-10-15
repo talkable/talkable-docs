@@ -13,6 +13,10 @@ server {
     add_header X-Content-Type-Options "nosniff";
     add_header X-XSS-Protection "1; mode=block";
 
+    # UTF-8 charset configuration following nginx best practices
+    charset utf-8;
+    charset_types text/xml text/plain text/css text/markdown application/javascript application/json;
+
     # Gzip settings
     gzip on;
     gzip_types
@@ -27,7 +31,8 @@ server {
     image/svg+xml
     font/ttf
     font/woff
-    font/woff2;
+    font/woff2
+    text/markdown;
 
     # Helps preserve the port in redirects when not on 80/443
     absolute_redirect off;
@@ -35,15 +40,40 @@ server {
 
     include /etc/nginx/redirects.conf;
 
+    # Serve llms.txt
+    location = /llms.txt {
+        alias /var/www/md/index.md;
+        charset utf-8;
+    }
+    
+    # Serve llms-full.txt
+    location = /llms-full.txt {
+        alias /var/www/md/llms-full.txt;
+        charset utf-8;
+        types {
+            text/markdown txt;
+        }
+    }
+    
+    # Serve markdown files
+    location ~* \.md$ {
+        root /var/www/md;
+        charset utf-8;
+        types {
+            text/markdown md;
+        }
+    }
+
     # Serve robots.txt dynamically based on environment variable
     location = /robots.txt {
-        alias /var/www/${ENVIRONMENT}.txt;
+        alias /var/www/robots/${ENVIRONMENT}.txt;
         access_log off;
         log_not_found off;
     }
 
     # Serve static assets with long cache
     location ~* \.(?:css|js|jpe?g|png|gif|ico|svg|woff2?|ttf|eot|otf|webp)$ {
+        charset off;  # Disable charset processing for binary files
         expires 1y;
         add_header Cache-Control "public, max-age=31536000, immutable";
         access_log off;

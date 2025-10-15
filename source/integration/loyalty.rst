@@ -4,8 +4,8 @@
 .. meta::
    :description: You can integrate Talkable Loyalty to e-commerce sites in a few quick steps.
 
-Loyalty Integration (beta)
-==========================
+Loyalty Integration
+===================
 
 Integrating Talkable Loyalty to e-commerce sites is done in
 a few quick steps by adding the below scripts to your site.
@@ -19,9 +19,9 @@ a few quick steps by adding the below scripts to your site.
    Add the :ref:`Talkable Initialization Script <integration/loyalty/integration_components/initialization_script>`
    to your header or any template spanning every page.
 
-.. note::
+   .. note::
 
-   Skip this step if you already have Talkable integrated on your site
+      Skip this step if you already have Talkable integrated on your site
 
 2. Add Loyalty Dashboard.
 
