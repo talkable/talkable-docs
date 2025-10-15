@@ -129,7 +129,12 @@ class HTMLPreprocessor:
 
         for link in article.find_all("a", href=True):
             href = str(link["href"])  # Convert _AttributeValue to string
-            processed_href = self.link_processor.process_link(href, current_page_url)
+            link_class = link.get("class")
+            link_class_str = " ".join(link_class) if link_class else None
+
+            processed_href = self.link_processor.process_link(
+                href, current_page_url, link_class_str
+            )
 
             if processed_href:
                 link["href"] = processed_href

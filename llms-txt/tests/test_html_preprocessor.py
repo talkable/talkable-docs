@@ -69,14 +69,14 @@ class TestHTMLPreprocessor:
         assert "Content here." in result
 
     def test_extract_article_with_base_url_processes_links(self):
-        """Test that extract_article processes internal links when base_url is provided."""
+        """Test that extract_article processes internal links with reference internal class."""
         base_url = "http://localhost:8080"
         preprocessor = HTMLPreprocessor(base_url=base_url)
 
         html = """
         <article>
             <h1>Test Article</h1>
-            <p>Visit <a href="docs/guide/">guide</a> for details.</p>
+            <p>Visit <a class="reference internal" href="docs/guide/">guide</a> for details.</p>
         </article>
         """
         result = preprocessor.extract_article(html)

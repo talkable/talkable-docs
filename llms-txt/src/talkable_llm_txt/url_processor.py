@@ -36,58 +36,21 @@ class URLNormalizer(URLProcessor):
         Convert relative URL to absolute URL.
 
         Args:
-            url: Relative or absolute URL to normalize
+            url: Relative URL to normalize (absolute URLs are not processed)
             context_url: Current page URL to provide context for relative links
 
         Returns:
-            Absolute URL with proper context resolution and domain correction
+            Absolute URL with proper context resolution
         """
         if url.startswith("/"):
             # Root-relative path
             return self.base_url + url
-        elif url.startswith(("http://", "https://")):
-            # Absolute URL - check if domain needs correction
-            return self._correct_domain(url)
         elif context_url:
             # Relative path - use current page's context for proper resolution
             return urljoin(context_url, url)
         else:
             # Relative path - fallback to base URL
             return urljoin(self.base_url + "/", url)
-
-    def _correct_domain(self, url: str) -> str:
-        """
-        Correct the domain of absolute URLs to match our base URL.
-
-        Args:
-            url: Absolute URL to check and potentially correct
-
-        Returns:
-            URL with corrected domain if needed, original URL otherwise
-        """
-        parsed = urlparse(url)
-        base_parsed = urlparse(self.base_url)
-
-        # If the URL has the same port but different host/IP, correct it
-        if (
-            parsed.port == base_parsed.port
-            and parsed.scheme == base_parsed.scheme
-            and parsed.netloc != base_parsed.netloc
-        ):
-            # Replace the netloc with our base URL's netloc
-            return urlunparse(
-                (
-                    parsed.scheme,
-                    base_parsed.netloc,
-                    parsed.path,
-                    parsed.params,
-                    parsed.query,
-                    parsed.fragment,
-                )
-            )
-
-        # Return original URL if no correction needed
-        return url
 
 
 class MarkdownFileConverter(URLProcessor):
@@ -140,7 +103,10 @@ class LinkProcessor:
         self.markdown_converter = MarkdownFileConverter()
 
     def process_link(
-        self, href: str, context_url: Optional[str] = None
+        self,
+        href: str,
+        context_url: Optional[str] = None,
+        link_class: Optional[str] = None,
     ) -> Optional[str]:
         """
         Process a link through the complete pipeline.
@@ -148,56 +114,46 @@ class LinkProcessor:
         Args:
             href: Link href attribute to process
             context_url: Current page URL to provide context for relative links
+            link_class: CSS class string from the link element
 
         Returns:
             Processed URL pointing to .md file, or None if should not process
         """
-        if not self._should_process(href):
+        if not self._should_process(href, link_class):
             return None
 
-        # Step 1: Normalize URL to absolute with context and domain correction
+        # Step 1: Normalize URL to absolute with context
         normalized = self.normalizer.process(href, context_url)
         # Step 2: Convert to markdown file URL
         return self.markdown_converter.process(normalized)
 
-    def _should_process(self, href: str) -> bool:
+    def _should_process(self, href: str, link_class: Optional[str] = None) -> bool:
         """
-        Determine if link should be processed.
+        Determine if link should be processed using simplified logic.
 
         Args:
             href: Link href attribute to check
+            link_class: CSS class string from the link element
 
         Returns:
-            True if link should be processed, False otherwise
+            True if link should be processed (internal), False otherwise (external)
         """
-        # Skip empty links
-        if not href or not href.strip():
+        # Skip empty links and special protocols
+        if (
+            not href
+            or not href.strip()
+            or href.startswith(("mailto:", "tel:", "javascript:", "ftp:", "file:", "#"))
+        ):
             return False
 
-        # Skip special protocols
-        if href.startswith(("mailto:", "tel:", "javascript:", "ftp:", "file:")):
-            return False
-
-        # Skip anchor-only links
-        if href.startswith("#"):
-            return False
-
-        # Skip external absolute URLs (different domains)
+        # External URLs - don't process (fail safe)
         if href.startswith(("http://", "https://")):
-            # Only process absolute URLs that might need domain correction
-            # (same port but different host as our base URL)
-            parsed = urlparse(href)
-            base_parsed = urlparse(self.normalizer.base_url)
-
-            # Only process if same port and scheme but different host
-            if (
-                parsed.port == base_parsed.port
-                and parsed.scheme == base_parsed.scheme
-                and parsed.netloc != base_parsed.netloc
-            ):
-                return True
-            # Skip all other external URLs
             return False
 
-        # Process all other links (relative paths, root-relative paths)
-        return True
+        # Internal links - process them if we can identify them
+        # Use class name if available
+        if link_class and "reference internal" in link_class:
+            return True
+
+        # If we can't identify the URL type, treat as external (fail safe)
+        return False

@@ -82,16 +82,30 @@ class TestLinkProcessor:
         self.base_url = "http://localhost:8080"
         self.processor = LinkProcessor(self.base_url)
 
-    def test_process_internal_link(self):
-        """Test processing internal link"""
+    def test_process_internal_link_with_class(self):
+        """Test processing internal link with reference internal class"""
+        href = "docs/guide/"
+        link_class = "reference internal"
+        result = self.processor.process_link(href, link_class=link_class)
+        assert result == "http://localhost:8080/docs/guide.md"
+
+    def test_process_internal_link_without_class(self):
+        """Test processing internal link without class returns None (fail safe)"""
         href = "docs/guide/"
         result = self.processor.process_link(href)
-        assert result == "http://localhost:8080/docs/guide.md"
+        assert result is None
 
     def test_process_external_link(self):
         """Test processing external link returns None (should not be processed)"""
         href = "https://example.com"
         result = self.processor.process_link(href)
+        assert result is None
+
+    def test_process_external_link_with_class(self):
+        """Test processing external link with external class returns None"""
+        href = "https://example.com"
+        link_class = "reference external"
+        result = self.processor.process_link(href, link_class=link_class)
         assert result is None
 
     def test_process_mailto_link(self):
@@ -107,9 +121,10 @@ class TestLinkProcessor:
         assert result is None
 
     def test_process_complex_internal_link(self):
-        """Test processing complex internal link"""
+        """Test processing complex internal link with reference internal class"""
         href = "/customer_service_portal/use_case_1/#getting-started"
-        result = self.processor.process_link(href)
+        link_class = "reference internal"
+        result = self.processor.process_link(href, link_class=link_class)
         assert (
             result
             == "http://localhost:8080/customer_service_portal/use_case_1.md#getting-started"
