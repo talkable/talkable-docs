@@ -39,23 +39,7 @@ cp .env.template .env
 
 ### 3. Configure Your Environment
 
-Edit the `.env` file with your local settings:
-
-```bash
-# The port to access the documentation locally
-LOCAL_PORT=8080
-
-# Environment type (use "local" for development)
-ENVIRONMENT=local
-
-# Your local machine's IP address for accessing the docs
-BASE_URL=http://192.168.1.100:8080/
-```
-
-**⚠️ Important**: Replace `192.168.1.100` with your actual local IP address. You can find it by running:
-
-- macOS/Linux: `ifconfig | grep "inet " | grep -v 127.0.0.1`
-- Windows: `ipconfig | findstr "IPv4"`
+Edit the `.env` file with your local settings. See the "Environment Variables Explained" section below for detailed information about each variable.
 
 ### 4. Start the Documentation Services
 
@@ -69,12 +53,9 @@ This will start all services for **local development**:
 - **Sphinx Builder**: Automatically rebuilds documentation when files change (stays running)
 - **LLM Text Processor**: Continuously monitors and processes documentation changes (stays running)
 
-> [!IMPORTANT]
-> The Sphinx builder is configured with the `-a` flag to force complete rebuilds. This prevents a known issue where sphinx-sitemap generates partial sitemaps during incremental builds. See the "Known Issues" section below for details.
-
 ### 5. Access the Documentation
 
-Open your browser and navigate to: `http://192.168.1.100:8080/`
+Open your browser and navigate to: `http://localhost:8080/`
 
 ## 📝 Environment Variables Explained
 
@@ -97,9 +78,8 @@ The `.env` file contains three critical variables:
 ### `BASE_URL`
 
 - **Purpose**: Base URL used in sitemaps and for internal linking
-- **Critical**: Must match your actual local IP address and port
-- **Format**: `http://<your-ip>:<port>/`
-- **Example**: `BASE_URL=http://192.168.1.100:8080/`
+- **Format**: `http://localhost:<port>/` (for local development)
+- **Example**: `BASE_URL=http://localhost:8080/`
 - **Why it matters**: The LLM text processor uses this URL to fetch and process documentation
 
 ## 🛠️ Development Workflow
@@ -142,51 +122,27 @@ Paragraph text with **bold** and *italic* formatting.
 :doc:`link-to-another-page`
 ```
 
-## 🧹 Cleaning Up
-
-When you're done working, it's important to clean up your local environment to free up disk space and avoid conflicts.
-
-### Stop Services
-
-```bash
-make down
-```
-
-This stops and removes all running containers but keeps images and volumes for faster restart.
-
-### Complete Cleanup
-
-```bash
-make clean
-```
-
-This performs a complete cleanup:
-
-- Stops and removes all containers
-- Removes all Docker images
-- Removes all volumes (including the `docs_www` shared volume)
-- Runs Docker system prune to reclaim disk space
-
-**⚠️ Warning**: `make clean` will remove all cached data, so the next `make up` will take longer as it needs to rebuild everything.
-
-### Rebuild Everything
-
-If you need to force rebuild all images (useful after updating dependencies):
-
-```bash
-make rebuild
-```
-
 ## 📋 Available Make Commands
 
 | Command | Description |
 |---------|-------------|
 | `make help` | Show all available commands |
 | `make up` | Start local development services (uses docker-compose.local.yml override) |
-| `make down` | Stop local development services |
-| `make clean` | Complete cleanup including images and volumes |
+| `make down` | Stop local development services (keeps images and volumes for faster restart) |
+| `make clean` | Complete cleanup including containers, images, and volumes (removes all cached data) |
 | `make logs` | View real-time logs from all services |
-| `make rebuild` | Force rebuild all images and restart |
+| `make rebuild` | Force rebuild all images and restart (useful after updating dependencies) |
+
+## 🧹 Cleaning Up
+
+When you're done working, use the make commands above to clean up your local environment:
+
+- **`make down`** - Stops and removes running containers but keeps images and volumes
+- **`make clean`** - Performs complete cleanup including containers, images, volumes, and runs Docker system prune
+- **`make rebuild`** - Forces rebuild of all images and restarts services
+
+> [!WARNING]
+> `make clean` will remove all cached data, so the next `make up` will take longer as it needs to rebuild everything.
 
 ## 🔍 Viewing Logs
 
@@ -213,7 +169,7 @@ docker logs -f docs-llms-txt-local
    - Solution: Change `LOCAL_PORT` in your `.env` file to an unused port
 
 3. **Documentation not loading**
-   - Check that `BASE_URL` uses your correct local IP address
+   - Check that `BASE_URL` is correctly configured in your `.env` file
    - Verify all services are running: `docker compose -f docker-compose.yml -f docker-compose.local.yml ps`
 
 4. **Changes not appearing**

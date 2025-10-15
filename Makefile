@@ -14,12 +14,12 @@ check-env:
 		echo "⚙️ Then edit .env and configure:"; \
 		echo "   - LOCAL_PORT (default: 8080)"; \
 		echo "   - ENVIRONMENT (local/staging/production)"; \
-		echo "   - BASE_URL (your local IP:port for local dev)"; \
+		echo "   - BASE_URL (localhost:port for local dev)"; \
 		echo ""; \
 		echo "📖 Example for local development:"; \
 		echo "   LOCAL_PORT=8080"; \
 		echo "   ENVIRONMENT=local"; \
-		echo "   BASE_URL=http://192.168.1.100:8080/"; \
+		echo "   BASE_URL=http://localhost:8080/"; \
 		exit 1; \
 	fi
 
