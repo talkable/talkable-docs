@@ -9,7 +9,7 @@ Processes sitemaps to discover documentation URLs, fetches HTML content using Pl
 **Key Features:**
 
 - **Dual Mode**: One-time processing OR scheduled monitoring
-- **ETag Change Detection**: Efficient monitoring using HTTP ETag headers
+- **ETag Change Detection**: Efficient monitoring using HTTP ETag headers on configurable files (default: searchindex.js)
 - **Concurrent Processing**: High-performance parallel URL fetching (1-10 simultaneous)
 - **Resource Optimization**: Configurable blocking of images, media, fonts, stylesheets, scripts
 - **Flexible Output**: URL-based directory structure, configurable markdown styles
@@ -71,18 +71,18 @@ tests/                      # Test suite (unit, integration, slow)
 
 **config.toml groups:**
 
-- **Core**: Sitemap URL, output directory
+- **Core**: Sitemap URL, output directory, monitoring file
 - **Processing**: URL limits, concurrency, batch size, timeouts
 - **Content**: Image handling, heading styles
 - **Performance**: Page load conditions, resource blocking
 - **Sitemap Fetching**: Timeouts, retries, user agent
-- **Monitoring**: Scheduling, ETag cache, intervals (1-1440 minutes)
+- **Monitoring**: Scheduling, ETag cache, custom monitoring URL, intervals (1-1440 minutes)
 - **Logging**: Log levels and output
 
 **Key features:**
 
 - Monitoring enable/disable control
-- ETag-based change detection with persistent cache
+- ETag-based change detection with persistent cache and configurable monitoring file (default: searchindex.js)
 - Flexible scheduling intervals
 - Resource optimization for performance
 

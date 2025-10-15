@@ -29,6 +29,12 @@ class CoreConfig(BaseModel):
         description="URL of the sitemap to process. If not provided, will be generated as {base_url}/sitemap.xml",
     )
 
+    # Monitoring file for change detection (optional - defaults to searchindex.js)
+    monitoring_file: str = Field(
+        default="searchindex.js",
+        description="File to monitor for changes using ETag headers. Defaults to searchindex.js for Sphinx documentation.",
+    )
+
     # Output directory (existing - moved here)
     output_dir: str = Field(
         default="output", description="Directory where markdown files will be saved"
@@ -39,6 +45,10 @@ class CoreConfig(BaseModel):
         if self.sitemap_url:
             return str(self.sitemap_url)
         return f"{self.get_base_url_str()}/sitemap.xml"
+
+    def get_effective_monitoring_url(self) -> str:
+        """Get the effective monitoring URL for change detection."""
+        return f"{self.get_base_url_str()}/{self.monitoring_file.lstrip('/')}"
 
     def get_base_url_str(self) -> str:
         """Get base URL as string."""

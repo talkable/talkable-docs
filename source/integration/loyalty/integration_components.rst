@@ -29,8 +29,6 @@ Talkable Loyalty is composed of the following components:
 
 3. :ref:`Loyalty Actions`
 
-|hr|
-
 .. _integration/loyalty/integration_components/initialization_script:
 
 Initialization Script
@@ -70,8 +68,6 @@ Initialization Script Notes
 
 2. **Variables.** Use your dynamic variables to pass user details.
 
-|hr|
-
 .. _Talkable Container DIV:
 
 Talkable Container DIV
@@ -98,8 +94,6 @@ Loyalty Widget Notes
 --------------------
 
 Add Talkable Container DIV at the checkout exactly where the loyalty points redemption widget should be rendered.
-
-|hr|
 
 .. _Loyalty Actions:
 

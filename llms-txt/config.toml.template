@@ -37,7 +37,15 @@ base_url = "https://docs.talkable.com"
 # Default: "output"
 # Required: false
 # Environment Variable: LLMS_TXT_CORE__OUTPUT_DIR
-# output_dir = "" 
+# output_dir = ""
+
+# File to monitor for changes using ETag headers (optional)
+# This file should be regenerated when documentation is rebuilt
+# Default: "searchindex.js" (optimal for Sphinx documentation)
+# Other options: "objects.inv", "globalcontext.json", or any custom file
+# Required: false
+# Environment Variable: LLMS_TXT_CORE__MONITORING_FILE
+# monitoring_file = "" 
 
 # =============================================================================
 # PROCESSING SETTINGS
@@ -170,10 +178,10 @@ base_url = "https://docs.talkable.com"
 # enabled = 
 
 # URL to monitor for changes (optional)
-# Typically the main documentation page or sitemap URL
+# Any file that changes when documentation is rebuilt (e.g., searchindex.js, objects.inv)
 # This URL will be checked for changes using ETag headers
-# If not specified, will use the sitemap URL as default
-# Default: "" (uses sitemap URL)
+# If not specified, will use the monitoring file (default: searchindex.js)
+# Default: "" (uses monitoring file)
 # Required: false
 # Environment Variable: LLMS_TXT_MONITORING__CHECK_URL
 # check_url = 

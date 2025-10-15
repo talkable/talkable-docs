@@ -12,6 +12,13 @@ Configuration options can be managed via:
 - **Environment Variables**: Override any setting using `LLMS_TXT_<SECTION>__<SETTING>` format
 - **Defaults**: Automatic fallback to default values when no configuration is provided
 
+### Key Features
+
+- **Universal Change Detection**: Configurable monitoring file (default: `searchindex.js` for optimal Sphinx rebuild detection)
+- **ETag-based Monitoring**: Efficient change detection using HTTP ETag headers
+- **Flexible Sitemap Processing**: Separate sitemap URL configuration for URL discovery
+- **Scheduled Monitoring**: Automatic periodic checks with configurable intervals
+
 ## Integration
 
 This package is part of the overall Talkable documentation deployment system. For complete deployment details, infrastructure setup, and integration guidelines, please refer to the documentation at the upper level of this repository.

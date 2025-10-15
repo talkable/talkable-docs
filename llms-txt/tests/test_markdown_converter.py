@@ -139,3 +139,26 @@ class TestMarkdownConverter:
         assert "```javascript" in markdown
         assert 'console.log("Hello");' in markdown
         assert "[Example](https://example.com)" in markdown
+
+    def test_convert_article_strips_abbreviation_tags(self):
+        """Test that abbreviation tags are stripped and only text content remains."""
+        html = """
+        <article>
+            <p>Invite <abbr title="Person who shares an offer with their Friend(s)">Advocate</abbr> to referral program.</p>
+            <p><abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> work together.</p>
+            <p>This is <strong><abbr title="Application Programming Interface">API</abbr></strong> documentation.</p>
+        </article>
+        """
+
+        markdown = self.converter.convert_article(html)
+
+        # Should contain only the text content, no title information
+        assert "Invite Advocate to referral program." in markdown
+        assert "HTML and CSS work together." in markdown
+        assert "This is **API** documentation." in markdown
+
+        # Should not contain title information
+        assert "Person who shares an offer" not in markdown
+        assert "HyperText Markup Language" not in markdown
+        assert "Cascading Style Sheets" not in markdown
+        assert "Application Programming Interface" not in markdown

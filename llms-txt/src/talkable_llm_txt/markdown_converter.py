@@ -158,6 +158,7 @@ class MarkdownConverter:
             article_html,
             heading_style=self.heading_style,
             custom_converters=self.custom_converters,
+            strip=["abbr"],
             escape_asterisks=False,
             escape_underscores=False,
             escape_misc=False,

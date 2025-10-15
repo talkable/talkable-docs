@@ -69,6 +69,9 @@ This will start all services for **local development**:
 - **Sphinx Builder**: Automatically rebuilds documentation when files change (stays running)
 - **LLM Text Processor**: Continuously monitors and processes documentation changes (stays running)
 
+> [!IMPORTANT]
+> The Sphinx builder is configured with the `-a` flag to force complete rebuilds. This prevents a known issue where sphinx-sitemap generates partial sitemaps during incremental builds. See the "Known Issues" section below for details.
+
 ### 5. Access the Documentation
 
 Open your browser and navigate to: `http://192.168.1.100:8080/`
@@ -222,6 +225,26 @@ docker logs -f docs-llms-txt-local
 - Check the logs for error messages: `make logs`
 - Ensure your `.env` file is properly configured
 - Verify Docker and Docker Compose are running correctly
+
+## 🐛 Known Issues
+
+### Partial Sitemap Generation During Development
+
+**Issue**: During incremental builds, sphinx-sitemap sometimes generates incomplete sitemaps with only a few URLs instead of the full site.
+
+**Root Cause**: This is a documented bug in sphinx-sitemap related to multiprocessing queue pickling during incremental builds.
+
+**Solution**: The Sphinx builder is configured with the `-a` flag to disable incremental builds and force complete rebuilds.
+
+**Reference**: 
+- GitHub Issue: [sphinx-sitemap #62](https://github.com/jdillard/sphinx-sitemap/pull/62)
+- Fixed in sphinx-sitemap v2.5.1 (August 2023)
+- Official sphinx-autobuild recommendation: Use `-a` flag during development
+
+**Current Status**: 
+- ✅ sphinx-sitemap v2.8.0 installed (above problematic version)
+- ✅ `-a` flag implemented in Dockerfile for local development
+- ✅ Production builds use `--fresh-env` for complete rebuilds
 
 ## 📚 Additional Resources
 

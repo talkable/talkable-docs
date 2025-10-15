@@ -219,9 +219,9 @@ async def run_scheduler():
 
     monitoring_config = app_config.get_monitoring_config()
 
-    # Use sitemap URL as default if no monitoring URL is configured
+    # Use monitoring file URL as default if no monitoring URL is configured
     monitor_url = (
-        monitoring_config["check_url"] or app_config.core.get_effective_sitemap_url()
+        monitoring_config["check_url"] or app_config.core.get_effective_monitoring_url()
     )
 
     app_logger.info("Starting documentation scheduler...")
