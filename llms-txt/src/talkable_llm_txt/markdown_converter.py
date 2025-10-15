@@ -6,6 +6,7 @@ article objects to clean markdown format using the html-to-markdown library.
 """
 
 import logging
+from functools import partial
 from typing import List, Literal
 
 from bs4.element import Tag
@@ -26,6 +27,17 @@ class MarkdownConverter:
 
     HIGHLIGHT_PREFIX = "highlight-"
     ADMONITION_CLASS = "admonition"
+
+    # Centralized default escape settings
+    DEFAULT_ESCAPE_SETTINGS = {
+        "escape_asterisks": False,
+        "escape_underscores": False,
+        "escape_misc": False,
+        "autolinks": False,
+    }
+
+    # Pre-configured wrapper with default settings
+    convert_with_defaults = partial(convert_to_markdown, **DEFAULT_ESCAPE_SETTINGS)
 
     def __init__(
         self,
@@ -94,7 +106,7 @@ class MarkdownConverter:
 
             # Convert the cleaned HTML to markdown
             admonition_html = str(tag_copy)
-            inner_markdown = convert_to_markdown(
+            inner_markdown = self.convert_with_defaults(
                 admonition_html, heading_style=self.heading_style
             )
 
@@ -154,14 +166,11 @@ class MarkdownConverter:
         Returns:
             Markdown string representation of the article
         """
-        return convert_to_markdown(
+        return self.convert_with_defaults(
             article_html,
             heading_style=self.heading_style,
             custom_converters=self.custom_converters,
             strip=["abbr"],
-            escape_asterisks=False,
-            escape_underscores=False,
-            escape_misc=False,
         )
 
     def convert_articles(self, articles_html: List[str]) -> List[str]:
