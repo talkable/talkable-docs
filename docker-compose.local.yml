@@ -1,0 +1,11 @@
+services:
+  sphinx:
+    restart: unless-stopped
+
+  llms-txt:
+    restart: unless-stopped
+    depends_on:
+      sphinx:
+        condition: service_started
+      nginx:
+        condition: service_started

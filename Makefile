@@ -23,22 +23,22 @@ check-env:
 		exit 1; \
 	fi
 
-up: check-env ## Start all Docker services
-	docker-compose --profile local up -d
+up: check-env ## Start all Docker services for local development
+	docker compose -f docker-compose.yml -f docker-compose.local.yml up -d --force-recreate
 
 down: ## Stop and remove all containers
-	docker-compose --profile local down
+	docker compose -f docker-compose.yml -f docker-compose.local.yml down -v
 
 clean: down ## Complete cleanup: remove containers, images, and volumes
-	docker-compose down -v --rmi all
+	docker compose -f docker-compose.yml -f docker-compose.local.yml down -v --rmi all
 	docker system prune -f
 
 logs: ## Show logs from all services
-	docker-compose --profile local logs -f
+	docker compose -f docker-compose.yml -f docker-compose.local.yml logs -f
 
 rebuild: clean ## Force rebuild all Docker images
-	docker-compose --profile local build --no-cache
-	docker-compose --profile local up -d
+	docker compose -f docker-compose.yml -f docker-compose.local.yml build --no-cache
+	docker compose -f docker-compose.yml -f docker-compose.local.yml up -d
 
 help: ## Show this help message
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "\033[36m%-15s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)

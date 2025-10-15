@@ -2,6 +2,7 @@ FROM python:3.12-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
+ENV ENVIRONMENT=production
 
 # Install system dependencies for Playwright
 RUN apt update && apt install -y --no-install-recommends \
@@ -21,5 +22,13 @@ RUN PLAYWRIGHT_BROWSERS_PATH=/app/ms-playwright uv run python -m playwright inst
 
 ENV PLAYWRIGHT_BROWSERS_PATH=/app/ms-playwright
 
-# Runtime command - run once for init, monitor for builder
-CMD ["uv", "run", "talkable-llm-txt"]
+# Runtime command - run once for production, monitor for local
+CMD if [ "$ENVIRONMENT" = "local" ]; then \
+    echo "Starting LLM TXT builder with monitoring..."; \
+    export LLMS_TXT_MONITORING__ENABLED="true"; \
+    uv run talkable-llm-txt; \
+    else \
+    echo "Running LLM TXT builder once..."; \
+    export LLMS_TXT_MONITORING__ENABLED="false"; \
+    uv run talkable-llm-txt; \
+    fi

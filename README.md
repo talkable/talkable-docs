@@ -63,11 +63,11 @@ BASE_URL=http://192.168.1.100:8080/
 make up
 ```
 
-This will start all services including:
+This will start all services for **local development**:
 
-- **Nginx**: Web server serving the documentation
-- **Sphinx Builder**: Automatically rebuilds documentation when files change
-- **LLM Text Processor**: Converts documentation to markdown format for AI consumption
+- **Nginx**: Web server serving the documentation (stays running)
+- **Sphinx Builder**: Automatically rebuilds documentation when files change (stays running)
+- **LLM Text Processor**: Continuously monitors and processes documentation changes (stays running)
 
 ### 5. Access the Documentation
 
@@ -105,8 +105,9 @@ The `.env` file contains three critical variables:
 
 1. **Edit Documentation Files**: All documentation source files are in the `source/` directory
 2. **File Format**: Use reStructuredText (`.rst`) format
-3. **Auto-Rebuild**: Changes are automatically detected and rebuilt by Sphinx
+3. **Auto-Rebuild**: Changes are automatically detected and rebuilt by Sphinx (takes a few seconds)
 4. **Live Preview**: Refresh your browser to see changes
+5. **Continuous Processing**: LLM Text Processor automatically updates markdown files when documentation changes
 
 ### Common File Locations
 
@@ -178,8 +179,8 @@ make rebuild
 | Command | Description |
 |---------|-------------|
 | `make help` | Show all available commands |
-| `make up` | Start all Docker services (requires .env file) |
-| `make down` | Stop and remove all containers |
+| `make up` | Start local development services (uses docker-compose.local.yml override) |
+| `make down` | Stop local development services |
 | `make clean` | Complete cleanup including images and volumes |
 | `make logs` | View real-time logs from all services |
 | `make rebuild` | Force rebuild all images and restart |
@@ -193,9 +194,9 @@ To see what's happening with the services:
 make logs
 
 # Or view specific service logs
-docker logs -f nginx
-docker logs -f sphinx-builder
-docker logs -f llms-txt-builder
+docker logs -f docs-nginx-local
+docker logs -f docs-sphinx-local
+docker logs -f docs-llms-txt-local
 ```
 
 ## 🐛 Troubleshooting
@@ -210,11 +211,11 @@ docker logs -f llms-txt-builder
 
 3. **Documentation not loading**
    - Check that `BASE_URL` uses your correct local IP address
-   - Verify all services are running: `docker ps`
+   - Verify all services are running: `docker compose -f docker-compose.yml -f docker-compose.local.yml ps`
 
 4. **Changes not appearing**
    - Wait a few seconds for auto-rebuild
-   - Check Sphinx logs: `docker logs sphinx-builder`
+   - Check Sphinx logs: `docker logs docs-sphinx-local`
 
 ### Getting Help
 
