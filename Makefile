@@ -1,4 +1,4 @@
-.PHONY: up down clean logs rebuild help check-env
+.PHONY: up down restart clean logs rebuild help check-env
 
 # Default target
 .DEFAULT_GOAL := help
@@ -24,10 +24,12 @@ check-env:
 	fi
 
 up: check-env ## Start all Docker services for local development
-	docker compose -f docker-compose.yml -f docker-compose.local.yml up -d --force-recreate
+	docker compose -f docker-compose.yml -f docker-compose.local.yml up -d
 
 down: ## Stop and remove all containers
-	docker compose -f docker-compose.yml -f docker-compose.local.yml down -v
+	docker compose -f docker-compose.yml -f docker-compose.local.yml down
+
+restart: down up ## Restart all containers (stop and start)
 
 clean: down ## Complete cleanup: remove containers, images, and volumes
 	docker compose -f docker-compose.yml -f docker-compose.local.yml down -v --rmi all
