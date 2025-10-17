@@ -6,6 +6,10 @@ Welcome to the Talkable Documentation repository! This guide will help you under
 
 Our documentation is built using **Sphinx**, a powerful documentation generator that converts reStructuredText (`.rst`) files into beautiful HTML websites. Sphinx is the industry standard for Python documentation and provides excellent features for technical documentation.
 
+### Documentation Processing Pipeline
+
+In addition to serving HTML documentation, we include an **LLM Text Processor** that converts HTML documentation to Markdown format for AI consumption using Playwright for JavaScript-rendered content extraction. The processor implements ETag-based change detection, supports scheduled monitoring, and generates comprehensive `llm.txt` files for AI agents.
+
 ### Why Sphinx?
 
 - **Structured Content**: Uses reStructuredText for semantic markup
@@ -51,7 +55,21 @@ This will start all services for **local development**:
 
 - **Nginx**: Web server serving the documentation (stays running)
 - **Sphinx Builder**: Automatically rebuilds documentation when files change (stays running)
-- **LLM Text Processor**: Continuously monitors and processes documentation changes (stays running)
+- **LLM Text Processor**: Continuously monitors and processes documentation changes to Markdown format for AI consumption (stays running)
+
+**LLM Text Processor Requirements:**
+
+- **Playwright**: Browser automation for JavaScript-rendered content
+- **Chromium Browser**: Automatically installed during Docker build
+- **System Dependencies**: Managed via `playwright install --with-deps`
+
+**Processor Capabilities:**
+
+- JavaScript-rendered content extraction
+- ETag-based change detection
+- Scheduled monitoring with configurable intervals
+- Concurrent URL processing
+- Markdown conversion with customizable formatting
 
 ### 5. Access the Documentation
 
@@ -124,29 +142,27 @@ Paragraph text with **bold** and *italic* formatting.
 
 ## 📋 Available Make Commands
 
-| Command | Description |
-|---------|-------------|
-| `make help` | Show all available commands |
-| `make up` | Start local development services (uses docker-compose.local.yml override) |
-| `make down` | Stop local development services (keeps images and volumes for faster restart) |
-| `make clean` | Complete cleanup including containers, images, and volumes (removes all cached data) |
-| `make logs` | View real-time logs from all services |
-| `make rebuild` | Force rebuild all images and restart (useful after updating dependencies) |
+| Command        | Description                                                                          |
+| -------------- | ------------------------------------------------------------------------------------ |
+| `make help`    | Show all available commands                                                          |
+| `make up`      | Start local development services (uses docker-compose.local.yml override)            |
+| `make down`    | Stop local development services (keeps images and volumes for faster restart)        |
+| `make restart` | Restart all containers (stop and start)                                             |
+| `make clean`   | Complete cleanup including containers, images, and volumes (removes all cached data) |
+| `make logs`    | View real-time logs from all services                                                |
+| `make rebuild` | Force rebuild all images and restart (useful after updating dependencies)            |
 
-## 🧹 Cleaning Up
+### Environment Management
 
-When you're done working, use the make commands above to clean up your local environment:
+**Cleaning Up:**
 
 - **`make down`** - Stops and removes running containers but keeps images and volumes
 - **`make clean`** - Performs complete cleanup including containers, images, volumes, and runs Docker system prune
 - **`make rebuild`** - Forces rebuild of all images and restarts services
 
-> [!WARNING]
-> `make clean` will remove all cached data, so the next `make up` will take longer as it needs to rebuild everything.
+> [!WARNING] > `make clean` will remove all cached data, so the next `make up` will take longer as it needs to rebuild everything.
 
-## 🔍 Viewing Logs
-
-To see what's happening with the services:
+**Viewing Logs:**
 
 ```bash
 # View all logs in real-time
@@ -163,12 +179,15 @@ docker logs -f docs-llms-txt-local
 ### Common Issues
 
 1. **"Error: .env file not found!"**
+
    - Solution: Run `cp .env.template .env` and configure the variables
 
 2. **"Port already in use"**
+
    - Solution: Change `LOCAL_PORT` in your `.env` file to an unused port
 
 3. **Documentation not loading**
+
    - Check that `BASE_URL` is correctly configured in your `.env` file
    - Verify all services are running: `docker compose -f docker-compose.yml -f docker-compose.local.yml ps`
 
