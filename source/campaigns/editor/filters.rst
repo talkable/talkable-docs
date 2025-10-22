@@ -114,6 +114,28 @@ Rendered Liquid
 
 |hr|
 
+prepend\_to\_array
+.................
+
+Prepends elements to an existing array.
+
+Liquid
+
+.. code-block:: liquid
+
+   {% assign my_array = "" | new_array: "element1", "element2" %}
+   {% assign my_array = my_array | prepend_to_array: "element3" %}
+
+   Array: {{ my_array | json }}
+
+Rendered Liquid
+
+.. code-block:: text
+
+   Array: ["element3","element1","element2"]
+
+|hr|
+
 asset\_url
 ..........
 
