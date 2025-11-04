@@ -172,6 +172,7 @@ Add this JavaScript to handle native sharing:
    - iOS Safari 12.2+
    - Android Chrome 61+
    - Android Firefox 71+
+   - WebView components in iOS and Android SDKs
    
    It is **not** supported on most desktop browsers.
 
@@ -244,7 +245,32 @@ Talkable provides a ``user_agent`` helper object that detects device capabilitie
      <!-- Tablet device -->
    {% endif %}
 
-**Feature Detection:**
+**Native Features Supported by SDK:**
+
+The SDK automatically detects and reports the following native features:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 70
+
+   * - Feature
+     - Description
+   * - ``send_sms``
+     - SMS sharing capability (requires SIM card and telephony support)
+   * - ``copy_to_clipboard``
+     - Copy referral link to device clipboard (always available)
+   * - ``share_via_native_mail``
+     - Native email app sharing (detects available email clients)
+   * - ``share_via_facebook``
+     - Facebook sharing (requires Facebook SDK initialization)
+   * - ``share_via_facebook_messenger``
+     - Facebook Messenger sharing (requires Facebook SDK and Messenger app)
+   * - ``share_via_twitter``
+     - Twitter/X sharing (currently disabled on mobile SDKs)
+   * - ``share_via_whatsapp``
+     - WhatsApp sharing (detects WhatsApp installation)
+
+**Feature Detection Examples:**
 
 .. code-block:: liquid
 
@@ -253,15 +279,19 @@ Talkable provides a ``user_agent`` helper object that detects device capabilitie
    {% endif %}
    
    {% if user_agent.features.share_via_facebook %}
-     <!-- Browser supports Facebook sharing -->
+     <!-- Facebook SDK is initialized -->
    {% endif %}
    
-   {% if user_agent.features.share_via_twitter %}
-     <!-- Browser supports Twitter sharing -->
+   {% if user_agent.features.share_via_whatsapp %}
+     <!-- WhatsApp is installed -->
+   {% endif %}
+   
+   {% if user_agent.features.copy_to_clipboard %}
+     <!-- Clipboard access available (always true on mobile) -->
    {% endif %}
 
 .. tip::
-   Always use ``user_agent`` checks to ensure sharing buttons only appear when the device/browser 
+   Always use ``user_agent.features`` checks to ensure sharing buttons only appear when the device 
    supports them. This prevents showing non-functional buttons to users.
 
 SMS Sharing
@@ -418,6 +448,9 @@ Campaign Tag Strategy
 - Use custom tags for segmentation
 - Example: ``vip-ios-invite``, ``standard-ios-invite``
 - Allows A/B testing different offers
+
+.. important::
+   **Campaign Matching Behavior**: When multiple campaigns have matching tags, only **one campaign will be selected** and displayed to the user. The selection is based on campaign priority and other internal factors. Ensure your tag strategy accounts for this behavior to avoid unexpected campaign conflicts.
 
 **Seasonal Campaigns:**
 
