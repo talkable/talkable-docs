@@ -336,7 +336,7 @@ WhatsApp Sharing
 
 **Implementation in template:**
 
-.. code-block:: liquid
+.. code-block:: text
 
    {% if advocate_share_page_channel_whatsapp == "Enable for desktop and mobile" %}
      {% assign show_whatsapp = true %}
@@ -403,7 +403,7 @@ Facebook/Twitter Sharing
 
 **Implementation in template:**
 
-.. code-block:: liquid
+.. code-block:: text
 
    {% if advocate_share_page_desktop_facebook_sharing != "Disabled" 
          and user_agent.features.share_via_facebook %}
