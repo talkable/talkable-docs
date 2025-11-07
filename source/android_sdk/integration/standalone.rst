@@ -4,6 +4,10 @@
 Standalone Campaign
 ===================
 
+.. note::
+   For information about setting up campaigns to work with Android SDK, including campaign tags, 
+   native sharing, and mobile optimization, see :ref:`SDK Campaign Setup <campaigns/tutorials/sdk_campaign_setup>`.
+
 Let’s take a look at how the Standalone campaign integration looks. The main purpose
 of this type of campaign is to drive your users to invite their friends (to become Advocates)
 without being gated by a purchase beforehand.
