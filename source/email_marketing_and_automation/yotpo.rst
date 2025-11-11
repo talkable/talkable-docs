@@ -74,7 +74,7 @@ New data that synced from Yotpo can be accessed through person custom properties
 Available Yotpo loyalty variables:
 
 * yotpo.points_earned
-* yotpo.point_balance
+* yotpo.points_balance
 * yotpo.vip_tier_name
 
 Tracking Loyalty-Driven Referral Performance
