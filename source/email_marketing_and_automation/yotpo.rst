@@ -148,7 +148,7 @@ In the example below, we'll show how to display the customer's Yotpo points bala
    .. code-block:: liquid
       :force:
 
-      {{ referrals_count_by_status.total | default: 0 }} | {{  custom_properties.yotpo.point_balance | default: 0 }}
+      {{ referrals_count_by_status.total | default: 0 }} | {{  custom_properties.yotpo.points_balance | default: 0 }}
 
 4. In the preview, you'll see that the wallet header now displays Points in addition to Referrals:
 
