@@ -993,7 +993,7 @@ This example can be used in ``Email sending condition`` of Advocate Offer Email 
 
 |hr|
 
-wallet track link click
+wallet\_track\_link\_click
 .......................
 
 This filter generates a public link that can be used to track wallet link clicks.
