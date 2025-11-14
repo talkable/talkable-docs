@@ -4,6 +4,11 @@
 Integration
 ===========
 
+.. important::
+   Before integrating SDK campaigns into your app, make sure you have campaigns properly configured 
+   in Talkable. See :ref:`SDK Campaign Setup <campaigns/tutorials/sdk_campaign_setup>` for complete 
+   campaign setup guide including tags, native sharing, and mobile optimization.
+
 The SDK is installed and setup. Now you can integrate Standalone or/and Post Purchase campaigns into your mobile app.
 
 - :ref:`Standalone Campaign <android_sdk/integration/standalone>`
