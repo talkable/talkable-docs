@@ -265,8 +265,8 @@ The SDK automatically detects and reports the following native features:
      - Facebook sharing (requires Facebook SDK initialization)
    * - ``share_via_facebook_messenger``
      - Facebook Messenger sharing (requires Facebook SDK and Messenger app)
-   * - ``share_via_twitter``
-     - Twitter/X sharing (currently disabled on mobile SDKs)
+   * - ``share_via_x``
+     - X sharing (currently disabled on mobile SDKs)
    * - ``share_via_whatsapp``
      - WhatsApp sharing (detects WhatsApp installation)
 
@@ -390,15 +390,15 @@ Link Sharing
 - Share via any channel
 - Useful as fallback option
 
-Facebook/Twitter Sharing
+Facebook/X Sharing
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: liquid
 
-   {% assign advocate_share_page_desktop_facebook_sharing = "advocate_share_page_desktop_facebook_sharing" 
+   {% assign advocate_share_page_desktop_facebook_sharing = "advocate_share_page_desktop_facebook_sharing"
       | localize: "Wall Post", "Direct Message", "Both", "Disabled" %}
    
-   {% assign advocate_share_page_channel_twitter = "advocate_share_page_channel_twitter" 
+   {% assign advocate_share_page_channel_x = "advocate_share_page_channel_x"
       | localize: trait: "boolean", default: "Disabled" %}
 
 **Implementation in template:**
@@ -414,9 +414,9 @@ Facebook/Twitter Sharing
      </li>
    {% endif %}
 
-   {% if advocate_share_page_channel_twitter and user_agent.features.share_via_twitter %}
+   {% if advocate_share_page_channel_x and user_agent.features.share_via_x %}
      <li>
-       <a href="#" class="button js-share-offer-via-twitter">
+       <a href="#" class="button js-share-offer-via-x">
          Share on X
        </a>
      </li>
@@ -425,11 +425,11 @@ Facebook/Twitter Sharing
 **Feature Detection:**
 
 - Facebook: Requires ``user_agent.features.share_via_facebook``
-- Twitter: Requires ``user_agent.features.share_via_twitter``
+- X: Requires ``user_agent.features.share_via_x``
 - These features are automatically detected based on browser/device capabilities
 
 .. note::
-   For iOS SDK, Facebook and Twitter sharing require delegate method implementation. 
+   For iOS SDK, Facebook and X sharing require delegate method implementation. 
    See :ref:`iOS Social Sharing <ios_sdk/social_sharing>` for details.
 
 Best Practices
