@@ -111,36 +111,6 @@ check_workflow_status() {
   fi
 }
 
-# Early check - fails fast if workflow already failed
-gh_check() {
-  local workflow_run result short_commit="${GIT_COMMIT:0:7}"
-
-  echo "════════════════════════════════════════════════════════════════"
-  echo "GitHub Actions Check (Early)"
-  echo "Commit: ${short_commit}"
-  echo "════════════════════════════════════════════════════════════════"
-
-  workflow_run=$(get_workflow_run "$GIT_COMMIT") || {
-    echo "⚠️  Workflow not found yet - may still be triggering"
-    echo "Pipeline will continue. Status will be checked later."
-    echo "════════════════════════════════════════════════════════════════"
-    return 0
-  }
-
-  check_workflow_status "$workflow_run"
-  result=$?
-
-  echo "════════════════════════════════════════════════════════════════"
-
-  if [[ $result -eq 0 ]]; then
-    echo "✅ Workflow passed or still running - continuing"
-    return 0
-  else
-    echo "❌ Workflow has failed - stopping deployment"
-    return 1
-  fi
-}
-
 # Continuous monitoring - waits for workflow to complete
 gh_status() {
   local workflow_run result
@@ -213,11 +183,3 @@ gh_status() {
     fi
   done
 }
-
-# If script is run directly (not sourced), run both checks
-if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
-  echo "Running in standalone mode"
-  gh_check
-  gh_status
-fi
-
