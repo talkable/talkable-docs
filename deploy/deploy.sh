@@ -8,14 +8,14 @@ printenv | sort
 TIMEFRAME_SECONDS=240
 PROJECT_ROOT="talkable-docs"
 SUBPROJECT="docs"
-# CircleCI API v2 configuration
-CIRCLE_CI_API_BASE="https://circleci.com/api/v2"
-CIRCLE_CI_PROJECT_SLUG="gh/talkable/${PROJECT_ROOT}"
-CIRCLE_CI_WEB_URL="https://app.circleci.com/pipelines/github/talkable/${PROJECT_ROOT}?branch=${BRANCH_NAME}"
+# GitHub Actions configuration
+GITHUB_API_BASE="https://api.github.com"
+GITHUB_REPOSITORY="talkable/${PROJECT_ROOT}"
+GITHUB_ACTIONS_WEB_URL="https://github.com/talkable/${PROJECT_ROOT}/actions?query=branch%3A${BRANCH_NAME}"
 
-# Source shared CircleCI functions
+# Source shared GitHub Actions functions
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-source "${SCRIPT_DIR}/lib/circleci_common.sh"
+source "${SCRIPT_DIR}/lib/github_actions_common.sh"
 
 TASK=$1
 
@@ -24,14 +24,14 @@ print_help() {
   clear
   echo 'Available Commands:'
   echo '   deploy           - deploy current version of talkable-docs'
-  echo '   ci | cistatus | status   - check CircleCI build status'
+  echo '   ci | cistatus | status   - check GitHub Actions build status'
   echo 'Example:'
   echo '         deploy.sh deploy'
   echo '         deploy.sh ci_status'
   exit 0
 }
 
-# CircleCI status function is now sourced from lib/circleci_common.sh
+# GitHub Actions status function is now sourced from lib/github_actions_common.sh
 
 remote_ssh_exec() {
   ssh -o StrictHostKeyChecking=no -i "$SSH_KEY" "$SSH_USER@$HOST_ENV" "$@"
@@ -62,12 +62,12 @@ EOF
 
 case $TASK in
 ci | ci_status | ci_only | status)
-  circleci_status
+  gh_status
   deploy_check
   ;;
 deploy)
   echo "Starting deployment..."
-  circleci_status
+  gh_status
   deploy_docs
   deploy_check
   ;;
