@@ -13,11 +13,11 @@ on:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: ${{ github.ref != 'refs/heads/master' && !startsWith(github.ref, 'refs/heads/staging-') }}
+  cancel-in-progress: ${{ contains(fromJSON('["master", "staging"]'), github.ref_name) }}
 
 jobs:
   build:
-    runs-on: runs-on=${{ github.run_id }}/cpu=1+32/ram=2+32/family=m8+c8+r8+i8+m7+c7+r7+t4/image=ubuntu22-full-arm64/spot=lowest-price/extras=s3-cache
+    runs-on: runs-on=${{ github.run_id }}/cpu=1+32/ram=1+32/family=m8+c8+r8+i8+m7+c7+r7+t4/image=ubuntu22-full-arm64/spot=lowest-price/extras=s3-cache
 
     env:
       ENVIRONMENT: production
