@@ -15,3 +15,4 @@ Contents:
    tutorials/offers_show
    tutorials/offers_claim
    tutorials/incentive_criteria
+   tutorials/sdk_campaign_setup
