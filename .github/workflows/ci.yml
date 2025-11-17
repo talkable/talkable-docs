@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+  push:
+    branches:
+      - master
+      - staging-*
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/master' && !startsWith(github.ref, 'refs/heads/staging-') }}
+
+jobs:
+  build:
+    runs-on: runs-on=${{ github.run_id }}/cpu=1+32/ram=2+32/family=m8+c8+r8+i8+m7+c7+r7+t4/image=ubuntu22-full-arm64/spot=lowest-price/extras=s3-cache
+
+    env:
+      ENVIRONMENT: production
+
+    steps:
+      - uses: runs-on/action@v2
+        with:
+          # See https://github.com/runs-on/action#options
+          metrics: cpu,memory
+          show_costs: summary
+          show_env: false
+
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        working-directory: sphinx
+        run: uv sync
+
+      - name: Build documentation
+        working-directory: sphinx
+        run: uv run sphinx-build -nW -b dirhtml -d build/doctrees ../source build/html
