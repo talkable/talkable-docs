@@ -5,7 +5,7 @@ pipeline {
         label "staging"
     }
     environment {
-        CIRCLE_CI_TOKEN = credentials('CIRCLE_CI_TOKEN')
+        GITHUB_ACC = credentials('talkable-bot-deploy-token')
         JENKINS_BUILD_USER_ID = ""
         LOCAL_PORT="8080"
         SLACK_CHANNEL = "deploy"
@@ -18,7 +18,7 @@ pipeline {
     parameters {
         choice(name: "DEPLOY_COMMAND",
                 choices: ["deploy", "ci_status"],
-                description: "DEPLOY - Start the default deployment\nCI_STATUS - Check the CircleCI build status")
+                description: "DEPLOY - Start the default deployment\nCI_STATUS - Check the GitHub Actions build status")
     }
     options {
         buildDiscarder(logRotator(numToKeepStr: '15', daysToKeepStr: '14'))
