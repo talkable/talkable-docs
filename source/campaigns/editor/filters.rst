@@ -1181,6 +1181,25 @@ Returns ``strip me``.
 
 |hr|
 
+.. _liquid_filter_tango:
+
+tango
+.....
+
+Takes the ID (UTID) of a Tango reward.
+Places an order for the specified reward and returns a gift claim link.
+Requires the Tango app to be installed and enabled in order to work.
+
+.. code-block:: liquid
+
+   {{ "U957978" | tango: amount: 10.0 }}
+
+Returns ``https://rewardlink.io/r/1/reward123``
+
+Find more details about the integration here: :ref:`Tango <advanced_features/tango>`
+
+|hr|
+
 .. _liquid_filter_tremendous:
 
 tremendous
