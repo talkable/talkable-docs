@@ -12,12 +12,12 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: ${{ contains(fromJSON('["master", "staging"]'), github.ref_name) }}
+  group: ${{ github.workflow }}-${{ github.ref }}${{ contains(fromJSON('["master", "staging"]'), github.ref_name) && format('-{0}', github.run_id) || '' }}
+  cancel-in-progress: true
 
 jobs:
   build:
-    runs-on: runs-on=${{ github.run_id }}/cpu=1+32/ram=1+32/family=m8+c8+r8+i8+m7+c7+r7+t4/image=ubuntu22-full-arm64/spot=lowest-price/extras=s3-cache
+    runs-on: runs-on=${{ github.run_id }}/cpu=1+32/ram=1+32/family=m8+c8+r8+i8+m7+c7+r7+m6+c6+r6+t4/image=ubuntu24-full-arm64/spot=lowest-price/extras=s3-cache
 
     env:
       ENVIRONMENT: production
@@ -26,7 +26,7 @@ jobs:
       - uses: runs-on/action@v2
         with:
           # See https://github.com/runs-on/action#options
-          metrics: cpu,memory
+          # metrics: cpu,network,memory,disk,io
           show_costs: summary
           show_env: false
 
