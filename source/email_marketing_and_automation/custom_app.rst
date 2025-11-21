@@ -251,6 +251,23 @@ This action automatically synchronizes all registered Events and Purchases.
      "email": "advocate@example.com"
    }
 
+Refund
+------
+
+This action automatically synchronizes all created refunds.
+
+*Default payload:*
+
+.. code-block:: JSON
+
+  {
+    "site_id": "3",
+    "refunded_at": "2025-11-21 07:44:15 -0800",
+    "partially_refunded": "false",
+    "subtotal": "100.0",
+    "refund_subtotal": "100.0"
+  }
+
 Referral Create
 ---------------
 
