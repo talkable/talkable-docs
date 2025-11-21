@@ -993,6 +993,19 @@ This example can be used in ``Email sending condition`` of Advocate Offer Email 
 
 |hr|
 
+wallet\_track\_link\_click
+.......................
+
+This filter generates a public link that can be used to track wallet link clicks.
+
+.. code-block:: liquid
+
+   {{ "https://example.com" | track_link_click: "query_42" }}
+
+Returns ``https://talkable.com/public/[[site_slug]]/wallet_link_clicks/track?identifier=query_42&localization_key=wallet_link_click_query_42``. After successful click, user will be redirected to the original link.
+
+|hr|
+
 qr\_code
 ........
 
